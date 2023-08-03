@@ -875,15 +875,227 @@ class: center
 ]
 
 ---
+
+class: middle right
+background-image: url('dan-cristian-padure-faAKGPMOqWA-unsplash.jpg')
+background-size: cover
+
+# **Hacer preguntas y observar el comportamiento**
+
+
+---
 class: center
 
-# **Haciendo preguntas**
+## **Haciendo preguntas**
 
 <img src="screen21.png" width="70%" />
 
 .footnote[
 [1] Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
 ]
+
+---
+class: left middle
+
+## **Tercera Era**
+
+- La era digital está dando paso a la tercera era de la investigación por encuestas debido al declive de enfoques de la segunda era y al aumento de las tasas de no respuesta en encuestas telefónicas tradicionales.
+
+--
+
+- Se espera que la tercera era se caracterice por el *muestreo no probabilístico*, *las entrevistas administradas por computadora* y la *integración de encuestas con fuentes de big data*.
+
+---
+
+class: center middle
+
+<img src="screen26.png" width="50%" />
+.footnote[
+[1] Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
+]
+
+---
+class: middle left
+
+
+## **Haciendo preguntas II**
+
+- Gran disponibilidad de datos conductuales en la era digital
+
+--
+
+- Sigue siendo esencial formular preguntas para comprender estados internos, emociones, conocimientos, expectativas y opiniones, que son difíciles de inferir solo a partir de datos conductuales
+
+
+---
+
+
+## **Ejemplo: Cercanía**
+
+.w-50.fl[
+### 
+- Burke y Kraut (2014) combinaron datos de encuesta sobre la fuerza de la amistad y la interacción fuera de Facebook, con datos de registro de Facebook
+
+- Concluyeron que la comunicación a través de Facebook, de hecho, condujo a un aumento de los sentimientos de cercanía.
+
+.footnote[
+[1] Burke, M., & Kraut, R. E. (2014). Growing closer on facebook: Changes in tie strength through social network site use. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, 4187–4196. https://doi.org/10.1145/2556288.2557094
+]
+
+]
+
+.w-40.fr[
+### 
+
+<img src="screen22.png" width="90%" />
+
+]
+
+---
+class: left middle
+
+## Big data y encuestas. 
+
+
+- Las fuentes de big data en realidad pueden aumentar el valor de hacer preguntas
+
+- La mejor manera de pensar sobre la relación entre preguntar y observar es que son complementos más que sustitutos
+
+---
+
+## **Marco de error**
+
+.w-50.fl[
+### 
+- Marco de Error Total en Encuestas: Los investigadores han desarrollado el marco de error total en encuestas, que destaca dos **tipos** de errores en la investigación por encuestas: **sesgo y varianza**. 
+
+- Equilibrar estos errores es crucial para evaluar los procedimientos de encuesta.
+
+]
+
+.w-40.fr[
+### 
+
+<img src="screen23.png" width="70%" />
+]
+
+.footnote[
+[1] Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
+
+]
+
+---
+class: left middle
+
+## **Marco de error II**
+
+- El marco identifica dos **fuentes** de errores en la investigación por encuestas: **errores de representación** relacionados con quiénes son encuestados y **errores de medición** relacionados con la información obtenida de los encuestados.
+
+- Las ideas sobre representación y medición pueden guiar la investigación por encuestas en la era digital.
+
+---
+class: left middle
+
+## **Representación** 
+
+- La representación se trata de inferir de los encuestados a la población objetivo.
+
+  - **Errores de Cobertura y Sesgo**: En el caso del famoso fracaso de la encuesta de la revista Literary Digest en 1936, la revista cometió errores de cobertura y sesgo. Los encuestados seleccionados (frame population) eran diferentes de la población objetivo, lo que llevó a una muestra sesgada.
+  
+  - **Selección de Muestra**: En la encuesta de Literary Digest, no hubo muestreo porque intentaron contactar a todos en la población marco. Sin embargo, en otras encuestas, la selección de muestra puede introducir errores de muestreo si los encuestados difieren de la población marco.
+
+  - **Respuestas y Sesgo de No Respuesta**: Cuando algunos seleccionados no responden a la encuesta, puede haber sesgo de no respuesta. En el caso de Literary Digest, aquellos que apoyaban a Landon fueron más propensos a responder, lo que generó sesgo en los resultados.
+  
+---
+class: middle left
+
+
+## **Representación II**
+
+- Lección clave: una gran cantidad de datos recopilados de manera cruda (haphazard) no garantiza una buena estimación. Además, los investigadores deben tener en cuenta cómo se recopiló la muestra al hacer estimaciones y usar un proceso de estimación más complejo para ponderar algunos encuestados más que otros.
+
+
+---
+class: left middle
+
+## **Limitaciones del Costo**
+
+
+- Las encuestas no son gratuitas, y el costo es una restricción real para la investigación.
+
+- Relación Costo-Calidad: Se realizó un estudio que empleó procedimientos "rigurosos" para reducir la tasa de no respuesta, pero esto aumentó significativamente los costos y ralentizó el proceso. Ambos estudios produjeron estimaciones esencialmente idénticas.
+
+
+---
+class: center middle
+
+<img src="screen28.png" width="40%" />
+
+---
+
+class: center middle
+
+<img src="screen25.png" width="50%" />
+.footnote[
+[1] Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
+]
+
+---
+
+class: center middle
+
+<img src="screen27.png" width="50%" />
+
+.footnote[
+[1] Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
+]
+
+---
+class: middle left 
+
+## **El momento del muestreo no probabilístico** 
+
+- Con los avances digitales, el muestreo no probabilístico se ha vuelto más rápido, más económico y más efectivo. 
+
+--
+
+- La digitalización ha generado oportunidades para encuestas más frecuentes y tamaños de muestra más grandes.
+
+--
+
+- El desarrollo de métodos de muestreo no probabilístico ha avanzado significativamente, y algunos métodos, como las encuestas en línea, han logrado resultados precisos al usar técnicas de post-estratificación.
+
+--
+
+- La post-estratificación es una técnica que ajusta las estimaciones de una muestra no probabilística utilizando información auxiliar sobre la población objetivo.
+
+--
+
+- Multilevel Regression with Post-Stratification (MRP)
+
+---
+
+## **Medición**
+
+.w-60.fl[
+### 
+- La medición se trata de inferir lo que piensan y hacen los encuestados a partir de lo que dicen.
+
+  - **Errores de Medición**: El marco de error total en encuestas muestra que la segunda fuente principal de errores es la medición, es decir, cómo se hacen inferencias a partir de las respuestas que los encuestados dan a nuestras preguntas.
+  
+  - **Efectos de la Forma y Redacción de Preguntas**: Algunas preguntas pueden producir resultados diferentes según cómo se formulen o redacten. 
+]
+
+.w-40.fr[
+### 
+
+<img src="screen29.png" width="90%" />
+]
+
+---
+class: center middle
+
+<img src="screen30.png" width="90%" />
 
 ---
 
