@@ -24,7 +24,7 @@ options(htmltools.dir.version = FALSE)
 ```{r xaringan-themer, include=FALSE}
 library(xaringanthemer)
 style_duo_accent(
-  footnote_font_size = "0.6em",
+  footnote_font_size = "0.5em",
   primary_color = "#28282B",
   #primary_color = "#7393B3",
   secondary_color = "#2c8475",
@@ -1100,16 +1100,350 @@ class: center middle
 ---
 
 class: middle right
+background-image: url('dan-cristian-padure-faAKGPMOqWA-unsplash.jpg')
+background-size: cover
+
+### **Vinculando encuestas y big data**
+
+---
+
+class: center middle
+
+<img src="screen31.png" width="50%" />
+
+.footnote[
+[1] Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
+]
+
+---
+
+class: left middle
+
+### **Enriquecimiento de Preguntas**
+
+
+- En este enfoque, implican la información de una fuente de big data con ciertas mediciones clave, pero que carece de otras. 
+
+--
+
+- Las mediciones faltantes se recopilan a través de una encuesta, y luego se vinculan ambas fuentes de datos para obtener una imagen más completa y detallada.
+
+--
+
+- Ansolabehere & Hersh (2017), usaron registros de votación digitalizados y datos de encuestas para comprender mejor el comportamiento de voto en Estados Unidos
+
+--
+
+- Aprovecharon el hecho de que las compañías privadas habían recopilado y fusionado registros de votación para crear archivos maestros de votación, permitiendo un análisis más exhaustivo.
+
+
+
+.footnote[
+[1] Ansolabehere, S., & Hersh, E. (2017). Validation: What Big Data Reveal About Survey Misreporting and the Real Electorate. Political Analysis, 20(4), 437–459. https://doi.org/10.1093/pan/mps023
+]
+
+---
+
+.w-40.fl[
+### 
+
+<img src="screen32.png" width="100%" />
+
+]
+
+.w-40.fr[
+### 
+
+<img src="screen33.png" width="100%" />
+
+]
+
+.footnote[
+[1] Ansolabehere, S., & Hersh, E. (2017). Validation: What Big Data Reveal About Survey Misreporting and the Real Electorate. Political Analysis, 20(4), 437–459. https://doi.org/10.1093/pan/mps023
+]
+
+---
+class: left middle
+
+### **Enriquecimiento de Preguntas III**
+
+
+- **Desafíos:** 
+
+  - la falta de identificadores únicos en ambas fuentes de datos para vincular registros de manera precisa. 
+  - la calidad de la fuente de datos masivos puede ser difícil de evaluar debido a posibles problemas de creación de datos y confidencialidad.
+
+.footnote[
+[1] Ansolabehere, S., & Hersh, E. (2017). Validation: What Big Data Reveal About Survey Misreporting and the Real Electorate. Political Analysis, 20(4), 437–459. https://doi.org/10.1093/pan/mps023
+]
+
+---
+
+class: left middle
+
+### **Amplificación de Preguntas**
+
+- Aquí se utiliza un modelo predictivo para combinar un conjunto pequeño de datos de encuestas con una fuente de datos masivos más grande. 
+
+--
+
+- El objetivo es obtener estimaciones a una escala o nivel de detalle que no serían posibles utilizando solo una de las fuentes de datos.
+
+--
+
+- Ejemplo: Blumenstock et. al. (2015) utilizaron registros de llamadas telefónicas para predecir respuestas a encuestas sobre riqueza y bienestar en Ruanda. Construyeron un modelo de aprendizaje automático que utilizaba características de las llamadas para predecir cómo las personas responderían a preguntas de encuestas, permitiendo inferir información para un grupo mucho más grande de individuos.
+
+
+.footnote[
+[1] Blumenstock, J., Cadamuro, G., & On, R. (2015). Predicting poverty and wealth from mobile phone metadata. Science, 350(6264), 1073–1076.
+]
+
+---
+
+class: left middle
+
+### **Amplificación de Preguntas II**
+
+
+.w-50.fl[
+### 
+- **Desafíos:** 
+
+   - En este enfoque, es esencial realizar una ingeniería de características adecuada para convertir los datos de la fuente masiva en información relevante para la encuesta. 
+   
+   - Además, los modelos predictivos deben ser cuidadosamente diseñados y validados para garantizar que las predicciones sean precisas.
+
+]
+
+.w-40.fr[
+### 
+
+<img src="screen3.png" width="100%" />
+
+]
+
+.footnote[
+[1] Blumenstock, J., Cadamuro, G., & On, R. (2015). Predicting poverty and wealth from mobile phone metadata. Science, 350(6264), 1073–1076.
+]
+
+
+---
+class: middle right
+background-image: url('dan-cristian-padure-faAKGPMOqWA-unsplash.jpg')
+background-size: cover
+
+### **Colaboraciones Masivas**
+
+
+---
+
+class: left middle
+
+
+### **Proyectos de Computación Humana***
+
+.w-50.fl[
+### 
+- Estos proyectos son ideales para resolver problemas de gran escala que requieren tareas sencillas pero en gran cantidad.
+
+- Las contribuciones no necesitan habilidades específicas y el resultado final suele ser un promedio de todas las contribuciones.
+
+- **Ejemplo:** *Galaxy Zoo*, donde miles de voluntarios ayudaron a clasificar un millón de galaxias, siendo el resultado final un consenso de las contribuciones individuales.
+
+]
+
+.w-50.fr[
+### 
+
+<img src="screen35.png" width="100%" />
+
+]
+
+.footnote[
+[1] https://www.zooniverse.org/
+]
+
+---
+
+class: left middle
+
+### **Proyectos de Llamado Abierto (Open Call)**
+
+.w-50.fl[
+### 
+- Estos proyectos son adecuados para problemas que buscan respuestas novedosas y no esperadas a preguntas claramente formuladas.
+
+- Las contribuciones provienen de personas con habilidades especializadas relacionadas con la tarea propuesta y el resultado final suele ser la mejor de todas las contribuciones.
+
+- **Ejemplo**: El premio Netflix, donde miles de científicos y hackers colaboraron para desarrollar nuevos algoritmos de predicción de calificaciones de películas.
+
+]
+
+.w-40.fr[
+### 
+
+<img src="screen36.png" width="100%" />
+
+]
+
+.footnote[
+[1] https://en.wikipedia.org/wiki/Netflix_Prize
+]
+
+---
+class: left middle
+
+### **Proyectos de Recopilación de Datos Distribuidos**
+
+.w-50.fl[
+### 
+- Estos proyectos son idóneos para recopilar datos a gran escala.
+
+- Las contribuciones vienen de personas que tienen acceso a ubicaciones que los investigadores no tienen y el producto final es una simple colección de contribuciones.
+
+- **Ejemplo**: eBird, donde cientos de miles de voluntarios aportan informes sobre las aves que observan.
+
+]
+
+.w-50.fr[
+### 
+
+<img src="screen37.png" width="100%" />
+
+]
+
+.footnote[
+[1] https://ebird.org/home
+]
+
+---
+
+class: middle right
+background-image: url('dan-cristian-padure-faAKGPMOqWA-unsplash.jpg')
+background-size: cover
+
+### **El futuro**
+
+
+---
+class: left middle
+
+### **Estrategias de Colaboración Híbridas**
+
+- La estrategia pura de "ready-made" (listas para usar) o "custom-made" (hechas a medida) no aprovecha completamente las capacidades de la era digital.
+
+- El enfoque **híbrido** combina la escala de "ready-made" con la adaptación precisa entre pregunta y datos de "custom-made".
+Ejemplo: Enriquecimiento de fuentes de datos masivas con información adicional para hacerlas más aptas para la investigación.
+
+
+---
+class: left middle
+
+### **Enfoque Centrado en los Participantes en la Recopilación de Datos**
+
+- Los enfoques tradicionales de recopilación de datos centrados en los investigadores no funcionarán tan bien en la era digital.
+
+- Se adoptará un **enfoque centrado en los participantes**, ya que la interacción ocurre a menudo a través de computadoras y la atención de los participantes es crucial.
+
+- **Ejemplos**: Uso de juegos para encuestas, experimentos atractivos para los participantes, colaboraciones masivas motivadas por experiencia agradable.
+
+
+---
+class: middle
+
+.w-40.fl[
+### 
+
+<img src="screen38.png" width="100%" />
+
+]
+
+.w-40.fr[
+### 
+
+<img src="screen39.png" width="100%" />
+
+]
+
+.footnote[
+- [1] Salganik, M. J., Dodds, P. S., & Watts, D. J. (2006). Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market. Science, 311(5762), 854–856. https://doi.org/10.1126/science.1121066
+
+- [2] Molina, M. D., Bucca, M., & Macy, M. W. (2019). It’s not just how the game is played, it’s whether you win or lose. Science Advances, 5(7), eaau1156. https://doi.org/10.1126/sciadv.aau1156
+]
+
+---
+class: middle left
+
+## **Ética en el Diseño de la Investigación**
+
+.w-50.fl[
+### 
+
+- La ética pasará de ser una preocupación periférica a central y será un tema de investigación.
+
+- Se espera una evolución hacia un enfoque basado en principios en lugar de enfoques basados en reglas o ad hoc.
+
+- La ética se convertirá en una parte integral de la investigación social y se abordarán desafíos éticos como áreas de investigación.
+
+]
+
+.w-40.fr[
+### 
+
+<img src="ethics.gif" width="80%" />
+
+]
+
+---
+class: middle left 
+
+### **Principios Éticos Fundamentales**
+
+- **Respeto por las Personas**: Este principio implica tratar a las personas como seres autónomos y honrar sus deseos y decisiones. Reconoce la importancia de obtener el consentimiento informado y el respeto por la privacidad de los participantes.
+
+--
+
+- **Beneficencia**: Se trata de equilibrar los riesgos y beneficios de la investigación. Los investigadores deben evaluar y mejorar el perfil de riesgo/beneficio de su estudio para garantizar que los posibles beneficios superen los riesgos para los participantes.
+
+--
+
+- **Justicia**: Este principio busca asegurar una distribución justa de los riesgos y beneficios de la investigación, evitando la explotación o discriminación de ciertos grupos. La investigación debe beneficiar a la sociedad en su conjunto de manera equitativa.
+
+--
+
+- **Respeto por la Ley y el Interés Público**: Amplía el principio de beneficencia para incluir a todas las partes interesadas relevantes. Los investigadores deben considerar el impacto de su investigación en la comunidad y la sociedad en general, además de cumplir con las leyes y regulaciones aplicables.
+
+---
+class: middle left
+
+### **Ventajas del Enfoque Basado en Principios***
+
+- **Flexibilidad y Adaptabilidad**: En lugar de reglas rígidas, los principios éticos ofrecen un marco adaptable que puede aplicarse a una variedad de situaciones éticas cambiantes.
+
+--
+
+- **Toma de Decisiones Reflexiva**: Los investigadores pueden abordar cuestiones éticas de manera más profunda y considerada, teniendo en cuenta múltiples aspectos en lugar de simplemente seguir reglas predefinidas.
+
+--
+
+- **Complejidad Ética**: Los principios éticos permiten abordar la complejidad de los desafíos éticos emergentes en la investigación digital, ya que a menudo las situaciones no se ajustan a reglas específicas.
+
+--
+
+- **Enfoque Preventivo**: Al considerar los principios éticos desde el inicio de la investigación, se pueden identificar y abordar problemas éticos potenciales antes de que se conviertan en problemas.
+
+--
+
+- **Énfasis en la Responsabilidad Social**: El enfoque basado en principios no solo se preocupa por el cumplimiento de las reglas, sino que también promueve la responsabilidad social y la contribución positiva a la sociedad.
+
+
+---
+
+class: middle right
 background-image: url('ernest-karchmit-UAbg0py6GYQ-unsplash.jpg')
 background-size: cover
 
 # **Muchas Gracias**
 ### **Esta presentación fue realizada con el paquete  [Xaringan](https://slides.yihui.org/xaringan), diseñado para entorno  [R](https://www.r-project.org/)** 
-
-
-
-# colgar  
-
-
 
 
