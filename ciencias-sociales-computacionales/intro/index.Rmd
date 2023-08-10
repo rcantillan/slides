@@ -80,8 +80,8 @@ meta() %>%
   meta_description("Investigación Social en la era digital, Universidad Católica del Maule, Agosto 01, 2023") %>% 
   meta_social(
     title = "Investigación Social en la era digital",
-    url = "",
-    image = "",
+    url = "https://github.com/rcantillan/slides/tree/main/ciencias-sociales-computacionales/intro",
+    image = "https://github.com/rcantillan/slides/tree/main/ciencias-sociales-computacionales/intro/ciencias-sociales-computacionales.png",
     twitter_card_type = "summary_large_image",
     twitter_creator = "ricantillan"
   )
