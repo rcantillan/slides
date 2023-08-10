@@ -49,6 +49,25 @@ knitr::opts_chunk$set(
 ```
 
 
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons", "share_again"))
+xaringanExtra::use_extra_styles()
+```
+
+```{r metadata, echo=FALSE}
+library(metathis)
+meta() %>% 
+  meta_description("Homofilia multidimensional y movilidad social en Chile") %>% 
+  meta_social(
+    title = "Homofilia multidimensional y movilidad social en Chile",
+    url = "https://github.com/rcantillan/slides/tree/main/multi-homphily/",
+    #image = "https://github.com/rcantillan/slides/tree/main/ciencias-sociales-computacionales/intro/ciencias-sociales-computacionales.png",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "ricantillan"
+  )
+```
+
 
 ```{r logo, echo=FALSE}
 use_logo(
