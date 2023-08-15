@@ -1,0 +1,196 @@
+---
+title: "Moility Classes in Chile 2009-2020"
+author: "Insituto de Sociología PUC \n "
+date: '17/01/2023'
+institute: |
+  | 
+  | Roberto Cantillan Carrasco 
+
+
+output:
+  xaringan::moon_reader:
+    css: ["libs/my.css"]
+    lib_dir: libs
+    nature:
+      ratio: 16:9
+      beforeInit: "libs/macros.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  footnote_font_size = "0.5em",
+  primary_color = "#28282B",
+  #primary_color = "#7393B3",
+  secondary_color = "#2c8475",
+  black_color = "#4242424",
+  white_color = "#FFF",
+  base_font_size = "25px",
+  # text_font_family = "Jost",
+  # text_font_url = "https://indestructibletype.com/fonts/Jost.css",
+  header_font_google = google_font("Libre Franklin", "200", "400"),
+  header_font_weight = "200",
+  inverse_header_color = "#eaeaea",
+  title_slide_text_color = "#FFFFFF",
+  text_slide_number_color = "#9a9a9a",
+  text_bold_color = "#f79334",
+  code_inline_color = "#B56B6F",
+  code_highlight_color = "transparent",
+  link_color = "#2c8475",
+  table_row_even_background_color = lighten_color("#345865", 0.9),
+  extra_fonts = list(
+    "https://indestructibletype.com/fonts/Jost.css",
+    google_font("Amatic SC", "400")
+  ),
+  colors = c(
+    green = "#31b09e",
+    "green-dark" = "#2c8475",
+    highlight = "#87f9bb",
+    purple = "#887ba3",
+    pink = "#B56B6F",
+    orange = "#f79334",
+    red = "#dc322f",
+    `blue-dark` = "#002b36",
+    `text-dark` = "#202020",
+    `text-darkish` = "#424242",
+    `text-mild` = "#606060",
+    `text-light` = "#9a9a9a",
+    `text-lightest` = "#eaeaea"
+  ),
+  extra_css = list(
+    ".remark-slide-content h3" = list(
+      "margin-bottom" = 0, 
+      "margin-top" = 0
+    ),
+    ".smallish, .smallish .remark-code-line" = list(`font-size` = "0.7em")
+  )
+)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons", "share_again"))
+xaringanExtra::use_extra_styles()
+```
+
+```{r metadata, echo=FALSE}
+library(metathis)
+meta() %>% 
+  meta_description("Moility Classes in Chile 2009-2020, Instituto Gino Germany, Agosto 16, 2023") %>% 
+  meta_social(
+    title = "Moility Classes in Chile 2009-2020",
+    url = "https://github.com/rcantillan/slides/tree/main/mobility_class",
+    image = "",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "ricantillan"
+  )
+```
+
+```{r components, include=FALSE}
+slides_from_images <- function(
+  path,
+  regexp = NULL,
+  class = "hide-count",
+  background_size = "contain",
+  background_position = "top left"
+) {
+  if (isTRUE(getOption("slide_image_placeholder", FALSE))) {
+    return(glue::glue("Slides to be generated from [{path}]({path})"))
+  }
+  if (fs::is_dir(path)) {
+    imgs <- fs::dir_ls(path, regexp = regexp, type = "file", recurse = FALSE)
+  } else if (all(fs::is_file(path) && fs::file_exists(path))) {
+    imgs <- path
+  } else {
+    stop("path must be a directory or a vector of images")
+  }
+  imgs <- fs::path_rel(imgs, ".")
+  breaks <- rep("\n---\n", length(imgs))
+  breaks[length(breaks)] <- ""
+
+  txt <- glue::glue("
+  class: {class}
+  background-image: url('{imgs}')
+  background-size: {background_size}
+  background-position: {background_position}
+  {breaks}
+  ")
+
+  paste(txt, sep = "", collapse = "")
+}
+options("slide_image_placeholder" = FALSE)
+```
+
+class: left title-slide
+background-image: url('markus-spiske-FXFz-sW0uwo-unsplash.jpg')
+background-size: cover
+background-position: left
+
+
+[ricantillan]: https://twitter.com/ricantillan
+[rbind]: https://ricantillan.rbind.io
+
+# Moility Classes in Chile 2009-2020
+
+.side-text[
+[&commat;ricantillan][ricantillan] | [rcantillan.rbind.io][rbind]
+]
+
+.title-where[
+DEMOSAL 2023<br>
+Agosto 16, 2023
+]
+
+# Contexto I
+
+En Chile, las reformas neoliberales establecidas durante la década de 1980 se tradujeron en un proyecto de modernización orientado al desarrollo de:
+
+- Estabilidad política
+- Crecimiento económico sostenido
+- Fomento de igualdad de oportunidades (en desmedro de la igualdad de posiciones)
+  - ej. crecimiento "pro pobre"
+
+---
+
+class: middle
+
+# Contexto II
+
+- Algunas consecuencias perniciosas de este proceso fueron: 
+
+  - El desarrollo de elevados niveles de desigualdad socioeconómica y fragmentación social
+  - Fuertes restricciones a la interacción intergrupal (vertical) 
+  - Bajos niveles cohesión (difusión y acuerdo)
+  - Balcanización y conflictividad 
+
+---
+
+
+---
+
+# Bibliografía
+
+- Bargsted Valdés, M. A., Espinoza, V., & Plaza, A. (2020). Pautas de Homofilia en Chile. Papers. Revista de Sociologia, 105(4), 583. https://doi.org/10.5565/rev/papers.2617
+- Blau, P. M., & Schwartz, J. E. (1997). Crosscutting social circles: testing a macrostructural theory of intergroup relations. Transaction Publishers.
+- DiMaggio, P., & Garip, F. (2011). How Network Externalities Can Exacerbate Intergroup Inequality. American Journal of Sociology, 116(6), 1887–1933. https://doi.org/10.1086/659653
+- DiMaggio, P., & Garip, F. (2012). Network Effects and Social Inequality. Annual Review of Sociology, 38(1), 93–118. https://doi.org/10.1146/annurev.soc.012809.102545
+- McPherson, M., Smith-Lovin, L., & Cook, J. M. (2001). Birds of a Feather: Homophily in Social Networks. Annual Review of Sociology, 27(1), 415–444. https://doi.org/10.1146/annurev.soc.27.1.415
+- McPherson, M., Smith-Lovin, L., & Rawlings, C. (2021). The Enormous Flock of Homophily Researchers: Assessing and Promoting a Research Agenda. In M. L. Small & B. L. Perry (Eds.), Personal Networks (1st ed., pp. 459–470). Cambridge University Press. https://doi.org/10.1017/9781108878296.033
+- Smith, J. A., McPherson, M., & Smith-Lovin, L. (2014). Social Distance in the United States: Sex, Race, Religion, Age, and Education Homophily among Confidants, 1985 to 2004. American Sociological Review, 79(3), 432–456. https://doi.org/10.1177/0003122414531776
+- Watts, D. J., Dodds, P. S., & Newman, M. E. J. (2002). Identity and Search in Social Networks. Science, 296(5571), 1302–1305. https://doi.org/10.1126/science.1070120
+- Zhao, L., & Garip, F. (2021). Network Diffusion Under Homophily and Consolidation as a Mechanism for Social Inequality. Sociological Methods & Research, 50(3), 1150–1185. https://doi.org/10.1177/00491241211014237
+
+
+
+---
+
+class: center, middle
+# Gracias por la atención  
+## Se agradece cualquier sugerencia. 
+Presentación creada con el paquete de entorno R  [**xaringan**](https://github.com/yihui/xaringan).
+
+
