@@ -225,7 +225,7 @@ class: left middle
 
 ### **Obejtivo** 
 
-- Detectar clases de movilidad ocupacional en un intervalo de 10 años en Chile. 
+- Detectar clases de movilidad ocupacional intrageneracional en un intervalo de 10 años en Chile. 
 - Evaluar el contagio salarial en las redes ocupacionales en Chile. 
 
 
