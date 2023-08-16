@@ -495,7 +495,7 @@ class: middle left
 
 .w-50.fl[
 
-### **Datos** 
+### **Datos y ocupaciones** 
 
 - Utilizo datos de la Encuesta de Protección Social EPS
 
@@ -506,6 +506,8 @@ class: middle left
 - Utilizo un N total de 39660
 
 - Para ambos años utlizo la muestra completa (Panel y refresco) 
+
+- CIUO 08 (2009 = 250; 2020 = 265 informadas)
 
 ]
 
