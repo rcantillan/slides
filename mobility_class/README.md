@@ -7,7 +7,7 @@ twitter: "@ricantillan"
 web: https://rcantillan.rbind.io
 ---
 
-# Investigación Social en la era digital
+# Mobility classes in Chile 2009-2020
 
 ## Descripción 
 
