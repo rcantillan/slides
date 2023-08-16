@@ -1,8 +1,8 @@
 ---
-title: Investigación Social en la era digital
+title: Mobility classes in Chile 2009-2020
 subtitle: 
 date: 2023-08-01
-where: Universidad Católica del Maule
+where: Demosal
 twitter: "@ricantillan"
 web: https://rcantillan.rbind.io
 ---
@@ -10,9 +10,6 @@ web: https://rcantillan.rbind.io
 # Investigación Social en la era digital
 
 ## Descripción 
-
-Serie de presentaciones que introducen a las Ciencias Sociales Computacionales. 
-Mucho del contenido esta basado en el texto: Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
 
 ## Setup
 
