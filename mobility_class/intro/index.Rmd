@@ -595,7 +595,7 @@ class: middle left
 
 class: middle left
 
-### **Preguntas 
+### **Preguntas** 
 
 - Que atributos individuales y ocupaciones afectan la formación de límites ocupacionales. 
 - Que atributos contribuyen a desarrollo de contagio entre ocupaciones en el tiempo. 
