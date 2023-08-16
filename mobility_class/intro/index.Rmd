@@ -361,6 +361,19 @@ class: middle left
 [2] Cheng, S., & Park, B. (2020). Flows and Boundaries: A Network Approach to Studying Occupational Mobility in the Labor Market. American Journal of Sociology, 126(3), 577–631. https://doi.org/10.1086/712406
 
 ]
+
+---
+class: middle center
+
+<img src="screen14.png" width="50%" />
+
+
+.footnote[
+[1] Cheng, S., & Park, B. (2020). Flows and Boundaries: A Network Approach to Studying Occupational Mobility in the Labor Market. American Journal of Sociology, 126(3), 577–631. https://doi.org/10.1086/712406
+
+]
+
+
 ---
 
 class: middle left
