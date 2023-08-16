@@ -235,7 +235,7 @@ class: middle left
 
 ### **Estratificación y movilidad ocupacional** 
 
-- La investigación sobre estratificación y movilidad ocupacional se ha centrado en comprender los factores que influencian los cambios de ocupación en el mercado laboral. En esete sentido, una preocupación fundamental ha estado puesta en identificar límites que restringen la movilidad entre clases ocupacionales (y ocupaciones). Algunos enfoques prominentes han sido: 
+- La investigación sobre estratificación y movilidad ocupacional se ha centrado en comprender los factores que influencian los cambios de ocupación en el mercado laboral. En esete sentido, **una preocupación fundamental ha estado puesta en identificar límites que restringen la movilidad entre clases ocupacionales (y ocupaciones). Algunos enfoques prominentes han sido**
 
 ---
 
@@ -248,11 +248,11 @@ class: middle left
 
 --
 
-- **Factores influyentes**: Factores como la educación, la desigualdad económica y la similitud de requisitos de estatus y habilidades en las ocupaciones han sido identificados como elementos que afectan la movilidad laboral (Hauser, 1980; Hout, 1984; DiPrete, 1987; Stier & Grusky, 1990). 
+- **Factores influyentes**: Factores como la educación, la desigualdad económica y la similitud de requisitos de estatus afectan la movilidad laboral (Hauser, 1980; Hout, 1984; DiPrete, 1987; Stier & Grusky, 1990). 
   
 --
 
-- **Agrupación de ocupaciones**: Algunos estudios han analizado cómo las ocupaciones se agrupan en categorías (cuello blanco, cuello azul, servicios, etc.) según los flujos de trabajadores entre ellas (Goodman, 1981; Snipp, 1985; Breiger, 1974).
+- **Agrupación de ocupaciones** (Goodman, 1981; Snipp, 1985; Breiger, 1974).
 
 ---
 class: middle left
@@ -268,18 +268,17 @@ class: middle left
 
 --
 
-- **Perspectiva de redes y capital social**: Investigaciones más recientes han aplicado la perspectiva de redes sociales para entender la estructura ocupacional, enfocándose en cómo las conexiones entre ocupaciones influyen en la movilidad y el acceso a recursos. Además, ha resaltado la dinámica de segregación y el contagio entre distintos campos laborales, enfatizando en cómo las estructuras limitan o facilitan el acceso a recursos para grupos específicos (Villarreal, 2020; Cheng, 2020; Lin 2022; Fernandez & Fernandez-Mateo, 2006).
+- **Perspectiva de redes y capital social** (Villarreal, 2020; Cheng, 2020; Lin 2022; Fernandez & Fernandez-Mateo, 2006).
 
 ---
 class: middle left
 
 ### **Limitaciones del Esquema de Clases Ocupacionales en el Análisis de Movilidad**
 
-- El análisis clásico de movilidad ocupacional, fundamentado en esquemas jerárquicos de clase basados en características como prestigio, estatus, habilidades y autoridad ({Blau, 1978; Breiger, 1981), a menudo omite la atención detallada a los flujos interiores entre ocupaciones. 
+- El análisis clásico de movilidad ocupacional, fundamentado en esquemas jerárquicos de clase basados en características como prestigio, estatus, habilidades y autoridad ({Blau, 1978; Breiger, 1981), 
 
---
-
-- En efecto, las investigaciones han avanzado en mapear patrones de movilidad entre "clases ocupacionales", pero han pasado por alto flujos específicos entre "ocupaciones", que son cruciales para detectar límites "latentes" que restringen la movilidad individual a un nivel micro (Cheng & Park, 2020, p. 579).
+  - a menudo omite la atención detallada a los flujos entre ocupaciones. 
+  - los cuales son cruciales para detectar límites "latentes" que restringen la movilidad individual a un nivel micro (Cheng & Park, 2020, p. 579).
 
 ---
 class: middle left
@@ -332,14 +331,14 @@ class: middle left
 
 --
 
-- En comparación con enfoques anteriores de movilidad ocupacional, el enfoque basado en redes destaca: 
-  - los límites latentes que restringen y facilitan la movilidad, 
+- En comparación con enfoques más prominentes, el enfoque basado en redes destaca: 
+  - los límites latentes que restringen y facilitan la movilidad
   - cambios en el tiempo 
   - cómo los límites afectan la variabilidad de habilidades e ingresos. 
 
 --
 
-- La movilidad entre ocupaciones es esencial para entender la estructura ocupacional y constituye a la estructura, lo que refuta la noción de falta de estructura en la movilidad ocupacional.
+- La movilidad entre ocupaciones es esencial para entender la estructura ocupacional y constituye a la estructura, lo que refuta la noción de falta de estructura en la movilidad ocupacional (Cheng & Park, 2020).
 
 ---
 
@@ -347,13 +346,22 @@ class: middle left
 
 ### **El Mercado Ocupacional como Red II **
 
+.w-50.fl[
+### 
 
-- La estructura ocupacional se puede ver como un **sistema adaptativo de intercambio generalizado** (Bearman, 1997) donde las ocupaciones con atributos variables se conectan mediante el movimiento de trabajadores, respondiendo a choques exógenos y procesos de red endógenos.
+- La estructura ocupacional se puede ver como un **sistema adaptativo de intercambio generalizado** (Bearman, 1997) 
 
---
+- las ocupaciones con atributos variables se conectan mediante el movimiento de trabajadores, respondiendo a choques exógenos y procesos de red endógenos.
 
 - El mercado ocupacional se puede concebir como una red dirigida y valorada, con ocupaciones como nodos y flujos de trabajadores como enlaces que reflejan oportunidades y limitaciones (Cheng & Park, 2020).
 
+
+]
+
+.w-40.fr[
+### 
+
+<img src="netmovie.gif" width="80%" />
 
 .footnote[
 [1] Bearman, P. (1997). Generalized Exchange. American Journal of Sociology, 102(5), 1383–1415. https://doi.org/10.1086/231087
@@ -361,6 +369,9 @@ class: middle left
 [2] Cheng, S., & Park, B. (2020). Flows and Boundaries: A Network Approach to Studying Occupational Mobility in the Labor Market. American Journal of Sociology, 126(3), 577–631. https://doi.org/10.1086/712406
 
 ]
+
+]
+
 
 ---
 class: middle center
@@ -572,14 +583,14 @@ class: middle center
 
 #### **Mobility classes 2020** 
 
-<img src="screen11.png" width="65%" />
+<img src="screen16.png" width="65%" />
 
 ---
 class: middle center
 
 #### **Mobility classes II 2020** 
 
-<img src="screen12.png" width="65%" />
+<img src="screen15.png" width="65%" />
 
 ---
 
