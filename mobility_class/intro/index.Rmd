@@ -623,7 +623,7 @@ class: middle left
 
 ### **Preguntas** 
 
-- Que atributos individuales y ocupaciones afectan la formación de límites ocupacionales. 
+- Que atributos individuales y ocupaciones afectan la formación de límites ocupacionales (ej. Capital social). 
 
 - Que atributos contribuyen a desarrollo de contagio entre ocupaciones en el tiempo. 
 
