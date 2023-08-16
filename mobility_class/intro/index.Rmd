@@ -365,40 +365,6 @@ class: middle left
 
 class: middle left
 
-### **Evidencia Reciente sobre Redes en el Mercado Ocupacional**
-
-
-- Las redes ocupacionales tienden a segregarse y esta segregación aumenta con el tiempo, especialmente en Estados Unidos (Lin & Hung, 2022; Cheng & Park, 2020).
-
---
-
-- Los grupos ocupacionales se han diferenciado más con el tiempo, con menos superposición entre ellos, especialmente en ocupaciones de alto estatus (Lin & Hung, 2022). Esto sugiere mayor especialización y aislamiento de ocupaciones de alto estatus.
-
---
-
-- Aumento de segmentos en sectores industrial y de servicios debido a mayores intercambios internos y menos entre comunidades ocupacionales (Villarreal, 2020; Lin & Hung, 2022; Cheng & Park, 2020).
-
----
-
-class: middle left
-
-### **Evidencia Reciente sobre Redes en el Mercado Ocupacional II**
-
-
-
-- Trabajadores de bajos salarios experimentan mayor homogeneidad ocupacional en los lugares de trabajo, relacionado con salarios más bajos, mientras que ocupaciones más grandes ofrecen seguridad laboral en recesiones (Villarreal, 2020; Cheng & Park, 2020).
-
---
-
-- Atributos como género, raza, educación, edad y tareas afectan el flujo de trabajadores, influyendo en la dispersión salarial entre ocupaciones (Cheng & Park, 2020).
-
---
-
-- La movilidad laboral influye entre ocupaciones y puede causar contagio en patrones de empleo y condiciones económicas en grupos conectados (Lin & Hung, 2022).
-
----
-class: middle left
-
 
 <html>
 <head>
@@ -489,6 +455,7 @@ class: middle left
 
 - Construir cluster con algoritmo **Infomap**. 
 - Evaluar la rigidez con algoritmo **LinkRank modularity**. 
+- Utilizo el 
 - Descrbir patrones generales
 - Evaluar patrones de contagio siumple. 
 
@@ -577,20 +544,64 @@ class: middle center
 
 <img src="screen6.png" width="65%" />
 
+---
+class:middle center
+
+#### **Class relations 2009**
+
+<img src="screen9.png" width="50%" />
+
 
 ---
 class: middle center
 
 #### **Mobility classes 2020** 
 
-<img src="screen7.png" width="65%" />
+<img src="screen11.png" width="65%" />
 
 ---
 class: middle center
 
 #### **Mobility classes II 2020** 
 
-<img src="screen8.png" width="65%" />
+<img src="screen12.png" width="65%" />
+
+---
+
+class:middle center
+
+#### **Class relations 2020**
+
+<img src="screen13.png" width="50%" />
+
+
+---
+class: middle left
+
+### **Resultados preliminares**
+
+- Las redes ocupacionales tienden a reducir el nivel de diversidad pero no el de segregación.  
+
+- Aumenta levemente el número de clases de movilidad: **de 22 cluster en el 2009 a 23 en el 2019**. 
+
+- Adicionalmente, la medida de **`linkModularity` aumenta de 0.31 a 0.34**. Esto denota mayor rigidez en la estructura de clases de movilidad en general. 
+
+- La tendencia muestra que los grupos ocupacionales de alto estatus tienden a integrarse mejor, con una mayor diversidad ocupaciones, aunque similares en estatus. 
+
+- Mayor especialización y mayor diversidad en ocupaciones de alto estatus en el año 2020.  
+
+
+---
+
+class: middle left
+
+### **Preguntas 
+
+- Que atributos individuales y ocupaciones afectan la formación de límites ocupacionales. 
+- Que atributos contribuyen a desarrollo de contagio entre ocupaciones en el tiempo. 
+- Que papel juega la consolidación y la homofilia en la formación de la topología de las redes ocupacionales. 
+- Análisis con datos panel 
+
 
 
 ---
