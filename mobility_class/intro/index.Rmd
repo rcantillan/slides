@@ -134,7 +134,7 @@ background-position: left
 # Mobility classes <br> in Chile 2009- 2020
 
 .side-text[
-[&commat;ricantillan][ricantillan] | [rcantillan.rbind.io][rbind]
+[&commat;ricantillan][rcantillan] | [rcantillan.rbind.io][rbind]
 ]
 
 .title-where[
