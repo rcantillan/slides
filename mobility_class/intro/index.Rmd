@@ -81,7 +81,7 @@ meta() %>%
   meta_social(
     title = "Mobility classes in Chile 2009- 2020",
     url = "https://github.com/rcantillan/slides/tree/main/mobility_class/intro",
-   # image = "https://github.com/rcantillan/slides/tree/main/ciencias-sociales-computacionales/intro/ciencias-sociales-computacionales.png",
+    image = "https://github.com/rcantillan/slides/tree/main//mobility_class/intro/home_screen.png",
     twitter_card_type = "summary_large_image",
     twitter_creator = "ricantillan"
   )
@@ -129,7 +129,7 @@ background-position: left
 
 
 [ricantillan]: https://twitter.com/ricantillan
-[rbind]: https://ricantillan.rbind.io
+[rbind]: https://rcantillan.rbind.io
 
 # Mobility classes <br> in Chile 2009- 2020
 
