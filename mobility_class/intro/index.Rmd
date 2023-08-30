@@ -381,6 +381,28 @@ class: middle left
 
 ]
 
+---
+
+class: middle left
+
+### **Clases de movilidad**
+
+- Grupos de ocupaciones que están juntas debido a cómo las personas se mueven entre ellas: Clases de movilidad
+
+- Las clases de movilidad se definen en función de cómo las personas se mueven, mientras que las clases ocupacionales (de manera clásica) a menudo no tienen que ver con esto. 
+
+- Por lo tanto, las fronteras de movilidad pueden cruzar las fronteras de las clases ocupacionales, lo que significa que trascender las fronteras de movilidad no siempre implica cambios en la posición laboral, y cambiar de posición laboral no siempre implica moverse entre fronteras de movilidad. 
+
+- Las clases de movilidad y las clases ocupacionales capturan diferentes aspectos del sistema laboral. Es importante entdner como se relacionan.  
+
+
+.footnote[
+
+[1] Cheng, S., & Park, B. (2020). Flows and Boundaries: A Network Approach to Studying Occupational Mobility in the Labor Market. American Journal of Sociology, 126(3), 577–631. https://doi.org/10.1086/712406
+
+]
+
+
 
 ---
 class: middle center
@@ -485,6 +507,7 @@ class: middle left
 
 ### **Metodología** 
 
+- Ponderar overlap por periodo
 - Construir cluster con algoritmo **Infomap**. 
 - Evaluar la rigidez con algoritmo **LinkRank modularity**. 
 - Utilizo el 
