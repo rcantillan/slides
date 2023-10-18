@@ -1,13 +1,13 @@
 ---
-title: Mobility classes in Chile 2009-2020
+title: Interseccionalidad
 subtitle: 
-date: 2023-08-01
+date: 2023-10-18
 where: Demosal
 twitter: "@ricantillan"
 web: https://rcantillan.rbind.io
 ---
 
-# Mobility classes in Chile 2009-2020
+# Interseccionalidad
 
 ## Descripción 
 
