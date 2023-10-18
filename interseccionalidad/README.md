@@ -2,7 +2,7 @@
 title: Interseccionalidad
 subtitle: 
 date: 2023-10-18
-where: Demosal
+where: ISUC
 twitter: "@ricantillan"
 web: https://rcantillan.rbind.io
 ---
