@@ -11,6 +11,8 @@ web: https://rcantillan.rbind.io
 
 ## Descripción 
 
+https://rcantillan.github.io/slides/interseccionalidad/intro/
+
 ## Setup
 
 Archivos incluidos:
