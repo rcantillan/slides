@@ -7,11 +7,11 @@ twitter: "@ricantillan"
 web: https://rcantillan.rbind.io
 ---
 
-# Interseccionalidad
+# Segregación de género y contagio en el mercado ocupacional Chileno 2009 - 2020
 
 ## Descripción 
 
-https://rcantillan.github.io/slides/interseccionalidad/intro/
+https://rcantillan.github.io/slides/LM2C2/intro/
 
 ## Setup
 
