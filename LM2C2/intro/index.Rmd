@@ -248,13 +248,29 @@ class: left middle
 
 - El enfoque en la movilidad intrageneracional dentro de comunidades ocupacionales más pequeñas desafía la idea convencional de clases laborales homogéneas, destacando la necesidad de un análisis más detallado y específico.
 
+
+---
+class: left middle
+
+### **En Latam.** 
+
+- A pesar de la menor movilidad global (En comparación con antes del 2000), existe un alto volumen de movilidad ascendente, indicando que la reducción se debe a una disminución en la tendencia al descenso ocupacional.
+
+- Santiago muestra mayor movilidad ocupacional fuera de las ocupaciones menos calificadas, pero excluye a los hijos de trabajadores de esas ocupaciones. Buenos Aires, las pautas de movilidad son más trabadas, acercándose a una situación de polarización (Espinoza, 2006). 
+
+- La movilidad descendente agrava la discriminación de género, ya que las mujeres tienen una mayor probabilidad de experimentar descensos ocupacionales al reintegrarse al mercado laboral tras la maternidad (Keesler y Espinoza, 2003; Espinoza, 2006)
+
+- Grado extremadamente bajo de movilidad social de ingreso (Brazil y Panama) (Doruk et al., 2022)
+
+- La movilidad intergeneracional del ingreso en América Latina es más débil en comparación con los países industriales, y existe un patrón de "persistencia en la cima" debido a los altos niveles de concentración económica en la región (Torche, 2014)
+
 ---
 
 class: left middle
 
 ### **Estructura ocupacional** 
 
-- La estructura ocupacional es una red emergente, y un *sistema adaptativo de intercmabio* (Bearman, 2007) de ocupaciones conectadas a través del movimiento de trabajadores. Acá, las configuraciones emergen de la interacción local entre ocupaciones heterogéneas, ajustándose mutuamente a través de procesos endógenos y exógenos.
+- La estructura ocupacional es una red emergente, y un *sistema adaptativo de intercmabio generalizado* (Bearman, 2007) de ocupaciones conectadas a través del movimiento de trabajadores. Acá, las configuraciones emergen de la interacción local entre ocupaciones heterogéneas, ajustándose mutuamente a través de procesos endógenos y exógenos.
 
 - **Red como variable dependiente**: Es importante abalizar los ejes de diferenciación entre grupos de ocupaciones, ya que estos delimitan flujos de trabajadores, información e innovaciones en la red, contribuyendo a la comprensión de la segmentación y desigualdades. La diferenciación estructural y los flujos son mutuamente constitutivos, influyendo en la emergencia de fronteras, segmentación de oportunidades y desigualdades. 
 
@@ -290,7 +306,7 @@ class: left middle
 
 - (H2) Mayor segregación vinculada inter-ocupaciones predice mayor segregación ocupacional interna.
 
-Nuevamente, la noción de homofilia constituye un puntapié inicial importante (McPherson et al. 2001). Pero más específicamente, dinámicas como contagio, difusión e isomorfismo institucional (DiMaggio & Powell, 1983) plantean cómo posiciones interconectadas tenderían a imitarse unas a otras. Así, interdependencia con otras ocupaciones segregadas intensificaría dichas prácticas al interior dada la validación normativa externa y bajos costos de adopción (Centola & Macy, 2007). Así como la composición y el flujo delimita pautas de diferenciación (Arvidsson et al., 2021; Block, 2023)
+Nuevamente, la noción de homofilia constituye un puntapié inicial importante (McPherson et al. 2001). Pero más específicamente, dinámicas como contagio, difusión e isomorfismo institucional (DiMaggio & Powell, 1983) plantean cómo ocupaciones (u posiciones) interconectadas tenderían a imitarse unas a otras. Así, interdependencia con otras ocupaciones segregadas intensificaría dichas prácticas al interior dada la validación normativa externa y bajos costos de adopción (Centola & Macy, 2007). Así como la composición y el flujo delimita pautas de diferenciación (Arvidsson et al., 2021; Block, 2023)
 
 
 ---
@@ -453,21 +469,26 @@ Se estima mediante modelos de panel con efectos fijos, para capturar factores no
 
 
 ---
+
 class: left middle
 
 ### **Instrumentos**
 
-- Características como composición demográfica, educativa, salarial de las ocupaciones "linked" están correlacionadas con la segregación de género que hay entre esas ocupaciones y la ocupación focal **(linked dissimilarity)**.
+- Características como composición demográfica, educativa y de habilidades de ocupaciones linked están correlacionadas con la linked_dissimilarity (movilidad entre ocupación focal y otras ocupaciones). Es decir, reflejan qué tan cercanas/lejanas son esas otras ocupaciones a la focal, en cuanto a sus dinámicas y requerimientos.
 
-- Sin embargo, no deberían afectar directamente la segregación de género al interior de la ocupación focal **(índice de disimilitud)**, excepto a través de dos mecanismos:
+- Sin embargo, estas características de ocupaciones linked no deberían afectar resultados dentro de la ocupación focal (ej. segregación de género) excepto de forma indirecta a través de:
 
-    - A través de la **linked dissimilarity** (endógena)
-    - A través de las características propias de la ocupación focal, las cuales estamos controlando en el modelo (promedio edad etc.)
+  - La linked_dissimilarity (tasa de movilidad) entre ocupaciones
+  - Atributos de la propia ocupación focal (controlados en el modelo)
+  
+- En específico, usamos "edad promedio linked", "porentaje de trabajadores con educación superior linked", "edad promedio linked" y "ingreso promedio linked". Se sigue la misma estrategia del Lin y Hung (2022). 
 
-Es decir, cumplen la definición de variables instrumentales:
+---
 
-  - Correlación con la endógena: sí la hay porque las características linked afectan el linked_dissimilarity.
-  - Correlación con el error: no la hay porque no deberían afectar directamente la segregación interna **índice de disimilitud** (y se controla por características propias de la ocupación focal).
+class: center middle
+
+
+<img src="screen6.png" width="70%" />
 
 
 ---
@@ -504,22 +525,24 @@ class: left middle
 
 - El análisis de redes proporciona una perspectiva novedosa para estudiar la estructura ocupacional como un sistema de intercambio generalizado adaptativo, donde ocupaciones heterogéneas interactúan y se influencian mutuamente, sujetas a fuerzas endógenas de agrupamiento y contagio (Bearman, 1997).
 
-- Se aportan elementos microfundacionales que mejoran la comprensión de dinámicas de diferenciación, delimitación relacional de oportunidades de movilidad y propagación de normas organizacionales entre comunidades de ocupaciones cercanas.
-
 - Se destaca la visión dinámica de co-evolución entre distancias relacionales y atributos, mejorando la comprensión de fenómenos como la persistencia de segregación ocupacional o la rigidez de trayectorias.
 
-- Se identifica un patrón de movilidad homofílica, donde la similitud en múltiples dimensiones facilita el intercambio de trabajadores entre pares de ocupaciones.
+- Se identifica un patrón de movilidad altamente homofílica, considerando que la disimilitud en múltiples dimensiones restringe el intercambio de trabajadores entre pares de ocupaciones. 
 
-- Se observa el contagio de prácticas culturales negativas, como la segregación de género, entre ocupaciones interconectadas, subrayando la interdependencia entre distancias relacionales y atributos en la configuración del sistema ocupacional.
+- Se observa el contagio de prácticas culturales negativas, como la segregación de género, entre ocupaciones interconectadas, subrayando la interdependencia entre distancias relacionales y atributos en la configuración del sistema ocupacional. Esto puede estar vinculado a la movilidad ocupacional interdependiente de mujeres y hombres (Arvidsson, 2021; Block, 2023).
 
 
 ---
 
 class: left middle
 
+### **Limitaciones**
 
-Necesidad de análisis diacrónico y intergeneracional: Se sugiere la necesidad de futuros estudios que analicen estas dinámicas en perspectiva diacrónica, considerando trayectorias individuales y realizando análisis intergeneracionales sobre diferenciación/contagio y sus impactos.
+- Integración con trayectorias individuales 
 
+- Integración con perspectiva intergeneracional 
+
+- No se consideran factores como el capital social (EPS lo integrara en la última versión) 
 
 
 ---
