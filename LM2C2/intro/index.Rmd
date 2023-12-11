@@ -210,11 +210,11 @@ class: left middle
 
 ### **Motivación**
 
-- Históricamente, el análisis de la movilidad ocupacional y de clases ha estado enfocado en la identificación de los límites al flujo de trabajadores entre ocupaciones o grupos, concebiendo la estructura ocupacional como jerárquica y organizada en clases estables.
+- Históricamente, el análisis de la movilidad ocupacional y de clases ha estado enfocado en la identificación de los límites al flujo de trabajadores entre ocupaciones o grupos, concebiendo la estructura ocupacional como **jerárquica y organizada en clases estables**.
 
-- En este contexto, se ha asumido comúnmente que las ocupaciones son regulares en sus atributos y no se ven afectadas por la movilidad de los individuos (Erikson & Goldthorpe, 1992; Grusky & Sørensen, 1998).
+- En este contexto, se ha asumido comúnmente que las ocupaciones son **regulares en sus atributos** y no se ven afectadas por la movilidad de los individuos (Erikson & Goldthorpe, 1992; Grusky & Sørensen, 1998).
 
-- Este trabajo se fundamenta en la tradición analítica de redes y en la literatura sobre "ocupaciones vinculadas", resaltando la importancia de los patrones de movilidad intrageneracional (Blau et al., 1967; White, 1969; Spilerman, 1977; Breiger, 1981; Breiger, 1990). Explorar estos patrones es esencial para comprender la emergencia de la estructura del mercado laboral.
+- Este trabajo se fundamenta en la tradición analítica de redes y en la literatura sobre **ocupaciones vinculadas**, resaltando la importancia de los patrones de movilidad intrageneracional (Blau et al., 1967; White, 1969; Spilerman, 1977; Breiger, 1981; Breiger, 1990). Explorar estos patrones es esencial para comprender la emergencia de la estructura del mercado laboral.
 
 - En particular, se sugiere que la diferenciación por género desempeña un papel crucial en la configuración del flujo de trabajadores. Este enfoque puede revelar patrones emergentes vinculados a la interdependencia en la movilidad ocupacional de hombres y mujeres (Arvidsson et al., 2021; Block, 2023).
 
