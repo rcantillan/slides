@@ -145,7 +145,7 @@ Diciembre 11, 2023
 
 ```{css echo=FALSE}
 .title-slide h1 {
-  font-size: 80px;
+  font-size: 70px;
   font-family: Jost, sans;
   animation-name: title-text;
   animation-direction: alternate;
@@ -156,9 +156,9 @@ Diciembre 11, 2023
   color: white;
   transform: rotate(90deg);
   position: absolute;
-  font-size: 22px;
+  font-size: 18px;
   top: 150px;
-  right: -130px;
+  right: -110px;
   transition: opacity 0.5s ease-in-out;
   animation-name: enter-right;
   animation-direction: alternate;
@@ -177,7 +177,7 @@ Diciembre 11, 2023
   font-family: Jost, sans;
   font-size: 30px;
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   animation-name: enter-left;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -434,6 +434,24 @@ Se estima mediante modelos de panel con efectos fijos, para capturar factores no
 
 
 ---
+class: left middle
+
+### **Instrumentos**
+
+- Características como composición demográfica, educativa, salarial de las ocupaciones linked están correlacionadas con la segregación de género que hay entre esas ocupaciones y la ocupación focal (linked_dissimilarity).
+
+- Sin embargo, no deberían afectar directamente la segregación de género al interior de la ocupación focal (dissim_index), excepto a través de dos mecanismos:
+
+    - A través de la linked_dissimilarity (endógena)
+    - A través de las características propias de la ocupación focal, las cuales estamos controlando en el modelo (promedio_edad etc.)
+
+Es decir, cumplen la definición de variables instrumentales:
+
+  - Correlación con la endógena: sí la hay porque las características linked afectan el linked_dissimilarity.
+  - Correlación con el error: no la hay porque no deberían afectar directamente la segregación interna dissim_index (y se controla por características propias de la ocupación focal).
+
+
+---
 class: center middle
 
 
@@ -464,14 +482,13 @@ background-size: cover
 
 class: left middle
 
+### **Conclusiones**
 
-- El análisis de redes proporciona una perspectiva novedosa para estudiar la estructura ocupacional como un sistema de intercambio generalizado adaptativo, donde ocupaciones heterogéneas interactúan y se influencian mutuamente, sujetas a fuerzas endógenas de agrupamiento y contagio \parencite{bearman_generalized_1997}.
+- El análisis de redes proporciona una perspectiva novedosa para estudiar la estructura ocupacional como un sistema de intercambio generalizado adaptativo, donde ocupaciones heterogéneas interactúan y se influencian mutuamente, sujetas a fuerzas endógenas de agrupamiento y contagio (Bearman, 1997).
 
 - Se aportan elementos microfundacionales que mejoran la comprensión de dinámicas de diferenciación, delimitación relacional de oportunidades de movilidad y propagación de normas organizacionales entre comunidades de ocupaciones cercanas.
 
 - Se destaca la visión dinámica de co-evolución entre distancias relacionales y atributos, mejorando la comprensión de fenómenos como la persistencia de segregación ocupacional o la rigidez de trayectorias.
-
-- Al evidenciar la interdependencia sistémica entre posiciones, se plantean preguntas interesantes sobre la efectividad de intervenciones aisladas versus intervenciones coordinadas sobre grupos de ocupaciones fuertemente vinculadas.
 
 - Se identifica un patrón de movilidad homofílica, donde la similitud en múltiples dimensiones facilita el intercambio de trabajadores entre pares de ocupaciones.
 

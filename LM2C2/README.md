@@ -1,8 +1,8 @@
 ---
-title: Interseccionalidad
+title: LM2C2
 subtitle: 
-date: 2023-10-18
-where: ISUC
+date: 2023-12-11
+where: LM2C2
 twitter: "@ricantillan"
 web: https://rcantillan.rbind.io
 ---
