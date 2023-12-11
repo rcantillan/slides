@@ -252,9 +252,20 @@ class: left middle
 
 ### **Datos**
 
-- Se emplean datos de corte transversal de la Encuesta de Protección Social (Chile) para los años 2009, 2015 y 2020. 
+- Se emplean datos de corte transversal de la Encuesta de Protección Social (EPS Chile) para los años 2009, 2015 y 2020. 
 - La muestra total entre los 3 años es de aproximadamente [N] 36400 individuos ocupados. 
-- Sin embargo, nos enfocamos en analizar dos estructuras de datos: los datos diádicos con un N de 349818 para los 3 años de interés. Y por otro lado, los datos panel de atributos ocupacionales, la cual consta de 857 observaciones para los 3 años de interés. 
+- Sin embargo, nos enfocamos en analizar dos estructuras de datos: 
+  - los datos diádicos panel ocupación-ocupación con un N de 349818 para los 3 años de interés. 
+  - los datos panel de ocupaciones-atributos, la cual consta de 857 observaciones para los 3 años de interés. 
+
+
+---
+class: center middle
+
+
+
+&lt;img src="screen5.png" width="70%" /&gt;
+
 
 
 ---
@@ -392,17 +403,17 @@ class: left middle
 
 ### **Instrumentos**
 
-- Características como composición demográfica, educativa, salarial de las ocupaciones linked están correlacionadas con la segregación de género que hay entre esas ocupaciones y la ocupación focal (linked_dissimilarity).
+- Características como composición demográfica, educativa, salarial de las ocupaciones "linked" están correlacionadas con la segregación de género que hay entre esas ocupaciones y la ocupación focal **(linked dissimilarity)**.
 
-- Sin embargo, no deberían afectar directamente la segregación de género al interior de la ocupación focal (dissim_index), excepto a través de dos mecanismos:
+- Sin embargo, no deberían afectar directamente la segregación de género al interior de la ocupación focal **(índice de disimilitud)**, excepto a través de dos mecanismos:
 
-    - A través de la linked_dissimilarity (endógena)
-    - A través de las características propias de la ocupación focal, las cuales estamos controlando en el modelo (promedio_edad etc.)
+    - A través de la **linked dissimilarity** (endógena)
+    - A través de las características propias de la ocupación focal, las cuales estamos controlando en el modelo (promedio edad etc.)
 
 Es decir, cumplen la definición de variables instrumentales:
 
   - Correlación con la endógena: sí la hay porque las características linked afectan el linked_dissimilarity.
-  - Correlación con el error: no la hay porque no deberían afectar directamente la segregación interna dissim_index (y se controla por características propias de la ocupación focal).
+  - Correlación con el error: no la hay porque no deberían afectar directamente la segregación interna **índice de disimilitud** (y se controla por características propias de la ocupación focal).
 
 
 ---
@@ -436,7 +447,6 @@ background-size: cover
 
 class: left middle
 
-### **Conclusiones**
 
 - El análisis de redes proporciona una perspectiva novedosa para estudiar la estructura ocupacional como un sistema de intercambio generalizado adaptativo, donde ocupaciones heterogéneas interactúan y se influencian mutuamente, sujetas a fuerzas endógenas de agrupamiento y contagio (Bearman, 1997).
 
