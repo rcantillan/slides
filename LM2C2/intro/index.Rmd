@@ -15,10 +15,22 @@ output:
       countIncrementalSlides: true
       ratio: 16:9
       slideNumberFormat: "%current%"
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{amsthm}
+  - \usepackage{amsmath}
+  - \usepackage{amsfonts}
+  - \usepackage{amscd}
+  - \usepackage{amssymb}
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+options(kableExtra.latex.load_packages = FALSE)
+library(kableExtra)
 ```
 
 ```{r xaringan-themer, include=FALSE}
@@ -226,6 +238,7 @@ class: left middle
 
 - En esta presentación, exploraremos cómo la adopción de un enfoque basado en redes y la consideración de la diferenciación de género pueden arrojar luz sobre los patrones dinámicos y emergentes que definen la estructura del mercado laboral en la actualidad.
 
+- Este trabajo busca integrar ambas perspectivas al estudiar cómo la movilidad de trabajadores entre ocupaciones, puede generar segregación en terminos composicionales (sociodemográficos), al mismo tiempo que generar diversidad y procesos de integración. Para sustentar esta afirmación, se entrelazan tres corrientes teóricas que dan cuenta de mecanismos de contagio y convergencia institucional: (1) la teoría del isomorfismo institucional (DiMaggio y Powell, 1983); (2) la teoría del contagio complejo (Centola y Macy, 2007); y (3) la teoría ecólogica del espacio Blau (McPherson, 2004; Arvidsson, et al. 2021). 
 
 ---
 class: middle right
@@ -264,19 +277,71 @@ class: left middle
 
 - La movilidad intergeneracional del ingreso en América Latina es más débil en comparación con los países industriales, y existe un patrón de "persistencia en la cima" debido a los altos niveles de concentración económica en la región (Torche, 2014)
 
+
 ---
 
 class: left middle
 
 ### **Estructura ocupacional** 
 
-- La estructura ocupacional es una red emergente, y un *sistema adaptativo de intercmabio generalizado* (Bearman, 2007) de ocupaciones conectadas a través del movimiento de trabajadores. Acá, las configuraciones emergen de la interacción local entre ocupaciones heterogéneas, ajustándose mutuamente a través de procesos endógenos y exógenos.
+- La estructura ocupacional es una red emergente, y un **sistema adaptativo de intercmabio generalizado** (Bearman, 2007) de ocupaciones conectadas a través del movimiento de trabajadores. Acá, las configuraciones emergen de la interacción local entre ocupaciones heterogéneas, ajustándose mutuamente a través de procesos endógenos y exógenos.
 
-- **Red como variable dependiente**: Es importante abalizar los ejes de diferenciación entre grupos de ocupaciones, ya que estos delimitan flujos de trabajadores, información e innovaciones en la red, contribuyendo a la comprensión de la segmentación y desigualdades. La diferenciación estructural y los flujos son mutuamente constitutivos, influyendo en la emergencia de fronteras, segmentación de oportunidades y desigualdades. 
+- El sistema es adaptativo en el sentido de que tanto los atributos ocupacionales como los intercambios entre posiciones responden a shocks exógenos así como a procesos endógenos de red: *la similitud entre ocupaciones tiende a producir intercambio, y el intercambio tiende a hacer converger los atributos de las ocupaciones* (Lin y Hung, 2022).
 
-- **Red como variable independiente**: A pesar de la diferenciación entre posiciones, se reconoce la posibilidad de intercambios y contagios entre ocupaciones conectadas. 
+---
 
-- La diferenciación y el contagio son caras de una misma moneda en las redes ocupacionales consideradas como sistemas complejos adaptativos, y entender sus determinantes y consecuencias es esencial para explicar dinámicas emergentes de movilidad, desigualdades y respuestas agregadas (Rawlings et al., 2023).
+class: left middle
+
+### **Isomorfismo, contagio y segregación** 
+
+ - La teoría del isomorfismo institucional (DiMaggio y Powell, 1983) postula la existencia de fuerzas coercitivas, miméticas y normativas que llevan a que las organizaciones dentro de un mismo campo se vuelvan más homogéneas en estructuras, procesos y comportamientos. Por ejemplo, las organizaciones tienden a copiar los modelos de sus pares más exitosos cuando enfrentan incertidumbre (isomorfismo mimético), o incorporan las prácticas normativas de una profesión cuando contratan personal acreditado de esa disciplina (isomorfismo normativo).
+
+- Por su parte, Centola y Macy (2007) acuñaron el concepto de "contagios complejos" para referirse a comportamientos sociales que, a diferencia de los contagios simples, requieren refuerzo de múltiples fuentes antes de ser adoptados en vez de una sola exposición (intensidad, normas, etc.). Por ejemplo, ciertas tecnologías o prácticas de gestión podrían tener un umbral de adopción compleja en una ocupación debido a externalidades de red. Mientras más organizaciones dentro de una ocupación las usen, se vuelven más valiosas de incorporar para el resto. 
+
+---
+
+class: left middle
+
+### **Isomorfismo, contagio y segregación II** 
+
+- Sin embargo, la teoría ecológica también plantea que los movimientos motivados por la busqueda de similitud y, por lo tanto, inicialmente segregadores, pero pueden iniciar procesos de diversifación interna de la organización (o posición) de llegada. 
+
+- En este sentido, Arvidsson et al. (2021) hace eco de la teória de la ecología organizacional e identifica un mecanismo de "Caballo de Troya" en las redes de movilidad laboral. Encuentran que el movimiento inicial de una minoría (e.j. mujeres ingenieras) erosiona barreras e impulsa flujos futuros de personas del género mayoritario (e.j. más ingenieros hombres) entre esas mismas ocupaciones. Las restricciones de mezcla dentro de las organizaciones generan este efecto.
+
+<div style="text-align: center;">
+<img src="screen7.png" width="70%" />
+</div>
+
+---
+
+class: left middle
+
+### **Estructura ocupacional y segregación de género**
+
+- El género como sistema de estratificación predice la segregación y la concentración de las desventajas en las mujeres en distintos campos (Collins & Bilge, 2020). 
+
+- En la literatura acerca movilidad ocupacional existe un amplio consenso en que la segregación ocupacional por sexo, definida como la concentración de hombres y mujeres en diferentes ocupaciones, es un componente integral de la estructura ocupacional que debe entenderse para explicar la desigualdad de género en el mercado laboral (Jacobs, 1990; Reskin, 1993).  
+
+- En el caso particular de segregación de género, abundante evidencia muestra cómo las normas de género delimitan espacios legítimos femeninos/masculinos (Acker, 1990; Ridgeway & Correll, 2004).
+
+- Sin embargo, más allá de características ocupacionales, la segregación ocupacional por sexo podría exhibir patrones emergentes vinculados a la interdependencia en la movilidad ocupacional de hombres y mujeres. 
+
+---
+
+class: left middle
+
+### **Objetivo de investigación**
+
+
+- **General**
+
+  - Examinar los ejes de diferenciación sociodemográfica en el campo ocupacional chileno, así como analizar el rol de flujos de trabajadores entre ocupaciones en la reproducción o mitigación de brechas de género dentro de esas posiciones"
+
+- **Específicos**
+
+  - Caracterizar el efecto de la distancia sociodemográficas sobre el flujo de trabajadores entre ocupaciones. Esto permitiría comprender cómo esos ejes delimitan el espacio de oportunidades y movilidad laboral.
+  
+  - Evaluar hasta qué punto los flujos de trabajadores entre ocupaciones relevantes reproducen o transforman los niveles de segregación de género interna de las ocupaciones. Específicamente, se analizaría si los movimientos entre ocupaciones conectadas exhiben patrones isomórficos, contagiando sus grados de (des)segregación; o efectos diversificadores, alterando la composición al incorporar minorías por el mecanismo Caballo de Troya.
 
 ---
 
@@ -327,6 +392,20 @@ class: left middle
 - Sin embargo, nos enfocamos en analizar dos estructuras de datos: 
   - los datos diádicos panel ocupación-ocupación con un N de 349818 para los 3 años de interés. 
   - los datos panel de ocupaciones-atributos, la cual consta de 857 observaciones para los 3 años de interés. 
+
+
+
+---
+
+class: left middle
+
+### **Metodología II: Plan de análisis**
+
+
+- **Red como variable dependiente**: Se estudian los principales ejes de diferenciación entre grupos de ocupaciones, ya que estos delimitan flujos de trabajadores, información e innovaciones en la red, contribuyendo a la comprensión de la segmentación y desigualdades. La diferenciación estructural y los flujos son mutuamente constitutivos, influyendo en la emergencia de fronteras, segmentación de oportunidades y desigualdades. 
+
+- **Red como variable independiente**: En un segundo momoento se estudiará como ocurre que los atributos ocupacionales, en específico la segregación de género es el resultado de un proceso de contagio motivado por la intensidad del flujo de trabajadores entre las ocupaciones. 
+
 
 
 ---
