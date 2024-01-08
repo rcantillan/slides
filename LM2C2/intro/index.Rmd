@@ -89,11 +89,11 @@ xaringanExtra::use_extra_styles()
 ```{r metadata, echo=FALSE}
 library(metathis)
 meta() %>% 
-  meta_description("Pautas de segregación de género y movilidad ocupacional intrageneracional, DEMOSAL, Agosto 16, 2023") %>% 
+  meta_description("Pautas de segregación de género y movilidad ocupacional intrageneracional, LM2C2, Noviembre 16, 2023") %>% 
   meta_social(
-    title = "Mobility classes in Chile 2009- 2020",
-    url = "https://github.com/rcantillan/slides/tree/main/interseccionalidad/index",
-    image = "https://github.com/rcantillan/slides/tree/main//interseccionalidad/intro/home_screen.png",
+    title = "Pautas de segregación de género y movilidad ocupacional intrageneracional en Chile 2009- 2020",
+    url = "https://github.com/rcantillan/slides/tree/main/LM2C2/index",
+    image = "https://github.com/rcantillan/slides/tree/main//LM2C2/intro/home_screen.png",
     twitter_card_type = "summary_large_image",
     twitter_creator = "ricantillan"
   )
