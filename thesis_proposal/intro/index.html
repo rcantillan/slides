@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Movilidad ocupacional intrageneracional en Chile: Segregación y contagio (2009 - 2020)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Roberto Cantillan Carrasco" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <meta name="description" content="Movilidad ocupacional intrageneracional en Chile: Segregación y contagio (2009 - 2020), ISUC, Enero 26, 2024"/>
+    <meta name="twitter:title" content="Movilidad ocupacional intrageneracional en Chile: Segregación y contagio (2009 - 2020)"/>
+    <meta name="twitter:description" content="Movilidad ocupacional intrageneracional en Chile: Segregación y contagio (2009 - 2020), ISUC, Enero 26, 2024"/>
+    <meta name="twitter:url" content="https://github.com/rcantillan/slides/tree/main/thesis_proposal/index"/>
+    <meta name="twitter:image" content="https://github.com/rcantillan/slides/tree/main//thesis_proposal/intro/home_screen.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="ricantillan"/>
+    <meta name="twitter:site" content="ricantillan"/>
+    <meta property="og:title" content="Movilidad ocupacional intrageneracional en Chile: Segregación y contagio (2009 - 2020)"/>
+    <meta property="og:description" content="Movilidad ocupacional intrageneracional en Chile: Segregación y contagio (2009 - 2020), ISUC, Enero 26, 2024"/>
+    <meta property="og:url" content="https://github.com/rcantillan/slides/tree/main/thesis_proposal/index"/>
+    <meta property="og:image" content="https://github.com/rcantillan/slides/tree/main//thesis_proposal/intro/home_screen.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link href="libs/bsTable/bootstrapTable.min.css" rel="stylesheet" />
+    <script src="libs/bsTable/bootstrapTable.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+
+
+class: left title-slide
+background-image: url('marc-sendra-martorell-2BrdNFxW0UY-unsplash.jpg')
+background-size: cover
+background-position: left
+
+
+[ricantillan]: https://twitter.com/ricantillan
+[rbind]: https://rcantillan.rbind.io
+
+#  
+
+.side-text[
+[&amp;commat;ricantillan][ricantillan] | [rcantillan.rbind.io][rbind]
+]
+
+.title-where[
+### Movilidad ocupacional intrageneracional en Chile: 
+### Segregación y contagio (2009 - 2020) 
+
+Instituto de Sociología PUC &lt;br&gt; 
+Enero 26, 2024
+]
+
+&lt;style type="text/css"&gt;
+.title-slide h1 {
+  font-size: 80px;
+  font-family: Jost, sans;
+  animation-name: title-text;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.side-text {
+  color: white;
+  transform: rotate(90deg);
+  position: absolute;
+  font-size: 22px;
+  top: 150px;
+  right: -130px;
+  transition: opacity 0.5s ease-in-out;
+  animation-name: enter-right;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.side-text:hover {
+  opacity: 1;
+}
+
+.side-text a {
+  color: white;
+}
+
+.title-where {
+  font-family: Jost, sans;
+  font-size: 25px;
+  position: absolute;
+  bottom: 10px;
+  animation-name: enter-left;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+&lt;/style&gt;
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 150px;
+height: 150px;
+z-index: 0;
+background-image: url(ins--sociologia-traz-04.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.hide_logo):not(.inverse)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+&lt;style type="text/css"&gt;
+table {
+  font-size: 12px;     
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.regression table {
+  font-size: 12px;     
+}
+&lt;/style&gt;
+
+---
+
+class: left middle
+
+### **Temas** 
+
+
+- Introducción
+
+--
+
+- Teoría  
+
+--
+
+- Evidencia reciente
+
+--
+
+- Propuestas de estudios
+
+--
+
+- Avances 
+
+---
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### ** Introducción**
+
+---
+
+
+class: middle left
+
+### **Introducción**
+
+
+- **Movilidad ocupacional intrageneracional**: La movilidad ocupacional intrageneracional constituye una dimensión crucial pero sub-explorada para comprender barreras contemporáneas a la progresión profesional y oportunidades diferenciales dentro del propio ciclo vital de los trabajadores (Jarvis &amp; Song, 2017; Kalleberg &amp; Mouw, 2018).
+
+- Se define como los cambios hacia posiciones económicas ocupacionales más altas o más bajas a lo largo de la vida laboral (Kalleberg &amp; Mouw, 2018). Su estudio aporta discernimientos únicos sobre limitaciones estructurales y de agencia que enfrentan distintos grupos sociodemográficos.
+
+---
+
+class: middle left
+
+### **Introducción II**
+
+- **Análisis de redes para estudiar desigualdades**: El análisis de redes aplicado a movilidad ocupacional permite conceptualizar el mercado laboral como un sistema dinámico (intercambio generalizado) (Bearman, 1997) en donde las posiciones se influencian mutuamente (Cheng &amp; Park, 2020). Esto supera visiones de ocupaciones como categorías estáticas.
+
+- Asimismo, captura interdependencias entre grupos indetectables con métodos tradicionales, identificando mecanismos subyacentes a la persistencia de segregación, brechas de habilidades y desigualdad multidimensional (Arvidsson et al., 2021; Block, 2022).
+
+- El enfoque relacional facilita el mapeo de trayectorias completas dentro de la red ocupacional. Sus resultados tienen implicancias directas para el diseño de políticas públicas efectivas hacia la equidad.
+
+
+---
+
+class: middle left
+
+### **Motivación** 
+
+- La principal motivación de esta investigación es examinar los mecanismos que subyacen a la segregación ocupacional multidimensional y las barreras a la movilidad ocupacional intrageneracional en Chile.
+
+- Estudiar la movilidad ocupacional dentro del ciclo laboral de los trabajadores mediante técnicas de análisis de redes permitirá examinar mecanismos subyacentes que perpetúan la segregación (multidimensional) del mercado ocupacional (Reskin, 1993; Arvidsson et al., 2021). 
+
+- Estos mecanismos implican interdependencias antes indetectables entre las decisiones laborales de movilidad de diferentes grupos sociodemográficos (Arvidsson et al., 2021; ), y dinámicas ecológicas complejas (homofilia, contagio, etc.) de organización y estratificación de los mercados ocupacionales (Cheng y Park, 2020; Lin y Hung, 2022). 
+
+- También permite estudiar de manera innovadora las brechas entre oferta y demanda de habilidades en ciertos sectores (Handel, 2003).
+
+
+---
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### ** Teoría**
+
+---
+
+class: middle left
+
+### **Teoría I**
+
+- Movilidad intrageneracional como clave en dinámicas contemporáneas. Barreras y oportunidades dentro de la vida laboral (Kalleberg &amp; Mouw, 2018). Está relacionada con movilidad intergeneracional, desigualdad salarial y comportamientos micro del mercado laboral (Jarvis &amp; Song, 2017).
+
+- La perspectiva de redes sociales y de sistemas de intercambio generalizado (Bearman, 1997; Cheng &amp; Park, 2020) enfatiza en la naturaleza relacional y dinámica de las estructuras. Y, resalta la coevolución dinámica de atributos y flujos de trabajadores, en donde la diferenciación (en términso de similitudes y diferencias) facilitan y constriñen el intercambio laboral. 
+
+- La noción de ocupaciones conectadas entre sí (Breiger, 1990; Lambert &amp; Griffiths, 2018) captura los contornos efectivos de movilidad. Flujos desproporcionados entre ciertos pares ocupacionales indican fronteras.
+
+
+---
+
+class: middle left
+
+### **Teoría II**
+
+- La teoría sobre isomorfismo, diferenciación y contagio entre entidades interdependientes (DiMaggio &amp; Powell, 1983; Centola &amp; Macy, 2007), se aplica para entender convergencia local de atributos, así como refuerzo y propagación de distancias entre segmentos.
+
+- La perspectiva de competencia ecológica combinada con dinámicas históricas de contagio homofílico (McPherson, 2004), explica la consolidación asimétrica de distancias culturales y estructurales entre ocupaciones con grados previos variados de similitud.
+
+- La noción de mismatch ocupacional (Handel, 2003) se vincula con divergencias dinámicas entre habilidades de trabajadores y requerimientos técnicos de ocupaciones. Se relaciona con rigidez de movilidad.
+
+
+---
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Evidencia**
+
+
+---
+
+class: middle left
+
+### **Evidencia I** 
+
+- La evidencia muestra una disminución progresiva pero lenta de la segregación de género en EEUU, especialmente desde la década de 1990 (Blau et al, 2013; Weeden, 2018), parcialmente atribuida a la entrada al mercado laboral de cohortes de mujeres mejor educadas y sujetas a menor discriminación respecto a sus predecesoras (Blau et al, 2013). Sin embargo, los niveles siguen siendo importantes explicando cerca del 28% de las brechas salariales entre millennials (Weeden, 2018). 
+
+- Asimismo, estudios recientes indican que eliminar segregación educativa por género no sería suficiente para reducir segmentación ocupacional (Zheng &amp; Weeden, 2023). Por otro lado, la evolución del fenómeno a lo largo del ciclo vital sigue un patrón en U invertida, con un peak en torno a los 30 años (Guinea-Martin et al., 2018), relacionado con transiciones laborales de mujeres en etapas de crianza.
+
+---
+
+class: middle left
+
+### **Evidencia II: polarización del mercado laboral** 
+
+- Recientes investigaciones proveen evidencia mixta sobre las tendencias en el mercado laboral chileno. Por una parte, estudios reportan creciente rigidez en la estructura social en la última década, con menor movilidad instra e intergeneracional, así como aislamiento de los grupos en los extremos superior e inferior (Espinoza et al., 2013; Torche, 2014). Este patrón de polarización ocupacional presenta similitudes respecto a EEUU.
+
+- Sin embargo, los factores subyacentes difieren en aspectos importantes entre ambos países. Mientras en EEUU la polarización se asocia fuertemente a discriminación racial, en Chile los impulsores están mayormente vinculados con brechas persistentes de participación laboral y remuneraciones entre hombres y mujeres, alta informalidad laboral y rotación entre empleos precarios (Dwyer &amp; Olin Wright, 2019; Espinoza et al., 2013). 
+
+
+---
+
+class: middle left 
+
+### **Evidencia III: Redes y (des) segregación**
+
+- Incorporando técnicas de análisis de redes, Arvidsson et al. (2021) introducen el “mecanismo del caballo de Troya”, encontrando que redes de movilidad laboral pueden en realidad reducir la segregación al contrarrestar la homofilia. 
+
+- Mientras que Block (2023) muestra que los hombres abandonan ocupaciones al incrementarse la proporción de mujeres que ingresan a ellas, fenómeno que explicaría cerca de un 25% de la segregación observada.
+
+
+---
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Estudios de redes y mercado laboral**
+
+---
+
+class: middle left
+
+### **Redes y mercados laborales**
+
+- Toubøl y Larsen (2017) también modelan la movilidad ocupacional como una red. Identifican categorías sociales intra-generacionales emergentes en Dinamarca, validadas en términos de atributos como ingresos y acción política.
+
+- Villarreal (2020) representa flujos entre ocupaciones como una red, encontrando un aumento en la segmentación del mercado laboral estadounidense entre 1996 y 2016.
+
+- Cheng y Park (2020) extienden el concepto de flujos y fronteras ocupacionales. Detectan comunidades cambiantes de movilidad en EEUU entre 1989-2015, revelando una creciente rigidización indetectable con enfoques tradicionales.
+
+- Lin y Hung (2022) conciben la red ocupacional como sistema adaptativo donde atributos y movilidad se influencian mutuamente. Encuentran mayor fragmentación en EEUU impulsada por diferenciación en skills y composición demográfica. También evidencian contagio de salarios entre ocupaciones conectadas.
+
+
+---
+
+class: middle left
+
+### **Mi propuesta I**
+
+- Los estudios previos analizados constituyen un punto de partida valioso al demonstrar la utilidad del enfoque de redes para examinar dinámicas contemporáneas claves en los mercados laborales como: **1) creciente segmentación, 2) rigidización de fronteras, y 3) especialización del trabajo**. Sin embargo, existen aún áreas poco exploradas donde esta investigación puede realizar aportes originales.
+
+- En primer lugar, la evidencia revisada se ha centrado principalmente en el contexto estadounidense. Extender el análisis a la red de movilidad ocupacional chilena puede revelar mecanismos y configuraciones distintivas dados los procesos locales de cambio tecnológico, globalización económica y evolución institucional durante las últimas décadas.
+
+---
+
+class: middle left
+
+### **Mi propuesta II**
+
+- En segundo término, un foco novedoso es el estudio específico de dinámicas de segregación ocupacional de género desde una óptica de redes e interdependencia entre decisiones laborales. Ello permitirá examinar cómo flujos entre ocupaciones conectadas pueden reforzar o transformar los niveles compartidos de paridad de género a través de mecanismos como contagio e imitación.
+
+- Por último, la consideración explícita del fenómeno de desajuste entre habilidades y requerimientos técnicos a nivel ocupacional también constituye una extensión original que puede arrojar luz sobre rigidización de la movilidad.
+
+---
+
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Propuesta de estudios**
+
+
+---
+
+class: middle left
+
+
+.w-50.fl[
+
+### **Datos y ocupaciones** 
+
+- Utilizo datos de la Encuesta de Protección Social EPS
+
+- La encuesta busca obtener información detallada sobre diferentes áreas de protección social, como empleo, educación, salud, vivienda y otros aspectos del bienestar.
+
+- Encuesta panel con muestra probabilística para toda la población chilena. 
+
+- Considerando los 3 años (2009, 2015, 2020) utilizo un N total de 36400 individuos. 
+
+- Con esto construyo dos marcos de datos con los cuales realizo los análisis: 1) panel de 345746 diadas ocupacionales, 2) panel de 848 ocupaciones. 
+
+- Para todos los años utlizo la muestra completa (Panel y refresco) 
+
+- CIUO 88 - 08 
+
+]
+
+.w-40.fr[
+### 
+
+&lt;img src="screen2.png" width="90%" /&gt;
+
+
+.footnote[
+[1] https://previsionsocial.gob.cl/datos-estadisticos/documentos-eps-y-otras-encuestas/
+]
+]
+
+---
+
+class: middle left
+
+### **Estudio 1 (Nivel macro)**
+#### **Mecanismo de desconexión relacional (+ consolidación - conectividad intercluster)** 
+
+- **Objetivo general** 
+
+  - Examinar la evolución de la estructura ocupacional chilena entre 2009 y 2020 desde una perspectiva de redes, identificando configuraciones y fronteras sistémicas subyacentes a procesos de segregación multidimensional y delimitación de oportunidades diferenciales de movilidad intrageneracional.
+
+- **Objetivos específicos**
+
+  - Detectar clusters o comunidades de ocupaciones intensamente interconectadas en la red de movilidad laboral, analizando cambios en su número y composición.
+  - Evaluar disparidades y dinámicas de segregación de género entre y dentro de estos clusters ocupacionales.
+Examinar heterogeneidad en las configuraciones de la red de movilidad y de clusters por género, contrastando patrones sistémicos subyacentes entre trabajadoras y trabajadores.
+
+
+---
+
+class: middle left 
+
+### **Estudio 2 (Nivel meso)**
+
+
+- **Objetivo general**
+
+  - Analizar los mecanismos de contagio subyacentes a la configuración de oportunidades de movilidad y a la convergencia/similitud entre ocupaciones del mercado laboral chileno.
+
+- **Objetivos específicos**
+
+  - Evaluar el efecto de distancias en composición de género sobre los flujos de movilidad observados entre pares de ocupaciones.
+  - Examinar la correlación entre niveles compartidos de segregación de género y mayor homogeneidad interna en las ocupaciones conectadas.
+  - Explorar estrategias de modelamiento de contagio complejo para representar difusión endógena de prácticas entre ocupaciones interdependientes.
+
+---
+
+class: middle left 
+
+### **Estudio 3 (Nivel meso)**
+#### **Mecanismo de desacople funcional**
+
+- **Objetivo general**
+
+  - Evaluar la evolución y magnitud del fenómeno de desajuste entre habilidades disponibles y requerimientos técnicos a nivel ocupacional en Chile, identificando áreas críticas y dinámicas sistémicas mediante un abordaje innovador de redes temporales.
+
+- **Objetivos específicos**
+
+  - Construir dos redes ocupacionales representando flujos de trabajadores y brechas en habilidades respectivamente.
+  - Contrastar topológicamente la convergencia dinámica entre ambas redes durante la última década.
+  - Detectar áreas en la red exhibiendo grandes divergencias crecientes entre skills poseídas por trabajadores y requerimientos técnicos de las ocupaciones.
+  
+---
+
+class: middle left
+
+### **Estudio 4 (Nivel micro)**
+
+- **Objetivo general**
+
+  - Evaluar la presencia y los contornos contextuales de los mecanismos del “caballo de Troya” y “reemplazo” como generadores dinámicos de transformación o refuerzo de patrones de segregación ocupacional de género en Chile.
+
+- **Objetivos específicos**
+
+  - Estimar efectos diferenciados de dichos mecanismos considerando heterogeneidad por subgrupos según sector económico, nivel educativo y etapa del ciclo laboral.
+  - Explorar la robustez de los hallazgos mediante estrategias como medidas repetidas, diseños cuasiexperimentales y análisis de sensibilidad.
+  - Examinar microfundaciones a nivel psicosocial e interaccional detrás de estos mecanismos sistémicos.
+
+---
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Avances**
+#### **Estudio 1: Segregación y clases de movilidad**
+---
+
+class: middle left
+
+### **Intercambio entre ocupaciones** 
+
+
+Para capturar el grado de intercambio entre pares de ocupaciones `\(i\)` y `\(j\)`, se sigue la aproximación desarrollada por Lin y Hung (2022) y se construye una medida de intercambio ponderado  basada en las transiciones observadas:
+
+
+`$$E_{A \leftrightarrow B} = \frac{C_{A \rightarrow B} + C_{B \rightarrow A}}{O_A + O_B}$$`
+
+Donde:
+
+- `\(E_{A \leftrightarrow B}\)`: Intercambio ponderado entre las ocupaciones `\(A\)` y `\(B\)`
+- `\(C_{A \rightarrow B}\)`: Número ponderado de trabajadores que cambiaron de la ocupación `\(A\)` a la `\(B\)`
+- `\(C_{B \rightarrow A}\)`: Número ponderado de trabajadores que cambiaron de la ocupación `\(B\)` a la `\(A\)`
+- `\(O_A\)`: Tamaño de la ocupación `\(A\)` en el período previo
+- `\(O_B\)`: Tamaño de la ocupación `\(B\)` en el período previo
+
+
+De esta forma, se obtiene un índice simétrico de intercambio entre dos ocupaciones, expresado como promedio de las tasas de cambio de cada ocupación, ponderadas por el tamaño relativo para evitar sobrerrepresentación de categorías pequeñas.
+
+---
+
+class: middle left
+
+### **Clases de movilidad**
+
+- Se aplica algoritmo Louvain (detalles en Lin y Hung, 2022).
+- **Se obtienen 20 "clases de movilidad" para el año 2009 con una modularidad de 0.57** (alta)
+- Se analiza la segregación "local" de género a nivel de ocupaciones y de "clases de movilidad". 
+
+---
+
+class: middle left
+
+### **Segregación de género**
+
+
+.w-50.fl[
+### 
+
+&lt;img src="p1_segregation.png" width="100%" /&gt;
+
+.footnote[
+[1] Las curvas de segregación miden el nivel de segregación o separación entre dos grupos a lo largo de algunas unidades geográficas o demográficas.
+
+[2] Duncan, O. D., &amp; Duncan, B. (1955). A methodological analysis of segregation indexes. American Sociological Review, 20(2), 210–217.
+
+]
+
+]
+
+.w-50.fr[
+
+&lt;img src="p2_segregation.png" width="100%" /&gt;
+
+
+]
+
+---
+
+class: middle left
+
+### **Segregación I**
+
+&lt;div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:100%; "&gt;&lt;table class=" lightable-classic" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Segregación local por ocupación 2009&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; CIUO &lt;/th&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; Nombre &lt;/th&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; Modulo &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Tamaño &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Hombres &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Mujeres &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Superior &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; LS &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Prop. &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2412 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Especialistas en políticas y servicios de personal y afines &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3241 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Practicantes  de la medicina tradicional &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3320 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Maestros de nivel medio de la enseñanza preescolar &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 33 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.24 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 4212 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Pagadores y cobradores de ventanilla y taquilleros &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 4221 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Empleados de agencias de viajes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 5111 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Camareros y azafatas &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 5152 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Adivinadores, quirománticos y afines &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 8263 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Operadores de máquinas para coser &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 9133 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Lavanderos y planchadores manuales &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 9131 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Personal doméstico &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 698 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.84 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2332 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Maestros de nivel superior de la enseñanza preescolar &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.98 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.93 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.78 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 4115 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Secretarios &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 316 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.98 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.78 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3225 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Dentistas auxiliares y ayudantes de odontología &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.93 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.63 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 5131 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Niñeras y celadoras infantiles &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.92 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.60 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 7436 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Costureros, bordadores y afines &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.09 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.91 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.57 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 9113 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Vendedores a domicilio y por teléfono &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.09 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.91 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.09 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.56 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2131 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Creadores y analistas de sistemas informáticos &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.95 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2132 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Programadores informáticos &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.55 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2145 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Ingenieros mecánicos &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.67 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2300 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Técnicos en electrónica y telecomunicaciones &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3151 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Inspectores de edificios y de prevención e investigación de incendios &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3441 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Agentes de aduana e inspectores de fronteras &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3474 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Payasos, prestidigitadores, acróbatas y afines &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3480 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Auxiliares laicos de los cultos &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.60 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+
+
+
+---
+
+class: middle left
+
+### **Segregación II**
+
+&lt;div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:100%; "&gt;&lt;table class=" lightable-classic" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Segregación local por módulo 2009&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; Modulo &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Tamaño &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Mujeres &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; hombres &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Superior &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; LS &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Prop. &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.36 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.95 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.35 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.77 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.28 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.18 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.77 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.27 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.72 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.28 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.41 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.88 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.88 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.09 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.88 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.26 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.19 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.71 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.29 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.18 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 18 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.83 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 57 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.33 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 37 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.60 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.16 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.21 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.77 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.56 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.44 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.64 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.53 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.47 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.88 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.52 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.72 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+
+
+---
+
+class: middle left
+
+### **Segregación III**
+
+&lt;img src="plot3_network.png" width="70%" /&gt;
+
+
+---
+
+class: middle left
+
+### **Segregación IV**
+
+&lt;img src="plot6_subnetwork.png" width="70%" /&gt;
+
+
+---
+
+class: middle left
+
+### **¿Que indica la exploración?** 
+
+- 18 comunidades y alta modularidad (0.57)  
+- Existen modulos con mayoría de mujeres y bajos niveles de estatus educativo que contribuyen sign. a la segregación, en comparación con cluster similares con mayoría de hombres. 
+- Modulos con mayoría de mujeres, son diversos en términos de estatus educativo. 
+- Esto puede ser indicativo de trayectorias laborales con altos y bajos marcados. 
+- Esto puede estar relacionado a transiciones laborales que obedecen a cambios en los ciclos vitales dde las mujeres. 
+
+
+---
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Avances**
+#### **Estudio 2: Diferenciación y contagio**
+---
+
+class: middle left
+
+### **Diferenciación diádica**
+
+.w-50.fl[
+### 
+
+&lt;table class="texreg"&gt;
+&lt;caption&gt;Modelo binomial negativo&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;th&gt;Modelo 1: 
+ sin EA&lt;/th&gt;
+&lt;th&gt;Modelo 2: 
+ con EA&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="rule"&gt;
+&lt;td&gt;(Intercept)&lt;/td&gt;
+&lt;td&gt;-8.46 (0.06)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;-6.00 (0.30)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tamaño_combinado&lt;/td&gt;
+&lt;td&gt;1.47 (0.01)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;0.78 (0.02)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mujeres_perc_dist&lt;/td&gt;
+&lt;td&gt;-0.02 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;-0.02 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;superior_perc_dist&lt;/td&gt;
+&lt;td&gt;-0.01 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;-0.02 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;promedio_edad_dist&lt;/td&gt;
+&lt;td&gt;-0.08 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;-0.05 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;promedio_horas_dist&lt;/td&gt;
+&lt;td&gt;-0.02 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;-0.02 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;promedio_ingreso_dist&lt;/td&gt;
+&lt;td&gt;-0.00 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;-0.00 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;factor(ano)2015&lt;/td&gt;
+&lt;td&gt;0.96 (0.03)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;factor(ano)2020&lt;/td&gt;
+&lt;td&gt;1.26 (0.03)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mujeres_perc_dist:superior_perc_dist&lt;/td&gt;
+&lt;td&gt;-0.00 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;-0.00 (0.00)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="rule"&gt;
+&lt;td&gt;AIC&lt;/td&gt;
+&lt;td&gt;100872.91&lt;/td&gt;
+&lt;td&gt;93958.69&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Log Likelihood&lt;/td&gt;
+&lt;td&gt;-50425.45&lt;/td&gt;
+&lt;td&gt;-46967.35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Num. obs.&lt;/td&gt;
+&lt;td&gt;333450&lt;/td&gt;
+&lt;td&gt;333450&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Num. groups: ano&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Num. groups: ocup_i&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;573&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Num. groups: ocup_j&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;573&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Var: ano (Intercept)&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;0.24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Var: ocup_i (Intercept)&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;1.11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="bottomrule"&gt;
+&lt;td&gt;Var: ocup_j (Intercept)&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;1.11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;
+&lt;tr&gt;
+&lt;td colspan="3"&gt;&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;p &amp;lt; 0.001; &lt;sup&gt;&amp;#42;&amp;#42;&lt;/sup&gt;p &amp;lt; 0.01; &lt;sup&gt;&amp;#42;&lt;/sup&gt;p &amp;lt; 0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;/table&gt;
+
+
+]
+
+.w-50.fr[
+
+&lt;img src="01_plotreg.png" width="100%" /&gt;
+
+
+]
+
+
+---
+
+class: middle left
+
+### **Contagio**
+
+.w-50.fl[
+### 
+
+- Modelo Pooled OLS: Linked_dissimilarity es positivo y altamente significativo. Un aumento en la segregación compartida se asocia con mayor segregación local. Pero al no considerar la estructura de datos panel, no podemos hacer inferencias dentro de las ocupaciones.
+
+- Modelo Efectos Aleatorios: Linked_dissimilarity también es positivo y significativo, consistente con el modelo pooled.
+Permite considerar parte de la variabilidad entre ocupaciones (39.5%) además de dentro de las mismas (60.5%).
+Pero viola el supuesto de no correlación con variables explicativas de acuerdo al test de Hausman.
+
+- Modelo Efectos Fijos: Aunque linked_dissimilarity no es significativo, este modelo cumple mejor los supuestos para la pregunta de interés.
+Al considerar efectos fijos de ocupación, permite aislar más limpiamente la variabilidad dentro de las mismas.
+
+]
+
+.w-50.fr[
+
+&lt;table class="texreg"&gt;
+&lt;caption&gt;Modelos de contagio&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;nbsp;&lt;/th&gt;
+&lt;th&gt;Modelo 1: 
+ LM&lt;/th&gt;
+&lt;th&gt;Modelo 2: EF&lt;/th&gt;
+&lt;th&gt;Modelo 3: EA&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="rule"&gt;
+&lt;td&gt;(Intercept)&lt;/td&gt;
+&lt;td&gt;0.20 (0.07)&lt;sup&gt;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;0.21 (0.06)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;linked_dissimilarity&lt;/td&gt;
+&lt;td&gt;0.24 (0.06)&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;0.05 (0.09)&lt;/td&gt;
+&lt;td&gt;0.18 (0.06)&lt;sup&gt;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mujeres_perc&lt;/td&gt;
+&lt;td&gt;-0.00 (0.00)&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;superior_perc&lt;/td&gt;
+&lt;td&gt;-0.00 (0.00)&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;/td&gt;
+&lt;td&gt;-0.00 (0.00)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;promedio_ingreso&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;sup&gt;&amp;#42;&amp;#42;&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;promedio_horas&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;/td&gt;
+&lt;td&gt;0.00 (0.00)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;factor(ano)2015&lt;/td&gt;
+&lt;td&gt;0.01 (0.02)&lt;/td&gt;
+&lt;td&gt;-0.01 (0.02)&lt;/td&gt;
+&lt;td&gt;0.00 (0.02)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;factor(ano)2020&lt;/td&gt;
+&lt;td&gt;0.04 (0.03)&lt;/td&gt;
+&lt;td&gt;0.02 (0.03)&lt;/td&gt;
+&lt;td&gt;0.03 (0.02)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="rule"&gt;
+&lt;td&gt;R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;0.03&lt;/td&gt;
+&lt;td&gt;0.03&lt;/td&gt;
+&lt;td&gt;0.04&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Adj. R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;0.02&lt;/td&gt;
+&lt;td&gt;-1.51&lt;/td&gt;
+&lt;td&gt;0.03&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Num. obs.&lt;/td&gt;
+&lt;td&gt;848&lt;/td&gt;
+&lt;td&gt;848&lt;/td&gt;
+&lt;td&gt;848&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;s_idios&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="bottomrule"&gt;
+&lt;td&gt;s_id&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;0.16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;
+&lt;tr&gt;
+&lt;td colspan="4"&gt;&lt;sup&gt;&amp;#42;&amp;#42;&amp;#42;&lt;/sup&gt;p &amp;lt; 0.001; &lt;sup&gt;&amp;#42;&amp;#42;&lt;/sup&gt;p &amp;lt; 0.01; &lt;sup&gt;&amp;#42;&lt;/sup&gt;p &amp;lt; 0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;/table&gt;
+
+]
+
+---
+
+class: middle left
+
+### **Sustantivamente**
+#### **Mecanismo de contagio distinto nivel**
+
+
+- **Modelo Pooled OLS**: Sugiere que existe una correlación incondicional positiva entre la segregación ocupacional compartida (linked_dissimilarity) y la segregación local (ls_name) cuando se agrupan todas las ocupaciones.
+
+- **Modelo Efectos Aleatorios**: Indica que parte importante de esta correlación puede deberse a diferencias inherentes entre las mismas ocupaciones en sus niveles promedios de segregación local y compartida (efecto entre grupos). Pero también existe todavía correlación dentro de las ocupaciones.
+
+- **Modelo Efectos Fijos**: Al controlar por diferencias sistemáticas entre ocupaciones, no encuentra correlación significativa  dentro de las mismas entre linked_dissimilarity y ls_name.
+
+
+Esto sugeriría que los mecanismos que conectan estas dos formas de segregación operan principalmente a un nivel agregado entre ocupaciones, no dentro de una ocupación específica.
+
+---
+
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Muchas Gracias**
+#### **Esta presentación fue realizada con el paquete  [Xaringan](https://slides.yihui.org/xaringan), diseñado para entorno  [R](https://www.r-project.org/)** 
+
+
+---
+
+class: middle left
+
+### **Anexo I: Segregación local**
+
+.w-50.fl[
+La idea detrás de la segregación local es calcular un indice de segregación para cada unidad geográfica o demográfica por separado. Por ejemplo, se podría calcular un indice de segregación para cada escuela.
+
+La ecuación para el indice de segregación local `\(L_u\)` para la unidad `\(u\)` es:
+
+`$$L_u = \sum_{g=1}^G p_{g|u} \log\left(\frac{p_{g|u}}{p_{\cdot g}}\right)$$`
+
+- `\(p_{g|u}\)` es la probabilidad condicional de pertenecer al grupo `\(g\)` dado que se está en la unidad `\(u\)`
+- `\(p_{\cdot g}\)` es la probabilidad marginal de pertenecer al grupo `\(g\)`
+- `\(G\)` es el número total de grupos
+
+
+]
+
+.w-50.fr[
+
+- Permite estudiar la segregación a un nivel más desagregado, identificando unidades específicas que contribuyen más a la segregación total.
+
+- Al estudiar cada unidad por separado, controla mejor por las distribuciones marginales de grupos y unidades. La disimilitud no controla bien por esas distribuciones.
+
+- Tiene una base teórica más sólida basada en la entropya de la información mutua entre grupos y unidades.
+
+- Permite descomposiciones analíticas, por ejemplo entre componentes dentro y entre unidades de un nivel superior.
+
+]
+
+
+---
+
+class: middle left
+
+### **Anexo II: ¿Por que usar Louvain?** 
+
+
+- **Simplicidad y facilidad de interpretación**: Louvain identifica una cantidad más parsimoniosa de comunidades versus Infomap. Esto hace que la estructura detectada sea más fácil de interpretar y describir cualitativamente.
+
+- **Alto rendimiento en modularidad**: En las pruebas realizadas, Louvain consistentemente encontró las particiones con los puntajes de modularidad más altos en comparación con los otros algoritmos. Esto indica que las divisiones hechas por Louvain son muy efectivas bloqueando intercambios dentro de comunidades.
+
+- **Comparaciones previas**: Estudios previos de simulación mostraron que Louvain funciona bien recuperando comunidades conocidas en redes complejas, superando a algoritmos como Infomap.
+
+- **Robustez**: Aunque Louvain encuentra menos comunidades, estas comunidades reflejan divisiones que también son identificadas por los otros algoritmos. Es decir, la estructura gruesa detectada por Louvain también está presente en particiones más finas.
+
+.footnote[
+[1] Lancichinetti, A. and Fortunato, S., 2009. Community detection algorithms: A comparative analysis. Physical review E, 80(5), p.056117.
+
+[2] Yang, Z., Algesheimer, R. and Tessone, C.J., 2016. A comparative analysis of community detection algorithms on artificial networks. Scientific reports, 6(1), pp.1-16.
+]
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"ratio": "16:9",
+"slideNumberFormat": "%current%",
+"ioslides_presentation": {
+"css": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

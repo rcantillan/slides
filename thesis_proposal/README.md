@@ -1,17 +1,17 @@
 ---
-title: LM2C2
+title: Interseccionalidad
 subtitle: 
-date: 2023-12-11
-where: LM2C2
+date: 2023-10-18
+where: ISUC
 twitter: "@ricantillan"
 web: https://rcantillan.rbind.io
 ---
 
-# Segregación de género y contagio en el mercado ocupacional Chileno 2009 - 2020
+# Interseccionalidad
 
 ## Descripción 
 
-https://rcantillan.github.io/slides/thesis_proposal/intro/
+https://rcantillan.github.io/slides/interseccionalidad/intro/
 
 ## Setup
 
