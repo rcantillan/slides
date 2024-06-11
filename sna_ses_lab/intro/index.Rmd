@@ -142,7 +142,7 @@ background-position: left
 
 
 [ricantillan]: https://twitter.com/ricantillan
-[rbind]: https://rcantillan.rbind.io
+[rbind]: https://sna-ssla.netlify.app
 
 #  
 
