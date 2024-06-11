@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Movilidad ocupacional intrageneracional y segregación de género en Chile</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Roberto Cantillan Carrasco" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <meta name="description" content="Movilidad ocupacional intrageneracional y segregación de género en Chile, Congresio Sociología, Mayo, 2024"/>
+    <meta name="twitter:title" content="Movilidad ocupacional intrageneracional y segregación de género en Chile 2009- 2020"/>
+    <meta name="twitter:description" content="Movilidad ocupacional intrageneracional y segregación de género en Chile, Congresio Sociología, Mayo, 2024"/>
+    <meta name="twitter:url" content="https://github.com/rcantillan/slides/tree/main/gender_segregation/index"/>
+    <meta name="twitter:image" content="https://github.com/rcantillan/slides/tree/main//gender_segregation/intro/home_screen.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="ricantillan"/>
+    <meta name="twitter:site" content="ricantillan"/>
+    <meta property="og:title" content="Movilidad ocupacional intrageneracional y segregación de género en Chile 2009- 2020"/>
+    <meta property="og:description" content="Movilidad ocupacional intrageneracional y segregación de género en Chile, Congresio Sociología, Mayo, 2024"/>
+    <meta property="og:url" content="https://github.com/rcantillan/slides/tree/main/gender_segregation/index"/>
+    <meta property="og:image" content="https://github.com/rcantillan/slides/tree/main//gender_segregation/intro/home_screen.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+
+
+class: left title-slide
+background-image: url('andrej-lisakov-g3z-CgUiPtg-unsplash.jpg')
+background-size: cover
+background-position: left
+
+
+[ricantillan]: https://twitter.com/ricantillan
+[rbind]: https://rcantillan.rbind.io
+
+#  
+
+.side-text[
+[&amp;commat;ricantillan][ricantillan] | [rcantillan.rbind.io][rbind]
+]
+
+.title-where[
+### **Movilidad ocupacional intrageneracional y segregación de género en Chile 2009 - 2020**
+#### Roberto Cantillan / Mauricio Bucca &lt;br&gt; 
+Instituto de Sociología PUC &lt;br&gt; Millennium Nucleus for the Study of Labor Market Mismatch  
+Mayo, 2024
+]
+
+&lt;style type="text/css"&gt;
+.title-slide h1 {
+  font-size: 70px;
+  font-family: Jost, sans;
+  animation-name: title-text;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.side-text {
+  color: white;
+  transform: rotate(90deg);
+  position: absolute;
+  font-size: 18px;
+  top: 150px;
+  right: -110px;
+  transition: opacity 0.5s ease-in-out;
+  animation-name: enter-right;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.side-text:hover {
+  opacity: 1;
+}
+
+.side-text a {
+  color: white;
+}
+
+.title-where {
+  font-family: Jost, sans;
+  font-size: 30px;
+  position: absolute;
+  bottom: 30px;
+  animation-name: enter-left;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+&lt;/style&gt;
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 150px;
+height: 150px;
+z-index: 0;
+background-image: url(ins--sociologia-traz-04.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.hide_logo):not(.inverse)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+---
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Motivación**
+
+
+---
+class: left middle
+
+### **Motivación**
+
+- A pesar de décadas de avances en igualdad de género, la mayoría de mujeres y hombres siguen trabajando en ocupaciones típicas para su sexo (Charles y Grusky, 2005; Levanon y Grusky, 2016). Esto es un factor clave en la brecha salarial de género (Blau y Kahn, 2017; Charles, 2011).
+
+Las principales explicaciones actuales se basan en:
+
+- **Segregación vertical**: Discriminación hacia las mujeres en acceso a trabajos de mayor estatus (Ridgeway, 2001; Charles y Grusky, 2005; England, 2010).
+- **Segregación horizontal**: Diferencias asumidas en habilidades y preferencias por tipo de ocupación (Levanon y Grusky, 2016; Cech, 2013; Leslie et al., 2015).
+- **División del trabajo**: Limitación de empleo femenino por responsabilidades domésticas y de crianza (Becker, 1985; Eccles, 1994; England, 2010).
+
+
+Sin embargo, algunos patrones empíricos no pueden explicarse por estos modelos (Charles y Grusky, 2005; Ku, 2011; Seron et al., 2016; Reskin y Roos, 1990; Murphy y Oesch, 2016; Pan, 2015).
+
+---
+class: center middle
+
+.w-50.fl[
+### 
+
+&lt;img src="p1_segregation.png" width="100%" /&gt;
+]
+
+.w-50.fr[
+### 
+
+&lt;img src="p2_segregation.png" width="100%" /&gt;
+
+
+]
+
+
+---
+
+class: center middle
+
+.w-50.fl[
+### 
+
+&lt;img src="plot3_network.png" width="100%" /&gt;
+]
+
+.w-50.fr[
+### 
+
+&lt;img src="plot6_subnetwork.png" width="100%" /&gt;
+
+
+]
+
+---
+
+class: center middle
+
+
+.w-50.fl[
+### 
+
+&lt;img src="tabla_reg.png" width="70%" /&gt;
+
+]
+
+.w-50.fr[
+
+&lt;img src="01_plotreg.png" width="100%" /&gt;
+
+]
+
+---
+
+class: left middle
+
+### **Motivación II: Interdependencia**
+
+
+- Disparidad en composición por sexo entre especializaciones muy similares (Ku, 2011; Seron et al., 2016).
+- Grandes cambios en composición por sexo de algunas ocupaciones a lo largo del tiempo (Reskin y Roos, 1990; Murphy y Oesch, 2016; Pan, 2015).
+- Se sugiere un mecanismo adicional: Los hombres tienden a evitar y abandonar ocupaciones que se están feminizando (Reskin y Roos, 1990; England et al., 2007b; England, 2008; Goldin, 2014). Vinculado a perspectivas sobre devaluación y "contaminación" de ocupaciones feminizadas.
+
+
+Preguntas centrales:
+
+- **¿Puede generalizarse este mecanismo de reemplazo a todo un mercado laboral?** (England et al., 2007a)
+- **¿Cuánto contribuye este fenómeno a la segregación ocupacional por sexo en comparación con las explicaciones basadas en características ocupacionales?**
+
+---
+class: center middle
+
+.w-50.fl[
+### 
+
+&lt;img src="screen1.png" width="60%" /&gt;
+]
+
+.w-50.fr[
+### 
+
+&lt;img src="screen2.png" width="60%" /&gt;
+
+
+]
+
+---
+
+class: center middle
+
+
+.w-50.fl[
+### 
+
+&lt;img src="screen3.png" width="80%" /&gt;
+]
+
+.w-50.fr[
+### 
+
+&lt;img src="screen4.png" width="80%" /&gt;
+
+
+]
+
+---
+
+
+class: left middle 
+### **Teoría y objetivo del estudio**
+
+- El estudio aplica un enfoque de redes de movilidad para comprender los mecanismos que impulsan la segregación ocupacional por sexo.
+- Se analiza si los hombres abandonan ocupaciones cuando ingresan más mujeres, controlando por un conjunto amplio de características ocupacionales.
+- Si se observa una relación entre el flujo de entrada de mujeres y el flujo de salida de hombres, se evalúa en qué medida esto produce segregación por sexo.
+- El concepto de red de movilidad permite relacionar empíricamente la movilidad de diferentes sexos entre sí, representando la estructura de los cambios ocupacionales (Breiger, 1990; Cheng y Park, 2020; Lin &amp; Hung, 2023).
+
+
+---
+
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Metodología**
+
+---
+class: left middle
+
+### **Datos**
+
+Se utilizan datos longitudinales y una metodología estadística no estándar, inspirada en la investigación de redes, para modelar la movilidad ocupacional interdependiente de mujeres y hombres (Snijders, 2011).
+
+- Se emplean datos de corte longitudinal de la Encuesta de Protección Social (EPS Chile) para los años 2009, 2012, 2015 y 2020. 
+- La muestra total entre los 4 años es de aproximadamente [N] 15452 individuos ocupados. 
+- 59 ocupaciones (o micro clases) siguiendo a Jonsson et. al. (2009) (se usan equivalencia CIUO 1988)
+
+---
+
+class: left middle
+
+### **Metodología II: Estrategia analítica**
+
+- Se utiliza una nueva variante de un modelo de familia exponencial que permite incorporar predictores flexibles basados en características individuales y ocupacionales, así como estructuras emergentes (Block et al., 2022). La probabilidad de observar una red de movilidad específica `\(x\)` está dada por:
+
+`$$Pr(X = x) = \frac{\exp(Q(s(x); \theta))}{\kappa}$$`
+
+- donde `\(Q\)` es un predictor lineal que depende de las estadísticas suficientes `\(s(x)\)` del modelo y un parámetro estadístico `\(\theta\)`. La constante de normalización `\(\kappa\)` asegura que todas las probabilidades sumen uno.
+
+- El predictor lineal `\(Q\)` permite incorporar diversos predictores basados en variables y predictores endógenos en el modelo de movilidad.
+
+- A diferencia de los modelos log-lineales clásicos, este enfoque permite incluir parámetros que representan la interdependencia de las observaciones. Así, la probabilidad de observar un sistema de movilidad emergente es más que la suma de partes independientes.
+
+---
+class: left middle
+
+### **Parámetro de interés: Segregación**
+
+- `crowding_out_prop_covar_bin`: Este parámetro modela la tendencia de individuos de un tipo (definido por una covariable binaria) a permanecer o abandonar una ubicación en función de la proporción de individuos de otro tipo que ingresan a esa ubicación.
+
+Matemáticamente, el estadístico asociado a este parámetro se define como:
+
+`$$s(x) = \sum_{i \in B} \frac{\sum_{i' \in B} I(d_{i'} = o_i) w_{i'}}{\sum_{i' \in B} I(d_{i'} = o_i)} I(o_i = d_i) (1 - w_i)$$`
+
+Donde:
+- `\(B\)` es el conjunto de individuos móviles
+- `\(o_i\)` y `\(d_i\)` son las ubicaciones de origen y destino del individuo `\(i\)`, respectivamente
+- `\(w_i\)` es el valor de la covariable binaria para el individuo `\(i\)`
+- `\(I(.)\)` es una función indicadora que toma el valor 1 si la condición entre paréntesis es verdadera y 0 en caso contrario
+
+---
+class: left middle
+
+### **Parámetro de interés: Segregación II**
+
+- Sustantivamente, un parámetro positivo asociado a este estadístico indica que los individuos de un tipo `\((w_i = 0)\)` tienden a permanecer en su ubicación actual cuando una mayor proporción de individuos del otro tipo `\((w_i = 1)\)` se mueven a esa ubicación. Por el contrario, un parámetro negativo indica que los individuos de un tipo tienden a abandonar las ubicaciones cuando una mayor proporción de individuos del otro tipo ingresan. 
+
+- Es importante destacar que este parámetro modela la interdependencia de la movilidad de diferentes grupos sin necesidad de datos longitudinales. 
+
+- En lugar de modelar explícitamente el tiempo, captura la relación contemporánea entre la proporción de individuos de un tipo que ingresan a una ubicación y la tendencia de los individuos del otro tipo a permanecer o irse. Esto permite analizar patrones emergentes de segregación a partir de datos transversales de redes de movilidad.
+
+.footnote[
+[1] Block, P. (2023). Understanding the self-organization of occupational sex segregation with mobility networks. Social Networks, 73, 42–50. https://doi.org/10.1016/j.socnet.2022.12.004
+
+[2] Block, P., Stadtfeld, C., &amp; Robins, G. (2022). A statistical model for the analysis of mobility tables as weighted networks with an application to faculty hiring networks. Social Networks, 68, 264–278. https://doi.org/10.1016/j.socnet.2021.08.003
+
+]
+
+---
+
+class: middle left
+
+### **Modelo III**
+
+- `loops`: Este término captura la tendencia general de los individuos a permanecer en su ubicación actual en lugar de moverse a una nueva ubicación.
+- `reciprocity_min`: Este término representa la tendencia de los individuos a moverse entre ubicaciones que tienen flujos de movilidad bidireccionales, es decir, donde hay individuos que se mueven en ambas direcciones entre las ubicaciones.
+- `loops_resource_covar` con el atributo "sex": Este término captura si los individuos de un sexo específico (hombres o mujeres) tienen una tendencia diferente a permanecer en su ubicación actual en comparación con el otro sexo.
+- `staying_by_prop_bin_inflow` con el atributo "sex": Este término modela si la tendencia de los individuos a permanecer en su ubicación actual depende de la proporción de individuos del mismo sexo que se mueven hacia esa ubicación.
+- `crowding_out_prop_covar_bin` con el atributo "sex": Este término captura si los individuos de un sexo tienen una tendencia a abandonar las ubicaciones a medida que una mayor proporción de individuos del otro sexo se mueven hacia esas ubicaciones.
+- `resource_covar_to_node_covar` con los atributos "size" y "sex": Este término representa si los individuos de un sexo específico tienen una tendencia a moverse hacia ubicaciones de un tamaño particular (por ejemplo, organizaciones más grandes o más pequeñas) en comparación con el otro sexo.
+
+---
+
+class: left middle
+
+### **Metodología III**
+
+- El modelo va más allá de los métodos estadísticos de redes establecidos (Butts, 2007; Lusher et al., 2013), al acomodar (i) pesos en los lazos de la red sin especificar una distribución de conteos en díadas a priori, (ii) auto-lazos ponderados y (iii) atributos de aristas, que representan el número de individuos móviles y no móviles, así como su sexo.
+
+- Los parámetros que modelan explícitamente la interdependencia se estiman a partir de los datos y no se imponen exógenamente. Por lo tanto, si no hay interdependencia, el modelo se reduce a un modelo logit multinomial estándar para el análisis de movilidad.
+
+- En general, este diseño de investigación interdisciplinario combina ventajas clave de los diseños clásicos de ciencias sociales y de redes, permitiendo probar múltiples explicaciones en un modelo y analizar patrones que resultan de procesos sociales.
+
+
+---
+class: left middle
+
+### **Resultados preliminares**
+
+- `loops`: El parámetro estimado es 1.82936, lo que indica una tendencia positiva de los individuos a permanecer en su ubicación actual en lugar de moverse a una nueva ubicación.
+- `reciprocity_min`: El parámetro estimado es -1.13797, lo que sugiere que la movilidad recíproca (individuos que se mueven entre dos ubicaciones en ambas direcciones) es menos frecuente de lo esperado por azar.
+- `loops_resource_covar` con el atributo "sex": El parámetro estimado es 2.59736, lo que indica que los hombres (codificados como 1) tienen una mayor tendencia a permanecer en su ubicación actual en comparación con las mujeres.
+- `staying_by_prop_bin_inflow` con el atributo "sex": El parámetro estimado es 1.86210, lo que sugiere que la tendencia de los individuos a permanecer en su ubicación actual aumenta a medida que una mayor proporción de individuos del mismo sexo (en este caso, hombres) se mueven hacia esa ubicación.
+- `crowding_out_prop_covar_bin` con el atributo "sex": El parámetro estimado es 0.03314, lo que indica una leve tendencia de los hombres a abandonar las ubicaciones a medida que una mayor proporción de mujeres se mueve hacia esas ubicaciones. Sin embargo, el efecto parece ser relativamente pequeño.
+- `resource_covar_to_node_covar` con los atributos "size" y "sex": El parámetro estimado es -0.00307, lo que sugiere que las mujeres tienen una leve tendencia a moverse hacia ubicaciones más pequeñas en comparación con los hombres. Sin embargo, el efecto parece ser muy pequeño.
+
+---
+
+class: left middle
+
+### **Limitaciones y pasos futuros**
+
+- El estudio se basa en datos de un período específico (2009 - 2020) en Chile. 
+- Las características ocupacionales se miden en un solo punto en el tiempo, asumiendo estabilidad durante el período analizado. Cambios no observados podrían sesgar los parámetros.
+- El modelo no captura explícitamente la dimensión temporal de la movilidad, sino que se basa en patrones contemporáneos de flujos de entrada y salida.
+
+---
+
+class: left middle
+
+### **Limitaciones y pasos futuros II**
+
+- Puede ser pertinente Realizar análisis comparativos en diferentes países y períodos para evaluar la consistencia de los patrones de movilidad interdependiente entre sexos.
+- Investigar cómo cambian las características percibidas de las ocupaciones (estatus, ingresos, habilidades requeridas) a lo largo del tiempo, siguiendo los cambios en la composición por sexo (Goldin, 2014).
+- Víncular teoricamente con modelos que expliquen los mecanismos psicológicos y sociales detrás de la tendencia masculina a evitar ocupaciones en proceso de feminización.
+
+---
+class: middle right
+background-image: url('sarah-dao-GFIou2AVG3Q-unsplash.jpg')
+background-size: cover
+
+### **Muchas Gracias**
+#### **Esta presentación fue realizada con el paquete [Xaringan](https://slides.yihui.org/xaringan), diseñado para entorno  [R](https://www.r-project.org/)** 
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"ratio": "16:9",
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
