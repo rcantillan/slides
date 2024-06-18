@@ -7,11 +7,11 @@ twitter: "@ricantillan"
 web: https://rcantillan.rbind.io
 ---
 
-# Segregación de género y contagio en el mercado ocupacional Chileno 2009 - 2020
+# The science of sustainability: An approach to the Latin American network
 
 ## Descripción 
 
-https://rcantillan.github.io/slides/thesis_proposal/intro/
+https://rcantillan.github.io/slides/sna_ses_lab/intro/
 
 ## Setup
 
