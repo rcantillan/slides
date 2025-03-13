@@ -9,7 +9,7 @@ format:
     theme: simple
     slide-number: false
     incremental: false
-    fontsize: 24px  # Aumentado el tamaño de fuente base
+    fontsize: 24px
     margin: 0.2
     transition: fade
     controls: true
@@ -27,21 +27,21 @@ format:
 ## **Introduction: Diffusion as a Mechanism Generating Stratification**
 
 ### What is Diffusion?
-- **Diffusion** refers to the process by which ideas, behaviors, skills, or innovations spread across individuals or groups within a network.
+- **Diffusion** is the process by which ideas, behaviors, or innovations spread across a social network.
 
-- It is a **generative mechanism** transforming micro-interactions into macro-outcomes through:
+- It transforms individual interactions into broader patterns of inequality through:
 
-  - **Network structures**: The heterogeneous topological arrangements that create differential access to resources and opportunities.
-  - **Relational dynamics**: The qualitative properties of connections that moderate influence flows and establish interaction sequences.
-  - **Threshold mechanisms**: Individual-level decision rules that transform social influence into behavioral change, creating cascading effects.
+  - **Network structures**: Arrangements that create unequal access to resources
+  - **Relational dynamics**: Connection qualities that determine how influence flows
+  - **Threshold mechanisms**: Individual decision rules that trigger behavioral change
 
 ### Diffusion as a Stratification Process
 
-Diffusion processes systematically generate stratified outcomes by:
+Diffusion generates inequality by:
 
-  - **Amplifying initial heterogeneity**: Converting small differences in network position into substantial inequalities through cumulative advantage.
-  - **Establishing interaction boundaries**: Creating and reinforcing structural divisions that segregate access to valuable resources.
-  - **Producing differential valuation**: Transforming structural positions into symbolic hierarchies that persist independent of functional value.
+  - Converting small initial differences into substantial gaps through cumulative advantage
+  - Creating boundaries that limit access to valuable resources
+  - Producing status hierarchies that persist beyond functional differences
 
 ---
 
@@ -49,62 +49,78 @@ Diffusion processes systematically generate stratified outcomes by:
 
 ::: {.panel-tabset}
 
-### Beyond Traditional Approaches
+### Current Limitations
 
-Current research on diffusion and stratification faces fundamental limitations:
+Current approaches to diffusion and stratification are limited by:
 
-- **Homogeneity assumptions**: Traditional models assume uniform actors and influence processes, concealing critical heterogeneity that shapes outcomes.
-- **Unidimensional networks**: Standard analyses examine single relation types, neglecting how multiplex ties create distinctive diffusion pathways.
-- **Static conceptualizations**: Conventional approaches treat network structures as fixed parameters rather than emergent properties that co-evolve with diffusion.
-- **Inadequate micro-macro linkages**: Existing models fail to specify the precise mechanisms connecting individual interaction sequences to emergent stratification patterns.
+- **Homogeneity assumptions**: Models that treat all actors and influence processes as uniform
+- **Single-dimension analysis**: Focus on one type of relationship, ignoring how multiple ties interact
+- **Static frameworks**: Treatment of networks as fixed rather than evolving structures
+- **Weak micro-macro connections**: Insufficient explanation of how individual interactions create broader patterns
 
-### Analytical Framework
+### Analytical Approach
 
-This research implements a systematic approach to identify and formalize diffusion mechanisms:
+This research implements a systematic framework to identify diffusion mechanisms:
 
-1. **Isolate heterogeneous actors in social space** to identify differentiated interaction patterns within specific relational contexts.
-2. **Measure changes in social environments** across temporal sequences to capture dynamic influence processes.
-3. **Estimate counterfactual behaviors** using causal inference techniques to separate selection from influence effects.
-4. **Measure direct effects** of individual actions on stratification outcomes to establish precise micro-macro linkages.
-5. **Capture sequential dynamics** through which actions transform environmental conditions for subsequent actors.
-6. **Implement empirically calibrated simulations** to validate identified mechanisms against observed patterns.
+1. **Map heterogeneous actors in social space** to identify different interaction patterns
+2. **Track changes in social environments** over time to capture dynamic processes
+3. **Estimate counterfactual behaviors** to separate selection from influence
+4. **Measure direct effects** on stratification outcomes
+5. **Capture sequential dynamics** of how actions change conditions for others
+6. **Validate through empirically calibrated simulations**
 
 :::
 
 ---
 
-## **Theoretical Integration**
+## **Core Theoretical Mechanisms**
 
 ::: {.panel-tabset}
 
-### Core Mechanisms
+### Transmission Pathways
 
-#### Heterogeneous Influence Processes
+- Social influence operates through **structurally different channels** rather than uniform processes
+- **Adoption thresholds** vary systematically based on network position
+- **Differential access** to network positions creates unequal exposure to innovations and resources
 
-- Social influence operates through **structurally differentiated pathways** rather than uniform transmission channels.
-- The **conversion of influence into action** varies systematically with actors' positions in multiple overlapping network dimensions.
+### Multiplexity & Bridges
 
-#### Structural Opportunity Constraints
+- **Multiplexity**: The overlap of different relation types (trust, resources, cooperation) creates robust diffusion channels
+- **Wide bridges**: Connections between groups that involve multiple relationship types, enabling complex practices to spread
+- **Optimal consolidation**: Moderate overlap between different social parameters creates the most effective diffusion structures
 
-- **Differential access** to network positions creates systematically unequal exposure to innovations, resources, and opportunities.
-- **Consolidated parameters** (following Blau, 1977) create stronger transmission barriers than crosscutting dimensions, establishing condition-dependent diffusion pathways.
+### Feedback Dynamics
 
-#### Feedback Dynamics
-
-- Diffusion processes **transform network topologies** through selective tie formation and dissolution.
-- **Initial structural advantages** become self-reinforcing as diffusion outcomes reshape subsequent interaction opportunities.
-
-### Theoretical Synthesis
-
-This research program integrates key theoretical perspectives:
-
-- **Complex contagion theory** (Centola, 2018): Specifying threshold effects in high-risk adoption behaviors.
-- **Multiplex network analysis** (Boccaletti, 2014): Formalizing how overlapping network dimensions enable distinctive diffusion pathways.
-- **Social closure processes** (Weeden, 2002): Identifying mechanisms through which groups maintain privileged access to resources.
-- **Parameter-based differentiation** (Blau, 1977): Explicating how heterogeneous structural positions generate systematic inequality patterns.
-- **Cumulative advantage dynamics** (Merton, 1968): Modeling how initial advantages amplify through sequential interaction processes.
+- Initial structural advantages become self-reinforcing as diffusion outcomes reshape interaction opportunities
+- Network structures evolve in response to diffusion, often amplifying initial inequalities
+- These feedback loops explain how temporary advantages become persistent stratification
 
 :::
+
+---
+
+## **Structural Requirements for Different Diffusion Types**
+
+::: {.panel-tabset}
+
+### Content Requirements
+
+Different types of content require distinct network structures:
+
+- **Simple information**: Spreads easily through weak ties and requires minimal reinforcement
+- **Complex practices**: Require multiple reinforcing pathways and demonstration opportunities
+- **High-risk behaviors**: Need strong trust relationships and redundant validation
+
+### Structural Conditions
+
+- **Clustering**: Dense connections within groups enable complex practice adoption
+- **Bridge width**: Multiple connections between groups facilitate cross-boundary diffusion
+- **Parameter overlap**: Moderate intersection of different social dimensions (status, discipline, occupation) creates optimal diffusion conditions
+
+This explains why structurally different networks exhibit dramatically different diffusion outcomes despite similar connectivity levels.
+
+:::
+
 
 
 # **Studies and progress**{background-color="aquamarine"}
@@ -114,12 +130,12 @@ This research program integrates key theoretical perspectives:
 ## **Study 1: Labor Market Stratification**
 
 ### Research Question and Objectives
+
 - **Question**: How do skill requirements diffuse across occupational networks to reinforce stratification?
 - **Objectives**:
-
-  - Identify mechanisms of **skill-based closure** that maintain occupational boundaries.
-  - Analyze how **symbolic devaluation** processes differentially affect skills associated with lower-status occupations.
-  - Model the **interdependent dynamics** of skill diffusion across occupational categories.
+  - Identify mechanisms of **skill-based closure** that maintain occupational boundaries
+  - Analyze how **symbolic devaluation** processes affect skills in lower-status occupations
+  - Model the **interdependent dynamics** of skill diffusion across occupational categories
 
 ---
 
@@ -127,36 +143,26 @@ This research program integrates key theoretical perspectives:
 
 ::: {.panel-tabset}
 
-### Value Displacement Mechanism
+### Value Displacement
 
-#### Stratified Diffusion
-- Emergent skills propagate within **occupational status clusters** through professional networks characterized by homophilous selection processes and status-based influence hierarchies.
-
-#### Skill-Based Closure
-- Co-occurring skill clusters reconfigure **occupational network topology**, increasing modularity and reinforcing boundaries between micro-classes through credential-based exclusion.
-
-#### Symbolic Devaluation
-- Functionally equivalent skills experience **differential valuation trajectories** based on their structural position within occupational networks, creating wage penalties independent of productivity differentials.
+- **Skill clustering**: Similar skills spread within occupational status groups, reinforcing boundaries
+- **Differential valuation**: Identical skills receive different economic rewards based on their location in the occupational network
+- **Conceptual bridges**: Skills transfer between occupations through overlapping skill categories that provide legitimation
 
 ### Research Progress
 
-#### Progress: 70% Complete
-**Completed**:
-
-- Multi-level theoretical framework development integrating network theory with stratification models.
-- Longitudinal data collection of job requirements across 180 occupational categories (2000-2023).
-- Network topology analysis revealing increasing bimodal structure in skill distribution patterns.
-
-**Current Phase**:
-
-- Decomposition models isolating wage effects associated with structurally identical skills across occupational boundaries.
-- Testing alternative explanations through counterfactual simulation experiments.
+**Progress: 70% Complete**
 
 **Key Findings**:
 
-- 24% increase in skill-cluster modularity over the observation period, indicating strengthening occupational boundaries.
-- 18-22% wage penalty for identical skills when located in lower-status occupational positions.
-- 37% reduction in skill adoption probability per standard deviation decrease in occupational prestige.
+- 24% increase in skill-cluster separation over time, indicating strengthening occupational boundaries
+- 18-22% wage penalty for identical skills when located in lower-status occupations
+- Skills are 37% less likely to be adopted in lower-prestige occupations, controlling for functional relevance
+
+**Current work**: 
+
+- Testing alternative explanations through counterfactual simulations
+- Decomposition models isolating wage effects for structurally identical skills across occupational boundaries
 
 :::
 
@@ -165,180 +171,168 @@ This research program integrates key theoretical perspectives:
 ## **Study 2: Social Movement Mobilization**
 
 ### Research Question and Objectives
-- **Question**: How do multiplex ties enable high-risk protest diffusion under conditions of repression?
+- **Question**: How do overlapping social ties enable high-risk protest diffusion under repression?
 - **Objectives**:
 
-  - Develop a theory of **strategic multiplexity** that explains differential mobilization capacities.
-  - Identify mechanisms that reduce **participation thresholds** for high-risk collective action.
-  - Model the **spatiotemporal dynamics** of urban protest diffusion across varied network configurations.
-  
----   
+  - Develop a theory of **strategic multiplexity** explaining differential mobilization
+  - Identify mechanisms that reduce **participation thresholds** for high-risk action
+  - Model the **spatiotemporal dynamics** of protest diffusion across network configurations
+
+---
 
 ## **Study 2: Social Movement Mobilization II**
 
 ::: {.panel-tabset}
 
-### Strategic Multiplexity Theory
+### Strategic Multiplexity
 
-#### Redundant Validation
-- Overlapping trust and resource ties provide **multiple confirming signals** that reduce decisional uncertainty through independent verification channels, creating robust diffusion pathways for high-risk behaviors.
-
-#### Capacity Reinforcement
-- The conjunction of cooperation and resource ties transforms **latent capacities** into actionable capabilities by simultaneously resolving coordination problems and resource constraints.
-
-#### Embedded Commitment
-- The interaction between trust and cooperation ties converts **interpersonal obligations** into political commitments through reputation mechanisms and identity reinforcement processes.
+- **Multiple confirming signals**: Overlapping ties provide independent verification, reducing uncertainty
+- **Capacity reinforcement**: Combined resource and cooperation ties transform potential into action
+- **Embedded commitment**: Trust and cooperation ties convert personal obligations into political commitments
 
 ### Research Progress
 
-#### Progress: 85% Complete
-**Completed**:
-
-- Network surveys from 70 social movement organizations documenting multiplex tie configurations.
-- Exponential Random Graph Models (ERGMs) estimating multiplex tie formation probabilities.
-- Threshold-based diffusion simulations calibrated to empirical activation sequences.
-- Validation through 12 in-depth interviews with movement participants and organizers.
-
-**Current Phase**:
-
-- Final manuscript preparation integrating computational and qualitative findings.
-- Historical case validation comparing predicted and observed diffusion patterns.
+**Progress: 85% Complete**
 
 **Key Findings**:
 
-- Participation thresholds reduced 18-25% in networks characterized by trust-resource overlaps compared to equivalent single-dimension networks.
-- Cooperation-trust multiplexity coefficient (β=6.46) exceeds traditional kinship-only effects in predicting high-risk activism.
-- Empirical validation through counterfactual simulations demonstrates superior predictive accuracy of multiplex models over single-dimension alternatives.
+- Participation thresholds reduced by 18-25% in networks with overlapping trust-resource ties
+- Cooperation-trust overlap strongly predicts high-risk activism (β=6.46)
+- Multiplex models predict actual diffusion patterns more accurately than single-dimension alternatives
+
+**Current phase**: 
+
+- Final manuscript preparation and historical case validation
+- Validation through 12 in-depth interviews with movement participants
 
 :::
 
 ---
 
-## **Study 3: Status Distance, Interdisciplinarity, and Knowledge Diffusion in Sustainability Science**
+## **Study 3: Knowledge Diffusion in Sustainability Science**
 
 ### Research Question and Objectives
-- **Question**: How do status distance and interdisciplinary composition jointly condition the diffusion of knowledge between epistemic communities in sustainability science?
+- **Question**: How do status distance and interdisciplinary composition jointly affect knowledge diffusion?
 - **Objectives**:
 
-  - Analyze how **structural hierarchies** in scientific fields systematically pattern knowledge transmission processes across disciplinary boundaries.
-  - Identify precise **social mechanisms** through which the interaction of status configurations and interdisciplinary composition enables or constrains diffusion.
-  - Model how **parameter-based differentiation**, following Blau's (1977) theoretical framework, creates distinctive opportunity structures for cross-community knowledge exchange in interdisciplinary contexts.
+  - Analyze how **status hierarchies** pattern knowledge transmission across disciplines
+  - Identify **social mechanisms** enabling or constraining cross-boundary diffusion
+  - Model how **parameter-based differentiation** creates distinctive opportunity structures
 
---- 
+---
 
-## **Study 3: Status Distance, Interdisciplinarity, and Knowledge Diffusion in Sustainability Science II**
+## **Study 3: Knowledge Diffusion in Sustainability Science II**
 
 ::: {.panel-tabset}
 
-### Structural Diffusion Mechanisms
+### Structural Mechanisms
 
-#### Opportunity Structure Mechanism
-- The **intersection of status differentiation and disciplinary heterogeneity** creates distinctive patterns of exposure and accessibility between communities, establishing structural conditions that systematically determine which knowledge elements can traverse epistemic boundaries.
+- **Opportunity structure**: The intersection of status and disciplinary diversity creates systematic patterns of knowledge access
+- **Parameter consolidation**: Alignment between status and disciplinary boundaries conditions knowledge flow
+- **Crosscutting positions**: Individuals spanning multiple parameters create pathways for knowledge exchange
 
-#### Parameter Consolidation Mechanism
-- The **alignment or misalignment of status parameters with disciplinary diversity** fundamentally conditions knowledge flow, with highly consolidated status-discipline configurations creating stronger barriers to cross-position diffusion compared to incongruent configurations that enable novel pathways.
+### Empirical Strategy
 
-#### Crosscutting Parameter Mechanism
-- The presence of **crosscutting status and disciplinary positions** (following Blau's crosscutting theorem) creates structural opportunities for knowledge exchange that would be improbable in single-parameter hierarchies, facilitating diffusion across otherwise impermeable boundaries.
-
-### Empirical Strategy and Data Innovation
-
-- **Novel Measurement Approach**: Developing multidimensional indices that capture both status hierarchies and disciplinary composition simultaneously
-- **Computational Text Analysis**: Implementing natural language processing techniques to track knowledge element transmission between epistemic communities
-- **Temporal Network Modeling**: Utilizing stochastic actor-oriented models (SAOMs) to analyze co-evolving processes of knowledge diffusion and network restructuring
-- **Visualization Innovations**: Creating dynamic parameter space visualizations that map how knowledge flows across status-discipline configurations
+- **Novel measurement**: Developing indices that capture both status hierarchies and disciplinary composition
+- **Computational text analysis**: Using NLP to track knowledge element transmission between communities
+- **Temporal network modeling**: Analyzing co-evolving processes of knowledge diffusion and network restructuring
 
 ### Research Progress
 
-#### Progress: 45% Complete
-**Completed**:
+**Progress: 45% Complete**
 
-- Theoretical framework development integrating Blau's structural theory with interdisciplinary diffusion models.
-- Data collection protocol for extracting status and disciplinary diversity parameters from OpenAlex.
-- Initial measurement of status-discipline configurations in sustainability science networks.
-- Secured access to comprehensive citation and co-authorship data spanning 15 years of sustainability science development.
+**Current phase**:
 
-**Current Phase**:
+- Developing measures that capture both status hierarchies and disciplinary composition
+- Implementing algorithms to detect knowledge diffusion events between communities
+- Testing how status distance and interdisciplinary composition interact to condition diffusion
 
-- Implementing algorithms to detect knowledge diffusion events between communities with varying interdisciplinary compositions.
-- Developing multidimensional measures that capture both status hierarchies and disciplinary heterogeneity.
-- Designing empirical tests to distinguish parameter consolidation effects from alternative explanations.
-- Testing preliminary models of how status distance and interdisciplinarity interact to condition diffusion patterns.
-
-**Expected Completion**: Q2 2026
+**Expected completion**: Q2 2026
 
 :::
 
 ---
 
-## **Cross-Domain Integration: Toward a Unified Theory of Heterogeneous Diffusion**
+## **Cross-Domain Integration: Unified Theory of Heterogeneous Diffusion**
 
 ::: {.panel-tabset}
 
-### Generalizable Mechanisms
+### Common Mechanisms
 
-#### From Micro Interactions to Macro Stratification
-- **Heterogeneous Diffusion Pathways**: Innovations propagate along structurally differentiated channels, with transmission probabilities systematically conditioned by actors' positions in multiple network dimensions.
-- **Structural Opportunity Effects**: Initial network positions constrain exposure to innovations and resources, with these constraints being amplified through feedback processes as diffusion reshapes network topologies.
-- **Parameter-Based Conditioning**: The interaction of multiple structural parameters (status, disciplinary composition, occupational boundaries) creates systematically variable diffusion opportunities that drive stratification.
+Three fundamental mechanisms operate across labor markets, social movements, and scientific communities:
+
+1. **Structural opportunity effects**: Initial positions constrain exposure to innovations, with constraints amplified through feedback processes
+
+2. **Multiplexity and bridge formation**: Overlapping relationship types create robust diffusion pathways across otherwise separated network regions
+
+3. **Parameter interaction effects**: The alignment or crosscutting of different social dimensions (status, discipline, occupation) systematically conditions diffusion processes
 
 ### Theoretical Synthesis
 
-#### Integrating Findings Across Domains
+**Progress: 65% Complete**
 
-This research demonstrates how seemingly disparate processes across labor markets, social movements, and scientific communities reveal fundamental similarities in their generative mechanisms:
+- Developing formal models linking micro-interactions to emergent stratification patterns
+- Specifying how these mechanisms generate similar outcomes across different empirical contexts
+- Identifying intervention points where structural modifications could reduce inequality
 
-1. **Threshold heterogeneity**: Diffusion across all domains exhibits systematically variable adoption thresholds based on actors' structural positions.
-2. **Multiplexity effects**: The overlap of different relation types creates distinctive diffusion pathways that are impossible to identify through single-dimension analyses.
-3. **Feedback dynamics**: Initial structural advantages become self-reinforcing as diffusion outcomes reshape subsequent interaction opportunities.
-4. **Parameter interactions**: The consolidation or crosscutting of structural parameters (following Blau) systematically conditions diffusion processes across all domains.
-
-### Program Development
-
-**Progress Toward Integrated Theory**: 65% Complete
-
-- **Methodological Framework**: Developing formalized models linking micro-interaction sequences to emergent stratification patterns across domains.
-- **Theoretical Unification**: Specifying condition-dependent diffusion mechanisms that generate similar stratification outcomes despite surface-level differences in empirical contexts.
-- **Intervention Design**: Identifying strategic intervention points where targeted structural modifications could mitigate inequality-reinforcing diffusion patterns.
-
-**Expected Completion**: Q4 2025.
+**Expected completion**: Q4 2025
 
 :::
 
 ---
 
-## **Conclusion: Structural Dynamics of Stratified Diffusion**
+## **Implications for Inequality and Social Integration**
 
 ::: {.panel-tabset}
 
-### Theoretical Contributions
+### Structural Foundations
 
-This research program advances understanding of diffusion and stratification by:
+- **Parameter consolidation**: When social dimensions align perfectly (e.g., race, income, education), they create impermeable boundaries
+- **Bridge formation**: Strategic connections between different groups can facilitate resource diffusion
+- **Network evolution**: How networks change in response to diffusion often reinforces initial advantages
 
-1. **Formalizing multiplex diffusion**: Demonstrating how the simultaneous operation of multiple network dimensions creates unique diffusion pathways impossible to identify through conventional single-dimension analyses.
+### Practical Applications
 
-2. **Establishing parameter-conditioned influence**: Showing how social influence effects systematically vary with actors' positions in overlapping structural parameters, following Blau's (1977) foundational insights.
-
-3. **Identifying dynamic feedback processes**: Documenting how diffusion outcomes recursively transform network topologies, creating self-reinforcing stratification processes.
-
-4. **Developing middle-range diffusion dynamics**: Specifying generalizable mechanisms that operate across empirical domains while maintaining sensitivity to contextual variation.
-
-### Methodological Innovations
-
-The program establishes a rigorous analytical approach that:
-
-- **Integrates computational and qualitative methods** to capture both structural patterns and meaning-making processes in diffusion.
-- **Implements empirically calibrated simulations** that reproduce observed diffusion trajectories, moving beyond abstract theoretical modeling.
-- **Utilizes network embedding techniques** to identify latent structural positions that condition diffusion opportunities.
-- **Applies counterfactual frameworks** that isolate specific mechanisms from complex interaction sequences.
+- **Institutional design**: Create optimal levels of parameter overlap to facilitate integration
+- **Strategic interventions**: Build multiplex bridges between marginalized and resource-rich groups
+- **Policy implications**: Focus on structural conditions rather than individual attributes
 
 ### Future Directions
 
-This work opens promising avenues for further research:
+- Extend analysis to education, health, and economic mobility
+- Develop methods to measure and modify bridge structures in real-world networks
+- Examine how digital technologies transform traditional diffusion constraints
 
-- Extend the framework to additional domains including technological innovation diffusion and educational stratification processes.
-- Develop practical applications that translate theoretical insights into inequality-reducing interventions.
-- Explore the interaction between cognitive and structural factors in creating differential diffusion thresholds.
-- Investigate how digital technologies transform traditional diffusion constraints through novel connectivity patterns.
+:::
+
+---
+
+## **Conclusion: Key Contributions**
+
+::: {.panel-tabset}
+
+### Theoretical Advances
+
+This research advances our understanding of diffusion and stratification by:
+
+1. Demonstrating how multiple overlapping network dimensions create unique diffusion pathways
+
+2. Showing how moderate parameter overlap creates optimal conditions for cross-boundary diffusion
+
+3. Documenting how diffusion outcomes transform network structures, creating self-reinforcing inequality
+
+### Methodological Innovations
+
+- Integration of computational and qualitative methods to capture both structural patterns and meaning-making
+- Empirically calibrated simulations that reproduce observed diffusion trajectories
+- Counterfactual frameworks that isolate specific mechanisms from complex interactions
+
+### Practical Significance
+
+This work provides a foundation for designing interventions that can reduce inequality by:
+
+- Creating strategic bridges between separated groups
+- Optimizing institutional structures to facilitate beneficial diffusion
+- Identifying critical intervention points in evolving network structures
 
 :::
