@@ -11,7 +11,7 @@ web: https://rcantillan.rbind.io
 
 ## Description 
 
-https://rcantillan.github.io/slides/interseccionalidad/thesis_dissertation_progress/
+https://rcantillan.github.io/slides/thesis_proposal_02/thesis_dissertation_progress.html
 
 ## Setup
 
