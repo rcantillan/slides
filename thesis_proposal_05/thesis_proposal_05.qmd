@@ -27,20 +27,19 @@ format:
 
 ## The Puzzle: Labor Market Dynamics & Persistent Inequality
 
-::: {.r-fit-text style="font-size: 60px; text-align: center; margin-top: 1em;"} 
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
 - Contemporary labor markets are characterized by unprecedented dynamism: technological advancements, globalization, and evolving industrial landscapes continually reshape the world of work [@kalleberg2011; @autor2015].
 
-- Despite this flux, foundational structures of occupational hierarchy and socio-economic inequality exhibit remarkable **persistence and adaptive resilience** [@tilly1998].
+- Despite this flux, foundational structures of occupational hierarchy and socio-economic inequality exhibit remarkable persistence and adaptive resilience [@tilly1998].
 :::
 
 ## The polarization of the labor market
 
 ::: {.columns}
 ::: {.column width="50%"}
-::: {.r-fit-text style="font-size: 30px; text-align: left; margin-top: 1em;"}
+::: {.div style="font-size: 25px; text-align: left; margin-top: 5em;"}
 - Demand for high-skill and low-skill jobs is increasing, while middle-skill jobs are declining. This is often referred to as job polarization.
 - This polarization is attributed to technological change and globalization, which devalue certain skills and revalue others.
-- However, the underlying mechanisms of *how* this polarization is maintained and how it interacts with occupational boundaries and status hierarchies remain poorly understood.
 :::
 :::
 
@@ -71,9 +70,57 @@ format:
 
 ## The question
 
-::: {.r-fit-text style="font-size: 50px; text-align: center; margin-top: 2em;"}
+::: {.div style="font-size: 25px; text-align: center; margin-top: 4em;"}
 How does the interplay between **skill diffusion**, **occupational boundaries**, and **skill valuations** actively (re)produce and transform social stratification within dynamic occupational markets?
 :::
+
+
+## Supply and Demand Dynamics
+::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 2em;"}
+
+::: {.columns}
+::: {.column width="50%"}
+
+#### **Workers adapt to markets**
+
+*"How do workers adapt to changing skill demands?"*
+
+- Individual career decisions
+- Skill acquisition choices  
+- Job search strategies
+- Human capital investment
+
+:::
+
+
+::: {.column width="50%"}
+
+#### **Markets reshape themselves** 
+
+*"How do skill demands create structured mobility opportunities?"*
+
+- Occupational skill requirements
+- **Systematic diffusion patterns**
+- Structural adoption logics
+- Semi-autonomous from individual choices
+
+:::
+:::
+:::
+
+
+
+
+## Demand-Side Patterns Shape Supply-Side Possibilities 
+
+::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 3em;"}
+- If skill diffusion follows structured patterns → **mobility opportunities are structurally predetermined**
+
+- If different skill types have distinct diffusion logics → **career destinies depend on skill type, not just skill possession**
+
+- **Implication**: The skill diffusion process itself becomes a **stratification engine** that sorts workers into persistent hierarchies.
+::: 
+
 
 ## The Occupational Skill Space
 
@@ -85,7 +132,7 @@ How does the interplay between **skill diffusion**, **occupational boundaries**,
 :::
 
 ::: {.column width="50%"}
-::: {.div style="font-size: 25px; text-align: left; margin-top: 1em;"}
+::: {.div style="font-size: 22px; text-align: left; margin-top: 4em;"}
 
 - This space is analogous to a **"Blau Space"**, where dimensions are defined by distributions of critical resources and characteristics – primarily **skills**, but also associated educational prerequisites and wage levels.
 
@@ -94,16 +141,18 @@ How does the interplay between **skill diffusion**, **occupational boundaries**,
 :::
 :::
 
+
 ## Core Idea: From Static Structure to Dynamic Process
 
 ::: {.div style="font-size: 25px; text-align: left; margin-top: 4em;"}
-**Previous Research:** Shows WHAT the structure (e.g., polarization) looks like.
+- **Previous Research:** Shows WHAT the structure (e.g., polarization) looks like.
 
-**This Research:** Reveals HOW boundaries are actively constructed and status is assigned.
-**Through the lens of skill diffusion *between occupations***.
+- **This Research:** Reveals HOW boundaries are actively constructed and status is assigned. **Through the lens of skill diffusion *between occupations***.
 
-**Central Insight:** Occupational boundaries and hierarchies aren't just maintained—they're dynamically (re)produced through differentiated skill adoption patterns on the demand side.
+- **Central Insight:** Occupational boundaries and hierarchies aren't just maintained—they're dynamically (re)produced through differentiated skill adoption patterns on the demand side.
 :::
+
+
 
 
 ## Theoretical Framework: Skill Diffusion as Boundary Work
@@ -358,6 +407,7 @@ knitr::kable(all_events_sample, caption = "")
 
 - These differing structural propensities result in distinct mobility pathways, which can create 'mobility traps' and reinforce labor market inequality.
 
+## So What?
 
 
 
