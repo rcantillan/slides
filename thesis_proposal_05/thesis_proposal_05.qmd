@@ -1,9 +1,8 @@
 ---
 title: "Skill Pathways, Work's Worth: A Diffusion Dynamics Approach"
 subtitle: "Articulating Occupational Boundaries and Status Hierarchies through Skill Diffusion"
-author: "Roberto Cantillan"
-advisor: "Advisor: Mauricio Bucca PhD"
-institute: "Sociology, Pontificia Universidad Católica de Chile"
+author: "Roberto Cantillan & Mauricio Bucca"
+institute: "Sociology | Pontificia Universidad Católica de Chile"
 date: today
 format: 
   revealjs:
