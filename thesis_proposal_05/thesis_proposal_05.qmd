@@ -133,10 +133,10 @@ How does the interplay between **skill diffusion**, **occupational boundaries**,
 
 ::: {.column width="50%"}
 ::: {.div style="font-size: 22px; text-align: left; margin-top: 4em;"}
+- We view the labor market as an "Occupational Skill Space": A **"Blau Space"** where status dimensions (Education, Wages) position occupations as **"niches"**.
 
-- This space is analogous to a **"Blau Space"**, where dimensions are defined by distributions of critical resources and characteristics – primarily **skills**, but also associated educational prerequisites and wage levels.
+- These niches are defined by skills—understood as key resources and nodes in a 2-mode network—whose diffusion dynamically (re)articulates boundaries and hierarchies.
 
-- Within this space, **occupations function as "niches"**, each defined by its unique bundle of skill requirements and its position within the broader status hierarchy.
 :::
 :::
 :::
@@ -149,7 +149,13 @@ How does the interplay between **skill diffusion**, **occupational boundaries**,
 
 - **This Research:** Reveals HOW boundaries are actively constructed and status is assigned. **Through the lens of skill diffusion *between occupations***.
 
-- **Central Insight:** Occupational boundaries and hierarchies aren't just maintained—they're dynamically (re)produced through differentiated skill adoption patterns on the demand side.
+
+::: {.callout-note appearance="simple"}
+## **Central Insight:**
+::: {.div style="font-size: 25px; text-align: left; margin-top: 0em;"}
+Occupational boundaries and hierarchies aren't just maintained—they're dynamically (re)produced through differentiated skill adoption patterns on the demand side.
+:::
+:::
 :::
 
 
