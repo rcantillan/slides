@@ -243,6 +243,19 @@ Cognitive and physical skills follow fundamentally different diffusion logics re
 :::
 
 
+## Level of Analysis: Why Occupations?
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 3em;"}
+"While organizations are the ultimate hiring actors, our analysis conceptualizes and measures skill demand at the occupational level. This decision is grounded in both methodological necessity and theoretical rationale:
+
+(1) **Data Foundation**: O*NET is inherently designed to capture the generalized skill requirements that typify occupations across the economy, rather than firm-specific needs.
+
+(2) **Theoretical Rationale**: Sociologically, occupations represent institutionalized roles with established skill expectations and shared understandings. Organizations primarily recruit into these pre-existing roles. Therefore, by focusing on occupations, we analyze the structural architecture of skill demand and its evolution – how types of work change – providing the essential context within which organizations operate and generate inequality."
+:::
+
+
+
+
 ## Occupational - Skill Space
 
 * **Occupational Skill Profiles:**
@@ -324,6 +337,24 @@ knitr::kable(all_events_sample, caption = "")
 
 ## Model 
 
+::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
+The probability that a skill ($s$) diffuses from an origin occupation ($o_1$) to a target occupation ($o_2$), denoted as $P(D_{s, o_1 \to o_2} = 1)$, is modeled using a logistic regression. The general form of the model is:
+
+$$
+\text{logit}\left(P(D_{s, o_1 \to o_2} = 1 \mid \mathbf{X})\right) = \beta_0 + \mathbf{\beta X}
+$$
+
+Where:
+
+* $\text{logit}(p) = \ln\left(\frac{p}{1-p}\right)$ is the logit function, which transforms the probability $p$ to the log-odds space.
+* $D_{s, o_1 \to o_2} = 1$ represents the diffusion event (the target occupation adopts the skill already possessed by the origin occupation).
+* $\beta_0$ is the intercept.
+* **$\mathbf{X}$ is a vector of predictor variables characterizing the skill $s$, the origin occupation $o_1$, the target occupation $o_2$, and the relationship between $o_1$ and $o_2$.**
+* $\mathbf{\beta}$ is the vector of corresponding coefficients for the variables in $\mathbf{X}$.
+* An error term, $\epsilon_{s, o_1, o_2}$, is assumed to be logistically distributed.
+
+:::
+
 
 
 # III. Results {background-color="#2c3e50" color="white" .center .middle}
@@ -362,22 +393,11 @@ knitr::kable(all_events_sample, caption = "")
 
 ## Descriptives V
 
-**Two Divergent Trajectories**
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+- Sociocognitive skills exhibit strong upward mobility, flowing overwhelmingly towards the top quartile (Q4) for both wages and education, regardless of their starting quartile.
 
-- Sociocognitive Skills ("The Escalator"): Overwhelmingly flow upwards into the top socioeconomic quartile (Q4) for wages and education, regardless of their starting point. They act as a "gravitational pull" to elite occupations.
-- Physical/Sensorymotor Skills ("The Lateral Drift"): Primarily circulate sideways within lower/middle quartiles (Q1-Q3), facing a "glass ceiling" that blocks significant upward mobility into Q4.
-
-**Mechanisms at Play**
-
-- These flows illustrate "opportunity hoarding" (Social Closure), where cognitive skills act as credentials for elite access.
-
-- We observe a "skill gentrification" effect, as cognitive skills elevate occupational requirements, potentially displacing physical skills.
-
-**Consequences & Key Takeaway**
-
-- Polarization Ratchet: Skill diffusion isn't just a symptom of polarization; its directionality actively deepens it.
-
-- Skill Type, Not Origin, Dictates Destination: Cognitive skills from any origin are "pulled" to Q4, while physical skills remain largely in lateral networks.
+- Physical/Sensorymotor skills show predominantly lateral mobility, circulating mainly within the lower and middle quartiles (Q1-Q3) and demonstrating a "glass ceiling" effect, with very limited entry into Q4.
+:::
 
 
 ## Model diffusion
@@ -407,15 +427,27 @@ knitr::kable(all_events_sample, caption = "")
 
 ## Key Findings
 
-- Skill diffusion is not random; it exhibits asymmetric patterns strongly linked to structural conditions and skill type. 
+Dual Diffusion Logics Unveiled (Descriptives & Model Confirmation):
 
-- Higher probabilities for cognitive skill diffusion are associated with educational increases, while higher probabilities for technical skill diffusion depend heavily on structural similarity. 
+- **Cognitive Skills ("The Escalator")**: Show consistent upward socioeconomic mobility (Q4). Models confirm this is primarily driven by educational advancements and an affinity for moderate structural shifts, with wage effects being secondary.
 
-- These differing structural propensities result in distinct mobility pathways, which can create 'mobility traps' and reinforce labor market inequality.
+- **Physical/Technical Skills ("The Lateral Drift")**: Exhibit lateral circulation (Q1-Q3). Models verify this is due to strong constraints from structural proximity and significant educational/wage ceilings.
+Skill Diffusion as an Active Stratification Engine:
+
+
+These asymmetric pathways—whose drivers are clarified by our models—are not mere market trends. They function as core mechanisms that actively (re)articulate occupational boundaries, (re)value skills based on trajectory, and drive labor market polarization.
+
 
 ## So What?
 
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+Skill diffusion is  driven by:
 
+- "Trajectory Channeling": How structure and status filter skill flows.
+- "Positional Revaluation": How these very pathways actively construct skill value and status. 
+These mechanisms generate the observed "Escalator" vs. "Lateral Drift" dynamics and (re)articulate occupational boundaries.
+
+:::
 
 ## References {.scrollable}
 
