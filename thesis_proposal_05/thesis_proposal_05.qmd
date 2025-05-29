@@ -246,8 +246,6 @@ Cognitive and physical skills follow fundamentally different diffusion logics re
 ## Level of Analysis: Why Occupations?
 
 ::: {.div style="font-size: 22px; text-align: left; margin-top: 3em;"}
-"While organizations are the ultimate hiring actors, our analysis conceptualizes and measures skill demand at the occupational level. This decision is grounded in both methodological necessity and theoretical rationale:
-
 (1) **Data Foundation**: O*NET is inherently designed to capture the generalized skill requirements that typify occupations across the economy, rather than firm-specific needs.
 
 (2) **Theoretical Rationale**: Sociologically, occupations represent institutionalized roles with established skill expectations and shared understandings. Organizations primarily recruit into these pre-existing roles. Therefore, by focusing on occupations, we analyze the structural architecture of skill demand and its evolution – how types of work change – providing the essential context within which organizations operate and generate inequality."
@@ -441,12 +439,19 @@ These asymmetric pathways—whose drivers are clarified by our models—are not 
 ## So What?
 
 ::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
-Skill diffusion is  driven by:
 
-- "Trajectory Channeling": How structure and status filter skill flows.
-- "Positional Revaluation": How these very pathways actively construct skill value and status. 
-These mechanisms generate the observed "Escalator" vs. "Lateral Drift" dynamics and (re)articulate occupational boundaries.
+**Core Mechanisms Driving Stratification**
+*Labor market inequality is actively produced by dynamic skill diffusion mechanisms:*
 
+  - "Trajectory Channeling": Occupational structure and status hierarchies don't just exist; they actively filter and direct distinct skill flows.
+  - "Positional Revaluation": Consequently, these divergent pathways dynamically construct and alter a skill's market value and an occupation's status.
+
+**From Mechanisms to Observed Inequality**
+*These core mechanisms are what visibly generate:*
+
+  - The "Escalator" vs. "Lateral Drift" dynamics for different skill types.
+  - The ongoing (re)articulation of occupational boundaries and patterns of social closure.
+  
 :::
 
 ## References {.scrollable}
