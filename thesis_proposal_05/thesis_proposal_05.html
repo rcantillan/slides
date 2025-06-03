@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="Roberto Cantillan &amp; Mauricio Bucca">
-  <meta name="dcterms.date" content="2025-05-29">
+  <meta name="dcterms.date" content="2025-06-02">
   <title>Skill Pathways, Work’s Worth: A Diffusion Dynamics Approach</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -195,14 +195,12 @@
 <img data-src="plot_01_polarization.png" data-out-width="90%" class="r-stretch"></section>
 <section id="some-recent-references" class="slide level2">
 <h2>Some recent references</h2>
-<div class="r-fit-text" style="font-size: 50px; text-align: center; margin-top: 2em;">
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="p1_ref.png" data-out-width="100%"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="p2_ref.png" data-out-width="100%"></p>
 </div></div>
-</div>
 </section>
 <section id="the-question" class="slide level2">
 <h2>The question</h2>
@@ -392,68 +390,49 @@
 </ol>
 </div>
 </section>
-<section id="occupational---skill-space" class="slide level2">
-<h2>Occupational - Skill Space</h2>
+<section id="study-steps" class="slide level2">
+<h2>Study Steps</h2>
 <ul>
-<li><strong>Occupational Skill Profiles:</strong>
+<li><strong>Step 1: Revealed Comparative Advantage (RCA) Calculation</strong>
 <ul>
-<li>Each occupation <span class="math inline">\(j\)</span> is defined by a quantitative vector of O*NET skill importance/level values, <span class="math inline">\(onet(j,s)\)</span>, representing its reliance on each skill <span class="math inline">\(s\)</span>.</li>
-<li><strong>Intuition:</strong> This vector acts as a “skill fingerprint” for each occupation, detailing its specific demands.</li>
+<li>Use “importance” variable of each skill for each occupation</li>
+<li>Calculate RCA for years 2015 and 2023</li>
+<li>RCA &gt; 1 = occupation has “comparative advantage” in that skill (effective use)</li>
 </ul></li>
-<li><strong>Revealed Comparative Advantage (RCA):</strong>
+<li><strong>Step 2: Skill Cluster Identification</strong>
 <ul>
-<li><strong>Purpose:</strong> To measure an occupation’s <em>relative specialization</em> in a skill, identifying if it uses that skill more intensively than the average occupation.</li>
-<li><strong>Calculation:</strong> For skill <span class="math inline">\(s\)</span> in occupation <span class="math inline">\(j\)</span>: <span class="math display">\[rca(j,s) = \frac{\text{Share of skill } s \text{ in occupation } j\text{'s total skill needs}}{\text{Share of skill } s \text{ in the entire system's total skill needs}}\]</span> Where:
-<ul>
-<li>Numerator: <span class="math inline">\((onet(j,s) / \sum_{s' \in S} onet(j,s'))\)</span></li>
-<li>Denominator: <span class="math inline">\((\sum_{j' \in J} onet(j',s) / \sum_{j' \in J, s'' \in S} onet(j',s''))\)</span></li>
+<li>Build skill complementarity networks</li>
+<li>Apply Leiden algorithm for community detection</li>
+<li>Result: 2 main clusters (consistent with Alabdulkareem et al.). <em>Sociocognitive Skills</em> (e.g., critical thinking, active listening) &amp; <em>Physical/Sensorimotor</em> Skills (e.g., manual dexterity, arm-hand steadiness)</li>
 </ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="occupational---skill-space-ii" class="slide level2">
-<h2>Occupational - Skill Space II</h2>
+<li><strong>Step 3: Diffusion Events Construction</strong>
 <ul>
-<li><strong>Interpretation:</strong> * <span class="math inline">\(rca(j,s) &gt; 1\)</span>: Occupation <span class="math inline">\(j\)</span> has a comparative advantage in skill <span class="math inline">\(s\)</span>; the skill is “overexpressed” or “effectively used” (denoted <span class="math inline">\(e(j,s)=1\)</span>). This highlights skills that distinctively characterize the occupation. * <span class="math inline">\(rca(j,s) \le 1\)</span>: The skill is not a distinctive specialty for occupation <span class="math inline">\(j\)</span> relative to the average.
-<ul>
-<li><strong>Benefit:</strong> Normalizes raw O*NET scores to filter out ubiquitous skills and spotlight an occupation’s key distinguishing skill requirements.</li>
+<li>Positive Event (diffusion = 1): Target occupation adopts skill between 2015-2023 that source occupation already - had in 2015</li>
+<li>Negative Event (diffusion = 0): Target occupation does NOT adopt the skill by 2023</li>
+<li>Generate all possible source-target combinations for each skill</li>
 </ul></li>
 </ul>
-</section>
-<section id="skill-networks" class="slide level2">
-<h2>Skill Networks</h2>
+</section></section>
+<section>
+<section id="study-steps-1" class="title-slide slide level1 center">
+<h1>Study steps</h1>
 <ul>
-<li><strong>Clusters (<code>skill_type</code>):</strong>
+<li><strong>Step 4: Occupational Distance Calculation</strong>
 <ul>
-<li><strong>Skill-Skill Complementarity Network (Skillscape):</strong> A network is constructed where nodes are skills. The weight of an edge between two skills, <span class="math inline">\(\theta(s,s')\)</span>, represents their complementarity. This is calculated as the minimum of the conditional probabilities that both skills are effectively used together in the same occupations: <span class="math display">\[\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{max(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s'))}\]</span> This captures how skills support each other, either by boosting productivity or through ease of simultaneous acquisition.</li>
-<li><strong>Louvain Community Detection:</strong> This unsupervised algorithm is applied to the skill complementarity network to identify clusters of skills (skill types). It works by greedily optimizing modularity, comparing the density of connections within a community to that between communities, without pre-specifying the number of clusters.</li>
+<li>Educational Distance: Difference in average educational requirements between target and source occupation</li>
+<li>Wage Distance: Difference in average income between target and source occupation</li>
+<li>Structural Distance: Similarity in complete skill profiles between occupations (measured in 2015)</li>
 </ul></li>
-</ul>
-</section>
-<section id="identifying-diffusion-events-diffusion-1" class="slide level2">
-<h2>Identifying Diffusion Events (<code>diffusion = 1</code>)</h2>
+<li><strong>Step 5: Descriptive Analysis</strong>
 <ul>
-<li><p><strong>Core Idea:</strong> A skill diffuses from an occupation already using it (source) to an occupation that newly adopts it (target) between a <code>start_year</code> and <code>end_year</code>.</p></li>
-<li><p><strong>Process:</strong></p>
-<ol type="1">
-<li><strong>Effective Skill Use:</strong> Determine if a skill is “effectively used” in each occupation for both start and end years (Revealed Comparative Advantage - RCA &gt; 1).</li>
-<li><strong>Identify Sources:</strong> List occupations effectively using the skill in the <code>start_year</code>.</li>
-<li><strong>Identify New Adopters (Targets):</strong> List occupations effectively using the skill in the <code>end_year</code> BUT NOT in the <code>start_year</code>.</li>
-<li><strong>Positive Event:</strong> For a given skill, a positive diffusion event (<code>diffusion = 1</code>) is created for every pair of (source occupation, new adopter target occupation).</li>
-</ol></li>
-</ul>
-</section>
-<section id="constructing-non-diffusion-events-diffusion-0" class="slide level2">
-<h2>Constructing Non-Diffusion Events (<code>diffusion = 0</code>)</h2>
+<li>Diffusion patterns by skill type</li>
+<li>Socioeconomic mobility matrices by quartiles</li>
+<li>Differences in diffusion rates by distances</li>
+</ul></li>
+<li><strong>Step 6: Diffusion Model</strong>
 <ul>
-<li><p><strong>Core Idea:</strong> A skill does <em>not</em> diffuse from a source occupation to a target occupation if the target fails to effectively use the skill by the <code>end_year</code>.</p></li>
-<li><p><strong>Process:</strong></p>
-<ol type="1">
-<li><strong>Effective Skill Use &amp; Sources:</strong> Same as for positive events (RCA &gt; 1 in <code>start_year</code> for sources).</li>
-<li><strong>Identify Potential Non-Adopters (Targets):</strong> List all relevant occupations that are NOT effectively using the skill in the <code>end_year</code>.</li>
-<li><strong>Negative Event:</strong> For a given skill, a negative diffusion event (<code>diffusion = 0</code>) is created for every pair of (source occupation, potential non-adopter target occupation).</li>
-<li><strong>Exhaustive Generation:</strong> The script generates <em>all</em> such possible negative (non-diffusion) events.</li>
-</ol></li>
+<li>Logistic Regression: P(Diffusion = 1) = f(Predictors): <code>Skill type</code> (Sociocognitive vs.&nbsp;Physical/Sensorimotor), <code>Educational distance</code> (target - source), <code>Wage distance</code> (target - source), <code>Structural distance between occupations</code> (2015 profiles)</li>
+</ul></li>
 </ul>
 </section>
 <section id="data-struture" class="slide level2">
@@ -786,6 +765,77 @@
 <li>The ongoing (re)articulation of occupational boundaries and patterns of social closure.</li>
 </ul>
 </div>
+</section></section>
+<section>
+<section id="iv.-supporting-material" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>IV. Supporting material</h1>
+
+</section>
+<section id="occupational---skill-space" class="slide level2">
+<h2>Occupational - Skill Space</h2>
+<ul>
+<li><strong>Occupational Skill Profiles:</strong>
+<ul>
+<li>Each occupation <span class="math inline">\(j\)</span> is defined by a quantitative vector of O*NET skill importance/level values, <span class="math inline">\(onet(j,s)\)</span>, representing its reliance on each skill <span class="math inline">\(s\)</span>.</li>
+<li><strong>Intuition:</strong> This vector acts as a “skill fingerprint” for each occupation, detailing its specific demands.</li>
+</ul></li>
+<li><strong>Revealed Comparative Advantage (RCA):</strong>
+<ul>
+<li><strong>Purpose:</strong> To measure an occupation’s <em>relative specialization</em> in a skill, identifying if it uses that skill more intensively than the average occupation.</li>
+<li><strong>Calculation:</strong> For skill <span class="math inline">\(s\)</span> in occupation <span class="math inline">\(j\)</span>: <span class="math display">\[rca(j,s) = \frac{\text{Share of skill } s \text{ in occupation } j\text{'s total skill needs}}{\text{Share of skill } s \text{ in the entire system's total skill needs}}\]</span> Where:
+<ul>
+<li>Numerator: <span class="math inline">\((onet(j,s) / \sum_{s' \in S} onet(j,s'))\)</span></li>
+<li>Denominator: <span class="math inline">\((\sum_{j' \in J} onet(j',s) / \sum_{j' \in J, s'' \in S} onet(j',s''))\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="occupational---skill-space-ii" class="slide level2">
+<h2>Occupational - Skill Space II</h2>
+<div class="div" style="font-size: 25px; text-align: left; margin-top: 3em;">
+<ul>
+<li><strong>Interpretation:</strong> * <span class="math inline">\(rca(j,s) &gt; 1\)</span>: Occupation <span class="math inline">\(j\)</span> has a comparative advantage in skill <span class="math inline">\(s\)</span>; the skill is “overexpressed” or “effectively used” (denoted <span class="math inline">\(e(j,s)=1\)</span>). This highlights skills that distinctively characterize the occupation. * <span class="math inline">\(rca(j,s) \le 1\)</span>: The skill is not a distinctive specialty for occupation <span class="math inline">\(j\)</span> relative to the average.
+<ul>
+<li><strong>Benefit:</strong> Normalizes raw O*NET scores to filter out ubiquitous skills and spotlight an occupation’s key distinguishing skill requirements.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="skill-networks" class="slide level2">
+<h2>Skill Networks</h2>
+<ul>
+<li><strong>Clusters (<code>skill_type</code>):</strong>
+<ul>
+<li><strong>Skill-Skill Complementarity Network (Skillscape):</strong> A network is constructed where nodes are skills. The weight of an edge between two skills, <span class="math inline">\(\theta(s,s')\)</span>, represents their complementarity. This is calculated as the minimum of the conditional probabilities that both skills are effectively used together in the same occupations: <span class="math display">\[\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{max(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s'))}\]</span> This captures how skills support each other, either by boosting productivity or through ease of simultaneous acquisition.</li>
+<li><strong>Louvain Community Detection:</strong> This unsupervised algorithm is applied to the skill complementarity network to identify clusters of skills (skill types). It works by greedily optimizing modularity, comparing the density of connections within a community to that between communities, without pre-specifying the number of clusters.</li>
+</ul></li>
+</ul>
+</section>
+<section id="identifying-diffusion-events-diffusion-1" class="slide level2">
+<h2>Identifying Diffusion Events (<code>diffusion = 1</code>)</h2>
+<ul>
+<li><p><strong>Core Idea:</strong> A skill diffuses from an occupation already using it (source) to an occupation that newly adopts it (target) between a <code>start_year</code> and <code>end_year</code>.</p></li>
+<li><p><strong>Process:</strong></p>
+<ol type="1">
+<li><strong>Effective Skill Use:</strong> Determine if a skill is “effectively used” in each occupation for both start and end years (Revealed Comparative Advantage - RCA &gt; 1).</li>
+<li><strong>Identify Sources:</strong> List occupations effectively using the skill in the <code>start_year</code>.</li>
+<li><strong>Identify New Adopters (Targets):</strong> List occupations effectively using the skill in the <code>end_year</code> BUT NOT in the <code>start_year</code>.</li>
+<li><strong>Positive Event:</strong> For a given skill, a positive diffusion event (<code>diffusion = 1</code>) is created for every pair of (source occupation, new adopter target occupation).</li>
+</ol></li>
+</ul>
+</section>
+<section id="constructing-non-diffusion-events-diffusion-0" class="slide level2">
+<h2>Constructing Non-Diffusion Events (<code>diffusion = 0</code>)</h2>
+<ul>
+<li><p><strong>Core Idea:</strong> A skill does <em>not</em> diffuse from a source occupation to a target occupation if the target fails to effectively use the skill by the <code>end_year</code>.</p></li>
+<li><p><strong>Process:</strong></p>
+<ol type="1">
+<li><strong>Effective Skill Use &amp; Sources:</strong> Same as for positive events (RCA &gt; 1 in <code>start_year</code> for sources).</li>
+<li><strong>Identify Potential Non-Adopters (Targets):</strong> List all relevant occupations that are NOT effectively using the skill in the <code>end_year</code>.</li>
+<li><strong>Negative Event:</strong> For a given skill, a negative diffusion event (<code>diffusion = 0</code>) is created for every pair of (source occupation, potential non-adopter target occupation).</li>
+<li><strong>Exhaustive Generation:</strong> The script generates <em>all</em> such possible negative (non-diffusion) events.</li>
+</ol></li>
+</ul>
 </section>
 <section id="references" class="slide level2 scrollable smaller">
 <h2>References</h2>
@@ -805,7 +855,7 @@ Tilly, Charles 1998. <em>Durable inequality</em>. University of California Press
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Cantillan &amp; Bucca | Skill Pathways, Work’s Worth: A Diffusion Dynamics Approach | 2025</p>
+<p>Cantillan &amp; Bucca | INAS conference - Columbia University NYC | 2025</p>
 </div>
 </div></div>
 
