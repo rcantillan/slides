@@ -1,6 +1,6 @@
 ---
-title: "Skill Pathways, Work's Worth: A Diffusion Dynamics Approach"
-subtitle: "Articulating Occupational Boundaries and Status Hierarchies through Skill Diffusion"
+title: "Structurally Conditioned Diffusion:"
+subtitle: "Distance Filtering and the Reproduction of Skills-Based Stratification"
 author: "Roberto Cantillan & Mauricio Bucca"
 institute: "Sociology | Pontificia Universidad Católica de Chile"
 date: today
@@ -18,9 +18,9 @@ format:
     template-partials:
       - title-slide.html
     cite-method: citeproc
-    bibliography: references.bib
-    csl: american-sociological-association.csl
-    footer: "Cantillan & Bucca | INAS conference - Columbia University NYC | 2025"
+    #bibliography: references.bib
+    #csl: american-sociological-association.csl
+    footer: "Cantillan & Bucca | Structurally Conditioned Diffusion | INAS conference - Columbia University NYC | 2025"
 ---
 
 # I. THE PUZZLE {background-color="#2c3e50" color="white" .center .middle}
@@ -53,7 +53,6 @@ format:
 
 ![](plot_01_polarization.png){out-width="90%"}
 
-
 ## Some recent references
 
 ::: {.columns}
@@ -65,13 +64,11 @@ format:
 :::
 :::
 
-
 ## The question
 
 ::: {.div style="font-size: 25px; text-align: center; margin-top: 4em;"}
-How does the interplay between **skill diffusion**, **occupational boundaries**, and **skill valuations** actively (re)produce and transform social stratification within dynamic occupational markets?
+How does **structurally conditioned skill diffusion** generate distance-sensitive filtering mechanisms that systematically reproduce skills-based stratification within dynamic occupational markets?
 :::
-
 
 ## Supply and Demand Dynamics
 ::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 2em;"}
@@ -79,7 +76,7 @@ How does the interplay between **skill diffusion**, **occupational boundaries**,
 ::: {.columns}
 ::: {.column width="50%"}
 
-#### **Workers adapt to markets**
+#### **Individual Adaptation**
 
 *"How do workers adapt to changing skill demands?"*
 
@@ -90,35 +87,30 @@ How does the interplay between **skill diffusion**, **occupational boundaries**,
 
 :::
 
-
 ::: {.column width="50%"}
 
-#### **Markets reshape themselves** 
+#### **Systemic Diffusion Processes** 
 
-*"How do skill demands create structured mobility opportunities?"*
+*"How do systematic barriers shape skill adoption patterns?"*
 
-- Occupational skill requirements
-- **Systematic diffusion patterns**
+- **Systematic diffusion constraints**
+- Compatibility requirements
 - Structural adoption logics
-- Semi-autonomous from individual choices
+- **Independent of individual choices**
 
 :::
 :::
 :::
-
-
-
 
 ## Demand-Side Patterns Shape Supply-Side Possibilities 
 
 ::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 3em;"}
-- If skill diffusion follows structured patterns → **mobility opportunities are structurally predetermined**
+- If skill diffusion follows structured patterns → **diffusion opportunities are structurally predetermined**
 
 - If different skill types have distinct diffusion logics → **career destinies depend on skill type, not just skill possession**
 
 - **Implication**: The skill diffusion process itself becomes a **stratification engine** that sorts workers into persistent hierarchies.
 ::: 
-
 
 ## The Occupational Skill Space
 
@@ -139,14 +131,12 @@ How does the interplay between **skill diffusion**, **occupational boundaries**,
 :::
 :::
 
-
 ## Core Idea: From Static Structure to Dynamic Process
 
 ::: {.div style="font-size: 25px; text-align: left; margin-top: 4em;"}
 - **Previous Research:** Shows WHAT the structure (e.g., polarization) looks like.
 
 - **This Research:** Reveals HOW boundaries are actively constructed and status is assigned. **Through the lens of skill diffusion *between occupations***.
-
 
 ::: {.callout-note appearance="simple"}
 ## **Central Insight:**
@@ -156,79 +146,75 @@ Occupational boundaries and hierarchies aren't just maintained—they're dynamic
 :::
 :::
 
-
-
-
-## Theoretical Framework: Skill Diffusion as Boundary Work
+## Theoretical Framework: Structurally Conditioned Diffusion
 
 ::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
 
-Our research focuses on three key aspects of how skill diffusion shapes occupational stratification:
+**Research Question:** How do structural conditions systematically filter skill diffusion across occupations to reproduce skills-based stratification?
 
-1.  **How Skills Move:** Pathways and Filters (Trajectory Channeling & Filtration)
-2.  **Job Boundaries:** How They Are Shaped by Skill Movements (Boundary Articulation via Trajectories)
-3.  **Skill Value:** How It Changes Based on Its "Journey" (Positional Revaluation *through* Trajectories)
+**Theorized Mechanism:** **Distance-Sensitive Filtering** - occupational structures create systematic barriers that condition skill diffusion differentially by skill type
+
+**Empirical Pattern to Explain:** "Trajectory Channeling" - structural conditioning produces systematic pathway differentiation between skill types
 
 :::
 
-## 1. How Do Skills Move? Pathways and Filters
-*(Trajectory Channeling & Filtration)*
+## Distance-Sensitive Filtering: Core Theory
+*(How Structural Conditions Shape Diffusion Patterns)*
 
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+**Core Theory:** Existing occupational structures systematically condition skill diffusion by creating distance-sensitive filtering effects that determine which skills can successfully diffuse across different occupational contexts.
+:::
+
+## Educational Distance Filtering
+
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+-   **Educational Distance Filtering:**
+    -   Occupational roles embed specific cognitive infrastructures and credential expectations.
+    -   Skills require compatible educational foundations for effective implementation and legitimacy.
+    *(e.g., analytical skills may require abstract reasoning capabilities that vary systematically across educational levels).*
+:::
+
+## Economic Distance Filtering
+
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+-   **Economic Distance Filtering:**
+    -   Skills carry implicit value expectations that must align with occupational economic structures.
+    -   Economic misalignment between skill expectations and occupational compensation creates adoption barriers.
+    *(e.g., skills associated with high-value work may face implementation resistance in low-wage contexts).*
+:::
+
+## Structural Distance Filtering
+
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+-   **Structural Distance Filtering:**
+    -   Skills must integrate with existing occupational skill profiles and workflows.
+    -   Structural compatibility determines feasibility of skill adoption across different occupational contexts.
+    *(e.g., certain skills may require complementary capabilities that vary across occupational structures).*
+:::
+
+## Empirical Predictions: Basic Tests
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 1em;"}
 :::nonincremental
-The movement of skills between jobs isn't random. It follows certain "pathways" or routes, influenced by:
+**Our approach:** We test key predictions derived from the distance-sensitive filtering mechanism:
 :::
 
 :::incremental
--   **Existing Job Hierarchies (Status Differentials):**
-    -   Differences in required education (Educational Gatekeeping 🎓).
-    -   Differences in pay levels (Economic Stratification 💰).
-    *(e.g., It's often easier for skills to move to jobs with similar requirements than to make big leaps in education or status, but the *nature* of these jumps differs by skill type).*
+-   **Distance Prediction:** If distance-sensitive filtering matters, skill diffusion probability should systematically vary with educational, economic, and structural distances between occupations.
 
--   **Job Similarity (Structural Affinity/Closure 🔒):**
-    -   How similar the overall skill profiles are between one job and another.
-    *(e.g., It's more common for skills to move to a job that requires related skills, but some skills might be better "boundary spanners" than others).*
+-   **Skill Type Prediction:** If filtering requirements differ by skill characteristics, we should observe systematic differences in how cognitive versus physical skills navigate distance barriers.
+
+-   **Trajectory Prediction:** If distance filtering operates systematically, we should observe predictable channeling patterns that sort skills into distinct pathways.
+
+-   **Boundary Prediction:** If filtering mechanisms operate, they should generate systematic boundary effects that reinforce occupational stratification patterns.
 :::
-
-## 2. Job Boundaries: How Are They Shaped by Skill Movements?
-*(Boundary Articulation via Trajectories)*
-
-:::nonincremental
-The way skills move between jobs helps define or change the "boundaries" between different types of occupations:
-:::
-
-:::incremental
--   **Clearer Boundaries (Sharpening):**
-    -   When dominant skill movements involve big "leaps" (e.g., requiring much more education or a significant status change for certain skill types). This can heighten credential-based barriers.
-
--   **Stronger Boundaries (Reinforcement):**
-    -   When skills primarily transfer between very similar types of jobs, maintaining occupational silos.
-
--   **Crossable Boundaries (Bridging/Permeation):**
-    -   When highly transferable skills (typically cognitive/abstract) allow occupations to adopt skills from, or diffuse skills to, quite different types of jobs, potentially transforming occupational roles.
-:::
-
-## 3. Skill Value: How Does It Change Based on Its "Journey"?
-*(Positional Revaluation *through* Trajectories)*
-
-:::nonincremental
-The value (both economic and symbolic) of a skill, and by extension the occupation adopting it, can change based on the paths it takes as it moves between jobs or as occupations adopt it:
-:::
-
-:::incremental
--   **Pathways Matter:** A skill's association with upward or stagnant mobility trajectories influences its perceived and actual value.
-    -   **Cognitive/Sociocognitive Skills:** Tend to diffuse along paths of educational and wage escalation, reinforcing their high status.
-    -   **Physical/Sensorimotor Skills:** Often diffuse along paths of lateral or stagnant mobility, contributing to their lower or less dynamic valuation.
-
--   **Example: "Educational Escalation"**
-    -   If a skill type (e.g., cognitive) consistently diffuses towards occupations with higher educational requirements, this reinforces the idea that these skills are "elite" and their adoption signals an occupational upgrade.
 :::
 
 ## Hypothesis
 
-::: {.div style="font-size: 30px; text-align: center; margin-top: 3em;"}
-Cognitive and physical skills follow fundamentally different diffusion logics regarding educational, economic, and structural distances. These differentiated patterns actively (re)produce and potentially intensify occupational polarization and stratification.
+::: {.div style="font-size: 28px; text-align: center; margin-top: 3em;"}
+**Due to systematic filtering mechanisms, skill types will exhibit systematically different responses to occupational distances, creating predictable trajectory channeling patterns that actively reproduce occupational stratification.**
 :::
-
 
 # II. METHODOLOGY {background-color="#2c3e50" color="white" .center .middle}
 
@@ -236,10 +222,9 @@ Cognitive and physical skills follow fundamentally different diffusion logics re
 
 ::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
   - We will use the **O\*NET database**, which provides detailed information on job requirements, including skills, education, and wages.
-  - We will also use the **U.S. Census Bureau's American Community Survey (ACS)** to analyze labor market dynamics and occupational mobility.
+  - We will also use the **U.S. Census Bureau's American Community Survey (ACS)** to analyze labor market dynamics and occupational diffusion.
   - **IPUMS-CPS** data will be used to analyze the educational and occupational trajectories of individuals in the labor market.
 :::
-
 
 ## Level of Analysis: Why Occupations?
 
@@ -248,7 +233,6 @@ Cognitive and physical skills follow fundamentally different diffusion logics re
 
 (2) **Theoretical Rationale**: Sociologically, occupations represent institutionalized roles with established skill expectations and shared understandings. Organizations primarily recruit into these pre-existing roles. Therefore, by focusing on occupations, we analyze the structural architecture of skill demand and its evolution – how types of work change – providing the essential context within which organizations operate and generate inequality."
 :::
-
 
 ## Study Steps
 
@@ -267,7 +251,6 @@ Cognitive and physical skills follow fundamentally different diffusion logics re
   - Negative Event (diffusion = 0): Target occupation does NOT adopt the skill by 2023
   - Generate all possible source-target combinations for each skill
 
-
 # Study steps 
 
 - **Step 4: Occupational Distance Calculation**
@@ -277,12 +260,11 @@ Cognitive and physical skills follow fundamentally different diffusion logics re
 
 - **Step 5: Descriptive Analysis**
   - Diffusion patterns by skill type
-  - Socioeconomic mobility matrices by quartiles
+  - Socioeconomic diffusion matrices by quartiles
   - Differences in diffusion rates by distances
 
 - **Step 6: Diffusion Model**
   - Logistic Regression: P(Diffusion = 1) = f(Predictors): `Skill type` (Sociocognitive vs. Physical/Sensorimotor), `Educational distance` (target - source), `Wage distance` (target - source), `Structural distance between occupations` (2015 profiles)
-
 
 ## Data struture 
 
@@ -330,14 +312,11 @@ Where:
 
 :::
 
-
-
 # III. Results {background-color="#2c3e50" color="white" .center .middle}
 
 ## Descriptives I
 
 ![](plot_02_violins.png){out-width="100%"}
-
 
 ## Descriptives II
 
@@ -345,9 +324,9 @@ Where:
 ::: {.column width="50%"}
 ::: {.div style="font-size: 20px; text-align: left; margin-top: 2em;"}
 
-- **Sociocognitive Skills** (Green): Exhibit remarkable resilience and 'jump' capability. They maintain diffusion across structural distances and significantly increase when crossing larger educational and wage distances. For them, distance is an opportunity.
+- **Sociocognitive Skills** (Green): Show resilience across distances, with higher diffusion rates at larger educational and wage distances.
 
-- **Physical/Sensorymotor Skills** (Orange): Are highly sensitive and constrained by distance. Their diffusion plummets with structural distance and stagnates or falls across educational and wage distances. For them, distance is a barrier.
+- **Physical/Sensorymotor Skills** (Orange): Display sensitivity to distance constraints, with declining diffusion rates across structural, educational, and wage distances.
 
 :::
 :::
@@ -356,7 +335,6 @@ Where:
 ![](plot_03_diffusion_by_distance.png){out-width="120%"}
 :::
 :::
-
 
 ## Descriptives III
 
@@ -369,11 +347,10 @@ Where:
 ## Descriptives V
 
 ::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
-- Sociocognitive skills exhibit strong upward mobility, flowing overwhelmingly towards the top quartile (Q4) for both wages and education, regardless of their starting quartile.
+- Sociocognitive skills exhibit strong upward diffusion, flowing overwhelmingly towards the top quartile (Q4) for both wages and education, regardless of their starting quartile.
 
-- Physical/Sensorymotor skills show predominantly lateral mobility, circulating mainly within the lower and middle quartiles (Q1-Q3) and demonstrating a "glass ceiling" effect, with very limited entry into Q4.
+- Physical/Sensorymotor skills show predominantly lateral diffusion, circulating mainly within the lower and middle quartiles (Q1-Q3) and demonstrating a "glass ceiling" effect, with very limited entry into Q4.
 :::
-
 
 ## Model diffusion
 
@@ -386,56 +363,80 @@ Where:
 - Diffusion probability increases sharply with positive educational distances (target > source).
 - The relationship with structural distance is U-shaped, with the highest probability observed at moderate levels of difference.
 - Diffusion shows a weak or slightly negative association with large positive wage distances.
-- Observed Pattern: Diffusion is most probable under conditions of upward educational shifts and moderate structural change, largely independent of significant wage increases.
+- **Observed Pattern**: Diffusion is most probable under conditions of upward educational shifts and moderate structural change, largely independent of significant wage increases.
 
-**Socio-technical Skills (Blue) = "Structural Proximity & Educational Stasis"**:
+**Physical/Sensorymotor Skills (Blue) = "Structural Proximity & Educational Stasis"**:
 
 - Diffusion probability decreases consistently as structural distance grows.
 - The relationship with educational distance is largely flat, indicating limited diffusion across educational divides.
 - The highest probability occurs at zero or slightly negative wage distances, decreasing for larger positive distances.
-- Observed Pattern: Diffusion is most probable under conditions of high structural similarity and is associated with lateral or downward wage mobility, showing strong educational constraints.
-
+- **Observed Pattern**: Diffusion is most probable under conditions of high structural similarity and is associated with lateral or downward wage patterns, showing strong educational constraints.
 
 # IV. Discussion {background-color="#2c3e50" color="white" .center .middle}
 
-
-
 ## Key Findings
 
-Dual Diffusion Logics Unveiled (Descriptives & Model Confirmation):
+**Distance-Sensitive Filtering Confirmed:**
 
-- **Cognitive Skills ("The Escalator")**: Show consistent upward socioeconomic mobility (Q4). Models confirm this is primarily driven by educational advancements and an affinity for moderate structural shifts, with wage effects being secondary.
+- **Cognitive Skills ("The Escalator")**: Show systematic upward diffusion driven by low distance barriers. Models confirm educational advancement and moderate structural flexibility enable boundary crossing.
 
-- **Physical/Technical Skills ("The Lateral Drift")**: Exhibit lateral circulation (Q1-Q3). Models verify this is due to strong constraints from structural proximity and significant educational/wage ceilings.
-Skill Diffusion as an Active Stratification Engine:
+- **Physical/Sensorymotor Skills ("The Lateral Drift")**: Exhibit constrained lateral diffusion due to high distance barriers. Models verify structural proximity requirements and educational/wage constraints limit diffusion.
 
+**Systematic Filtering as Stratification Engine:**
 
-These asymmetric pathways—whose drivers are clarified by our models—are not mere market trends. They function as core mechanisms that actively (re)articulate occupational boundaries, (re)value skills based on trajectory, and drive labor market polarization.
+This distance-sensitive filtering mechanism—empirically confirmed by our models—operates as the core process that generates trajectory channeling and actively reproduces occupational polarization.
 
+## So What? - From Mechanism to Stratification Outcomes
 
-## So What?
+::: {.div style="font-size: 25px; text-align: left; margin-top: 2em;"}
+Distance-Sensitive Filtering as Stratification Engine
+*How micro-level filtering processes generate macro-level inequality:*
 
-::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+- **Systematic Filtering**: Occupational distances create predictable barriers that sort skills into distinct pathways
+- **Trajectory Channeling**: Differential distance sensitivity generates the "Escalator" vs "Lateral Drift" dynamics we observe
+- **Boundary Reinforcement**: Distance requirements systematically strengthen occupational divides and social closure
 
-**Core Mechanisms Driving Stratification**
-*Labor market inequality is actively produced by dynamic skill diffusion mechanisms:*
+Observable Stratification Outcomes:
 
-  - "Trajectory Channeling": Occupational structure and status hierarchies don't just exist; they actively filter and direct distinct skill flows.
-  - "Positional Revaluation": Consequently, these divergent pathways dynamically construct and alter a skill's market value and an occupation's status.
+- Predictable skill diffusion patterns that vary systematically by skill type
+- Self-perpetuating cycles of advantage and disadvantage through differential pathway access
+- Systematic reproduction of occupational hierarchies despite labor market dynamism
 
-**From Mechanisms to Observed Inequality**
-*These core mechanisms are what visibly generate:*
-
-  - The "Escalator" vs. "Lateral Drift" dynamics for different skill types.
-  - The ongoing (re)articulation of occupational boundaries and patterns of social closure.
-  
 :::
 
+# V. Future Steps {background-color="#2c3e50" color="white" .center .middle}
 
+## Next Steps I
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 2em;"}
+
+**Addressing Causal Identification:**
+
+- Exploit technology shocks affecting specific skill demands
+- Use geographic variation in occupational structures as instruments  
+- Link to longitudinal worker data (NLSY, PSID) for validation
+
+**Agent-Based Modeling Extensions:**
+
+- **Emergent Polarization**: Simulate how individual filtering decisions aggregate to produce system-level polarization patterns
+- **Boundary Dynamics**: Model how repeated diffusion events dynamically construct and reconstruct occupational boundaries
+- **Counterfactual Scenarios**: Test policy interventions that modify filtering parameters to predict system-level outcomes
+
+:::
+
+## Next Steps II
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 2em;"}
+
+**Value Displacement Mechanisms (Next Phase):**
+
+- **Systematic Revaluation**: How filtering-driven diffusion patterns systematically alter skill valuations and wage premiums
+- **Positional Displacement**: Model how structured diffusion creates zero-sum competition that displaces value across skill hierarchies
+- **Stratification Reinforcement**: Examine how value displacement mechanisms amplify rather than reduce skills-based inequality
+
+:::
 
 # IV. Supporting material {background-color="#2c3e50" color="white" .center .middle}
-
-
 
 ## Occupational - Skill Space
 
@@ -462,7 +463,6 @@ These asymmetric pathways—whose drivers are clarified by our models—are not 
     
 :::
 
-
 ## Skill Networks
 
 * **Clusters (`skill_type`):**
@@ -470,7 +470,6 @@ These asymmetric pathways—whose drivers are clarified by our models—are not 
         $$\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{max(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s'))}$$
         This captures how skills support each other, either by boosting productivity or through ease of simultaneous acquisition.
     * **Louvain Community Detection:** This unsupervised algorithm is applied to the skill complementarity network to identify clusters of skills (skill types). It works by greedily optimizing modularity, comparing the density of connections within a community to that between communities, without pre-specifying the number of clusters. 
-
 
 ## Identifying Diffusion Events (`diffusion = 1`)
 
@@ -482,7 +481,6 @@ These asymmetric pathways—whose drivers are clarified by our models—are not 
     3.  **Identify New Adopters (Targets):** List occupations effectively using the skill in the `end_year` BUT NOT in the `start_year`.
     4.  **Positive Event:** For a given skill, a positive diffusion event (`diffusion = 1`) is created for every pair of (source occupation, new adopter target occupation).
 
-
 ## Constructing Non-Diffusion Events (`diffusion = 0`)
 
 * **Core Idea:** A skill does *not* diffuse from a source occupation to a target occupation if the target fails to effectively use the skill by the `end_year`.
@@ -493,14 +491,18 @@ These asymmetric pathways—whose drivers are clarified by our models—are not 
     3.  **Negative Event:** For a given skill, a negative diffusion event (`diffusion = 0`) is created for every pair of (source occupation, potential non-adopter target occupation).
     4.  **Exhaustive Generation:** The script generates *all* such possible negative (non-diffusion) events.
 
+## Addressing Causal Identification
 
+::: {.div style="font-size: 24px; text-align: left; margin-top: 2em;"}
+Key Challenge: "How do we know skills drive occupational changes vs. reverse?"
 
-## References {.scrollable}
+*Our Design Response:*
 
-::: {#refs}
+- **Temporal Focus**: Track movement of existing skills (2015 baseline) between occupations, not creation of new skill requirements
+- **Mechanism Specificity**: Theory focuses on how existing occupational structures filter skill diffusion, not skill creation of new occupational categories
+- **Pattern Evidence**: Systematic filtering by skill type suggests structural conditioning rather than random organizational change
+- **Future Identification**: Technology shocks, geographic instruments, and staggered adoption for stronger causal inference
+
 :::
 
-
-
-
-
+# Thank you! {background-color="#2c3e50" color="white" .center .middle}
