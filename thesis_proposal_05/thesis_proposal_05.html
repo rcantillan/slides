@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="Roberto Cantillan &amp; Mauricio Bucca">
-  <meta name="dcterms.date" content="2025-06-05">
+  <meta name="dcterms.date" content="2025-06-08">
   <title>Structurally Conditioned Diffusion:</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -632,22 +632,29 @@
 </div>
 </div>
 </section>
-<section id="model" class="slide level2">
-<h2>Model</h2>
-<div class="div" style="font-size: 20px; text-align: left; margin-top: 3em;">
-<p>The probability that a skill (<span class="math inline">\(s\)</span>) diffuses from an origin occupation (<span class="math inline">\(o_1\)</span>) to a target occupation (<span class="math inline">\(o_2\)</span>), denoted as <span class="math inline">\(P(D_{s, o_1 \to o_2} = 1)\)</span>, is modeled using a logistic regression. The general form of the model is:</p>
-<p><span class="math display">\[
-\text{logit}\left(P(D_{s, o_1 \to o_2} = 1 \mid \mathbf{X})\right) = \beta_0 + \mathbf{\beta X}
-\]</span></p>
-<p>Where:</p>
+<section id="diffusion-model-specification" class="slide level2">
+<h2>Diffusion Model Specification</h2>
+<div class="div" style="font-size: 22px; text-align: left; margin-top: 2em;">
 <ul>
-<li><span class="math inline">\(\text{logit}(p) = \ln\left(\frac{p}{1-p}\right)\)</span> is the logit function, which transforms the probability <span class="math inline">\(p\)</span> to the log-odds space.</li>
-<li><span class="math inline">\(D_{s, o_1 \to o_2} = 1\)</span> represents the diffusion event (the target occupation adopts the skill already possessed by the origin occupation).</li>
-<li><span class="math inline">\(\beta_0\)</span> is the intercept.</li>
-<li><strong><span class="math inline">\(\mathbf{X}\)</span> is a vector of predictor variables characterizing the skill <span class="math inline">\(s\)</span>, the origin occupation <span class="math inline">\(o_1\)</span>, the target occupation <span class="math inline">\(o_2\)</span>, and the relationship between <span class="math inline">\(o_1\)</span> and <span class="math inline">\(o_2\)</span>.</strong></li>
-<li><span class="math inline">\(\mathbf{\beta}\)</span> is the vector of corresponding coefficients for the variables in <span class="math inline">\(\mathbf{X}\)</span>.</li>
-<li>An error term, <span class="math inline">\(\epsilon_{s, o_1, o_2}\)</span>, is assumed to be logistically distributed.</li>
+<li>Dependent Variable: Skill diffusion probability from origin occupation <span class="math inline">\(o_1\)</span> to target occupation <span class="math inline">\(o_2\)</span></li>
 </ul>
+<p><span class="math display">\[
+\text{logit}\left(P(D_{s, o_1 \to o_2} = 1)\right) = \beta_0 + \beta_1 \text{Skill Type}s + \\ \beta_2 \text{Ed. Distance}{o_1,o_2} + \beta_3 \text{Wage Distance}{o_1,o_2} + \beta_4 \text{Structural Distance}{o_1,o_2} + \mathbf{\gamma Z}
+\]</span></p>
+<p>Key Predictors:</p>
+<ul>
+<li><strong>Skill Type</strong>: Sociocognitive vs.&nbsp;Physical/Sensorimotor (community detection)</li>
+<li><strong>Educational Distance</strong>: Difference in average educational requirements (target - source)</li>
+<li><strong>Wage Distance</strong>: Difference in average compensation (target - source)</li>
+<li><strong>Structural Distance</strong>: Cosine similarity of complete skill profiles (2015)</li>
+</ul>
+<p>Controls (<span class="math inline">\(\mathbf{Z}\)</span>):</p>
+<ul>
+<li><strong>Worker Flow</strong>: Probability of individual transitions between occupations (CPS data)</li>
+<li><strong>Industry Similarity</strong>: Shared industrial classifications and contexts</li>
+<li><strong>Occupation Size</strong>: Employment levels (controls for O*NET measurement reliability)</li>
+</ul>
+<p>Model Features: Robust standard errors clustered by occupation pairs</p>
 </div>
 </section></section>
 <section>
@@ -777,6 +784,11 @@
 </ul>
 </div>
 </section></section>
+<section id="thank-you" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>Thank you!</h1>
+
+</section>
+
 <section>
 <section id="iv.-supporting-material" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
 <h1>IV. Supporting material</h1>
@@ -784,43 +796,42 @@
 </section>
 <section id="occupational---skill-space" class="slide level2">
 <h2>Occupational - Skill Space</h2>
+<p><strong>Occupational Skill Profiles:</strong></p>
 <ul>
-<li><strong>Occupational Skill Profiles:</strong>
+<li><p>Each occupation <span class="math inline">\(j\)</span> is defined by a quantitative vector of O*NET skill importance/level values, <span class="math inline">\(\text{onet}(j,s)\)</span>, representing its reliance on each skill <span class="math inline">\(s\)</span>.</p></li>
+<li><p><strong>Intuition:</strong> This vector acts as a “skill fingerprint” for each occupation, detailing its specific demands.</p></li>
+</ul>
+<p><strong>Revealed Comparative Advantage (RCA):</strong></p>
 <ul>
-<li>Each occupation <span class="math inline">\(j\)</span> is defined by a quantitative vector of O*NET skill importance/level values, <span class="math inline">\(onet(j,s)\)</span>, representing its reliance on each skill <span class="math inline">\(s\)</span>.</li>
-<li><strong>Intuition:</strong> This vector acts as a “skill fingerprint” for each occupation, detailing its specific demands.</li>
-</ul></li>
-<li><strong>Revealed Comparative Advantage (RCA):</strong>
+<li><p><strong>Purpose:</strong> Measures an occupation’s relative specialization in a skill compared to the system average.</p></li>
+<li><p><strong>Calculation:</strong> For skill <span class="math inline">\(s\)</span> in occupation <span class="math inline">\(j\)</span>:</p></li>
+</ul>
+<p><span class="math display">\[\text{rca}(j,s) = \frac{\text{onet}(j,s) / \sum_{s' \in S} \text{onet}(j,s')}{\sum_{j' \in J} \text{onet}(j',s) / \sum_{j' \in J, s'' \in S} \text{onet}(j',s'')}\]</span></p>
+<p>Where:</p>
 <ul>
-<li><strong>Purpose:</strong> To measure an occupation’s <em>relative specialization</em> in a skill, identifying if it uses that skill more intensively than the average occupation.</li>
-<li><strong>Calculation:</strong> For skill <span class="math inline">\(s\)</span> in occupation <span class="math inline">\(j\)</span>: <span class="math display">\[rca(j,s) = \frac{\text{Share of skill } s \text{ in occupation } j\text{'s total skill needs}}{\text{Share of skill } s \text{ in the entire system's total skill needs}}\]</span> Where:
-<ul>
-<li>Numerator: <span class="math inline">\((onet(j,s) / \sum_{s' \in S} onet(j,s'))\)</span></li>
-<li>Denominator: <span class="math inline">\((\sum_{j' \in J} onet(j',s) / \sum_{j' \in J, s'' \in S} onet(j',s''))\)</span></li>
-</ul></li>
-</ul></li>
+<li><strong>Numerator:</strong> Skill <span class="math inline">\(s\)</span>’s share of occupation <span class="math inline">\(j\)</span>’s total skill requirements</li>
+<li><strong>Denominator:</strong> Skill <span class="math inline">\(s\)</span>’s share of the entire economy’s skill requirements</li>
+<li><strong>Interpretation:</strong> <span class="math inline">\(\text{rca}(j,s) &gt; 1\)</span> indicates occupation <span class="math inline">\(j\)</span> uses skill <span class="math inline">\(s\)</span> more intensively than the economy average</li>
 </ul>
 </section>
 <section id="occupational---skill-space-ii" class="slide level2">
 <h2>Occupational - Skill Space II</h2>
 <div class="div" style="font-size: 25px; text-align: left; margin-top: 3em;">
+<p><strong>Interpretation:</strong></p>
 <ul>
-<li><strong>Interpretation:</strong> * <span class="math inline">\(rca(j,s) &gt; 1\)</span>: Occupation <span class="math inline">\(j\)</span> has a comparative advantage in skill <span class="math inline">\(s\)</span>; the skill is “overexpressed” or “effectively used” (denoted <span class="math inline">\(e(j,s)=1\)</span>). This highlights skills that distinctively characterize the occupation. * <span class="math inline">\(rca(j,s) \le 1\)</span>: The skill is not a distinctive specialty for occupation <span class="math inline">\(j\)</span> relative to the average.
-<ul>
-<li><strong>Benefit:</strong> Normalizes raw O*NET scores to filter out ubiquitous skills and spotlight an occupation’s key distinguishing skill requirements.</li>
-</ul></li>
+<li><p><span class="math inline">\(\text{rca}(j,s) &gt; 1\)</span>: Occupation <span class="math inline">\(j\)</span> has a comparative advantage in skill <span class="math inline">\(s\)</span>; the skill is “overexpressed” or “effectively used” (denoted <span class="math inline">\(e(j,s)=1\)</span>). This highlights skills that distinctively characterize the occupation.</p></li>
+<li><p><span class="math inline">\(\text{rca}(j,s) \leq 1\)</span>: The skill is not a distinctive specialty for occupation <span class="math inline">\(j\)</span> relative to the average.</p></li>
+<li><p><strong>Benefit:</strong> Normalizes raw O*NET scores to filter out ubiquitous skills and spotlight an occupation’s key distinguishing skill requirements.</p></li>
 </ul>
 </div>
 </section>
 <section id="skill-networks" class="slide level2">
 <h2>Skill Networks</h2>
-<ul>
-<li><strong>Clusters (<code>skill_type</code>):</strong>
-<ul>
-<li><strong>Skill-Skill Complementarity Network (Skillscape):</strong> A network is constructed where nodes are skills. The weight of an edge between two skills, <span class="math inline">\(\theta(s,s')\)</span>, represents their complementarity. This is calculated as the minimum of the conditional probabilities that both skills are effectively used together in the same occupations: <span class="math display">\[\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{max(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s'))}\]</span> This captures how skills support each other, either by boosting productivity or through ease of simultaneous acquisition.</li>
-<li><strong>Louvain Community Detection:</strong> This unsupervised algorithm is applied to the skill complementarity network to identify clusters of skills (skill types). It works by greedily optimizing modularity, comparing the density of connections within a community to that between communities, without pre-specifying the number of clusters.</li>
-</ul></li>
-</ul>
+<p><strong>Clusters (skill_type):</strong></p>
+<p><strong>Skill-Skill Complementarity Network (Skillscape):</strong> A network is constructed where nodes are skills. The weight of an edge between two skills, <span class="math inline">\(\theta(s,s')\)</span>, represents their complementarity. This is calculated as the minimum of the conditional probabilities that both skills are effectively used together in the same occupations:</p>
+<p><span class="math display">\[\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{\max\left(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s')\right)}\]</span></p>
+<p>This captures how skills support each other, either by boosting productivity or through ease of simultaneous acquisition.</p>
+<p><strong>Louvain Community Detection:</strong> This unsupervised algorithm is applied to the skill complementarity network to identify clusters of skills (skill types). It works by greedily optimizing modularity, comparing the density of connections within a community to that between communities, without pre-specifying the number of clusters.</p>
 </section>
 <section id="identifying-diffusion-events-diffusion-1" class="slide level2">
 <h2>Identifying Diffusion Events (<code>diffusion = 1</code>)</h2>
@@ -860,11 +871,8 @@
 <li><strong>Future Identification</strong>: Technology shocks, geographic instruments, and staggered adoption for stronger causal inference</li>
 </ul>
 </div>
-</section></section>
-<section id="thank-you" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
-<h1>Thank you!</h1>
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -1051,7 +1059,7 @@
         height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.2,
+        margin: 0.3,
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',

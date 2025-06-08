@@ -10,7 +10,7 @@ format:
     slide-number: false
     incremental: false
     fontsize: 30px
-    margin: 0.2
+    margin: 0.3
     transition: fade
     controls: true
     controls-layout: bottom-right
@@ -292,23 +292,30 @@ all_events_sample <- tribble(
 knitr::kable(all_events_sample, caption = "")
 ```
 
-## Model 
+## Diffusion Model Specification
 
-::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
-The probability that a skill ($s$) diffuses from an origin occupation ($o_1$) to a target occupation ($o_2$), denoted as $P(D_{s, o_1 \to o_2} = 1)$, is modeled using a logistic regression. The general form of the model is:
+::: {.div style="font-size: 22px; text-align: left; margin-top: 2em;"}
+
+- Dependent Variable: Skill diffusion probability from origin occupation $o_1$ to target occupation $o_2$
 
 $$
-\text{logit}\left(P(D_{s, o_1 \to o_2} = 1 \mid \mathbf{X})\right) = \beta_0 + \mathbf{\beta X}
+\text{logit}\left(P(D_{s, o_1 \to o_2} = 1)\right) = \beta_0 + \beta_1 \text{Skill Type}s + \\ \beta_2 \text{Ed. Distance}{o_1,o_2} + \beta_3 \text{Wage Distance}{o_1,o_2} + \beta_4 \text{Structural Distance}{o_1,o_2} + \mathbf{\gamma Z}
 $$
 
-Where:
+Key Predictors:
 
-* $\text{logit}(p) = \ln\left(\frac{p}{1-p}\right)$ is the logit function, which transforms the probability $p$ to the log-odds space.
-* $D_{s, o_1 \to o_2} = 1$ represents the diffusion event (the target occupation adopts the skill already possessed by the origin occupation).
-* $\beta_0$ is the intercept.
-* **$\mathbf{X}$ is a vector of predictor variables characterizing the skill $s$, the origin occupation $o_1$, the target occupation $o_2$, and the relationship between $o_1$ and $o_2$.**
-* $\mathbf{\beta}$ is the vector of corresponding coefficients for the variables in $\mathbf{X}$.
-* An error term, $\epsilon_{s, o_1, o_2}$, is assumed to be logistically distributed.
+- **Skill Type**: Sociocognitive vs. Physical/Sensorimotor (community detection)
+- **Educational Distance**: Difference in average educational requirements (target - source)
+- **Wage Distance**: Difference in average compensation (target - source)
+- **Structural Distance**: Cosine similarity of complete skill profiles (2015)
+
+Controls ($\mathbf{Z}$):
+
+- **Worker Flow**: Probability of individual transitions between occupations (CPS data)
+- **Industry Similarity**: Shared industrial classifications and contexts
+- **Occupation Size**: Employment levels (controls for O*NET measurement reliability)
+
+Model Features: Robust standard errors clustered by occupation pairs
 
 :::
 
@@ -436,40 +443,60 @@ Observable Stratification Outcomes:
 
 :::
 
+# Thank you! {background-color="#2c3e50" color="white" .center .middle}
+
+
 # IV. Supporting material {background-color="#2c3e50" color="white" .center .middle}
 
 ## Occupational - Skill Space
 
-* **Occupational Skill Profiles:**
-    * Each occupation $j$ is defined by a quantitative vector of O\*NET skill importance/level values, $onet(j,s)$, representing its reliance on each skill $s$.
-    * **Intuition:** This vector acts as a "skill fingerprint" for each occupation, detailing its specific demands.
+**Occupational Skill Profiles:**
 
-* **Revealed Comparative Advantage (RCA):**
-    * **Purpose:** To measure an occupation's *relative specialization* in a skill, identifying if it uses that skill more intensively than the average occupation.
-    * **Calculation:** For skill $s$ in occupation $j$:
-        $$rca(j,s) = \frac{\text{Share of skill } s \text{ in occupation } j\text{'s total skill needs}}{\text{Share of skill } s \text{ in the entire system's total skill needs}}$$
-        Where:
-        * Numerator: $(onet(j,s) / \sum_{s' \in S} onet(j,s'))$
-        * Denominator: $(\sum_{j' \in J} onet(j',s) / \sum_{j' \in J, s'' \in S} onet(j',s''))$
+- Each occupation $j$ is defined by a quantitative vector of O*NET skill importance/level values, $\text{onet}(j,s)$, representing its reliance on each skill $s$.
+
+- **Intuition:** This vector acts as a "skill fingerprint" for each occupation, detailing its specific demands.
+
+**Revealed Comparative Advantage (RCA):**
+
+- **Purpose:** Measures an occupation's relative specialization in a skill compared to the system average.
+
+- **Calculation:** For skill $s$ in occupation $j$:
+
+$$\text{rca}(j,s) = \frac{\text{onet}(j,s) / \sum_{s' \in S} \text{onet}(j,s')}{\sum_{j' \in J} \text{onet}(j',s) / \sum_{j' \in J, s'' \in S} \text{onet}(j',s'')}$$
+
+Where:
+
+- **Numerator:** Skill $s$'s share of occupation $j$'s total skill requirements
+- **Denominator:** Skill $s$'s share of the entire economy's skill requirements
+- **Interpretation:** $\text{rca}(j,s) > 1$ indicates occupation $j$ uses skill $s$ more intensively than the economy average
+
 
 ## Occupational - Skill Space II
 
 ::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
 
-* **Interpretation:**
-        * $rca(j,s) > 1$: Occupation $j$ has a comparative advantage in skill $s$; the skill is "overexpressed" or "effectively used" (denoted $e(j,s)=1$). This highlights skills that distinctively characterize the occupation.
-        * $rca(j,s) \le 1$: The skill is not a distinctive specialty for occupation $j$ relative to the average.
-    * **Benefit:** Normalizes raw O\*NET scores to filter out ubiquitous skills and spotlight an occupation's key distinguishing skill requirements.
-    
+**Interpretation:**
+
+- $\text{rca}(j,s) > 1$: Occupation $j$ has a comparative advantage in skill $s$; the skill is "overexpressed" or "effectively used" (denoted $e(j,s)=1$). This highlights skills that distinctively characterize the occupation.
+
+- $\text{rca}(j,s) \leq 1$: The skill is not a distinctive specialty for occupation $j$ relative to the average.
+
+- **Benefit:** Normalizes raw O*NET scores to filter out ubiquitous skills and spotlight an occupation's key distinguishing skill requirements.
+
 :::
 
 ## Skill Networks
 
-* **Clusters (`skill_type`):**
-    * **Skill-Skill Complementarity Network (Skillscape):** A network is constructed where nodes are skills. The weight of an edge between two skills, $\theta(s,s')$, represents their complementarity. This is calculated as the minimum of the conditional probabilities that both skills are effectively used together in the same occupations:
-        $$\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{max(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s'))}$$
-        This captures how skills support each other, either by boosting productivity or through ease of simultaneous acquisition.
-    * **Louvain Community Detection:** This unsupervised algorithm is applied to the skill complementarity network to identify clusters of skills (skill types). It works by greedily optimizing modularity, comparing the density of connections within a community to that between communities, without pre-specifying the number of clusters. 
+**Clusters (skill_type):**
+
+**Skill-Skill Complementarity Network (Skillscape):** A network is constructed where nodes are skills. The weight of an edge between two skills, $\theta(s,s')$, represents their complementarity. This is calculated as the minimum of the conditional probabilities that both skills are effectively used together in the same occupations:
+
+$$\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{\max\left(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s')\right)}$$
+
+This captures how skills support each other, either by boosting productivity or through ease of simultaneous acquisition.
+
+**Louvain Community Detection:** This unsupervised algorithm is applied to the skill complementarity network to identify clusters of skills (skill types). It works by greedily optimizing modularity, comparing the density of connections within a community to that between communities, without pre-specifying the number of clusters.
+
 
 ## Identifying Diffusion Events (`diffusion = 1`)
 
@@ -505,4 +532,3 @@ Key Challenge: "How do we know skills drive occupational changes vs. reverse?"
 
 :::
 
-# Thank you! {background-color="#2c3e50" color="white" .center .middle}
