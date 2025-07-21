@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="ic2s2_slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ic2s2_slides_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ic2s2_slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="ic2s2_slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ic2s2_slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ic2s2_slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ic2s2_slides_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
+
+  <meta name="author" content="Roberto Cantillan &amp; Mauricio Bucca">
+  <meta name="dcterms.date" content="2025-07-21">
+  <title>Asymmetric Trajectory Channeling in Labor Markets:</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ic2s2_slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ic2s2_slides_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ic2s2_slides_files/libs/revealjs/dist/theme/quarto-e357ec73da9b4f30148e0bde2f68b1e7.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="ic2s2_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ic2s2_slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ic2s2_slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ic2s2_slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <div class="title-container">
+    <div class="title-content">
+      <h1 class="title">Asymmetric Trajectory Channeling in Labor Markets:</h1>
+            <p class="subtitle">Macro-Level Evidence for Skills-Based Stratification Reproduction</p>
+            <p class="author">Roberto Cantillan &amp; Mauricio Bucca</p>
+      <p class="institute">Sociology | Pontificia Universidad Católica de Chile</p>
+          </div>
+    <div class="title-image">
+      <img src="resource-database-9zYAaiKp2c8-unsplash.jpg" alt="Cover Image">
+    </div>
+  </div>
+</section>
+<section>
+<section id="i.-the-puzzle" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>I. THE PUZZLE</h1>
+
+</section>
+<section id="the-puzzle-labor-market-dynamism-vs.-persistent-stratification" class="slide level2">
+<h2>The Puzzle: Labor Market Dynamism vs.&nbsp;Persistent Stratification</h2>
+<div class="div" style="font-size: 25px; text-align: left; margin-top: 3em;">
+<ul>
+<li><p>Contemporary labor markets exhibit unprecedented <strong>dynamism</strong>: technological advancements, globalization, and evolving industrial landscapes continually reshape the world of work <span class="citation" data-cites="kalleberg2011 autor2015">[@kalleberg2011; @autor2015]</span>.</p></li>
+<li><p>Yet foundational structures of <strong>occupational hierarchy</strong> and <strong>socio-economic stratification</strong> exhibit remarkable persistence and adaptive resilience <span class="citation" data-cites="tilly1998">[@tilly1998]</span>.</p></li>
+<li><p><strong>Central Paradox</strong>: How does stratification reproduce itself <em>within</em> dynamic change?</p></li>
+</ul>
+</div>
+</section>
+<section id="the-polarization-phenomenon" class="slide level2">
+<h2>The Polarization Phenomenon</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="div" style="font-size: 25px; text-align: left; margin-top: 4em;">
+<ul>
+<li><p>Labor markets exhibit <strong>skills-based polarization</strong>: high-cognitive and low-manual jobs expand while middle-skill jobs decline.</p></li>
+<li><p>Traditional explanations focus on <strong>technological displacement</strong> and <strong>globalization</strong> as external forces.</p></li>
+<li><p><strong>Missing Piece</strong>: How do internal labor market processes <strong>actively reproduce</strong> this polarized structure?</p></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="p1_polarization.png" data-out-width="100%"></p>
+</div></div>
+</section>
+<section id="skills-based-stratification" class="slide level2">
+<h2>Skills-Based Stratification</h2>
+<h4 id="evidence-from-alabdulkareem-et-al.-2018">Evidence from Alabdulkareem et al.&nbsp;(2018)</h4>
+
+<img data-src="plot_01_polarization.png" data-out-width="90%" class="r-stretch"></section>
+<section id="some-recent-references" class="slide level2">
+<h2>Some recent references</h2>
+<div class="div" style="font-size: 25px; text-align: left; margin-top: 4em;">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="p1_ref.png" data-out-width="100%"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="p2_ref.png" data-out-width="100%"></p>
+</div></div>
+</div>
+</section>
+<section id="supply-side-vs.-demand-side-approaches" class="slide level2">
+<h2>Supply-Side vs.&nbsp;Demand-Side Approaches</h2>
+<div class="r-fit-text" style="font-size: 25px; text-align: left; margin-top: 2em;">
+<div class="columns">
+<div class="column" style="width:45%;">
+<h4 id="supply-side-focus"><strong>Supply-Side Focus</strong></h4>
+<p><em>“How do workers adapt to changing skill demands?”</em></p>
+<ul>
+<li>Individual career decisions</li>
+<li>Human capital investment</li>
+<li>Job search strategies<br>
+</li>
+<li>Skill acquisition choices</li>
+<li><strong>Focus</strong>: Worker adaptation to external changes</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<h4 id="demand-side-focus-this-study"><strong>Demand-Side Focus</strong> <em>(This Study)</em></h4>
+<p><em>“How do organizations systematically reproduce skill requirements?”</em></p>
+<ul>
+<li><strong>Inter-organizational skill diffusion</strong></li>
+<li>Systematic adoption barriers</li>
+<li>Structural filtering mechanisms</li>
+<li><strong>Focus</strong>: How demand-side processes create stratification</li>
+</ul>
+</div></div>
+</div>
+</section>
+<section id="demand-side-patterns-shape-supply-side-possibilities" class="slide level2">
+<h2>Demand-Side Patterns Shape Supply-Side Possibilities</h2>
+<div class="r-fit-text" style="font-size: 25px; text-align: left; margin-top: 3em;">
+<ul>
+<li><p>If skill diffusion follows structured patterns → <strong>mobility opportunities are structurally predetermined</strong></p></li>
+<li><p>If different skill types have distinct diffusion logics → <strong>career destinies depend on skill type, not just skill possession</strong></p></li>
+<li><p><strong>Implication</strong>: The skill diffusion process itself becomes a <strong>stratification engine</strong> that sorts workers into persistent hierarchies.</p></li>
+</ul>
+</div>
+</section>
+<section id="research-question" class="slide level2">
+<h2>Research Question</h2>
+<div class="div" style="font-size: 28px; text-align: center; margin-top: 4em;">
+<p><strong>Do different skill types exhibit systematic asymmetries in their diffusion patterns across occupational hierarchies that reproduce labor market stratification?</strong></p>
+</div>
+</section>
+<section id="from-static-structure-to-dynamic-process" class="slide level2">
+<h2>From Static Structure to Dynamic Process</h2>
+<div class="div" style="font-size: 25px; text-align: left; margin-top: 4em;">
+<ul>
+<li><p><strong>Previous Research:</strong> Shows WHAT the structure (e.g., polarization) looks like.</p></li>
+<li><p><strong>This Research:</strong> Reveals HOW boundaries are actively constructed through <strong>skill diffusion between organizations</strong>.</p></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong><strong>Central Insight:</strong></strong></p>
+</div>
+<div class="callout-content">
+<div class="div" style="font-size: 25px; text-align: left; margin-top: 0em;">
+<p>Occupational stratification isn’t just maintained—it’s dynamically <strong>reproduced</strong> through systematically biased skill adoption patterns on the demand side.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="ii.-theoretical-framework" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>II. THEORETICAL FRAMEWORK</h1>
+
+</section>
+<section id="theoretical-background-organizational-imitation-under-uncertainty" class="slide level2">
+<h2>Theoretical Background: Organizational Imitation Under Uncertainty</h2>
+<div class="div" style="font-size: 24px; text-align: left; margin-top: 3em;">
+<ul>
+<li><p><strong>Established Theory:</strong> Organizations facing uncertainty about skill requirements look to <strong>other organizations</strong> for guidance. This imitation is systematically biased by how practices are culturally theorized.</p></li>
+<li><p><strong>Application to Skills:</strong> Different skill types may be culturally interpreted differently:</p>
+<ul>
+<li><strong>Cognitive skills</strong> as “portable assets” → aspirational models<br>
+</li>
+<li><strong>Physical skills</strong> as “context-dependent” → proximity-based models</li>
+</ul></li>
+<li><p><strong>Our Contribution:</strong> Testing whether this produces <strong>Asymmetric Trajectory Channeling</strong> - systematic macro-patterns in how different skill types diffuse across occupational hierarchies.</p></li>
+</ul>
+</div>
+</section>
+<section id="the-dual-process-theory-of-skill-diffusion" class="slide level2">
+<h2>The Dual-Process Theory of Skill Diffusion</h2>
+<div class="div" style="font-size: 22px; text-align: left; margin-top: 6em;">
+<div class="columns">
+<div class="column" style="width:48%;">
+<h4 id="cognitive-skills-portable-assets"><strong>Cognitive Skills = “Portable Assets”</strong></h4>
+<ul>
+<li>Theorized as <strong>nested capabilities</strong></li>
+<li>Abstract, broadly applicable</li>
+<li>Associated with growth &amp; adaptability</li>
+<li><strong>Diffusion Logic</strong>: <strong>Aspirational Emulation</strong></li>
+<li><strong>Pattern</strong>: <strong>Upward Escalator Effect</strong></li>
+</ul>
+</div><div class="column" style="width:48%;">
+<h4 id="physical-skills-context-dependent"><strong>Physical Skills = “Context-Dependent”</strong></h4>
+<ul>
+<li>Theorized as <strong>situational competencies</strong></li>
+<li>Tied to specific material settings</li>
+<li>Less generalizable templates</li>
+<li><strong>Diffusion Logic</strong>: <strong>Functional Proximity</strong></li>
+<li><strong>Pattern</strong>: <strong>Lateral Containment Effect</strong></li>
+</ul>
+</div></div>
+<p><strong>Prediction:</strong> These different theorizations create systematically different diffusion trajectories.</p>
+</div>
+</section>
+<section id="modeling-the-empirical-pattern-piecewise-approach" class="slide level2">
+<h2>Modeling the Empirical Pattern: Piecewise Approach</h2>
+<div class="div" style="font-size: 22px; text-align: left; margin-top: 2em;">
+<ul>
+<li><p><strong>Expected Pattern:</strong> If cultural theorization drives organizational imitation, we should observe systematically different diffusion trajectories for different skill types.</p></li>
+<li><p><strong>Mathematical Formulation:</strong> We model the probability that a skill of type <em>c</em> diffuses from source occupation <em>i</em> to target occupation <em>j</em>:</p></li>
+</ul>
+<p><span class="math display">\[\text{logit}\, P_{i \to j}^{(c)} = \theta_{0c} - \lambda_c d_{ij} - \beta_c^+ \Delta^+_{ij} - \beta_c^- \Delta^-_{ij}\]</span></p>
+<p><strong>Key Innovation - Piecewise Variables:</strong></p>
+<ul>
+<li><p><span class="math inline">\(\Delta^+_{ij} = \max(0, s_j - s_i)\)</span> (upward status moves)</p></li>
+<li><p><span class="math inline">\(\Delta^-_{ij} = \max(0, s_i - s_j)\)</span> (downward status moves)</p></li>
+<li><p>These are <strong>orthogonal</strong> (<span class="math inline">\(\Delta^+ \cdot \Delta^- = 0\)</span> always)</p></li>
+<li><p><strong>Test:</strong> Asymmetric channeling = <span class="math inline">\((\beta_c^+ - \beta_c^-)\)</span> differs systematically by skill type</p></li>
+</ul>
+</div>
+</section>
+<section id="empirical-strategy-testing-for-asymmetric-trajectory-channeling" class="slide level2">
+<h2>Empirical Strategy: Testing for Asymmetric Trajectory Channeling</h2>
+<div class="div" style="font-size: 24px; text-align: left; margin-top: 2em;">
+<ul>
+<li><p><strong>Core Research Question:</strong> Do skill types exhibit systematically different diffusion patterns across occupational hierarchies?</p></li>
+<li><p><strong>Expected Patterns Based on Established Theory:</strong></p>
+<ul>
+<li><strong>Cognitive Skills:</strong>
+<ul>
+<li>Should show upward channeling toward high-status occupations</li>
+<li><strong>Expected Pattern</strong>: “Escalator Effect” in aggregate data</li>
+</ul></li>
+<li><strong>Physical Skills:</strong>
+<ul>
+<li>Should show more lateral/constrained movement</li>
+<li><strong>Expected Pattern</strong>: “Lateral Containment” in aggregate data</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="iii.-methodology" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>III. METHODOLOGY</h1>
+
+</section>
+<section id="data-and-measurement-strategy" class="slide level2">
+<h2>Data and Measurement Strategy</h2>
+<div class="div" style="font-size: 25px; text-align: left; margin-top: 3em;">
+<ul>
+<li><p><strong>Data Sources:</strong></p>
+<ul>
+<li><strong>O-NET Database</strong> (2015-2024): Detailed skill requirements by occupation</li>
+<li><strong>BLS Wage Data</strong> (2015-2023): Occupational wage levels</li>
+<li><strong>Education Requirements</strong>: Systematic educational level mappings</li>
+</ul></li>
+<li><p><strong>Level of Analysis:</strong> Occupation-to-occupation skill diffusion events</p></li>
+<li><p><strong>Why Occupations?</strong> O*NET captures generalized skill requirements that organizations adapt, and occupations represent institutionalized roles with established skill expectations.</p></li>
+</ul>
+</div>
+</section>
+<section id="constructing-the-skill-diffusion-dataset" class="slide level2">
+<h2>Constructing the Skill Diffusion Dataset</h2>
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 3em;">
+<ul>
+<li><p><strong>Step 1: Revealed Comparative Advantage (RCA)</strong></p>
+<ul>
+<li>Calculate skill specialization: <span class="math inline">\(\text{RCA}(j,s) &gt; 1\)</span> = occupation <span class="math inline">\(j\)</span> “effectively uses” skill <span class="math inline">\(s\)</span></li>
+</ul></li>
+<li><p><strong>Step 2: Skill Clustering</strong></p>
+<ul>
+<li>Build skill complementarity networks → Leiden algorithm</li>
+<li>Result: 2 main clusters consistent with theory</li>
+</ul></li>
+<li><p><strong>Step 3: Diffusion Events Construction</strong></p>
+<ul>
+<li><strong>Positive Event</strong> (diffusion = 1): Target adopts skill (2024) that source had (2015)</li>
+<li><strong>Negative Event</strong> (diffusion = 0): Target does NOT adopt by 2024</li>
+<li>Generate all possible source-target-skill combinations</li>
+</ul></li>
+<li><p><strong>Step 4: Distance Variables</strong></p>
+<ul>
+<li><strong>Educational Gap</strong>: <span class="math inline">\(s_j - s_i\)</span> (target education - source education)<br>
+</li>
+<li><strong>Wage Gap</strong>: Target wage - source wage</li>
+<li><strong>Structural Distance</strong>: Jaccard similarity of complete skill profiles (in 2015)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="final-dataset-structure" class="slide level2">
+<h2>Final Dataset Structure</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<caption>Sample of Dyadic Diffusion Events Dataset</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 15%">
+<col style="width: 13%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 17%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">source</th>
+<th style="text-align: left;">target</th>
+<th style="text-align: left;">skill_name</th>
+<th style="text-align: left;">skill_cluster</th>
+<th style="text-align: right;">diffusion</th>
+<th style="text-align: right;">delta_up</th>
+<th style="text-align: right;">delta_down</th>
+<th style="text-align: right;">structural_distance</th>
+<th style="text-align: right;">wage_gap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">11-1011.00</td>
+<td style="text-align: left;">13-1111.00</td>
+<td style="text-align: left;">Critical Thinking</td>
+<td style="text-align: left;">Socio-cognitive</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">-25000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">11-1011.00</td>
+<td style="text-align: left;">15-1252.00</td>
+<td style="text-align: left;">Critical Thinking</td>
+<td style="text-align: left;">Socio-cognitive</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.62</td>
+<td style="text-align: right;">-10000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">27-1021.00</td>
+<td style="text-align: left;">49-9071.00</td>
+<td style="text-align: left;">Manual Dexterity</td>
+<td style="text-align: left;">Socio-technical</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">-10000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">49-9071.00</td>
+<td style="text-align: left;">51-2092.00</td>
+<td style="text-align: left;">Manual Dexterity</td>
+<td style="text-align: left;">Socio-technical</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">-3000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13-1111.00</td>
+<td style="text-align: left;">11-1011.00</td>
+<td style="text-align: left;">Active Listening</td>
+<td style="text-align: left;">Socio-cognitive</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">25000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">51-2092.00</td>
+<td style="text-align: left;">27-1024.00</td>
+<td style="text-align: left;">Arm-Hand Steady</td>
+<td style="text-align: left;">Socio-technical</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.28</td>
+<td style="text-align: right;">15000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>Final Dataset:</strong> ~1.5M skill-occupation dyadic events with piecewise status variables</p>
+</section>
+<section id="model-specification" class="slide level2">
+<h2>Model Specification</h2>
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 2em;">
+<ul>
+<li><strong>Piecewise Logistic Regression:</strong></li>
+</ul>
+<p><span class="math display">\[\text{logit}\, P_{i \to j}^{(c)} = \theta_{0c} - \lambda_c d_{ij} - \beta_c^+ \Delta^+_{ij} - \beta_c^- \Delta^-_{ij} - \omega_c w_{ij}\]</span></p>
+<ul>
+<li><strong>Estimated Separately by Skill Type:</strong>
+<ul>
+<li><strong>Cognitive Model</strong>: Socio-cognitive skills only</li>
+<li><strong>Physical Model</strong>: Socio-technical skills only</li>
+</ul></li>
+<li><strong>Key Parameters:</strong>
+<ul>
+<li><span class="math inline">\(\beta_c^+\)</span>: Effect of upward status moves (Δ⁺ &gt; 0)</li>
+<li><span class="math inline">\(\beta_c^-\)</span>: Effect of downward status moves (Δ⁻ &gt; 0)<br>
+</li>
+<li><strong>Asymmetry</strong>: <span class="math inline">\((\beta_c^+ - \beta_c^-)\)</span> measures directional bias</li>
+</ul></li>
+<li><strong>Advanced Extensions:</strong>
+<ul>
+<li>Bayesian models with shrinkage priors for curvature detection</li>
+<li>Fixed effects models for causal identification</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="iv.-results" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>IV. RESULTS</h1>
+
+</section>
+<section id="distance-sensitivity-by-skill-type" class="slide level2">
+<h2>Distance Sensitivity by Skill Type</h2>
+
+<img data-src="distance_deciles.png" class="quarto-figure quarto-figure-center r-stretch" data-out-width="100%"></section>
+<section id="distance-sensitivity-by-skill-type-1" class="slide level2">
+<h2>Distance Sensitivity by Skill Type</h2>
+<div class="div" style="font-size: 22px; text-align: left; margin-top: 2em;">
+<ul>
+<li><p><strong>Key Patterns:</strong></p>
+<ul>
+<li><p><strong>Socio-cognitive Skills</strong> (green): Maintain diffusion rates across distances, showing <strong>resilience</strong> to barriers</p></li>
+<li><p><strong>Socio-technical Skills</strong> (Orange): Show <strong>sensitivity</strong> to distance constraints with declining rates</p></li>
+</ul>
+<p>-<strong>Interpretation:</strong> Cognitive skills navigate structural barriers more effectively than physical skills</p></li>
+</ul>
+</div>
+</section>
+<section id="matrix-evidence-educational-channeling" class="slide level2">
+<h2>Matrix Evidence: Educational Channeling</h2>
+
+<img data-src="educ_heatmap.png" class="quarto-figure quarto-figure-center r-stretch" data-out-width="100%"></section>
+<section id="matrix-evidence-economic-channeling" class="slide level2">
+<h2>Matrix Evidence: Economic Channeling</h2>
+
+<img data-src="wages_heatmap.png" class="quarto-figure quarto-figure-center r-stretch" data-out-width="100%"></section>
+<section id="descriptive-summary" class="slide level2">
+<h2>Descriptive Summary</h2>
+<div class="div" style="font-size: 24px; text-align: left; margin-top: 3em;">
+<p><strong>Clear Asymmetric Patterns:</strong></p>
+<ul>
+<li><p><strong>Socio-cognitive skills</strong> exhibit strong <strong>upward channeling</strong>, flowing predominantly toward high-education, high-wage occupations (Q4) regardless of origin</p></li>
+<li><p><strong>Socio-technical skills</strong> show <strong>lateral containment</strong>, circulating mainly within lower quartiles (Q1-Q3) with limited access to Q4</p></li>
+<li><p><strong>“Glass Ceiling” Effect</strong>: Physical skills face systematic barriers to entering high-status occupations</p></li>
+</ul>
+<p><strong>Next:</strong> Do these patterns hold when controlling for confounders?</p>
+</div>
+</section>
+<section id="piecewise-model-results" class="slide level2">
+<h2>Piecewise Model Results</h2>
+
+<img data-src="educ_piecewise.png" class="quarto-figure quarto-figure-center r-stretch" data-out-width="100%"></section>
+<section id="piecewise-model-results-ii" class="slide level2">
+<h2>Piecewise Model Results II</h2>
+
+<img data-src="wage_piecewise.png" class="quarto-figure quarto-figure-center r-stretch" data-out-width="100%"></section>
+<section id="model-interpretation-confirmed-asymmetric-channeling" class="slide level2">
+<h2>Model Interpretation: Confirmed Asymmetric Channeling</h2>
+<div class="div" style="font-size: 22px; text-align: left; margin-top: 4em;">
+<ul>
+<li><strong>Socio-cognitive Skills (Blue Line) = “The Escalator”:</strong>
+<ul>
+<li><strong>Sharp upward trajectory</strong> for positive status gaps (β⁺ = +0.444)</li>
+<li><strong>Strong downward penalty</strong> for negative gaps (β⁻ = -0.258)</li>
+<li><strong>Large Asymmetry</strong>: (β⁺ - β⁻) = 0.702</li>
+<li><strong>Pattern</strong>: Strong aspirational pull toward higher-status occupations</li>
+</ul></li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Socio-technical Skills (Orange Line) = “Lateral Containment”:</strong>
+<ul>
+<li><strong>Minimal upward facilitation</strong> (β⁺ = -0.122)<br>
+</li>
+<li><strong>Moderate downward penalty</strong> (β⁻ = -0.225)</li>
+<li><strong>Small Asymmetry</strong>: (β⁺ - β⁻) = 0.103</li>
+<li><strong>Pattern</strong>: Largely neutral/constrained mobility</li>
+</ul></li>
+</ul>
+<p><br></p>
+<p><strong>Statistical Evidence</strong>: Piecewise specification eliminates multicollinearity while providing clean directional tests</p>
+</div>
+</section>
+<section id="causal-evidence" class="slide level2">
+<h2>Causal Evidence</h2>
+
+<img data-src="fe_plot.png" class="quarto-figure quarto-figure-center r-stretch" data-out-width="100%"></section>
+<section id="causal-evidence-fixed-effects-models" class="slide level2">
+<h2>Causal Evidence: Fixed Effects Models</h2>
+<div class="div" style="font-size: 22px; text-align: left; margin-top: 4em;">
+<ul>
+<li><p><strong>Causal Robustness</strong>: Fixed effects models confirm asymmetric trajectory channeling persists even when controlling for unobserved occupation-level heterogeneity</p></li>
+<li><p><strong>Dual Escalator Effect</strong>: Cognitive skills show positive attraction toward both high-education (+14%) AND high-wage (+4.9%) occupations</p></li>
+<li><p><strong>Dual Containment Effect</strong>: Physical skills exhibit systematic resistance to both educational (-30%) and economic (-13.4%) upward mobility</p></li>
+<li><p><strong>Consistent Asymmetric Patterns</strong>: Both education and wage dimensions show identical directional patterns - cognitive skills “escalate,” physical skills get “contained”</p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="v.-preliminary-evidence-work-in-progress" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>V. PRELIMINARY EVIDENCE (WORK IN PROGRESS)</h1>
+
+</section>
+<section id="from-channeling-to-revaluation" class="slide level2">
+<h2>From Channeling to Revaluation</h2>
+<div class="div" style="font-size: 24px; text-align: left; margin-top: 4em;">
+<ul>
+<li><p>Our core finding, <strong>Asymmetric Trajectory Channeling</strong>, is not a neutral sorting process. It has profound economic consequences that actively reproduce stratification.</p></li>
+<li><p>We argue this occurs through a <strong>Value Displacement Mechanism</strong>, where the economic return of a skill or strategy is no longer intrinsic, but becomes conditional on the status of the actor adopting it.</p></li>
+<li><p>As a preliminary test, we analyze the wage growth outcomes of an innovative strategy: the high-propensity adoption of cognitive skills.</p></li>
+</ul>
+</div>
+</section>
+<section id="evidence-1-a-conditional-return-to-status" class="slide level2">
+<h2>Evidence 1: A Conditional Return to Status</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 6em;">
+<!-- INSTRUCCIÓN: Guarda tu primer gráfico de quintiles de estatus como "01_valued_displacement.png" -->
+<p><img data-src="01_valued_displacement.png"></p>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 4em;">
+<ul>
+<li><p>This first plot establishes the phenomenon. It shows the net advantage of the innovative strategy, conditioned by occupational <strong>status</strong>.</p></li>
+<li><p>The result is clear: for the two lowest status quintiles, the strategy carries a <strong>statistically significant penalty</strong>.</p></li>
+<li><p>This penalty disappears as status increases. This is a classic pattern of <strong>Cumulative Advantage</strong>: an occupation’s initial status grants it the “luxury” of innovating without the economic cost paid by others.</p></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="evidence-2-the-penalty-for-fashion-driven-innovation" class="slide level2">
+<h2>Evidence 2: The Penalty for ‘Fashion-Driven’ Innovation</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 6em;">
+<!-- INSTRUCCIÓN: Guarda tu segundo gráfico de quintiles de necesidad como "02_valued_displacement.png" -->
+<p><img data-src="02_valued_displacement.png"></p>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 4em;">
+<ul>
+<li><p>This second plot is a more direct and powerful test. It replaces “status” with a measure of <strong>“functional need”</strong>.</p></li>
+<li><p>The results are even more striking. The penalty is <strong>statistically significant</strong> precisely for occupations that functionally <strong>needed these skills the least</strong> (Quintile 2).</p></li>
+<li><p>This supports our theory: the market discerns and penalizes “fashion-driven” adoptions, displacing the value from the skill itself to the functional context of the adopter.</p></li>
+</ul>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="vi.-discussion" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>VI. DISCUSSION</h1>
+
+</section>
+<section id="key-findings" class="slide level2">
+<h2>Key Findings</h2>
+<div class="div" style="font-size: 24px; text-align: left; margin-top: 2em;">
+<p><strong>Strong Evidence for Asymmetric Trajectory Channeling:</strong></p>
+<p>✅ <strong>Cognitive Skills</strong>: Pronounced escalator dynamics (Asymmetry = 0.702)</p>
+<ul>
+<li>Systematic upward channeling toward high-status occupations</li>
+</ul>
+<p>✅ <strong>Physical Skills</strong>: Containment/lateral mobility (Asymmetry = 0.103)</p>
+<ul>
+<li>Limited cross-hierarchical movement, proximity-constrained diffusion</li>
+</ul>
+<p>✅ <strong>Systematic Differences</strong>: Robust channeling effects across skill types</p>
+<ul>
+<li>Patterns consistent with established organizational imitation theory</li>
+</ul>
+<p><br></p>
+<p>✅ <strong>Provisional Evidence for a Value Displacement Mechanism:</strong></p>
+<ul>
+<li>The returns to an innovative strategy are conditional on both status and functional need.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="vii.-implications-future-directions" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>VII. IMPLICATIONS &amp; FUTURE DIRECTIONS</h1>
+
+</section>
+<section id="implications-future-directions" class="slide level2">
+<h2>Implications &amp; Future Directions</h2>
+<div class="div" style="font-size: 22px; text-align: left; margin-top: 2em;">
+<p><strong>Strengthening Causal Inference:</strong></p>
+<ul>
+<li>Technology shocks as exogenous skill demand shifters</li>
+<li>Geographic variation in occupational structures as instruments</li>
+<li>Longitudinal worker data (NLSY, PSID) for validation</li>
+</ul>
+<p><br></p>
+<p><strong>Agent-Based Modeling Extensions:</strong></p>
+<ul>
+<li><strong>Emergent Polarization</strong>: How individual filtering decisions create system-level patterns</li>
+<li><strong>Boundary Dynamics</strong>: Dynamic construction/reconstruction of occupational boundaries</li>
+<li><strong>Policy Counterfactuals</strong>: Testing interventions that modify cultural theorization</li>
+</ul>
+<p><br></p>
+<p><strong>International Comparative Analysis:</strong></p>
+<ul>
+<li>Cross-national variation in skill theorization</li>
+<li>Institutional differences in organizational imitation patterns</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="viii.-conclusion" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>VIII. CONCLUSION</h1>
+
+</section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<div class="div" style="font-size: 24px; text-align: left; margin-top: 2em;">
+<ul>
+<li><p><strong>Key Insight:</strong> Labor market stratification is <strong>actively reproduced</strong> through the systematic <strong>Asymmetric Trajectory Channeling</strong> of different skill types.</p></li>
+<li><p><strong>Core Finding:</strong> Cognitive and physical skills follow systematically different diffusion pathways across occupational hierarchies, creating a biased distribution of opportunities.</p></li>
+<li><p><strong>Main Implication:</strong> This channeling has profound economic consequences, giving rise to a <strong>Value Displacement Mechanism</strong> where the returns to innovation are gated by an occupation’s pre-existing status and functional profile.</p></li>
+<li><p><strong>Theoretical Context:</strong> Our findings are consistent with established theories of organizational imitation and provide a demand-side explanation for the persistence of inequality.</p></li>
+</ul>
+</div>
+</section></section>
+<section id="thank-you" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>Thank you!</h1>
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 3em;">
+<p>Roberto Cantillan (rcantillan@uc.cl)<br>
+Mauricio Bucca (mbucca@uc.cl)</p>
+<p><em>Department of Sociology</em><br>
+<em>Pontificia Universidad Católica de Chile</em></p>
+</div>
+</section>
+
+<section>
+<section id="appendix-i" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>APPENDIX I</h1>
+
+</section>
+<section id="from-established-theory-to-testable-macro-pattern" class="slide level2">
+<h2>From Established Theory to Testable Macro-Pattern</h2>
+<div class="div" style="font-size: 23px; text-align: left; margin-top: 2em;">
+<p><strong>Background Theory (Established):</strong></p>
+<ul>
+<li>Organizations imitate skill requirements under uncertainty <span class="citation" data-cites="strang1993">[@strang1993]</span></li>
+<li>Imitation is filtered by how practices are culturally theorized <span class="citation" data-cites="hedstrom1998">[@hedstrom1998]</span></li>
+<li>Different skill types may trigger different imitation logics</li>
+</ul>
+<p><strong>Our Theoretical Application:</strong></p>
+<ul>
+<li>Cognitive skills may be seen as “portable assets” → aspirational models</li>
+<li>Physical skills may be seen as “context-dependent” → proximity models</li>
+</ul>
+<p><strong>Testable Prediction:</strong></p>
+<ul>
+<li><strong>Asymmetric Trajectory Channeling</strong> across occupational hierarchies</li>
+<li><strong>Systematic reproduction</strong> of skills-based stratification patterns</li>
+<li><strong>Distinct diffusion pathways</strong> for different skill types</li>
+</ul>
+</div>
+</section>
+<section id="theoretical-contributions" class="slide level2">
+<h2>Theoretical Contributions</h2>
+<div class="div" style="font-size: 24px; text-align: left; margin-top: 2em;">
+<p><strong>1. Asymmetric Trajectory Channeling Concept:</strong></p>
+<ul>
+<li>First systematic identification and measurement of this macro-pattern</li>
+<li>Shows how skill types sort into systematically different diffusion pathways</li>
+</ul>
+<p><strong>2. Skills-Based Stratification Framework:</strong></p>
+<ul>
+<li>Demonstrates how demand-side processes actively reproduce occupational hierarchies</li>
+<li>Moves beyond describing polarization to modeling its reproduction mechanisms</li>
+</ul>
+<p><strong>3. Methodological Innovation:</strong></p>
+<ul>
+<li>Piecewise models for testing asymmetric diffusion in macro-data</li>
+<li>Dyadic approach to analyzing aggregate inter-organizational skill patterns</li>
+</ul>
+<p><strong>4. Empirical Evidence:</strong></p>
+<ul>
+<li>First comprehensive evidence for systematic skill channeling effects</li>
+<li>Robust patterns across 1.5M dyadic diffusion events (2015-2024)</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="appendix-ii" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>APPENDIX II</h1>
+
+</section>
+<section id="occupational-skill-space-technical-details" class="slide level2">
+<h2>Occupational Skill Space: Technical Details</h2>
+<div class="div" style="font-size: 24px; text-align: left; margin-top: 4em;">
+<p><strong>Revealed Comparative Advantage (RCA):</strong></p>
+<p><span class="math display">\[\text{RCA}(j,s) = \frac{\text{onet}(j,s) / \sum_{s' \in S} \text{onet}(j,s')}{\sum_{j' \in J} \text{onet}(j',s) / \sum_{j' \in J, s'' \in S} \text{onet}(j',s'')}\]</span></p>
+<ul>
+<li><p><strong>Interpretation:</strong></p>
+<ul>
+<li><strong>Numerator:</strong> Skill <span class="math inline">\(s\)</span>’s share of occupation <span class="math inline">\(j\)</span>’s total skill requirements</li>
+<li><strong>Denominator:</strong> Skill <span class="math inline">\(s\)</span>’s share of economy-wide skill requirements<br>
+</li>
+<li><strong>RCA &gt; 1:</strong> Occupation has comparative advantage in skill (effective use)</li>
+</ul></li>
+</ul>
+<p><strong>Skill Complementarity Network (Leiden Algorithm → 2 Main Clusters):</strong></p>
+<p><span class="math display">\[\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{\max\left(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s')\right)}\]</span></p>
+</div>
+</section>
+<section id="diffusion-event-construction-formal-logic" class="slide level2">
+<h2>Diffusion Event Construction: Formal Logic</h2>
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 4em;">
+<h3 id="positive-diffusion-events-diffusion-1"><strong>Positive Diffusion Events (diffusion = 1):</strong></h3>
+<ol type="1">
+<li><strong>Sources:</strong> <span class="math inline">\(S_s = \{j : \text{RCA}_{2015}(j,s) &gt; 1\}\)</span></li>
+<li><strong>End Adopters:</strong> <span class="math inline">\(A_s = \{j : \text{RCA}_{2024}(j,s) &gt; 1\}\)</span><br>
+</li>
+<li><strong>New Adopters:</strong> <span class="math inline">\(N_s = A_s \setminus S_s\)</span></li>
+<li><strong>Positive Events:</strong> <span class="math inline">\(\{(i,j,s) : i \in S_s, j \in N_s, i \neq j\}\)</span></li>
+</ol>
+<h3 id="negative-diffusion-events-diffusion-0"><strong>Negative Diffusion Events (diffusion = 0):</strong></h3>
+<ol type="1">
+<li><strong>Non-Adopters:</strong> <span class="math inline">\(\bar{A_s} = J \setminus A_s\)</span> (all occupations not using skill in 2024)</li>
+<li><strong>Negative Events:</strong> <span class="math inline">\(\{(i,j,s) : i \in S_s, j \in \bar{A_s}, i \neq j\}\)</span></li>
+</ol>
+<p><strong>Result:</strong> Exhaustive dyadic dataset of all possible diffusion opportunities</p>
+</div>
+</section>
+<section id="piecewise-model-mathematical-properties" class="slide level2">
+<h2>Piecewise Model: Mathematical Properties</h2>
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 4em;">
+<p><strong>Standard Approach Problems:</strong></p>
+<ul>
+<li>Using <span class="math inline">\((s_j - s_i)\)</span> and <span class="math inline">\(|s_j - s_i|\)</span> creates perfect multicollinearity</li>
+<li>Asymmetry testing requires complex coefficient combinations</li>
+</ul>
+<p><strong>Our Piecewise Solution:</strong> <span class="math display">\[\Delta^+_{ij} = \max(0, s_j - s_i), \quad \Delta^-_{ij} = \max(0, s_i - s_j)\]</span></p>
+<p><strong>Key Properties:</strong></p>
+<ul>
+<li><strong>Orthogonal:</strong> <span class="math inline">\(\Delta^+_{ij} \cdot \Delta^-_{ij} = 0\)</span> always</li>
+<li><strong>Exhaustive:</strong> <span class="math inline">\(\Delta^+_{ij} + \Delta^-_{ij} = |s_j - s_i|\)</span></li>
+<li><strong>Direct Asymmetry:</strong> <span class="math inline">\((\beta^+ - \beta^-)\)</span> tests directional bias directly</li>
+<li><strong>Clear Interpretation:</strong> Each parameter has unambiguous meaning</li>
+</ul>
+<p><strong>Extensions:</strong> Quadratic terms with Laplace priors for curvature detection</p>
+</div>
+</section></section>
+<section>
+<section id="appendix-iii" class="title-slide slide level1 center middle" data-background-color="#2c3e50" color="white">
+<h1>APPENDIX III</h1>
+
+</section>
+<section id="robustness-strategy-discarding-alternative-explanations" class="slide level2">
+<h2>Robustness Strategy: Discarding Alternative Explanations</h2>
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 4em;">
+<ul>
+<li><p><strong>Central Question: Economic Adaptation vs.&nbsp;Cultural Theorization?</strong></p></li>
+<li><p><strong>H0: Economic Adaptation Hypothesis</strong></p>
+<ul>
+<li>Skills diffuse based on functional economic value</li>
+<li>Higher education/wage skills naturally flow upward</li>
+<li>All cognitive skills should behave uniformly (equal “value”)</li>
+</ul></li>
+<li><p><strong>H1: Cultural Theorization Hypothesis</strong></p>
+<ul>
+<li>Skills diffuse through organizational imitation under uncertainty</li>
+<li>Imitation biased by cultural interpretation of skill types</li>
+<li>Cognitive skills as “portable assets” → aspirational models</li>
+<li>Physical skills as “context-dependent” → proximity models</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="three-test-strategy" class="slide level2">
+<h2>Three-Test Strategy:</h2>
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 4em;">
+<ul>
+<li><p><strong>TEST 1: Skill Specificity</strong></p>
+<ul>
+<li>Logic: Economic adaptation predicts uniform cognitive behavior</li>
+<li>Method: Heterogeneity analysis within cognitive skill types</li>
+</ul></li>
+<li><p><strong>TEST 2: Industry Controls</strong></p>
+<ul>
+<li>Logic: Do controls eliminate or reveal channeling effects?</li>
+<li>Method: 4-digit NAICS fixed effects models</li>
+</ul></li>
+<li><p><strong>TEST 3: Theoretical Direction</strong></p>
+<ul>
+<li>Logic: Do patterns match organizational imitation predictions?</li>
+<li>Method: Direct testing of theoretical criteria</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="test-1---skill-specificity-analysis" class="slide level2">
+<h2>TEST 1 - Skill Specificity Analysis</h2>
+<h3 id="economic-vs.-cultural-theorization-test">Economic vs.&nbsp;Cultural Theorization Test</h3>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 2em;">
+<ul>
+<li><p><strong>Cognitive Skills Range: 0.178</strong></p>
+<ul>
+<li>Interpersonal Cognitive: +0.25</li>
+<li>Specialized Cognitive: +0.20</li>
+<li>Universal Cognitive: +0.07</li>
+<li>Range exceeds 0.10 threshold ✅</li>
+</ul></li>
+<li><p><strong>Technical Skills Range: 0.15</strong></p>
+<ul>
+<li>Sensory: -0.15</li>
+<li>Technical: -0.18</li>
+<li>Physical: -0.22</li>
+<li>More uniform containment pattern</li>
+</ul></li>
+</ul>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 2em;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="1_robust.png" class="quarto-figure quarto-figure-center" data-out-width="200%"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="test-2---industry-controls-reveal-true-channeling" class="slide level2">
+<h2>TEST 2 - Industry Controls Reveal TRUE Channeling</h2>
+<h3 id="industry-fixed-effects-analysis">Industry Fixed Effects Analysis</h3>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 3em;">
+<ul>
+<li><p><strong>Base Model (Mixed Effects)</strong>:</p>
+<ul>
+<li>General asymmetry: -0.0174</li>
+<li>Averaged across industries</li>
+</ul></li>
+<li><p><strong>Industry Controls Model</strong>:</p>
+<ul>
+<li>Cognitive Escalation: +0.1114</li>
+<li>Technical Containment: -0.2636</li>
+<li>Difference Magnitude: 0.375</li>
+</ul></li>
+</ul>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 3em;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="2_robust.png" class="quarto-figure quarto-figure-center" data-out-width="200%"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="test-3---theoretical-direction-confirmed" class="slide level2">
+<h2>TEST 3 - Theoretical Direction Confirmed</h2>
+<h3 id="organizational-imitation-theory-validation">Organizational Imitation Theory Validation</h3>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="div" style="font-size: 15px; text-align: left; margin-top: 3em;">
+<ul>
+<li><strong>Criterion 1: Cognitive Upward Bias</strong>
+<ul>
+<li>Theoretical prediction: Cognitive skills should show upward channeling</li>
+<li>Observed: +0.111 (cognitive) &gt; 0.05 threshold ✅</li>
+<li>Magnitude: Strong evidence for cognitive escalation</li>
+</ul></li>
+<li><strong>Criterion 2: Pattern Consistency</strong>
+<ul>
+<li>Theoretical prediction: Cognitive &gt; Technical</li>
+<li>Observed: +0.111 (cognitive) &gt; -0.264 (technical) ✅</li>
+<li>Magnitude: 0.375 difference</li>
+</ul></li>
+<li><strong>Criterion 3: Technical Below Cognitive</strong>
+<ul>
+<li>Theoretical prediction: Technical skills should show containment</li>
+<li>Observed: -0.264 &lt; 0.111 ✅</li>
+<li>Magnitude: Confirmed technical containment</li>
+</ul></li>
+</ul>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="div" style="font-size: 20px; text-align: left; margin-top: 3em;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="3_robust.png" class="quarto-figure quarto-figure-center" data-out-width="200%"></p>
+</figure>
+</div>
+</div>
+</div></div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Cantillan &amp; Bucca | Asymmetric Trajectory Channeling in Labor Markets | IC2S2 Norrköping | 2025</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ic2s2_slides_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ic2s2_slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.3,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
