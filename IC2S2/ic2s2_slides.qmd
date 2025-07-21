@@ -49,7 +49,9 @@ format:
 :::
 
 ::: {.column width="50%"}
+::: {.div style="font-size: 25px; text-align: left; margin-top: 4em;"}
 ![](p1_polarization.png){out-width="100%"}
+:::
 :::
 :::
 
@@ -74,7 +76,7 @@ format:
 
 ## Supply-Side vs. Demand-Side Approaches
 
-::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 2em;"}
+::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 4em;"}
 
 ::: {.columns}
 ::: {.column width="45%"}
@@ -107,10 +109,12 @@ format:
 
 ## Demand-Side Patterns Shape Supply-Side Possibilities 
 
-::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 3em;"}
+::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 4em;"}
 - If skill diffusion follows structured patterns → **mobility opportunities are structurally predetermined**
 
 - If different skill types have distinct diffusion logics → **career destinies depend on skill type, not just skill possession**
+
+<br>
 
 - **Implication**: The skill diffusion process itself becomes a **stratification engine** that sorts workers into persistent hierarchies.
 ::: 
@@ -130,6 +134,8 @@ format:
 - **Previous Research:** Shows WHAT the structure (e.g., polarization) looks like.
 
 - **This Research:** Reveals HOW boundaries are actively constructed through **skill diffusion between organizations**.
+
+<br>
 
 ::: {.callout-note appearance="simple"}
 ## **Central Insight:**
@@ -151,6 +157,8 @@ Occupational stratification isn't just maintained—it's dynamically **reproduce
 
   - **Cognitive skills** as "portable assets" → aspirational models  
   - **Physical skills** as "context-dependent" → proximity-based models
+
+<br>
 
 - **Our Contribution:** Testing whether this produces **Asymmetric Trajectory Channeling** - systematic macro-patterns in how different skill types diffuse across occupational hierarchies.
 :::
@@ -181,6 +189,8 @@ Occupational stratification isn't just maintained—it's dynamically **reproduce
 - **Pattern**: **Lateral Containment Effect**
 :::
 :::
+
+<br>
 
 **Prediction:** These different theorizations create systematically different diffusion trajectories.
 :::
@@ -229,9 +239,12 @@ $$\text{logit}\, P_{i \to j}^{(c)} = \theta_{0c} - \lambda_c d_{ij} - \beta_c^+ 
 ::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
 
 - **Data Sources:**
+
   - **O-NET Database** (2015-2024): Detailed skill requirements by occupation
   - **BLS Wage Data** (2015-2023): Occupational wage levels
   - **Education Requirements**: Systematic educational level mappings
+
+<br>
 
 - **Level of Analysis:** Occupation-to-occupation skill diffusion events
 
@@ -297,15 +310,22 @@ knitr::kable(diffusion_sample, caption = "Sample of Dyadic Diffusion Events Data
 $$\text{logit}\, P_{i \to j}^{(c)} = \theta_{0c} - \lambda_c d_{ij} - \beta_c^+ \Delta^+_{ij} - \beta_c^- \Delta^-_{ij} - \omega_c w_{ij}$$
 
 - **Estimated Separately by Skill Type:**
+
   - **Cognitive Model**: Socio-cognitive skills only
   - **Physical Model**: Socio-technical skills only
 
+<br>
+
 - **Key Parameters:**
-  - $\beta_c^+$: Effect of upward status moves (Δ⁺ > 0)
-  - $\beta_c^-$: Effect of downward status moves (Δ⁻ > 0)  
+
+  - **$\beta_c^+$**: Effect of upward status moves (Δ⁺ > 0)
+  - **$\beta_c^-$**: Effect of downward status moves (Δ⁻ > 0)  
   - **Asymmetry**: $(\beta_c^+ - \beta_c^-)$ measures directional bias
 
+<br>
+
 - **Advanced Extensions:**
+
   - Bayesian models with shrinkage priors for curvature detection
   - Fixed effects models for causal identification
   
@@ -320,7 +340,7 @@ $$\text{logit}\, P_{i \to j}^{(c)} = \theta_{0c} - \lambda_c d_{ij} - \beta_c^+ 
 
 ## Distance Sensitivity by Skill Type
 
-::: {.div style="font-size: 22px; text-align: left; margin-top: 2em;"}
+::: {.div style="font-size: 22px; text-align: left; margin-top: 4em;"}
 
 - **Key Patterns:**
 
@@ -328,7 +348,7 @@ $$\text{logit}\, P_{i \to j}^{(c)} = \theta_{0c} - \lambda_c d_{ij} - \beta_c^+ 
 
   - **Socio-technical Skills** (Orange): Show **sensitivity** to distance constraints with declining rates
 
-  -**Interpretation:** Cognitive skills navigate structural barriers more effectively than physical skills
+  - **Interpretation:** Cognitive skills navigate structural barriers more effectively than physical skills
   
 :::
 
@@ -399,9 +419,15 @@ $$\text{logit}\, P_{i \to j}^{(c)} = \theta_{0c} - \lambda_c d_{ij} - \beta_c^+ 
 
 - **Causal Robustness**: Fixed effects models confirm asymmetric trajectory channeling persists even when controlling for unobserved occupation-level heterogeneity
 
+<br>
+
 - **Dual Escalator Effect**: Cognitive skills show positive attraction toward both high-education (+14%) AND high-wage (+4.9%) occupations
 
+<br>
+
 - **Dual Containment Effect**: Physical skills exhibit systematic resistance to both educational (-30%) and economic (-13.4%) upward mobility
+
+<br>
 
 - **Consistent Asymmetric Patterns**: Both education and wage dimensions show identical directional patterns - cognitive skills "escalate," physical skills get "contained"
 
@@ -634,6 +660,8 @@ $$\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{\max\left(\sum_{j \i
 2. **End Adopters:** $A_s = \{j : \text{RCA}_{2024}(j,s) > 1\}$  
 3. **New Adopters:** $N_s = A_s \setminus S_s$
 4. **Positive Events:** $\{(i,j,s) : i \in S_s, j \in N_s, i \neq j\}$
+
+<br>
 
 ### **Negative Diffusion Events (diffusion = 0):**
 
