@@ -123,7 +123,7 @@ format:
 
 ## Research Question
 
-::: {.div style="font-size: 28px; text-align: center; margin-top: 4em;"}
+::: {.div style="font-size: 28px; text-align: center; margin-top: 6em;"}
 **Do different skill types exhibit systematic asymmetries in their diffusion patterns across occupational hierarchies that reproduce labor market stratification?**
 :::
 
@@ -162,7 +162,9 @@ format:
 
 ::: {.callout-important appearance="simple"}
 ## **Stratification Consequence:**
+::: {.div style="font-size: 20px; text-align: left; margin-top: 0em;"}
 These channeling patterns create **structurally biased opportunities**. Workers' career destinies depend not just on skill possession, but on **which type of skills** they possess.
+:::
 :::
 
 :::
@@ -260,7 +262,7 @@ flowchart LR
 
 :::
 
-::: {.column width="55%"}
+::: {.column width="50%"}
 #### **Physical Skills "Context-Dependent"**
 
 <br>
@@ -274,11 +276,13 @@ flowchart LR
 
 <br>
 
-::: {.callout-note appearance="simple"}
-## **Testable Prediction:**
-If cultural theorization drives organizational imitation, we should observe **systematically different diffusion trajectories** for cognitive vs. physical skills across occupational hierarchies.
 :::
 
+::: {.callout-note appearance="simple"}
+## **Testable Prediction:**
+::: {.div style="font-size: 22px; text-align: left; margin-top: 0em;"}
+If cultural theorization drives organizational imitation, we should observe **systematically different diffusion trajectories** for cognitive vs. physical skills across occupational hierarchies.
+:::
 :::
 
 ## Modeling the Empirical Pattern: Piecewise Approach
