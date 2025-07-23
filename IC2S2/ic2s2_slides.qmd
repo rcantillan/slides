@@ -370,6 +370,37 @@ Piecewise approach breaks the functional symmetry constraint in single-gap model
 - **Why Occupations?** O*NET captures generalized skill requirements that organizations adapt, and occupations represent institutionalized roles with established skill expectations.
 :::
 
+
+## Temporal Design Logic & Empirical Validation
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
+
+**Why 2015→2024 Temporal Structure?**
+
+- **Theoretical Motivation**: Organizational imitation theory predicts systematic adoption patterns over time
+- **Empirical Foundation**: Captures destination-focused channeling vs. traditional prediction approaches
+- **O-NET Methodology**: Irregular but comprehensive update system across 9-year window
+
+<br>
+
+**Empirical Validation of Genuine Change:**
+
+- **83.3%** of occupation-skill combinations show significant importance rating changes
+- **7,913 genuine adoption events** identified (RCA transitions)
+- **100%** of skills demonstrate new adoption patterns
+- **99.8%** of occupations experience skill requirement changes
+
+<br>
+
+**Methodological Strength:**
+
+- **Dynamic data confirmed**: O-NET 15.0→29.0 captures substantial skill evolution
+- **r = 0.98+ correlation** with contemporaneous design validates structural patterns
+- **Robust evidence**: Both micro-level changes and macro-level channeling patterns
+
+:::
+
+
 ## Constructing the Skill Diffusion Dataset
 
 ::: {.div style="font-size: 18px; text-align: left; margin-top: 3em;"}
@@ -454,49 +485,55 @@ knitr::kable(diffusion_sample, caption = "Sample of Dyadic Diffusion Events Data
 
 
 ## Model Specification
+::: {.div style="font-size: 20px; text-align: left; margin-top: 4em;"}
 
-::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
+:::: {.columns style="margin-top: 2em; text-align: left;"}
 
+::: {.column width="35%"}
+#### <i class="fa-solid fa-puzzle-piece"></i> Core Specification
 
-::: {.columns}
-::: {.column width="45%"}
-**1. Separate Models by Skill Type**
+We estimate separate models by skill type to identify systematic differences:
 
-- **Cognitive Model:** Socio-cognitive skills only
-- **Physical Model:** Socio-technical skills only
-- **Rationale:** Test for systematic differences
+-   **Cognitive Model:** Socio-cognitive skills.
+-   **Physical Model:** Socio-technical skills.
 
-<br>
+---
 
-**2. Key Parameters of Interest**
+**Key Parameters:**
 
-- **β⁺:** Effect of upward status moves  
-- **β⁻:** Effect of downward status moves
-- **Asymmetry Test:** (β⁺ - β⁻) by skill type
-
-<br>
-:::
-
-::: {.column width="45%"}
-**3. Control Variables**
-
-- **Distance:** Structural similarity between occupations (2015 baseline)
-- **Wage gaps:** Economic differences
-- **Educational gaps** Educational differences
-- **Fixed effects:** Source occupation characteristics
-
-<br>
-
-**4. Robustness Extensions**
-
-- Industry-level controls (4-digit NAICS)
-- Alternative distance measures
-- Bayesian shrinkage priors
+-   **β⁺:** Effect of upward status moves.
+-   **β⁻:** Effect of downward status moves.
+-   **Asymmetry Test:** `(β⁺ - β⁻)` by skill type.
 
 :::
-:::
+
+::: {.column width="35%"}
+#### <i class="fa-solid fa-sliders"></i> Control Variables
+
+To isolate status effects, we include:
+
+-   **Structural Distance:**
+    <br> Similarity between occupations (2015 baseline).
+-   **Economic Gaps:**
+    <br> Wage and educational differences.
+-   **Fixed Effects:**
+    <br> Source occupation characteristics.
 
 :::
+
+::: {.column width="30%"}
+#### <i class="fa-solid fa-shield-halved"></i> Robustness & Extensions
+
+We validate our findings with several additional tests:
+
+-   Industry-level controls (4-digit NAICS).
+-   Alternative distance metrics.
+-   Bayesian shrinkage priors.
+
+:::
+:::
+::::
+
 
 # IV. RESULTS {background-color="#2c3e50" color="white" .center .middle}
 
@@ -579,27 +616,48 @@ knitr::kable(diffusion_sample, caption = "Sample of Dyadic Diffusion Events Data
 
 :::
 
-## Causal Evidence
 
-![](fe_plot.png){out-width="100%" fig-align="center"}
-
-## Causal Evidence: Fixed Effects Models
+## Identification Strategy: Source Occupation Fixed Effects
 
 ::: {.div style="font-size: 22px; text-align: left; margin-top: 4em;"}
 
-- **Causal Robustness**: Fixed effects models confirm asymmetric trajectory channeling persists even when controlling for unobserved occupation-level heterogeneity
+**Core Challenge**: Do diffusion patterns reflect genuine channeling or unobserved occupation characteristics?
+
+**Solution**: Source occupation fixed effects control for:
+
+- Industry-specific demand factors
+- Technological readiness levels  
+- Organizational resource constraints
+- Historical skill specialization patterns
+
+**Identification**: Within-source variation in target adoption patterns by skill type
+
+**Result**: Asymmetric channeling **persists within source occupations**, confirming systematic differences in how cognitive vs. physical skills diffuse across hierarchies.
+
+:::
+
+
+## Source Occupation Fixed Effects
+
+![](fe_plot.png){out-width="100%" fig-align="center"}
+
+## Robust Evidence for Systematic Channeling
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 4em;"}
+
+- **Within-Source Robustness**: Fixed effects models show asymmetric trajectory channeling persists even when controlling for all time-invariant source occupation characteristics
 
 <br>
 
-- **Dual Escalator Effect**: Cognitive skills show positive attraction toward both high-education (+14%) AND high-wage (+4.9%) occupations
+- **Dual Escalator Effect**: Cognitive skills show positive attraction toward both high-education (+14%) AND high-wage (+4.9%) occupations **within source occupation types**
 
 <br>
 
-- **Dual Containment Effect**: Physical skills exhibit systematic resistance to both educational (-30%) and economic (-13.4%) upward mobility
+- **Dual Containment Effect**: Physical skills exhibit systematic barriers to both educational (-30%) and economic (-13.4%) upward mobility **within source occupation types**
 
 <br>
 
-- **Consistent Asymmetric Patterns**: Both education and wage dimensions show identical directional patterns - cognitive skills "escalate," physical skills get "contained"
+- **Consistent Asymmetric Patterns**: The channeling mechanism operates **beyond** industry, technology, or resource differences between source occupations
 
 :::
 
@@ -670,23 +728,23 @@ knitr::kable(diffusion_sample, caption = "Sample of Dyadic Diffusion Events Data
 **Strong Evidence for Asymmetric Trajectory Channeling:**
 
 ✅ **Cognitive Skills**: Pronounced escalator dynamics (Asymmetry = 0.702)
-
    - Systematic upward channeling toward high-status occupations
 
 ✅ **Physical Skills**: Containment/lateral mobility (Asymmetry = 0.103)  
-
    - Limited cross-hierarchical movement, proximity-constrained diffusion
 
-✅ **Systematic Differences**: Robust channeling effects across skill types
+✅ **Robust Patterns**: Effects persist with source occupation fixed effects
+   - Channeling operates within occupation types, not just between them
 
-   - Patterns consistent with established organizational imitation theory
+✅ **Temporal Validation**: r = 0.98+ correlation with contemporaneous specifications
+   - Confirms genuine structural patterns, not temporal artifacts
    
 <br>
 
-✅ **Provisional Evidence for a Value Displacement Mechanism:**
-
-   - The returns to an innovative strategy are conditional on both status and functional need.
+✅ **Provisional Evidence for Value Displacement Mechanism:**
+   - Returns to innovation conditional on status and functional need
 :::
+
 
 # VII. IMPLICATIONS & FUTURE DIRECTIONS {background-color="#2c3e50" color="white" .center .middle}
 
@@ -723,13 +781,13 @@ knitr::kable(diffusion_sample, caption = "Sample of Dyadic Diffusion Events Data
 
 ::: {.div style="font-size: 24px; text-align: left; margin-top: 2em;"}
 
-- **Key Insight:** Labor market stratification is **actively reproduced** through the systematic **Asymmetric Trajectory Channeling** of different skill types.
+- **Key Insight:** We provide systematic evidence that different skill types follow **asymmetric trajectory channeling** patterns across occupational hierarchies, consistent with organizational imitation theory.
 
-- **Core Finding:** Cognitive and physical skills follow systematically different diffusion pathways across occupational hierarchies, creating a biased distribution of opportunities.
+- **Core Finding:** Cognitive and physical skills exhibit systematically different diffusion pathways, with robust evidence persisting across multiple specifications and temporal designs.
 
-- **Main Implication:** This channeling has profound economic consequences, giving rise to a **Value Displacement Mechanism** where the returns to innovation are gated by an occupation's pre-existing status and functional profile.
+- **Main Implication:** This channeling has economic consequences through a **Value Displacement Mechanism** where returns to innovation depend on adopter status and functional context.
 
-- **Theoretical Context:** Our findings are consistent with established theories of organizational imitation and provide a demand-side explanation for the persistence of inequality.
+- **Methodological Contribution:** Destination-focused analysis reveals stratification-reproducing mechanisms in demand-side processes, validated through gold standard temporal robustness checks.
 
 :::
 
