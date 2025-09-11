@@ -1,0 +1,1083 @@
+---
+title: "Asymmetric Trajectory Channeling in Labor Markets:"
+subtitle: "Microfoundations and Macro-Level Evidence for Skills-Based Stratification Reproduction"
+author: "Roberto Cantillan & Mauricio Bucca"
+institute: "Sociology | Pontificia Universidad Católica de Chile"
+date: today
+format: 
+  revealjs:
+    theme: simple
+    slide-number: false
+    incremental: false
+    fontsize: 30px
+    margin: 0.3
+    transition: fade
+    controls: true
+    controls-layout: bottom-right
+    css: styles.css
+    template-partials:
+      - title-slide.html
+    cite-method: citeproc
+    #bibliography: references.bib
+    #csl: american-sociological-association.csl
+    footer: "Cantillan & Bucca | Asymmetric Trajectory Channeling in Labor Markets | IC2S2 Norrköping | 2025"
+---
+
+# I. THE PUZZLE {background-color="#2c3e50" color="white" .center .middle}
+
+## The Puzzle: Labor Market Dynamism vs. Persistent Stratification
+
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+- Contemporary labor markets exhibit unprecedented **dynamism**: technological advancements, globalization, and evolving industrial landscapes continually reshape the world of work [@kalleberg2011; @autor2015].
+
+- Yet foundational structures of **occupational hierarchy** and **socio-economic stratification** exhibit remarkable persistence and adaptive resilience [@tilly1998].
+
+- **Central Paradox**: How does stratification reproduce itself *within* dynamic change?
+:::
+
+## The Polarization Phenomenon
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.div style="font-size: 23px; text-align: left; margin-top: 4em;"}
+- Labor markets exhibit **skills-based polarization**: high-cognitive and low-manual jobs expand while middle-skill jobs decline.
+
+- Traditional explanations focus on **technological displacement** and **globalization** as external forces.
+
+- **Missing Piece**: How do internal labor market processes **actively reproduce** this polarized structure?
+:::
+:::
+
+::: {.column width="50%"}
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+![](p1_polarization.png){out-width="100%"}
+:::
+:::
+:::
+
+## Skills-Based Stratification
+#### Evidence from Alabdulkareem et al. (2018)
+
+![](plot_01_polarization.png){out-width="90%"}
+
+## Some recent references
+::: {.div style="font-size: 25px; text-align: left; margin-top: 4em;"}
+
+::: {.columns}
+::: {.column width="50%"}
+![](p1_ref.png){out-width="100%"}
+:::
+::: {.column width="50%"}
+![](p2_ref.png){out-width="100%"}
+:::
+:::
+
+:::
+
+## Supply-Side vs. Demand-Side Approaches
+
+::: {.r-fit-text style="font-size: 24px; text-align: left; margin-top: 4em;"}
+
+::: {.columns}
+::: {.column width="44%"}
+
+#### **Supply-Side Focus** 
+*"How do workers adapt to changing skill demands?"*
+
+- Individual career decisions
+- Human capital investment
+- Job search strategies  
+- Skill acquisition choices
+- **Focus**: Worker adaptation to external changes
+
+:::
+
+::: {.column width="53%"}
+
+#### **Demand-Side Focus** *(This Study)*
+*"How do organizations systematically reproduce skill requirements?"*
+
+- **Inter-organizational skill diffusion**
+- Systematic adoption barriers
+- Structural filtering mechanisms
+- **Focus**: How demand-side processes create stratification
+
+:::
+:::
+:::
+
+
+## Demand-Side Patterns Shape Supply-Side Possibilities 
+
+::: {.r-fit-text style="font-size: 25px; text-align: left; margin-top: 4em;"}
+- If skill diffusion follows structured patterns → **mobility opportunities are structurally predetermined**
+
+- If different skill types have distinct diffusion logics → **career destinies depend on skill type, not just skill possession**
+
+<br>
+
+- **Implication**: The skill diffusion process itself becomes a **stratification engine** that sorts workers into persistent hierarchies.
+::: 
+
+
+
+## Research Question
+
+::: {.div style="font-size: 28px; text-align: center; margin-top: 6em;"}
+**Do different skill types exhibit systematic asymmetries in their diffusion patterns across occupational hierarchies that reproduce labor market stratification?**
+:::
+
+
+
+## Asymmetric Trajectory Channeling: Core Concept
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 2em;"}
+
+**Asymmetric Trajectory Channeling**: *The systematic tendency for different skill types to follow distinct diffusion pathways across occupational hierarchies, creating biased opportunity structures.*
+
+<br>
+
+::: {.columns}
+::: {.column width="33%"}
+#### **Trajectory** 
+- Skills don't diffuse randomly
+- Follow structured pathways across status levels
+:::
+
+::: {.column width="33%"}
+#### **Channeling**
+- Systematic filtering of diffusion flows
+- Creates predictable adoption patterns
+:::
+
+::: {.column width="33%"}
+#### **Asymmetric**
+- Different skill types = different patterns
+- **Cognitive**: Upward escalation  
+- **Physical**: Lateral containment
+:::
+:::
+
+<br>
+
+::: {.callout-important appearance="simple"}
+## **Stratification Consequence:**
+::: {.div style="font-size: 20px; text-align: left; margin-top: 0em;"}
+These channeling patterns create **structurally biased opportunities**. Workers' career destinies depend not just on skill possession, but on **which type of skills** they possess.
+:::
+:::
+
+:::
+
+
+
+## From Static Structure to Dynamic Process
+
+::: {.div style="font-size: 25px; text-align: left; margin-top: 4em;"}
+- **Previous Research:** Shows WHAT the structure (e.g., polarization) looks like.
+
+- **This Research:** Reveals HOW boundaries are actively constructed through **skill diffusion between organizations**.
+
+<br>
+
+::: {.callout-note appearance="simple"}
+## **Central Insight:**
+::: {.div style="font-size: 25px; text-align: left; margin-top: 0em;"}
+Occupational stratification isn't just maintained—it's dynamically **reproduced** through systematically biased skill adoption patterns on the demand side.
+:::
+:::
+:::
+
+
+# II. THEORETICAL FRAMEWORK {background-color="#2c3e50" color="white" .center .middle}
+
+## Hedström-Style Mechanism: Minimal Moving Parts (One Domain)
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 2em;"}
+**Objects**
+
+- **Network** $W$: O*NET occupational similarity (row-normalized)
+- **State** $S_o(t)$: set of skills used by occupation $o$ at time $t$
+
+**Per-period rules ($t \to t\!+\!1$)**
+
+- **Exposure (structural):** skill $s$ can be considered by $o$ only if at least one neighbor in $W$ uses $s$.
+- **Directional aspiration:** effect of status gap $\Delta SES_{o\to o'} = SES_{o'} - SES_o$.
+- **Educational gate:** fixed penalty if formal requirement is unmet.
+- **Capacity & synchrony:** at most $k$ adoptions; synchronous updating.
+- **A few long ties:** small random share of links to enable upward jumps.
+:::
+
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 2em;"}
+::: {.callout-note appearance="simple"}
+**Minimal asymmetry:** set the status slope **by skill type**, e.g. $\beta_\Delta^{(cog)}>\beta_\Delta^{(phy)}$. With exposure + status gradient + a simple gate, **cognitive** skills escalate upward; **physical** skills remain lateral.
+:::
+:::
+
+## Decision Rule (Logit) — Aligned with the Current ABM Code
+
+::: {.div style="font-size: 18px; text-align: left; margin-top: 0.5em;"}
+The simulation uses a logistic with interpretable terms:
+:::
+
+$$
+\begin{aligned}
+\text{logit}\,p_{o,s}
+&=
+\underbrace{\text{logit}(\texttt{base\_p})}_{\text{baseline}}
++\underbrace{\texttt{aspir}\cdot \Delta SES}_{\text{directional aspiration}}
++\underbrace{\texttt{edu\_penalty}\cdot \big(1 - \mathbb{1}\{\texttt{same\_education}\}\big)}_{\text{education match}}\\
+&\quad+\underbrace{\texttt{type\_penalty}\cdot \big(1 - \mathbb{1}\{\texttt{same\_type}\}\big)}_{\text{type alignment}}
++\underbrace{\texttt{req\_penalty}\cdot \big(1 - \mathbb{1}\{\texttt{req\_match}\}\big)}_{\text{educational gate}}\\
+&\quad+\underbrace{\tau\cdot \text{logit}(\texttt{usage\_prob})}_{\text{salience / frequency of use}}
++\underbrace{\gamma_{\text{type, dir}}}_{\text{legitimacy (type \& direction)}}.
+\end{aligned}
+$$
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 2em;"}
+Notes:
+
+- $\Delta SES = SES_{neighbor} - SES_{focal}$.
+- $\gamma_{\text{type, dir}} \in \{\texttt{gamma\_cog\_up}, \texttt{gamma\_phy\_up}, \texttt{gamma\_cog\_down}, \texttt{gamma\_phy\_down}, \texttt{gamma\_lat}\}$.
+- **Exposure is structural in the code:** a skill is considered only if neighbors have it; no explicit $\lambda Y$ term is needed to match the implementation.
+:::
+
+
+## Optional Compact Exposure Form (Explicit $Y$)
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 4em;"}
+Canonical Hedström-style expression with explicit exposure:
+:::
+
+$$
+\text{logit }p_{o,s} \;=\;
+\underbrace{\lambda\,Y_{o,s}(t-1)}_{\text{exposure}}
++\underbrace{\beta_{\Delta}^{(c)}\,\Delta SES_{o\to o'}}_{\text{directional aspiration}}
++\underbrace{\theta\cdot \mathbb{1}\{\text{educ.\ requirement met}\}}_{\text{educational gate}}
++\alpha_o.
+$$
+
+::: {.div style="font-size: 18px; text-align: left; margin-top: 2em;"}
+Implementation note for the empirical part:  
+
+- $Y_{o,s}(t-1)=\sum_{o'} w_{oo'}\,\mathbb{1}\{s\in S_{o'}(t-1)\}$.  
+- In the simulation, exposure is already enforced via the **neighbor-based candidate set**.
+:::
+
+
+## Aggregation → Testable Macro Predictions / Discriminating Tests
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 4em;"}
+
+::: {.columns}
+::: {.column width="55%"}
+### Testable Predictions (P1–P5)
+- **P1 Upward share:** higher for **cognitive** than **physical** skills.  
+- **P2 Distance robustness:** cognitive adoption decays less with structural distance.  
+- **P3 Gate sensitivity:** tightening the educational gate reduces **physical** upward flows more.  
+- **P4 $\Delta SES$ tails:** adopted-event $\Delta SES$ shows a heavier positive tail for cognitive.  
+- **P5 Comparative statics:** widening $\beta_\Delta^{(cog)}-\beta_\Delta^{(phy)}$ amplifies P1–P4.
+:::
+::: {.column width="45%"}
+### Rival Mechanisms & Falsifiers (R1–R3)
+- **R1 Pure functional adaptation:** predicts similar $(\beta^{+}-\beta^{-})$ across types after FE.  
+  **Falsifier:** $(\beta^{+}-\beta^{-})_{cog} \gg (\beta^{+}-\beta^{-})_{phy}$ with source FE.
+- **R2 Global density:** adoption rises with global prevalence only.  
+  **Falsifier:** adding lagged global prevalence leaves type asymmetry intact.
+- **R3 Industry confounding:** asymmetry vanishes with NAICS FE.  
+  **Falsifier:** asymmetry persists or grows when adding FE.
+:::
+:::
+:::
+
+## From ABM to Piecewise Estimation (Macro Test)
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 6em;"}
+The ABM implies direction-specific effects estimated with **orthogonal** status gaps:
+:::
+
+$$
+\text{logit }P(\text{adopt } s \text{ in } o) \;=\;
+\theta_0 \;+\; \beta^{+}\Delta^{+} \;+\; \beta^{-}\Delta^{-} \;+\; \text{controls/FE},
+$$
+
+$$
+\Delta^{+}=\max(0,\, SES_j-SES_i), \qquad
+\Delta^{-}=\max(0,\, SES_i-SES_j).
+$$
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 2em;"}
+::: {.callout-note appearance="simple"}
+**Prediction:** 
+- $(\beta^{+}-\beta^{-})_{\text{cog}}>(\beta^{+}-\beta^{-})_{\text{phy}}$ — **Cognitive escalator** vs **physical containment**.  
+- (Optional) Add lagged exposure $Y_{o,s}(t-1)$ in estimation to mirror the canonical form.
+:::
+:::
+
+
+
+## Analytical Strategy
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 2em;"}
+
+**Core Challenge:** Test whether cognitive and physical skills follow systematically different diffusion trajectories across occupational hierarchies
+
+**Identification Logic:**
+
+- Compare diffusion patterns across skill types within occupation pairs
+- Leverage temporal structure (2015→2024 adoption patterns)
+- Control for source occupation characteristics via fixed effects
+
+<br>
+
+**Three-Step Empirical Architecture:**
+
+::: {.columns}
+::: {.column width="30%"}
+#### **Step 1: Descriptive**
+- Cross-tabulation matrices
+- Distance sensitivity analysis
+- Raw channeling patterns
+:::
+
+::: {.column width="35%"}
+#### **Step 2: Piecewise Models**
+- Asymmetric trajectory coefficients
+- Orthogonal status variables (Δ⁺, Δ⁻)
+- Skill-type specific estimation
+:::
+
+::: {.column width="35%"}
+#### **Step 3: Causal Robustness**
+- Source occupation fixed effects
+- Industry-level controls
+- Alternative specifications
+:::
+:::
+
+<br>
+
+**Key Innovation:** 
+
+Piecewise approach breaks the functional symmetry constraint in single-gap models, allowing cognitive "escalation" **$(β⁺)$** and "containment" **$(β⁻)$** effects to be estimated independently.
+
+:::
+
+# III. METHODOLOGY {background-color="#2c3e50" color="white" .center .middle}
+
+## Data and Measurement Strategy
+
+::: {.div style="font-size: 25px; text-align: left; margin-top: 3em;"}
+
+- **Data Sources:**
+
+  - **O-NET Database** (2015-2024): Detailed skill requirements by occupation
+  - **BLS Wage Data** (2015-2023): Occupational wage levels
+  - **Education Requirements**: Systematic educational level mappings
+
+<br>
+
+- **Level of Analysis:** Occupation-to-occupation skill diffusion events
+
+- **Why Occupations?** O*NET captures generalized skill requirements that organizations adapt, and occupations represent institutionalized roles with established skill expectations.
+:::
+
+
+## Temporal Design Logic & Empirical Validation
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
+
+**Why 2015→2024 Temporal Structure?**
+
+- **Theoretical Motivation**: Organizational imitation theory predicts systematic adoption patterns over time
+- **Empirical Foundation**: Captures destination-focused channeling vs. traditional prediction approaches
+- **O-NET Methodology**: Irregular but comprehensive update system across 9-year window
+
+<br>
+
+**Empirical Validation of Genuine Change:**
+
+- **83.3%** of occupation-skill combinations show significant importance rating changes
+- **7,913 genuine adoption events** identified (RCA transitions)
+- **100%** of skills demonstrate new adoption patterns
+- **99.8%** of occupations experience skill requirement changes
+
+<br>
+
+**Methodological Strength:**
+
+- **Dynamic data confirmed**: O-NET 15.0→29.0 captures substantial skill evolution
+- **r = 0.98+ correlation** with contemporaneous design validates structural patterns
+- **Robust evidence**: Both micro-level changes and macro-level channeling patterns
+
+:::
+
+
+## Constructing the Skill Diffusion Dataset
+
+::: {.div style="font-size: 18px; text-align: left; margin-top: 3em;"}
+
+
+::: {.columns}
+::: {.column width="45%"}
+
+### **Data Preparation**
+
+**Step 1: Identify Skill Specialists**
+
+- RCA > 1 = occupation "effectively uses" skill
+- **2015 baseline:** Who has which skills?
+- **2024 outcome:** Who adopted new skills?
+
+<br>
+
+**Step 2: Skill Type Classification** 
+
+- Complementarity networks → Louvain, Leiden algorithms
+- **Robust result:** 2 main clusters across methods
+- **Cognitive cluster:** Critical thinking, complex problem solving
+- **Physical cluster:** Manual dexterity, coordination
+
+:::
+
+::: {.column width="50%"}
+
+### **Event Construction**
+
+**Step 3: Define Diffusion Opportunities**
+
+- **Diffusion = 1:** Target adopts (2024) what source had (2015)
+- **Diffusion = 0:** Target could have adopted, but didn't
+- **Universe:** All possible source→target pairs by skill
+
+<br>
+
+**Step 4: Measure Barriers/Facilitators**
+
+- **Status gaps:** Education & wage differences  
+- **Structural distance:** Overall skill profile similarity
+- **Test:** Do gaps affect diffusion differently by skill type?
+
+:::
+:::
+:::
+
+<br>
+
+**Goal:** Create dyadic dataset of skill adoption opportunities between occupations
+
+**Final Dataset:** ~1.5M occupation-pair-skill observations (10% sample due to computational constraints) tracking adoption patterns across occupational hierarchies
+
+
+
+
+## Final Dataset Structure
+
+```{r}
+#| warning: false
+#| include: true
+
+library(knitr)
+library(tibble)
+
+diffusion_sample <- tribble(
+  ~source,      ~target,      ~skill_name,         ~skill_cluster,  ~diffusion, ~delta_up, ~delta_down, ~structural_distance, ~wage_gap,
+  "11-1011.00", "13-1111.00", "Critical Thinking", "Socio-cognitive", 1,        0.0,       0.3,         0.35,                 -25000,
+  "11-1011.00", "15-1252.00", "Critical Thinking", "Socio-cognitive", 0,        0.0,       0.1,         0.62,                 -10000,
+  "27-1021.00", "49-9071.00", "Manual Dexterity",  "Socio-technical", 0,        0.0,       0.5,         0.75,                 -10000,
+  "49-9071.00", "51-2092.00", "Manual Dexterity",  "Socio-technical", 1,        0.0,       0.2,         0.22,                 -3000,
+  "13-1111.00", "11-1011.00", "Active Listening",  "Socio-cognitive", 0,        0.3,       0.0,         0.35,                 25000,
+  "51-2092.00", "27-1024.00", "Arm-Hand Steady",   "Socio-technical", 1,        0.1,       0.0,         0.28,                 15000,
+)
+
+knitr::kable(diffusion_sample, caption = "Sample of Dyadic Diffusion Events Dataset")
+```
+
+**Final Dataset:** ~1.5M skill-occupation dyadic events with piecewise status variables
+
+
+## Model Specification
+::: {.div style="font-size: 20px; text-align: left; margin-top: 4em;"}
+
+:::: {.columns style="margin-top: 2em; text-align: left;"}
+
+::: {.column width="35%"}
+#### <i class="fa-solid fa-puzzle-piece"></i> Core Specification
+
+We estimate separate models by skill type to identify systematic differences:
+
+-   **Cognitive Model:** Socio-cognitive skills.
+-   **Physical Model:** Socio-technical skills.
+
+---
+
+**Key Parameters:**
+
+-   **β⁺:** Effect of upward status moves.
+-   **β⁻:** Effect of downward status moves.
+-   **Asymmetry Test:** `(β⁺ - β⁻)` by skill type.
+
+:::
+
+::: {.column width="35%"}
+#### <i class="fa-solid fa-sliders"></i> Control Variables
+
+To isolate status effects, we include:
+
+-   **Structural Distance:**
+    <br> Similarity between occupations (2015 baseline).
+-   **Economic Gaps:**
+    <br> Wage and educational differences.
+-   **Fixed Effects:**
+    <br> Source occupation characteristics.
+
+:::
+
+::: {.column width="30%"}
+#### <i class="fa-solid fa-shield-halved"></i> Robustness & Extensions
+
+We validate our findings with several additional tests:
+
+-   Industry-level controls (4-digit NAICS).
+-   Alternative distance metrics.
+-   Bayesian shrinkage priors.
+
+:::
+:::
+::::
+
+
+# IV. RESULTS {background-color="#2c3e50" color="white" .center .middle}
+
+## Distance Sensitivity by Skill Type
+
+![](distance_deciles.png){out-width="100%" fig-align="center"}
+
+
+## Distance Sensitivity by Skill Type
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 4em;"}
+
+- **Key Patterns:**
+
+  - **Socio-cognitive Skills** (green): Maintain diffusion rates across distances, showing **resilience** to barriers
+
+  - **Socio-technical Skills** (Orange): Show **sensitivity** to distance constraints with declining rates
+
+  - **Interpretation:** Cognitive skills navigate structural barriers more effectively than physical skills
+  
+:::
+
+
+## Matrix Evidence: Educational Channeling
+
+![](educ_heatmap.png){out-width="100%" fig-align="center"}
+
+
+## Matrix Evidence: Economic Channeling  
+
+![](wages_heatmap.png){out-width="100%" fig-align="center"}
+
+
+## Descriptive Summary
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 3em;"}
+**Clear Asymmetric Patterns:**
+
+- **Socio-cognitive skills** exhibit strong **upward channeling**, flowing predominantly toward high-education, high-wage occupations (Q4) regardless of origin
+
+- **Socio-technical skills** show **lateral containment**, circulating mainly within lower quartiles (Q1-Q3) with limited access to Q4
+
+- **"Glass Ceiling" Effect**: Physical skills face systematic barriers to entering high-status occupations
+
+**Next:** Do these patterns hold when controlling for confounders?
+:::
+
+
+## Piecewise Model Results
+
+
+![](educ_piecewise.png){out-width="100%" fig-align="center"}
+
+
+
+
+## Piecewise Model Results II
+
+![](wage_piecewise.png){out-width="100%" fig-align="center"}
+
+## Confirmed Asymmetric Channeling
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 3em;"}
+
+- **Socio-cognitive Skills (Blue Line) = "The Escalator":**
+  - **Sharp upward trajectory** for positive status gaps (β⁺ = +0.444)
+  - **Strong downward penalty** for negative gaps (β⁻ = -0.258)
+  - **Large Asymmetry**: (β⁺ - β⁻) = 0.702
+  - **Pattern**: Strong aspirational pull toward higher-status occupations
+
+<br>
+
+- **Socio-technical Skills (Orange Line) = "Lateral Containment":**
+  - **Minimal upward facilitation** (β⁺ = -0.122)  
+  - **Moderate downward penalty** (β⁻ = -0.225)
+  - **Small Asymmetry**: (β⁺ - β⁻) = 0.103
+  - **Pattern**: Largely neutral/constrained mobility
+  
+<br>
+
+:::
+
+
+## Identification Strategy: Source Occupation Fixed Effects
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 4em;"}
+
+**Core Challenge**: Do diffusion patterns reflect genuine channeling or unobserved occupation characteristics?
+
+**Solution**: Source occupation fixed effects control for:
+
+- Industry-specific demand factors
+- Technological readiness levels  
+- Organizational resource constraints
+- Historical skill specialization patterns
+
+**Identification**: Within-source variation in target adoption patterns by skill type
+
+**Result**: Asymmetric channeling **persists within source occupations**, confirming systematic differences in how cognitive vs. physical skills diffuse across hierarchies.
+
+:::
+
+
+## Source Occupation Fixed Effects
+
+![](fe_plot.png){out-width="100%" fig-align="center"}
+
+## Robust Evidence for Systematic Channeling
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 4em;"}
+
+- **Within-Source Robustness**: Fixed effects models show asymmetric trajectory channeling persists even when controlling for all time-invariant source occupation characteristics
+
+<br>
+
+- **Dual Escalator Effect**: Cognitive skills show positive attraction toward both high-education (+14%) AND high-wage (+4.9%) occupations **within source occupation types**
+
+<br>
+
+- **Dual Containment Effect**: Physical skills exhibit systematic barriers to both educational (-30%) and economic (-13.4%) upward mobility **within source occupation types**
+
+<br>
+
+- **Consistent Asymmetric Patterns**: The channeling mechanism operates **beyond** industry, technology, or resource differences between source occupations
+
+:::
+
+# V. PRELIMINARY EVIDENCE (WORK IN PROGRESS) {background-color="#2c3e50" color="white" .center .middle}
+
+## From Channeling to Revaluation
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 4em;"}
+- **Beyond Pattern Documentation:** Our core finding, Asymmetric Trajectory Channeling, is not a neutral sorting process. It has profound economic consequences that actively reproduce stratification.
+
+- **Mechanism Hypothesis:** This occurs through a **Value Displacement Mechanism**, where the economic return of a skill or strategy becomes conditional on the status of the actor adopting it.
+
+- **Empirical Test:** We analyze wage growth outcomes of an innovative strategy—high-propensity adoption of cognitive skills—across **847 occupations** over the **2015-2023 period**.
+:::
+
+
+## Evidence 1: A Conditional Return to Status
+
+::: columns
+::: {.column width="60%"}
+::: {.div style="font-size: 20px; text-align: left; margin-top: 6em;"}
+![](01_valued_displacement.png)
+:::
+:::
+
+::: {.column width="40%"}
+::: {.div style="font-size: 16px; text-align: left; margin-top: 3em;"}
+- This first plot establishes the phenomenon. It shows the net advantage of the innovative strategy, conditioned by occupational **status**.
+
+- The result is clear: for the two lowest status quintiles, the strategy carries a **statistically significant penalty of -5.2% and -8.1%** respectively (p < 0.05).
+
+- This penalty disappears as status increases, with **Q4 and Q5 showing neutral to positive returns (+0.8% and +2.3%)**. This is a classic pattern of **Cumulative Advantage**: an occupation's initial status grants it the "luxury" of innovating without the economic cost paid by others.
+
+- **Effect magnitude**: **13.4 percentage point difference** between lowest and highest status quintiles.
+:::
+:::
+:::
+
+## Evidence 2: The Penalty for 'Fashion-Driven' Innovation
+
+::: columns
+::: {.column width="60%"}
+::: {.div style="font-size: 20px; text-align: left; margin-top: 6em;"}
+![](02_valued_displacement.png)
+:::
+:::
+
+::: {.column width="40%"}
+::: {.div style="font-size: 16px; text-align: left; margin-top: 3em;"}
+- This second plot is a more direct and powerful test. It replaces "status" with a measure of **"functional need"**.
+
+- The results are even more striking. The penalty is **statistically significant at -6.8%** (p < 0.01) precisely for occupations that functionally **needed these skills the least** (Quintile 2).
+
+- **Functional contrast**: Occupations with **high functional need (Q4-Q5) show +1.4% and +3.2% returns**, while those with **low need face substantial penalties**.
+
+- This supports our theory: the market discerns and penalizes "fashion-driven" adoptions, displacing the value from the skill itself to the functional context of the adopter. **Total effect range: 10 percentage points** between most and least functionally appropriate adopters.
+:::
+:::
+:::
+
+
+# VI. DISCUSSION {background-color="#2c3e50" color="white" .center .middle}
+
+## Key Findings
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 2em;"}
+
+**Strong Evidence for Asymmetric Trajectory Channeling:**
+
+✅ **Cognitive Skills**: Pronounced escalator dynamics (Asymmetry = 0.702)
+   - Systematic upward channeling toward high-status occupations
+
+✅ **Physical Skills**: Containment/lateral mobility (Asymmetry = 0.103)  
+   - Limited cross-hierarchical movement, proximity-constrained diffusion
+
+✅ **Robust Patterns**: Effects persist with source occupation fixed effects
+   - Channeling operates within occupation types, not just between them
+
+✅ **Temporal Validation**: r = 0.98+ correlation with contemporaneous specifications
+   - Confirms genuine structural patterns, not temporal artifacts
+   
+<br>
+
+✅ **Provisional Evidence for Value Displacement Mechanism:**
+   - Returns to innovation conditional on status and functional need
+:::
+
+
+# VII. IMPLICATIONS & FUTURE DIRECTIONS {background-color="#2c3e50" color="white" .center .middle}
+
+## Implications & Future Directions
+
+::: {.div style="font-size: 22px; text-align: left; margin-top: 2em;"}
+
+**Strengthening Causal Inference:**
+
+- Technology shocks as exogenous skill demand shifters
+- Geographic variation in occupational structures as instruments
+- Longitudinal worker data (NLSY, PSID) for validation
+
+<br>
+
+**Agent-Based Modeling Extensions:**
+
+- **Emergent Polarization**: How individual filtering decisions create system-level patterns
+- **Boundary Dynamics**: Dynamic construction/reconstruction of occupational boundaries
+- **Policy Counterfactuals**: Testing interventions that modify cultural theorization
+
+<br>
+
+**International Comparative Analysis:**
+
+- Cross-national variation in skill theorization
+- Institutional differences in organizational imitation patterns
+:::
+
+
+# VIII. CONCLUSION {background-color="#2c3e50" color="white" .center .middle}
+
+## Summary
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 2em;"}
+
+- **Key Insight:** We provide systematic evidence that different skill types follow **asymmetric trajectory channeling** patterns across occupational hierarchies, consistent with organizational imitation theory.
+
+- **Core Finding:** Cognitive and physical skills exhibit systematically different diffusion pathways, with robust evidence persisting across multiple specifications and temporal designs.
+
+- **Main Implication:** This channeling has economic consequences through a **Value Displacement Mechanism** where returns to innovation depend on adopter status and functional context.
+
+- **Methodological Contribution:** Destination-focused analysis reveals stratification-reproducing mechanisms in demand-side processes, validated through gold standard temporal robustness checks.
+
+:::
+
+# Thank you! {background-color="#2c3e50" color="white" .center .middle}
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
+Roberto Cantillan (rcantillan@uc.cl)  
+Mauricio Bucca (mbucca@uc.cl)
+
+*Department of Sociology*  
+*Pontificia Universidad Católica de Chile*
+:::
+
+
+
+
+# APPENDIX I {background-color="#2c3e50" color="white" .center .middle}
+
+## From Established Theory to Testable Macro-Pattern
+
+::: {.div style="font-size: 23px; text-align: left; margin-top: 2em;"}
+
+**Background Theory (Established):**
+
+- Organizations imitate skill requirements under uncertainty [@strang1993]
+- Imitation is filtered by how practices are culturally theorized [@hedstrom1998]
+- Different skill types may trigger different imitation logics
+
+**Our Theoretical Application:**
+
+- Cognitive skills may be seen as "portable assets" → aspirational models
+- Physical skills may be seen as "context-dependent" → proximity models
+
+**Testable Prediction:**
+
+- **Asymmetric Trajectory Channeling** across occupational hierarchies
+- **Systematic reproduction** of skills-based stratification patterns
+- **Distinct diffusion pathways** for different skill types
+
+:::
+
+## Theoretical Contributions
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 2em;"}
+
+**1. Asymmetric Trajectory Channeling Concept:**
+
+- First systematic identification and measurement of this macro-pattern
+- Shows how skill types sort into systematically different diffusion pathways
+
+**2. Skills-Based Stratification Framework:**
+
+- Demonstrates how demand-side processes actively reproduce occupational hierarchies
+- Moves beyond describing polarization to modeling its reproduction mechanisms
+
+**3. Methodological Innovation:**
+
+- Piecewise models for testing asymmetric diffusion in macro-data
+- Dyadic approach to analyzing aggregate inter-organizational skill patterns
+
+**4. Empirical Evidence:**
+
+- First comprehensive evidence for systematic skill channeling effects
+- Robust patterns across 1.5M dyadic diffusion events (2015-2024)
+:::
+
+
+
+# APPENDIX II {background-color="#2c3e50" color="white" .center .middle}
+
+## Occupational Skill Space: Technical Details
+
+::: {.div style="font-size: 24px; text-align: left; margin-top: 4em;"}
+
+**Revealed Comparative Advantage (RCA):**
+
+$$\text{RCA}(j,s) = \frac{\text{onet}(j,s) / \sum_{s' \in S} \text{onet}(j,s')}{\sum_{j' \in J} \text{onet}(j',s) / \sum_{j' \in J, s'' \in S} \text{onet}(j',s'')}$$
+
+- **Interpretation:**
+
+  - **Numerator:** Skill $s$'s share of occupation $j$'s total skill requirements
+  - **Denominator:** Skill $s$'s share of economy-wide skill requirements  
+  - **RCA > 1:** Occupation has comparative advantage in skill (effective use)
+
+
+**Skill Complementarity Network (Leiden Algorithm → 2 Main Clusters):**
+
+$$\theta(s,s') = \frac{\sum_{j \in J} e(j,s) \cdot e(j,s')}{\max\left(\sum_{j \in J} e(j,s), \sum_{j \in J} e(j,s')\right)}$$
+:::
+
+## Diffusion Event Construction: Formal Logic
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 4em;"}
+
+### **Positive Diffusion Events (diffusion = 1):**
+
+1. **Sources:** $S_s = \{j : \text{RCA}_{2015}(j,s) > 1\}$
+2. **End Adopters:** $A_s = \{j : \text{RCA}_{2024}(j,s) > 1\}$  
+3. **New Adopters:** $N_s = A_s \setminus S_s$
+4. **Positive Events:** $\{(i,j,s) : i \in S_s, j \in N_s, i \neq j\}$
+
+<br>
+
+### **Negative Diffusion Events (diffusion = 0):**
+
+1. **Non-Adopters:** $\bar{A_s} = J \setminus A_s$ (all occupations not using skill in 2024)
+2. **Negative Events:** $\{(i,j,s) : i \in S_s, j \in \bar{A_s}, i \neq j\}$
+
+**Result:** Exhaustive dyadic dataset of all possible diffusion opportunities
+:::
+
+## Piecewise Model: Mathematical Properties
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 4em;"}
+
+**Standard Approach Problems:**
+
+- Using $(s_j - s_i)$ and $|s_j - s_i|$ creates perfect multicollinearity
+- Asymmetry testing requires complex coefficient combinations
+
+**Our Piecewise Solution:**
+$$\Delta^+_{ij} = \max(0, s_j - s_i), \quad \Delta^-_{ij} = \max(0, s_i - s_j)$$
+
+**Key Properties:**
+
+- **Orthogonal:** $\Delta^+_{ij} \cdot \Delta^-_{ij} = 0$ always
+- **Exhaustive:** $\Delta^+_{ij} + \Delta^-_{ij} = |s_j - s_i|$
+- **Direct Asymmetry:** $(\beta^+ - \beta^-)$ tests directional bias directly
+- **Clear Interpretation:** Each parameter has unambiguous meaning
+
+**Extensions:** Quadratic terms with Laplace priors for curvature detection
+
+:::
+
+
+# APPENDIX III {background-color="#2c3e50" color="white" .center .middle}
+
+## Robustness Strategy: Discarding Alternative Explanations
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 4em;"}
+
+- **Central Question: Economic Adaptation vs. Cultural Theorization?**
+
+- **H0: Economic Adaptation Hypothesis**
+
+  - Skills diffuse based on functional economic value
+  - Higher education/wage skills naturally flow upward
+  - All cognitive skills should behave uniformly (equal "value")
+
+- **H1: Cultural Theorization Hypothesis**
+
+  - Skills diffuse through organizational imitation under uncertainty
+  - Imitation biased by cultural interpretation of skill types
+  - Cognitive skills as "portable assets" → aspirational models
+  - Physical skills as "context-dependent" → proximity models
+
+:::
+
+## Three-Test Strategy:
+
+::: {.div style="font-size: 20px; text-align: left; margin-top: 4em;"}
+
+- **TEST 1: Skill Specificity**
+
+  - Logic: Economic adaptation predicts uniform cognitive behavior
+  - Method: Heterogeneity analysis within cognitive skill types
+  
+- **TEST 2: Industry Controls**
+
+  - Logic: Do controls eliminate or reveal channeling effects?
+  - Method: 4-digit NAICS fixed effects models
+
+- **TEST 3: Theoretical Direction**
+
+  - Logic: Do patterns match organizational imitation predictions?
+  - Method: Direct testing of theoretical criteria
+
+:::
+
+
+## TEST 1 - Skill Specificity Analysis
+
+### Economic vs. Cultural Theorization Test
+
+:::: {.columns}
+::: {.column width="45%"}
+::: {.div style="font-size: 20px; text-align: left; margin-top: 2em;"}
+
+- **Cognitive Skills Range: 0.178**
+
+  - Interpersonal Cognitive: +0.25
+  - Specialized Cognitive: +0.20
+  - Universal Cognitive: +0.07
+  - Range exceeds 0.10 threshold ✅
+
+- **Technical Skills Range: 0.15**
+
+  - Sensory: -0.15
+  - Technical: -0.18
+  - Physical: -0.22
+  - More uniform containment pattern
+
+:::
+:::
+
+::: {.column width="55%"}
+::: {.div style="font-size: 20px; text-align: left; margin-top: 2em;"}
+
+![](1_robust.png){out-width="200%" fig-align="center"}
+:::
+:::
+:::
+
+## TEST 2 - Industry Controls Reveal TRUE Channeling
+
+### Industry Fixed Effects Analysis
+
+:::: {.columns}
+::: {.column width="45%"}
+::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
+
+- **Base Model (Mixed Effects)**:
+
+  - General asymmetry: -0.0174
+  - Averaged across industries
+
+- **Industry Controls Model**:
+
+  - Cognitive Escalation: +0.1114
+  - Technical Containment: -0.2636
+  - Difference Magnitude: 0.375
+
+:::
+:::
+::: {.column width="55%"}
+::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
+
+![](2_robust.png){out-width="200%" fig-align="center"}
+:::
+:::
+:::
+
+## TEST 3 - Theoretical Direction Confirmed
+### Organizational Imitation Theory Validation
+:::: {.columns}
+::: {.column width="45%"}
+::: {.div style="font-size: 15px; text-align: left; margin-top: 3em;"}
+
+- **Criterion 1: Cognitive Upward Bias**
+  - Theoretical prediction: Cognitive skills should show upward channeling
+  - Observed: +0.111 (cognitive) > 0.05 threshold ✅
+  - Magnitude: Strong evidence for cognitive escalation
+
+
+- **Criterion 2: Pattern Consistency**
+  - Theoretical prediction: Cognitive > Technical
+  - Observed: +0.111 (cognitive) > -0.264 (technical) ✅
+  - Magnitude: 0.375 difference
+
+- **Criterion 3: Technical Below Cognitive**
+  - Theoretical prediction: Technical skills should show containment
+  - Observed: -0.264 < 0.111 ✅
+  - Magnitude: Confirmed technical containment
+
+:::
+:::
+::: {.column width="55%"}
+::: {.div style="font-size: 20px; text-align: left; margin-top: 3em;"}
+![](3_robust.png){out-width="200%" fig-align="center"}
+
+:::
+:::
+:::
+
+
+
+
+
+
+
