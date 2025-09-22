@@ -20,7 +20,7 @@ format:
     cite-method: citeproc
     #bibliography: references.bib
     #csl: american-sociological-association.csl
-    footer: "Cantillan & Bucca | Asymmetric Trajectory Channeling in Labor Markets | IC2S2 Norrköping | 2025"
+    footer: "Cantillan & Bucca | Asymmetric Trajectory Channeling in Labor Markets | 2025"
 ---
 
 # I. THE PUZZLE {background-color="#2c3e50" color="white" .center .middle}
