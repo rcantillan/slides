@@ -257,13 +257,13 @@ This enforces **meaningful structure** in the skill space, rather than treating 
 :::
 
 
-## Triadic Logistic Gravity Specification {.smaller}
+## Triadic Gravity Specification (ClogLog) {.smaller}
 
 :::{style="font-size: 21px; margin-top: 3em;"}
 
-With a binary outcome, we map latent intensity into probability via logistic link:
+With a binary outcome in discrete time, we use a complementary log-log link:
 
-$$\text{logit}\big(\Pr(T_{ijk}=1)\big) = \beta_0 + \alpha_i + \beta_j + \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k$$
+$$\text{cloglog}\big(\Pr(T_{ijk}=1)\big) = \beta_0 + \alpha_i + \beta_j + \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k$$
 $$+ \beta^{\uparrow} \Delta^{\uparrow}_{ij} + \beta^{\downarrow} \Delta^{\downarrow}_{ij} + \text{(interactions)}$$
 
 **Interactions** (e.g., $D_k \cdot \Delta^{\uparrow}_{ij}$, $N_k \cdot \Delta^{\downarrow}_{ij}$) reveal whether:
@@ -352,19 +352,19 @@ High-nestedness physical skills face more than 30 p.p. penalty at 2-quartile upw
 
 :::{style="font-size: 24px; margin-top: 4em;"}
 
-**Coefficients (education gap, log-odds scale):**
+**Coefficients (wage gap, cloglog scale):**
 
 | Term | Cognitive | Physical | Interaction |
 |------|-----------|----------|-------------|
-| Upward | +0.43 | -0.79 | -1.22 |
-| Downward | +0.05 (ns) | +1.98 | +1.93 |
-| Distance | -0.18 | -0.49 | -0.31 |
+| Upward | +0.08. | −0.34 | −0. 42*** |
+| Downward | +0.13 (ns) | +0.65 | +0.52** |
+| Distance | −1.90*** | −3.23 | −1.33* |
 
 **Interpretation:**
 
-- Upward gap **boosts** cognitive adoption, **penalizes** physical
+- Upward gap **slightly boosts** cognitive adoption, **penalizes** physical
 - Downward gap has **no effect** on cognitive, **strongly boosts** physical
-- Distance decay is **steeper** for physical skills
+- Distance decay is **70% steeper** for physical skills
 
 :::
 

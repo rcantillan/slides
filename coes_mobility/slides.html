@@ -400,11 +400,11 @@
 <p>This enforces <strong>meaningful structure</strong> in the skill space, rather than treating each skill as categorical noise.</p>
 </div>
 </section>
-<section id="triadic-logistic-gravity-specification" class="slide level2 smaller">
-<h2>Triadic Logistic Gravity Specification</h2>
+<section id="triadic-gravity-specification-cloglog" class="slide level2 smaller">
+<h2>Triadic Gravity Specification (ClogLog)</h2>
 <div style="font-size: 21px; margin-top: 3em;">
-<p>With a binary outcome, we map latent intensity into probability via logistic link:</p>
-<p><span class="math display">\[\text{logit}\big(\Pr(T_{ijk}=1)\big) = \beta_0 + \alpha_i + \beta_j + \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k\]</span> <span class="math display">\[+ \beta^{\uparrow} \Delta^{\uparrow}_{ij} + \beta^{\downarrow} \Delta^{\downarrow}_{ij} + \text{(interactions)}\]</span></p>
+<p>With a binary outcome in discrete time, we use a complementary log-log link:</p>
+<p><span class="math display">\[\text{cloglog}\big(\Pr(T_{ijk}=1)\big) = \beta_0 + \alpha_i + \beta_j + \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k\]</span> <span class="math display">\[+ \beta^{\uparrow} \Delta^{\uparrow}_{ij} + \beta^{\downarrow} \Delta^{\downarrow}_{ij} + \text{(interactions)}\]</span></p>
 <p><strong>Interactions</strong> (e.g., <span class="math inline">\(D_k \cdot \Delta^{\uparrow}_{ij}\)</span>, <span class="math inline">\(N_k \cdot \Delta^{\downarrow}_{ij}\)</span>) reveal whether:</p>
 <ul>
 <li>Certain skill types face <strong>penalties</strong> in upward diffusion</li>
@@ -480,7 +480,7 @@
 <section id="key-magnitudes" class="slide level2 smaller">
 <h2>Key Magnitudes</h2>
 <div style="font-size: 24px; margin-top: 4em;">
-<p><strong>Coefficients (education gap, log-odds scale):</strong></p>
+<p><strong>Coefficients (wage gap, cloglog scale):</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -493,29 +493,29 @@
 <tbody>
 <tr class="odd">
 <td>Upward</td>
-<td>+0.43</td>
-<td>-0.79</td>
-<td>-1.22</td>
+<td>+0.08.</td>
+<td>−0.34</td>
+<td>−0. 42***</td>
 </tr>
 <tr class="even">
 <td>Downward</td>
-<td>+0.05 (ns)</td>
-<td>+1.98</td>
-<td>+1.93</td>
+<td>+0.13 (ns)</td>
+<td>+0.65</td>
+<td>+0.52**</td>
 </tr>
 <tr class="odd">
 <td>Distance</td>
-<td>-0.18</td>
-<td>-0.49</td>
-<td>-0.31</td>
+<td>−1.90***</td>
+<td>−3.23</td>
+<td>−1.33*</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Interpretation:</strong></p>
 <ul>
-<li>Upward gap <strong>boosts</strong> cognitive adoption, <strong>penalizes</strong> physical</li>
+<li>Upward gap <strong>slightly boosts</strong> cognitive adoption, <strong>penalizes</strong> physical</li>
 <li>Downward gap has <strong>no effect</strong> on cognitive, <strong>strongly boosts</strong> physical</li>
-<li>Distance decay is <strong>steeper</strong> for physical skills</li>
+<li>Distance decay is <strong>70% steeper</strong> for physical skills</li>
 </ul>
 </div>
 </section>
