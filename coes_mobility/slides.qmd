@@ -109,24 +109,23 @@ execute:
 ## The Asymmetry: Directional Friction by Domain {.smaller}
 
 ::: {style="font-size: 22px; margin-top: 4em; margin-bottom: 2em;"}
-**Asymmetry** means skills face different "friction" when diffusing up vs. down the wage ladder.  The direction of this friction **reverses** between cognitive and physical skills. 
+**Asymmetry** means skills face different "friction" when diffusing up vs.  down the wage ladder.  The direction of this friction **reverses** between cognitive and physical skills. 
 :::
 
 ::: {style="font-size: 22px;"}
 
 | | Cognitive | Physical | Interpretation |
 |---|:---:|:---:|---|
-| **Upward rate** | **20. 5%** | 10.4% | Cognitive climbs easily |
-| **Downward rate** | 14.9% | **19.8%** | Physical falls easily |
-| **Gap (Up - Down)** | **+5.6 p.p.** | **-9.4 p.p. ** | Opposite signs |
+| **Upward rate** | **20.2%** | 11.1% | Cognitive climbs easily |
+| **Downward rate** | 15.6% | **19.0%** | Physical falls easily |
+| **Gap (Up − Down)** | **+4. 7 p.p.** | **−8.0 p. p.** | Opposite signs |
 | **Implication** | Facilitates ascent | Blocks ascent | Polarizing force |
 
 :::
 
 ::: {style="font-size: 20px; text-align: center; margin-top: 1em;"}
-Physical skills face **1.9x more friction** going up than going down
+Physical skills face **1.7× more friction** going up than going down
 :::
-
 
 
 ## 
@@ -502,24 +501,26 @@ $$c_s = \frac{\mathrm{NODF}_{\text{obs}} - \mathbb{E}[\mathrm{NODF}^{(s)}_{\text
 :::
 
 
-## B3: Full Coefficient Table {. smaller}
+## B3: Full Coefficient Table {.smaller}
 
-:::{style="font-size: 18px;  margin-top: 4em;"}
+:::{style="font-size: 18px; margin-top: 4em;"}
 
-| Term | Coefficient | SE | HR | 95% CI |
-|------|-------------|-----|-----|--------|
-| Upward (base) | +0.43 | 0.08 | 1.54 | 1.32, 1.79 |
-| Downward (base) | +0.05 | 0.09 | 1.05 | 0.88, 1.25 |
-| Upward x Physical | -1.22 | 0.11 | 0.30 | 0.24, 0.37 |
-| Downward x Physical | +1.93 | 0.14 | 6.89 | 5.23, 9.08 |
-| Structural distance | -0.18 | 0.04 | 0.84 | 0.77, 0.91 |
-| Distance x Physical | -0.31 | 0.06 | 0.73 | 0.65, 0.82 |
-| Upward x Nest-Mid | +0.12 | 0.07 | 1.13 | 0.98, 1.30 |
-| Upward x Nest-High | +0.28 | 0.08 | 1.32 | 1.13, 1.54 |
+| Term | Coefficient | SE |
+|------|-------------|-----|
+| Upward (base) | +0.08 | 0.04 |
+| Downward (base) | +0.13 | 0.11 |
+| Domain: Physical | +0.72 | 0.30 |
+| Upward × Physical | −0.42 | 0.07 |
+| Downward × Physical | +0.52 | 0.18 |
+| Structural distance | −1.90 | 0.20 |
+| Distance × Physical | −1.33 | 0.52 |
+| Nestedness: Mid | +0.00 | 0.04 |
+| Nestedness: High | −0.13 | 0.05 |
+| Upward × Nest-Mid | +0.12 | 0. 03 |
+| Upward × Nest-High | +0. 07 | 0.04 |
 
 ::: {style="font-size: 22px; text-align: center; margin-top: 2em;"}
-
-ClogLog link. Two-way FE (source, target). Node bootstrap B=1000
+ClogLog link. Two-way FE (source, target).  Clustered SE. 
 :::
 :::
 
@@ -541,6 +542,6 @@ $$\Delta^{\uparrow}_{ij} = \max(G_{ij}, 0), \quad \Delta^{\downarrow}_{ij} = \ma
 $$\text{SkillMass}_k = \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k$$
 
 **Step 5: Full Specification**
-$$\text{logit}\big(\Pr(T_{ijk}=1)\big) = \beta_0 + \alpha_i + \beta_j + \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k + \beta^{\uparrow} \Delta^{\uparrow}_{ij} + \beta^{\downarrow} \Delta^{\downarrow}_{ij}$$
+$$\text{cloglog}\big(\Pr(T_{ijk}=1)\big) = \beta_0 + \alpha_i + \beta_j + \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k + \beta^{\uparrow} \Delta^{\uparrow}_{ij} + \beta^{\downarrow} \Delta^{\downarrow}_{ij}$$
 
 :::
