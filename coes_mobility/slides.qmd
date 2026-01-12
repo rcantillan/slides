@@ -15,7 +15,7 @@ format:
     controls-layout: bottom-right
     css: styles.css
     template-partials: [title-slide.html]
-    footer: "Cantillan & Bucca | Skill Diffusion & Stratification — COES Mobility 2025"
+    #footer: "Cantillan & Bucca | Skill Diffusion & Stratification — COES Mobility 2025"
 execute:
   echo: false
   warning: false
@@ -46,6 +46,7 @@ execute:
 
 :::
 
+
 ```{r tabla_computacion, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
 library(tidyverse)
@@ -64,6 +65,16 @@ datos_computacion %>%
   kbl() %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
 ```
+
+
+
+##
+
+:::{style="font-size: 26px; margin-top: 3em;"}
+
+![](skill_adopt_by_nurse_multisource.png){width="70%"}
+
+:::
 
 
 
@@ -126,10 +137,18 @@ datos_computacion %>%
 # I. THE PHENOMENON {.center .middle background-color="#0a4e58"}
 
 
+## Raw Gravity Patterns {.smaller}
+
+::: {style="text-align: center;"}
+![](p05.png){width="90%"}
+:::
+
+
+
 ## Polarized Diffusion: Flow Networks {.smaller}
 
-:::{style="font-size: 26px; margin-top: 3em;"}
-![](flow_net_aggregated.png){width="80%"}
+:::{style="font-size: 26px; margin-top: 1em;"}
+![](Rplot01.png){width="100%"}
 :::
 
 
@@ -158,34 +177,19 @@ Physical skills face **1.7× more friction** going up than going down
 ## 
 
 ::: {style="text-align: center;"}
-![](flow_skills_cognitive.png){width="100%"}
+![](p03.png){width="85%"}
 :::
 
-::: {style="font-size: 20px; text-align: center;"}
-Average shift in wage quintiles (destination - origin).  Core cognitive skills drift **upward**
-:::
 
 
 ## 
 
 ::: {style="text-align: center;"}
-![](flow_skills_physical.png){width="100%"}
-:::
-
-::: {style="font-size: 20px; text-align: center;"}
-Most physical skills drift **downward** or lateral (static strength, inspection, coordination)
+![](p04.png){width="85%"}
 :::
 
 
-## Raw Gravity Patterns {.smaller}
 
-::: {style="text-align: center;"}
-![](plot_07.png){width="90%"}
-:::
-
-::: {style="font-size: 22px; text-align: center;"}
-Adoption rate by **education gap**, **wage gap**, and **structural distance** deciles
-:::
 
 
 # II. THE MODEL {.center .middle background-color="#0a4e58"}
@@ -355,22 +359,15 @@ $$+ \beta^{\uparrow} \Delta^{\uparrow}_{ij} + \beta^{\downarrow} \Delta^{\downar
 ## 
 
 ::: {style="text-align: center;"}
-![](plot_08.png){width="95%"}
+![](p01.png){width="95%"}
 :::
 
-::: {style="font-size: 22px; text-align: center;"}
-ClogLog discrete-time hazard.  Two-way FE.  90% CI from node bootstrap
-:::
 
 
 ## 
 
 ::: {style="text-align: center;"}
-![](plot_09.png){width="95%"}
-:::
-
-::: {style="font-size: 22px; text-align: center;"}
-High-nestedness physical skills face more than 30 p.p. penalty at 2-quartile upward gap
+![](p02.png){width="95%"}
 :::
 
 

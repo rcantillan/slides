@@ -123,9 +123,7 @@
     }
   </style>
   <script src="slides_files/libs/kePrint-0.0.1/kePrint.js"></script>
-
   <link href="slides_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -232,6 +230,12 @@
 </div>
 </div>
 </section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div style="font-size: 26px; margin-top: 3em;">
+<p><img data-src="skill_adopt_by_nurse_multisource.png" style="width:70.0%"></p>
+</div>
+</section>
 <section id="the-architecture-we-build-upon" class="slide level2 smaller">
 <h2>The Architecture We Build Upon</h2>
 <div class="columns">
@@ -281,10 +285,16 @@
 <h1>I. THE PHENOMENON</h1>
 
 </section>
+<section id="raw-gravity-patterns" class="slide level2 smaller">
+<h2>Raw Gravity Patterns</h2>
+<div style="text-align: center;">
+<p><img data-src="p05.png" style="width:90.0%"></p>
+</div>
+</section>
 <section id="polarized-diffusion-flow-networks" class="slide level2 smaller">
 <h2>Polarized Diffusion: Flow Networks</h2>
-<div style="font-size: 26px; margin-top: 3em;">
-<p><img data-src="flow_net_aggregated.png" style="width:80.0%"></p>
+<div style="font-size: 26px; margin-top: 1em;">
+<p><img data-src="Rplot01.png" style="width:100.0%"></p>
 </div>
 </section>
 <section id="the-asymmetry-directional-friction-by-domain" class="slide level2 smaller">
@@ -340,31 +350,16 @@
 <p>Physical skills face <strong>1.7× more friction</strong> going up than going down</p>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<div style="text-align: center;">
-<p><img data-src="flow_skills_cognitive.png" style="width:100.0%"></p>
-</div>
-<div style="font-size: 20px; text-align: center;">
-<p>Average shift in wage quintiles (destination - origin). Core cognitive skills drift <strong>upward</strong></p>
-</div>
-</section>
 <section id="section-2" class="slide level2">
 <h2></h2>
 <div style="text-align: center;">
-<p><img data-src="flow_skills_physical.png" style="width:100.0%"></p>
-</div>
-<div style="font-size: 20px; text-align: center;">
-<p>Most physical skills drift <strong>downward</strong> or lateral (static strength, inspection, coordination)</p>
+<p><img data-src="p03.png" style="width:85.0%"></p>
 </div>
 </section>
-<section id="raw-gravity-patterns" class="slide level2 smaller">
-<h2>Raw Gravity Patterns</h2>
+<section id="section-3" class="slide level2">
+<h2></h2>
 <div style="text-align: center;">
-<p><img data-src="plot_07.png" style="width:90.0%"></p>
-</div>
-<div style="font-size: 22px; text-align: center;">
-<p>Adoption rate by <strong>education gap</strong>, <strong>wage gap</strong>, and <strong>structural distance</strong> deciles</p>
+<p><img data-src="p04.png" style="width:85.0%"></p>
 </div>
 </section></section>
 <section>
@@ -494,22 +489,16 @@
 <h1>III. MODEL RESULTS</h1>
 
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div style="text-align: center;">
-<p><img data-src="plot_08.png" style="width:95.0%"></p>
-</div>
-<div style="font-size: 22px; text-align: center;">
-<p>ClogLog discrete-time hazard. Two-way FE. 90% CI from node bootstrap</p>
-</div>
-</section>
 <section id="section-4" class="slide level2">
 <h2></h2>
 <div style="text-align: center;">
-<p><img data-src="plot_09.png" style="width:95.0%"></p>
+<p><img data-src="p01.png" style="width:95.0%"></p>
 </div>
-<div style="font-size: 22px; text-align: center;">
-<p>High-nestedness physical skills face more than 30 p.p. penalty at 2-quartile upward gap</p>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<div style="text-align: center;">
+<p><img data-src="p02.png" style="width:95.0%"></p>
 </div>
 </section>
 <section id="key-magnitudes" class="slide level2 smaller">
@@ -785,7 +774,7 @@
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Cantillan &amp; Bucca | Skill Diffusion &amp; Stratification — COES Mobility 2025</p>
+
 </div>
 </div></div>
 
@@ -998,80 +987,42 @@
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
