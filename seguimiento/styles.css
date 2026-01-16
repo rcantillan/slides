@@ -1,0 +1,80 @@
+/* ===========================
+   styles.css — v7 (Turquoise Follow-up Theme)
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700;900&display=swap');
+
+:root{
+  --brand: #14b1ab;           /* Professional Turquoise */
+  --brand-dark: #0a7a76;      /* Darker Teal for headers */
+  --brand-accent: #19d3cc;    /* Bright accent */
+  --text: #2c3e50;
+  --title-scale: 2.05em;
+  --subtitle-scale: 1.25em;
+}
+
+.reveal{
+  font-family: "Inconsolata", monospace;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: inherit; 
+  color: var(--brand-dark);
+  font-weight: 900; 
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+}
+
+.reveal h1 { font-size: 2.2em; color: var(--brand-dark); }
+.reveal h2 { font-size: 1.6em; border-bottom: 3px solid var(--brand); padding-bottom: 10px; }
+
+.reveal blockquote {
+  border-left: 5px solid var(--brand);
+  background: #f8fdfd;
+  box-shadow: none;
+  padding: 20px;
+  font-style: normal;
+  text-align: left;
+  width: 90%;
+}
+
+.reveal a { color: var(--brand); }
+.reveal a:hover { color: var(--brand-accent); }
+
+/* Layout: Title Slide */
+.title-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 30px;
+  align-items: center;
+  height: 100%;
+}
+
+.title-content { text-align: left; }
+
+.title { 
+  font-size: var(--title-scale); 
+  color: var(--brand-dark); 
+  font-weight: 900; 
+  line-height: 1.1;
+}
+
+.subtitle { 
+  font-size: var(--subtitle-scale); 
+  color: var(--brand); 
+  font-weight: 600; 
+  margin-top: 10px;
+}
+
+#title-image-el {
+  width: 100%;
+  border-radius: 12px;
+  filter: grayscale(0.2) contrast(1.1);
+  box-shadow: 20px 20px 0px var(--brand); /* Stylized Turquoise Shadow */
+}
+
+/* Section Dividers */
+.reveal .slide-number { color: var(--brand); }
