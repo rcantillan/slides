@@ -1,6 +1,6 @@
 ---
 title: "Structurally Conditioned Diffusion"
-subtitle: "How Social and Occupational Structures Filter Change"
+subtitle: "How Social and Occupational Structures Filter Propagation"
 author: "Roberto Cantillan"
 institute: "Department of Sociology | Pontificia Universidad Católica de Chile"
 format:
