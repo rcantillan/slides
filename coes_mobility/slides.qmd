@@ -19,33 +19,34 @@ format:
 execute:
   echo: false
   warning: false
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ## The Puzzle {.smaller}
 
-
-:::{style="font-size: 26px; margin-top: 3em;"}
-
+::: {style="font-size: 26px; margin-top: 3em;"}
 **What we know:**
 
-- Labor markets are organized around **unequal occupations** differing in skills, wages, and credentials
-- A **polarized skill space**: socio-cognitive vs. sensory/physical domains align with education and wages
-- A **nested hierarchy**: enabling capabilities sit higher, command wage premia, require longer education
+-   Labor markets are organized around **unequal occupations** differing
+    in skills, wages, and credentials
+-   A **polarized skill space**: socio-cognitive vs. sensory/physical
+    domains align with education and wages
+-   A **nested hierarchy**: enabling capabilities sit higher, command
+    wage premia, require longer education
 
 **What we don't know:**
 
-> How do skill requirements **propagate** between occupations — and why does this process **reproduce** hierarchies? 
-
+> How do skill requirements **propagate** between occupations — and why
+> does this process **reproduce** hierarchies?
 :::
 
-##
+## 
 
-:::{style="font-size: 26px; margin-top: 3em;"}
-
+::: {style="font-size: 26px; margin-top: 3em;"}
 ![](skill_adopt_by_nurse.jpg){width="70%"}
-
 :::
-
 
 ```{r tabla_computacion, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
@@ -66,209 +67,190 @@ datos_computacion %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
 ```
 
-
-
-##
-
-:::{style="font-size: 26px; margin-top: 3em;"}
-
-![](skill_adopt_by_nurse_multisource.png){width="70%"}
-
-:::
-
-
-
 ## The Architecture We Build Upon {.smaller}
 
-:::{.columns}
-:::{.column width="50%"}
-:::{style="font-size: 24px;"}
-:::{style="font-size: 26px; margin-top: 3em;"}
+::::::::: columns
+::::: {.column width="50%"}
+:::: {style="font-size: 24px;"}
+::: {style="font-size: 26px; margin-top: 3em;"}
+**Polarization** (Alabdulkareem et al. 2018)
 
-
-**Polarization** (Alabdulkareem et al.  2018)
-
-- Skills cluster into two domains
-- Socio-cognitive: high education, high wages
-- Sensory/physical: lower education, lower wages
-
+-   Skills cluster into two domains
+-   Socio-cognitive: high education, high wages
+-   Sensory/physical: lower education, lower wages
 :::
-:::
-:::
+::::
+:::::
 
-
-:::{.column width="50%"}
-:::{style="font-size: 24px;"}
-:::{style="font-size: 26px; margin-top: 3em;"}
-
+::::: {.column width="50%"}
+:::: {style="font-size: 24px;"}
+::: {style="font-size: 26px; margin-top: 3em;"}
 ![](p1_ref_plot.png){width="95%"}
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 ## The Architecture We Build Upon {.smaller}
 
-:::{.columns}
-:::{.column width="50%"}
-:::{style="font-size: 24px;"}
-:::{style="font-size: 26px; margin-top: 3em;"}
-
+::::::::: columns
+::::: {.column width="50%"}
+:::: {style="font-size: 24px;"}
+::: {style="font-size: 26px; margin-top: 3em;"}
 **Nestedness** (Hosseinioun et al. 2025)
 
-- Asymmetric dependencies: some skills "enable" others
-- Nested architecture has **intensified** over time
-- Position in hierarchy predicts wages, automation risk
-
+-   Asymmetric dependencies: some skills "enable" others
+-   Nested architecture has **intensified** over time
+-   Position in hierarchy predicts wages, automation risk
 :::
-:::
-:::
+::::
+:::::
 
-:::{.column width="50%"}
-:::{style="font-size: 24px;"}
-:::{style="font-size: 26px; margin-top: 3em;"}
-
+::::: {.column width="50%"}
+:::: {style="font-size: 24px;"}
+::: {style="font-size: 26px; margin-top: 3em;"}
 ![](p2_ref_plot.png){width="95%"}
 :::
+::::
+:::::
+:::::::::
+
+# I. A GRAVITY MODEL FOR SKILL DIFFUSION {.center .middle background-color="#0a4e58"}
+
+## 
+
+### Skill diffusion as a gravity process
+
+::::::: columns
+:::: {.column width="75%"}
+::: {style="font-size: 26px; margin-top: 1em;"}
+![](scheme.png){width="100%"}
 :::
+::::
+
+:::: {.column width="20%"}
+::: {style="font-size: 22px; margin-top: 5em;"}
+-   Skill specific diffusivity (g)
+
+-   Masses (m) <br>
+
+-   Distance (d)
+
+    -   Task similarity (symmetric)
+    -   Status gap (asymmetric)
 :::
+::::
+:::::::
+
+## Our theory: Asimmetric trayectory channeling
+
+::: {style="font-size: 25px; margin-top: 6em;"}
+-   **Socio-cognitive** requirements are preferentially adopted by
+    occupations of higher status than the source, successfully climbing
+    the status gradient.
+
+-   **Physical** requirements face a structural "upward veto," being
+    predominantly relegated to adoption paths toward lower-status
+    occupations.
+
+-   This asymmetric dynamic would explain the observed polarized skill
+    architecture of the labor market.
 :::
 
-# I. A GRAVITY MODEL FOR SKILL DIFFUSION  {.center .middle background-color="#0a4e58"}
-
-
-## Standard gravity  
-
-:::{style="font-size: 5px; margin-top: 10em;"}
-
-![](newton.jpeg){width="80%"}
-:::
-
-## Gravity Logic for Skill Diffusion {.smaller}
-
-:::{style="font-size: 23px; margin-top: 3em;"}
-
-Adapting standard gravity models traditionaly used in economics, we understand the probability $P_{ijk}$ that skill $k$ diffuses from occupation $i$ (source) to $j$ (target) is given by: 
+## Our theory: Asimmetric trayectory channeling
 
 <br>
 
-$$P_{ijk} \;\propto\;
-\frac{M_i \cdot M_j \cdot \color{red}{S_k}}{\color{blue}{D_{ij}^{\gamma}}} $$
+::: {style="font-size: 25px; margin-top: 4em;"}
+### Alternative accounts
 
-:::{style="font-size: 20px; margin-top: 3em;"}
-
-- $M_i: \text{Emissive capacity of the source occupation y $M_j$ absortuve capacity of the target occupation}$
-- $\color{red}{S_k: \text{Skills differ in how easily they travel across occupations)}}$
-- $\color{blue}{D_{ij}: \text{Distance between occupations (eg. wage gap, task relatedness)}}$
-
+-   Skills travel between similar occupations: We control for
+    occupational **task relatedness** (structural distance).
+-   Diffusion is driven by occupation size, not skills: We account for
+    **occupational "mass"** using occupation fixed effects (Source and
+    Target).
+-   Some skills travel more easily than others: We account for
+    **intrinsic diffusivity** using skill-level fixed effects ($g_s$).
 :::
 
-:::{style="font-size: 25px; margin-top: 2em;"}
+# II. DATA & METHODS {.center .middle background-color="#0a4e58"}
 
-Our theory focuses on the the interaction between skill attributes and role of distance between occupations (above and beyond the role of mass)
+## Data
 
-:::
+::: {style="font-size: 23px; margin-top: 5em;"}
+-   __O\*NET__ 2015-2024 (161 skill taxonomy)
+-   __BLS__ wages and education
+-   About 17M dyadic opportunities
 
-:::
-
-## Our theory: Asimmetric trayectory channeling 
-
-
-:::{style="font-size: 25px; margin-top: 2em;"}
-
-- Distance (D) determines who is within reach; occupational status (S) determines which skills are allowed in.
-Jobs that are close to each other can easily exchange requirements, but higher-status jobs selectively filter what they accept.
-
-ATC is what happens when closeness meets inequality.
-
-- Cognitive skills move upward because high-status jobs value and can afford them—especially when they build on prior skills.
-
-- Physical skills are often blocked even between similar jobs, so they mostly flow sideways or downward, especially when they do not rely on prior capabilities.
-
-- Aggregate polarization dynamic: complex, cognitive skills climb the job ladder, while simple, physical skills get trapped in lateral or downward paths.
-
-:::
-
-
-## Asymmetric Frictions: The ATC Mechanism {.smaller}
-
-:::{style="font-size: 23px; margin-top: 3em;"}
-
-Standard gravity assumes **symmetric** distance costs.  In occupational diffusion, this is unrealistic.
-
-**Directional decomposition of wage/status gap** $G_{ij}$
-
-**Core hypothesis — Asymmetric Trajectory Channeling (ATC):**
-
-> Socio-cognitive skills face **low upward friction**; physical skills face **high upward friction**
-
-This decomposition enables distinct coefficients for upward vs. downward flows — the central feature of ATC.
-
-:::
-
-::: {.aside}
-* **Sayer, A.** (2000). *Realism and Social Science*. Sage.
-* **Hidalgo, C.** (2015). *Why Information Grows*. Basic Books.
-:::
-
-
-## Modeling Skill Diffusibility {.smaller}
-
-:::{style="font-size: 23px; margin-top: 5em;"}
-
-
-**Two theoretically grounded attributes:**
-
-- **Domain** ($D_k$): Physical vs. cognitive/socio-cognitive
-- **Nestedness** ($N_k$): Low vs. high dependency in skill hierarchy
-
-
-This enforces **meaningful structure** in the skill space, rather than treating each skill as categorical noise.
-
-:::
-
-
-
-# II. DATA & METHODS  {.center .middle background-color="#0a4e58"}
-
-
-
-## Data 
-
-:::{style="font-size: 23px; margin-top: 5em;"}
-
-- O*NET 2015-2024 (161 descriptors)
-- BLS wages and education
-- About 17M dyadic opportunities
-
-**Challenge:** O*NET rolling panel creates "false zeros"
+**Challenge:** O\*NET rolling panel creates "false zeros"
 
 **Solution: Interval-Censored Design**
 
-- Adoption = latent event within window
-- Opportunity: source specializes, target does not
-- Outcome: target crosses threshold
 :::
 
 
-## Methods 
+## Measures I
 
-:::{style="font-size: 23px; margin-top: 5em;"}
+::: {style="font-size: 25px; margin-top: 1em;"}
 
-**Estimation:**
+- **Dependent Variable**: Skill Adoption ($Y_{ijs}$). Where $Y=1$ if a target (2024) adopts a skill previously held by a source (2015), and $Y=0$ if the opportunity for adoption was not taken.
+:::
 
-- Two-way fixed effects (source, target)
-- Node-level bootstrap (B=1000) for valid inference
 
-**Diagnostics:**
+::: {style="font-size: 25px; margin-top: 1em;"}
+- **Main Independent Variables**:
+    - **Wage Gap (Piecewise)**:
+        - $\text{wage_gap}_{ij}{\uparrow} = \max(0, G_{ij})$
+        - $\text{wage_gap}_{ij}{\downarrow} = \min(0, G_{ij})$
+        - Where $G_{ij} = \log(\overline{W}_{target}) - \log(\overline{W}_{source})$
+:::
 
-- Placebo leads (future gaps have no effect)
-- Within-cluster permutation
-- Worker-flow distances replication
-- Out-of-sample prediction (2015-19 to 2020-24)
+
+::: {style="font-size: 25px; margin-top: 1em;"}
+- **Critical control variables**:     
+    - Structural Proximity: Occupational Task Relatedness calculated via cosine similarity 
+    - Source, Target and Skill fixed effects. 
 
 :::
 
+
+## Measures II
+
+#### Skill type: Skill types might respond to wage gaps differently
+
+::: {style="font-size: 70px; margin-top: 1em;"}
+![](weber.png){width="70%"}
+
+:::
+
+
+## The ATC Model
+
+::: {style="font-size: 25px; margin-top: 4em;"}
+
+For each skill type, I estimate a linearized version of the gravity model
+
+$$
+\begin{aligned}
+\mathrm{logit}\,P(Y_{ijs}=1) = \, & \beta_{\text{up}}(\text{wage_gap}_{ij})^\uparrow + \beta_{\text{down}}(\text{wage_gap}_{ij})^\downarrow \\
+& + \delta \cdot \text{relatedness}_{ij} \\
+& + \text{source}_{i} / \text{target}_{j} + \text{skill}_{s}
+\end{aligned}
+$$
+
+-   $\beta_{\text{up}}/ \beta_{\text{down}}$  measure the specific
+    resistance (or facilitation) encountered when the target occupation
+    has a higher ($\uparrow$) or lower ($\downarrow$) wage status than
+    the source.
+-   $\delta$ is the effect for the task-relatedness between occupations.
+-   $\text{source}_i, \text{target}_j, \text{skill}_s$ are fixed
+    effects measuring occupational emission/absorption mass and
+    intrinsic "diffusivity" of each skill[^1].
+    
+    
+    
+[^1]: Source and taregt fixed effects are introduced separately to break perfect colinearity
+:::
 
 
 # III. FINDINGS {.center .middle background-color="#0a4e58"}
@@ -279,36 +261,32 @@ This enforces **meaningful structure** in the skill space, rather than treating 
 ![](p05.png){width="100%"}
 :::
 
-
-
 ## Polarized Diffusion: Flow Networks {.smaller}
 
-:::{style="font-size: 26px; margin-top: 1em;"}
+::: {style="font-size: 26px; margin-top: 1em;"}
 ![](Rplot01.png){width="100%"}
 :::
-
 
 ## The Asymmetry: Directional Friction by Domain {.smaller}
 
 ::: {style="font-size: 22px; margin-top: 4em; margin-bottom: 2em;"}
-**Asymmetry** means skills face different "friction" when diffusing up vs.  down the wage ladder.  The direction of this friction **reverses** between cognitive and physical skills. 
+**Asymmetry** means skills face different "friction" when diffusing up
+vs. down the wage ladder. The direction of this friction **reverses**
+between cognitive and physical skills.
 :::
 
 ::: {style="font-size: 22px;"}
-
-| | Cognitive | Physical | Interpretation |
-|---|:---:|:---:|---|
+|   | Cognitive | Physical | Interpretation |
+|-----------------|:-----------------:|:-----------------:|-----------------|
 | **Upward rate** | **20.2%** | 11.1% | Cognitive climbs easily |
 | **Downward rate** | 15.6% | **19.0%** | Physical falls easily |
 | **Gap (Up − Down)** | **+4. 7 p.p.** | **−8.0 p. p.** | Opposite signs |
 | **Implication** | Facilitates ascent | Blocks ascent | Polarizing force |
-
 :::
 
 ::: {style="font-size: 20px; text-align: center; margin-top: 1em;"}
 Physical skills face **1.7× more friction** going up than going down
 :::
-
 
 ## 
 
@@ -316,123 +294,73 @@ Physical skills face **1.7× more friction** going up than going down
 ![](p03.png){width="85%"}
 :::
 
-
-
 ## 
 
 ::: {style="text-align: center;"}
 ![](p04.png){width="85%"}
 :::
 
-
-
 # III. REGRESSION RESULTS {.center .middle background-color="#0a4e58"}
 
+## 
 
-## Asymmetric trajectory channeling by skill domain
+### Asymmetric trajectory channeling by skill domain
+
 <br>
 
 ::: {style="text-align: center; margin-bottom: 6em;"}
 ![](Rplot04.png){width="75%"}
 :::
 
-
-
 ## 
 
+### by domain & Nestedness
+
 ::: {style="text-align: center;"}
-![](p02.png){width="95%"}
+![](Rplot06.png){width="80%"}
 :::
 
 
-## Key Magnitudes {.smaller}
+## Why This Happens: Potential Reasons {.smaller}
 
-:::{style="font-size: 24px; margin-top: 4em; text-align: left;"}
+::: {style="font-size: 26px; margin-top: 3em;"}
 
-**Coefficients (wage gap, cloglog scale):**
+**This asymmetry reflects structural filtering, not chance:**
 
-| Term | Cognitive | Physical | Interaction |
-|:-----|:----------|:---------|:------------|
-| Upward | +0.08. | −0.34 | −0.42*** |
-| Downward | +0.13 (ns) | +0.65 | +0.52** |
-| Distance | −1.90*** | −3.23 | −1.33* |
+- **Adoption capacity**  
+  High-status occupations have more resources, slack, and organizational capacity to experiment with complex, high-nestedness skills.
 
-**Interpretation:**
+- **Market shift**  
+  Elite occupations increasingly demand socio-cognitive skills to manage coordination, abstraction, and organizational complexity.
 
-- Upward gap **slightly boosts** cognitive adoption, **penalizes** physical
-- Downward gap has **no effect** on cognitive, **strongly boosts** physical
-- Distance decay is **70% steeper** for physical skills
-
-:::
-
-
-## Robustness Summary {.smaller}
-
-:::{style="font-size: 25px; margin-top: 4em;"}
-
-| Test | Specification | Result |
-|------|---------------|--------|
-| Thresholds | RCA 0.9, 1.0, 1.1 | Pattern unchanged |
-| Distances | Shortest path, resistance, cosine | Same relative slopes |
-| Periods | 2015-18, 2019-21, 2022-24 | ATC persists |
-| Bootstrap | Node-level B=1000 vs clustered SE | Ratio around 1.0 |
-| Representation | Skill-skill vs occ-occ network | Ordinal match |
-
-
-:::{style="font-size: 25px; margin-top: 2em;"}
-
-The asymmetry is **not** an artifact of thresholds, distance measures, or time periods. 
-
-:::
-:::
-
-
-# IV. IMPLICATIONS {.center .middle background-color="#0a4e58"}
-
-## What This Tells Us {.smaller}
-
-:::{style="font-size: 22px; margin-top: 2em;"}
-
-**The asymmetry is structural, not incidental:**
-
-- Physical skills don't just *happen* to stay low — they face systematic friction
-- Cognitive skills don't just *happen* to climb — the path is smoother
-- Nestedness *amplifies* these differences
-
-**This reframes polarization:**
-
-> Not just *what* skills exist where, but *how* skill requirements **flow** — and why certain flows are blocked
-
-**Open questions:**
-
-- Does reducing occupational distance (via training, credentialing) actually change diffusion? 
-- Which specific skills are "near the boundary" and most amenable to intervention? 
-- How do firm-level decisions interact with these macro patterns?
+- **Status filtering**  
+  High-status occupations actively avoid physical requirements to preserve professional distinction and symbolic boundaries.
 
 :::
 
 
 ## Conclusion {.smaller}
 
-:::{style="font-size: 25px; margin-top: 2em;"}
+::: {style="font-size: 26px; margin-top: 3em;"}
 
 **Main finding:**
 
-> Skill diffusion follows an **asymmetric gravity rule** that actively filters physical requirements out of high-status occupations
+> Skill diffusion is asymmetric: it pulls socio-cognitive skills upward and
+> pushes physical skills downward.
 
-**Three key mechanisms:**
+**Key takeaways:**
 
-1. **Directional friction**: Physical upward friction much greater than cognitive
-2. **Distance decay**: Steeper for physical than cognitive skills
-3.  **Nestedness amplification**: Enabling skills show strongest asymmetries
+- **Directional filtering**  
+  Physical skills face a barrier that prevents them from entering high-wage occupations.
 
-**Contribution:**
+- **Nestedness matters**  
+  Skills that anchor and enable other skills exhibit the strongest asymmetries.
 
-- Provides the **missing bridge** from static architecture to dynamic reproduction
-- Specifies **testable propagation rules** with concrete policy levers
-- Demonstrates that stratification is reproduced through **selective diffusion**
+- **Inequality mechanism**  
+  Stratification persists not only because of who has which skills, but because diffusion itself selectively channels skill requirements.
 
 :::
+
 
 
 # Thank You {.center .middle background-color="#0a4e58"}
@@ -441,96 +369,87 @@ The asymmetry is **not** an artifact of thresholds, distance measures, or time p
 
 Department of Sociology, PUC Chile
 
-rcantillan@uc.cl
+rcantillan\@uc.cl
 
-Paper and Replication: [github.com/rcantillan/skill_diffusion](https://github.com/rcantillan/skill_diffusion)
-
+Paper and Replication:
+[github.com/rcantillan/skill_diffusion](https://github.com/rcantillan/skill_diffusion)
 
 # Backup Slides {.center .middle background-color="#2d3e50"}
 
-
 ## B1: Formal Definitions {.smaller}
 
-:::{style="font-size: 22px;  margin-top: 3em;"}
-
+::: {style="font-size: 22px;  margin-top: 3em;"}
 **Revealed Comparative Advantage:**
 
 $$\mathrm{RCA}(j,s) = \frac{\mathrm{onet}(j,s)/\sum_{s'}\mathrm{onet}(j,s')}{\sum_{j'}\mathrm{onet}(j',s)/\sum_{j',s''}\mathrm{onet}(j',s'')}$$
 
 **Event definitions for skill s:**
 
-- Specialists at baseline: RCA greater than 1 at t0
-- Users at follow-up: RCA greater than 1 at t1
-- New adopters: Users minus Specialists
+-   Specialists at baseline: RCA greater than 1 at t0
+-   Users at follow-up: RCA greater than 1 at t1
+-   New adopters: Users minus Specialists
 
 **Directional gaps:**
 
 $$\Delta^{\uparrow}_{ij} = \max(0, \text{status}_j - \text{status}_i)$$
 
 $$\Delta^{\downarrow}_{ij} = \max(0, \text{status}_i - \text{status}_j)$$
-
 :::
-
 
 ## B2: Nestedness Definition {.smaller}
 
-:::{style="font-size: 22px;  margin-top: 2em;"}
-
+::: {style="font-size: 22px;  margin-top: 2em;"}
 **Contribution to nestedness (cs):**
 
 $$c_s = \frac{\mathrm{NODF}_{\text{obs}} - \mathbb{E}[\mathrm{NODF}^{(s)}_{\text{rand}}]}{\mathrm{sd}[\mathrm{NODF}^{(s)}_{\text{rand}}]}$$
 
 **Interpretation:**
 
-- cs high: Skill acts as scaffolding (analytics, management, communication)
-- cs low: Terminal or narrow capability (specific technique)
+-   cs high: Skill acts as scaffolding (analytics, management,
+    communication)
+-   cs low: Terminal or narrow capability (specific technique)
 
 **Reach:**
 
-- Size of forward-reachable set in dependency network
-- High reach means skill enables many downstream capabilities
+-   Size of forward-reachable set in dependency network
+-   High reach means skill enables many downstream capabilities
 
 **In our models:**
 
-- Terciles: Low, Mid, High nestedness
-- Interact with directional gaps
-- High nestedness **amplifies** ATC asymmetry
-
+-   Terciles: Low, Mid, High nestedness
+-   Interact with directional gaps
+-   High nestedness **amplifies** ATC asymmetry
 :::
-
 
 ## B3: Full Coefficient Table {.smaller}
 
-:::{style="font-size: 18px; margin-top: 4em;"}
-
-| Term | Coefficient | SE |
-|------|-------------|-----|
-| Upward (base) | +0.08 | 0.04 |
-| Downward (base) | +0.13 | 0.11 |
-| Domain: Physical | +0.72 | 0.30 |
-| Upward × Physical | −0.42 | 0.07 |
-| Downward × Physical | +0.52 | 0.18 |
-| Structural distance | −1.90 | 0.20 |
-| Distance × Physical | −1.33 | 0.52 |
-| Nestedness: Mid | +0.00 | 0.04 |
-| Nestedness: High | −0.13 | 0.05 |
-| Upward × Nest-Mid | +0.12 | 0. 03 |
-| Upward × Nest-High | +0. 07 | 0.04 |
+:::: {style="font-size: 18px; margin-top: 4em;"}
+| Term                | Coefficient | SE     |
+|---------------------|-------------|--------|
+| Upward (base)       | +0.08       | 0.04   |
+| Downward (base)     | +0.13       | 0.11   |
+| Domain: Physical    | +0.72       | 0.30   |
+| Upward × Physical   | −0.42       | 0.07   |
+| Downward × Physical | +0.52       | 0.18   |
+| Structural distance | −1.90       | 0.20   |
+| Distance × Physical | −1.33       | 0.52   |
+| Nestedness: Mid     | +0.00       | 0.04   |
+| Nestedness: High    | −0.13       | 0.05   |
+| Upward × Nest-Mid   | +0.12       | 0\. 03 |
+| Upward × Nest-High  | +0. 07      | 0.04   |
 
 ::: {style="font-size: 22px; text-align: center; margin-top: 2em;"}
-ClogLog link. Two-way FE (source, target).  Clustered SE. 
+ClogLog link. Two-way FE (source, target). Clustered SE.
 :::
-:::
+::::
 
-
-## B5: Complete Gravity Model Derivation {.smaller}
+## B4: Complete Gravity Model Derivation {.smaller}
 
 ::: {style="font-size: 20px;"}
-
 **Step 1: Classic Gravity**
 $$T_{ij} = k \cdot \frac{M_i M_j}{D_{ij}^{\gamma}} \quad \Rightarrow \quad \log \mathbb{E}[T_{ij}] = \beta_0 + \alpha_i + \beta_j - \gamma \log D_{ij}$$
 
-**Step 2: Triadic Extension (adding skill $k$)**
+**Step 2: Triadic Extension (adding skill** $k$)
 $$\lambda_{ijk} \propto \frac{M_i \cdot M_j \cdot S_k}{D_{ij}^{\gamma}} \quad \Rightarrow \quad \log \lambda_{ijk} = \beta_0 + \alpha_i + \beta_j + \delta_k - \gamma \log D_{ij}$$
 
 **Step 3: Asymmetric Frictions**
@@ -541,5 +460,45 @@ $$\text{SkillMass}_k = \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k$$
 
 **Step 5: Full Specification**
 $$\text{cloglog}\big(\Pr(T_{ijk}=1)\big) = \beta_0 + \alpha_i + \beta_j + \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k + \beta^{\uparrow} \Delta^{\uparrow}_{ij} + \beta^{\downarrow} \Delta^{\downarrow}_{ij}$$
-
 :::
+
+## B5: Key Magnitudes {.smaller}
+
+::: {style="font-size: 24px; margin-top: 4em; text-align: left;"}
+**Coefficients (wage gap, cloglog scale):**
+
+| Term     | Cognitive   | Physical | Interaction |
+|:---------|:------------|:---------|:------------|
+| Upward   | +0.08.      | −0.34    | −0.42\*\*\* |
+| Downward | +0.13 (ns)  | +0.65    | +0.52\*\*   |
+| Distance | −1.90\*\*\* | −3.23    | −1.33\*     |
+
+**Interpretation:**
+
+-   Upward gap **slightly boosts** cognitive adoption, **penalizes**
+    physical
+-   Downward gap has **no effect** on cognitive, **strongly boosts**
+    physical
+-   Distance decay is **70% steeper** for physical skills
+:::
+
+## B6: Robustness Summary {.smaller}
+
+:::: {style="font-size: 25px; margin-top: 4em;"}
+| Test           | Specification                     | Result               |
+|----------------|-----------------------------------|----------------------|
+| Thresholds     | RCA 0.9, 1.0, 1.1                 | Pattern unchanged    |
+| Distances      | Shortest path, resistance, cosine | Same relative slopes |
+| Periods        | 2015-18, 2019-21, 2022-24         | ATC persists         |
+| Bootstrap      | Node-level B=1000 vs clustered SE | Ratio around 1.0     |
+| Representation | Skill-skill vs occ-occ network    | Ordinal match        |
+
+::: {style="font-size: 25px; margin-top: 2em;"}
+The asymmetry is **not** an artifact of thresholds, distance measures,
+or time periods.
+:::
+::::
+
+
+
+

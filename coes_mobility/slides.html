@@ -230,12 +230,6 @@
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<div style="font-size: 26px; margin-top: 3em;">
-<p><img data-src="skill_adopt_by_nurse_multisource.png" style="width:70.0%"></p>
-</div>
-</section>
 <section id="the-architecture-we-build-upon" class="slide level2 smaller">
 <h2>The Architecture We Build Upon</h2>
 <div class="columns">
@@ -285,73 +279,49 @@
 <h1>I. A GRAVITY MODEL FOR SKILL DIFFUSION</h1>
 
 </section>
-<section id="standard-gravity" class="slide level2">
-<h2>Standard gravity</h2>
-<div style="font-size: 5px; margin-top: 10em;">
-<p><img data-src="newton.jpeg" style="width:80.0%"></p>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<h3 id="skill-diffusion-as-a-gravity-process">Skill diffusion as a gravity process</h3>
+<div class="columns">
+<div class="column" style="width:75%;">
+<div style="font-size: 26px; margin-top: 1em;">
+<p><img data-src="scheme.png" style="width:100.0%"></p>
 </div>
-</section>
-<section id="gravity-logic-for-skill-diffusion" class="slide level2 smaller">
-<h2>Gravity Logic for Skill Diffusion</h2>
-<div style="font-size: 23px; margin-top: 3em;">
-<p>Adapting standard gravity models traditionaly used in economics, we understand the probability <span class="math inline">\(P_{ijk}\)</span> that skill <span class="math inline">\(k\)</span> diffuses from occupation <span class="math inline">\(i\)</span> (source) to <span class="math inline">\(j\)</span> (target) is given by:</p>
-<p><br></p>
-<p><span class="math display">\[P_{ijk} \;\propto\;
-\frac{M_i \cdot M_j \cdot \color{red}{S_k}}{\color{blue}{D_{ij}^{\gamma}}} \]</span></p>
-<div style="font-size: 20px; margin-top: 3em;">
+</div><div class="column" style="width:20%;">
+<div style="font-size: 22px; margin-top: 5em;">
 <ul>
-<li><span class="math inline">\(M_i: \text{Emissive capacity of the source occupation y $M_j$ absortuve capacity of the target occupation}\)</span></li>
-<li><span class="math inline">\(\color{red}{S_k: \text{Skills differ in how easily they travel across occupations)}}\)</span></li>
-<li><span class="math inline">\(\color{blue}{D_{ij}: \text{Distance between occupations (eg. wage gap, task relatedness)}}\)</span></li>
+<li><p>Skill specific diffusivity (g)</p></li>
+<li><p>Masses (m) <br></p></li>
+<li><p>Distance (d)</p>
+<ul>
+<li>Task similarity (symmetric)</li>
+<li>Status gap (asymmetric)</li>
+</ul></li>
 </ul>
 </div>
-<div style="font-size: 25px; margin-top: 2em;">
-<p>Our theory focuses on the the interaction between skill attributes and role of distance between occupations (above and beyond the role of mass)</p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="our-theory-asimmetric-trayectory-channeling" class="slide level2">
 <h2>Our theory: Asimmetric trayectory channeling</h2>
-<div style="font-size: 25px; margin-top: 2em;">
+<div style="font-size: 25px; margin-top: 6em;">
 <ul>
-<li>Distance (D) determines who is within reach; occupational status (S) determines which skills are allowed in. Jobs that are close to each other can easily exchange requirements, but higher-status jobs selectively filter what they accept.</li>
-</ul>
-<p>ATC is what happens when closeness meets inequality.</p>
-<ul>
-<li><p>Cognitive skills move upward because high-status jobs value and can afford them—especially when they build on prior skills.</p></li>
-<li><p>Physical skills are often blocked even between similar jobs, so they mostly flow sideways or downward, especially when they do not rely on prior capabilities.</p></li>
-<li><p>Aggregate polarization dynamic: complex, cognitive skills climb the job ladder, while simple, physical skills get trapped in lateral or downward paths.</p></li>
+<li><p><strong>Socio-cognitive</strong> requirements are preferentially adopted by occupations of higher status than the source, successfully climbing the status gradient.</p></li>
+<li><p><strong>Physical</strong> requirements face a structural “upward veto,” being predominantly relegated to adoption paths toward lower-status occupations.</p></li>
+<li><p>This asymmetric dynamic would explain the observed polarized skill architecture of the labor market.</p></li>
 </ul>
 </div>
 </section>
-<section id="asymmetric-frictions-the-atc-mechanism" class="slide level2 smaller">
-<h2>Asymmetric Frictions: The ATC Mechanism</h2>
-<div style="font-size: 23px; margin-top: 3em;">
-<p>Standard gravity assumes <strong>symmetric</strong> distance costs. In occupational diffusion, this is unrealistic.</p>
-<p><strong>Directional decomposition of wage/status gap</strong> <span class="math inline">\(G_{ij}\)</span></p>
-<p><strong>Core hypothesis — Asymmetric Trajectory Channeling (ATC):</strong></p>
-<blockquote>
-<p>Socio-cognitive skills face <strong>low upward friction</strong>; physical skills face <strong>high upward friction</strong></p>
-</blockquote>
-<p>This decomposition enables distinct coefficients for upward vs.&nbsp;downward flows — the central feature of ATC.</p>
-</div>
-
-<aside><div>
+<section id="our-theory-asimmetric-trayectory-channeling-1" class="slide level2">
+<h2>Our theory: Asimmetric trayectory channeling</h2>
+<p><br></p>
+<section id="alternative-accounts" style="font-size: 25px; margin-top: 4em;">
+<h3>Alternative accounts</h3>
 <ul>
-<li><strong>Sayer, A.</strong> (2000). <em>Realism and Social Science</em>. Sage.</li>
-<li><strong>Hidalgo, C.</strong> (2015). <em>Why Information Grows</em>. Basic Books.</li>
+<li>Skills travel between similar occupations: We control for occupational <strong>task relatedness</strong> (structural distance).</li>
+<li>Diffusion is driven by occupation size, not skills: We account for <strong>occupational “mass”</strong> using occupation fixed effects (Source and Target).</li>
+<li>Some skills travel more easily than others: We account for <strong>intrinsic diffusivity</strong> using skill-level fixed effects (<span class="math inline">\(g_s\)</span>).</li>
 </ul>
-</div></aside></section>
-<section id="modeling-skill-diffusibility" class="slide level2 smaller">
-<h2>Modeling Skill Diffusibility</h2>
-<div style="font-size: 23px; margin-top: 5em;">
-<p><strong>Two theoretically grounded attributes:</strong></p>
-<ul>
-<li><strong>Domain</strong> (<span class="math inline">\(D_k\)</span>): Physical vs.&nbsp;cognitive/socio-cognitive</li>
-<li><strong>Nestedness</strong> (<span class="math inline">\(N_k\)</span>): Low vs.&nbsp;high dependency in skill hierarchy</li>
-</ul>
-<p>This enforces <strong>meaningful structure</strong> in the skill space, rather than treating each skill as categorical noise.</p>
-</div>
+</section>
 </section></section>
 <section>
 <section id="ii.-data-methods" class="title-slide slide level1 center middle" data-background-color="#0a4e58">
@@ -362,36 +332,69 @@
 <h2>Data</h2>
 <div style="font-size: 23px; margin-top: 5em;">
 <ul>
-<li>O*NET 2015-2024 (161 descriptors)</li>
-<li>BLS wages and education</li>
+<li><strong>O*NET</strong> 2015-2024 (161 skill taxonomy)</li>
+<li><strong>BLS</strong> wages and education</li>
 <li>About 17M dyadic opportunities</li>
 </ul>
 <p><strong>Challenge:</strong> O*NET rolling panel creates “false zeros”</p>
 <p><strong>Solution: Interval-Censored Design</strong></p>
+</div>
+</section>
+<section id="measures-i" class="slide level2">
+<h2>Measures I</h2>
+<div style="font-size: 25px; margin-top: 1em;">
 <ul>
-<li>Adoption = latent event within window</li>
-<li>Opportunity: source specializes, target does not</li>
-<li>Outcome: target crosses threshold</li>
+<li><strong>Dependent Variable</strong>: Skill Adoption (<span class="math inline">\(Y_{ijs}\)</span>). Where <span class="math inline">\(Y=1\)</span> if a target (2024) adopts a skill previously held by a source (2015), and <span class="math inline">\(Y=0\)</span> if the opportunity for adoption was not taken.</li>
+</ul>
+</div>
+<div style="font-size: 25px; margin-top: 1em;">
+<ul>
+<li><strong>Main Independent Variables</strong>:
+<ul>
+<li><strong>Wage Gap (Piecewise)</strong>:
+<ul>
+<li><span class="math inline">\(\text{wage_gap}_{ij}{\uparrow} = \max(0, G_{ij})\)</span></li>
+<li><span class="math inline">\(\text{wage_gap}_{ij}{\downarrow} = \min(0, G_{ij})\)</span></li>
+<li>Where <span class="math inline">\(G_{ij} = \log(\overline{W}_{target}) - \log(\overline{W}_{source})\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div style="font-size: 25px; margin-top: 1em;">
+<ul>
+<li><strong>Critical control variables</strong>:
+<ul>
+<li>Structural Proximity: Occupational Task Relatedness calculated via cosine similarity</li>
+<li>Source, Target and Skill fixed effects.</li>
+</ul></li>
 </ul>
 </div>
 </section>
-<section id="methods" class="slide level2">
-<h2>Methods</h2>
-<div style="font-size: 23px; margin-top: 5em;">
-<p><strong>Estimation:</strong></p>
+<section id="measures-ii" class="slide level2">
+<h2>Measures II</h2>
+<h4 id="skill-type-skill-types-might-respond-to-wage-gaps-differently">Skill type: Skill types might respond to wage gaps differently</h4>
+<div style="font-size: 70px; margin-top: 1em;">
+<p><img data-src="weber.png" style="width:70.0%"></p>
+</div>
+</section>
+<section id="the-atc-model" class="slide level2">
+<h2>The ATC Model</h2>
+<div style="font-size: 25px; margin-top: 4em;">
+<p>For each skill type, I estimate a linearized version of the gravity model</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathrm{logit}\,P(Y_{ijs}=1) = \, &amp; \beta_{\text{up}}(\text{wage_gap}_{ij})^\uparrow + \beta_{\text{down}}(\text{wage_gap}_{ij})^\downarrow \\
+&amp; + \delta \cdot \text{relatedness}_{ij} \\
+&amp; + \text{source}_{i} / \text{target}_{j} + \text{skill}_{s}
+\end{aligned}
+\]</span></p>
 <ul>
-<li>Two-way fixed effects (source, target)</li>
-<li>Node-level bootstrap (B=1000) for valid inference</li>
-</ul>
-<p><strong>Diagnostics:</strong></p>
-<ul>
-<li>Placebo leads (future gaps have no effect)</li>
-<li>Within-cluster permutation</li>
-<li>Worker-flow distances replication</li>
-<li>Out-of-sample prediction (2015-19 to 2020-24)</li>
+<li><span class="math inline">\(\beta_{\text{up}}/ \beta_{\text{down}}\)</span> measure the specific resistance (or facilitation) encountered when the target occupation has a higher (<span class="math inline">\(\uparrow\)</span>) or lower (<span class="math inline">\(\downarrow\)</span>) wage status than the source.</li>
+<li><span class="math inline">\(\delta\)</span> is the effect for the task-relatedness between occupations.</li>
+<li><span class="math inline">\(\text{source}_i, \text{target}_j, \text{skill}_s\)</span> are fixed effects measuring occupational emission/absorption mass and intrinsic “diffusivity” of each skill<sup>1</sup>.</li>
 </ul>
 </div>
-</section></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Source and taregt fixed effects are introduced separately to break perfect colinearity</p></li></ol></aside></section></section>
 <section>
 <section id="iii.-findings" class="title-slide slide level1 center middle" data-background-color="#0a4e58">
 <h1>III. FINDINGS</h1>
@@ -417,10 +420,10 @@
 <div style="font-size: 22px;">
 <table class="caption-top">
 <colgroup>
-<col style="width: 18%">
-<col style="width: 31%">
-<col style="width: 31%">
-<col style="width: 18%">
+<col style="width: 23%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -479,149 +482,50 @@
 <h1>III. REGRESSION RESULTS</h1>
 
 </section>
-<section id="asymmetric-trajectory-channeling-by-skill-domain" class="slide level2">
-<h2>Asymmetric trajectory channeling by skill domain</h2>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<h3 id="asymmetric-trajectory-channeling-by-skill-domain">Asymmetric trajectory channeling by skill domain</h3>
 <p><br></p>
 <div style="text-align: center; margin-bottom: 6em;">
 <p><img data-src="Rplot04.png" style="width:75.0%"></p>
 </div>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-5" class="slide level2">
 <h2></h2>
+<h3 id="by-domain-nestedness">by domain &amp; Nestedness</h3>
 <div style="text-align: center;">
-<p><img data-src="p02.png" style="width:95.0%"></p>
+<p><img data-src="Rplot06.png" style="width:80.0%"></p>
 </div>
 </section>
-<section id="key-magnitudes" class="slide level2 smaller">
-<h2>Key Magnitudes</h2>
-<div style="font-size: 24px; margin-top: 4em; text-align: left;">
-<p><strong>Coefficients (wage gap, cloglog scale):</strong></p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Term</th>
-<th style="text-align: left;">Cognitive</th>
-<th style="text-align: left;">Physical</th>
-<th style="text-align: left;">Interaction</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Upward</td>
-<td style="text-align: left;">+0.08.</td>
-<td style="text-align: left;">−0.34</td>
-<td style="text-align: left;">−0.42***</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Downward</td>
-<td style="text-align: left;">+0.13 (ns)</td>
-<td style="text-align: left;">+0.65</td>
-<td style="text-align: left;">+0.52**</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Distance</td>
-<td style="text-align: left;">−1.90***</td>
-<td style="text-align: left;">−3.23</td>
-<td style="text-align: left;">−1.33*</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Interpretation:</strong></p>
+<section id="why-this-happens-potential-reasons" class="slide level2 smaller">
+<h2>Why This Happens: Potential Reasons</h2>
+<div style="font-size: 26px; margin-top: 3em;">
+<p><strong>This asymmetry reflects structural filtering, not chance:</strong></p>
 <ul>
-<li>Upward gap <strong>slightly boosts</strong> cognitive adoption, <strong>penalizes</strong> physical</li>
-<li>Downward gap has <strong>no effect</strong> on cognitive, <strong>strongly boosts</strong> physical</li>
-<li>Distance decay is <strong>70% steeper</strong> for physical skills</li>
-</ul>
-</div>
-</section>
-<section id="robustness-summary" class="slide level2 smaller">
-<h2>Robustness Summary</h2>
-<div style="font-size: 25px; margin-top: 4em;">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Test</th>
-<th>Specification</th>
-<th>Result</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Thresholds</td>
-<td>RCA 0.9, 1.0, 1.1</td>
-<td>Pattern unchanged</td>
-</tr>
-<tr class="even">
-<td>Distances</td>
-<td>Shortest path, resistance, cosine</td>
-<td>Same relative slopes</td>
-</tr>
-<tr class="odd">
-<td>Periods</td>
-<td>2015-18, 2019-21, 2022-24</td>
-<td>ATC persists</td>
-</tr>
-<tr class="even">
-<td>Bootstrap</td>
-<td>Node-level B=1000 vs clustered SE</td>
-<td>Ratio around 1.0</td>
-</tr>
-<tr class="odd">
-<td>Representation</td>
-<td>Skill-skill vs occ-occ network</td>
-<td>Ordinal match</td>
-</tr>
-</tbody>
-</table>
-<div style="font-size: 25px; margin-top: 2em;">
-<p>The asymmetry is <strong>not</strong> an artifact of thresholds, distance measures, or time periods.</p>
-</div>
-</div>
-</section></section>
-<section>
-<section id="iv.-implications" class="title-slide slide level1 center middle" data-background-color="#0a4e58">
-<h1>IV. IMPLICATIONS</h1>
-
-</section>
-<section id="what-this-tells-us" class="slide level2 smaller">
-<h2>What This Tells Us</h2>
-<div style="font-size: 22px; margin-top: 2em;">
-<p><strong>The asymmetry is structural, not incidental:</strong></p>
-<ul>
-<li>Physical skills don’t just <em>happen</em> to stay low — they face systematic friction</li>
-<li>Cognitive skills don’t just <em>happen</em> to climb — the path is smoother</li>
-<li>Nestedness <em>amplifies</em> these differences</li>
-</ul>
-<p><strong>This reframes polarization:</strong></p>
-<blockquote>
-<p>Not just <em>what</em> skills exist where, but <em>how</em> skill requirements <strong>flow</strong> — and why certain flows are blocked</p>
-</blockquote>
-<p><strong>Open questions:</strong></p>
-<ul>
-<li>Does reducing occupational distance (via training, credentialing) actually change diffusion?</li>
-<li>Which specific skills are “near the boundary” and most amenable to intervention?</li>
-<li>How do firm-level decisions interact with these macro patterns?</li>
+<li><p><strong>Adoption capacity</strong><br>
+High-status occupations have more resources, slack, and organizational capacity to experiment with complex, high-nestedness skills.</p></li>
+<li><p><strong>Market shift</strong><br>
+Elite occupations increasingly demand socio-cognitive skills to manage coordination, abstraction, and organizational complexity.</p></li>
+<li><p><strong>Status filtering</strong><br>
+High-status occupations actively avoid physical requirements to preserve professional distinction and symbolic boundaries.</p></li>
 </ul>
 </div>
 </section>
 <section id="conclusion" class="slide level2 smaller">
 <h2>Conclusion</h2>
-<div style="font-size: 25px; margin-top: 2em;">
+<div style="font-size: 26px; margin-top: 3em;">
 <p><strong>Main finding:</strong></p>
 <blockquote>
-<p>Skill diffusion follows an <strong>asymmetric gravity rule</strong> that actively filters physical requirements out of high-status occupations</p>
+<p>Skill diffusion is asymmetric: it pulls socio-cognitive skills upward and pushes physical skills downward.</p>
 </blockquote>
-<p><strong>Three key mechanisms:</strong></p>
-<ol type="1">
-<li><strong>Directional friction</strong>: Physical upward friction much greater than cognitive</li>
-<li><strong>Distance decay</strong>: Steeper for physical than cognitive skills</li>
-<li><strong>Nestedness amplification</strong>: Enabling skills show strongest asymmetries</li>
-</ol>
-<p><strong>Contribution:</strong></p>
+<p><strong>Key takeaways:</strong></p>
 <ul>
-<li>Provides the <strong>missing bridge</strong> from static architecture to dynamic reproduction</li>
-<li>Specifies <strong>testable propagation rules</strong> with concrete policy levers</li>
-<li>Demonstrates that stratification is reproduced through <strong>selective diffusion</strong></li>
+<li><p><strong>Directional filtering</strong><br>
+Physical skills face a barrier that prevents them from entering high-wage occupations.</p></li>
+<li><p><strong>Nestedness matters</strong><br>
+Skills that anchor and enable other skills exhibit the strongest asymmetries.</p></li>
+<li><p><strong>Inequality mechanism</strong><br>
+Stratification persists not only because of who has which skills, but because diffusion itself selectively channels skill requirements.</p></li>
 </ul>
 </div>
 </section></section>
@@ -751,17 +655,109 @@
 </div>
 </div>
 </section>
-<section id="b5-complete-gravity-model-derivation" class="slide level2 smaller">
-<h2>B5: Complete Gravity Model Derivation</h2>
+<section id="b4-complete-gravity-model-derivation" class="slide level2 smaller">
+<h2>B4: Complete Gravity Model Derivation</h2>
 <div style="font-size: 20px;">
 <p><strong>Step 1: Classic Gravity</strong> <span class="math display">\[T_{ij} = k \cdot \frac{M_i M_j}{D_{ij}^{\gamma}} \quad \Rightarrow \quad \log \mathbb{E}[T_{ij}] = \beta_0 + \alpha_i + \beta_j - \gamma \log D_{ij}\]</span></p>
-<p><strong>Step 2: Triadic Extension (adding skill <span class="math inline">\(k\)</span>)</strong> <span class="math display">\[\lambda_{ijk} \propto \frac{M_i \cdot M_j \cdot S_k}{D_{ij}^{\gamma}} \quad \Rightarrow \quad \log \lambda_{ijk} = \beta_0 + \alpha_i + \beta_j + \delta_k - \gamma \log D_{ij}\]</span></p>
+<p><strong>Step 2: Triadic Extension (adding skill</strong> <span class="math inline">\(k\)</span>) <span class="math display">\[\lambda_{ijk} \propto \frac{M_i \cdot M_j \cdot S_k}{D_{ij}^{\gamma}} \quad \Rightarrow \quad \log \lambda_{ijk} = \beta_0 + \alpha_i + \beta_j + \delta_k - \gamma \log D_{ij}\]</span></p>
 <p><strong>Step 3: Asymmetric Frictions</strong> <span class="math display">\[\Delta^{\uparrow}_{ij} = \max(G_{ij}, 0), \quad \Delta^{\downarrow}_{ij} = \max(-G_{ij}, 0)\]</span></p>
 <p><strong>Step 4: Skill Mass via Attributes</strong> <span class="math display">\[\text{SkillMass}_k = \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k\]</span></p>
 <p><strong>Step 5: Full Specification</strong> <span class="math display">\[\text{cloglog}\big(\Pr(T_{ijk}=1)\big) = \beta_0 + \alpha_i + \beta_j + \eta_0 + \eta_D D_k + \eta_N N_k + \eta_{DN} D_k N_k + \beta^{\uparrow} \Delta^{\uparrow}_{ij} + \beta^{\downarrow} \Delta^{\downarrow}_{ij}\]</span></p>
 </div>
+</section>
+<section id="b5-key-magnitudes" class="slide level2 smaller">
+<h2>B5: Key Magnitudes</h2>
+<div style="font-size: 24px; margin-top: 4em; text-align: left;">
+<p><strong>Coefficients (wage gap, cloglog scale):</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Cognitive</th>
+<th style="text-align: left;">Physical</th>
+<th style="text-align: left;">Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Upward</td>
+<td style="text-align: left;">+0.08.</td>
+<td style="text-align: left;">−0.34</td>
+<td style="text-align: left;">−0.42***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Downward</td>
+<td style="text-align: left;">+0.13 (ns)</td>
+<td style="text-align: left;">+0.65</td>
+<td style="text-align: left;">+0.52**</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Distance</td>
+<td style="text-align: left;">−1.90***</td>
+<td style="text-align: left;">−3.23</td>
+<td style="text-align: left;">−1.33*</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>Upward gap <strong>slightly boosts</strong> cognitive adoption, <strong>penalizes</strong> physical</li>
+<li>Downward gap has <strong>no effect</strong> on cognitive, <strong>strongly boosts</strong> physical</li>
+<li>Distance decay is <strong>70% steeper</strong> for physical skills</li>
+</ul>
+</div>
+</section>
+<section id="b6-robustness-summary" class="slide level2 smaller">
+<h2>B6: Robustness Summary</h2>
+<div style="font-size: 25px; margin-top: 4em;">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 47%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Specification</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Thresholds</td>
+<td>RCA 0.9, 1.0, 1.1</td>
+<td>Pattern unchanged</td>
+</tr>
+<tr class="even">
+<td>Distances</td>
+<td>Shortest path, resistance, cosine</td>
+<td>Same relative slopes</td>
+</tr>
+<tr class="odd">
+<td>Periods</td>
+<td>2015-18, 2019-21, 2022-24</td>
+<td>ATC persists</td>
+</tr>
+<tr class="even">
+<td>Bootstrap</td>
+<td>Node-level B=1000 vs clustered SE</td>
+<td>Ratio around 1.0</td>
+</tr>
+<tr class="odd">
+<td>Representation</td>
+<td>Skill-skill vs occ-occ network</td>
+<td>Ordinal match</td>
+</tr>
+</tbody>
+</table>
+<div style="font-size: 25px; margin-top: 2em;">
+<p>The asymmetry is <strong>not</strong> an artifact of thresholds, distance measures, or time periods.</p>
+</div>
+</div>
 
 </section></section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

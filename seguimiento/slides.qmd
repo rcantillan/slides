@@ -290,16 +290,14 @@ The asymmetry is **not** an artifact of thresholds, distance measures, or time p
 
 ## The Puzzle: Coordination under Risk
 
+::: {style="font-size: 26px; margin-top: 5em;"}
 
-:::{style="font-size: 26px; margin-top: 5em;"}
-
-* Participation entails credible costs (repression, sanction, retaliation).
-* Attitudinal sympathy is insufficient.
-* Organizations must solve simultaneously:
-  - **Legitimacy:** Is coordination shareable?
-  - **Capacity:** Is coordination feasible?
-
-> **Claim:** Scaling protest under risk depends on **Strategic Multiplexity**.
+* Participation in high-risk activism entails credible costs such as repression, legal sanctions, or organizational retaliation.
+* Attitudinal sympathy is insufficient: collective action requires the stabilization of expectations under fundamental uncertainty.
+* Organizations face a multi-dimensional coordination problem:
+    - **Legitimacy:** Is the coordination morally shareable and justified?
+    - **Capacity:** Is the coordination materially and logistically feasible?
+* **Non-Substitutability:** High-risk environments create "bottlenecks" where an abundance of trust cannot compensate for a total absence of resources.
 
 :::
 
@@ -309,31 +307,30 @@ The asymmetry is **not** an artifact of thresholds, distance measures, or time p
 ![](raw_multiplexity.png){width="100%"}
 :::
 
+## The Core Idea: Functional Non-Substitutability
 
-## Strategic Multiplexity (Core Idea)
+::: {style="font-size: 26px; margin-top: 5em;"}
 
+> Multiplexity is not merely "more layers" or probabilistic redundancy.
+> It is the **Functional Bandwidth** of relational channels.
 
-:::{style="font-size: 26px; margin-top: 5em;"}
-
-> Multiplexity is not “more layers.”  
-> It is the **specific composition** of relational contents embedded in cooperation.
-
-* Layers are asymmetric.
-* Contents matter only when embedded in coordination.
-* Reinforcement is qualitative, not additive.
+* **Heterogeneous Guarantees:** Different relational contents (trust, resources, cooperation) solve distinct, orthogonal coordination problems.
+* **Composition over Volume:** Reinforcement depends on the specific alignment of contents, not just the number of exposures.
+* **Against Functional Equivalence:** Signals are not interchangeable; the absence of one functional dimension cannot be bridged by the hyper-density of another.
 
 :::
 
+
+
 ## Theoretical Core: Conditional Multiplexity
 
+::: {.columns}
+::: {.column width="45%"}
+::: {style="font-size: 26px; margin-top: 5em;"}
 
-:::{.columns}
-:::{.column width="45%"}
-:::{style="font-size: 26px; margin-top: 5em;"}
-
-* **Backbone:** Cooperation network.
-* **Overlays:** Trust, resources, values, kinship.
-* These are **edge attributes**, not parallel layers.
+* **Backbone:** The underlying cooperative network as the social foundation for action.
+* **Functional Overlays:** Trust, resources, values, and kinship as internal edge attributes.
+* **Conditional Synergy:** Multiplexity is the "internal anatomy" of ties that makes coordination viable.
 
 $$
 Y_{ij} = \big(y_{ij}^{(1)}, y_{ij}^{(2)}, \dots, y_{ij}^{(K)}\big)
@@ -342,60 +339,38 @@ $$
 :::
 :::
 
-
-:::{.column width="55%"}
+::: {.column width="55%"}
 ::: {style="text-align: center;"}
 ![](plot_10.png){width="80%"}
 :::
 :::
 :::
 
+## Contribution: Beyond "Wide Bridges"
 
+::: {style="font-size: 26px; margin-top: 5em;"}
 
-## Contribution to Diffusion Theory
+* **Refining Centola (2018):** Shifting from a logic of probabilistic redundancy to a logic of **Functional Bandwidth**.
+* **Rescuing Gould (1991):** Resilience stems from ties that are simultaneously occupational, residential, and political.
+* **Bridge Efficacy:** Bridges are "wide" because they deliver heterogeneous guarantees simultaneously, resolving multiple uncertainties at once.
 
-:::{style="font-size: 26px; margin-top: 5em;"}
-
-* Not all exposures are equivalent.
-* Reinforcement depends on *which* contents overlap.
-* **Wide bridges** are wide because they carry heterogeneous guarantees.
-
-> Contribution: an operational specification of complex contagion infrastructure.
-
-:::
-
-## Identification Strategy
-
-:::{style="font-size: 26px; margin-top: 5em;"}
-
-> **Design:** Egocentric, snowball-based multiplex data.
-
-* Cooperation elicited via name generators.
-* Multiplex contents observed **conditional on cooperation**.
-* Separation:
-  - Structural formation
-  - Strategic composition
+> **Contribution:** An operational specification of the functional infrastructure required for high-risk complex contagion.
 
 :::
 
 ## Methods Overview
 
-:::{style="font-size: 26px; margin-top: 5em;"}
+::: {style="font-size: 26px; margin-top: 5em;"}
 
-* Backbone inference under egocentric observation.
-* Multiplexity modeled as conditional edge attributes (LCA and MGLMM).
-* Structural formation and diffusion dynamics kept distinct.
-* Simulations
-  * Not predictive.
-  * Logical test of whether observed structure can sustain diffusion.
-  * Evaluates implications of multiplex architecture.
+* **Backbone Inference:** Identifying the relational skeleton of the organizational field.
+* **Latent Structure:** Using LCA and MGLMM to identify recurring "bundles" of non-substitutable guarantees.
+* **Generative Simulations:**
+    - Testing the **Non-Substitutability** hypothesis through threshold dynamics.
+    - Evaluating if observed compositional structures (and not just density) can sustain cascades.
 
 :::
 
-
-
-# RESULTS {background-color="#14b1ab"} 
-
+# RESULTS & MECHANISMS {background-color="#14b1ab"} 
 
 ##
 
@@ -403,36 +378,33 @@ $$
 ![](multiplex_type.png){width="80%"}
 :::
 
-
-
 ## Mechanism: Activation Potential
 
-:::{style="font-size: 26px; margin-top: 5em;"}
+::: {style="font-size: 26px; margin-top: 5em;"}
 
 $$
 E_i(t)
 =
 \underbrace{\sum_{\ell} w_{\ell}\, x_{i\ell}(t)}_{\text{isolated signals}}
 \;+\;
-\underbrace{\sum_{\ell < m} w_{\ell m}\, x_{i\ell}(t)\, x_{im}(t)}_{\text{strategic synergy}}
+\underbrace{\sum_{\ell < m} w_{\ell m}\, x_{i\ell}(t)\, x_{im}(t)}_{\text{synergy gate (AND-logic)}}
 $$
 
-- $E_i(t)$ denotes the activation potential of organization $i$ at time $t$, defined as the combined influence of relational signals arriving through existing cooperation ties.
-- The first term captures the accumulation of \emph{isolated signals} across relational contents, while the second term represents \emph{strategic synergy}: co-occurring contents jointly increase activation potential beyond their additive effects.
-- Activation follows a threshold rule: organization $i$ becomes active when $E_i(t)$ exceeds a fixed threshold, generating non-linear diffusion dynamics.
+* $E_i(t)$ represents the activation potential of organization $i$.
+* **The Synergy Gate:** The interaction term ($w_{\ell m}$) formalizes non-substitutability; potential increases only when complementary layers co-occur.
+* **Compositional Quality:** Without co-occurring contents, even high volume ($x_{i\ell}$) fails to cross the participation threshold.
 
 ::: 
 
 
 
-
 ## Counterfactual Diffusion Experiments
 
-:::{style="font-size: 26px; margin-top: 5em;"}
+::: {style="font-size: 26px; margin-top: 5em;"}
 
-* **Threshold Dynamics:** Multiplex reinforcement is most consequential in **moderate-threshold regimes** (where risk is significant).
-* **"Wide Bridges":** Bridges that concentrate overlap between Trust, Cooperation, and Resources are systematically more cascade-enabling.
-* **Redundant Validation:** Overlap resolves the coordination dilemma by providing both **moral validation** (trust) and **practical capacity** (resources).
+* **Threshold Regimes:** Multiplex reinforcement is pivotal in **moderate-to-high risk regimes** where functional bottlenecks are acute.
+* **Bandwidth Bridges:** Cascades are enabled by bridges that deliver heterogeneous guarantees (resilient ties) rather than single-modality redundancy.
+* **Validation + Capacity:** Overlap resolves the coordination dilemma by providing **moral validation** (Trust) and **practical feasibility** (Resources) as a single signal.
 
 :::
 
