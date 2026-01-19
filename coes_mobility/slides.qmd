@@ -317,7 +317,7 @@ Physical skills face **1.7× more friction** going up than going down
 ### by domain & Nestedness
 
 ::: {style="text-align: center;"}
-![](Rplot06.png){width="80%"}
+![](Rplot07.png){width="90%"}
 :::
 
 
