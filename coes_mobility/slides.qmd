@@ -254,7 +254,7 @@ $$
 ## Raw Patterns {.smaller}
 
 ::: {style="text-align: center;"}
-![](p05.png){width="100%"}
+![](Rplot08.png){width="85%"}
 :::
 
 ## Polarized Diffusion: Flow Networks {.smaller}
@@ -294,7 +294,7 @@ $$
 ### by domain & Nestedness
 
 ::: {style="text-align: center;"}
-![](Rplot07.png){width="90%"}
+![](Rplot07.png){width="93%"}
 :::
 
 
