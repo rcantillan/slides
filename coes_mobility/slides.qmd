@@ -177,14 +177,10 @@ datos_computacion %>%
 
 ## Data
 
-::: {style="font-size: 23px; margin-top: 5em;"}
+::: {style="font-size: 26px; margin-top: 5em;"}
 -   __O\*NET__ 2015-2024 (161 skill taxonomy)
 -   __BLS__ wages and education
 -   About 17M dyadic opportunities
-
-**Challenge:** O\*NET rolling panel creates "false zeros"
-
-**Solution: Interval-Censored Design**
 
 :::
 
@@ -199,7 +195,7 @@ datos_computacion %>%
 
 ::: {style="font-size: 25px; margin-top: 1em;"}
 - **Main Independent Variables**:
-    - **Wage Gap (Piecewise)**:
+    - Wage Gap (Piecewise):
         - $\text{wage_gap}_{ij}{\uparrow} = \max(0, G_{ij})$
         - $\text{wage_gap}_{ij}{\downarrow} = \min(0, G_{ij})$
         - Where $G_{ij} = \log(\overline{W}_{target}) - \log(\overline{W}_{source})$
@@ -267,26 +263,7 @@ $$
 ![](Rplot01.png){width="100%"}
 :::
 
-## The Asymmetry: Directional Friction by Domain {.smaller}
 
-::: {style="font-size: 22px; margin-top: 4em; margin-bottom: 2em;"}
-**Asymmetry** means skills face different "friction" when diffusing up
-vs. down the wage ladder. The direction of this friction **reverses**
-between cognitive and physical skills.
-:::
-
-::: {style="font-size: 22px;"}
-|   | Cognitive | Physical | Interpretation |
-|-----------------|:-----------------:|:-----------------:|-----------------|
-| **Upward rate** | **20.2%** | 11.1% | Cognitive climbs easily |
-| **Downward rate** | 15.6% | **19.0%** | Physical falls easily |
-| **Gap (Up − Down)** | **+4. 7 p.p.** | **−8.0 p. p.** | Opposite signs |
-| **Implication** | Facilitates ascent | Blocks ascent | Polarizing force |
-:::
-
-::: {style="font-size: 20px; text-align: center; margin-top: 1em;"}
-Physical skills face **1.7× more friction** going up than going down
-:::
 
 ## 
 
@@ -341,7 +318,7 @@ Physical skills face **1.7× more friction** going up than going down
 
 ## Conclusion {.smaller}
 
-::: {style="font-size: 26px; margin-top: 3em;"}
+::: {style="font-size: 26px; margin-top: 2em;"}
 
 **Main finding:**
 
@@ -356,8 +333,8 @@ Physical skills face **1.7× more friction** going up than going down
 - **Nestedness matters**  
   Skills that anchor and enable other skills exhibit the strongest asymmetries.
 
-- **Inequality mechanism**  
-  Stratification persists not only because of who has which skills, but because diffusion itself selectively channels skill requirements.
+- **Systemic Reproduction**  
+  This selective channeling acts as the dynamic engine that maintains and reinforces the labor market's polarized skill architecture.
 
 :::
 
