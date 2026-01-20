@@ -122,14 +122,14 @@ datos_computacion %>%
 ### Skill diffusion as a gravity process
 
 ::::::: columns
-:::: {.column width="75%"}
-::: {style="font-size: 26px; margin-top: 1em;"}
+:::: {.column width="65%"}
+::: {style="font-size: 26px; margin-top: .5em;"}
 ![](scheme.png){width="100%"}
 :::
 ::::
 
-:::: {.column width="20%"}
-::: {style="font-size: 22px; margin-top: 5em;"}
+:::: {.column width="35%"}
+::: {style="font-size: 21px; margin-top: 8em;"}
 -   Skill specific diffusivity (g)
 
 -   Masses (m) <br>
