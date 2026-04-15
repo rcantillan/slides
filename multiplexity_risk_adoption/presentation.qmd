@@ -634,7 +634,7 @@ The visiting layer should matter most clearly for the **highest-risk outcome**.
 
 ## The main result
 
-![](output/figures/fig2_horse_race.png){width="100%" fig-align="center"}
+![](figures/fig2_horse_race.png){width="100%" fig-align="center"}
 
 \bigskip
 
@@ -702,10 +702,10 @@ So the result is not a fragile artifact of local outliers.
 ::: columns
 
 ::: {.column width="70%"}
-:::{style="font-size: 22px; margin-top: 2em;"}
+:::{style="font-size: 22px; margin-top: 1em;"}
 
 ::: {style="display:flex; align-items:center; justify-content:center; height:68vh;"}
-![](output/figures/fig3_topology.png){width="100%" fig-align="center"}
+![](figures/fig3_topology.png){width="100%" fig-align="center"}
 :::
 :::
 :::
@@ -755,7 +755,7 @@ while the **advice layer** is more uneven and more segmented.
 
 ## The pattern changes across outcomes
 
-![](output/figures/fig4_risk_gradient.png){width="78%" fig-align="center"}
+![](figures/fig4_risk_gradient.png){width="78%" fig-align="center"}
 
 \bigskip
 
