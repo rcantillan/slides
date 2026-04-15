@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="presentation_files/libs/clipboard/clipboard.min.js"></script>
+<script src="presentation_files/libs/quarto-html/tabby.min.js"></script>
+<script src="presentation_files/libs/quarto-html/popper.min.js"></script>
+<script src="presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.32">
+
+  <meta name="author" content="Roberto Cantillan">
+  <title>When Exposure Is Not Enough</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-214eac1b3cd144699ba0384378ff7b12.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<!-- ===========================
+     title-slide.html  (v3: imagen IZQ = misma altura que texto DER)
+     =========================== -->
+<section id="title-slide" class="quarto-title-block center">
+  <div class="title-container title-left-image">
+    <!-- IZQUIERDA: IMAGEN -->
+    <div class="title-image" id="title-image-box">
+              <img id="title-image-el" src="images/portada.png" alt="Cover Image">
+          </div>
+
+    <!-- DERECHA: TEXTO -->
+    <div class="title-content" id="title-text-el">
+      <h1 class="title">When Exposure Is Not Enough</h1>
+            <p class="subtitle">Information, Observation, and Adoption in Multiplex Networks</p>
+            <p class="author">Roberto Cantillan</p>
+      <p class="institute">Department of Sociology | Pontificia Universidad Católica de Chile</p>
+      
+      
+          </div>
+  </div>
+
+  <!-- Igualador de alturas: imagen = altura del bloque de texto -->
+  <script>
+    (function(){
+      function equalize(){
+        try{
+          var text = document.getElementById('title-text-el');
+          var img  = document.getElementById('title-image-el');
+          var box  = document.getElementById('title-image-box');
+          if(!text || !img || !box) return;
+
+          // Altura del texto (incluye padding interno)
+          var th = text.offsetHeight;
+
+          // Límite de seguridad: 92% del alto de la ventana (para que no desborde)
+          var maxH = Math.floor(window.innerHeight * 0.92);
+
+          var target = Math.min(th, maxH);
+
+          // Fijamos la altura del contenedor y de la imagen
+          box.style.height = target + 'px';
+          img.style.height = target + 'px';
+          img.style.width  = '100%';
+          img.style.objectFit = 'cover';
+        }catch(e){}
+      }
+      // Ejecuta en carga y en resize
+      window.addEventListener('load', equalize);
+      window.addEventListener('resize', equalize);
+      // También cuando Reveal navega a la primera slide
+      document.addEventListener('readystatechange', equalize);
+    })();
+  </script>
+</section>
+
+<section>
+<section id="i.-the-puzzle" class="title-slide slide level1 center" data-background-color="#14b1ab">
+<h1>I. THE PUZZLE</h1>
+
+</section>
+<section id="the-standard-account" class="slide level2">
+<h2>The Standard Account</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div style="font-size: 20px; margin-top: 1em;">
+<p>The dominant explanation is simple:</p>
+<blockquote>
+<p><strong>Networks predict adoption because they transmit information.</strong></p>
+</blockquote>
+<p>In the classic microfinance study, <strong>Banerjee, Chandrasekhar, Duflo, and Jackson (2013)</strong> show that the centrality of the <strong>first-informed leaders</strong> predicts <strong>village-level</strong> microfinance participation.</p>
+<p>Their analysis treats social ties as carriers of information diffusion:</p>
+<ul>
+<li>leaders are informed first,</li>
+<li>information spreads through the network,</li>
+<li>and more central injection points predict broader village participation.</li>
+</ul>
+<p><strong>What remains unresolved:</strong><br>
+when all ties are pooled into one network, the analysis cannot distinguish whether adoption is organized through <strong>informational, material, or co-presence relationships</strong>.</p>
+</div>
+</div><div class="column" style="width:42%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig1.png" class="quarto-figure quarto-figure-center" style="width:92.0%" alt="Science article The Diffusion of Microfinance"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="what-this-account-implies" class="slide level2">
+<h2>What this account implies</h2>
+<div style="font-size: 22px; margin-top: 3em;">
+<p>If adoption is organized <strong>through information transmission</strong>, then the argument implies a sharper expectation:</p>
+<blockquote>
+<p><strong>The layer that best spreads information should also be the layer that best predicts adoption.</strong></p>
+</blockquote>
+<p>Information and adoption are different outcomes.</p>
+<p>But under an informational account, they should still be organized by the <strong>same relational layer</strong>.</p>
+</div>
+</section>
+<section id="the-informational-layer-is-now-observable" class="slide level2">
+<h2>The informational layer is now observable</h2>
+<div style="font-size: 26px; margin-top: 3em;">
+<p>A recent study in the <strong>same Karnataka villages</strong> directly tracks who receives information through different kinds of ties .</p>
+<div class="columns">
+<div class="column" style="width:52%;">
+<h3 id="information-diffusion">Information diffusion</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Layer</th>
+<th style="text-align: right;">b</th>
+<th style="text-align: right;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Advice</strong></td>
+<td style="text-align: right;"><strong>6.41</strong></td>
+<td style="text-align: right;"><strong>0.010</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Visiting</td>
+<td style="text-align: right;">4.27</td>
+<td style="text-align: right;">0.022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Union (all ties)</td>
+<td style="text-align: right;">1.11</td>
+<td style="text-align: right;">0.529</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:48%;">
+<h3 id="main-implication">Main implication</h3>
+<p><strong>Advice is the dominant channel of information diffusion.</strong><br>
+<strong>Visiting also carries information, but less strongly.</strong></p>
+<p>If adoption follows information, the advice layer should also predict adoption.</p>
+</div></div>
+</div>
+</section>
+<section id="but-it-does-not" class="slide level2">
+<h2>But it does not</h2>
+<p>Same villages. Same network data. Different outcomes.</p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div style="font-size: 20px; margin-top: 1em;">
+<h3 id="information-diffusion-1">Information diffusion</h3>
+<p><em></em></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Advice</strong></td>
+<td style="text-align: left;"><strong>strongest</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Visiting</td>
+<td style="text-align: left;">weaker</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Union</td>
+<td style="text-align: left;">null</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Advice wins for information.</strong></p>
+<h3 id="microfinance-adoption">Microfinance adoption</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Layer</th>
+<th style="text-align: right;">b</th>
+<th style="text-align: right;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Advice</td>
+<td style="text-align: right;">-0.021</td>
+<td style="text-align: right;">0.68</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Material</td>
+<td style="text-align: right;">0.048</td>
+<td style="text-align: right;">0.37</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Visiting</strong></td>
+<td style="text-align: right;"><strong>0.241</strong></td>
+<td style="text-align: right;"><strong>&lt;0.001</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Visiting wins for adoption.</strong></p>
+</div>
+</div><div class="column" style="width:65%;">
+<div style="font-size: 22px; margin-top: 6em;">
+<blockquote>
+
+<ul>
+<li>The dominant informational layer does not predict adoption.</li>
+<li>The strongest adoption layer is not the dominant informational layer.</li>
+</ul>
+
+</blockquote>
+</div>
+</div></div>
+</section>
+<section id="why-this-cannot-be-explained-away" class="slide level2">
+<h2>Why this cannot be explained away</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Objection</th>
+<th style="text-align: left;">Response</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><em>Advice and visiting are correlated, so advice is just noisy</em></td>
+<td style="text-align: left;">They are correlated, but advice remains <strong>null</strong> in the joint model. Noise does not explain a coefficient this close to zero.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>Advice is null because everyone was already informed by leaders</em></td>
+<td style="text-align: left;">In villages with <strong>few</strong> leaders, advice is still null. Information saturation does not explain the result.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>The advice layer has no signal in this dataset</em></td>
+<td style="text-align: left;">It does. In the same villages, advice predicts <strong>information diffusion</strong>. It predicts a different outcome.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>This is a power problem</em></td>
+<td style="text-align: left;">The sample is large, the visiting effect is strong, and the null on advice is stable. This is not a weak-data result.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implication:</strong> being well positioned to receive information does not predict risky adoption.<br>
+Something beyond information transmission is doing the work.</p>
+</section></section>
+<section>
+<section id="ii.-theory" class="title-slide slide level1 center" data-background-color="#0a4e58">
+<h1>II. THEORY</h1>
+
+</section>
+<section id="what-multiplexity-means-here" class="slide level2">
+<h2>What multiplexity means here</h2>
+<div style="font-size: 18px; margin-top: 1em;">
+<p>Multiplexity means something simple:</p>
+<blockquote>
+<p><strong>the same households are connected through different kinds of relationships.</strong></p>
+</blockquote>
+<p>In these villages, households can be linked through:</p>
+<ul>
+<li><strong>advice ties,</strong></li>
+<li><strong>money ties,</strong></li>
+<li><strong>visiting ties.</strong></li>
+</ul>
+<p>Our claim is not that all layers do the same thing.</p>
+<p>Our claim is:</p>
+<blockquote>
+<p><strong>different layers are good at different social tasks.</strong></p>
+</blockquote>
+<p>The key question is therefore not just how connected households are.</p>
+<p>It is:</p>
+<blockquote>
+<p><strong>which kind of tie matters for which outcome?</strong></p>
+</blockquote>
+</div>
+</section>
+<section id="risky-adoption-involves-more-than-information" class="slide level2">
+<h2>Risky adoption involves more than information</h2>
+<div style="font-size: 22px; margin-top: 2em;">
+<p>The standard account treats networks mainly as channels of information.</p>
+<p>That is too narrow for <strong>risky adoption</strong>.</p>
+<p>Joining a microfinance program is not just a matter of hearing about it.</p>
+<p>It also involves judging whether participation is:</p>
+<ul>
+<li>manageable,</li>
+<li>socially acceptable,</li>
+<li>and practically sustainable.</li>
+</ul>
+<p>So risky adoption involves at least <strong>two different problems</strong>:</p>
+<ol type="1">
+<li><strong>understanding the program,</strong></li>
+<li><strong>judging what participation may imply in everyday life.</strong></li>
+</ol>
+</div>
+</section>
+<section id="two-uncertainties-two-relational-functions" class="slide level2">
+<h2>Two uncertainties, two relational functions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="understanding-the-program">Understanding the program</h3>
+<p>What is the program?<br>
+How does it work?<br>
+What are the terms?</p>
+<p>This is a problem of <strong>information and explanation</strong>.</p>
+<p>Advice ties are well suited to this kind of task.</p>
+</div><div class="column" style="width:50%;">
+<h3 id="judging-participation">Judging participation</h3>
+<p>What will happen if I join?<br>
+Will this be manageable for a household like mine?</p>
+<p>This is a problem of <strong>practical consequences</strong>.</p>
+<p>It is harder to resolve through words alone.</p>
+</div></div>
+<blockquote>
+<p><strong>The ties that help explain a program are not necessarily the ties that make participation look viable.</strong></p>
+</blockquote>
+</section>
+<section id="why-visiting-ties-matter" class="slide level2">
+<h2>Why visiting ties matter</h2>
+<p>Visiting ties provide something that advice ties do not.</p>
+<p>They give repeated access to other households’ ordinary lives.</p>
+<p>Through visiting ties, people can observe whether participation appears:</p>
+<ul>
+<li>manageable,</li>
+<li>compatible with household routines,</li>
+<li>and socially survivable.</li>
+</ul>
+<p>That does not mean visiting ties are non-informational.</p>
+<p>They also carry information.</p>
+<p>But they additionally provide something else:</p>
+<blockquote>
+<p><strong>direct social observation of consequences.</strong></p>
+</blockquote>
+</section>
+<section id="the-core-theoretical-argument" class="slide level2">
+<h2>The core theoretical argument</h2>
+<p>The argument of the paper is not:</p>
+<blockquote>
+<p>more ties always increase adoption.</p>
+</blockquote>
+<p>And it is not:</p>
+<blockquote>
+<p>all layers must work together as a strict package.</p>
+</blockquote>
+<p>It is this:</p>
+<blockquote>
+<p><strong>adoption depends on layer-specific relational environments.</strong></p>
+</blockquote>
+<p>For risky adoption, the most relevant environment is not simply the one that moves information best.</p>
+<p>It is the one that makes the consequences of participation more visible through repeated social contact.</p>
+</section>
+<section id="relation-to-diffusion-theory" class="slide level2">
+<h2>Relation to diffusion theory</h2>
+<p>This paper stays close to the diffusion tradition, but shifts the question.</p>
+<p>Most diffusion theories ask:</p>
+<ul>
+<li>how much exposure people receive,</li>
+<li>how many adopters surround them,</li>
+<li>how fast signals move.</li>
+</ul>
+<p>We ask:</p>
+<blockquote>
+<p><strong>through which kind of tie does exposure matter most for adoption?</strong></p>
+</blockquote>
+<p>So the contribution is not a new general model of contagion.</p>
+<p>It is a sociological claim about <strong>relational differentiation</strong>:</p>
+<blockquote>
+<p><strong>network layers are not interchangeable.</strong></p>
+</blockquote>
+</section>
+<section id="relation-to-prior-sociological-work" class="slide level2">
+<h2>Relation to prior sociological work</h2>
+<p>This argument builds on a familiar sociological intuition:</p>
+<ul>
+<li>information can travel through one set of ties,</li>
+<li>while commitment depends on another.</li>
+</ul>
+<p>It is especially consistent with work showing that:</p>
+<ul>
+<li>lower-risk participation can spread through looser informational ties,</li>
+<li>but higher-risk commitment depends on stronger forms of embeddedness and social accountability.</li>
+</ul>
+<p>Our contribution is to show this logic in a multiplex network setting:</p>
+<blockquote>
+<p><strong>the informational layer and the adoption layer are not the same.</strong></p>
+</blockquote>
+</section>
+<section id="a-proposed-account-of-the-divergence" class="slide level2">
+<h2>A proposed account of the divergence</h2>
+
+<img data-src="images/fig2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:88.0%"><p>The figure summarizes the argument:</p>
+<ul>
+<li><strong>advice ties</strong> are especially useful for understanding the program,</li>
+<li><strong>visiting ties</strong> make participation more visible in everyday life.</li>
+</ul>
+<p>The key idea is simple:</p>
+<blockquote>
+<p><strong>information diffusion and risky adoption depend on different relational environments.</strong></p>
+</blockquote>
+</section>
+<section id="three-predictions" class="slide level2">
+<h2>Three predictions</h2>
+<h3 id="prediction-1-layer-horse-race">Prediction 1 — Layer horse race</h3>
+<p>For microfinance adoption, the <strong>visiting layer</strong> should outperform the <strong>advice layer</strong>.</p>
+<h3 id="prediction-2-structural-differentiation">Prediction 2 — Structural differentiation</h3>
+<p>If layers do different things, they should also look different structurally.</p>
+<p>The visiting layer should be <strong>denser</strong> and <strong>more locally cohesive</strong> than the advice layer.</p>
+<h3 id="prediction-3-outcome-gradient">Prediction 3 — Outcome gradient</h3>
+<p>The visiting layer should matter most clearly for the <strong>riskiest outcome</strong>.</p>
+<p>For lower-risk financial behaviors, other layers — especially <strong>money ties</strong> — may also matter.</p>
+</section></section>
+<section>
+<section id="iii.-data-design" class="title-slide slide level1 center" data-background-color="#14b1ab">
+<h1>III. DATA &amp; DESIGN</h1>
+
+</section>
+<section id="a-prospective-design" class="slide level2">
+<h2>A prospective design</h2>
+<p>The design is prospective:</p>
+<div style="text-align:center; font-size:1.35em; line-height:1.5;">
+<p>2006 network census<br>
+↓<br>
+the microfinance program enters the villages<br>
+↓<br>
+adoption is recorded later</p>
+</div>
+<p>````</p>
+<p>This matters because the networks are measured <strong>before</strong> the program becomes available.</p>
+<p>So adoption cannot be creating the network pattern that later predicts it.</p>
+</section>
+<section id="setting-sample-and-unit-of-analysis" class="slide level2">
+<h2>Setting, sample, and unit of analysis</h2>
+<div class="columns">
+<div class="column" style="width:56%;">
+<h3 id="setting">Setting</h3>
+<p>Rural villages in Karnataka, India.</p>
+<p>The data come from the same network setting used in the classic microfinance study.</p>
+<h3 id="unit-of-analysis">Unit of analysis</h3>
+<p>The <strong>household</strong>.</p>
+<p>The original survey records ties between individuals, but the analysis is conducted at the <strong>household level</strong>.</p>
+</div><div class="column" style="width:44%;">
+<h3 id="sample">Sample</h3>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Households</td>
+<td style="text-align: center;">10,618</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Villages in regressions</td>
+<td style="text-align: center;">49</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Villages in topology comparisons</td>
+<td style="text-align: center;">75</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-49-in-regressions">Why 49 in regressions?</h3>
+<p>All 75 villages have network data.</p>
+<p>Only <strong>49</strong> have both network data <strong>and</strong> the microfinance adoption outcome used in the regression sample.</p>
+</div></div>
+</section>
+<section id="from-survey-questions-to-three-layers" class="slide level2">
+<h2>From survey questions to three layers</h2>
+<p>We group six survey relations into three substantively distinct layers.</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="advice">Advice</h3>
+<ul>
+<li>gives advice</li>
+<li>helps with decisions</li>
+</ul>
+<p>Main role: <strong>explanation and guidance</strong></p>
+</div><div class="column" style="width:33%;">
+<h3 id="money">Money</h3>
+<ul>
+<li>lends money</li>
+<li>borrows money</li>
+</ul>
+<p>Main role: <strong>material support</strong></p>
+</div><div class="column" style="width:33%;">
+<h3 id="visiting">Visiting</h3>
+<ul>
+<li>visits your home</li>
+<li>whose home you visit</li>
+</ul>
+<p>Main role: <strong>repeated co-presence</strong></p>
+</div></div>
+<p>Each layer is built as a <strong>household-level network</strong>.</p>
+</section>
+<section id="main-variables" class="slide level2">
+<h2>Main variables</h2>
+<h3 id="main-outcome">Main outcome</h3>
+<p>Whether a household <strong>joins the microfinance program</strong>.</p>
+<h3 id="main-explanatory-variables">Main explanatory variables</h3>
+<p>For each household, we measure its network position in:</p>
+<ul>
+<li>the <strong>advice layer</strong>,</li>
+<li>the <strong>money layer</strong>,</li>
+<li>the <strong>visiting layer</strong>.</li>
+</ul>
+<p>The analysis asks:</p>
+<blockquote>
+<p><strong>within the same village, which layer-specific position best predicts adoption?</strong></p>
+</blockquote>
+</section>
+<section id="main-model" class="slide level2">
+<h2>Main model</h2>
+<p>Our core test is a <strong>horse race</strong> across the three layers.</p>
+<p>We estimate whether adoption is associated with:</p>
+<ul>
+<li>position in the <strong>advice</strong> layer,</li>
+<li>position in the <strong>money</strong> layer,</li>
+<li>position in the <strong>visiting</strong> layer,</li>
+</ul>
+<p>while also adjusting for:</p>
+<ul>
+<li><strong>village fixed effects,</strong></li>
+<li>overall connectedness,</li>
+<li>wealth,</li>
+<li>and leader status.</li>
+</ul>
+<p>The goal is not to ask whether networks matter in general.</p>
+<p>It is to ask:</p>
+<blockquote>
+<p><strong>which kind of network position matters most?</strong></p>
+</blockquote>
+</section>
+<section id="why-village-fixed-effects-matter" class="slide level2">
+<h2>Why village fixed effects matter</h2>
+<p>Villages differ in many ways that could affect adoption:</p>
+<ul>
+<li>local institutions,</li>
+<li>implementation of the program,</li>
+<li>leader presence,</li>
+<li>social norms,</li>
+<li>and baseline levels of connectedness.</li>
+</ul>
+<p>Without village fixed effects, the result could simply mean:</p>
+<blockquote>
+<p>some villages are both more socially connected and more likely to adopt.</p>
+</blockquote>
+<p>With village fixed effects, we ask a harder question:</p>
+<blockquote>
+<p><strong>among households living in the same village, which relational layer best predicts adoption?</strong></p>
+</blockquote>
+</section>
+<section id="what-the-design-tests" class="slide level2">
+<h2>What the design tests</h2>
+<p>The design evaluates three predictions.</p>
+<h3 id="prediction-1">Prediction 1</h3>
+<p>The <strong>visiting layer</strong> should outperform the <strong>advice layer</strong> in predicting microfinance adoption.</p>
+<h3 id="prediction-2">Prediction 2</h3>
+<p>The visiting layer should be structurally more <strong>dense</strong> and <strong>locally cohesive</strong> than the advice layer.</p>
+<h3 id="prediction-3">Prediction 3</h3>
+<p>The visiting layer should matter most clearly for the <strong>highest-risk outcome</strong>.</p>
+</section></section>
+<section>
+<section id="iv.-results" class="title-slide slide level1 center" data-background-color="#0a4e58">
+<h1>IV. RESULTS</h1>
+
+</section>
+<section id="the-main-result" class="slide level2">
+<h2>The main result</h2>
+
+<img data-src="output/figures/fig2_horse_race.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div style="font-size: 20px; margin-top: 1em;">
+<p>The result is straightforward:</p>
+<ul>
+<li><strong>advice ties</strong> do not predict adoption,</li>
+<li><strong>money ties</strong> matter on their own, but not in the full comparison,</li>
+<li><strong>visiting ties</strong> are the strongest predictor of microfinance adoption.</li>
+</ul>
+<p>The strongest adoption layer is <strong>not</strong> the dominant informational layer.</p>
+</div>
+</section>
+<section id="the-coefficients-in-one-table" class="slide level2">
+<h2>The coefficients in one table</h2>
+<div style="font-size: 22px; margin-top: 3em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: right;">Advice ties</th>
+<th style="text-align: right;">Money ties</th>
+<th style="text-align: right;">Visiting ties</th>
+<th style="text-align: right;">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Advice only</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10,618</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Money only</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.105*</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10,618</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Visiting only</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.254***</td>
+<td style="text-align: right;">10,618</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>All three together</strong></td>
+<td style="text-align: right;"><strong>-0.021</strong></td>
+<td style="text-align: right;"><strong>0.048</strong></td>
+<td style="text-align: right;"><strong>0.241</strong>*</td>
+<td style="text-align: right;"><strong>10,618</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Non-leaders only</td>
+<td style="text-align: right;">-0.021</td>
+<td style="text-align: right;">0.032</td>
+<td style="text-align: right;">0.234***</td>
+<td style="text-align: right;">9,337</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="font-size: 22px; margin-top: 3em;">
+<p>Village fixed effects and clustered standard errors.</p>
+<p>The key point is not only that visiting ties are significant.</p>
+<p>It is that <strong>their association remains strong when the other layers are included at the same time.</strong></p>
+</div>
+</section>
+<section id="this-result-is-stable-across-villages" class="slide level2">
+<h2>This result is stable across villages</h2>
+<div style="font-size: 22px; margin-top: 3em;">
+<p>The visiting-layer result is not driven by one or two unusual villages.</p>
+<p>Across leave-one-village-out estimates, it remains:</p>
+<ul>
+<li><strong>positive in every case,</strong></li>
+<li>and <strong>statistically significant in every case.</strong></li>
+</ul>
+<p>So the result is not a fragile artifact of local outliers.</p>
+<blockquote>
+<p><strong>The strongest adoption layer is a stable result across villages.</strong></p>
+</blockquote>
+</div>
+</section>
+<section id="the-layers-are-structurally-different" class="slide level2">
+<h2>The layers are structurally different</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div style="font-size: 22px; margin-top: 2em;">
+<div style="display:flex; align-items:center; justify-content:center; height:68vh;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="output/figures/fig3_topology.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div style="font-size: 18px; margin-top: 6em;">
+<p>If layers do different things, they should not look the same.</p>
+<p>That is exactly what we find:</p>
+<ul>
+<li>the <strong>visiting layer</strong> is denser,</li>
+<li>more clustered,</li>
+<li>and more connected overall,</li>
+</ul>
+<p>while the <strong>advice layer</strong> is more uneven and more segmented.</p>
+</div>
+</div></div>
+</section>
+<section id="topology-in-one-table" class="slide level2">
+<h2>Topology in one table</h2>
+<div style="font-size: 22px; margin-top: 3em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metric</th>
+<th style="text-align: right;">Advice</th>
+<th style="text-align: right;">Money</th>
+<th style="text-align: right;">Visiting</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Density</td>
+<td style="text-align: right;">0.018</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;"><strong>0.028</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clustering</td>
+<td style="text-align: right;">0.140</td>
+<td style="text-align: right;">0.149</td>
+<td style="text-align: right;"><strong>0.178</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mean path length</td>
+<td style="text-align: right;"><strong>3.97</strong></td>
+<td style="text-align: right;">3.60</td>
+<td style="text-align: right;">3.42</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Degree dispersion</td>
+<td style="text-align: right;"><strong>0.994</strong></td>
+<td style="text-align: right;">0.863</td>
+<td style="text-align: right;">0.797</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Modularity</td>
+<td style="text-align: right;"><strong>0.588</strong></td>
+<td style="text-align: right;">0.549</td>
+<td style="text-align: right;">0.545</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Largest component</td>
+<td style="text-align: right;">0.785</td>
+<td style="text-align: right;">0.855</td>
+<td style="text-align: right;"><strong>0.894</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="font-size: 22px; margin-top: 3em;">
+<blockquote>
+
+<ul>
+<li>The visiting layer is structurally more compatible with repeated local contact.</li>
+<li>The advice layer is more compatible with selective and uneven informational exchange.</li>
+</ul>
+
+</blockquote>
+</div>
+</section>
+<section id="the-pattern-changes-across-outcomes" class="slide level2">
+<h2>The pattern changes across outcomes</h2>
+
+<img data-src="output/figures/fig4_risk_gradient.png" class="quarto-figure quarto-figure-center r-stretch" style="width:78.0%"><p>The advice layer is weak across all three outcomes.</p>
+<p>The visiting layer is strongest for <strong>microfinance adoption</strong>, while money ties become more relevant for lower-risk financial behaviors.</p>
+</section>
+<section id="gradient-across-outcomes" class="slide level2">
+<h2>Gradient across outcomes</h2>
+<div style="font-size: 22px; margin-top: 3em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Outcome</th>
+<th style="text-align: right;">Advice ties</th>
+<th style="text-align: right;">Money ties</th>
+<th style="text-align: right;">Visiting ties</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Microfinance adoption</td>
+<td style="text-align: right;">-0.008</td>
+<td style="text-align: right;">0.050</td>
+<td style="text-align: right;"><strong>0.234</strong>*</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SHG participation</td>
+<td style="text-align: right;">0.120</td>
+<td style="text-align: right;">0.151*</td>
+<td style="text-align: right;"><strong>0.185</strong>*</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Savings account</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.168**</td>
+<td style="text-align: right;"><strong>0.215</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="font-size: 22px; margin-top: 3em;">
+<p>Three points matter:</p>
+<ul>
+<li><strong>advice is weak throughout,</strong></li>
+<li><strong>visiting is strongest for the riskiest outcome,</strong></li>
+<li><strong>money ties matter more as the outcome becomes less risky.</strong></li>
+</ul>
+</div>
+</section>
+<section id="what-is-doing-the-work" class="slide level2">
+<h2>What is doing the work?</h2>
+<p>A key robustness result is that the visiting-layer measure is closely related to <strong>having more visiting ties</strong>.</p>
+<p>So the result should not be read as evidence that abstract network position alone drives adoption.</p>
+<p>It is more accurate to say:</p>
+<blockquote>
+<p>households that are more embedded in the <strong>visiting layer</strong> are more likely to adopt.</p>
+</blockquote>
+<p>That is consistent with the theory.</p>
+<p>The mechanism is not global reach.<br>
+It is <strong>local, repeated social contact.</strong></p>
+</section></section>
+<section>
+<section id="v.-qa-appendix" class="title-slide slide level1 center" data-background-color="#14b1ab">
+<h1>V. Q&amp;A / APPENDIX</h1>
+
+</section>
+<section id="how-are-the-three-layers-constructed" class="slide level2">
+<h2>How are the three layers constructed?</h2>
+<p>The original survey records <strong>individual-level ties</strong> through name generators.</p>
+<p>Respondents name people they:</p>
+<ul>
+<li>give advice to,</li>
+<li>borrow money from,</li>
+<li>visit at home,</li>
+<li>and so on.</li>
+</ul>
+<p>For the analysis, ties are aggregated to the <strong>household level</strong>.</p>
+<p>A tie between households exists when <strong>any member</strong> of one household names any member of the other.</p>
+<p>The three layers are built from six raw networks:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">Raw networks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Advice</td>
+<td style="text-align: left;">give advice + help with decisions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Money</td>
+<td style="text-align: left;">borrow money + lend money</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Visiting</td>
+<td style="text-align: left;">visit come + visit go</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-is-the-network-position-measure" class="slide level2">
+<h2>What is the network-position measure?</h2>
+<p>The paper uses <strong>diffusion centrality</strong>, introduced by Banerjee et al.&nbsp;(2013).</p>
+<p>It captures how well positioned a household is to reach others through a diffusion process.</p>
+<p>It is computed <strong>separately for each layer</strong>, so each household receives three scores:</p>
+<ul>
+<li>one for the <strong>advice</strong> layer,</li>
+<li>one for the <strong>money</strong> layer,</li>
+<li>one for the <strong>visiting</strong> layer.</li>
+</ul>
+<p>A critical diagnostic is that, in the visiting layer, this measure is very closely related to <strong>degree</strong>.</p>
+<p>So the operative predictor is better understood as <strong>local embeddedness</strong>, not abstract global position. :contentReference<span data-index="1">oaicite:1</span></p>
+</section>
+<section id="what-is-the-main-estimating-equation" class="slide level2">
+<h2>What is the main estimating equation?</h2>
+<div style="font-size: 18px; margin-top: 1em;">
+<p>The core specification is a <strong>horse race</strong> across the three layers.</p>
+<p>Adoption is modeled as a function of:</p>
+<ul>
+<li>position in the <strong>advice</strong> layer,</li>
+<li>position in the <strong>money</strong> layer,</li>
+<li>position in the <strong>visiting</strong> layer,</li>
+</ul>
+<p>plus:</p>
+<ul>
+<li>overall connectedness,</li>
+<li>wealth,</li>
+<li>leader status,</li>
+<li>and <strong>village fixed effects</strong>.</li>
+</ul>
+<p>The full sequence is:</p>
+<ul>
+<li>pooled network baseline,</li>
+<li>single-layer models,</li>
+<li>horse race,</li>
+<li>overidentified model,</li>
+<li>non-leaders sample.</li>
+</ul>
+</div>
+</section>
+<section id="why-use-a-linear-probability-model" class="slide level2">
+<h2>Why use a linear probability model?</h2>
+<p>Three reasons:</p>
+<ol type="1">
+<li><p><strong>Comparability.</strong><br>
+Coefficients can be compared directly across layers.</p></li>
+<li><p><strong>Fixed effects.</strong><br>
+Village fixed effects are easy to absorb cleanly.</p></li>
+<li><p><strong>Replication.</strong><br>
+This matches the estimator used in the original Banerjee et al.&nbsp;analysis. :contentReference<span data-index="3">oaicite:3</span></p></li>
+</ol>
+</section>
+<section id="why-do-the-regressions-use-49-villages-while-topology-uses-75" class="slide level2">
+<h2>Why do the regressions use 49 villages while topology uses 75?</h2>
+<p>All <strong>75 villages</strong> have network data.</p>
+<p>The adoption regressions use <strong>49 villages</strong> because only those villages have both:</p>
+<ul>
+<li>the network data,</li>
+<li>and the village-level files needed to construct the microfinance adoption outcome and leader indicators.</li>
+</ul>
+<p>So this is <strong>not</strong> a discretionary sample restriction.</p>
+<p>The 49 villages are the full set with usable adoption data.</p>
+<p>The remaining 26 villages contribute to the <strong>topology analysis</strong>, but not to the adoption regressions. :contentReference<span data-index="4">oaicite:4</span></p>
+</section>
+<section id="why-do-village-fixed-effects-matter" class="slide level2">
+<h2>Why do village fixed effects matter?</h2>
+<p>Villages differ in many ways that could affect adoption:</p>
+<ul>
+<li>baseline adoption rates,</li>
+<li>network density,</li>
+<li>program rollout,</li>
+<li>wealth,</li>
+<li>and institutional context.</li>
+</ul>
+<p>Village fixed effects absorb those village-level differences.</p>
+<p>So identification comes from <strong>within-village variation</strong>.</p>
+<p>The substantive question becomes:</p>
+<blockquote>
+<p><strong>Among households in the same village, does being more embedded in the visiting layer predict a higher probability of adoption?</strong> :contentReference<span data-index="5">oaicite:5</span></p>
+</blockquote>
+</section>
+<section id="why-not-treat-all-ties-as-one-network" class="slide level2">
+<h2>Why not treat all ties as one network?</h2>
+<p>Pooling all ties replicates the classic result: the union network predicts adoption.</p>
+<p>But pooling hides <strong>which layer</strong> is doing the work.</p>
+<p>Once the layers are separated, the key pattern appears:</p>
+<ul>
+<li>the layers are structurally distinct,</li>
+<li>and the visiting layer is the one most strongly associated with adoption. :contentReference<span data-index="6">oaicite:6</span></li>
+</ul>
+</section>
+<section id="is-the-visiting-result-just-local-density" class="slide level2">
+<h2>Is the visiting result just local density?</h2>
+<p>Partly, yes — and this is acknowledged directly.</p>
+<p>In the visiting layer, the network-position measure is highly correlated with <strong>degree</strong>.</p>
+<p>When the positional component is separated from degree, the abstract positional part becomes null.</p>
+<p>So the result is best interpreted as:</p>
+<blockquote>
+<p><strong>embeddedness in the visiting layer, together with local observability, predicts adoption.</strong></p>
+</blockquote>
+<p>That is consistent with the argument about repeated local contact and social observation. :contentReference<span data-index="7">oaicite:7</span></p>
+</section>
+<section id="is-the-result-driven-by-leaders-caste-or-information-saturation" class="slide level2">
+<h2>Is the result driven by leaders, caste, or information saturation?</h2>
+<p>No single robustness check overturns the pattern.</p>
+<p>The result survives:</p>
+<ul>
+<li>exclusion of leader households,</li>
+<li>low-information villages,</li>
+<li>caste checks,</li>
+<li>leave-one-village-out estimation,</li>
+<li>and degree-based counterfactual tests. :contentReference<span data-index="8">oaicite:8</span></li>
+</ul>
+</section>
+<section id="do-the-layers-have-to-work-together-as-a-strict-package" class="slide level2">
+<h2>Do the layers have to work together as a strict package?</h2>
+<p>No.</p>
+<p>The evidence does <strong>not</strong> support a strong conjunctive interpretation in which all layers must be jointly present.</p>
+<p>Additive specifications fit better than strict complementarity.</p>
+<p>So the claim is <strong>not</strong> that all layers are simultaneously necessary.</p>
+<p>The claim is that they have <strong>different relational functions</strong>, and that the visiting layer is the dominant relational infrastructure for risky adoption. :contentReference<span data-index="9">oaicite:9</span></p>
+</section>
+<section id="what-the-paper-ultimately-shows" class="slide level2">
+<h2>What the paper ultimately shows</h2>
+<p>Three results matter most:</p>
+<ol type="1">
+<li><p><strong>Layer dissociation</strong><br>
+The layer that best spreads information does not predict adoption.</p></li>
+<li><p><strong>Structural differentiation</strong><br>
+Advice and visiting layers are topologically different.</p></li>
+<li><p><strong>Robustness</strong><br>
+The main visiting-layer result survives multiple alternative explanations.</p></li>
+</ol>
+<blockquote>
+<p><strong>The ties that best spread information are not the ties that best predict risky adoption.</strong></p>
+</blockquote>
+<p>For consequential adoption, what matters most is embeddedness in a relational environment of repeated local contact. :contentReference<span data-index="10">oaicite:10</span></p>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="presentation_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="presentation_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.12,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

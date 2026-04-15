@@ -1,0 +1,86 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
+$presentation-font-size-root: 28px;
+$body-bg: #ffffff;
+$body-color: #2c2c2c;
+$link-color: #e94560;
+$selection-bg: #e94560;
+
+/*-- scss:rules --*/
+
+.reveal .slides {
+  font-family: $font-family-sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1a1a2e;
+}
+
+.reveal h2 {
+  font-size: 1.4em;
+  border-bottom: 3px solid #e94560;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.6em;
+}
+
+.reveal .slide-number {
+  color: #aaa;
+  font-size: 0.7em;
+}
+
+.reveal .footer {
+  font-size: 0.65em;
+  color: #999;
+}
+
+.reveal table {
+  font-size: 0.85em;
+  width: 100%;
+}
+
+.reveal table th {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 6px 10px;
+}
+
+.reveal table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.reveal table tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+.reveal .callout {
+  font-size: 0.9em;
+  border-radius: 6px;
+}
+
+.reveal .callout-important {
+  border-left-color: #e94560;
+}
+
+.reveal .callout-note {
+  border-left-color: #0077b6;
+}
+
+.reveal .fragment.visible {
+  opacity: 1;
+}
+
+.reveal blockquote {
+  border-left: 4px solid #e94560;
+  padding-left: 1em;
+  font-style: italic;
+  color: #555;
+  background: #fafafa;
+  border-radius: 0 6px 6px 0;
+}
+
+.title-slide-custom h3 {
+  color: #e94560 !important;
+}
