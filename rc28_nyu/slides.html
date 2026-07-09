@@ -216,6 +216,38 @@
 </div>
 </div></div>
 </section>
+<section id="two-different-objects-demand-signals-vs.-realized-directional-change" class="slide level2 smaller">
+<h2>Two Different Objects: Demand Signals vs.&nbsp;Realized, Directional Change</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 22px; margin-top: 3em;">
+<p><strong>Job-ad studies</strong> (Tong et al.&nbsp;2025; Han &amp; Cheng 2026)</p>
+<ul>
+<li><strong>Data:</strong> employer demand signals in job postings — aspirational, not verified realized change</li>
+<li><strong>Object:</strong> aggregate <em>magnitude</em> of skill-vector change (Tong) or within-job skill <em>diversity</em> (Han &amp; Cheng)</li>
+<li>Neither asks whether a skill moves toward a higher- or lower-status <strong>specific partner occupation</strong></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 22px; margin-top: 3em;">
+<p><strong>This paper</strong> (O*NET, 2015–2024)</p>
+<ul>
+<li><strong>Data:</strong> incumbent-reported requirements — realized occupational skill content</li>
+<li><strong>Object:</strong> <em>signed direction</em> of dyadic flow, <span class="math inline">\(G_{ij} = \sigma_j - \sigma_i\)</span></li>
+<li>Asks whether skill <span class="math inline">\(s\)</span> moves toward or away from status, relative to the occupation that already holds it</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="demand-signals-vs.-realized-change-schematic" class="slide level2 smaller">
+<h2>Demand Signals vs.&nbsp;Realized Change — Schematic</h2>
+<div style="text-align: center; margin-top: 2em;">
+<p><img data-src="figures/png/fig_demand_vs_realized_schematic_v2.png" style="width:85.0%"></p>
+</div>
+<div style="font-size: 20px; margin-top: 1em; text-align: center;">
+<p>Job-ad studies measure how much one occupation’s skill profile changes, using its own status as a predictor. We measure which direction a specific skill moves between two occupations — and that direction reverses by skill type: cognitive skills flow up, physical skills flow down.</p>
+</div>
+</section>
 <section id="the-architecture-we-build-upon" class="slide level2 smaller">
 <h2>The Architecture We Build Upon</h2>
 <div class="columns">
@@ -452,14 +484,15 @@
 </section>
 <section id="threats-to-inference" class="slide level2 smaller">
 <h2>Threats to Inference</h2>
-<div style="font-size: 24px; margin-top: 2em;">
-<p><strong>What could generate a spurious directional pattern — and how we rule it out:</strong></p>
+<div style="font-size: 25px; margin-top: 2.5em;">
+<p><strong>Four threats, each targeted by a dedicated check:</strong></p>
 <ul>
-<li><p><strong>Mechanical index artifact</strong> — RCA is relative by construction → freeze the 2015 denominator; re-estimate on raw importance change</p></li>
-<li><p><strong>Confounded by stable propensities</strong> — occupations/skills that are just generally active → source/target fixed effects; a common shock is further ruled out by a within-stratum permutation test</p></li>
-<li><p><strong>Arbitrary measurement choices</strong> — RCA threshold, status index, skill taxonomy → each varied independently; asymmetry survives</p></li>
-<li><p><strong>One disruptive period driving it</strong> — pandemic, generative AI → replicated across 2015-18, 2019-21, 2022-24</p></li>
+<li>Mechanical index artifact → frozen-denominator / raw-importance re-estimation</li>
+<li>Confounded by stable occupation/skill propensities → fixed effects + permutation test</li>
+<li>Arbitrary measurement choices → thresholds, status index, taxonomy each varied independently</li>
+<li>One disruptive period driving it → replicated across three sub-periods</li>
 </ul>
+<p><strong>All four checks preserve the directional asymmetry</strong> (full results: backup B6–B12).</p>
 </div>
 </section>
 <section id="why-this-matters" class="slide level2 smaller">
@@ -481,6 +514,17 @@
 <li><p>Substitution potential is highest for well-specified physical and routine-cognitive tasks — precisely the skills our results confine to the bottom of the hierarchy</p></li>
 <li><p>Workers displaced from physical-intensive occupations face a <strong>compounded barrier</strong>: their skills are both most exposed to substitution and least able to cross into cognitive destinations</p></li>
 <li><p>Consistent with external mobility evidence: transitions from declining to growing occupations account for only ~5% of moves over two decades</p></li>
+</ul>
+</div>
+</section>
+<section id="limitations" class="slide level2 smaller">
+<h2>Limitations</h2>
+<div style="font-size: 25px; margin-top: 3em;">
+<ul>
+<li><p><strong>Occupational level:</strong> we do not observe the organizational decisions behind individual adoptions, nor general-equilibrium responses to shifting demand</p></li>
+<li><p><strong>Observational design:</strong> cannot fully rule out occupations responding independently to a shared shock — though a shock would not by itself reverse direction across cognitive and physical domains</p></li>
+<li><p><strong>U.S. data only:</strong> the magnitude of directional channeling is likely institutionally contingent — credentialing regimes, wage-setting, union density plausibly moderate it; cross-national tests are needed</p></li>
+<li><p>We identify the <strong>direction</strong> of skill flow as a function of relative status — we do not adjudicate <strong>which</strong> relational mechanism (emulation, task allocation, absorptive capacity, credentialist closure, valuation asymmetry) produces it</p></li>
 </ul>
 </div>
 </section>
@@ -754,7 +798,7 @@
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p>Cantillan &amp; Bucca | RC28 NYU 2026</p>
 </div>
 </div></div>
 

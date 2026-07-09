@@ -15,7 +15,7 @@ format:
     controls-layout: bottom-right
     css: styles.css
     template-partials: [title-slide.html]
-    #footer: "Cantillan & Bucca | Skill Diffusion & Stratification — COES Mobility 2025"
+    footer: "Cantillan & Bucca | RC28 NYU 2026"
 execute:
   echo: false
   warning: false
@@ -61,6 +61,42 @@ the status of the occupations that already hold them?
 :::
 :::::
 :::::::::
+
+## Two Different Objects: Demand Signals vs. Realized, Directional Change {.smaller}
+
+::::::::: columns
+::::: {.column width="50%"}
+::: {style="font-size: 22px; margin-top: 3em;"}
+**Job-ad studies** (Tong et al. 2025; Han \& Cheng 2026)
+
+-   **Data:** employer demand signals in job postings — aspirational, not verified realized change
+-   **Object:** aggregate *magnitude* of skill-vector change (Tong) or within-job skill *diversity* (Han \& Cheng)
+-   Neither asks whether a skill moves toward a higher- or lower-status **specific partner occupation**
+:::
+:::::
+
+::::: {.column width="50%"}
+::: {style="font-size: 22px; margin-top: 3em;"}
+**This paper** (O\*NET, 2015--2024)
+
+-   **Data:** incumbent-reported requirements — realized occupational skill content
+-   **Object:** *signed direction* of dyadic flow, $G_{ij} = \sigma_j - \sigma_i$
+-   Asks whether skill $s$ moves toward or away from status, relative to the occupation that already holds it
+:::
+:::::
+:::::::::
+
+## Demand Signals vs. Realized Change — Schematic {.smaller}
+
+::: {style="text-align: center; margin-top: 2em;"}
+![](figures/png/fig_demand_vs_realized_schematic_v2.png){width="85%"}
+:::
+
+::: {style="font-size: 20px; margin-top: 1em; text-align: center;"}
+Job-ad studies measure how much one occupation's skill profile changes, using its own status as a predictor.
+We measure which direction a specific skill moves between two occupations — and that direction reverses
+by skill type: cognitive skills flow up, physical skills flow down.
+:::
 
 ## The Architecture We Build Upon {.smaller}
 
@@ -305,21 +341,15 @@ $$
 
 ## Threats to Inference {.smaller}
 
-::: {style="font-size: 24px; margin-top: 2em;"}
-**What could generate a spurious directional pattern — and how we rule it out:**
+::: {style="font-size: 25px; margin-top: 2.5em;"}
+**Four threats, each targeted by a dedicated check:**
 
--   **Mechanical index artifact** — RCA is relative by construction →
-    freeze the 2015 denominator; re-estimate on raw importance change
+-   Mechanical index artifact → frozen-denominator / raw-importance re-estimation
+-   Confounded by stable occupation/skill propensities → fixed effects + permutation test
+-   Arbitrary measurement choices → thresholds, status index, taxonomy each varied independently
+-   One disruptive period driving it → replicated across three sub-periods
 
--   **Confounded by stable propensities** — occupations/skills that are
-    just generally active → source/target fixed effects; a common shock
-    is further ruled out by a within-stratum permutation test
-
--   **Arbitrary measurement choices** — RCA threshold, status index,
-    skill taxonomy → each varied independently; asymmetry survives
-
--   **One disruptive period driving it** — pandemic, generative AI →
-    replicated across 2015-18, 2019-21, 2022-24
+**All four checks preserve the directional asymmetry** (full results: backup B6–B12).
 :::
 
 ## Why This Matters {.smaller}
@@ -357,6 +387,26 @@ $$
 -   Consistent with external mobility evidence: transitions from
     declining to growing occupations account for only ~5% of moves
     over two decades
+:::
+
+## Limitations {.smaller}
+
+::: {style="font-size: 25px; margin-top: 3em;"}
+-   **Occupational level:** we do not observe the organizational decisions
+    behind individual adoptions, nor general-equilibrium responses to shifting demand
+
+-   **Observational design:** cannot fully rule out occupations responding
+    independently to a shared shock — though a shock would not by itself
+    reverse direction across cognitive and physical domains
+
+-   **U.S. data only:** the magnitude of directional channeling is likely
+    institutionally contingent — credentialing regimes, wage-setting, union
+    density plausibly moderate it; cross-national tests are needed
+
+-   We identify the **direction** of skill flow as a function of relative
+    status — we do not adjudicate **which** relational mechanism
+    (emulation, task allocation, absorptive capacity, credentialist closure,
+    valuation asymmetry) produces it
 :::
 
 ## Conclusion {.smaller}
