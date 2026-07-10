@@ -69,9 +69,9 @@ the status of the occupations that already hold them?
 ::: {style="font-size: 22px; margin-top: 3em;"}
 **Job-ad studies** (Tong et al. 2025; Han \& Cheng 2026)
 
--   **Data:** employer demand signals in job postings — aspirational, not verified realized change
--   **Object:** aggregate *magnitude* of skill-vector change (Tong) or within-job skill *diversity* (Han \& Cheng)
--   Neither asks whether a skill moves toward a higher- or lower-status **specific partner occupation**
+-   **Data:** employer-side demand signals in job postings — not verified workplace content
+-   **Object:** occupation-level vector change (Tong) or within-job skill *diversity* (Han \& Cheng)
+-   Direction is not signed by the status of a **specific source/partner occupation**
 :::
 :::::
 
@@ -79,23 +79,40 @@ the status of the occupations that already hold them?
 ::: {style="font-size: 22px; margin-top: 3em;"}
 **This paper** (O\*NET, 2015--2024)
 
--   **Data:** incumbent-reported requirements — realized occupational skill content
+-   **Data:** incumbent/analyst-rated requirements — realized occupational skill profiles
 -   **Object:** *signed direction* of dyadic flow, $G_{ij} = \sigma_j - \sigma_i$
 -   Asks whether skill $s$ moves toward or away from status, relative to the occupation that already holds it
 :::
 :::::
 :::::::::
 
-## Demand Signals vs. Realized Change — Schematic {.smaller}
+## Demand Signals and Realized Flows Are Different Objects {.smaller}
 
-::: {style="text-align: center; margin-top: 2em;"}
-![](figures/png/fig_demand_vs_realized_schematic_v2.png){width="85%"}
+::::::::: columns
+::::: {.column width="50%"}
+::: {style="font-size: 22px; text-align: center; margin-top: 0.8em;"}
+**Job-ad studies**<br>
+Demanded change *within* an occupation
+:::
+:::::
+
+::::: {.column width="50%"}
+::: {style="font-size: 22px; text-align: center; margin-top: 0.8em;"}
+**This paper**<br>
+Realized skill movement *between* occupations
+:::
+:::::
+:::::::::
+
+::: {style="text-align: center; margin-top: 0.3em;"}
+![](figures/png/demand_vs_realized_concept.png){width="90%"}
 :::
 
-::: {style="font-size: 20px; margin-top: 1em; text-align: center;"}
-Job-ad studies measure how much one occupation's skill profile changes, using its own status as a predictor.
-We measure which direction a specific skill moves between two occupations — and that direction reverses
-by skill type: cognitive skills flow up, physical skills flow down.
+::: {style="font-size: 21px; margin-top: 0.4em; text-align: center;"}
+The relational question adds direction:<br>
+<span style="color:#4f46a5; font-weight:700;">socio-cognitive skills move upward</span>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<span style="color:#175c50; font-weight:700;">sensory-physical skills move downward</span>.
 :::
 
 ## The Architecture We Build Upon {.smaller}
@@ -126,7 +143,7 @@ by skill type: cognitive skills flow up, physical skills flow down.
 :::::
 :::::::::
 
-# I. DIRECTIONAL SKILL DIFFUSION {.center .middle background-color="#0a4e58"}
+# I. DIRECTIONAL SKILL DIFFUSION {.center .middle background-color="#302a78"}
 
 ## Two Elementary Events
 
@@ -175,7 +192,7 @@ than offset, producing a Matthew effect among occupations.
 -   **Valuation asymmetry:** identical content is rewarded differently depending on who holds it.
 :::
 
-# II. DATA & METHODS {.center .middle background-color="#0a4e58"}
+# II. DATA & METHODS {.center .middle background-color="#302a78"}
 
 ## Data
 
@@ -230,7 +247,7 @@ than offset, producing a Matthew effect among occupations.
 ![](figures/png/fig_S2_cs_distribution-1.png){width="46%"}
 :::
 
-::: {style="font-size: 19px; color:#4b5661; text-align: center; margin-top: 0.1em;"}
+::: {style="font-size: 19px; color:#666b7a; text-align: center; margin-top: 0.1em;"}
 Domain: Alabdulkareem et al. 2018 &nbsp;·&nbsp; Nestedness/specificity: Hosseinioun et al. 2025
 :::
 
@@ -265,7 +282,7 @@ $$
 :::
 
 
-# III. DESCRIPTIVE PATTERNS {.center .middle background-color="#0a4e58"}
+# III. DESCRIPTIVE PATTERNS {.center .middle background-color="#302a78"}
 
 ## Adoption and Abandonment Gradients {.smaller}
 
@@ -298,7 +315,7 @@ $$
     -   abandonment reinforces the same divide
 :::
 
-# IV. GRAVITY MODEL RESULTS {.center .middle background-color="#0a4e58"}
+# IV. GRAVITY MODEL RESULTS {.center .middle background-color="#302a78"}
 
 ## Fixed-Effects Gravity Estimates {.smaller}
 
@@ -434,7 +451,7 @@ $$
 
 
 
-# Thank You {.center .middle background-color="#0a4e58"}
+# Thank You {.center .middle background-color="#302a78"}
 
 **Roberto Cantillan**
 
@@ -445,7 +462,7 @@ rcantillan\@uc.cl
 Paper and Replication:
 [github.com/rcantillan/skill_diffusion](https://github.com/rcantillan/skill_diffusion)
 
-# Backup Slides {.center .middle background-color="#2d3e50"}
+# Backup Slides {.center .middle background-color="#302a78"}
 
 ## B1: Formal Definitions {.smaller}
 

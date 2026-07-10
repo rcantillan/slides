@@ -1,109 +1,324 @@
-/* ===========================
-   styles.css — v6 (Inconsolata + portada con alturas iguales)
-   =========================== */
+/* RC28 NYU — restrained indigo visual system */
 
-/* Tipografía */
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700;900&display=swap');
-
-:root{
-  --brand:#0a6d7c;
-  --brand-dark:#0a4e58;
-  --brand-accent:#19b5c6;
-  --text:#11222b;
-  --title-scale: 2.05em;
-  --subtitle-scale: 1.25em;
+:root {
+  --brand: #4f46a5;
+  --brand-dark: #302a78;
+  --brand-accent: #7568c7;
+  --brand-soft: #eeecfa;
+  --green: #175c50;
+  --green-light: #91c8b8;
+  --green-soft: #e9f3f0;
+  --ink: #202334;
+  --muted: #666b7a;
+  --line: #d9dbea;
+  --paper: #fbfbfd;
+  --title-scale: 2.02em;
+  --subtitle-scale: 1.18em;
 }
 
-/* Base Reveal */
-.reveal{
-  font-family: "Inconsolata", ui-monospace, "SFMono-Regular",
-               Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+/* Base */
+.reveal {
+  font-family: "Source Sans Pro", "Aptos", "Helvetica Neue", Arial, sans-serif;
   font-size: 22px;
   line-height: 1.34;
-  color: var(--text);
+  color: var(--ink);
+  background: var(--paper);
 }
-.reveal .slides > section{ padding: 8px 10px; }
 
-/* Encabezados */
-.reveal h1,.reveal h2,.reveal h3,.reveal h4,.reveal h5,.reveal h6{
-  font-family: inherit; color: var(--brand-dark);
-  font-weight: 900; letter-spacing: 0.01em; margin: 0.15em 0 0.25em 0;
+.reveal .slides > section {
+  box-sizing: border-box;
+  padding: 14px 22px 18px;
 }
-.reveal h1{ font-size: 2.35em; }
-.reveal h2{ font-size: 1.9em; }
-.reveal h3{ font-size: 1.5em; }
 
-/* Texto/links */
-.reveal p{ margin: 0.35em 0; line-height: 1.46; }
-.reveal a{ color: var(--brand); text-decoration: none; }
-.reveal a:hover{ color: var(--brand-accent); text-decoration: underline; }
-
-/* Imágenes genéricas */
-.reveal section img, .reveal figure img{
-  max-width: 100%; max-height: 85vh; height: auto; width: auto;
-  display: block; margin: 0.1em auto; border-radius: 8px;
+.reveal .slides section.slide.level2 > h2::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 4px;
+  margin: 0.22em 0 0;
+  border-radius: 3px;
+  background: var(--green);
 }
-.fullbleed{ max-height: 92vh !important; width: 100% !important; }
 
-/* ===== Portada: layout IZQ|DER ===== */
-#title-slide.quarto-title-block{ height: 100%; }
+/* Typography */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: inherit;
+  color: var(--brand-dark);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  margin: 0.12em 0 0.34em;
+}
 
-.title-container{
-  display: grid;
-  grid-template-columns: 42% 58%;
-  gap: 2.2%;
+.reveal h1 { font-size: 2.28em; }
+.reveal h2 { font-size: 1.76em; }
+.reveal h3 { font-size: 1.38em; }
+.reveal h4 {
+  font-size: 0.92em;
+  color: var(--green);
+  font-weight: 600;
+}
+
+.reveal p {
+  margin: 0.34em 0;
+  line-height: 1.43;
+}
+
+.reveal strong {
+  color: var(--brand-dark);
+  font-weight: 700;
+}
+
+.reveal a {
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(23, 92, 80, 0.35);
+}
+
+.reveal a:hover {
+  color: #0d433a;
+  border-bottom-color: #0d433a;
+}
+
+.reveal ul,
+.reveal ol {
+  margin-left: 1.25em;
+}
+
+.reveal li {
+  margin: 0.22em 0;
+  padding-left: 0.15em;
+}
+
+.reveal li::marker { color: var(--brand-accent); }
+
+.reveal blockquote {
+  width: auto;
+  margin: 0.85em 0 0.6em;
+  padding: 0.55em 0.9em;
+  border-left: 5px solid var(--green);
+  border-radius: 0 4px 4px 0;
+  background: var(--brand-soft);
+  color: var(--ink);
+  box-shadow: none;
+  font-style: normal;
+}
+
+.reveal blockquote p { line-height: 1.38; }
+
+/* Media, equations, and tables */
+.reveal section img,
+.reveal figure img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 85vh;
+  margin: 0.1em auto;
+  border-radius: 4px;
+}
+
+.reveal .column img {
+  box-shadow: 0 8px 24px rgba(48, 42, 120, 0.09);
+}
+
+.reveal .MathJax_Display,
+.reveal mjx-container[display="true"] {
+  color: #29265f;
+}
+
+.reveal table {
+  border-collapse: collapse;
+  border-top: 2px solid var(--green);
+  border-bottom: 2px solid var(--brand);
+}
+
+.reveal table th {
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  font-weight: 700;
+}
+
+.reveal table th,
+.reveal table td {
+  border-color: var(--line);
+  padding: 0.28em 0.55em;
+}
+
+.fullbleed {
+  width: 100% !important;
+  max-height: 92vh !important;
+}
+
+/* Title slide */
+#title-slide.quarto-title-block {
   height: 100%;
-  width: 100%;
-  align-items: center;       /* centra verticalmente el texto */
+  padding: 20px 24px;
 }
 
-/* Columna de texto: define la altura “objetivo” */
-.title-content{
-  text-align: left;
-  padding: 0 14px 0 0;
+.title-container {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  gap: 4%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.title-content {
   max-width: 900px;
+  padding: 0 18px 0 0;
+  text-align: left;
 }
 
-/* Columna de imagen: no fijamos altura aquí; la fija el script */
-.title-image{
-  display: flex; justify-content: center; align-items: center;
+.title-content::before {
+  content: "RC28 · NEW YORK · 2026";
+  display: block;
+  margin-bottom: 1.1em;
+  color: var(--green);
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: 0.11em;
 }
 
-/* Imagen portada: altura la establece el script (equalize) */
-#title-image-el{
+.title-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title-image-el {
   width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  border-radius: 6px;
+  box-shadow: 0 16px 36px rgba(39, 34, 96, 0.18);
   object-fit: cover;
+  filter: saturate(0.82) contrast(1.03);
 }
 
-/* Tipos/colores portada */
-.title{ margin-bottom: 8px; font-size: var(--title-scale); color: var(--brand-dark); font-weight: 900; }
-.subtitle{ font-size: var(--subtitle-scale); margin-bottom: 12px; color: var(--brand); font-weight: 700; }
-.author{ font-size: 1.02em; margin-bottom: 2px; }
-.institute{ font-size: 0.98em; margin-bottom: 6px; color:#4b5661; }
-.footer{ color:#7a8a94; }
-
-/* Slides de plot: sin título y a casi pantalla completa */
-.plot-slide h1, .plot-slide h2, .plot-slide h3{ display:none; }
-.plot-slide{ padding: 0 !important; }
-.plot-slide img{ max-height: 92vh; }
-
-/* Media queries */
-@media (min-width: 1600px){
-  :root{ --title-scale: 2.2em; --subtitle-scale: 1.28em; }
+.title {
+  margin-bottom: 0.18em;
+  color: var(--brand-dark);
+  font-size: var(--title-scale);
+  font-weight: 750;
+  line-height: 1.02;
 }
-@media (max-width: 1024px){
-  .title-container{ grid-template-columns: 48% 52%; }
+
+.subtitle {
+  margin-bottom: 1.05em;
+  color: var(--brand);
+  font-size: var(--subtitle-scale);
+  font-weight: 600;
+  line-height: 1.25;
 }
-@media (max-width: 780px){
-  .title-container{
+
+.author {
+  margin-bottom: 0.12em;
+  color: var(--ink);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.institute {
+  margin-bottom: 0.3em;
+  color: var(--muted);
+  font-size: 0.88em;
+}
+
+.footer { color: var(--muted); }
+
+/* Section dividers */
+.reveal .slides section[data-background-color="#302a78"],
+.reveal .slides section[data-background-color="#0a4e58"],
+.reveal .slides section[data-background-color="#2d3e50"] {
+  padding: 24px 8%;
+  background-color: var(--brand-dark) !important;
+}
+
+.reveal .slides section[data-background-color="#302a78"] h1,
+.reveal .slides section[data-background-color="#0a4e58"] h1,
+.reveal .slides section[data-background-color="#2d3e50"] h1 {
+  color: #ffffff;
+  font-size: 2.08em;
+  font-weight: 700;
+  line-height: 1.08;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reveal .slides section[data-background-color="#302a78"] h1::after,
+.reveal .slides section[data-background-color="#0a4e58"] h1::after,
+.reveal .slides section[data-background-color="#2d3e50"] h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 5px;
+  margin: 0.48em 0 0;
+  border-radius: 3px;
+  background: var(--green-light);
+}
+
+.reveal #thank-you {
+  text-align: left;
+}
+
+.reveal #thank-you h1 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.reveal .slide-background[data-background-hash*="#0a4e58"] .slide-background-content,
+.reveal .slide-background[data-background-hash*="#2d3e50"] .slide-background-content {
+  background: var(--brand-dark);
+}
+
+/* Reveal chrome */
+.reveal .slide-number {
+  right: 18px;
+  bottom: 12px;
+  color: var(--brand-dark);
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.reveal .footer {
+  color: #797d8b;
+  font-size: 0.43em;
+}
+
+.reveal .controls { color: var(--brand); }
+.reveal .progress { color: var(--green); height: 3px; }
+
+/* Figure-first slides */
+.plot-slide h1,
+.plot-slide h2,
+.plot-slide h3 { display: none; }
+.plot-slide { padding: 0 !important; }
+.plot-slide img { max-height: 92vh; }
+
+@media (min-width: 1600px) {
+  :root { --title-scale: 2.15em; --subtitle-scale: 1.22em; }
+}
+
+@media (max-width: 1024px) {
+  .title-container { grid-template-columns: 46% 54%; gap: 3%; }
+}
+
+@media (max-width: 780px) {
+  .reveal .slides > section { padding: 12px 16px 16px; }
+  .title-container {
     grid-template-columns: 1fr;
     grid-auto-flow: row;
     gap: 12px;
     align-content: start;
   }
-  /* En móvil, dejamos que la imagen tenga altura automática */
-  #title-image-el{ height: auto !important; max-height: 45vh; }
-  .title-content{ padding: 0 6px; }
+  #title-image-el { height: auto !important; max-height: 42vh; }
+  .title-content { padding: 0 6px; }
+  .title-content::before { margin-bottom: 0.6em; }
 }
