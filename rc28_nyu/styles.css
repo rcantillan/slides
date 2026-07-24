@@ -11,7 +11,7 @@
   --ink: #202334;
   --muted: #666b7a;
   --line: #d9dbea;
-  --paper: #fbfbfd;
+  --paper: #ffffff;
   --title-scale: 2.02em;
   --subtitle-scale: 1.18em;
 }
@@ -27,7 +27,7 @@
 
 .reveal .slides > section {
   box-sizing: border-box;
-  padding: 14px 22px 18px;
+  padding: 18px 28px 20px;
 }
 
 .reveal .slides section.slide.level2 > h2::after {
@@ -111,6 +111,27 @@
 
 .reveal blockquote p { line-height: 1.38; }
 
+.reveal .takeaway {
+  max-width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.62em 0.9em;
+  border-left: 4px solid var(--green);
+  background: var(--green-soft);
+  color: var(--ink);
+  font-size: 1.12em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.reveal .takeaway p {
+  margin: 0;
+}
+
+.reveal .columns {
+  column-gap: 1.5em;
+}
+
 /* Media, equations, and tables */
 .reveal section img,
 .reveal figure img {
@@ -123,9 +144,7 @@
   border-radius: 4px;
 }
 
-.reveal .column img {
-  box-shadow: 0 8px 24px rgba(48, 42, 120, 0.09);
-}
+.reveal .column img { box-shadow: none; }
 
 .reveal .MathJax_Display,
 .reveal mjx-container[display="true"] {
@@ -301,6 +320,11 @@
 .plot-slide h3 { display: none; }
 .plot-slide { padding: 0 !important; }
 .plot-slide img { max-height: 92vh; }
+
+.reveal .slides section.compact-title h2 {
+  font-size: 1.45em;
+  margin-bottom: 0.15em;
+}
 
 @media (min-width: 1600px) {
   :root { --title-scale: 2.15em; --subtitle-scale: 1.22em; }
