@@ -2,10 +2,14 @@
 
 ## 18-minute talk script
 
-**Target delivery:** about 17:45 including the opening language note.  
-**Timing convention:** the slide timings below begin after that brief note.  
+**Target delivery:** about 17:15 including the opening language note.
+**Timing convention:** the slide timings below begin after that brief note.
 **Style:** calm, conversational, and selective. Do not read everything visible
 on the slides. Pause briefly after the central result and before the conclusion.
+**Matches:** `slides_revised.qmd` as of this version (polarization/nestedness
+slide moved before "I. Argument"; new "Connecting to Recent Work on the
+Bottom of the Distribution" slide before Limitations; updated section-divider
+subtitles).
 
 ---
 
@@ -13,59 +17,89 @@ on the slides. Pause briefly after the central result and before the conclusion.
 
 Good morning, and thank you for being here.
 
-Before I begin, I should mention that English is not my first language.
-I may speak a little more slowly than usual, especially when explaining
-technical details. I hope the argument remains clear, but I appreciate your
-patience if a phrase is less precise than I intend. During the discussion, I
-would be especially grateful for comments, suggestions, and reactions to the
-paper. They will help me improve both the analysis and the way I communicate
-it.
+English is not my first language, so I may speak a little more slowly than
+usual. I especially welcome your comments and suggestions during the
+discussion.
 
-This paper asks how technological change reshapes the skill content of
-occupations, and whether those changes narrow or reproduce occupational
-inequality.
+This paper studies how occupations change from within: how capabilities
+become part of an occupation, how they are retained, and how they disappear.
+It then asks whether these changes reproduce occupational inequality.
 
-Our central finding is that realized skill change is status-sorted:
-socio-cognitive content becomes more concentrated upward, while
-sensory-physical content becomes more concentrated downward.
+## Occupations Change From Within — 0:30–1:10
 
-We call this a Matthew effect in occupational skill content.
+An occupation is not a fixed bundle of tasks.
 
-## Technological Upgrading Should Spread Cognitive Skills — 0:30–1:15
+Its title may remain the same while its content changes. New capabilities
+become part of the job. Existing requirements are retained or recombined.
+Others lose importance or disappear.
 
-Let me begin with the conventional expectation.
+The illustration makes this visible. The occupation of nursing persists, but
+the combination of manual, relational, and information-processing
+requirements can change.
 
-Technological change increases cognitive and interpersonal requirements.
-Lower-status occupations may face especially strong pressure to adapt. If that
-pressure produced broad cognitive upgrading, occupational skill profiles
-should become more similar over time.
+So the phenomenon I want to explain is the recomposition of occupational
+skill content over time.
 
-But pressure to acquire a skill does not tell us where that skill becomes an
-established occupational requirement. Our question is therefore not simply
-which occupations face change. It is where different kinds of skill content
-actually take root.
+## Why Occupational Recomposition Matters Now — 1:10–1:45
 
-## From Upskilling Pressure to Realized Change — 1:15–2:00
+This question is especially important in current debates about AI and the
+future of work.
 
-This illustration captures the distinction.
+AI and digitalization have renewed pressure to reorganize jobs and tasks.
+Much of that discussion emphasizes cognitive, analytical, and interpersonal
+capabilities. But the opportunities and rewards associated with those
+capabilities may differ across occupational positions.
 
-In both periods, the physician interprets clinical information. In 1990, the
-nurse's visible work is centered on manual examination. By 2024, the nurse
-still provides relational care, but also interprets the same kind of clinical
-information.
+We do not estimate the effect of AI in this paper. AI makes the broader
+question more urgent: how is changing skill content distributed across
+occupations?
 
-This is only a motivating illustration. We do not observe one occupation
-teaching or transmitting a skill to another. We observe changes in
-occupational requirements over time.
+## Pressure to Change Does Not Determine Where Content Takes Root — 1:45–2:20
 
-The empirical question is whether those changes are systematically related to
-the status of the occupations that already hold each skill.
+This brings us to a basic distinction.
 
-# I. Argument — 2:00–2:05
+Exposure and demand can create pressure for many occupations to adapt. But
+pressure does not ensure that a capability becomes an established
+occupational requirement.
 
-The argument has two parts: relatedness connects; status orders direction.
+Incorporation and retention may differ across occupational positions.
+Therefore, the empirical problem is not only which skills are demanded. It is
+where different kinds of content are added, retained, or shed.
 
-## Relatedness Connects; Status Directs — 2:05–2:55
+## Occupational Skills Are Polarized and Hierarchically Organized — 2:20–3:00
+
+This recomposition does not begin from a neutral skill space.
+
+Occupational skills are polarized. Socio-cognitive skills cluster with higher
+education and wages, while sensory-physical skills are more concentrated
+below.
+
+They are also hierarchically organized. Some broad capabilities support more
+specialized requirements, and positions in this structure are associated with
+unequal occupational rewards.
+
+The question is therefore not simply whether occupational content changes.
+It is how change is organized inside an already unequal skill structure.
+
+# I. Argument — 3:00–3:05
+
+Our argument is that relatedness connects occupational positions, while
+status orders the direction of change.
+
+## One Process, Two Movements: Adoption and Abandonment — 3:05–3:35
+
+We study two ways in which occupational content changes.
+
+Holders are occupations that already have a skill. The target is the
+occupation whose content changes.
+
+In adoption, the target gains a skill held by other occupations. In
+abandonment, the target sheds a skill that those occupations retain.
+
+These are directed comparisons. We do not observe one occupation teaching or
+transmitting a skill to another.
+
+## Relatedness Connects; Status Directs — 3:35–4:20
 
 The left panel shows task-profile distance. Similar occupations are plausible
 counterparts because they share tasks, training, and productive
@@ -81,7 +115,7 @@ So relatedness identifies the relevant occupational neighborhood. The signed
 status gap tells us whether realized change points upward or downward within
 that neighborhood.
 
-## Status Predicts Opposite Trajectories Across Skill Domains — 2:55–3:35
+## Status Predicts Opposite Trajectories Across Skill Domains — 4:20–4:55
 
 This produces a simple set of expectations.
 
@@ -94,54 +128,23 @@ more likely below current holders, and abandonment more likely above them.
 If both margins point in the same direction, adoption and abandonment combine
 into a status-sorted pattern of occupational skill content.
 
-## Existing Skill Structure Makes Direction Consequential — 3:35–4:15
+## Mechanisms Consistent With the Directional Pattern — 4:55–5:25
 
-This expectation builds on two established features of skill structure.
-
-First, skills are polarized. Socio-cognitive skills are associated with higher
-education and wages, while sensory and physical skills are more concentrated
-below.
-
-Second, skills are nested. Some broad capabilities support many more
-specialized requirements.
-
-We use these results to distinguish general socio-cognitive, specialized
-socio-cognitive, and sensory-physical skills. Direction matters because these
-classes already occupy unequal positions in the occupational structure.
-
-## Skill Change Has Two Reinforcing Margins — 4:15–4:50
-
-We study two events.
-
-For adoption, a source occupation holds a skill and a target does not. We ask
-whether the target later adopts it.
-
-For abandonment, both initially hold the skill. We ask whether the target
-later drops it.
-
-Source and target define a directed comparison, not an observed act of
-transmission. For each opportunity, we examine profile distance, the signed
-status gap, and skill class.
-
-## Mechanisms Consistent With the Directional Pattern — 4:50–5:30
-
-Several mechanisms are compatible with directional sorting.
-
-Unequal resources may condition absorptive capacity. Credentials may restrict
-access to higher-status task bundles. Authority may shape task allocation
-among related occupations. And similar content may be valued differently
-depending on who performs it.
+Several mechanisms are compatible with directional sorting: unequal
+resources, credential closure, authority over task allocation, and the
+unequal valuation of similar content.
 
 We reference these mechanisms theoretically, but we do not observe or identify
 them separately. The narrower empirical implication is that, conditional on
 relatedness, relative status should remain associated with the direction of
 skill change.
 
-# II. Data & Methods — 5:30–5:35
+# II. Data & Methods — 5:25–5:30
 
-I now turn to the data and the two complementary models.
+Now the data and methods. We test whether status — net of relatedness —
+predicts direction.
 
-## Forty Million Opportunities Reveal Where Skills Take Root — 5:35–6:20
+## Forty Million Opportunities Reveal Where Skills Take Root — 5:30–6:10
 
 We use O*NET occupational requirements from 2015 to 2024.
 
@@ -155,7 +158,7 @@ abandonment opportunities.
 The target is always the occupation that changes. For adoption it crosses the
 RCA threshold; for abandonment it falls below that threshold.
 
-## Three Skill Classes Capture Function and Specificity — 6:20–6:50
+## Three Skill Classes Capture Function and Specificity — 6:10–6:40
 
 We classify the 160 requirements by domain and specificity.
 
@@ -166,7 +169,7 @@ The distinction lets us test whether broad and specialized cognitive content
 follow the same status direction, and whether both differ from physical
 content.
 
-## Two Models Separate Target Gradients from Relational Direction — 6:50–7:35
+## Two Questions, Two Models: Who Changes — and Relative to Whom? — 6:40–7:20
 
 The analysis proceeds in two steps.
 
@@ -182,7 +185,7 @@ This sequence matters. The first model establishes the destination-side
 gradient. The second tests whether relational direction contains information
 beyond that gradient.
 
-## The Gravity Model Isolates Direction Net of Relatedness — 7:35–8:20
+## The Gravity Model Isolates Direction Net of Relatedness — 7:20–8:05
 
 This is the relational model. I will focus on its logic rather than every
 symbol.
@@ -198,17 +201,17 @@ specifications.
 
 Agreement across these panels is therefore substantively important.
 
-# III. Results — 8:20–8:25
+# III. Results — 8:05–8:10
 
 The results move from the target gradient to the relational comparison.
 
-## Target Status Predicts Who Adds and Sheds Each Skill Class — 8:25–9:15
+## Target Status Predicts Who Adds and Sheds Each Skill Class — 8:10–8:55
 
 These are model-based predicted probabilities, not raw descriptive rates.
 
-The top row shows the target-status gradient. Higher-status targets are less
-likely to adopt or abandon the three classes, although the levels and slopes
-differ substantially by domain.
+The top row shows that target status alone produces distinct class-specific
+gradients. This is the first layer of the result, but it does not tell us how
+change is organized relative to particular skill holders.
 
 The bottom row introduces the target's position relative to the mean status of
 existing skill holders. Here the domain pattern becomes clearer.
@@ -218,7 +221,7 @@ while sensory-physical content is retained and accumulated lower.
 This establishes who changes. It does not yet establish whether specific
 source-target relations matter.
 
-## Target Status Is Only the First Layer — 9:15–9:50
+## Target Status Is Only the First Layer — 8:55–9:25
 
 That distinction is essential.
 
@@ -232,7 +235,7 @@ occupations.
 In other words: is this only a high-status-target gradient, or does the signed
 source-target relation add something?
 
-## The Relational Test Uses Two Complementary Comparisons — 9:50–10:25
+## The Relational Test Uses Two Complementary Comparisons — 9:25–10:00
 
 The next figure answers that question using two comparisons.
 
@@ -246,7 +249,7 @@ On the horizontal axis, negative values place the target below the source;
 positive values place it above. On the vertical axis, zero is the equal-status
 reference.
 
-## The Domain Reversal Survives Both Fixed-Effect Comparisons — 10:25–11:35
+## The Domain Reversal Survives Both Fixed-Effect Comparisons — 10:00–11:00
 
 This is the central result.
 
@@ -254,23 +257,16 @@ In Panel A, socio-cognitive adoption rises as the target moves above the
 source, while socio-cognitive abandonment falls. The sensory-physical class
 shows the opposite pattern.
 
-The coefficients are sizable and precisely estimated. For example, in Panel
-A the adoption coefficients are positive for general and specialized
-socio-cognitive skills, at point one-four and point two-one, and negative for
-sensory-physical skills, at minus point two-one. For abandonment, all three
-signs reverse.
-
 Most importantly, Panel B preserves the same domain reversal while holding the
-target and skill fixed. The socio-cognitive slopes are smaller, but they keep
-the expected signs. The sensory-physical coefficients remain especially
-clear.
+target and skill fixed. The socio-cognitive slopes become smaller, but their
+direction is unchanged; the sensory-physical reversal remains clear.
 
 [Pause.]
 
 So this pattern cannot be reduced to the statement that high-status targets
 simply adopt more cognitive content.
 
-## The Pattern Cannot Be Reduced to High-Status Targets — 11:35–12:15
+## The Pattern Cannot Be Reduced to High-Status Targets — 11:00–11:40
 
 The two rows identify different comparisons.
 
@@ -287,7 +283,7 @@ content becomes concentrated downward.
 These are directional associations. They do not identify direct transmission
 or a unique causal mechanism.
 
-## Only the Signed Gap Reproduces the Macro-Gradient — 12:15–13:05
+## Only the Signed Gap Reproduces the Macro-Gradient — 11:40–12:30
 
 We then ask whether these relational estimates are sufficient to reconstruct
 the aggregate occupational gradient.
@@ -302,7 +298,7 @@ alternatives remain comparatively flat.
 This is an internal sufficiency test on the same risk set, not out-of-sample
 validation. Its value is the comparison with the nulls.
 
-## Direction Is the Informative Component — 13:05–13:40
+## Direction Is the Informative Component — 12:30–13:00
 
 The conclusion from that comparison is narrow but important.
 
@@ -315,11 +311,12 @@ is removed.
 The informative component is direction: whether the target sits above or
 below the source.
 
-# IV. Implications — 13:40–13:45
+# IV. Implications — 13:00–13:05
 
-Let me close with implications and limits.
+Let me close with implications and limits. Even widespread pressure to
+upskill can reinforce, rather than erode, the occupational hierarchy.
 
-## AI-Era Upskilling Can Compound Existing Barriers — 13:45–14:40
+## AI-Era Upskilling Can Compound Existing Barriers — 13:05–13:50
 
 The findings matter for current debates about AI and occupational adaptation.
 
@@ -334,7 +331,24 @@ We do not estimate AI displacement or adjustment mechanisms directly. The
 result is instead consistent with inequality being reproduced inside
 occupational positions, before workers move or jobs disappear.
 
-## Limitations — 14:40–15:25
+## Connecting to Recent Work on the Bottom of the Distribution — 13:50–14:25
+
+One connection to recent work in this room.
+
+Using 120 million job postings, Han and Cheng show that low-wage jobs
+diversify their skill mix as much as high-wage jobs — but they are not
+rewarded for it. They call this a skills-value mismatch.
+
+Their unit is the job posting; ours is the occupation, so the two results are
+complementary rather than identical. Our results offer another possibility:
+diversification at the bottom may differ not only in its rewards, but also in
+the type of content that is incorporated and retained.
+
+*(Delivery note: if Prof. Cheng is in the room, this is the natural moment
+for eye contact — the slide is framed as building on her recent work, not
+competing with it.)*
+
+## Limitations — 14:25–15:05
 
 Three limits are important.
 
@@ -351,31 +365,26 @@ elsewhere.
 
 These limits define what the paper does and does not claim.
 
-## Pressure to Upskill Can Reinforce Occupational Hierarchy — 15:25–17:15
+## Pressure to Upskill Can Reinforce Occupational Hierarchy — 15:05–16:45
 
 Let me conclude with three points.
 
-First, realized occupational skill change is not generalized cognitive
-upgrading. It is status-sorted. Socio-cognitive content becomes more
-concentrated upward, while sensory-physical content becomes more concentrated
-downward.
+First, realized skill change is status-sorted: socio-cognitive content becomes
+more concentrated upward, while sensory-physical content becomes more
+concentrated downward.
 
-Second, relatedness and status play distinct roles. Profile similarity
-identifies plausible occupational counterparts. The signed source-target gap
-orders the association between those counterparts.
+Second, relatedness and status do different work. Similarity identifies
+plausible occupational counterparts; the signed source-target gap orders the
+association between them.
 
-Third, adoption and abandonment compound. Higher-status occupations are
-positioned to accumulate and retain socio-cognitive content, while
-sensory-physical content is increasingly concentrated below.
+Third, adoption and abandonment reinforce the same pattern. This is not
+evidence of direct transmission or a unique mechanism. It is evidence that
+occupational content changes in a systematic status direction, net of task
+proximity and stable occupation and skill differences.
 
-The broader implication is not that we have observed a mechanism of direct
-skill transmission. It is that the realized reorganization of occupational
-content follows a systematic status direction, net of task proximity and
-stable occupation and skill differences.
-
-Occupations are not fixed bundles of tasks. They change. And the pattern we
-document is consistent with technological change reproducing inequality by
-altering the content of occupational positions themselves.
+Occupations are not fixed bundles of tasks. They change. Our result is that
+this change can reproduce inequality inside occupational positions
+themselves.
 
 Thank you.
 
@@ -383,12 +392,15 @@ Thank you.
 
 ## Practice checkpoints
 
-- **5:30:** entering Data & Methods
-- **8:20:** entering Results
-- **10:25:** central four-panel result
-- **13:40:** entering Implications
-- **15:25:** beginning conclusion
-- **17:15:** finished; approximately 45 seconds of buffer
+- **2:20:** entering the polarization/hierarchy background slide
+- **3:00:** entering Argument
+- **5:25:** entering Data & Methods
+- **8:05:** entering Results
+- **10:00:** central four-panel result
+- **13:00:** entering Implications
+- **13:50:** Han & Cheng bridge slide
+- **15:05:** beginning conclusion
+- **16:45:** finished; approximately 75 seconds of buffer
 
 ## Delivery notes
 
@@ -396,7 +408,10 @@ Thank you.
   read all six coefficients.
 - On the projection figure, name the black and blue lines first; describe the
   two nulls together.
-- Say “consistent with” when discussing mechanisms or inequality
+- Say "consistent with" when discussing mechanisms or inequality
   reproduction.
-- Say “directional association,” not “direct transmission.”
-- If running late, shorten the skill-taxonomy slide and the mechanisms slide.
+- Say "directional association," not "direct transmission."
+- On the Han & Cheng slide, state explicitly that their unit is job postings
+  and ours is occupations — do not let the two results sound equivalent.
+- If running late, shorten the mechanisms slide and the Han & Cheng slide
+  (it can drop to two sentences: "the mismatch" and "our explanation").

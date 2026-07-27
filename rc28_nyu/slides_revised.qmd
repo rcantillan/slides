@@ -24,21 +24,7 @@ editor:
     wrap: 72
 ---
 
-## Technological Upgrading Should Spread Cognitive Skills {.smaller}
-
-::: {style="font-size: 28px; margin-top: 3.4em;"}
-
--   Technological change raises cognitive and interpersonal requirements
--   Lower-status occupations face especially strong pressure to adapt
--   Broad upgrading should narrow differences in occupational skill content
-
-::: {.takeaway style="margin-top: 1.8em;"}
-But pressure to acquire a skill does not determine
-**where that skill actually takes root.**
-:::
-:::
-
-## From Upskilling Pressure to Realized Change {.smaller}
+## Occupations Change From Within {.smaller}
 
 ::::::::: columns
 ::::: {.column width="46%"}
@@ -48,25 +34,107 @@ But pressure to acquire a skill does not determine
 ::::: 
 
 ::::: {.column width="54%"}
-::: {style="font-size: 24px; margin-top: 2.2em;"}
-Pressure to change is not the same as realized occupational skill content.
+::: {style="font-size: 25px; margin-top: 2.4em;"}
+An occupation can retain its name and social position while its
+**content changes**.
 
-> We observe how occupational requirements change over time, not direct
-> transmission between workers or occupations.
+-   New capabilities become part of the job
+-   Existing requirements are retained or recombined
+-   Other capabilities lose importance or disappear
 
-Related occupations provide plausible comparisons. Their status positions
-allow us to ask whether realized changes are directionally patterned.
-
-**We ask:** which skills are adopted or abandoned, and how do those changes
-vary with the status of the occupations that already hold them?
+::: {.takeaway style="margin-top: 1.6em;"}
+How is occupational skill content **recomposed over time**?
+:::
 :::
 :::::
 :::::::::
 
+## Why Occupational Recomposition Matters Now {.smaller}
+
+::: {style="font-size: 27px; margin-top: 2.6em;"}
+
+-   AI and digitalization have renewed debate about how jobs and tasks change
+-   Adaptation increasingly emphasizes cognitive, analytical, and
+    interpersonal capabilities
+-   The opportunities and rewards attached to those capabilities may differ
+    across occupational positions
+
+::: {.takeaway style="margin-top: 1.7em;"}
+We do not estimate the effect of AI. AI makes a more general question urgent:
+**how is changing skill content distributed across occupations?**
+:::
+:::
+
+## Pressure to Change Does Not Determine Where Content Takes Root {.smaller}
+
+::: {style="font-size: 27px; margin-top: 2.5em;"}
+
+-   Exposure and demand create pressure for occupations to adapt
+-   Pressure does not ensure that a capability becomes an established
+    occupational requirement
+-   Incorporation and retention may differ across occupational positions
+
+::: {.takeaway style="margin-top: 1.7em;"}
+The empirical problem is not only **which skills are demanded**, but
+**where different kinds of skill content are added, retained, or shed.**
+:::
+:::
+
+## Occupational Skills Are Polarized and Hierarchically Organized {.smaller}
+
+::::::::: columns
+::::: {.column width="50%"}
+::: {style="font-size: 22px; margin-top: 1em;"}
+**Polarization** (Alabdulkareem et al. 2018)
+
+-   Skills cluster into two domains
+-   Socio-cognitive: high education, high wages
+-   Sensory/physical: lower education, lower wages
+
+![](p1_ref_plot.png){width="72%"}
+:::
+:::::
+
+::::: {.column width="50%"}
+::: {style="font-size: 22px; margin-top: 1em;"}
+**Hierarchical organization** (Hosseinioun et al. 2025)
+
+-   Asymmetric dependencies: some skills "enable" others
+-   Nested architecture has **intensified** over time
+-   Position in hierarchy predicts wages, automation risk
+
+![](p2_ref_plot.png){width="65%"}
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 0.4em;"}
+Occupational change begins inside an already
+**polarized and unequal skill structure**.
+:::
+
 # I. Argument {.center .middle background-color="#302a78"}
 
 ::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
-Relatedness connects occupational counterparts; status orders realized change.
+**Relatedness connects; status directs.**<br>
+Skill change is associated with where targets sit relative to current holders.
+:::
+
+## One Process, Two Movements: Adoption and Abandonment
+
+::: {style="text-align: center; margin-top: 2.2em;"}
+![](figures/illustration.png){width="64%"}
+:::
+
+::: {style="font-size: 22px; margin-top: 0.8em; text-align: center;"}
+**Holders:** occupations that already have a skill.<br>
+**Target:** the occupation whose content changes.<br><br>
+**Adoption:** the target *gains* a skill its holders already have.<br>
+**Abandonment:** the target *sheds* a skill its holders retain.
+:::
+
+::: {style="font-size: 19px; margin-top: 0.6em; text-align: center; color:#666b7a;"}
+These are directed comparisons, not observed acts of transmission.
 :::
 
 ## Relatedness Connects; Status Directs {.smaller}
@@ -82,8 +150,8 @@ Relatedness connects occupational counterparts; status orders realized change.
 :::
 
 ::: {style="font-size: 20px; text-align: center; margin-top: 0.2em;"}
-Distance identifies plausible counterparts, but has no orientation:
-$\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$.
+Relatedness says which occupations are plausible partners —
+but it is the same in both directions: $\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$.
 :::
 :::::
 
@@ -97,20 +165,20 @@ $\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$.
 :::
 
 ::: {style="font-size: 20px; text-align: center; margin-top: 0.2em;"}
-The signed gap orders those counterparts:
-$G_{ji}=-G_{ij}$.
+The signed gap adds direction: **positive** when the target sits *above*
+the holder, **negative** when it sits *below* ($G_{ji}=-G_{ij}$).
 :::
 :::::
 :::::::::
 
 ::: {.takeaway style="margin-top: 0.6em;"}
-Relatedness selects plausible counterparts; status gives the relation direction.
+Relatedness selects the partners; status is the **directional filter**.
 :::
 
 ## Status Predicts Opposite Trajectories Across Skill Domains {.smaller}
 
 ::: {style="font-size: 24px; margin-top: 1.8em; text-align:center;"}
-For each skill, compare a target occupation with its current holders.
+For each skill, compare the **target** with the skill's **current holders**.
 :::
 
 ::::::::: columns
@@ -134,47 +202,8 @@ For each skill, compare a target occupation with its current holders.
 :::::::::
 
 ::: {.takeaway style="margin-top: 1.5em;"}
-Adoption and abandonment combine into a status-sorted pattern<br>
-in occupational skill content.
-:::
-
-## Existing Skill Structure Makes Direction Consequential {.smaller}
-
-::::::::: columns
-::::: {.column width="50%"}
-::: {style="font-size: 22px; margin-top: 1em;"}
-**Polarization** (Alabdulkareem et al. 2018)
-
--   Skills cluster into two domains
--   Socio-cognitive: high education, high wages
--   Sensory/physical: lower education, lower wages
-
-![](p1_ref_plot.png){width="72%"}
-:::
-:::::
-
-::::: {.column width="50%"}
-::: {style="font-size: 22px; margin-top: 1em;"}
-**Nestedness** (Hosseinioun et al. 2025)
-
--   Asymmetric dependencies: some skills "enable" others
--   Nested architecture has **intensified** over time
--   Position in hierarchy predicts wages, automation risk
-
-![](p2_ref_plot.png){width="65%"}
-:::
-:::::
-:::::::::
-
-## Skill Change Has Two Reinforcing Margins
-
-::: {style="text-align: center; margin-top: 3em;"}
-![](figures/illustration.png){width="64%"}
-:::
-
-::: {style="font-size: 20px; margin-top: 1em; text-align: center;"}
-We do not observe direct transmission. We model how adoption and abandonment
-hazards vary with **profile distance**, **signed status gap**, and **skill class**.
+Gains and losses push the **same way**: cognitive content moves up,<br>
+physical content moves down. They do not cancel out — they compound.
 :::
 
 ## Mechanisms Consistent With the Directional Pattern
@@ -198,7 +227,7 @@ directly observed in the occupational data.
 # II. Data & Methods {.center .middle background-color="#302a78"}
 
 ::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
-Forty million source–target–skill opportunities over 2015–2024.
+Testing whether status — net of relatedness — predicts direction.
 :::
 
 ## Forty Million Opportunities Reveal Where Skills Take Root {.smaller}
@@ -218,12 +247,13 @@ Forty million source–target–skill opportunities over 2015–2024.
 ::: {style="font-size: 25px; margin-top: 2.2em;"}
 **Directed source–target–skill risk sets**
 
--   **21.5M adoption opportunities:** source holds the skill; target does not
+-   **21.5M adoption opportunities:** the source holds the skill; the target does not
 -   **18.6M abandonment opportunities:** source and target both hold the skill
 -   Event occurs when the target crosses the RCA threshold by 2024
 
 ::: {.takeaway style="margin-top: 1.1em;"}
-The target is always the occupation that changes.
+The **source** is always a current holder.<br>
+The **target** is always the occupation that changes.
 :::
 :::
 :::::
@@ -249,7 +279,7 @@ Domain: Alabdulkareem et al. 2018 &nbsp;·&nbsp; Nestedness/specificity: Hossein
 :::
 
 
-## Two Models Separate Target Gradients from Relational Direction {.smaller}
+## Two Questions, Two Models: Who Changes — and Relative to Whom? {.smaller}
 
 ::::::::: columns
 ::::: {.column width="50%"}
@@ -306,6 +336,11 @@ $$
 $$
 \operatorname{cloglog}\Pr(Y^f_{ijs}=1)=\eta^f_{ijs}
 $$
+
+::: {style="font-size: 22px; margin-top: 0.4em; text-align:center; color:#302a78;"}
+**In words:** how likely is the target to change, given how *similar* it is
+to the source — and whether it sits *above or below* it?
+:::
 
 -   $\beta^f_g$: one signed-gap coefficient per event and skill class
 -   $\delta^f_g$: profile-distance association
@@ -365,7 +400,8 @@ organized by the target's position relative to specific sources?
 **Axes**
 
 -   $x<0$: target below source &nbsp;&nbsp;|&nbsp;&nbsp; $x>0$: target above source
--   $y=\mathrm{RH}-1$: zero is the equal-status reference
+-   $y$: **relative hazard minus one** — how much more (above zero) or less
+    (below zero) likely the event is, compared to an equal-status pair
 :::
 
 ## The Domain Reversal Survives Both Fixed-Effect Comparisons {.compact-title}
@@ -429,7 +465,8 @@ sensory-physical content becomes concentrated downward.
 # IV. Implications {.center .middle background-color="#302a78"}
 
 ::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
-Status-sorted skill change can widen inequality within occupations.
+Even widespread pressure to upskill can reinforce, rather than erode,
+the occupational hierarchy.
 :::
 
 ## AI-Era Upskilling Can Compound Existing Barriers {.smaller}
@@ -444,6 +481,26 @@ Status-sorted skill change can widen inequality within occupations.
 
 -   This pattern is consistent with inequality being reproduced
     **inside occupations**, before workers move or jobs disappear
+:::
+
+## Connecting to Recent Work on the Bottom of the Distribution {.smaller}
+
+::: {style="font-size: 25px; margin-top: 3em;"}
+Using 120M **job postings**, Han & Cheng (2026, *AJS*) show that the
+bottom diversifies — but is not rewarded for it: a **skills-value
+mismatch**.
+
+Our results are at the **occupation** level, not job postings — a
+different unit of analysis. Read as complementary: diversification at
+the bottom is disproportionately sensory-physical, and the
+socio-cognitive content that does appear there is not retained the way
+it is retained above.
+
+::: {.takeaway style="margin-top: 1em;"}
+Han & Cheng show that the bottom diversifies but isn't rewarded;
+we show why: the directional filter determines what content takes
+root at each level.
+:::
 :::
 
 ## Limitations {.smaller}
@@ -496,7 +553,25 @@ Paper and Replication:
 
 # Backup Slides {.center .middle background-color="#302a78"}
 
-## B1: Formal Definitions {.smaller}
+## B1: Main Threats and What We Do About Them {.smaller}
+
+::: {style="font-size: 20px; margin-top: 2em;"}
+
+| Main threat | Design response |
+|:--|:--|
+| A target-status gradient may look relational | Complementary source + skill and target + skill fixed-effect comparisons |
+| RCA changes may reflect denominator drift | Fixed-2015 denominator check; raw-importance diagnostic |
+| Skills with many sources may dominate the risk set | Equal target-skill weighting preserves all 24 slope signs |
+| Results may depend on measurement choices | Threshold, status, taxonomy, and period sensitivity checks in the SI |
+
+::: {.takeaway style="margin-top: 1.5em;"}
+These checks address measurement and specification sensitivity. They do not
+establish direct transmission or a unique causal mechanism.
+:::
+
+:::
+
+## B2: Formal Definitions {.smaller}
 
 ::: {style="font-size: 22px;  margin-top: 3em;"}
 **Revealed Comparative Advantage:**
@@ -519,7 +594,7 @@ each skill class: $\beta_g>0$ orients change toward higher-status targets;
 $\beta_g<0$ orients it toward lower-status targets.
 :::
 
-## B2: Skill Taxonomy {.smaller}
+## B3: Skill Taxonomy {.smaller}
 
 ::: {style="font-size: 22px;  margin-top: 2em;"}
 **Functional domain:**
@@ -541,7 +616,7 @@ $$c_s = \frac{\mathrm{NODF}_{\text{obs}} - \mathbb{E}[\mathrm{NODF}^{(s)}_{\text
 The high-nestedness sensory-physical cell is empirically absent.
 :::
 
-## B3: Key Coefficients {.smaller}
+## B4: Key Coefficients {.smaller}
 
 :::: {style="font-size: 18px; margin-top: 2em;"}
 **Linear signed-gap coefficients, Panel A: source + skill FE**
@@ -565,7 +640,7 @@ Cloglog hazard scale. One signed linear coefficient per skill class.
 :::
 ::::
 
-## B4: Complete Gravity Model Derivation {.smaller}
+## B5: Complete Gravity Model Derivation {.smaller}
 
 ::: {style="font-size: 20px;"}
 **Step 1: Classic Gravity**
@@ -586,7 +661,7 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
 + \delta_g\mathrm{dist}_{ij}$$
 :::
 
-## B5: Key Magnitudes {.smaller}
+## B6: Key Magnitudes {.smaller}
 
 ::: {style="font-size: 24px; margin-top: 4em; text-align: left;"}
 **Main signed-gap gradients:**
@@ -603,7 +678,7 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
 -   The signed gradient persists under source + skill and target + skill FE
 :::
 
-## B6: Occupational Status — PCA Construction {.smaller}
+## B7: Occupational Status — PCA Construction {.smaller}
 
 ::: {style="text-align: center;"}
 ![](figures/png/fig_pca_status_clean.png){width="66%"}
