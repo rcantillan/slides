@@ -26,15 +26,7 @@ editor:
 
 ## Occupations Change From Within {.smaller}
 
-::::::::: columns
-::::: {.column width="46%"}
-::: {style="margin-top: 0.4em; text-align: center;"}
-![](skill_adopt_by_nurse_doctor.png){style="height:545px; width:auto;"}
-:::
-::::: 
-
-::::: {.column width="54%"}
-::: {style="font-size: 25px; margin-top: 2.4em;"}
+::: {style="font-size: 29px; margin: 3.1em auto 0; max-width: 1050px;"}
 An occupation can retain its name and social position while its
 **content changes**.
 
@@ -42,41 +34,23 @@ An occupation can retain its name and social position while its
 -   Existing requirements are retained or recombined
 -   Other capabilities lose importance or disappear
 
-::: {.takeaway style="margin-top: 1.6em;"}
+::: {.takeaway style="margin-top: 1.8em;"}
 How is occupational skill content **recomposed over time**?
 :::
 :::
-:::::
-:::::::::
 
 ## Why Occupational Recomposition Matters Now {.smaller}
 
-::: {style="font-size: 27px; margin-top: 2.6em;"}
+::: {style="font-size: 27px; margin-top: 2.25em;"}
 
 -   AI and digitalization have renewed debate about how jobs and tasks change
--   Adaptation increasingly emphasizes cognitive, analytical, and
-    interpersonal capabilities
--   The opportunities and rewards attached to those capabilities may differ
-    across occupational positions
+-   Technological change creates pressure to reorganize occupational content
+-   Similar pressures need not produce the same realized changes across
+    occupational positions
 
 ::: {.takeaway style="margin-top: 1.7em;"}
-We do not estimate the effect of AI. AI makes a more general question urgent:
-**how is changing skill content distributed across occupations?**
-:::
-:::
-
-## Pressure to Change Does Not Determine Where Content Takes Root {.smaller}
-
-::: {style="font-size: 27px; margin-top: 2.5em;"}
-
--   Exposure and demand create pressure for occupations to adapt
--   Pressure does not ensure that a capability becomes an established
-    occupational requirement
--   Incorporation and retention may differ across occupational positions
-
-::: {.takeaway style="margin-top: 1.7em;"}
-The empirical problem is not only **which skills are demanded**, but
-**where different kinds of skill content are added, retained, or shed.**
+We do not estimate the effect of AI. We study the realized pattern:
+**where are different types of skill content added or shed?**
 :::
 :::
 
@@ -112,6 +86,36 @@ The empirical problem is not only **which skills are demanded**, but
 Occupational change begins inside an already
 **polarized and unequal skill structure**.
 :::
+
+## Occupational Change Is Relationally Situated {.smaller}
+
+::::::::: columns
+::::: {.column width="44%"}
+::: {style="margin-top: 0.4em; text-align: center;"}
+![](skill_adopt_by_nurse_doctor.png){style="height:525px; width:auto;"}
+:::
+:::::
+
+::::: {.column width="56%"}
+::: {style="font-size: 24px; margin-top: 1.25em;"}
+Nursing changes from within, but **not in isolation**.
+
+-   Nurses and doctors work in the same occupational field
+-   Their work is related, but their positions are unequal
+-   Capabilities already established in one position may later become
+    incorporated or retained in another
+
+::: {.takeaway style="margin-top: 1.25em;"}
+Among related occupations, does **relative status** predict which kinds of
+skill content are adopted or abandoned?
+:::
+
+::: {style="font-size: 18px; margin-top: 0.7em; color:#666b7a;"}
+Motivating illustration, not evidence of direct transmission.
+:::
+:::
+:::::
+:::::::::
 
 # I. Argument {.center .middle background-color="#302a78"}
 
@@ -497,9 +501,14 @@ socio-cognitive content that does appear there is not retained the way
 it is retained above.
 
 ::: {.takeaway style="margin-top: 1em;"}
-Han & Cheng show that the bottom diversifies but isn't rewarded;
-we show why: the directional filter determines what content takes
-root at each level.
+Our findings suggest a complementary possibility: diversification at the
+bottom may differ not only in its rewards, but also in the type of content
+that is incorporated and retained.
+:::
+
+::: {style="font-size: 17px; margin-top: 0.7em; color:#666b7a;"}
+Different data and units of analysis; a complementary interpretation, not a
+direct test of the same mechanism.
 :::
 :::
 
