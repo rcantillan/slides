@@ -24,35 +24,86 @@ editor:
     wrap: 72
 ---
 
-## Occupations Change From Within {.smaller}
+## Occupations Are in Constant Transformation {.smaller}
 
 ::: {style="font-size: 29px; margin: 3.1em auto 0; max-width: 1050px;"}
-An occupation can retain its name and social position while its
-**content changes**.
+Occupations are evolving **bundles of tasks and skills**.
 
--   New capabilities become part of the job
--   Existing requirements are retained or recombined
--   Other capabilities lose importance or disappear
+-   Occupational titles may persist while their content changes
+-   Tasks and skills are added, recombined, retained, or abandoned
+-   This continuously recomposes what occupations require and do
 
 ::: {.takeaway style="margin-top: 1.8em;"}
 How is occupational skill content **recomposed over time**?
 :::
+
+::: {style="font-size: 16px; margin-top: 0.8em; color:#777b87;"}
+Weeden & Grusky 2005; Labussière & Bol 2026
+:::
 :::
 
-## Why Occupational Recomposition Matters Now {.smaller}
+## Technological Change Raises the Pressure to Update {.smaller}
 
-::: {style="font-size: 27px; margin-top: 2.25em;"}
+::::::::: columns
+::::: {.column width="57%"}
+::: {style="font-size: 25px; margin-top: 1.55em;"}
 
--   AI and digitalization have renewed debate about how jobs and tasks change
--   Technological change creates pressure to reorganize occupational content
--   Similar pressures need not produce the same realized changes across
-    occupational positions
+-   Technological change has increased the returns to cognitive and
+    analytical capabilities
+-   It has contributed to occupational polarization and the hollowing of
+    routine middle-skill work
+-   More recently, AI has renewed expectations of broad occupational
+    upskilling
+
+::: {.takeaway style="margin-top: 1.35em;"}
+Technological change makes the recomposition of occupational content
+increasingly consequential for inequality.
+:::
+
+::: {style="font-size: 15px; margin-top: 0.65em; color:#777b87;"}
+Autor, Levy & Murnane 2003; Acemoglu & Autor 2011; Goos, Manning & Salomons
+2014; Eloundou et al. 2024
+:::
+:::
+:::::
+
+::::: {.column width="43%"}
+::: {style="text-align:center; margin-top: 1.05em;"}
+![](occupational_recomposition_context_v2.png){style="height:425px; width:auto; max-width:100%; object-fit:contain; border-radius:4px;"}
+:::
+:::::
+:::::::::
+
+## Upskilling Pressure May Be Strongest at the Bottom {.smaller}
+
+::::::::: columns
+::::: {.column width="57%"}
+::: {style="font-size: 25px; margin-top: 1.55em;"}
+
+-   Lower-status occupations face greater pressure to adapt to replacement
+    and devaluation
+-   Recent job-posting evidence finds substantial skill diversification in
+    low-wage jobs
+-   But pressure to update does not determine what content becomes
+    incorporated or retained
 
 ::: {.takeaway style="margin-top: 1.7em;"}
-We do not estimate the effect of AI. We study the realized pattern:
-**where are different types of skill content added or shed?**
+Upskilling pressure may be widespread, but **realized occupational updating
+need not be uniform**.
+:::
+
+::: {style="font-size: 15px; margin-top: 0.65em; color:#777b87;"}
+Autor 2015; Acemoglu & Restrepo 2020; Tong, Wu & Evans 2025; Han & Cheng 2026
 :::
 :::
+:::::
+
+::::: {.column width="43%"}
+::: {style="text-align:center; margin-top: 1.05em;"}
+![](frontline_updating_pressure_v2.png){style="height:425px; width:auto; max-width:100%; object-fit:contain; border-radius:4px;"}
+:::
+:::::
+:::::::::
 
 ## Occupational Skills Are Polarized and Hierarchically Organized {.smaller}
 
@@ -87,41 +138,157 @@ Occupational change begins inside an already
 **polarized and unequal skill structure**.
 :::
 
-## Occupational Change Is Relationally Situated {.smaller}
-
-::::::::: columns
-::::: {.column width="44%"}
-::: {style="margin-top: 0.4em; text-align: center;"}
-![](skill_adopt_by_nurse_doctor.png){style="height:525px; width:auto;"}
-:::
-:::::
-
-::::: {.column width="56%"}
-::: {style="font-size: 24px; margin-top: 1.25em;"}
-Nursing changes from within, but **not in isolation**.
-
--   Nurses and doctors work in the same occupational field
--   Their work is related, but their positions are unequal
--   Capabilities already established in one position may later become
-    incorporated or retained in another
-
-::: {.takeaway style="margin-top: 1.25em;"}
-Among related occupations, does **relative status** predict which kinds of
-skill content are adopted or abandoned?
-:::
-
-::: {style="font-size: 18px; margin-top: 0.7em; color:#666b7a;"}
-Motivating illustration, not evidence of direct transmission.
-:::
-:::
-:::::
-:::::::::
-
 # I. Argument {.center .middle background-color="#302a78"}
 
 ::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
 **Relatedness connects; status directs.**<br>
 Skill change is associated with where targets sit relative to current holders.
+:::
+
+## Skill Change in a Relational Field {.smaller}
+
+::::::::: columns
+::::: {.column width="42%"}
+::: {style="text-align:center; margin-top:0.35em;"}
+![](skill_adopt_by_nurse_doctor.png){width="76%"}
+:::
+:::::
+
+::::: {.column width="58%"}
+::: {style="font-size:24px; line-height:1.38; margin-top:1.15em;"}
+**What we observe**
+
+Nursing changes its skill content over time.
+
+**What makes the change relational**
+
+The same capability is already distributed across other occupations,
+including medicine.
+
+**What we compare**
+
+The changing occupation's position relative to those **current holders**.
+:::
+
+::: {.takeaway style="margin-top:0.75em; font-size:22px;"}
+**Diffusion** means directional updating relative to occupations that already
+hold the requirement.
+:::
+:::::
+:::::::::
+
+::: {style="font-size:15px; margin-top:0.25em; color:#717583; display:flex; justify-content:space-between; gap:1.5em;"}
+<span>Illustration only: we observe occupational updating, not
+physician-to-nurse transmission.</span>
+<span style="white-space:nowrap;">Strang & Meyer 1993; Wimmer 2021</span>
+:::
+
+## Proximity and Direction {.smaller}
+
+::::::::: columns
+::::: {.column width="50%"}
+::: {style="font-size: 24px; text-align: center; margin-top: 0.55em; color:#302a78;"}
+**Task-profile proximity**
+:::
+
+::: {style="text-align:center; margin-top: 0.1em;"}
+<svg viewBox="0 0 500 250" width="455" height="228" role="img"
+aria-label="Two occupation nodes connected by one undirected curved edge">
+  <path d="M112 142 Q250 38 388 142" fill="none" stroke="#0b7566"
+        stroke-width="6" stroke-linecap="round"/>
+  <text x="250" y="57" text-anchor="middle" font-size="17" fill="#0b7566">same proximity</text>
+  <circle cx="88" cy="158" r="35" fill="#302a78"/>
+  <circle cx="412" cy="158" r="35" fill="#302a78"/>
+  <text x="88" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">N</text>
+  <text x="412" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">D</text>
+  <text x="88" y="215" text-anchor="middle" font-size="19" font-weight="600" fill="#302a78">Nurses</text>
+  <text x="412" y="215" text-anchor="middle" font-size="19" font-weight="600" fill="#302a78">Doctors</text>
+</svg>
+:::
+
+::: {style="font-size: 20px; text-align: center; margin-top: 0.25em; color:#353847;"}
+One undirected relation<br>
+$\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$
+:::
+:::::
+
+::::: {.column width="50%"}
+::: {style="font-size: 24px; text-align: center; margin-top: 0.55em; color:#302a78;"}
+**Relative occupational status**
+:::
+
+::: {style="text-align:center; margin-top: 0.1em;"}
+<svg viewBox="0 0 500 250" width="455" height="228" role="img"
+aria-label="Two occupation nodes connected by two oppositely directed curved arrows">
+  <defs>
+    <marker id="arrowUp" markerWidth="13" markerHeight="13" refX="11" refY="6.5"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0b7566"/>
+    </marker>
+    <marker id="arrowDown" markerWidth="13" markerHeight="13" refX="11" refY="6.5"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#756fb3"/>
+    </marker>
+  </defs>
+  <path d="M120 137 Q250 35 380 112" fill="none" stroke="#0b7566"
+        stroke-width="5.5" stroke-linecap="round" marker-end="url(#arrowUp)"/>
+  <path d="M380 148 Q250 238 120 173" fill="none" stroke="#756fb3"
+        stroke-width="5.5" stroke-linecap="round" marker-end="url(#arrowDown)"/>
+  <text x="250" y="53" text-anchor="middle" font-size="17" fill="#0b7566">target above source</text>
+  <text x="250" y="226" text-anchor="middle" font-size="17" fill="#756fb3">target below source</text>
+  <circle cx="88" cy="158" r="35" fill="#302a78"/>
+  <circle cx="412" cy="122" r="35" fill="#302a78"/>
+  <text x="88" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">N</text>
+  <text x="412" y="130" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">D</text>
+  <text x="88" y="215" text-anchor="middle" font-size="19" font-weight="600" fill="#302a78">Nurses</text>
+  <text x="412" y="77" text-anchor="middle" font-size="19" font-weight="600" fill="#302a78">Doctors</text>
+</svg>
+:::
+
+::: {style="font-size: 20px; text-align: center; margin-top: 0.25em; color:#353847;"}
+Two directed comparisons<br>
+$G_{ij}=-G_{ji}$
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 0.45em; font-size:23px;"}
+Proximity defines **who is connected**. Relative status defines **which
+direction is being evaluated**.
+:::
+
+::: {style="font-size: 14px; margin-top: 0.35em; color:#717583; text-align:center;"}
+Relatedness: Newman 2002. Proximity and prestige in diffusion:
+Bail, Brown & Wimmer 2019.
+:::
+
+## Which Direction Should Predominate? {.smaller}
+
+::::::::: columns
+::::: {.column width="50%"}
+::: {style="font-size: 24px; margin-top: 1.6em;"}
+**Generalized upskilling**
+
+-   Valued cognitive capabilities may become standardized and spread downward
+-   Lower-status occupations may update more because replacement pressure is
+    greater
+:::
+:::::
+
+::::: {.column width="50%"}
+::: {style="font-size: 24px; margin-top: 1.6em;"}
+**Cumulative advantage and closure**
+
+-   Resources, discretion, and credential closure may consolidate valued
+    cognitive content upward
+-   Sensory-physical content may become progressively concentrated downward
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 1.7em;"}
+We do not identify these mechanisms directly. We establish whether updating
+is symmetric or status-directed — and which direction predominates.
 :::
 
 ## One Process, Two Movements: Adoption and Abandonment
@@ -137,98 +304,7 @@ Skill change is associated with where targets sit relative to current holders.
 **Abandonment:** the target *sheds* a skill its holders retain.
 :::
 
-::: {style="font-size: 19px; margin-top: 0.6em; text-align: center; color:#666b7a;"}
-These are directed comparisons, not observed acts of transmission.
-:::
-
-## Relatedness Connects; Status Directs {.smaller}
-
-::::::::: columns
-::::: {.column width="50%"}
-::: {style="font-size: 24px; text-align: center; margin-top: 0.7em;"}
-**Task relatedness: symmetric proximity**
-:::
-
-::: {style="text-align: center; margin-top: 0.3em;"}
-![](figures/png/figA2_relatedness_adoption.png){width="92%"}
-:::
-
-::: {style="font-size: 20px; text-align: center; margin-top: 0.2em;"}
-Relatedness says which occupations are plausible partners —
-but it is the same in both directions: $\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$.
-:::
-:::::
-
-::::: {.column width="50%"}
-::: {style="font-size: 24px; text-align: center; margin-top: 0.7em;"}
-**Occupational status: directional position**
-:::
-
-::: {style="text-align: center; margin-top: 0.3em;"}
-![](figures/png/figA2_status_gap_adoption.png){width="92%"}
-:::
-
-::: {style="font-size: 20px; text-align: center; margin-top: 0.2em;"}
-The signed gap adds direction: **positive** when the target sits *above*
-the holder, **negative** when it sits *below* ($G_{ji}=-G_{ij}$).
-:::
-:::::
-:::::::::
-
-::: {.takeaway style="margin-top: 0.6em;"}
-Relatedness selects the partners; status is the **directional filter**.
-:::
-
-## Status Predicts Opposite Trajectories Across Skill Domains {.smaller}
-
-::: {style="font-size: 24px; margin-top: 1.8em; text-align:center;"}
-For each skill, compare the **target** with the skill's **current holders**.
-:::
-
-::::::::: columns
-::::: {.column width="50%"}
-::: {style="font-size: 25px; margin-top: 1.5em;"}
-**Socio-cognitive skills**
-
--   More likely to be adopted **above** current holders
--   More likely to be abandoned **below** current holders
-:::
-:::::
-
-::::: {.column width="50%"}
-::: {style="font-size: 25px; margin-top: 1.5em;"}
-**Sensory-physical skills**
-
--   More likely to be adopted **below** current holders
--   More likely to be abandoned **above** current holders
-:::
-:::::
-:::::::::
-
-::: {.takeaway style="margin-top: 1.5em;"}
-Gains and losses push the **same way**: cognitive content moves up,<br>
-physical content moves down. They do not cancel out — they compound.
-:::
-
-## Mechanisms Consistent With the Directional Pattern
-
-<br>
-
-::: {style="font-size: 25px; margin-top: 4em;"}
--   **Absorptive capacity:** unequal resources and organizational slack may
-    condition which occupations incorporate new requirements.
--   **Credential and licensing closure:** institutional restrictions may
-    limit access to higher-status task bundles.
--   **Task allocation and delegation:** authority relations may orient how
-    work is reallocated among related occupations.
--   **Valuation asymmetry:** similar content may be recognized differently
-    depending on who performs it.
-
-These mechanisms are theoretically consistent with the results; they are not
-directly observed in the occupational data.
-:::
-
-# II. Data & Methods {.center .middle background-color="#302a78"}
+# II. Research Design {.center .middle background-color="#302a78"}
 
 ::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
 Testing whether status — net of relatedness — predicts direction.
@@ -239,11 +315,12 @@ Testing whether status — net of relatedness — predicts direction.
 ::::::::: columns
 ::::: {.column width="44%"}
 ::: {style="font-size: 26px; margin-top: 3.2em;"}
-**O\*NET, 2015–2024**
+**O\*NET + BLS**
 
--   741 occupations
--   160 requirements
--   Baseline status from wages, education, and cognitive task content
+-   **O\*NET, 2015–2024:** 741 occupations and 160 requirements
+-   **BLS OEWS, 2015:** median annual wages
+-   Baseline status combines wages with O\*NET required education and
+    cognitive task content
 :::
 :::::
 
@@ -691,4 +768,87 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
 
 ::: {style="text-align: center;"}
 ![](figures/png/fig_pca_status_clean.png){width="66%"}
+:::
+
+## B8: References — Technological Change and Updating {.smaller}
+
+::: {style="font-size: 15px; margin-top: 1.2em; line-height:1.25;"}
+
+-   **Autor, D. H., Levy, F., & Murnane, R. J. (2003).** “The Skill Content
+    of Recent Technological Change: An Empirical Exploration.” *Quarterly
+    Journal of Economics* 118(4):1279–1333.
+    doi:10.1162/003355303322552801.
+
+-   **Acemoglu, D., & Autor, D. (2011).** “Skills, Tasks and Technologies:
+    Implications for Employment and Earnings.” *Handbook of Labor Economics*
+    4:1043–1171. doi:10.1016/S0169-7218(11)02410-5.
+
+-   **Goos, M., Manning, A., & Salomons, A. (2014).** “Explaining Job
+    Polarization: Routine-Biased Technological Change and Offshoring.”
+    *American Economic Review* 104(8):2509–2526.
+    doi:10.1257/aer.104.8.2509.
+
+-   **Autor, D. H. (2015).** “Why Are There Still So Many Jobs? The History
+    and Future of Workplace Automation.” *Journal of Economic Perspectives*
+    29(3):3–30. doi:10.1257/jep.29.3.3.
+
+-   **Eloundou, T., Manning, S., Mishkin, P., & Rock, D. (2024).** “GPTs are
+    GPTs: Labor Market Impact Potential of LLMs.” *Science*
+    384(6702):1306–1308. doi:10.1126/science.adj0998.
+
+-   **Tong, D., Wu, L., & Evans, J. A. (2025).** “Lower-Skilled Occupations
+    Face Greater Upskilling Pressure in U.S. Job Ads.” *Nature Communications*
+    17:1237. doi:10.1038/s41467-025-67992-y.
+
+-   **Han, S., & Cheng, S. (2026).** “Skill Diversification Beyond
+    High-Paying Jobs.” *American Journal of Sociology*.
+    doi:10.1086/741725.
+:::
+
+## B9: References — Occupational Structure and Diffusion {.smaller}
+
+::: {style="font-size: 14px; margin-top: 0.8em; line-height:1.2;"}
+
+-   **Weeden, K. A., & Grusky, D. B. (2005).** “The Case for a New Class
+    Map.” *American Journal of Sociology* 111(1):141–212.
+
+-   **Labussière, M., & Bol, T. (2026).** “Are Occupations ‘Bundles of
+    Skills’? Identifying Latent Skill Profiles in the Labor Market Using
+    Topic Modeling.” *Sociological Science* 13:362–407.
+    doi:10.15195/v13.a16.
+
+-   **Alabdulkareem, A., Frank, M. R., Sun, L., AlShebli, B., Hidalgo, C., &
+    Rahwan, I. (2018).** “Unpacking the Polarization of Workplace Skills.”
+    *Science Advances* 4(7):eaao6030. doi:10.1126/sciadv.aao6030.
+
+-   **Hosseinioun, M., Neffke, F., Zhang, L., & Youn, H. (2025).** “Skill
+    Dependencies Uncover Nested Human Capital.” *Nature Human Behaviour*.
+    doi:10.1038/s41562-024-02093-2.
+
+-   **Strang, D., & Meyer, J. W. (1993).** “Institutional Conditions for
+    Diffusion.” *Theory and Society* 22(4):487–511.
+    doi:10.1007/BF00993595.
+
+-   **Cheng, S., & Park, B. (2020).** “Flows and Boundaries: A Network
+    Approach to Studying Occupational Mobility in the Labor Market.”
+    *American Journal of Sociology* 126(3):577–631.
+    doi:10.1086/712406.
+
+-   **Lin, K.-H., & Hung, K. (2022).** “The Network Structure of Occupations:
+    Fragmentation, Differentiation, and Contagion.” *American Journal of
+    Sociology* 127(5):1551–1601. doi:10.1086/719407.
+
+-   **Newman, M. E. J. (2002).** “Assortative Mixing in Networks.”
+    *Physical Review Letters* 89(20):208701.
+    doi:10.1103/PhysRevLett.89.208701.
+
+-   **Bail, C. A., Brown, T. W., & Wimmer, A. (2019).** “Prestige,
+    Proximity, and Prejudice: How Google Search Terms Diffuse across the
+    World.” *American Journal of Sociology* 124(5):1496–1548.
+    doi:10.1086/702007.
+
+-   **Wimmer, A. (2021).** “Domains of Diffusion: How Culture and
+    Institutions Travel around the World and with What Consequences.”
+    *American Journal of Sociology* 126(6):1389–1438.
+    doi:10.1086/714273.
 :::
