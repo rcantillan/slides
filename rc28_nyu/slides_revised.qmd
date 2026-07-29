@@ -258,7 +258,7 @@ direction is being evaluated**.
 :::
 
 ::: {style="font-size: 14px; margin-top: 0.35em; color:#717583; text-align:center;"}
-Relatedness: Newman 2002. Proximity and prestige in diffusion:
+Product-space relatedness: Hidalgo et al. 2007. Proximity and prestige in diffusion:
 Bail, Brown & Wimmer 2019.
 :::
 
@@ -471,7 +471,7 @@ organized by the target's position relative to specific sources?
 
 -   Adoption on the left; abandonment on the right
 
-**Rows compare complementary fixed-effect specifications**
+**Rows compare complementary fixed-effect specifications**++
 
 -   Panel A fixes the source and skill: which targets change around the
     same source?
@@ -821,6 +821,10 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
     Rahwan, I. (2018).** “Unpacking the Polarization of Workplace Skills.”
     *Science Advances* 4(7):eaao6030. doi:10.1126/sciadv.aao6030.
 
+-   **Hidalgo, C. A., Klinger, B., Barabási, A.-L., & Hausmann, R. (2007).**
+    “The Product Space Conditions the Development of Nations.” *Science*
+    317(5837):482–487. doi:10.1126/science.1144581.
+
 -   **Hosseinioun, M., Neffke, F., Zhang, L., & Youn, H. (2025).** “Skill
     Dependencies Uncover Nested Human Capital.” *Nature Human Behaviour*.
     doi:10.1038/s41562-024-02093-2.
@@ -837,10 +841,6 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
 -   **Lin, K.-H., & Hung, K. (2022).** “The Network Structure of Occupations:
     Fragmentation, Differentiation, and Contagion.” *American Journal of
     Sociology* 127(5):1551–1601. doi:10.1086/719407.
-
--   **Newman, M. E. J. (2002).** “Assortative Mixing in Networks.”
-    *Physical Review Letters* 89(20):208701.
-    doi:10.1103/PhysRevLett.89.208701.
 
 -   **Bail, C. A., Brown, T. W., & Wimmer, A. (2019).** “Prestige,
     Proximity, and Prejudice: How Google Search Terms Diffuse across the
