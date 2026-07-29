@@ -52,12 +52,12 @@ Weeden & Grusky 2005; Labussière & Bol 2026
     analytical capabilities
 -   It has contributed to occupational polarization and the hollowing of
     routine middle-skill work
--   More recently, AI has renewed expectations of broad occupational
-    upskilling
+-   More recently, AI has renewed expectations that work will rely more on
+    cognitive skills
 
 ::: {.takeaway style="margin-top: 1.35em;"}
 Technological change makes the recomposition of occupational content
-increasingly consequential for inequality.
+consequential for inequality.
 :::
 
 ::: {style="font-size: 15px; margin-top: 0.65em; color:#777b87;"}
@@ -84,12 +84,12 @@ Autor, Levy & Murnane 2003; Acemoglu & Autor 2011; Goos, Manning & Salomons
     and devaluation
 -   Recent job-posting evidence finds substantial skill diversification in
     low-wage jobs
--   But pressure to update does not determine what content becomes
-    incorporated or retained
+-   But pressure to update need not translate into homogeneous changes in
+    occupational content
 
 ::: {.takeaway style="margin-top: 1.7em;"}
 Upskilling pressure may be widespread, but **realized occupational updating
-need not be uniform**.
+need not be homogeneous**.
 :::
 
 ::: {style="font-size: 15px; margin-top: 0.65em; color:#777b87;"}
@@ -105,38 +105,40 @@ Autor 2015; Acemoglu & Restrepo 2020; Tong, Wu & Evans 2025; Han & Cheng 2026
 :::::
 :::::::::
 
-## Occupational Skills Are Polarized and Hierarchically Organized {.smaller}
+## Heterogeneity Depends on Skill Type and Specialization {.smaller}
+
+::: {.takeaway style="margin: 0.45em auto 0.15em; font-size: 22px; max-width: 1050px;"}
+Changes in occupational content may be contingent on the **functional domain**
+and **functional specificity** of the skills involved.
+:::
 
 ::::::::: columns
 ::::: {.column width="50%"}
-::: {style="font-size: 22px; margin-top: 1em;"}
-**Polarization** (Alabdulkareem et al. 2018)
+::: {style="font-size: 22px; margin-top: 0.65em;"}
+**Functional domain**  
+Polarization (Alabdulkareem et al. 2018)
 
--   Skills cluster into two domains
+-   Skills cluster into socio-cognitive and sensory-physical domains
 -   Socio-cognitive: high education, high wages
--   Sensory/physical: lower education, lower wages
+-   Sensory-physical: lower education, lower wages
 
 ![](p1_ref_plot.png){width="72%"}
 :::
 :::::
 
 ::::: {.column width="50%"}
-::: {style="font-size: 22px; margin-top: 1em;"}
-**Hierarchical organization** (Hosseinioun et al. 2025)
+::: {style="font-size: 22px; margin-top: 0.65em;"}
+**Functional specificity**  
+Hierarchical organization (Hosseinioun et al. 2025)
 
--   Asymmetric dependencies: some skills "enable" others
--   Nested architecture has **intensified** over time
--   Position in hierarchy predicts wages, automation risk
+-   Nested dependencies locate skills in a hierarchy
+-   General skills scaffold many occupational profiles
+-   Specialized skills are narrower and more dependent
 
 ![](p2_ref_plot.png){width="65%"}
 :::
 :::::
 :::::::::
-
-::: {.takeaway style="margin-top: 0.4em;"}
-Occupational change begins inside an already
-**polarized and unequal skill structure**.
-:::
 
 # I. Argument {.center .middle background-color="#302a78"}
 
@@ -266,29 +268,38 @@ Bail, Brown & Wimmer 2019.
 
 ::::::::: columns
 ::::: {.column width="50%"}
-::: {style="font-size: 24px; margin-top: 1.6em;"}
-**Generalized upskilling**
+::: {style="font-size: 23px; margin-top: 1.25em;"}
+**Generalized cognitive upgrading**
 
--   Valued cognitive capabilities may become standardized and spread downward
--   Lower-status occupations may update more because replacement pressure is
-    greater
+-   Technological pressure may extend cognitive requirements across the labor
+    market
+-   Lower-status occupations may face stronger pressure to update
+-   Cognitive skills should therefore spread downward as well as upward
 :::
 :::::
 
 ::::: {.column width="50%"}
-::: {style="font-size: 24px; margin-top: 1.6em;"}
-**Cumulative advantage and closure**
+::: {style="font-size: 23px; margin-top: 1.25em;"}
+**Status-sorted consolidation**
 
--   Resources, discretion, and credential closure may consolidate valued
-    cognitive content upward
--   Sensory-physical content may become progressively concentrated downward
+-   Emulation may pull some occupational content upward
+-   Task allocation, absorptive capacity, closure, and valuation may retain
+    cognitive content at the top
+-   Sensory-physical content may concentrate downward
 :::
 :::::
 :::::::::
 
-::: {.takeaway style="margin-top: 1.7em;"}
-We do not identify these mechanisms directly. We establish whether updating
-is symmetric or status-directed — and which direction predominates.
+::: {.takeaway style="margin-top: 1.15em; font-size: 21px;"}
+We do not adjudicate among these mechanisms directly. We first ask a
+descriptive question: is realized skill updating symmetric or
+status-directed, and if status-directed, which direction predominates?
+:::
+
+::: {style="font-size: 13px; margin-top: 0.5em; color:#717583; text-align:center;"}
+Generalized upgrading: Autor 2003; Acemoglu & Autor 2011; Tong et al. 2025;
+Han & Cheng 2026. Status-sorted consolidation: Cohen & Levinthal 1990; Abbott
+1988; Weeden 2002; Kleiner 2013; Deming 2017.
 :::
 
 ## One Process, Two Movements: Adoption and Abandonment
