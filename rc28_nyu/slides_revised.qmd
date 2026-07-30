@@ -1,6 +1,6 @@
 ---
 title: "A Matthew Effect in Occupational Skill Content"
-subtitle: "Status Sorted Diffusion Reinforce Inequality  Inequality"
+subtitle: "Status Sorted Diffusion Reinforce Inequality"
 author: "Roberto Cantillan & Mauricio Bucca"
 institute: "Department of Sociology | Pontificia Universidad Católica de Chile"
 format:
