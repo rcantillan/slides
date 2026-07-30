@@ -490,7 +490,7 @@ $$
 
 # III. Findings {.center .middle background-color="#302a78"}
 
-## Panel A: Skill Change Is Directed Around Fixed Sources {.smaller}
+## Panel A: Skill Diffusion Is Directed Around Fixed Sources {.smaller}
 
 ::: {style="font-size:18px; color:#666b7a; text-align:center; margin-top:0.15em;"}
 $x<0$: target below source — **borrowing from above** &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -506,7 +506,7 @@ Socio-cognitive skills are adopted and retained **upward**; sensory-physical
 skills are adopted and retained **downward**.
 :::
 
-## Panel B: The Same Pattern Holds Around Fixed Targets {.smaller}
+## Panel B: The Same Diffusion Pattern Holds Around Fixed Targets {.smaller}
 
 ::: {style="font-size:19px; color:#666b7a; text-align:center; margin-top:0.15em;"}
 Holding the target and skill fixed, identification comes from comparing
@@ -557,15 +557,15 @@ Skill fixed effects compare relations involving the same skill.
 The same domain reversal survives both fixed-effect comparisons.
 :::
 
-## The Signed-Gap Model Recovers the Aggregate Pattern {.smaller}
+## The Signed-Gap Model Recovers the Status Gradient {.smaller}
 
-::: {style="text-align: center; margin-top: 0.5em;"}
-![](figures/png/fig3_linear_gap_projections_panelA.png){width="76%"}
+::: {style="text-align:center; margin-top:0.15em;"}
+![](figures/png/fig3_linear_gap_projections_panelA.png){style="height:485px; width:auto;"}
 :::
 
-::: {.takeaway style="margin-top:0.35em; font-size:21px;"}
-The relational model recovers the direction and much of the magnitude of the
-observed occupational gradient.
+::: {.takeaway style="margin-top:0.15em; font-size:20px;"}
+The **directional status-gap model** recovers the observed gradient; the
+**symmetric** and **distance-only** models do not.
 :::
 
 
