@@ -82,12 +82,9 @@ Autor, Levy & Murnane 2003; Acemoglu & Autor 2011; Goos, Manning & Salomons
     and devaluation
 -   Recent job-posting evidence finds substantial skill diversification in
     low-wage jobs
--   But pressure to update need not translate into homogeneous changes in
-    occupational content
 
 ::: {.takeaway style="margin-top: 1.7em;"}
-Upskilling pressure may be widespread, but **realized occupational updating
-need not be homogeneous**.
+But **realized occupational updating may be heterogeneous**.
 :::
 
 ::: {style="font-size: 15px; margin-top: 0.65em; color:#777b87;"}
@@ -115,12 +112,16 @@ and **functional specificity** of the skills involved.
 ::: {style="font-size: 22px; margin-top: 0.65em;"}
 **Functional domain**  
 **Socio-cognitive vs. sensory-physical**  
-Polarization (Alabdulkareem et al. 2018)
+Polarization
 
 -   Socio-cognitive: high education, high wages
 -   Sensory-physical: lower education, lower wages
 
 ![](p1_ref_plot.png){width="72%"}
+
+::: {style="font-size: 14px; margin-top: 0.15em; color:#717583; text-align:center;"}
+Alabdulkareem et al. 2018
+:::
 :::
 :::::
 
@@ -128,17 +129,21 @@ Polarization (Alabdulkareem et al. 2018)
 ::: {style="font-size: 22px; margin-top: 0.65em;"}
 **Functional specificity**  
 **General vs. specialized**  
-Hierarchical organization (Hosseinioun et al. 2025)
+Hierarchical organization
 
 -   General skills scaffold many occupational profiles
 -   Specialized skills are narrower and more dependent
 
 ![](p2_ref_plot.png){width="55%"}
+
+::: {style="font-size: 14px; margin-top: 0.15em; color:#717583; text-align:center;"}
+Hosseinioun et al. 2025
+:::
 :::
 :::::
 :::::::::
 
-# I. Argument {.center .middle background-color="#302a78"}
+# I. Skill Diffusion {.center .middle background-color="#302a78"}
 
 ::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
 **Relatedness connects; status directs.**<br>
@@ -146,7 +151,7 @@ Skill change depends on where an occupation sits relative to the skill's
 current holders.
 :::
 
-## Skill Change in a Relational Field {.smaller}
+## Skill Diffusion Is Directional Updating {.smaller}
 
 ::::::::: columns
 ::::: {.column width="42%"}
@@ -159,12 +164,11 @@ current holders.
 ::: {style="font-size:24px; line-height:1.38; margin-top:1.15em;"}
 **What we observe**
 
-Nursing changes its skill content over time.
+Occupations gain and lose skill requirements over time.
 
 **What makes the change relational**
 
-The same capability is already distributed across other occupations,
-including medicine.
+Each changing skill is already held by a set of other occupations.
 
 **What we compare**
 
@@ -172,96 +176,128 @@ The changing occupation's position relative to those **current holders**.
 :::
 
 ::: {.takeaway style="margin-top:0.75em; font-size:22px;"}
-**Diffusion** means directional updating relative to occupations that already
-hold the requirement.
+**Skill diffusion** is the changing distribution of skill requirements across
+occupations, traced through gains and losses relative to the skill's current
+holders.
 :::
 :::::
 :::::::::
 
 ::: {style="font-size:15px; margin-top:0.25em; color:#717583; display:flex; justify-content:space-between; gap:1.5em;"}
-<span>Illustration only: we observe occupational updating, not
-physician-to-nurse transmission.</span>
+<span>Current holders are plausible sources for adoption and positional
+referents for abandonment; we do not observe direct transmission.</span>
 <span style="white-space:nowrap;">Strang & Meyer 1993; Wimmer 2021</span>
 :::
 
-## Gravity Models Treat Distance as Friction on Diffusion {.smaller}
+
+## Proximity Facilitates Diffusion {.smaller}
 
 ::::::::: columns
-::::: {.column width="62%"}
-::: {style="font-size: 25px; margin-top: 1.25em;"}
-**Gravity models**
-
--   Flows increase with attraction between origins and destinations
--   Related occupational profiles exert a stronger pull on one another
--   Greater task-profile distance makes skill updating less likely
+::::: {.column width="68%"}
+::: {style="font-size: 25px; margin-top: 0.55em;"}
+-   Related occupational profiles are more likely to borrow skills from one
+    another.
 :::
 
-::: {.takeaway style="margin-top: 1.3em; font-size:22px;"}
-Distance determines the **strength of attraction**, but because it is
-symmetric, it cannot determine direction:
-$\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$.
+::: {style="font-size: 23px; text-align: center; margin-top: 0.25em; color:#302a78;"}
+**Task-profile proximity**
 :::
 
-::: {style="font-size: 14px; margin-top: 0.45em; color:#717583;"}
-Gravity framework: Tinbergen 1962. Task-profile relatedness: Hidalgo et al. 2007.
+::: {style="text-align:center; margin-top: 0;"}
+<svg viewBox="0 0 500 250" width="625" height="313" role="img"
+aria-label="Two occupation nodes connected by one undirected curved edge">
+  <path d="M112 142 Q250 38 388 142" fill="none" stroke="#0b7566"
+        stroke-width="6" stroke-linecap="round"/>
+  <text x="250" y="57" text-anchor="middle" font-size="20" font-weight="600" fill="#0b7566">symmetric proximity</text>
+  <circle cx="88" cy="158" r="40" fill="#302a78"/>
+  <circle cx="412" cy="158" r="40" fill="#302a78"/>
+  <text x="88" y="167" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">N</text>
+  <text x="412" y="167" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">D</text>
+  <text x="88" y="222" text-anchor="middle" font-size="22" font-weight="600" fill="#302a78">Nurses</text>
+  <text x="412" y="222" text-anchor="middle" font-size="22" font-weight="600" fill="#302a78">Doctors</text>
+</svg>
+:::
+
+::: {style="font-size: 20px; text-align: center; margin-top: -0.2em; color:#353847;"}
+Unsigned, symmetric distance:
+$\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$
 :::
 :::::
 
-::::: {.column width="38%"}
-::: {style="text-align:center; margin-top: 0.35em;"}
-![](newton_gravity.png){style="height:455px; width:auto; max-width:100%; object-fit:contain;"}
+::::: {.column width="32%"}
+::: {style="text-align:center; margin-top: 5.15em;"}
+![](newton_gravity.png){style="height:185px; width:auto; max-width:100%; object-fit:contain;"}
 :::
 :::::
 :::::::::
 
-## Status Adds an Asymmetric Force of Attraction {.smaller}
+::: {.takeaway style="margin-top: 0.35em; font-size:23px;"}
+**Standard gravity structure:** interaction increases with origin and
+destination mass and decreases with their separation.
+:::
+
+::: {style="font-size: 14px; margin-top: 0.3em; color:#717583; text-align:center;"}
+Gravity models: Tinbergen 1962; Kolaczyk & Csárdi 2020. Symmetric relatedness
+measure: Hidalgo et al. 2007.
+:::
+
+## Status Governs Diffusion Direction {.smaller}
 
 ::::::::: columns
-::::: {.column width="37%"}
-::: {style="font-size: 20px; margin-top: 0.75em;"}
-**Bottom-up cognitive upgrading**  
-*Top-down cognitive borrowing*
-
-::: {style="font-size: 24px; text-align:center; color:#0b7566; margin:0.55em 0;"}
-Doctor holder $\longrightarrow$ Nurse target
-:::
-
--   Replacement pressure is strongest at the bottom
--   Emulation encourages borrowing from occupations above
+::::: {.column width="32%"}
+::: {style="text-align:center; margin-top: 5em;"}
+![](newton_status.png){style="height:195px; width:auto; max-width:100%; object-fit:contain;"}
 :::
 :::::
 
-::::: {.column width="26%"}
-::: {style="text-align:center; margin-top: 0.15em;"}
-![](newton_status.png){style="height:355px; width:auto; max-width:100%; object-fit:contain;"}
-:::
-:::::
-
-::::: {.column width="37%"}
-::: {style="font-size: 20px; margin-top: 0.75em;"}
-**Upward cognitive sorting**  
-*Unequal attraction and retention*
-
-::: {style="font-size: 24px; text-align:center; color:#756fb3; margin:0.55em 0;"}
-Nurse holder $\longrightarrow$ Doctor target
+::::: {.column width="68%"}
+::: {style="font-size: 24px; margin-top: 0.45em;"}
+-   Nurses and doctors have **one symmetric task-profile proximity**.
+-   But each **source → target** ordering has a different signed status gap, so
+    diffusion may be asymmetric.
 :::
 
--   Absorptive capacity and valuation may favor higher-status adopters
--   Licensing and credential closure may block downward borrowing
+::: {style="text-align:center; margin-top: -0.1em;"}
+<svg viewBox="0 0 500 250" width="625" height="313" role="img"
+aria-label="Two occupation nodes connected by two oppositely directed curved arrows">
+  <defs>
+    <marker id="arrowUp" markerWidth="20" markerHeight="20" refX="15" refY="8"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L16,8 L0,16 Z" fill="#0b7566"/>
+    </marker>
+    <marker id="arrowDown" markerWidth="20" markerHeight="20" refX="15" refY="8"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L16,8 L0,16 Z" fill="#756fb3"/>
+    </marker>
+  </defs>
+  <path d="M124 135 Q250 28 374 107" fill="none" stroke="#0b7566"
+        stroke-width="6" stroke-linecap="round" marker-end="url(#arrowUp)"/>
+  <path d="M376 151 Q250 241 126 176" fill="none" stroke="#756fb3"
+        stroke-width="6" stroke-linecap="round" marker-end="url(#arrowDown)"/>
+  <text x="250" y="43" text-anchor="middle" font-size="20" font-weight="600" fill="#0b7566">Upward</text>
+  <text x="250" y="238" text-anchor="middle" font-size="20" font-weight="600" fill="#756fb3">Downward</text>
+  <circle cx="88" cy="158" r="40" fill="#302a78"/>
+  <circle cx="412" cy="122" r="40" fill="#302a78"/>
+  <text x="88" y="167" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">N</text>
+  <text x="412" y="131" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">D</text>
+  <text x="88" y="222" text-anchor="middle" font-size="22" font-weight="600" fill="#302a78">Nurses</text>
+  <text x="412" y="68" text-anchor="middle" font-size="22" font-weight="600" fill="#302a78">Doctors</text>
+</svg>
+:::
+
+::: {style="font-size: 22px; text-align: center; margin-top: -0.3em; color:#353847;"}
+Opposite directions, opposite status gaps:
+$G_{ij}=-G_{ji}$
 :::
 :::::
 :::::::::
 
-::: {.takeaway style="margin-top: 0.55em; font-size:21px;"}
-Relative status can make attraction **asymmetric**: the same proximity may
-produce different updating probabilities depending on which occupation sits
-above.
+::: {.takeaway style="margin-top: 0.2em; font-size:23px;"}
+**Our main argument:** skill diffusion is **status-sorted and asymmetric**.
 :::
 
-::: {style="font-size: 12px; margin-top: 0.35em; color:#717583; text-align:center;"}
-Bottom-up pressure and emulation: Strang & Macy 2001; Autor 2015; Tong et al.
-2025; Han & Cheng 2026. Status-sorted forces: Cohen & Levinthal 1990; Abbott
-1988; Weeden 2002; Kleiner 2013; Deming 2017.
+::: {style="font-size: 14px; margin-top: 0.3em; color:#717583; text-align:center;"}
+Proximity and prestige in diffusion: Bail, Brown & Wimmer 2019.
 :::
 
 ## We Ask Two Descriptive Questions {.smaller}
@@ -291,10 +327,32 @@ We do not adjudicate among the mechanisms directly. We establish whether
 updating is asymmetric and identify its predominant direction.
 :::
 
-# II. Research Design {.center .middle background-color="#302a78"}
+# II. Data and Research Design {.center .middle background-color="#302a78"}
 
-::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
-Testing whether status — net of relatedness — predicts direction.
+## Data
+
+::::::::: columns
+::::: {.column width="56%"}
+::: {style="font-size: 27px; margin-top: 2.1em;"}
+-   **O\*NET skill profiles, 2015–2024**
+-   **741 occupations × 160 requirements**
+-   Skill specialization defined by RCA $\geq 1$
+:::
+:::::
+
+::::: {.column width="44%"}
+::: {style="font-size: 25px; margin-top: 2.1em; padding-left:1.4em; border-left:2px solid #d8dbe4;"}
+**Baseline occupational status**
+
+-   2015 BLS wages
+-   Required education
+-   Cognitive task content
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 1.8em; font-size:23px;"}
+We observe how occupational skill portfolios change over a decade.
 :::
 
 ## Dependent Variables
@@ -310,61 +368,10 @@ Testing whether status — net of relatedness — predicts direction.
 **Abandonment:** the target *sheds* a skill its holders retain.
 :::
 
-## From Occupational Data to Directed Risk Sets {.smaller}
-
-::::::::: columns
-::::: {.column width="31%"}
-::: {style="font-size: 21px; margin-top: 1.25em; padding-right:0.9em;"}
-::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
-<span style="font-size:30px; color:#0b7566; font-weight:700;">01</span><br>
-**Occupational data**
+::: {style="font-size: 14px; margin-top: 0.8em; color:#717583; text-align:center;"}
+Conceptual precedent for joint trajectories of adoption and abandonment:
+Strang & Macy 2001.
 :::
-
--   O\*NET skill profiles, **2015–2024**
--   **741 occupations × 160 requirements**
--   2015 BLS wages plus O\*NET education and cognitive content define baseline
-    status
-:::
-:::::
-
-::::: {.column width="34%"}
-::: {style="font-size: 21px; margin-top: 1.25em; padding:0 1.25em; border-left:2px solid #d8dbe4;"}
-::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
-<span style="font-size:30px; color:#0b7566; font-weight:700;">02</span><br>
-**Directed design**
-:::
-
--   Directed unit: source $i$ × target $j$ × skill $s$
--   **Source:** holds the skill at baseline
--   **Target:** may change by 2024
--   RCA $\geq 1$ defines skill specialization
-:::
-:::::
-
-::::: {.column width="35%"}
-::: {style="font-size: 21px; margin-top: 1.25em; padding-left:1.25em; border-left:2px solid #d8dbe4;"}
-::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
-<span style="font-size:30px; color:#0b7566; font-weight:700;">03</span><br>
-**Flow-specific risk sets**
-:::
-
--   **Adoption:** source holds; target does not (**21.5M**)
--   **Abandonment:** both hold (**18.6M**)
--   Outcome: target moves into or out of specialization
-:::
-:::::
-:::::::::
-
-::: {.takeaway style="margin-top: 1.3em; font-size:22px;"}
-The **target changes**. The **source** locates that change relative to current
-holders.
-:::
-
-::: {style="font-size: 13px; margin-top: 0.45em; color:#717583; text-align:center;"}
-Risk-set construction follows the source–target logic of directional diffusion:
-Bail, Brown & Wimmer 2019.
-:::
-
 
 ## Three Skill Classes Capture Function and Specificity
 
@@ -385,197 +392,204 @@ Domain: Alabdulkareem et al. 2018 &nbsp;·&nbsp; Nestedness/specificity: Hossein
 :::
 
 
-## Two Questions, Two Models: Who Changes — and Relative to Whom? {.smaller}
+## An Asymmetric Gravity Model for Skill Diffusion {.smaller}
+
+::: {style="font-size: 30px; text-align:center; margin-top: 1.05em; color:#302a78;"}
+$$
+\Lambda^f_{ijs}
+\propto
+\frac{M_i M_j}{D^f_{ij}}
+$$
+:::
+
+::::::::: columns
+::::: {.column width="38%"}
+::: {style="font-size: 22px; margin-top: 0.7em; padding-right:1.5em; text-align:center;"}
+::: {style="font-size:15px; color:#717583; font-weight:700;"}
+NUMERATOR
+:::
+
+::: {style="font-size: 30px; color:#302a78; margin:0.25em 0;"}
+$M_i M_j$
+:::
+
+::: {style="font-size:30px; line-height:1; color:#302a78; margin-bottom:0.35em;"}
+$\downarrow$
+:::
+
+**Occupational masses**
+
+::: {style="font-size:19px; margin-top:0.55em;"}
+May capture occupational **size, centrality,** or baseline propensity to
+send/receive.
+:::
+
+::: {style="font-size:17px; color:#717583; margin-top:0.7em;"}
+Absorbed by endpoint fixed effects in our specifications
+:::
+:::
+:::::
+
+::::: {.column width="62%"}
+::: {style="font-size: 22px; margin-top: 0.7em; padding-left:1.5em; text-align:center; border-left:2px solid #d8dbe4;"}
+::: {style="font-size:15px; color:#717583; font-weight:700;"}
+DENOMINATOR
+:::
+
+::: {style="font-size: 30px; color:#302a78; margin:0.25em 0;"}
+$D^f_{ij}$
+:::
+
+::: {style="font-size:19px; color:#353847; margin:0.35em 0 0.65em;"}
+**Effective separation** has two components in our model:
+:::
+
+<div style="display:flex; align-items:center; gap:28px; padding:0.55em 0; border-top:1px solid #d8dbe4;"><span style="min-width:135px; font-size:31px; color:#0b7566;">i ⟷ j</span><span style="text-align:left; line-height:1.25;"><strong>Profile distance</strong><br><span style="color:#0b7566;">distᵢⱼ = distⱼᵢ</span> <span style="font-size:17px; color:#717583;">· symmetric proximity</span></span></div>
+
+<div style="display:flex; align-items:center; gap:28px; padding:0.55em 0; border-top:1px solid #d8dbe4;"><span style="min-width:135px; font-size:31px; color:#b33a3a;">i ⟶ j</span><span style="text-align:left; line-height:1.25;"><strong>Signed status gap</strong><br><span style="color:#b33a3a;">Gᵢⱼ = σⱼ − σᵢ = −Gⱼᵢ</span> <span style="font-size:17px; color:#717583;">· directional</span></span></div>
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 1em; font-size:23px;"}
+The extension is asymmetric because $G_{ij}=-G_{ji}$, even when profile
+distance is unchanged.
+:::
+
+## Estimation {.smaller}
+
+::: {style="font-size: 27px; margin-top: 1.2em; text-align:center; color:#302a78;"}
+How likely is target occupation $j$ to **adopt or abandon** skill $s$?
+:::
+
+::: {style="font-size: 24px; margin-top: 1.6em;"}
+
+$$
+\operatorname{cloglog}\Pr(Y^f_{ijs}=1)
+=
+\underbrace{\alpha_s+\alpha^{(p)}_{e}}_{\text{fixed effects}}
++
+\underbrace{\delta^f_g\,\mathrm{dist}_{ij}}_{\text{profile relatedness}}
++
+\color{#b33a3a}{
+\underbrace{\beta^f_g\,G_{ij}}_{\text{directional status association}}
+},
+\qquad
+G_{ij}=\sigma_j-\sigma_i
+$$
+
+::: {style="font-size: 22px; margin-top: 1.3em;"}
+-   $f \in \{\text{adoption},\text{abandonment}\}$; coefficients vary by skill
+    class $g$
+-   $\beta^f_g$ is the parameter of interest: it identifies whether diffusion
+    is directed upward or downward
+-   Complementary source + skill and target + skill fixed-effect specifications
+:::
+:::
+
+
+# III. Findings {.center .middle background-color="#302a78"}
+
+## Panel A: Skill Change Is Directed Around Fixed Sources {.smaller}
+
+::: {style="font-size:18px; color:#666b7a; text-align:center; margin-top:0.15em;"}
+$x<0$: target below source — **borrowing from above** &nbsp;&nbsp;|&nbsp;&nbsp;
+$x>0$: target above source — **borrowing from below**
+:::
+
+::: {style="text-align:center; margin-top:0.1em;"}
+![](figures/png/fig2_linear_relative_hazard_panelA.png){style="height:525px;"}
+:::
+
+::: {.takeaway style="margin-top:0.15em; font-size:20px;"}
+Socio-cognitive skills are adopted and retained **upward**; sensory-physical
+skills are adopted and retained **downward**.
+:::
+
+## Panel B: The Same Pattern Holds Around Fixed Targets {.smaller}
+
+::: {style="font-size:19px; color:#666b7a; text-align:center; margin-top:0.15em;"}
+Holding the target and skill fixed, identification comes from comparing
+sources above and below the same target.
+:::
+
+::: {style="text-align:center; margin-top:0.1em;"}
+![](figures/png/fig2_linear_relative_hazard_panelB.png){style="height:525px;"}
+:::
+
+::: {.takeaway style="margin-top:0.15em; font-size:20px;"}
+The signs are unchanged: the directional pattern is not a by-product of
+which occupations tend to change more.
+:::
+
+## The Pattern Cannot Be Reduced To... {.smaller}
 
 ::::::::: columns
 ::::: {.column width="50%"}
-::: {style="font-size: 23px; margin-top: 2.1em;"}
-**First: who changes?**
+::: {style="font-size:24px; margin-top:2em; padding-right:1.3em;"}
+**Occupational characteristics**
 
--   Unit: target occupation $j$ × skill $s$
--   Outcome: adoption or abandonment by the target
--   Target status and mean holder status
--   Mean structural distance
--   Skill fixed effects; coefficients vary by skill class
+Size, centrality, and baseline propensity to send or receive skills cannot
+account for the result.
 
-::: {.takeaway style="margin-top: 1em;"}
-Establish the target-side gradient.
+::: {style="font-size:18px; color:#717583; margin-top:1em;"}
+Endpoint fixed effects absorb these characteristics in complementary
+specifications.
 :::
 :::
 :::::
 
 ::::: {.column width="50%"}
-::: {style="font-size: 23px; margin-top: 2.1em;"}
-**Then: relative to whom?**
+::: {style="font-size:24px; margin-top:2em; padding-left:1.3em; border-left:2px solid #d8dbe4;"}
+**Intrinsic skill characteristics**
 
--   Unit: source $i$ × target $j$ × skill $s$
--   Outcome: the same target-side adoption or abandonment event
--   Predictors: signed source–target status gap and profile distance
--   Complementary source + skill and target + skill fixed effects
--   Three-way clustered standard errors
+Prevalence, diffusibility, and other stable properties of the skill cannot
+account for the result.
 
-::: {.takeaway style="margin-top: 1em;"}
-Test direction beyond the target gradient.
+::: {style="font-size:18px; color:#717583; margin-top:1em;"}
+Skill fixed effects compare relations involving the same skill.
 :::
 :::
 :::::
 :::::::::
 
-## The Gravity Model Isolates Direction Net of Relatedness {.smaller}
-
-::: {style="font-size: 23px; margin-top: 2.2em;"}
-
-For each event $f$ and skill class $g$, the linear predictor is:
-
-$$
-\eta^f_{ijs}
-=
-\underbrace{\alpha_s+\alpha^{(p)}_{e}}_{\text{structural fixed effects}}
-+
-\underbrace{\beta^f_g\,G_{ij}}_{\text{directional status association}}
-+
-\underbrace{\delta^f_g\,\mathrm{dist}_{ij}}_{\text{skill-profile distance}},
-\qquad
-G_{ij}=\sigma_j-\sigma_i
-$$
-
-$$
-\operatorname{cloglog}\Pr(Y^f_{ijs}=1)=\eta^f_{ijs}
-$$
-
-::: {style="font-size: 22px; margin-top: 0.4em; text-align:center; color:#302a78;"}
-**In words:** how likely is the target to change, given how *similar* it is
-to the source — and whether it sits *above or below* it?
+::: {.takeaway style="margin-top:1.7em; font-size:22px;"}
+The same domain reversal survives both fixed-effect comparisons.
 :::
 
--   $\beta^f_g$: one signed-gap coefficient per event and skill class
--   $\delta^f_g$: profile-distance association
--   Panel A: source + skill FE &nbsp;&nbsp;|&nbsp;&nbsp; Panel B: target + skill FE
--   Fixed effects enter complementary specifications because
-    $G_{ij}$ is linear in endpoint status
-:::
-
-
-# III. Results {.center .middle background-color="#302a78"}
-
-::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
-From target gradients to relational direction and aggregate implications.
-:::
-
-## Target Status Predicts Who Adds and Sheds Each Skill Class {.smaller}
-
-::: {style="text-align: center; margin-top: 0.5em;"}
-![](figures/png/fig1_status_probability_curves.png){style="height:580px;"}
-:::
-
-::: {style="font-size: 19px; color:#666b7a; text-align: center; margin-top: 0.2em;"}
-Average marginal predictions from complementary log-log occupation–skill
-models with skill fixed effects; these are not raw descriptive rates.
-:::
-
-## Target Status Is Only the First Layer {.smaller}
-
-::: {style="font-size: 27px; margin-top: 3em;"}
--   The **target** is the occupation that adopts or abandons a skill.
-
--   Target status therefore organizes the baseline propensity for change:
-    -   socio-cognitive content is retained and accumulated higher in the hierarchy
-    -   sensory-physical content is retained and accumulated lower in the hierarchy
-
--   In Model 2, the association between target status and change is allowed
-    to vary with the mean baseline status of existing **skill holders**.
-
-**Next question:** is this only a destination-side gradient, or is change also
-organized by the target's position relative to specific sources?
-:::
-
-## The Relational Test Uses Two Complementary Comparisons {.smaller}
-
-::: {style="font-size: 27px; margin-top: 2.8em;"}
-**Columns compare the two events**
-
--   Adoption on the left; abandonment on the right
-
-**Rows compare complementary fixed-effect specifications**++
-
--   Panel A fixes the source and skill: which targets change around the
-    same source?
--   Panel B fixes the target and skill: which sources organize change
-    around the same target?
-
-**Axes**
-
--   $x<0$: target below source &nbsp;&nbsp;|&nbsp;&nbsp; $x>0$: target above source
--   $y$: **relative hazard minus one** — how much more (above zero) or less
-    (below zero) likely the event is, compared to an equal-status pair
-:::
-
-## The Domain Reversal Survives Both Fixed-Effect Comparisons {.compact-title}
-
-::: {style="text-align: center; margin-top: -0.35em;"}
-![](figures/png/fig2_linear_relative_hazard.png){style="height:675px;"}
-:::
-
-## The Pattern Cannot Be Reduced to High-Status Targets {.smaller}
-
-::: {style="font-size: 26px; margin-top: 2.2em;"}
-**1. Around fixed sources**
-
-Targets above a source are more likely to adopt socio-cognitive skills and
-less likely to abandon them. Sensory-physical skills move in the opposite
-direction.
-
-**2. Around fixed targets**
-
-The same domain reversal remains when the target and skill are held fixed
-and identification comes from variation across sources. The result is
-therefore not reducible to “high-status targets adopt cognitive skills.”
-
-**3. Across events**
-
-Adoption and abandonment reinforce rather than cancel one another:
-socio-cognitive content becomes concentrated upward, while
-sensory-physical content becomes concentrated downward.
-:::
-
-## Only the Signed Gap Reproduces the Macro-Gradient {.smaller}
+## The Signed-Gap Model Recovers the Aggregate Pattern {.smaller}
 
 ::: {style="text-align: center; margin-top: 0.5em;"}
 ![](figures/png/fig3_linear_gap_projections_panelA.png){width="76%"}
 :::
 
-## Direction Is the Informative Component {.smaller}
-
-::: {style="font-size: 26px; margin-top: 3em;"}
-
-**The null comparisons isolate the informative component:**
-
-- **Observed macro-gradient**
-  Socio-cognitive skills concentrate in higher-status occupations.
-
-- **Mirror gradient**
-  Sensory-physical skills concentrate in lower-status occupations.
-
-- **Direction-blind counterfactuals fail**
-  Distance-only and symmetric status models remain comparatively flat.
-
-- **Directional sufficiency**
-  Applying the signed linear gap to the same risk set reproduces the signs
-  and much of the magnitude of the aggregate pattern; this is an internal
-  sufficiency test against direction-blind alternatives, not out-of-sample
-  validation.
-
+::: {.takeaway style="margin-top:0.35em; font-size:21px;"}
+The relational model recovers the direction and much of the magnitude of the
+observed occupational gradient.
 :::
 
 
-# IV. Implications {.center .middle background-color="#302a78"}
+# IV. Discussion {.center .middle background-color="#302a78"}
 
-::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
-Even widespread pressure to upskill can reinforce, rather than erode,
-the occupational hierarchy.
+## Takeaways {.smaller}
+
+::: {style="font-size:27px; margin-top:2em;"}
+-   Occupational content changes through **two margins**: adoption
+    (the target adds a skill) and abandonment (the target sheds a skill).
+
+-   Both margins are **status-directed**.
+
+-   Socio-cognitive content is adopted and retained **upward**.
+
+-   Sensory-physical content is adopted and retained **downward**.
 :::
 
-## AI-Era Upskilling Can Compound Existing Barriers {.smaller}
+::: {.takeaway style="margin-top:1.35em; font-size:22px;"}
+Together, these movements reproduce the occupational hierarchy: a
+**Matthew effect in occupational skill content**.
+:::
+
+## Implications {.smaller}
 
 ::: {style="font-size: 26px; margin-top: 3em;"}
 -   Technological pressure may raise demand for cognitive capabilities
@@ -587,31 +601,6 @@ the occupational hierarchy.
 
 -   This pattern is consistent with inequality being reproduced
     **inside occupations**, before workers move or jobs disappear
-:::
-
-## Connecting to Recent Work on the Bottom of the Distribution {.smaller}
-
-::: {style="font-size: 25px; margin-top: 3em;"}
-Using 120M **job postings**, Han & Cheng (2026, *AJS*) show that the
-bottom diversifies — but is not rewarded for it: a **skills-value
-mismatch**.
-
-Our results are at the **occupation** level, not job postings — a
-different unit of analysis. Read as complementary: diversification at
-the bottom is disproportionately sensory-physical, and the
-socio-cognitive content that does appear there is not retained the way
-it is retained above.
-
-::: {.takeaway style="margin-top: 1em;"}
-Our findings suggest a complementary possibility: diversification at the
-bottom may differ not only in its rewards, but also in the type of content
-that is incorporated and retained.
-:::
-
-::: {style="font-size: 17px; margin-top: 0.7em; color:#666b7a;"}
-Different data and units of analysis; a complementary interpretation, not a
-direct test of the same mechanism.
-:::
 :::
 
 ## Limitations {.smaller}
@@ -627,30 +616,6 @@ direct test of the same mechanism.
     wage-setting, and labor-market institutions may moderate the pattern
 :::
 
-## Pressure to Upskill Can Reinforce Occupational Hierarchy {.smaller}
-
-::: {style="font-size: 26px; margin-top: 2em;"}
-
-> Realized occupational skill change is not generalized cognitive upgrading.
-> It is status-sorted: socio-cognitive content concentrates upward while
-> sensory-physical content concentrates downward.
-
--   **Relatedness connects:** profile similarity identifies plausible
-    occupational counterparts
--   **Status orders the association:** adoption and abandonment vary
-    directionally with the signed source–target gap
--   **The two margins compound:** cognitive content concentrates upward;
-    physical content concentrates downward
-
-::: {.takeaway style="margin-top: 1.2em;"}
-The observed pattern is consistent with technological change reproducing
-inequality through the changing content of occupational positions.
-:::
-
-:::
-
-
-
 # Thank You {.center .middle background-color="#302a78"}
 
 **Roberto Cantillan**
@@ -663,6 +628,45 @@ Paper and Replication:
 [github.com/rcantillan/skill_diffusion](https://github.com/rcantillan/skill_diffusion)
 
 # Backup Slides {.center .middle background-color="#302a78"}
+
+## Q&A: External Validation in Progress {.smaller}
+
+::: {style="font-size:22px; margin-top:0.8em; text-align:center; color:#302a78;"}
+With **Mauricio Bucca**, we are developing a matched-pair validation of the
+directional pattern.
+:::
+
+::::::::: columns
+::::: {.column width="56%"}
+::: {style="font-size:22px; margin-top:1.1em; padding-right:1.4em;"}
+**Case-selection design**
+
+1.  Rank occupations using the same status measure.
+2.  Compute profile distance and the signed status gap for every pair.
+3.  Build a two-dimensional grid: **relatedness × status-gap direction and
+    magnitude**.
+4.  Within highly related pairs, compare negative, near-zero, and positive
+    status gaps.
+5.  Select **20–50 representative occupational pairs** for close inspection.
+:::
+:::::
+
+::::: {.column width="44%"}
+::: {style="font-size:22px; margin-top:1.1em; padding-left:1.4em; border-left:2px solid #d8dbe4;"}
+**Candidate external evidence**
+
+-   Occupational/job dictionaries and mobility resources used in work by
+    **Xi Song**
+-   Worker mobility or job-history data comparable to Song et al.
+-   CV/résumé data, conditional on access and occupational crosswalk quality
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top:1.2em; font-size:21px;"}
+The test holds **relatedness approximately constant** and asks whether realized
+skill change varies with the **direction and magnitude of status distance**.
+:::
 
 ## B1: Main Threats and What We Do About Them {.smaller}
 
@@ -795,7 +799,153 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
 ![](figures/png/fig_pca_status_clean.png){width="66%"}
 :::
 
-## B8: References — Technological Change and Updating {.smaller}
+## B8: Possible Pathways Behind Status-Directed Diffusion {.smaller}
+
+::: {style="font-size: 24px; margin-top: 0.65em; text-align:center; color:#353847;"}
+Competing directional expectations are consistent with different possible
+mechanisms.
+:::
+
+::::::::: columns
+::::: {.column width="50%"}
+::: {style="font-size: 22px; margin-top: 1.1em; padding-right:1.2em;"}
+::: {style="font-size: 25px; color:#0b7566; text-align:center;"}
+**Downward diffusion**
+:::
+
+::: {style="font-size: 24px; text-align:center; color:#0b7566; margin:0.75em 0;"}
+Doctor holder $\longrightarrow$ Nurse target
+:::
+
+-   **Bottom-up pressure:** lower-status occupations face stronger replacement
+    pressure.
+-   **Emulation:** lower-status occupations borrow cognitive skills from
+    occupations above.
+
+::: {style="font-size: 13px; margin-top: 1.1em; color:#717583; text-align:center;"}
+Strang & Macy 2001; Autor 2015; Tong et al. 2025; Han & Cheng 2026.
+:::
+:::
+:::::
+
+::::: {.column width="50%"}
+::: {style="font-size: 22px; margin-top: 1.1em; padding-left:1.2em;"}
+::: {style="font-size: 25px; color:#756fb3; text-align:center;"}
+**Upward diffusion**
+:::
+
+::: {style="font-size: 24px; text-align:center; color:#756fb3; margin:0.75em 0;"}
+Nurse holder $\longrightarrow$ Doctor target
+:::
+
+-   **Selective adoption:** absorptive capacity and valuation favor
+    higher-status adopters.
+-   **Closure:** licensing and credential boundaries restrict downward
+    borrowing.
+
+::: {style="font-size: 13px; margin-top: 1.1em; color:#717583; text-align:center;"}
+Cohen & Levinthal 1990; Abbott 1988; Weeden 2002; Kleiner 2013; Deming 2017.
+:::
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 1.2em; font-size:22px;"}
+These are **interpretive possibilities**, not mechanisms we identify directly.
+:::
+
+## B9: From Occupational Data to Directed Risk Sets {.smaller}
+
+::::::::: columns
+::::: {.column width="31%"}
+::: {style="font-size: 21px; margin-top: 1.25em; padding-right:0.9em;"}
+::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
+<span style="font-size:30px; color:#0b7566; font-weight:700;">01</span><br>
+**Occupational data**
+:::
+
+-   O\*NET skill profiles, **2015–2024**
+-   **741 occupations × 160 requirements**
+-   2015 BLS wages plus O\*NET education and cognitive content define baseline
+    status
+:::
+:::::
+
+::::: {.column width="34%"}
+::: {style="font-size: 21px; margin-top: 1.25em; padding:0 1.25em; border-left:2px solid #d8dbe4;"}
+::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
+<span style="font-size:30px; color:#0b7566; font-weight:700;">02</span><br>
+**Directed design**
+:::
+
+-   Directed unit: source $i$ × target $j$ × skill $s$
+-   **Source:** holds the skill at baseline
+-   **Target:** may change by 2024
+-   RCA $\geq 1$ defines skill specialization
+:::
+:::::
+
+::::: {.column width="35%"}
+::: {style="font-size: 21px; margin-top: 1.25em; padding-left:1.25em; border-left:2px solid #d8dbe4;"}
+::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
+<span style="font-size:30px; color:#0b7566; font-weight:700;">03</span><br>
+**Flow-specific risk sets**
+:::
+
+-   **Adoption:** source holds; target does not (**21.5M**)
+-   **Abandonment:** both hold (**18.6M**)
+-   Outcome: target moves into or out of specialization
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 1.3em; font-size:22px;"}
+The **target changes**. The **source** locates that change relative to current
+holders.
+:::
+
+::: {style="font-size: 13px; margin-top: 0.45em; color:#717583; text-align:center;"}
+Risk-set construction follows the source–target logic of directional diffusion:
+Bail, Brown & Wimmer 2019.
+:::
+
+## B10: Reading Panels A and B {.smaller}
+
+::::::::: columns
+::::: {.column width="50%"}
+::: {style="font-size:23px; margin-top:1.7em; padding-right:1.3em;"}
+**Panel A: Source + Skill FE**
+
+-   Holds the source and skill fixed
+-   Compares targets above and below the same source
+-   Absorbs source characteristics and stable skill diffusibility
+:::
+:::::
+
+::::: {.column width="50%"}
+::: {style="font-size:23px; margin-top:1.7em; padding-left:1.3em; border-left:2px solid #d8dbe4;"}
+**Panel B: Target + Skill FE**
+
+-   Holds the target and skill fixed
+-   Compares sources above and below the same target
+-   Absorbs target characteristics and stable skill diffusibility
+:::
+:::::
+:::::::::
+
+::: {style="font-size:21px; margin-top:1.5em; text-align:center;"}
+$x<0$: target below source &nbsp;&nbsp;|&nbsp;&nbsp;
+$x>0$: target above source
+
+$y$: relative hazard minus one, compared with an equal-status pair
+:::
+
+::: {.takeaway style="margin-top:1.2em; font-size:21px;"}
+The two panels change which endpoint is held fixed; they test the same signed
+source–target status association.
+:::
+
+## B11: References — Technological Change and Updating {.smaller}
 
 ::: {style="font-size: 15px; margin-top: 1.2em; line-height:1.25;"}
 
@@ -830,7 +980,7 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
     doi:10.1086/741725.
 :::
 
-## B9: References — Occupational Structure and Diffusion {.smaller}
+## B12: References — Occupational Structure and Diffusion {.smaller}
 
 ::: {style="font-size: 14px; margin-top: 0.8em; line-height:1.2;"}
 
@@ -852,6 +1002,9 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
 
 -   **Tinbergen, J. (1962).** *Shaping the World Economy: Suggestions for an
     International Economic Policy.* New York: Twentieth Century Fund.
+
+-   **Kolaczyk, E. D., & Csárdi, G. (2020).** *Statistical Analysis of Network
+    Data with R.* 2nd ed. Cham: Springer. doi:10.1007/978-3-030-44129-6.
 
 -   **Hosseinioun, M., Neffke, F., Zhang, L., & Youn, H. (2025).** “Skill
     Dependencies Uncover Nested Human Capital.” *Nature Human Behaviour*.
