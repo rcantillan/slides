@@ -1,6 +1,6 @@
 ---
 title: "A Matthew Effect in Occupational Skill Content"
-subtitle: "Status-Sorted Changes in Cognitive and Physical Skills Reinforce Inequality"
+subtitle: "Status Sorted Diffusion Reinforce Inequality  Inequality"
 author: "Roberto Cantillan & Mauricio Bucca"
 institute: "Department of Sociology | Pontificia Universidad Católica de Chile"
 format:
