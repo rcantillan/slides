@@ -48,12 +48,10 @@ Weeden & Grusky 2005; Labussière & Bol 2026
 ::::: {.column width="57%"}
 ::: {style="font-size: 25px; margin-top: 1.55em;"}
 
--   Technological change has increased the returns to cognitive and
-    analytical capabilities
+-   Technological change (and, more recently, AI) has increased the returns to
+    cognitive and analytical capabilities
 -   It has contributed to occupational polarization and the hollowing of
     routine middle-skill work
--   More recently, AI has renewed expectations that work will rely more on
-    cognitive skills
 
 ::: {.takeaway style="margin-top: 1.35em;"}
 Technological change makes the recomposition of occupational content
@@ -116,9 +114,9 @@ and **functional specificity** of the skills involved.
 ::::: {.column width="50%"}
 ::: {style="font-size: 22px; margin-top: 0.65em;"}
 **Functional domain**  
+**Socio-cognitive vs. sensory-physical**  
 Polarization (Alabdulkareem et al. 2018)
 
--   Skills cluster into socio-cognitive and sensory-physical domains
 -   Socio-cognitive: high education, high wages
 -   Sensory-physical: lower education, lower wages
 
@@ -129,13 +127,13 @@ Polarization (Alabdulkareem et al. 2018)
 ::::: {.column width="50%"}
 ::: {style="font-size: 22px; margin-top: 0.65em;"}
 **Functional specificity**  
+**General vs. specialized**  
 Hierarchical organization (Hosseinioun et al. 2025)
 
--   Nested dependencies locate skills in a hierarchy
 -   General skills scaffold many occupational profiles
 -   Specialized skills are narrower and more dependent
 
-![](p2_ref_plot.png){width="65%"}
+![](p2_ref_plot.png){width="55%"}
 :::
 :::::
 :::::::::
@@ -144,7 +142,8 @@ Hierarchical organization (Hosseinioun et al. 2025)
 
 ::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
 **Relatedness connects; status directs.**<br>
-Skill change is associated with where targets sit relative to current holders.
+Skill change depends on where an occupation sits relative to the skill's
+current holders.
 :::
 
 ## Skill Change in a Relational Field {.smaller}
@@ -185,124 +184,120 @@ physician-to-nurse transmission.</span>
 <span style="white-space:nowrap;">Strang & Meyer 1993; Wimmer 2021</span>
 :::
 
-## Proximity and Direction {.smaller}
+## Gravity Models Treat Distance as Friction on Diffusion {.smaller}
 
 ::::::::: columns
-::::: {.column width="50%"}
-::: {style="font-size: 24px; text-align: center; margin-top: 0.55em; color:#302a78;"}
-**Task-profile proximity**
+::::: {.column width="62%"}
+::: {style="font-size: 25px; margin-top: 1.25em;"}
+**Gravity models**
+
+-   Flows increase with attraction between origins and destinations
+-   Related occupational profiles exert a stronger pull on one another
+-   Greater task-profile distance makes skill updating less likely
 :::
 
-::: {style="text-align:center; margin-top: 0.1em;"}
-<svg viewBox="0 0 500 250" width="455" height="228" role="img"
-aria-label="Two occupation nodes connected by one undirected curved edge">
-  <path d="M112 142 Q250 38 388 142" fill="none" stroke="#0b7566"
-        stroke-width="6" stroke-linecap="round"/>
-  <text x="250" y="57" text-anchor="middle" font-size="17" fill="#0b7566">same proximity</text>
-  <circle cx="88" cy="158" r="35" fill="#302a78"/>
-  <circle cx="412" cy="158" r="35" fill="#302a78"/>
-  <text x="88" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">N</text>
-  <text x="412" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">D</text>
-  <text x="88" y="215" text-anchor="middle" font-size="19" font-weight="600" fill="#302a78">Nurses</text>
-  <text x="412" y="215" text-anchor="middle" font-size="19" font-weight="600" fill="#302a78">Doctors</text>
-</svg>
+::: {.takeaway style="margin-top: 1.3em; font-size:22px;"}
+Distance determines the **strength of attraction**, but because it is
+symmetric, it cannot determine direction:
+$\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$.
 :::
 
-::: {style="font-size: 20px; text-align: center; margin-top: 0.25em; color:#353847;"}
-One undirected relation<br>
-$\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$
+::: {style="font-size: 14px; margin-top: 0.45em; color:#717583;"}
+Gravity framework: Tinbergen 1962. Task-profile relatedness: Hidalgo et al. 2007.
 :::
 :::::
 
-::::: {.column width="50%"}
-::: {style="font-size: 24px; text-align: center; margin-top: 0.55em; color:#302a78;"}
-**Relative occupational status**
-:::
-
-::: {style="text-align:center; margin-top: 0.1em;"}
-<svg viewBox="0 0 500 250" width="455" height="228" role="img"
-aria-label="Two occupation nodes connected by two oppositely directed curved arrows">
-  <defs>
-    <marker id="arrowUp" markerWidth="13" markerHeight="13" refX="11" refY="6.5"
-            orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#0b7566"/>
-    </marker>
-    <marker id="arrowDown" markerWidth="13" markerHeight="13" refX="11" refY="6.5"
-            orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#756fb3"/>
-    </marker>
-  </defs>
-  <path d="M120 137 Q250 35 380 112" fill="none" stroke="#0b7566"
-        stroke-width="5.5" stroke-linecap="round" marker-end="url(#arrowUp)"/>
-  <path d="M380 148 Q250 238 120 173" fill="none" stroke="#756fb3"
-        stroke-width="5.5" stroke-linecap="round" marker-end="url(#arrowDown)"/>
-  <text x="250" y="53" text-anchor="middle" font-size="17" fill="#0b7566">target above source</text>
-  <text x="250" y="226" text-anchor="middle" font-size="17" fill="#756fb3">target below source</text>
-  <circle cx="88" cy="158" r="35" fill="#302a78"/>
-  <circle cx="412" cy="122" r="35" fill="#302a78"/>
-  <text x="88" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">N</text>
-  <text x="412" y="130" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">D</text>
-  <text x="88" y="215" text-anchor="middle" font-size="19" font-weight="600" fill="#302a78">Nurses</text>
-  <text x="412" y="77" text-anchor="middle" font-size="19" font-weight="600" fill="#302a78">Doctors</text>
-</svg>
-:::
-
-::: {style="font-size: 20px; text-align: center; margin-top: 0.25em; color:#353847;"}
-Two directed comparisons<br>
-$G_{ij}=-G_{ji}$
+::::: {.column width="38%"}
+::: {style="text-align:center; margin-top: 0.35em;"}
+![](newton_gravity.png){style="height:455px; width:auto; max-width:100%; object-fit:contain;"}
 :::
 :::::
 :::::::::
 
-::: {.takeaway style="margin-top: 0.45em; font-size:23px;"}
-Proximity defines **who is connected**. Relative status defines **which
-direction is being evaluated**.
-:::
-
-::: {style="font-size: 14px; margin-top: 0.35em; color:#717583; text-align:center;"}
-Product-space relatedness: Hidalgo et al. 2007. Proximity and prestige in diffusion:
-Bail, Brown & Wimmer 2019.
-:::
-
-## Which Direction Should Predominate? {.smaller}
+## Status Adds an Asymmetric Force of Attraction {.smaller}
 
 ::::::::: columns
-::::: {.column width="50%"}
-::: {style="font-size: 23px; margin-top: 1.25em;"}
-**Generalized cognitive upgrading**
+::::: {.column width="37%"}
+::: {style="font-size: 20px; margin-top: 0.75em;"}
+**Bottom-up cognitive upgrading**  
+*Top-down cognitive borrowing*
 
--   Technological pressure may extend cognitive requirements across the labor
-    market
--   Lower-status occupations may face stronger pressure to update
--   Cognitive skills should therefore spread downward as well as upward
+::: {style="font-size: 24px; text-align:center; color:#0b7566; margin:0.55em 0;"}
+Doctor holder $\longrightarrow$ Nurse target
+:::
+
+-   Replacement pressure is strongest at the bottom
+-   Emulation encourages borrowing from occupations above
 :::
 :::::
 
-::::: {.column width="50%"}
-::: {style="font-size: 23px; margin-top: 1.25em;"}
-**Status-sorted consolidation**
+::::: {.column width="26%"}
+::: {style="text-align:center; margin-top: 0.15em;"}
+![](newton_status.png){style="height:355px; width:auto; max-width:100%; object-fit:contain;"}
+:::
+:::::
 
--   Emulation may pull some occupational content upward
--   Task allocation, absorptive capacity, closure, and valuation may retain
-    cognitive content at the top
--   Sensory-physical content may concentrate downward
+::::: {.column width="37%"}
+::: {style="font-size: 20px; margin-top: 0.75em;"}
+**Upward cognitive sorting**  
+*Unequal attraction and retention*
+
+::: {style="font-size: 24px; text-align:center; color:#756fb3; margin:0.55em 0;"}
+Nurse holder $\longrightarrow$ Doctor target
+:::
+
+-   Absorptive capacity and valuation may favor higher-status adopters
+-   Licensing and credential closure may block downward borrowing
 :::
 :::::
 :::::::::
 
-::: {.takeaway style="margin-top: 1.15em; font-size: 21px;"}
-We do not adjudicate among these mechanisms directly. We first ask a
-descriptive question: is realized skill updating symmetric or
-status-directed, and if status-directed, which direction predominates?
+::: {.takeaway style="margin-top: 0.55em; font-size:21px;"}
+Relative status can make attraction **asymmetric**: the same proximity may
+produce different updating probabilities depending on which occupation sits
+above.
 :::
 
-::: {style="font-size: 13px; margin-top: 0.5em; color:#717583; text-align:center;"}
-Generalized upgrading: Autor 2003; Acemoglu & Autor 2011; Tong et al. 2025;
-Han & Cheng 2026. Status-sorted consolidation: Cohen & Levinthal 1990; Abbott
+::: {style="font-size: 12px; margin-top: 0.35em; color:#717583; text-align:center;"}
+Bottom-up pressure and emulation: Strang & Macy 2001; Autor 2015; Tong et al.
+2025; Han & Cheng 2026. Status-sorted forces: Cohen & Levinthal 1990; Abbott
 1988; Weeden 2002; Kleiner 2013; Deming 2017.
 :::
 
-## One Process, Two Movements: Adoption and Abandonment
+## We Ask Two Descriptive Questions {.smaller}
+
+::::::::: columns
+::::: {.column width="50%"}
+::: {style="font-size: 25px; margin-top: 2.15em; padding-right:1.1em;"}
+**1. Symmetry**
+
+Is realized skill updating **symmetric** with respect to occupational status,
+or is it **status-directed**?
+:::
+:::::
+
+::::: {.column width="50%"}
+::: {style="font-size: 25px; margin-top: 2.15em; padding-left:1.1em;"}
+**2. Direction**
+
+If updating is status-directed, do skills flow predominantly **upward or
+downward**—and does this differ by skill type?
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 2em; font-size: 22px;"}
+We do not adjudicate among the mechanisms directly. We establish whether
+updating is asymmetric and identify its predominant direction.
+:::
+
+# II. Research Design {.center .middle background-color="#302a78"}
+
+::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
+Testing whether status — net of relatedness — predicts direction.
+:::
+
+## Dependent Variables
 
 ::: {style="text-align: center; margin-top: 2.2em;"}
 ![](figures/illustration.png){width="64%"}
@@ -315,41 +310,60 @@ Han & Cheng 2026. Status-sorted consolidation: Cohen & Levinthal 1990; Abbott
 **Abandonment:** the target *sheds* a skill its holders retain.
 :::
 
-# II. Research Design {.center .middle background-color="#302a78"}
-
-::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
-Testing whether status — net of relatedness — predicts direction.
-:::
-
-## Forty Million Opportunities Reveal Where Skills Take Root {.smaller}
+## From Occupational Data to Directed Risk Sets {.smaller}
 
 ::::::::: columns
-::::: {.column width="44%"}
-::: {style="font-size: 26px; margin-top: 3.2em;"}
-**O\*NET + BLS**
+::::: {.column width="31%"}
+::: {style="font-size: 21px; margin-top: 1.25em; padding-right:0.9em;"}
+::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
+<span style="font-size:30px; color:#0b7566; font-weight:700;">01</span><br>
+**Occupational data**
+:::
 
--   **O\*NET, 2015–2024:** 741 occupations and 160 requirements
--   **BLS OEWS, 2015:** median annual wages
--   Baseline status combines wages with O\*NET required education and
-    cognitive task content
+-   O\*NET skill profiles, **2015–2024**
+-   **741 occupations × 160 requirements**
+-   2015 BLS wages plus O\*NET education and cognitive content define baseline
+    status
 :::
 :::::
 
-::::: {.column width="56%"}
-::: {style="font-size: 25px; margin-top: 2.2em;"}
-**Directed source–target–skill risk sets**
-
--   **21.5M adoption opportunities:** the source holds the skill; the target does not
--   **18.6M abandonment opportunities:** source and target both hold the skill
--   Event occurs when the target crosses the RCA threshold by 2024
-
-::: {.takeaway style="margin-top: 1.1em;"}
-The **source** is always a current holder.<br>
-The **target** is always the occupation that changes.
+::::: {.column width="34%"}
+::: {style="font-size: 21px; margin-top: 1.25em; padding:0 1.25em; border-left:2px solid #d8dbe4;"}
+::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
+<span style="font-size:30px; color:#0b7566; font-weight:700;">02</span><br>
+**Directed design**
 :::
+
+-   Directed unit: source $i$ × target $j$ × skill $s$
+-   **Source:** holds the skill at baseline
+-   **Target:** may change by 2024
+-   RCA $\geq 1$ defines skill specialization
+:::
+:::::
+
+::::: {.column width="35%"}
+::: {style="font-size: 21px; margin-top: 1.25em; padding-left:1.25em; border-left:2px solid #d8dbe4;"}
+::: {style="font-size: 22px; color:#302a78; margin-bottom:0.7em;"}
+<span style="font-size:30px; color:#0b7566; font-weight:700;">03</span><br>
+**Flow-specific risk sets**
+:::
+
+-   **Adoption:** source holds; target does not (**21.5M**)
+-   **Abandonment:** both hold (**18.6M**)
+-   Outcome: target moves into or out of specialization
 :::
 :::::
 :::::::::
+
+::: {.takeaway style="margin-top: 1.3em; font-size:22px;"}
+The **target changes**. The **source** locates that change relative to current
+holders.
+:::
+
+::: {style="font-size: 13px; margin-top: 0.45em; color:#717583; text-align:center;"}
+Risk-set construction follows the source–target logic of directional diffusion:
+Bail, Brown & Wimmer 2019.
+:::
 
 
 ## Three Skill Classes Capture Function and Specificity
@@ -836,6 +850,9 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
     “The Product Space Conditions the Development of Nations.” *Science*
     317(5837):482–487. doi:10.1126/science.1144581.
 
+-   **Tinbergen, J. (1962).** *Shaping the World Economy: Suggestions for an
+    International Economic Policy.* New York: Twentieth Century Fund.
+
 -   **Hosseinioun, M., Neffke, F., Zhang, L., & Youn, H. (2025).** “Skill
     Dependencies Uncover Nested Human Capital.” *Nature Human Behaviour*.
     doi:10.1038/s41562-024-02093-2.
@@ -843,6 +860,10 @@ $$\operatorname{cloglog}\big(P(Y^f_{ijs}=1)\big)
 -   **Strang, D., & Meyer, J. W. (1993).** “Institutional Conditions for
     Diffusion.” *Theory and Society* 22(4):487–511.
     doi:10.1007/BF00993595.
+
+-   **Strang, D., & Macy, M. W. (2001).** “In Search of Excellence: Fads,
+    Success Stories, and Adaptive Emulation.” *American Journal of Sociology*
+    107(1):147–182. doi:10.1086/323039.
 
 -   **Cheng, S., & Park, B. (2020).** “Flows and Boundaries: A Network
     Approach to Studying Occupational Mobility in the Labor Market.”
