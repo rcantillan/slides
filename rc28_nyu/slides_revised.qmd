@@ -921,42 +921,31 @@ source–target status association.
 
 ## External Validation: ESCO {.smaller}
 
-::: {style="font-size:24px; margin-top:1.4em;"}
-**Independent occupational classification**
+::: {style="font-size:23px; margin-top:1.5em;"}
+- **Independent classification.** ESCO provides occupational–skill
+  relations across releases from **2018 to 2024**.
 
-- ESCO provides a distinct mapping between occupations and skills.
-- Skill communities and functional classes are reconstructed entirely
-  within ESCO, without using O\*NET classifications or skill labels.
-- We reproduce the same directed **source–target–skill opportunity
-  design**, crossing occupational relatedness with the signed status gap.
+- **Independent construction.** Skill communities and functional classes
+  are reconstructed entirely within ESCO, without using O\*NET
+  classifications or labels.
 
-**What is reproduced**
+- **Same design.** We reproduce the directed
+  **source–target–skill opportunity design**, using baseline ISEI-08
+  status.
 
-- Higher-status targets are more likely to adopt **general
-  socio-cognitive skills**.
-- Higher-status targets are also more likely to adopt **specialized
-  socio-cognitive skills**.
-- Sensory-physical content is more likely to be abandoned toward the
-  top, producing its relative consolidation among lower-status
-  occupations.
+- **Patterns reproduced.** Higher-status occupations disproportionately
+  adopt general and specialized **socio-cognitive skills**, while
+  sensory-physical content is consolidated among **lower-status
+  occupations** through abandonment toward the top.
 
-**What is not reproduced**
-
-- The socio-cognitive abandonment gradients and the sensory-physical
-  adoption gradient are not estimated precisely in ESCO.
+- **Patterns not reproduced.** Socio-cognitive abandonment and
+  sensory-physical adoption gradients are not estimated precisely.
 :::
 
-::: {.takeaway style="margin-top:1.05em; font-size:21px;"}
-ESCO provides **partial external validation** of the directional
-consolidation pattern, but not a complete replication of every adoption
-and abandonment gradient.
+::: {.takeaway style="margin-top:1.2em; font-size:21px;"}
+ESCO provides **partial external validation** in an occupational
+classification constructed independently of O\*NET.
 :::
-
-::: {style="margin-top:0.7em; font-size:17px; color:#666666;"}
-ESCO is a European occupational classification, not a country-specific
-longitudinal labor-market dataset.
-:::
-
 
 ## References — Technological Change and Updating {.smaller}
 
