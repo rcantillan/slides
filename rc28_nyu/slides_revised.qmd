@@ -1,6 +1,6 @@
 ---
 title: "A Matthew Effect in Occupational Skill Content"
-subtitle: "Status Sorted Diffusion Reinforce Inequality"
+subtitle: "Status-Sorted Diffusion Reproduces Occupational Hierarchy"
 author: "Roberto Cantillan & Mauricio Bucca"
 institute: "Department of Sociology | Pontificia Universidad Católica de Chile"
 format:
@@ -573,20 +573,32 @@ The **directional status-gap model** recovers the observed gradient; the
 
 ## Takeaways {.smaller}
 
-::: {style="font-size:27px; margin-top:2em;"}
--   Occupational content changes through **two margins**: adoption
-    (the target adds a skill) and abandonment (the target sheds a skill).
+::: {style="font-size:25px; margin-top:1.6em;"}
+- Occupational content changes through **two margins**: adoption
+  (the target adds a skill) and abandonment (the target sheds a skill).
 
--   Both margins are **status-directed**.
+- Both margins are systematically **directed by baseline occupational
+  status**.
 
--   Socio-cognitive content is adopted and retained **upward**.
+- Higher-status occupations disproportionately adopt and retain
+  **general and specialized socio-cognitive skills**.
 
--   Sensory-physical content is adopted and retained **downward**.
+- Lower-status occupations disproportionately adopt and retain
+  **sensory-physical skills**.
+
+- The directional pattern remains when baseline status is constructed
+  **without cognitive content**.
 :::
 
-::: {.takeaway style="margin-top:1.35em; font-size:22px;"}
-Together, these movements reproduce the occupational hierarchy: a
-**Matthew effect in occupational skill content**.
+::: {.takeaway style="margin-top:1.15em; font-size:22px;"}
+Together, these results reveal a **Matthew-effect pattern in occupational
+skill diffusion**: changing skill content accumulates along the
+preexisting occupational hierarchy.
+:::
+
+::: {style="margin-top:0.85em; font-size:20px; color:#3f4650;"}
+**External validation.** An ESCO-based analysis provides partial validation
+using an occupational classification constructed independently of O\*NET.
 :::
 
 ## Implications {.smaller}
@@ -629,44 +641,6 @@ Paper and Replication:
 
 # Backup Slides {.center .middle background-color="#302a78"}
 
-## Q&A: External Validation in Progress {.smaller}
-
-::: {style="font-size:22px; margin-top:0.8em; text-align:center; color:#302a78;"}
-With **Mauricio Bucca**, we are developing a matched-pair validation of the
-directional pattern.
-:::
-
-::::::::: columns
-::::: {.column width="56%"}
-::: {style="font-size:22px; margin-top:1.1em; padding-right:1.4em;"}
-**Case-selection design**
-
-1.  Rank occupations using the same status measure.
-2.  Compute profile distance and the signed status gap for every pair.
-3.  Build a two-dimensional grid: **relatedness × status-gap direction and
-    magnitude**.
-4.  Within highly related pairs, compare negative, near-zero, and positive
-    status gaps.
-5.  Select **20–50 representative occupational pairs** for close inspection.
-:::
-:::::
-
-::::: {.column width="44%"}
-::: {style="font-size:22px; margin-top:1.1em; padding-left:1.4em; border-left:2px solid #d8dbe4;"}
-**Candidate external evidence**
-
--   Occupational/job dictionaries and mobility resources used in work by
-    **Xi Song**
--   Worker mobility or job-history data comparable to Song et al.
--   CV/résumé data, conditional on access and occupational crosswalk quality
-:::
-:::::
-:::::::::
-
-::: {.takeaway style="margin-top:1.2em; font-size:21px;"}
-The test holds **relatedness approximately constant** and asks whether realized
-skill change varies with the **direction and magnitude of status distance**.
-:::
 
 ## B1: Main Threats and What We Do About Them {.smaller}
 
@@ -945,7 +919,46 @@ The two panels change which endpoint is held fixed; they test the same signed
 source–target status association.
 :::
 
-## B11: References — Technological Change and Updating {.smaller}
+## External Validation: ESCO {.smaller}
+
+::: {style="font-size:24px; margin-top:1.4em;"}
+**Independent occupational classification**
+
+- ESCO provides a distinct mapping between occupations and skills.
+- Skill communities and functional classes are reconstructed entirely
+  within ESCO, without using O\*NET classifications or skill labels.
+- We reproduce the same directed **source–target–skill opportunity
+  design**, crossing occupational relatedness with the signed status gap.
+
+**What is reproduced**
+
+- Higher-status targets are more likely to adopt **general
+  socio-cognitive skills**.
+- Higher-status targets are also more likely to adopt **specialized
+  socio-cognitive skills**.
+- Sensory-physical content is more likely to be abandoned toward the
+  top, producing its relative consolidation among lower-status
+  occupations.
+
+**What is not reproduced**
+
+- The socio-cognitive abandonment gradients and the sensory-physical
+  adoption gradient are not estimated precisely in ESCO.
+:::
+
+::: {.takeaway style="margin-top:1.05em; font-size:21px;"}
+ESCO provides **partial external validation** of the directional
+consolidation pattern, but not a complete replication of every adoption
+and abandonment gradient.
+:::
+
+::: {style="margin-top:0.7em; font-size:17px; color:#666666;"}
+ESCO is a European occupational classification, not a country-specific
+longitudinal labor-market dataset.
+:::
+
+
+## References — Technological Change and Updating {.smaller}
 
 ::: {style="font-size: 15px; margin-top: 1.2em; line-height:1.25;"}
 
