@@ -597,8 +597,9 @@ preexisting occupational hierarchy.
 :::
 
 ::: {style="margin-top:0.85em; font-size:20px; color:#3f4650;"}
-**External validation.** An ESCO-based analysis provides partial validation
-using an occupational classification constructed independently of O\*NET.
+**External validation (in progress).** We are extending the analysis to
+ESCO and to the BLS Occupational Outlook Handbook (OOH), two occupational
+classifications constructed independently of O\*NET.
 :::
 
 ## Implications {.smaller}
@@ -919,7 +920,7 @@ The two panels change which endpoint is held fixed; they test the same signed
 source–target status association.
 :::
 
-## External Validation: ESCO {.smaller}
+## External Validation: ESCO & OOH (In Progress) {.smaller}
 
 ::: {style="font-size:23px; margin-top:1.5em;"}
 - **Independent classification.** ESCO provides occupational–skill
@@ -933,18 +934,22 @@ source–target status association.
   **source–target–skill opportunity design**, using baseline ISEI-08
   status.
 
-- **Patterns reproduced.** Higher-status occupations disproportionately
-  adopt general and specialized **socio-cognitive skills**, while
-  sensory-physical content is consolidated among **lower-status
-  occupations** through abandonment toward the top.
+- **Patterns reproduced so far.** Higher-status occupations
+  disproportionately adopt general and specialized **socio-cognitive
+  skills**, while sensory-physical content is consolidated among
+  **lower-status occupations** through abandonment toward the top.
 
-- **Patterns not reproduced.** Socio-cognitive abandonment and
+- **Patterns not yet reproduced.** Socio-cognitive abandonment and
   sensory-physical adoption gradients are not estimated precisely.
+
+- **Also underway.** A parallel validation using the BLS **Occupational
+  Outlook Handbook (OOH)** as a third, independently constructed source.
 :::
 
 ::: {.takeaway style="margin-top:1.2em; font-size:21px;"}
-ESCO provides **partial external validation** in an occupational
-classification constructed independently of O\*NET.
+Both ESCO and OOH validations are **ongoing work**; ESCO currently offers
+partial external validation in a classification built independently of
+O\*NET.
 :::
 
 ## References — Technological Change and Updating {.smaller}
