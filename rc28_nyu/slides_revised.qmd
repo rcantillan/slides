@@ -643,20 +643,26 @@ Paper and Replication:
 # Backup Slides {.center .middle background-color="#302a78"}
 
 
-## B1: Main Threats and What We Do About Them {.smaller}
+## B1: Main Threats, Tests, and Results {.smaller}
 
-::: {style="font-size: 20px; margin-top: 2em;"}
+::: {style="font-size: 17px; margin-top: 0.65em; line-height:1.18;"}
 
-| Main threat | Design response |
-|:--|:--|
-| A target-status gradient may look relational | Complementary source + skill and target + skill fixed-effect comparisons |
-| RCA changes may reflect denominator drift | Fixed-2015 denominator check; raw-importance diagnostic |
-| Skills with many sources may dominate the risk set | Equal target-skill weighting preserves the core directional pattern |
-| Results may depend on measurement choices | Threshold, status, taxonomy, and period sensitivity checks in the SI |
+| Threat | How we evaluate it | Result |
+|:--|:--|:--|
+| A target gradient may look relational | Compare source + skill and target + skill fixed effects | The signed-gap pattern remains in both panels |
+| RCA may create mechanical change | Freeze the 2015 denominator; use raw importance change | The central domain-specific directions remain |
+| Skills with many sources may dominate | Give each target-skill opportunity equal total weight | The directional pattern remains; magnitudes change little |
+| A common technological shock may drive change | Permute outcomes within skill-type and source-status strata | The observed gradient lies far outside the shock-based null |
+| Results may depend on the RCA cutoff | Rebuild risk sets at 0.90, 1.00, 1.10, and 1.25 | The domain reversal appears at every cutoff |
+| Results may depend on the status measure | Use wage, education, and cognitive content separately | The core directional structure remains |
+| Skill classification may be fragile | Randomly reassign 10% and 20% of skills across classes | The pattern is robust to classification noise |
+| Results may depend on a sample draw | Repeat estimation across independent source samples | Directional signs remain stable across draws |
+| One disruption period may drive the result | Compare 2015-2018, 2019-2021, and 2022-2024 | No single period accounts for the domain reversal |
 
-::: {.takeaway style="margin-top: 1.5em;"}
-These checks address measurement and specification sensitivity. They do not
-establish direct transmission or a unique causal mechanism.
+::: {.takeaway style="margin-top: 0.65em; font-size:19px;"}
+Across these checks, the **domain-specific directional pattern remains**. The
+evidence still identifies association, not direct transmission or one causal
+mechanism.
 :::
 
 :::

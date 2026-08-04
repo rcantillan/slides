@@ -539,7 +539,7 @@ G_{ij}=\sigma_j-\sigma_i
 <section id="panel-a-skill-diffusion-is-directed-around-fixed-sources" class="slide level2 smaller">
 <h2>Panel A: Skill Diffusion Is Directed Around Fixed Sources</h2>
 <div style="font-size:18px; color:#666b7a; text-align:center; margin-top:0.15em;">
-<p><span class="math inline">\(x&lt;0\)</span>: target below source — <strong>borrowing from above</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <span class="math inline">\(x&gt;0\)</span>: target above source — <strong>borrowing from below</strong></p>
+<p><span class="math inline">\(x&lt;0\)</span>: target below source &nbsp;&nbsp;|&nbsp;&nbsp; <span class="math inline">\(x&gt;0\)</span>: target above source</p>
 </div>
 <div style="text-align:center; margin-top:0.1em;">
 <p><img data-src="figures/png/fig2_linear_relative_hazard_panelA.png" style="height:525px;"></p>
@@ -649,41 +649,72 @@ G_{ij}=\sigma_j-\sigma_i
 <h1>Backup Slides</h1>
 
 </section>
-<section id="b1-main-threats-and-what-we-do-about-them" class="slide level2 smaller">
-<h2>B1: Main Threats and What We Do About Them</h2>
-<div style="font-size: 20px; margin-top: 2em;">
+<section id="b1-main-threats-tests-and-results" class="slide level2 smaller">
+<h2>B1: Main Threats, Tests, and Results</h2>
+<div style="font-size: 17px; margin-top: 0.65em; line-height:1.18;">
 <table class="caption-top">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Main threat</th>
-<th style="text-align: left;">Design response</th>
+<th style="text-align: left;">Threat</th>
+<th style="text-align: left;">How we evaluate it</th>
+<th style="text-align: left;">Result</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">A target-status gradient may look relational</td>
-<td style="text-align: left;">Complementary source + skill and target + skill fixed-effect comparisons</td>
+<td style="text-align: left;">A target gradient may look relational</td>
+<td style="text-align: left;">Compare source + skill and target + skill fixed effects</td>
+<td style="text-align: left;">The signed-gap pattern remains in both panels</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">RCA changes may reflect denominator drift</td>
-<td style="text-align: left;">Fixed-2015 denominator check; raw-importance diagnostic</td>
+<td style="text-align: left;">RCA may create mechanical change</td>
+<td style="text-align: left;">Freeze the 2015 denominator; use raw importance change</td>
+<td style="text-align: left;">The central domain-specific directions remain</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Skills with many sources may dominate the risk set</td>
-<td style="text-align: left;">Equal target-skill weighting preserves all 24 slope signs</td>
+<td style="text-align: left;">Skills with many sources may dominate</td>
+<td style="text-align: left;">Give each target-skill opportunity equal total weight</td>
+<td style="text-align: left;">The directional pattern remains; magnitudes change little</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Results may depend on measurement choices</td>
-<td style="text-align: left;">Threshold, status, taxonomy, and period sensitivity checks in the SI</td>
+<td style="text-align: left;">A common technological shock may drive change</td>
+<td style="text-align: left;">Permute outcomes within skill-type and source-status strata</td>
+<td style="text-align: left;">The observed gradient lies far outside the shock-based null</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Results may depend on the RCA cutoff</td>
+<td style="text-align: left;">Rebuild risk sets at 0.90, 1.00, 1.10, and 1.25</td>
+<td style="text-align: left;">The domain reversal appears at every cutoff</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Results may depend on the status measure</td>
+<td style="text-align: left;">Use wage, education, and cognitive content separately</td>
+<td style="text-align: left;">The core directional structure remains</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Skill classification may be fragile</td>
+<td style="text-align: left;">Randomly reassign 10% and 20% of skills across classes</td>
+<td style="text-align: left;">The pattern is robust to classification noise</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Results may depend on a sample draw</td>
+<td style="text-align: left;">Repeat estimation across independent source samples</td>
+<td style="text-align: left;">Directional signs remain stable across draws</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">One disruption period may drive the result</td>
+<td style="text-align: left;">Compare 2015-2018, 2019-2021, and 2022-2024</td>
+<td style="text-align: left;">No single period accounts for the domain reversal</td>
 </tr>
 </tbody>
 </table>
-<div class="takeaway" style="margin-top: 1.5em;">
-<p>These checks address measurement and specification sensitivity. They do not establish direct transmission or a unique causal mechanism.</p>
+<div class="takeaway" style="margin-top: 0.65em; font-size:19px;">
+<p>Across these checks, the <strong>domain-specific directional pattern remains</strong>. The evidence still identifies association, not direct transmission or one causal mechanism.</p>
 </div>
 </div>
 </section>
