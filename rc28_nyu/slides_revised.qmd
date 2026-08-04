@@ -597,9 +597,9 @@ preexisting occupational hierarchy.
 :::
 
 ::: {style="margin-top:0.85em; font-size:20px; color:#3f4650;"}
-**External validation (in progress).** We are extending the analysis to
-ESCO and to the BLS Occupational Outlook Handbook (OOH), two occupational
-classifications constructed independently of O\*NET.
+**External validation.** ESCO partially reproduces the pattern with independently
+constructed skill data; OOH provides a complementary check against independently
+measured labor-market outcomes.
 :::
 
 ## Implications {.smaller}
@@ -920,7 +920,7 @@ The two panels change which endpoint is held fixed; they test the same signed
 source–target status association.
 :::
 
-## External Validation: ESCO & OOH (In Progress) {.smaller}
+## External Validation: ESCO & OOH {.smaller}
 
 ::: {style="font-size:23px; margin-top:1.5em;"}
 - **Independent classification.** ESCO provides occupational–skill
@@ -942,14 +942,14 @@ source–target status association.
 - **Patterns not yet reproduced.** Socio-cognitive abandonment and
   sensory-physical adoption gradients are not estimated precisely.
 
-- **Also underway.** A parallel validation using the BLS **Occupational
-  Outlook Handbook (OOH)** as a third, independently constructed source.
+- **Complementary OOH analysis.** BLS **Occupational Outlook Handbook (OOH)**
+  outcomes provide independently measured external criteria. This evaluates
+  labor-market concordance rather than independently measuring skill change.
 :::
 
 ::: {.takeaway style="margin-top:1.2em; font-size:21px;"}
-Both ESCO and OOH validations are **ongoing work**; ESCO currently offers
-partial external validation in a classification built independently of
-O\*NET.
+ESCO provides **partial external validation**; OOH provides a complementary
+check against independently measured labor-market outcomes.
 :::
 
 ## References — Technological Change and Updating {.smaller}

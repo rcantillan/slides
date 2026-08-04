@@ -106,13 +106,10 @@ What makes this relational is that each changing skill is already held by a
 set of other occupations. Those current holders locate the target in a field
 of occupational positions.
 
-So by diffusion, we do not mean direct transmission from one occupation to
-another. We do not claim that doctors directly transmit a skill to nurses, or
-the other way around.
-
-We mean something more modest and measurable: the changing distribution of
-skill requirements across occupations, traced relative to the occupations that
-already hold each skill.
+We call this pattern diffusion: the changing distribution of skill requirements
+across occupations, traced relative to the occupations that already hold each
+skill. This is directional updating across occupational profiles, rather than a
+claim about direct transmission between a particular pair.
 
 ## Proximity Facilitates Diffusion - 4:45-5:30
 
@@ -273,7 +270,8 @@ Sensory-physical skills show the mirror pattern. They are taken up more
 readily when the adopting occupation ranks below the prior holder. So physical
 skills move down the status gap.
 
-Now look at abandonment, in the bottom row.
+Now look at abandonment, in the bottom row. The key question is whether skill
+loss offsets this divergence or amplifies it.
 
 If abandonment corrected the adoption pattern, we would see cognitive skills
 being shed at the top, or retained at the bottom. But that is not what happens.
@@ -282,34 +280,21 @@ Socio-cognitive skills are more likely to be shed when the occupation dropping
 them ranks below the occupation that still holds them. Sensory-physical skills
 show the opposite: they are more likely to be dropped from above.
 
-So the two flows reinforce one another. Cognitive content is gained and
-retained upward. Physical content is gained and retained downward.
+Adoption and abandonment are therefore not separate stories. They are two arms
+of the same process. Cognitive content is gained and retained upward. Physical
+content is gained and retained downward.
 
 ## Panel B: The Same Diffusion Pattern Holds Around Fixed Targets - 12:20-13:25
 
-Panel B asks a stricter question.
+Panel B asks a stricter question: is this pattern relational, or is it simply a
+result of which occupations tend to change more?
 
-Here we hold the target and the skill fixed. That means we are no longer just
-asking whether high-status occupations change more. The target is the same.
-The skill is the same. What changes is whether the source is above or below
-that target.
+Here we hold the target and the skill fixed. The target is the same. The skill
+is the same. We only compare sources above and below that target.
 
-This is why Panel B matters. It asks whether the pattern is really relational,
-or whether it is only a fact about which occupations tend to change.
-
-The answer is that the signs remain the same.
-
-For adoption, socio-cognitive skills still run upward, while
-sensory-physical skills still run downward.
-
-For abandonment, the movement is complementary: cognitive content is shed
-downward, and physical content is shed upward.
-
-Some estimates become smaller, which is expected when we absorb stable target
-differences. But the domain reversal survives.
-
-This is the key relational evidence. The result is not only a target-status
-gradient. It is a signed source-target association.
+The signs remain the same, although some estimates become smaller. This is the
+key relational evidence. The result is not only a target-status gradient. It is
+a signed source-target association.
 
 ## The Pattern Cannot Be Reduced To... - 13:25-14:05
 
@@ -370,9 +355,10 @@ cognitive content. So the result is not simply built into the status measure.
 
 Taken together, the findings show a Matthew-effect pattern: changing skill content accumulates along the preexisting occupational hierarchy.
 
-External validation is ongoing. We are extending the analysis to ESCO and to
-the BLS Occupational Outlook Handbook, two occupational classifications built
-independently of O*NET.
+ESCO provides partial external validation using independently constructed
+occupational-skill data. A complementary analysis using the BLS Occupational
+Outlook Handbook examines whether the skill pattern aligns with independently
+measured labor-market outcomes.
 
 ## Implications - 16:05-16:45
 
@@ -440,8 +426,8 @@ Thank you.
 ## Delivery Notes
 
 - Keep the opening language note short and calm. Do not apologize beyond that.
-- On the nurse-doctor slides, say clearly: "we do not observe direct
-  transmission."
+- Define diffusion once as directional updating relative to current holders.
+  Do not repeat the transmission qualification unless someone asks.
 - On Panel A, point to adoption first, then abandonment.
 - On Panel B, say: "the target is the same; the skill is the same."
 - On the projection slide, name the colors once: black observed, blue
