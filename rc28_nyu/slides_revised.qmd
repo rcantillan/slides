@@ -493,8 +493,8 @@ $$
 ## Panel A: Skill Diffusion Is Directed Around Fixed Sources {.smaller}
 
 ::: {style="font-size:18px; color:#666b7a; text-align:center; margin-top:0.15em;"}
-$x<0$: target below source — **borrowing from above** &nbsp;&nbsp;|&nbsp;&nbsp;
-$x>0$: target above source — **borrowing from below**
+$x<0$: target below source &nbsp;&nbsp;|&nbsp;&nbsp;
+$x>0$: target above source
 :::
 
 ::: {style="text-align:center; margin-top:0.1em;"}
@@ -651,7 +651,7 @@ Paper and Replication:
 |:--|:--|
 | A target-status gradient may look relational | Complementary source + skill and target + skill fixed-effect comparisons |
 | RCA changes may reflect denominator drift | Fixed-2015 denominator check; raw-importance diagnostic |
-| Skills with many sources may dominate the risk set | Equal target-skill weighting preserves all 24 slope signs |
+| Skills with many sources may dominate the risk set | Equal target-skill weighting preserves the core directional pattern |
 | Results may depend on measurement choices | Threshold, status, taxonomy, and period sensitivity checks in the SI |
 
 ::: {.takeaway style="margin-top: 1.5em;"}
