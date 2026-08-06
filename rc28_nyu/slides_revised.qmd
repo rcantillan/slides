@@ -11,8 +11,7 @@ format:
     fontsize: 30px
     margin: 0.12
     transition: fade
-    controls: true
-    controls-layout: bottom-right
+    controls: false
     css: styles.css
     template-partials: [title-slide.html]
     footer: "Cantillan & Bucca | RC28 NYU 2026"
@@ -27,14 +26,14 @@ editor:
 ## Occupations Are in Constant Transformation {.smaller}
 
 ::: {style="font-size: 29px; margin: 3.1em auto 0; max-width: 1050px;"}
-Occupations are evolving **bundles of tasks and skills**.
+Occupational titles may remain stable while their **content changes**.
 
--   Occupational titles may persist while their content changes
--   Tasks and skills are added, recombined, retained, or abandoned
--   This continuously recomposes what occupations require and do
+-   Tasks and skill requirements are continually reorganized
+-   Some requirements are adopted, retained, or abandoned
 
 ::: {.takeaway style="margin-top: 1.8em;"}
-How is occupational skill content **recomposed over time**?
+Labor markets also change through the **recomposition of existing
+occupations**.
 :::
 
 ::: {style="font-size: 16px; margin-top: 0.8em; color:#777b87;"}
@@ -145,11 +144,6 @@ Hosseinioun et al. 2025
 
 # I. Skill Diffusion {.center .middle background-color="#302a78"}
 
-::: {style="font-size: 28px; color: white; text-align: center; margin-top: 1em;"}
-**Relatedness connects; status directs.**<br>
-Skill change depends on where an occupation sits relative to the skill's
-current holders.
-:::
 
 ## Skill Diffusion Is Directional Updating {.smaller}
 
