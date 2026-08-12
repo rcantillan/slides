@@ -219,8 +219,8 @@ $\mathrm{dist}_{ij}=\mathrm{dist}_{ji}$
 :::::
 
 ::::: {.column width="32%"}
-::: {style="text-align:center; margin-top: 5.15em;"}
-![](newton_gravity.png){style="height:185px; width:auto; max-width:100%; object-fit:contain;"}
+::: {style="text-align:center; margin-top: 3.6em;"}
+![](newton_gravity.png){style="height:245px; width:auto; max-width:100%; object-fit:contain;"}
 :::
 :::::
 :::::::::
@@ -239,8 +239,8 @@ measure: Hidalgo et al. 2007.
 
 ::::::::: columns
 ::::: {.column width="32%"}
-::: {style="text-align:center; margin-top: 5em;"}
-![](newton_status.png){style="height:195px; width:auto; max-width:100%; object-fit:contain;"}
+::: {style="text-align:center; margin-top: 3.4em;"}
+![](newton_status.png){style="height:255px; width:auto; max-width:100%; object-fit:contain;"}
 :::
 :::::
 
