@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="slides_files/libs/quarto-html/tabby.min.js"></script>
+<script src="slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
+
+  <meta name="author" content="Roberto Cantillan">
+  <title>When Do Alternatives Threaten a Tie?</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-e357ec73da9b4f30148e0bde2f68b1e7.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<!-- ===========================
+     title-slide.html  (v3: imagen IZQ = misma altura que texto DER)
+     =========================== -->
+<section id="title-slide" class="quarto-title-block center">
+  <div class="title-container title-left-image">
+    <!-- IZQUIERDA: IMAGEN -->
+    <div class="title-image" id="title-image-box">
+              <img id="title-image-el" src="cover.png" alt="Cover Image">
+          </div>
+
+    <!-- DERECHA: TEXTO -->
+    <div class="title-content" id="title-text-el">
+      <h1 class="title">When Do Alternatives Threaten a Tie?</h1>
+            <p class="subtitle">Opportunity Sets and Relational Persistence</p>
+            <p class="author">Roberto Cantillan</p>
+      <p class="institute">Department of Sociology | Pontificia Universidad Católica de Chile</p>
+      
+      
+          </div>
+  </div>
+
+  <!-- Igualador de alturas: imagen = altura del bloque de texto -->
+  <script>
+    (function(){
+      function equalize(){
+        try{
+          var text = document.getElementById('title-text-el');
+          var img  = document.getElementById('title-image-el');
+          var box  = document.getElementById('title-image-box');
+          if(!text || !img || !box) return;
+
+          // Altura del texto (incluye padding interno)
+          var th = text.offsetHeight;
+
+          // Límite de seguridad: 92% del alto de la ventana (para que no desborde)
+          var maxH = Math.floor(window.innerHeight * 0.92);
+
+          var target = Math.min(th, maxH);
+
+          // Fijamos la altura del contenedor y de la imagen
+          box.style.height = target + 'px';
+          img.style.height = target + 'px';
+          img.style.width  = '100%';
+          img.style.objectFit = 'cover';
+        }catch(e){}
+      }
+      // Ejecuta en carga y en resize
+      window.addEventListener('load', equalize);
+      window.addEventListener('resize', equalize);
+      // También cuando Reveal navega a la primera slide
+      document.addEventListener('readystatechange', equalize);
+    })();
+  </script>
+</section>
+<section id="homophily-explains-which-ties-form" class="slide level2 smaller">
+<h2>Homophily Explains Which Ties Form</h2>
+<div style="font-size: 29px; margin: 3.1em auto 0; max-width: 1050px;">
+<p>Similarity structures social relations, through <strong>choice</strong> and through <strong>structured opportunity</strong>.</p>
+<ul>
+<li>We know a great deal about which kinds of ties occur</li>
+<li>We know much less about whether a compatible tie <strong>stays attached to the same person</strong></li>
+</ul>
+<div class="takeaway" style="margin-top: 1.8em;">
+<p>Whether a tie survives depends not only on how well it fits, but on <strong>what else is available</strong>.</p>
+</div>
+<div style="font-size: 16px; margin-top: 0.8em; color:#777b87;">
+<p>Feld 1981; McPherson, Smith-Lovin &amp; Cook 2001; Zeng &amp; Xie 2008; Kossinets &amp; Watts 2009</p>
+</div>
+</div>
+</section>
+<section id="same-fit-different-replaceability" class="slide level2 smaller">
+<h2>Same Fit, Different Replaceability</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<div style="font-size: 25px; margin-top: 1.55em;">
+<ul>
+<li>Two ties in which ego and alter share <strong>three characteristics</strong></li>
+<li>In the first, few alternatives offer a comparable fit</li>
+<li>In the second, twenty classmates reproduce it</li>
+</ul>
+<div class="takeaway" style="margin-top: 1.35em;">
+<p><strong>Homophily describes fit; relational redundancy describes how reproducible that fit is.</strong></p>
+</div>
+<div style="font-size: 17px; margin-top: 0.7em; color:#717583;">
+<p>A dyadic analysis sees the same tie in both cases. The difference lies in the opportunity set outside the dyad.</p>
+</div>
+</div>
+</div><div class="column" style="width:48%;">
+<div style="text-align:center; margin-top: 0.2em;">
+<p><img data-src="figures/fig_concept.png" style="height:560px; width:auto; max-width:100%; object-fit:contain; border-radius:4px;"></p>
+</div>
+</div></div>
+</section>
+<section id="blau-opportunity-as-headcount-or-as-value" class="slide level2 smaller">
+<h2>Blau: Opportunity as Headcount or as Value?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 24px; margin-top: 1.9em; padding-right:1.1em;">
+<p><strong>Two premises</strong></p>
+<ul>
+<li>Associations are more prevalent between persons in <strong>proximate</strong> positions</li>
+<li>Associations depend on <strong>opportunities</strong> for contact</li>
+</ul>
+<div style="font-size: 15px; margin-top: 0.8em; color:#717583;">
+<p>Blau 1977, <em>AJS</em> 83:26–54</p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 24px; margin-top: 1.9em; padding-left:1.3em; border-left:2px solid #d8dbe4;">
+<p><strong>Two readings</strong></p>
+<ul>
+<li>Read literally, the opportunity premise <strong>counts people</strong></li>
+<li>Read with proximity, it <strong>weights them</strong>: an alter threatens an incumbent to the extent that it approximates the incumbent’s fit</li>
+</ul>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.9em; font-size: 24px;">
+<p>Does persistence depend on <strong>how many</strong> alternatives a person has, or on <strong>how good</strong> they are?</p>
+</div>
+</section>
+<section id="alternatives-matter-but-how" class="slide level2 smaller">
+<h2>Alternatives Matter — but How?</h2>
+<div style="font-size: 25px; margin: 1.4em auto 0; max-width: 1080px;">
+<p>That alternatives destabilize relationships is not new.</p>
+<ul>
+<li><strong>Dependence</strong> is conditional on alternatives</li>
+<li>Local supply of <strong>spousal alternatives</strong> raises divorce risk</li>
+<li><strong>Actor-oriented network models</strong> treat tie maintenance as a choice among alternatives</li>
+</ul>
+</div>
+<div class="takeaway" style="margin-top: 1.5em; font-size:23px;">
+<p>What is missing is a <strong>tie-level estimand</strong> that separates the number of alternatives from their value, and a way to test which one matters.</p>
+</div>
+<div style="font-size: 15px; margin-top: 0.7em; color:#717583; text-align:center;">
+<p>Emerson 1962; Rusbult 1980; South &amp; Lloyd 1995; Snijders 2001; Stadtfeld &amp; Block 2017</p>
+</div>
+</section>
+<section id="we-ask-three-questions" class="slide level2 smaller">
+<h2>We Ask Three Questions</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div style="font-size: 24px; margin-top: 2.1em; padding-right:0.9em;">
+<p><strong>1. Size</strong></p>
+<p>Does the <strong>number</strong> of alternatives lower persistence once their value is fixed?</p>
+</div>
+</div><div class="column" style="width:34%;">
+<div style="font-size: 24px; margin-top: 2.1em; padding:0 1em; border-left:2px solid #d8dbe4;">
+<p><strong>2. Protection</strong></p>
+<p>Does compatibility protect a tie <strong>beyond</strong> its value in choice?</p>
+</div>
+</div><div class="column" style="width:33%;">
+<div style="font-size: 24px; margin-top: 2.1em; padding-left:1em; border-left:2px solid #d8dbe4;">
+<p><strong>3. Turnover</strong></p>
+<p>When a tie ends, does the <strong>departed alter</strong> shape who replaces them?</p>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 2em; font-size: 22px;">
+<p>One persistence regression, written in the right variables, answers all three.</p>
+</div>
+</section>
+<section>
+<section id="i.-model" class="title-slide slide level1 center middle" data-background-color="#302a78">
+<h1>I. Model</h1>
+
+</section>
+<section id="relational-redundancy" class="slide level2 smaller">
+<h2>Relational Redundancy</h2>
+<div style="font-size: 25px; text-align:center; margin-top: 0.9em; color:#302a78;">
+<p><span class="math display">\[
+C_{ij}
+=
+\underbrace{\log n_{ij}}_{\text{volume}}
++
+\underbrace{\bar L_{ij}-U_{ij}}_{\text{competitive quality}}
+\]</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 21px; margin-top: 0.6em; padding-right:1.3em;">
+<div class="param-row">
+<span class="sym"><span class="math inline">\(U_{ij}\)</span></span><span><strong>Compatibility</strong> of ego and incumbent<br><span style="font-size:17px; color:#717583;"><span class="math inline">\(\sum_q w_q M_{ijq}\)</span> · multidimensional fit</span></span>
+</div>
+<div class="param-row">
+<span class="sym"><span class="math inline">\(n_{ij}\)</span></span><span><strong>Number</strong> of feasible alternatives<br><span style="font-size:17px; color:#717583;">opportunity as a headcount</span></span>
+</div>
+<div class="param-row">
+<span class="sym"><span class="math inline">\(\bar L_{ij}\)</span></span><span><strong>Mean value</strong> of alternatives<br><span style="font-size:17px; color:#717583;"><span class="math inline">\(\log\)</span> mean of <span class="math inline">\(e^{U_{ik}}\)</span> · value-weighted opportunity</span></span>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 22px; margin-top: 1.3em; padding-left:1.3em; border-left:2px solid #d8dbe4;">
+<ul>
+<li>The log-sum of alternatives’ utility relative to the incumbent</li>
+<li>Splits <strong>exactly</strong> into the size of the opportunity set and its relational composition</li>
+<li>Distant alters add almost nothing; proximate alters add most</li>
+</ul>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.1em; font-size:22px;">
+<p>The decomposition separates <strong>how many</strong> alternatives there are from <strong>how good</strong> they are.</p>
+</div>
+<div style="font-size: 14px; margin-top: 0.35em; color:#717583; text-align:center;">
+<p>Inclusive value: McFadden 1978</p>
+</div>
+</section>
+<section id="one-logit-three-parameters" class="slide level2 smaller">
+<h2>One Logit, Three Parameters</h2>
+<div style="font-size: 25px; margin-top: 0.7em; text-align:center; color:#302a78;">
+<p><span class="math display">\[
+\operatorname{logit}\Pr(\text{tie persists})
+\approx
+\kappa\big[\rho+(1+\color{#175c50}{\gamma})\,U_{ij}
+-\color{#b33a3a}{\alpha}\log n_{ij}-\bar L_{ij}\big]
+\]</span></p>
+</div>
+<div style="font-size: 21px; margin: 0.9em auto 0; max-width: 1000px;">
+<div class="param-row">
+<span class="sym" style="color:#b33a3a;"><span class="math inline">\(\alpha=\frac{b_{\log n}}{b_{\bar L}}\)</span></span><span><strong>Opportunity elasticity.</strong> How competitive pressure scales with the number of alternatives. <span class="math inline">\(\alpha=1\)</span>: every alter is weighed; <span class="math inline">\(\alpha=0\)</span>: consideration does not grow with opportunity.</span>
+</div>
+<div class="param-row">
+<span class="sym"><span class="math inline">\(\gamma=-\frac{b_U}{b_{\bar L}}-1\)</span></span><span><strong>Compatibility premium.</strong> Protection beyond the value of compatibility in choice.</span>
+</div>
+<div class="param-row">
+<span class="sym" style="color:#302a78;"><span class="math inline">\(\kappa=-b_{\bar L}\)</span></span><span><strong>Exposure.</strong> How strongly ties respond to competition at all.</span>
+</div>
+</div>
+<div class="takeaway" style="margin-top: 0.9em; font-size:22px;">
+<p><span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\gamma\)</span> are <strong>ratios</strong>: pooling protected and contested ties leaves them unchanged.</p>
+</div>
+</section>
+<section id="the-classical-hypotheses-are-nested" class="slide level2 smaller">
+<h2>The Classical Hypotheses Are Nested</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div style="font-size: 22px; margin-top: 1.6em; padding-right:0.9em; text-align:center;">
+<div style="font-size: 36px; color:#b33a3a; margin-bottom:0.3em;">
+<p><span class="math inline">\(\alpha=1\)</span></p>
+</div>
+<p><strong>Full-set evaluation</strong></p>
+<div style="font-size:19px; margin-top:0.5em;">
+<p>Every available alter competes with the incumbent. The default of actor-oriented models.</p>
+</div>
+<div style="font-size:17px; color:#717583; margin-top:0.6em;">
+<p><span class="math inline">\(b_{\log n}=b_{\bar L}\)</span></p>
+</div>
+</div>
+</div><div class="column" style="width:34%;">
+<div style="font-size: 22px; margin-top: 1.6em; padding:0 1em; border-left:2px solid #d8dbe4; text-align:center;">
+<div style="font-size: 36px; color:#175c50; margin-bottom:0.3em;">
+<p><span class="math inline">\(\alpha=0\)</span></p>
+</div>
+<p><strong>Bounded consideration</strong></p>
+<div style="font-size:19px; margin-top:0.5em;">
+<p>Only the value of alternatives matters, not their number.</p>
+</div>
+<div style="font-size:17px; color:#717583; margin-top:0.6em;">
+<p><span class="math inline">\(b_{\log n}=0\)</span></p>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div style="font-size: 22px; margin-top: 1.6em; padding-left:1em; border-left:2px solid #d8dbe4; text-align:center;">
+<div style="font-size: 36px; color:#302a78; margin-bottom:0.3em;">
+<p><span class="math inline">\(\gamma=0\)</span></p>
+</div>
+<p><strong>Pure relative choice</strong></p>
+<div style="font-size:19px; margin-top:0.5em;">
+<p>Compatibility protects a tie only through its value in choice.</p>
+</div>
+<div style="font-size:17px; color:#717583; margin-top:0.6em;">
+<p><span class="math inline">\(b_U=-b_{\bar L}\)</span></p>
+</div>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.6em; font-size:22px;">
+<p>Each hypothesis is <strong>one linear restriction</strong>; confidence sets follow by test inversion.</p>
+</div>
+<div style="font-size: 14px; margin-top: 0.35em; color:#717583; text-align:center;">
+<p>Consideration sets: Manski 1977; Abaluck &amp; Adams-Prassl 2021. Number of alternatives in the logit: Ackerberg &amp; Rysman 2005. Test inversion: Fieller 1954.</p>
+</div>
+</section>
+<section id="the-parameters-are-not-scale-free" class="slide level2 smaller">
+<h2>The Parameters Are Not Scale-Free</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div style="font-size: 24px; margin-top: 1.5em;">
+<ul>
+<li><span class="math inline">\(\bar L\)</span> is a log-sum: <span class="math inline">\(\bar L(cU)\neq c\,\bar L(U)\)</span></li>
+<li>Rescaling compatibility changes which alternatives dominate</li>
+<li>A rule-based score (e.g., rarity weights) mixes the parameters with the rule’s scale</li>
+</ul>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="font-size: 23px; margin-top: 1.5em; padding-left:1.3em; border-left:2px solid #d8dbe4;">
+<p><strong>Calibrate from partner choice</strong></p>
+<p>Conditional logit of observed nominations on match indicators, one stratum per ego.</p>
+<div style="font-size:18px; color:#717583; margin-top:0.7em;">
+<p>Weights cross-fitted: each school’s weights come from the other schools.</p>
+</div>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.8em; font-size:23px;">
+<p>Tests of mechanisms that operate through alternatives are <strong>tests of a utility scale</strong> as much as of a mechanism.</p>
+</div>
+</section>
+<section id="after-an-exit-memoryless-entry" class="slide level2 smaller">
+<h2>After an Exit: Memoryless Entry</h2>
+<div style="font-size: 25px; margin-top: 1.1em; text-align:center; color:#302a78;">
+<p>Under relative choice, the entrant is drawn with probability <span class="math inline">\(\propto e^{U_{ik}}\)</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 22px; margin-top: 1.1em; padding-right:1.3em;">
+<p><strong>What the model implies</strong></p>
+<ul>
+<li>Who enters does not depend on <strong>who left</strong></li>
+<li>Same-profile alternatives do not compete harder, given <span class="math inline">\(\bar L\)</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 22px; margin-top: 1.1em; padding-left:1.3em; border-left:2px solid #d8dbe4;">
+<p><strong>What would break it</strong></p>
+<ul>
+<li><strong>Durable taste:</strong> ego recruits the kinds of alters it already has</li>
+<li><strong>Positional demand:</strong> a vacated position attracts a similar entrant</li>
+</ul>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.6em; font-size:22px;">
+<p>Profiles can persist because positions are <strong>sought</strong> — or because the ecology keeps <strong>supplying</strong> them.</p>
+</div>
+<div style="font-size: 14px; margin-top: 0.35em; color:#717583; text-align:center;">
+<p>Vacancy chains: White 1970. Turnover with stable composition: Wellman et al.&nbsp;1997.</p>
+</div>
+</section></section>
+<section>
+<section id="ii.-data-and-research-design" class="title-slide slide level1 center middle" data-background-color="#302a78">
+<h1>II. Data and Research Design</h1>
+
+</section>
+<section id="two-settings-with-observed-opportunity-sets" class="slide level2">
+<h2>Two Settings with Observed Opportunity Sets</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 23px; margin-top: 1.4em; padding-right:1.2em;">
+<p><strong>Online discussion (DerStandard)</strong></p>
+<ul>
+<li>A decade of threaded replies, <strong>37</strong> three-month windows</li>
+<li><strong>914,198</strong> incumbent tie-periods</li>
+<li>Compatibility: topical similarity</li>
+<li>Opportunity set: prior co-presence in threads</li>
+<li><strong>Ego fixed effects</strong>: opportunity varies within ego</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 23px; margin-top: 1.4em; padding-left:1.3em; border-left:2px solid #d8dbe4;">
+<p><strong>School friendship (FIS)</strong></p>
+<ul>
+<li><strong>2,928</strong> pupils, <strong>10</strong> schools, <strong>29</strong> grade-cohorts, six waves</li>
+<li><strong>34,126</strong> incumbent tie-periods</li>
+<li>Compatibility: sex, origin, generation, religiosity, lifestyle</li>
+<li>Opportunity set: grade roster; every nomination falls inside it</li>
+<li>Classes change within pupils between waves</li>
+</ul>
+</div>
+</div></div>
+<div style="font-size: 14px; margin-top: 1em; color:#717583; text-align:center;">
+<p>Fraxanet et al.&nbsp;2026; Leszczensky et al.&nbsp;2022</p>
+</div>
+</section>
+<section id="from-observed-rosters-to-parameters" class="slide level2 smaller">
+<h2>From Observed Rosters to Parameters</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div style="font-size: 20px; margin-top: 1.25em; padding-right:0.8em;">
+<div style="font-size: 21px; color:#302a78; margin-bottom:0.6em;">
+<p><span style="font-size:30px; color:#175c50; font-weight:700;">01</span><br> <strong>Opportunity set</strong></p>
+</div>
+<ul>
+<li>Pretreatment <span class="math inline">\(\mathcal O_i\)</span></li>
+<li>Every tie must fall inside it</li>
+</ul>
+</div>
+</div><div class="column" style="width:25%;">
+<div style="font-size: 20px; margin-top: 1.25em; padding:0 0.9em; border-left:2px solid #d8dbe4;">
+<div style="font-size: 21px; color:#302a78; margin-bottom:0.6em;">
+<p><span style="font-size:30px; color:#175c50; font-weight:700;">02</span><br> <strong>Choice scale</strong></p>
+</div>
+<ul>
+<li>Partner-choice conditional logit</li>
+<li>Cross-fitted weights</li>
+</ul>
+</div>
+</div><div class="column" style="width:25%;">
+<div style="font-size: 20px; margin-top: 1.25em; padding:0 0.9em; border-left:2px solid #d8dbe4;">
+<div style="font-size: 21px; color:#302a78; margin-bottom:0.6em;">
+<p><span style="font-size:30px; color:#175c50; font-weight:700;">03</span><br> <strong>Decomposition</strong></p>
+</div>
+<ul>
+<li><span class="math inline">\(U_{ij}\)</span>, <span class="math inline">\(\bar L_{ij}\)</span>, <span class="math inline">\(\log n_{ij}\)</span></li>
+<li>All on the choice scale</li>
+</ul>
+</div>
+</div><div class="column" style="width:25%;">
+<div style="font-size: 20px; margin-top: 1.25em; padding-left:0.9em; border-left:2px solid #d8dbe4;">
+<div style="font-size: 21px; color:#302a78; margin-bottom:0.6em;">
+<p><span style="font-size:30px; color:#175c50; font-weight:700;">04</span><br> <strong>One logit</strong></p>
+</div>
+<ul>
+<li><span class="math inline">\(\hat\kappa\)</span>, <span class="math inline">\(\hat\alpha\)</span>, <span class="math inline">\(\hat\gamma\)</span> by ratios</li>
+<li>Test inversion; few-cluster wild bootstrap</li>
+</ul>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.6em; font-size:22px;">
+<p>The same compatibility scale feeds the persistence logit and the turnover diagnostics.</p>
+</div>
+<div style="font-size: 14px; margin-top: 0.45em; color:#717583; text-align:center;">
+<p>Wild restricted score bootstrap: Kline &amp; Santos 2012</p>
+</div>
+</section>
+<section id="the-estimators-recover-the-truth-on-the-right-scale" class="slide level2 smaller">
+<h2>The Estimators Recover the Truth — on the Right Scale</h2>
+<div style="text-align:center; margin-top:0.1em;">
+<p><img data-src="figures/deck_fig_recovery_struct.png" style="height:470px; width:auto;"></p>
+</div>
+<div class="takeaway" style="margin-top:0.15em; font-size:20px;">
+<p>On the choice scale, <span class="math inline">\(\alpha\)</span> is recovered and <span class="math inline">\(\gamma\)</span> is conservative. On a rarity rule, <span class="math inline">\(\alpha\)</span> is inflated and a premium appears <strong>where none exists</strong>.</p>
+</div>
+</section></section>
+<section>
+<section id="iii.-findings" class="title-slide slide level1 center middle" data-background-color="#302a78">
+<h1>III. Findings</h1>
+
+</section>
+<section id="online-quality-not-number" class="slide level2 smaller">
+<h2>Online: Quality, Not Number</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div style="text-align:center; margin-top: 2.2em;">
+<p class="stat-label">
+Opportunity elasticity
+</p>
+<p class="stat-big">
+.04
+</p>
+<p style="font-size:19px; color:#717583;">
+95% CI −.02 to .10
+</p>
+</div>
+</div><div class="column" style="width:34%;">
+<div style="text-align:center; margin-top: 2.2em; border-left:2px solid #d8dbe4; border-right:2px solid #d8dbe4;">
+<p class="stat-label">
+New ties
+</p>
+<p class="stat-big" style="color:#175c50;">
+.10
+</p>
+<p style="font-size:19px; color:#717583;">
+95% CI .04 to .16
+</p>
+</div>
+</div><div class="column" style="width:33%;">
+<div style="text-align:center; margin-top: 2.2em;">
+<p class="stat-label">
+Compatibility premium
+</p>
+<p class="stat-big">
+.32
+</p>
+<p style="font-size:19px; color:#717583;">
+95% CI .07 to .61
+</p>
+</div>
+</div></div>
+<div style="font-size: 22px; margin: 1.4em auto 0; max-width: 1050px;">
+<ul>
+<li>Full-set evaluation (<span class="math inline">\(\alpha=1\)</span>) is rejected decisively, in both halves of the decade (.09 and .00)</li>
+<li>Established ties are less exposed (<span class="math inline">\(\hat\kappa\)</span> .92 → .76) and carry no detectable premium</li>
+</ul>
+</div>
+<div class="takeaway" style="margin-top: 1.1em; font-size:22px;">
+<p>Persistence responds to <strong>how good</strong> the alternatives are, not to how many there are.</p>
+</div>
+</section>
+<section id="friendship-the-classroom-is-the-consideration-set" class="slide level2 smaller">
+<h2>Friendship: The Classroom Is the Consideration Set</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div style="font-size: 23px; margin-top: 1.1em;">
+<p>Pupils may nominate anyone in their grade, yet <strong>81%</strong> of incumbent friends are classmates.</p>
+<p>Within pupils, with separate value and size for each tier:</p>
+</div>
+<div style="font-size: 21px; margin-top: 0.7em;">
+<div class="param-row">
+<span class="sym" style="min-width:150px;"><span class="math inline">\(-1.10\)</span></span><span><strong>Classmates</strong> compete<br><span style="font-size:17px; color:#717583;"><span class="math inline">\(b_{\bar L}\)</span>, <span class="math inline">\(p&lt;.001\)</span></span></span>
+</div>
+<div class="param-row">
+<span class="sym" style="min-width:150px; color:#b33a3a;"><span class="math inline">\(+.22\)</span></span><span><strong>Other grade-mates</strong> do not<br><span style="font-size:17px; color:#717583;"><span class="math inline">\(b_{\bar L}\)</span>, <span class="math inline">\(p=.17\)</span></span></span>
+</div>
+</div>
+</div><div class="column" style="width:52%;">
+<div style="text-align:center; margin-top: 1.2em; padding-left:1.2em; border-left:2px solid #d8dbe4;">
+<p class="stat-label">
+Within-class opportunity elasticity
+</p>
+<p class="stat-big">
+.48
+</p>
+<p style="font-size:19px; color:#717583;">
+95% set .30 to .85 (grade-cohort clusters)
+</p>
+<div style="font-size: 20px; margin-top: 1em; text-align:left;">
+<ul>
+<li>Consideration that ignores class size is rejected (<span class="math inline">\(p&lt;.001\)</span>)</li>
+<li>Full evaluation of the class: <span class="math inline">\(p=.024\)</span> by cohort, <span class="math inline">\(p=.076\)</span> by school</li>
+</ul>
+</div>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1em; font-size:22px;">
+<p>Alternatives threaten a friendship when they are <strong>in the setting ego actually weighs</strong> — and there, value counts twice as much as number.</p>
+</div>
+</section>
+<section id="parameters-across-settings" class="slide level2 smaller">
+<h2>Parameters Across Settings</h2>
+<div style="text-align:center; margin-top:0.15em;">
+<p><img data-src="figures/deck_fig_parameters.png" style="height:500px; width:auto;"></p>
+</div>
+<div class="takeaway" style="margin-top:0.15em; font-size:20px;">
+<p>In both settings, the opportunity that bears on persistence is a <strong>bounded setting weighted by value</strong>, not a headcount.</p>
+</div>
+</section>
+<section id="the-friendship-premium-was-who-pupils-are" class="slide level2 smaller">
+<h2>The Friendship Premium Was Who Pupils Are</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="text-align:center; margin-top: 2em; padding-right:1.2em;">
+<p class="stat-label">
+Between pupils
+</p>
+<p class="stat-big" style="color:#b33a3a;">
+1.85
+</p>
+<p style="font-size:19px; color:#717583;">
+95% set .30 to 41.5
+</p>
+<div style="font-size: 21px; margin-top: 1em;">
+<p>Compatibility appears to protect friendships almost three times more than choice implies.</p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="text-align:center; margin-top: 2em; padding-left:1.2em; border-left:2px solid #d8dbe4;">
+<p class="stat-label">
+Within pupils
+</p>
+<p class="stat-big" style="color:#175c50;">
+−.26
+</p>
+<p style="font-size:19px; color:#717583;">
+95% set −.55 to 1.10
+</p>
+<div style="font-size: 21px; margin-top: 1em;">
+<p>With ego fixed effects the premium disappears.</p>
+</div>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.8em; font-size:22px;">
+<p>Pupils whose friends are more compatible keep friends longer <strong>for stable reasons of their own</strong>. A premium must be estimated within actors.</p>
+</div>
+</section>
+<section id="rule-scales-manufacture-mechanisms" class="slide level2 smaller">
+<h2>Rule Scales Manufacture Mechanisms</h2>
+<div style="font-size: 17px; margin-top: 1.2em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Apparent finding on a rarity-weighted scale</th>
+<th style="text-align: left;">After calibrating to partner choice</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Pure relative choice holds among weakly embedded ties</td>
+<td style="text-align: left;">Not supported</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Reciprocity insulates ties from competition</td>
+<td style="text-align: left;">Not supported</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Entrants resemble the departed alter (vacancy filling)</td>
+<td style="text-align: left;">Vanishes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Alternative value lowers persistence within pupils</td>
+<td style="text-align: left;">Detected <strong>only</strong> on the choice scale</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 21px; margin-top: 1.1em; padding-right:1.2em;">
+<p><strong>What pupils act on</strong></p>
+<p>Sex 1.75 · origin .47 · religiosity .19 · lifestyle .20 · generation .09</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 21px; margin-top: 1.1em; padding-left:1.2em; border-left:2px solid #d8dbe4;">
+<p><strong>What the rarity rule assumes</strong></p>
+<p>Every shared category weighted by its local scarcity; utility dispersion overstated about <strong>threefold</strong></p>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.2em; font-size:22px;">
+<p>Calibrate compatibility <strong>before</strong> testing anything about alternatives.</p>
+</div>
+</section>
+<section id="who-replaces-a-departed-friend" class="slide level2 smaller">
+<h2>Who Replaces a Departed Friend?</h2>
+<div class="columns">
+<div class="column" style="width:56%;">
+<div style="font-size: 17px; margin-top: 0.9em;">
+<p><strong>Distance to the departed alter in entrant choice</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Specification</th>
+<th style="text-align: right;">Rule weights</th>
+<th style="text-align: right;">Estimated weights</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Non-incumbent risk set</td>
+<td style="text-align: right;">−.261</td>
+<td style="text-align: right;">−.066</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">+ ego’s portfolio taste</td>
+<td style="text-align: right;">−.127</td>
+<td style="text-align: right;">−.036</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">+ network inheritance and foci</td>
+<td style="text-align: right;">−.089</td>
+<td style="text-align: right;"><strong>−.009</strong></td>
+</tr>
+</tbody>
+</table>
+<div style="font-size: 15px; color:#717583; margin-top:0.4em;">
+<p>Estimated weights, full model: bootstrap 95% interval [−.058, .061]; 11,784 exits, 878,087 candidates.</p>
+</div>
+</div>
+</div><div class="column" style="width:44%;">
+<div style="font-size: 21px; margin-top: 1.2em; padding-left:1.2em; border-left:2px solid #d8dbe4;">
+<p><strong>What predicts entry</strong></p>
+<ul>
+<li>Compatibility with ego</li>
+<li>Ego’s durable taste (portfolio share .158)</li>
+<li>Ties to the departed alter and to ego’s other friends</li>
+<li>Sharing ego’s classroom</li>
+</ul>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 1.1em; font-size:22px;">
+<p>With these profiles and controls, <strong>who left adds no detectable information</strong> about who enters.</p>
+</div>
+</section>
+<section id="profiles-persist-because-the-ecology-supplies-them" class="slide level2 smaller">
+<h2>Profiles Persist Because the Ecology Supplies Them</h2>
+<div style="text-align:center; margin-top:0.1em;">
+<p><img data-src="figures/fig_reversal.png" style="height:330px; width:auto;"></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 20px; margin-top: 0.4em; padding-right:1.2em;">
+<p><strong>Simulation.</strong> More exact-profile substitutes: the focal person is retained less (.36 → .28) while the profile is preserved more (.36 → .97).</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 20px; margin-top: 0.4em; padding-left:1.2em; border-left:2px solid #d8dbe4;">
+<p><strong>Friendship.</strong> Identity continuity .563, profile continuity .618 — <strong>below</strong> its compositional baseline (.628).</p>
+</div>
+</div></div>
+<div class="takeaway" style="margin-top: 0.6em; font-size:21px;">
+<p>Stable relational patterns need not be composed of stable relationships.</p>
+</div>
+</section></section>
+<section>
+<section id="iv.-discussion" class="title-slide slide level1 center middle" data-background-color="#302a78">
+<h1>IV. Discussion</h1>
+
+</section>
+<section id="takeaways" class="slide level2 smaller">
+<h2>Takeaways</h2>
+<div style="font-size:25px; margin-top:1.6em;">
+<ul>
+<li><p><strong>Size.</strong> Where it can be estimated precisely, the number of alternatives adds little once their value is fixed.</p></li>
+<li><p><strong>Setting.</strong> In friendship, only classmates compete; within the class, number matters about half as much as value.</p></li>
+<li><p><strong>Protection.</strong> Compatibility protects discussion ties a third more than choice implies; in friendship the apparent premium is ego heterogeneity.</p></li>
+<li><p><strong>Turnover.</strong> Profile continuity arises from ecological supply, without a detectable preference for replacing the previous occupant.</p></li>
+</ul>
+</div>
+<div class="takeaway" style="margin-top:1.15em; font-size:22px;">
+<p><strong>Relational opportunity:</strong> an opportunity structure bears on tie persistence through how closely its alternatives approximate the incumbent’s value, not through how many alternatives it contains.</p>
+</div>
+</section>
+<section id="implications" class="slide level2 smaller">
+<h2>Implications</h2>
+<div style="font-size: 26px; margin-top: 2.4em;">
+<ul>
+<li><p><strong>For Blau’s opportunity premise:</strong> for a particular tie, an opportunity is not another available person; its weight is its value relative to the incumbent</p></li>
+<li><p><strong>For actor-oriented models:</strong> the default treats every actor as an alternative (<span class="math inline">\(\alpha=1\)</span>); the persistence logit is a <strong>diagnostic</strong> of that assumption before fitting large or multi-group networks</p></li>
+<li><p><strong>For measurement:</strong> compatibility scores must be put on the choice scale; rule-based scores produce spurious mechanisms</p></li>
+</ul>
+</div>
+<div style="font-size: 14px; margin-top: 1.4em; color:#717583; text-align:center;">
+<p>Settings in RSiena: Ripley et al.&nbsp;2024. SAOMs as random-utility models: Pink, Kretschmer &amp; Leszczensky 2020.</p>
+</div>
+</section>
+<section id="limitations" class="slide level2 smaller">
+<h2>Limitations</h2>
+<div style="font-size: 25px; margin-top: 3em;">
+<ul>
+<li><p><strong>Observational design:</strong> ego fixed effects remove stable, not time-varying, heterogeneity</p></li>
+<li><p><strong>Asymmetric precision:</strong> online estimates are precise; the classroom estimate excludes full evaluation by cohort but not by school</p></li>
+<li><p><strong>Interpretation:</strong> <span class="math inline">\(\alpha\)</span> is an elasticity of competitive pressure, not a count of the people an actor considers; <span class="math inline">\(\gamma\)</span> assumes a shared error scale for choice and maintenance</p></li>
+</ul>
+</div>
+</section></section>
+<section id="thank-you" class="title-slide slide level1 center middle" data-background-color="#302a78">
+<h1>Thank You</h1>
+<p><strong>Roberto Cantillan</strong></p>
+<p>Department of Sociology, PUC Chile</p>
+<p>rcantillan@uc.cl</p>
+</section>
+
+<section>
+<section id="backup-slides" class="title-slide slide level1 center middle" data-background-color="#302a78">
+<h1>Backup Slides</h1>
+
+</section>
+<section id="b1-proposition-three-parameters" class="slide level2 smaller">
+<h2>B1: Proposition — Three Parameters</h2>
+<div style="font-size: 21px; margin-top: 1.2em;">
+<p>One slot; Type-I extreme-value errors; consideration set of size <span class="math inline">\(m_{ij}=\mu n_{ij}^{\alpha}\)</span> drawn uniformly; incumbency premium <span class="math inline">\(\rho_{ij}=\rho_0+\gamma U_{ij}\)</span>; incumbent re-contested with probability <span class="math inline">\(c\)</span>.</p>
+<p><span class="math display">\[
+\Pr(\text{persist})=(1-c)+c\,\Lambda\big(\rho_0-\log\mu+(1+\gamma)U_{ij}-\alpha\log n_{ij}-\bar L_{ij}\big)
+\]</span></p>
+<p>Local slopes of the logit:</p>
+<p><span class="math display">\[
+b_U=\kappa(1+\gamma),\qquad b_{\bar L}=-\kappa,\qquad b_{\log n}=-\kappa\alpha,
+\qquad \kappa=\frac{\Lambda}{1-c+c\Lambda}\in(0,1]
+\]</span></p>
+<ul>
+<li>Uses <span class="math inline">\(\mathbb E\big[\log\sum_{k\in S}e^{U_{ik}}\big]\approx\log m_{ij}+\bar L_{ij}\)</span></li>
+<li>Ratios are exact pointwise; with several slots <span class="math inline">\(\hat\kappa\)</span> can exceed one (1.16–1.33 in simulations)</li>
+<li>Uniform consideration is one mechanism; other exposure or search processes give the same reduced form</li>
+</ul>
+</div>
+</section>
+<section id="b2-online-discussion-full-estimates" class="slide level2 smaller">
+<h2>B2: Online Discussion — Full Estimates</h2>
+<div style="font-size: 16px; margin-top: 1em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sample</th>
+<th style="text-align: right;"><span class="math inline">\(b_U\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(b_{\bar L}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(b_{\log n}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\hat\kappa\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\hat\alpha\)</span> [95% CI]</th>
+<th style="text-align: right;"><span class="math inline">\(\hat\gamma\)</span> [95% CI]</th>
+<th style="text-align: right;"><span class="math inline">\(n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ego active</td>
+<td style="text-align: right;">1.138</td>
+<td style="text-align: right;">−.865</td>
+<td style="text-align: right;">−.033</td>
+<td style="text-align: right;">.86</td>
+<td style="text-align: right;">.04 [−.02, .10]</td>
+<td style="text-align: right;">.32 [.07, .61]</td>
+<td style="text-align: right;">914,198</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Both active</td>
+<td style="text-align: right;">1.214</td>
+<td style="text-align: right;">−.889</td>
+<td style="text-align: right;">−.018</td>
+<td style="text-align: right;">.89</td>
+<td style="text-align: right;">.02 [−.04, .08]</td>
+<td style="text-align: right;">.37 [.13, .67]</td>
+<td style="text-align: right;">889,653</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New ties</td>
+<td style="text-align: right;">1.225</td>
+<td style="text-align: right;">−.919</td>
+<td style="text-align: right;">−.090</td>
+<td style="text-align: right;">.92</td>
+<td style="text-align: right;">.10 [.04, .16]</td>
+<td style="text-align: right;">.33 [.11, .60]</td>
+<td style="text-align: right;">571,956</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Established ties</td>
+<td style="text-align: right;">.901</td>
+<td style="text-align: right;">−.755</td>
+<td style="text-align: right;">.046</td>
+<td style="text-align: right;">.76</td>
+<td style="text-align: right;">−.06 [−.17, .05]</td>
+<td style="text-align: right;">.19 [−.11, .63]</td>
+<td style="text-align: right;">331,648</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Low reply intensity</td>
+<td style="text-align: right;">1.290</td>
+<td style="text-align: right;">−.914</td>
+<td style="text-align: right;">−.086</td>
+<td style="text-align: right;">.91</td>
+<td style="text-align: right;">.09 [.02, .17]</td>
+<td style="text-align: right;">.41 [.18, .71]</td>
+<td style="text-align: right;">484,864</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">High reply intensity</td>
+<td style="text-align: right;">.922</td>
+<td style="text-align: right;">−.793</td>
+<td style="text-align: right;">−.018</td>
+<td style="text-align: right;">.79</td>
+<td style="text-align: right;">.02 [−.09, .13]</td>
+<td style="text-align: right;">.16 [−.15, .59]</td>
+<td style="text-align: right;">414,650</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="font-size: 18px; margin-top: 1em; text-align:center;">
+<p>Ego and window fixed effects; SEs clustered by ego and window; utility scale from partner choice (<span class="math inline">\(\hat\lambda=1.352\)</span>); Fieller intervals.</p>
+</div>
+</section>
+<section id="b3-school-friendship-full-estimates" class="slide level2 smaller">
+<h2>B3: School Friendship — Full Estimates</h2>
+<div style="font-size: 16px; margin-top: 1em;">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Design</th>
+<th style="text-align: left;">Scale</th>
+<th style="text-align: right;"><span class="math inline">\(b_U\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(b_{\bar L}\)</span> [<span class="math inline">\(p\)</span>]</th>
+<th style="text-align: right;"><span class="math inline">\(\hat\kappa\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\hat\alpha\)</span> [95% set]</th>
+<th style="text-align: right;"><span class="math inline">\(\hat\gamma\)</span> [95% set]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Between egos</td>
+<td style="text-align: left;">Rule</td>
+<td style="text-align: right;">.141</td>
+<td style="text-align: right;">−.072 [.016]</td>
+<td style="text-align: right;">.07</td>
+<td style="text-align: right;">n.i.</td>
+<td style="text-align: right;">.97 [−.05, 5.5]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Between egos</td>
+<td style="text-align: left;">Calibrated rule</td>
+<td style="text-align: right;">.437</td>
+<td style="text-align: right;">−.592 [.121]</td>
+<td style="text-align: right;">.59</td>
+<td style="text-align: right;">n.i.</td>
+<td style="text-align: right;">−.26 [−.65, 59]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Between egos</td>
+<td style="text-align: left;">Estimated weights</td>
+<td style="text-align: right;">.562</td>
+<td style="text-align: right;">−.197 [.033]</td>
+<td style="text-align: right;">.20</td>
+<td style="text-align: right;">n.i.</td>
+<td style="text-align: right;">1.85 [.30, 41.5]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Within ego</td>
+<td style="text-align: left;">Estimated weights</td>
+<td style="text-align: right;">.606</td>
+<td style="text-align: right;">−.815 [.004]</td>
+<td style="text-align: right;">.82</td>
+<td style="text-align: right;">.29 [−.15, 1.00]</td>
+<td style="text-align: right;">−.26 [−.55, 1.10]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Within ego, classmates</td>
+<td style="text-align: left;">Estimated weights</td>
+<td style="text-align: right;">.589</td>
+<td style="text-align: right;">−1.103 [&lt;.001]</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">.48 [.30, .85]</td>
+<td style="text-align: right;">−.47 [−.60, −.25]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Within ego, other grade-mates</td>
+<td style="text-align: left;">Estimated weights</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">.224 [.17]</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="font-size: 18px; margin-top: 1em; text-align:center;">
+<p>Wild restricted score bootstrap (10 schools, all <span class="math inline">\(2^{10}\)</span> patterns; or 29 grade-cohorts, 9,999 draws). n.i. = not identified between egos.</p>
+</div>
+</section>
+<section id="b4-diagnostic-signatures-of-turnover-mechanisms" class="slide level2 smaller">
+<h2>B4: Diagnostic Signatures of Turnover Mechanisms</h2>
+<div style="font-size: 18px; margin-top: 1.4em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Diagnostic</th>
+<th style="text-align: center;">Relative choice</th>
+<th style="text-align: center;">+ Durable taste</th>
+<th style="text-align: center;">+ Positional demand</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Same-profile alternatives, given <span class="math inline">\(\bar L\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">&lt; 0</td>
+<td style="text-align: center;">&lt; 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Portfolio taste in entrant choice</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">&gt; 0</td>
+<td style="text-align: center;">≤ 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Distance to departed alter, net of taste</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">small, sign-unstable</td>
+<td style="text-align: center;">&lt; 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Distance to departed alter, taste omitted</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">&lt; 0</td>
+<td style="text-align: center;">&lt; 0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="takeaway" style="margin-top: 1.4em; font-size:21px;">
+<p>A negative similarity-to-departed coefficient cannot by itself be read as vacancy filling.</p>
+</div>
+<div style="font-size: 16px; margin-top: 0.8em; text-align:center; color:#717583;">
+<p>Signatures established by known-truth simulations (1,500 egos, eight replications per regime and ecology).</p>
+</div>
+</section>
+<section id="references" class="slide level2 smaller">
+<h2>References</h2>
+<div style="font-size: 14px; margin-top: 0.8em; line-height:1.2;">
+<ul>
+<li><p><strong>Abaluck, J., &amp; Adams-Prassl, A. (2021).</strong> “What Do Consumers Consider before They Choose?” <em>Quarterly Journal of Economics</em> 136(3):1611–1663.</p></li>
+<li><p><strong>Ackerberg, D. A., &amp; Rysman, M. (2005).</strong> “Unobserved Product Differentiation in Discrete-Choice Models.” <em>RAND Journal of Economics</em> 36(4):771–788.</p></li>
+<li><p><strong>Blau, P. M. (1977).</strong> “A Macrosociological Theory of Social Structure.” <em>American Journal of Sociology</em> 83(1):26–54. doi:10.1086/226505.</p></li>
+<li><p><strong>Emerson, R. M. (1962).</strong> “Power-Dependence Relations.” <em>American Sociological Review</em> 27(1):31–41.</p></li>
+<li><p><strong>Feld, S. L. (1981).</strong> “The Focused Organization of Social Ties.” <em>American Journal of Sociology</em> 86(5):1015–1035.</p></li>
+<li><p><strong>Fieller, E. C. (1954).</strong> “Some Problems in Interval Estimation.” <em>Journal of the Royal Statistical Society B</em> 16(2):175–185.</p></li>
+<li><p><strong>Fraxanet, E., Gómez, V., Kaltenbrunner, A., &amp; Pellert, M. (2026).</strong> “A Decade of News Forum Interactions.” <em>Scientific Data</em> 13:1193.</p></li>
+<li><p><strong>Kline, P., &amp; Santos, A. (2012).</strong> “A Score Based Approach to Wild Bootstrap Inference.” <em>Journal of Econometric Methods</em> 1(1):23–41.</p></li>
+<li><p><strong>Kossinets, G., &amp; Watts, D. J. (2009).</strong> “Origins of Homophily in an Evolving Social Network.” <em>American Journal of Sociology</em> 115(2):405–450.</p></li>
+<li><p><strong>Leszczensky, L., Pink, S., Kretschmer, D., &amp; Kalter, F. (2022).</strong> “Studying Youth’ Group Identities, Intergroup Relations, and Friendship Networks.” <em>European Sociological Review</em> 38(3):493–506.</p></li>
+<li><p><strong>Manski, C. F. (1977).</strong> “The Structure of Random Utility Models.” <em>Theory and Decision</em> 8(3):229–254.</p></li>
+</ul>
+</div>
+</section>
+<section id="references-cont." class="slide level2 smaller">
+<h2>References (cont.)</h2>
+<div style="font-size: 14px; margin-top: 0.8em; line-height:1.2;">
+<ul>
+<li><p><strong>McFadden, D. (1978).</strong> “Modelling the Choice of Residential Location.” In <em>Spatial Interaction Theory and Planning Models</em>, 75–96. Amsterdam: North-Holland.</p></li>
+<li><p><strong>McPherson, M., Smith-Lovin, L., &amp; Cook, J. M. (2001).</strong> “Birds of a Feather: Homophily in Social Networks.” <em>Annual Review of Sociology</em> 27:415–444.</p></li>
+<li><p><strong>Pink, S., Kretschmer, D., &amp; Leszczensky, L. (2020).</strong> “Choice Modelling in Social Networks Using Stochastic Actor-Oriented Models.” <em>Journal of Choice Modelling</em> 34.</p></li>
+<li><p><strong>Ripley, R. M., Snijders, T. A. B., Boda, Z., Vörös, A., &amp; Preciado, P. (2024).</strong> <em>Manual for RSiena.</em> University of Oxford.</p></li>
+<li><p><strong>Rusbult, C. E. (1980).</strong> “Commitment and Satisfaction in Romantic Associations.” <em>Journal of Experimental Social Psychology</em> 16(2):172–186.</p></li>
+<li><p><strong>Snijders, T. A. B. (2001).</strong> “The Statistical Evaluation of Social Network Dynamics.” <em>Sociological Methodology</em> 31:361–395.</p></li>
+<li><p><strong>South, S. J., &amp; Lloyd, K. M. (1995).</strong> “Spousal Alternatives and Marital Dissolution.” <em>American Sociological Review</em> 60(1):21–35.</p></li>
+<li><p><strong>Stadtfeld, C., &amp; Block, P. (2017).</strong> “Interactions, Actors, and Time: Dynamic Network Actor Models for Relational Events.” <em>Sociological Science</em> 4:318–352.</p></li>
+<li><p><strong>Wellman, B., Wong, R. Y., Tindall, D., &amp; Nazer, N. (1997).</strong> “A Decade of Network Change.” <em>Social Networks</em> 19(1):27–50.</p></li>
+<li><p><strong>White, H. C. (1970).</strong> <em>Chains of Opportunity.</em> Cambridge, MA: Harvard University Press.</p></li>
+<li><p><strong>Zeng, Z., &amp; Xie, Y. (2008).</strong> “A Preference–Opportunity–Choice Framework with Applications to Intergroup Friendship.” <em>American Journal of Sociology</em> 114(3):615–648.</p></li>
+</ul>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Cantillan | When Do Alternatives Threaten a Tie? | 2026</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="slides_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.12,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
