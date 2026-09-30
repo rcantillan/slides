@@ -15,6 +15,7 @@ format:
     controls: false
     css: styles.css
     template-partials: [title-slide.html]
+    include-after-body: center-body.html
     footer: "Cantillan | When Do Alternatives Threaten a Tie? | 2026"
 execute:
   echo: false

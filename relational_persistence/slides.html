@@ -1375,6 +1375,79 @@ b_U=\kappa(1+\gamma),\qquad b_{\bar L}=-\kappa,\qquad b_{\log n}=-\kappa\alpha,
         ]
       });
     </script>
+    <script>
+    /* Vertically center slide content in the space below the title.
+       Every level-2 content slide gets a .slide-body wrapper that fills the
+       area between the h2 and the footer; content is centered inside it.
+       Hand-set top margins on the first block are neutralised so the
+       centering is exact. Title, section and .no-vcenter slides are skipped. */
+    (function () {
+      var SLIDE_H = 700, FOOTER_RESERVE = 34;
+
+      function zeroTop(el) {
+        if (!el) return;
+        el.style.marginTop = '0';
+        if (el.classList.contains('columns')) {
+          Array.prototype.forEach.call(el.children, function (col) {
+            col.style.marginTop = '0';
+            zeroTop(col.firstElementChild);
+          });
+        }
+      }
+
+      function wrap() {
+        var slides = document.querySelectorAll('.reveal .slides section.slide.level2');
+        Array.prototype.forEach.call(slides, function (s) {
+          if (s.classList.contains('center') || s.classList.contains('no-vcenter')) return;
+          if (s.querySelector(':scope > .slide-body')) return;
+          var h = s.querySelector(':scope > h2');
+          var body = document.createElement('div');
+          body.className = 'slide-body';
+          Array.prototype.slice.call(s.childNodes).forEach(function (n) {
+            if (n === h) return;
+            if (n.nodeType === 1 && (n.tagName === 'ASIDE' || n.classList.contains('notes'))) return;
+            body.appendChild(n);
+          });
+          s.appendChild(body);
+          zeroTop(body.firstElementChild);
+        });
+      }
+
+      function size() {
+        var slides = document.querySelectorAll('.reveal .slides section.slide.level2 > .slide-body');
+        Array.prototype.forEach.call(slides, function (body) {
+          var s = body.parentElement;
+          var chain = [];
+          if (s.offsetHeight === 0) {
+            for (var el = s; el && el.tagName === 'SECTION'; el = el.parentElement) {
+              chain.push([el, el.style.display, el.style.visibility]);
+              el.style.display = 'block';
+              if (el === s) el.style.visibility = 'hidden';
+            }
+          }
+          var cs = getComputedStyle(s);
+          var pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+          var h = s.querySelector(':scope > h2');
+          var hh = 0;
+          if (h) {
+            var hs = getComputedStyle(h);
+            hh = h.offsetHeight + parseFloat(hs.marginTop) + parseFloat(hs.marginBottom);
+          }
+          body.style.minHeight = Math.max(0, SLIDE_H - pad - hh - FOOTER_RESERVE) + 'px';
+          chain.forEach(function (c) { c[0].style.display = c[1]; c[0].style.visibility = c[2]; });
+        });
+        if (window.Reveal && Reveal.layout) Reveal.layout();
+      }
+
+      wrap();
+      size();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(size);
+      window.addEventListener('load', size);
+      if (window.Reveal && Reveal.on) {
+        Reveal.on('ready', size);
+      }
+    })();
+    </script>
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

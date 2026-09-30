@@ -7,6 +7,7 @@ Presentation of the manuscript *When Do Alternatives Threaten a Tie? Opportunity
 - `slides.qmd` — Quarto revealjs source (render: `quarto render slides.qmd`)
 - `slides.html`, `slides_files/` — rendered deck
 - `styles.css`, `title-slide.html` — RC28 visual system (title label changed to "SOCIOLOGY · PUC CHILE · 2026" in `styles.css`, line with `title-content::before`)
+- `center-body.html` — small script (included via `include-after-body`) that vertically centers each slide's content in the space below the title; add `{.no-vcenter}` to a slide to opt out
 - `cover.png` — title image
 - `figures/` — slide figures: `deck_fig_parameters.png` and `deck_fig_recovery_struct.png` re-rendered in the deck palette; `fig_concept.png`, `fig_reversal.png`, `fig_diagnostic_discrimination.png` from the manuscript
 - `scripts/` — figure scripts (run from the manuscript's `scripts/revision_2026_09/`, which holds the input CSV/JSON files)

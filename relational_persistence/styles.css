@@ -383,3 +383,13 @@
 .reveal .slides section[data-background-color="#302a78"] p {
   color: #ffffff;
 }
+
+/* Vertical centering of slide content below the title (see center-body.html) */
+.reveal .slides section.slide.level2 > .slide-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.reveal .slides section.slide.level2 > .slide-body > * { flex: 0 0 auto; }
+.reveal .slides section.slide.level2 > .slide-body > :last-child { margin-bottom: 0; }
