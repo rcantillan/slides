@@ -1,201 +1,131 @@
 # When Do Alternatives Threaten a Tie?
 
-## Title Slide - 0:00-0:40
+## Title Slide - 0:00-0:29
 
-Good morning, and thank you for being here.
+Good morning, and thank you. English is not my first language, so I may speak slowly.
 
-English is not my first language, so I may speak a little more slowly. Thank you for your patience, and I will be grateful for your comments during the discussion.
+My question: does a relationship's survival depend on how many alternatives a person has, or on how good they are?
 
-The main finding is simple. Whether a relationship survives depends on how good a person's alternatives are, not on how many alternatives there are, and only on the alternatives the person actually weighs.
+## Homophily Explains Which Ties Form - 0:29-1:08
 
-## Homophily Explains Which Ties Form - 0:40-1:15
+We know a great deal about which ties form: similar people connect, through choice and through the settings that bring them together. We know less about whether a compatible tie stays attached to the same person. That depends not only on fit, but on what else is available.
 
-We know a great deal about homophily. Similar people form ties, through their own choices and through the settings that bring them together.
+## Same Fit, Different Replaceability - 1:08-1:52
 
-We know much less about a different question: once a compatible tie exists, does it stay attached to the same person?
+Two ties share three characteristics, so they are equally compatible. In the first, few alternatives offer that fit; in the second, twenty classmates do. The first alter is hard to replace; the second is one of many.
 
-That depends not only on how well the tie fits, but on what else is available.
+Homophily describes fit. Relational redundancy describes how reproducible that fit is, and a dyadic analysis cannot see it.
 
-## Same Fit, Different Replaceability - 1:15-2:00
+## Blau: Opportunity as Headcount or as Value? - 1:52-2:21
 
-Consider two ties in which ego and alter share three characteristics. They are equally compatible.
+Blau's theory has two premises: association is likelier between proximate positions, and it depends on opportunities for contact. Read literally, opportunity counts people. Read with proximity, it weights them. So: how many, or how good?
 
-In the first case, few alternatives offer a comparable fit. In the second, twenty classmates reproduce it.
+## Alternatives Matter — but How? - 2:21-2:43
 
-The first alter is hard to replace. The second is one of many carriers of the same fit.
+That alternatives destabilize relationships is not new. What is missing is a tie-level measure that separates their number from their value, and a way to test which matters.
 
-Homophily describes fit. Relational redundancy describes how reproducible that fit is. A dyadic analysis cannot see the difference, because it lies outside the dyad.
+## What We Do, and What Is New - 2:43-3:56
 
-## Blau: Opportunity as Headcount or as Value? - 2:00-2:40
+Our contribution has four parts.
 
-Blau's macrostructural theory starts from two premises: association is more likely between proximate positions, and association depends on opportunities for contact.
+A question: Blau's premise can mean counting or weighting; we turn that into one number, alpha.
 
-Read literally, the opportunity premise counts people. Read together with proximity, it weights them.
+A tool: relational redundancy splits alternatives into how many and how good, and one ordinary persistence regression returns three parameters.
 
-So the question becomes: does persistence depend on how many alternatives a person has, or on how good they are?
+A warning: those parameters mean something only on the scale of partner choice; rule-based scores manufacture mechanisms.
 
-## Alternatives Matter — but How? - 2:40-3:10
+An answer: value counts far more than number, within a bounded setting.
 
-That alternatives destabilize relationships is not new. Exchange theory, research on divorce, and actor-oriented network models all make this point.
+The ingredients come from choice modelling. What is new is asking this of ties. Three questions follow: size, protection, turnover.
 
-What is missing is a tie-level measure that separates the number of alternatives from their value, and a way to test which one matters.
+## The Idea in Plain Words - 3:56-4:48
 
-## We Ask Three Questions - 3:10-3:40
+Ego has a friend. What makes that friend easy to leave? A crowd of poor matches is a low threat. A crowd with a few near-equals is a high threat. So is a handful of near-equals.
 
-We ask three questions.
+If number drives departures, more alternatives mean more exits even when they are poor. If only quality matters, number adds nothing once quality is fixed. One regression decides.
 
-First, size: does the number of alternatives matter once their value is fixed?
+## Relational Redundancy - 4:48-5:07
 
-Second, protection: does compatibility protect a tie beyond its value in choice?
+Relational redundancy is the log-sum of the alternatives' utility relative to the incumbent. It splits exactly into their number and their mean value.
 
-Third, turnover: when a tie ends, does the person who left shape who replaces them?
+## One Logit, Three Parameters - 5:07-5:44
 
-One regression, written in the right variables, answers all three.
+Three parameters come out as ratios of the persistence logit's coefficients. Alpha: how pressure scales with the number of alternatives. Gamma: whether compatibility protects beyond its role in choice. Kappa: how exposed ties are to competition. Ratios are unchanged when protected and contested ties are pooled.
 
-# I. Model - 3:40-3:45
+## The Classical Hypotheses Are Nested - 5:44-6:12
 
-## Relational Redundancy - 3:45-4:30
+Alpha equal to one is full-set evaluation, the default in actor-oriented models. Alpha zero is bounded consideration. Gamma zero is pure relative choice. Each is one restriction; we build confidence sets by test inversion.
 
-We define relational redundancy as the log-sum of the alternatives' utility relative to the incumbent.
+## The Parameters Are Not Scale-Free - 6:12-6:39
 
-It splits exactly into two parts: the number of alternatives, and their mean value relative to the incumbent.
+The parameters depend on the scale of compatibility. So we calibrate it from observed partner choice, with weights estimated on other schools. A test of alternatives is also a test of a utility scale.
 
-Distant alters add almost nothing. Proximate alters add most. So the decomposition separates how many from how good.
+## After an Exit: Memoryless Entry - 6:39-7:13
 
-## One Logit, Three Parameters - 4:30-5:30
+The model also speaks to turnover: after an exit, who enters should not depend on who left. Durable taste, or a demand to refill a vacated position, would break that. Profiles persist because positions are sought, or because the ecology supplies them.
 
-If people compare an incumbent with a set of alternatives they consider, the persistence logit takes this form.
+## Two Settings with Observed Opportunity Sets - 7:13-7:41
 
-Three parameters come out as ratios of its coefficients.
+Two settings where the opportunity set is observed: a decade of online discussion, with opportunity varying within the same person; and school friendship, with bounded rosters in which every nomination falls inside the grade.
 
-Alpha, the opportunity elasticity, says how competitive pressure scales with the number of alternatives. Gamma, the compatibility premium, says whether compatibility protects beyond its role in choice. Kappa says how exposed ties are to competition at all.
+## From Observed Rosters to Parameters - 7:41-7:59
 
-Because alpha and gamma are ratios, pooling protected and contested ties does not change them.
+Four steps: define the opportunity set before the outcome; calibrate compatibility from partner choice; decompose alternatives into number and value; estimate one logit.
 
-## The Classical Hypotheses Are Nested - 5:30-6:10
+## Checking the Method: What We Simulated - 7:59-9:28
 
-This matters because classical hypotheses become single restrictions.
+First, we check the method where the truth is known. We set the truth: how much of the pool ego weighs, and whether compatibility protects beyond choice. We generate twenty thousand artificial egos with their alternatives; each tie is contested with some probability, and ego compares it with a random sample whose size grows with the pool at rate alpha. An analyst who does not know the truth runs our logit. Repeating with fresh draws is the Monte Carlo.
 
-Alpha equal to one is full-set evaluation: every available alter competes. This is the default in actor-oriented models.
+We score compatibility on the choice scale, the true utility, and with a rarity rule that weights shared traits by rarity. Any miss belongs to the estimator or the scale.
 
-Alpha equal to zero is bounded consideration: only value matters.
+## What the Estimators Return - 9:28-9:55
 
-Gamma equal to zero is pure relative choice.
+Each panel is one design. On the choice scale, alpha is recovered and gamma is conservative: attenuated, never inflated. On a rarity rule, alpha is inflated and a premium appears where none exists.
 
-We obtain confidence sets by inverting these tests.
+## Online: Value Counts Far More Than Number - 9:55-10:44
 
-## The Parameters Are Not Scale-Free - 6:10-6:50
+Online, the elasticity is small: between point zero four and point two three, depending on how strictly the opportunity set is drawn. Full-set evaluation is rejected under every definition. Compatibility protects ties about a third more than choice implies.
 
-There is a catch. These parameters depend on the scale of compatibility. A rule-based similarity score mixes the parameters with the rule's own scale.
+Persistence responds far more to how good alternatives are than to how many. These numbers are being re-estimated after a data correction.
 
-So we calibrate compatibility from observed partner choice, with weights estimated on other schools.
+## Friendship: Competition Comes From Ego's Network - 10:44-11:33
 
-The general lesson: a test of a mechanism that operates through alternatives is also a test of a utility scale.
+Pupils may nominate anyone in their grade, yet eighty-one percent of friends are classmates. Other grade-mates exert at most a tenth of classmates' pressure. Inside the class, only ego's own contacts compete.
 
-## After an Exit: Memoryless Entry - 6:50-7:30
+Within the class, the elasticity is about one half: value counts about twice as much as number. Alternatives threaten a friendship when they sit where ego actually draws.
 
-The model also has an implication for turnover. After an exit, who enters should depend on compatibility with ego, not on who left.
+## The Friendship Premium Was Who Pupils Are - 11:33-11:58
 
-Two mechanisms would break this: a durable taste for certain kinds of friends, or a demand to refill a vacated position.
+Between pupils, compatibility seems to protect friendships almost three times more than choice implies. Within pupils, the premium disappears: it reflected who pupils are. A premium must be estimated within actors.
 
-So profiles can persist because positions are sought, or because the ecology keeps supplying them.
+## Rule Scales Manufacture Mechanisms - 11:58-12:17
 
-# II. Data and Research Design - 7:30-7:35
+Scale matters in practice. On a rarity scale, reciprocity seemed to insulate ties and entrants seemed to refill vacated positions. After calibration, both disappear.
 
-## Two Settings with Observed Opportunity Sets - 7:35-8:15
+## Who Replaces a Departed Friend? - 12:17-12:43
 
-We use two settings where the opportunity set is observed.
+With rule weights, entrants resemble the departed friend. With estimated weights and controls for taste, shared contacts and classrooms, that goes to zero: who left adds no detectable information about who enters.
 
-The first is a decade of online discussion: nearly one million incumbent tie-periods, with opportunity varying within the same person over time.
+## Profiles Persist Because the Ecology Supplies Them - 12:43-14:12
 
-The second is a school friendship panel in Germany: ten schools, six waves, and bounded rosters in which every nomination falls inside the grade.
+How can profiles persist if people do not? In an agent-based model, artificial actors repeatedly pick friends: a friend is worth matching traits, plus the same bonus for every current friend, plus a random shock. Nobody values a profile.
 
-## From Observed Rosters to Parameters - 8:15-8:45
+Identity continuity is keeping the same persons; profile continuity, the same trait combinations. Add substitutes with a friend's exact traits, and the friend is kept less while the profile is kept more. Across ecologies, persons churn while profiles and group mixing hold.
 
-The workflow has four steps: define the opportunity set before the outcome, calibrate compatibility from partner choice, decompose alternatives into number and value, and estimate one logit.
+In friendship, profile continuity falls below what the classroom supplies. Stable patterns need not be made of stable relationships. The model shows this is possible, not how much occurs.
 
-## The Estimators Recover the Truth — on the Right Scale - 8:45-9:30
+## Takeaways - 14:12-15:03
 
-Before using real data, we simulate data with known parameters.
+In sum. Size: number counts for less than proportionally; full evaluation fails in both settings. Setting: pressure comes from the set ego draws on. Protection: a premium online; in friendship, heterogeneity. Turnover: profiles persist through supply.
 
-On the choice scale, alpha is recovered, and gamma is conservative: it is attenuated, never inflated.
+We call this relational opportunity: opportunity bears on persistence mostly through how closely alternatives approximate the incumbent's value, and only inside the set ego draws on.
 
-On a rarity rule, alpha is inflated, and a compatibility premium appears where none exists.
+## Implications - 15:03-15:23
 
-# III. Findings - 9:30-9:35
+For Blau, an opportunity is weighted by value. For actor-oriented models, our logit diagnoses the full-set default. For measurement, compatibility belongs on the choice scale.
 
-## Online: Quality, Not Number - 9:35-10:30
+## Limitations - 15:23-16:09
 
-In online discussion, the opportunity elasticity is point zero four. Full-set evaluation is rejected decisively, in both halves of the decade.
+The design is observational. And alpha is an elasticity with respect to the set as we measure it: if ego draws on a neighbourhood whose size does not grow with the measured set, alpha looks near zero even when the neighbourhood elasticity is one. The nomination cap also matters.
 
-New ties are a small exception, at about point one.
-
-Compatibility protects ties about a third more than choice alone implies, and established ties are less exposed to competition.
-
-Persistence responds to how good the alternatives are, not to how many there are.
-
-## Friendship: The Classroom Is the Consideration Set - 10:30-11:40
-
-In friendship, pupils may nominate anyone in their grade. But eighty-one percent of their friends are classmates.
-
-When we separate classmates from other grade-mates, only classmates compete. Other grade-mates exert no detectable pressure.
-
-The classroom is the consideration set. Within it, the elasticity is about one half: number matters, but value counts about twice as much.
-
-## Parameters Across Settings - 11:40-12:10
-
-This figure summarizes both settings. In both, the opportunity that matters is a bounded setting weighted by value, not a headcount.
-
-## The Friendship Premium Was Who Pupils Are - 12:10-12:50
-
-Comparing pupils with one another, compatibility seems to protect friendships almost three times more than choice implies.
-
-Comparing each pupil with themselves over time, the premium disappears.
-
-Pupils whose friends are more compatible keep friends longer for stable reasons of their own. A premium has to be estimated within actors.
-
-## Rule Scales Manufacture Mechanisms - 12:50-13:30
-
-The scale matters in practice. On a rarity-weighted scale, our earlier analysis found that reciprocity insulates ties and that entrants refill vacated positions.
-
-After calibration, these findings disappear. Pupils act mostly on sex; the rarity rule weights every shared category by its scarcity.
-
-## Who Replaces a Departed Friend? - 13:30-14:10
-
-When a friendship ends, who enters?
-
-With rule weights, entrants seem to resemble the departed friend. With estimated weights and controls for ego's taste, shared contacts, and classrooms, that resemblance goes to zero.
-
-With these controls, who left adds no detectable information about who enters.
-
-## Profiles Persist Because the Ecology Supplies Them - 14:10-14:50
-
-In simulations, more substitutes mean the person is kept less, while the kind of tie is kept more.
-
-In friendship, profile continuity does not exceed what the classroom composition supplies.
-
-Stable relational patterns need not be composed of stable relationships.
-
-# IV. Discussion - 14:50-14:55
-
-## Takeaways - 14:55-15:40
-
-To summarize: the number of alternatives adds little once their value is fixed; in friendship, only classmates compete; the friendship premium is ego heterogeneity; and profile continuity arises from supply.
-
-We call this relational opportunity: an opportunity structure bears on persistence through how closely alternatives approximate the incumbent's value, not through how many there are.
-
-## Implications - 15:40-16:20
-
-For Blau, an opportunity is not simply another available person; its weight is its value relative to the incumbent.
-
-For actor-oriented models, the default treats every actor as an alternative. Our logit is a diagnostic of that assumption before fitting large or multi-group networks.
-
-And for measurement, compatibility must be placed on the choice scale.
-
-## Limitations - 16:20-16:50
-
-The design is observational. The online estimates are precise; the classroom estimate is less so. And alpha is an elasticity of competitive pressure, not a count of the people someone considers.
-
-## Thank You - 16:50
-
-Thank you. I look forward to your comments.
+Thank you; I look forward to your comments.

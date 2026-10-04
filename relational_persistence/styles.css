@@ -393,3 +393,24 @@
 }
 .reveal .slides section.slide.level2 > .slide-body > * { flex: 0 0 auto; }
 .reveal .slides section.slide.level2 > .slide-body > :last-child { margin-bottom: 0; }
+
+/* Provisional numbers (pending corrected DerStandard rebuild) */
+.reveal .pending {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0 0.4em;
+  border: 1px solid #b33a3a;
+  border-radius: 3px;
+  color: #b33a3a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+}
+
+.reveal .step-card-label {
+  font-size: 21px;
+  color: var(--brand-dark);
+  margin-bottom: 0.5em;
+}
+.reveal .mini-table table { font-size: 0.78em; }

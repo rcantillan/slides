@@ -128,50 +128,41 @@ Emerson 1962; Rusbult 1980; South & Lloyd 1995; Snijders 2001; Stadtfeld &
 Block 2017
 :::
 
-## What We Do, and What Is New {.smaller}
+## We Ask Three Questions {.smaller}
 
-::: {style="font-size: 20px; margin: 1.0em auto 0; max-width: 1060px;"}
-<div class="param-row"><span class="sym" style="min-width:150px; font-size:21px; font-weight:700;">A question</span><span><strong>Theory.</strong> Blau's opportunity premise can mean <em>counting</em> the people available or <em>weighting</em> them by how close they are. We turn that ambiguity into one number, $\alpha$, and test it.</span></div>
-<div class="param-row"><span class="sym" style="min-width:150px; font-size:21px; font-weight:700;">A tool</span><span><strong>Method.</strong> Relational redundancy splits an incumbent's alternatives into <em>how many</em> and <em>how good</em>. An ordinary persistence regression, written in these variables, returns three parameters: size, protection, exposure.</span></div>
-<div class="param-row"><span class="sym" style="min-width:150px; font-size:21px; font-weight:700;">A warning</span><span><strong>Measurement.</strong> These parameters mean something only on the scale of partner choice. Rule-based similarity scores manufacture mechanisms that are not there.</span></div>
-<div class="param-row"><span class="sym" style="min-width:150px; font-size:21px; font-weight:700;">An answer</span><span><strong>Substance.</strong> Where it can be estimated, value counts far more than number, and only within a bounded setting: the set ego actually draws on.</span></div>
+::::::::: columns
+::::: {.column width="33%"}
+::: {style="font-size: 24px; margin-top: 2.1em; padding-right:0.9em;"}
+**1. Size**
+
+Does the **number** of alternatives lower persistence once their value
+is fixed?
 :::
+:::::
 
-::: {style="font-size: 16px; margin-top: 0.6em; color:#717583; text-align:center;"}
-**Not new:** inclusive value (McFadden 1978), consideration sets (Manski 1977), and the number of alternatives
-in the logit (Ackerberg & Rysman 2005). **New:** asking this of *ties*, with an estimand built for it.
+::::: {.column width="34%"}
+::: {style="font-size: 24px; margin-top: 2.1em; padding:0 1em; border-left:2px solid #d8dbe4;"}
+**2. Protection**
+
+Does compatibility protect a tie **beyond** its value in choice?
 :::
+:::::
 
-::: {.takeaway style="margin-top: 0.7em; font-size:22px;"}
-Three questions follow: does **size** matter, does compatibility **protect** a tie, and does the departed alter shape **turnover**?
+::::: {.column width="33%"}
+::: {style="font-size: 24px; margin-top: 2.1em; padding-left:1em; border-left:2px solid #d8dbe4;"}
+**3. Turnover**
+
+When a tie ends, does the **departed alter** shape who replaces them?
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 2em; font-size: 22px;"}
+One persistence regression, written in the right variables, answers all
+three.
 :::
 
 # I. Model {.center .middle background-color="#302a78"}
-
-## The Idea in Plain Words {.smaller}
-
-::: {style="font-size: 23px; margin: 1.0em auto 0; max-width: 1060px;"}
-Ego has a friend. What makes that friend **easy to leave**? Look at the people ego could befriend instead.
-:::
-
-::: {style="font-size: 21px; margin: 0.6em auto 0; max-width: 1000px;"}
-
-| Ego's alternatives | How many | How good, relative to the friend | Threat to the tie |
-|:--|:-:|:-:|:-:|
-| A crowd of poor matches | many | all far worse | **low** |
-| A crowd with a few near-equals | many | a few as good | **high** |
-| A handful, all near-equals | few | all as good | **high** |
-
-:::
-
-::: {style="font-size: 22px; margin: 0.9em auto 0; max-width: 1000px;"}
--   If **number** drives departures, ties with more alternatives end more often, **even when the alternatives are poor** ($\alpha$ near 1)
--   If only **quality** matters, number adds nothing once quality is held fixed ($\alpha$ near 0)
-:::
-
-::: {.takeaway style="margin-top: 0.9em; font-size:22px;"}
-The data decide: we regress whether a tie **persists** on its fit, on how many alternatives there are, and on how good they are.
-:::
 
 ## Relational Redundancy {.smaller}
 
@@ -383,7 +374,7 @@ al. 1997.
 **Online discussion (DerStandard)**
 
 -   A decade of threaded replies, **37** three-month windows
--   **914,198** incumbent tie-periods <span class="pending">provisional</span>
+-   **914,198** incumbent tie-periods
 -   Compatibility: topical similarity
 -   Opportunity set: prior co-presence in threads
 -   **Ego fixed effects**: opportunity varies within ego
@@ -468,143 +459,105 @@ turnover diagnostics.
 Wild restricted score bootstrap: Kline & Santos 2012
 :::
 
-## Checking the Method: What We Simulated {.smaller}
-
-::::::::: columns
-::::: {.column width="33%"}
-::: {style="font-size: 19px; margin-top: 1.0em; padding-right:0.9em;"}
-::: {.step-card-label}
-<span style="font-size:30px; color:#175c50; font-weight:700;">01</span><br>
-**A truth we set**
-:::
-
--   How much of the pool ego weighs: $\alpha\in\{0,.5,1\}$
--   Whether compatibility protects beyond choice: $\gamma\in\{0,.3\}$
-:::
-:::::
-
-::::: {.column width="34%"}
-::: {style="font-size: 19px; margin-top: 1.0em; padding:0 0.9em; border-left:2px solid #d8dbe4;"}
-::: {.step-card-label}
-<span style="font-size:30px; color:#175c50; font-weight:700;">02</span><br>
-**Data that obey it**
-:::
-
--   20,000 artificial egos, each with 15–180 alternatives described by four binary traits
--   Ego holds $K$ ties; each is *contested* with probability $c$
--   Ego compares it with a random sample of $12\,(n/60)^{\alpha}$ alternatives and keeps the best
-:::
-:::::
-
-::::: {.column width="33%"}
-::: {style="font-size: 19px; margin-top: 1.0em; padding-left:0.9em; border-left:2px solid #d8dbe4;"}
-::: {.step-card-label}
-<span style="font-size:30px; color:#175c50; font-weight:700;">03</span><br>
-**An analyst who does not know it**
-:::
-
--   Sees the whole opportunity set and who stayed
--   Runs our one persistence logit and reports $\hat\alpha$, $\hat\gamma$
--   Repeats with fresh random draws (**Monte Carlo**) to see the spread
-:::
-:::::
-:::::::::
-
-::: {style="font-size: 19px; margin: 0.9em auto 0; max-width: 1020px;"}
-**Two ways to score compatibility.** *Choice scale:* the true utility that generated the data. *Rarity rule:* each shared trait weighted by how rare it is, a common shortcut.
-:::
-
-::: {.takeaway style="margin-top: 0.8em; font-size:21px;"}
-Because the truth is known, any miss belongs to the **estimator or the scale**, not to the world.
-:::
-
-## What the Estimators Return {.smaller}
-
-::: {style="font-size: 16px; margin-top: 0.2em; text-align:center; color:#717583;"}
-Each panel is one design: $K$ = ties ego holds; $c$ = share of ties contested each period.
-Dashed line = truth; bars = 95% Monte Carlo intervals.
-:::
+## The Estimators Recover the Truth — on the Right Scale {.smaller}
 
 ::: {style="text-align:center; margin-top:0.1em;"}
-![](figures/deck_fig_recovery_struct.png){style="height:430px; width:auto;"}
+![](figures/deck_fig_recovery_struct.png){style="height:470px; width:auto;"}
 :::
 
 ::: {.takeaway style="margin-top:0.15em; font-size:20px;"}
-On the choice scale, $\alpha$ is recovered and $\gamma$ is conservative (attenuated, never inflated).
-On a rarity rule, $\alpha$ is inflated and a premium appears **where none exists**.
+On the choice scale, $\alpha$ is recovered and $\gamma$ is conservative.
+On a rarity rule, $\alpha$ is inflated and a premium appears **where
+none exists**.
 :::
 
 # III. Findings {.center .middle background-color="#302a78"}
 
-## Online: Value Counts Far More Than Number {.smaller}
+## Online: Quality, Not Number {.smaller}
 
 ::::::::: columns
 ::::: {.column width="33%"}
-::: {style="text-align:center; margin-top: 2.0em;"}
+::: {style="text-align:center; margin-top: 2.2em;"}
 <p class="stat-label">Opportunity elasticity</p>
-<p class="stat-big">.04 – .23</p>
-<p style="font-size:17px; color:#717583;">across definitions of the opportunity set<br>published specification: .04 [−.02, .10]</p>
+<p class="stat-big">.04</p>
+<p style="font-size:19px; color:#717583;">95% CI −.02 to .10</p>
 :::
 :::::
 
 ::::: {.column width="34%"}
-::: {style="text-align:center; margin-top: 2.0em; border-left:2px solid #d8dbe4; border-right:2px solid #d8dbe4;"}
-<p class="stat-label">Full-set evaluation ($\alpha=1$)</p>
-<p class="stat-big" style="color:#175c50; font-size:44px;">rejected</p>
-<p style="font-size:17px; color:#717583;">in every definition tried<br>and in both halves of the decade</p>
+::: {style="text-align:center; margin-top: 2.2em; border-left:2px solid #d8dbe4; border-right:2px solid #d8dbe4;"}
+<p class="stat-label">New ties</p>
+<p class="stat-big" style="color:#175c50;">.10</p>
+<p style="font-size:19px; color:#717583;">95% CI .04 to .16</p>
 :::
 :::::
 
 ::::: {.column width="33%"}
-::: {style="text-align:center; margin-top: 2.0em;"}
+::: {style="text-align:center; margin-top: 2.2em;"}
 <p class="stat-label">Compatibility premium</p>
 <p class="stat-big">.32</p>
-<p style="font-size:17px; color:#717583;">95% CI .07 to .61</p>
+<p style="font-size:19px; color:#717583;">95% CI .07 to .61</p>
 :::
 :::::
 :::::::::
 
-::: {style="font-size: 22px; margin: 1.3em auto 0; max-width: 1050px;"}
--   Opportunity is measured as prior co-presence in threads; $\alpha$ moves between .04 and .23 with how strictly that set is drawn
--   Established ties are less exposed ($\hat\kappa$ .92 → .76) and carry no detectable premium
+::: {style="font-size: 22px; margin: 1.4em auto 0; max-width: 1050px;"}
+-   Full-set evaluation ($\alpha=1$) is rejected decisively, in both halves
+    of the decade (.09 and .00)
+-   Established ties are less exposed ($\hat\kappa$ .92 → .76) and carry no
+    detectable premium
 :::
 
-::: {.takeaway style="margin-top: 1.0em; font-size:22px;"}
-Persistence responds far more to **how good** the alternatives are than to how many there are.
-<span class="pending">provisional: numbers pending corrected rebuild</span>
+::: {.takeaway style="margin-top: 1.1em; font-size:22px;"}
+Persistence responds to **how good** the alternatives are, not to how
+many there are.
 :::
 
-## Friendship: Competition Comes From Ego's Network {.smaller}
+## Friendship: The Classroom Is the Consideration Set {.smaller}
 
 ::::::::: columns
-::::: {.column width="55%"}
-::: {style="font-size: 21px; margin-top: 0.8em;"}
-Pupils may nominate anyone in their grade, yet **81%** of incumbent friends are classmates. Within pupils, with separate value and size for each group of alternatives:
+::::: {.column width="48%"}
+::: {style="font-size: 23px; margin-top: 1.1em;"}
+Pupils may nominate anyone in their grade, yet **81%** of incumbent
+friends are classmates.
+
+Within pupils, with separate value and size for each tier:
 :::
 
-::: {style="font-size: 20px; margin-top: 0.5em;"}
-<div class="param-row"><span class="sym" style="min-width:120px;">$-1.10$</span><span><strong>Classmates</strong> compete<br><span style="font-size:16px; color:#717583;">$b_{\bar L}$, $p<.001$</span></span></div>
-<div class="param-row"><span class="sym" style="min-width:120px; color:#b33a3a;">$\leq .10$</span><span><strong>Other grade-mates:</strong> at most a tenth of classmates' pressure<br><span style="font-size:16px; color:#717583;">ratio of slopes, upper end of the 95% set</span></span></div>
-<div class="param-row"><span class="sym" style="min-width:120px;">$-.26$</span><span><strong>Only ego's contacts</strong> among classmates compete<br><span style="font-size:16px; color:#717583;">friends of friends $-.09$, others $-.05$, both n.s.</span></span></div>
+::: {style="font-size: 21px; margin-top: 0.7em;"}
+<div class="param-row"><span class="sym" style="min-width:150px;">$-1.10$</span><span><strong>Classmates</strong> compete<br><span style="font-size:17px; color:#717583;">$b_{\bar L}$, $p<.001$</span></span></div>
+<div class="param-row"><span class="sym" style="min-width:150px; color:#b33a3a;">$+.22$</span><span><strong>Other grade-mates</strong> do not<br><span style="font-size:17px; color:#717583;">$b_{\bar L}$, $p=.17$</span></span></div>
 :::
 :::::
 
-::::: {.column width="45%"}
-::: {style="text-align:center; margin-top: 1.0em; padding-left:1.2em; border-left:2px solid #d8dbe4;"}
+::::: {.column width="52%"}
+::: {style="text-align:center; margin-top: 1.2em; padding-left:1.2em; border-left:2px solid #d8dbe4;"}
 <p class="stat-label">Within-class opportunity elasticity</p>
 <p class="stat-big">.48</p>
-<p style="font-size:18px; color:#717583;">95% set .30 to .85 (grade-cohort clusters)</p>
+<p style="font-size:19px; color:#717583;">95% set .30 to .85 (grade-cohort clusters)</p>
 
-::: {style="font-size: 19px; margin-top: 0.8em; text-align:left;"}
--   Consideration that ignores class size: rejected ($p<.001$)
+::: {style="font-size: 20px; margin-top: 1em; text-align:left;"}
+-   Consideration that ignores class size is rejected ($p<.001$)
 -   Full evaluation of the class: $p=.024$ by cohort, $p=.076$ by school
 :::
 :::
 :::::
 :::::::::
 
-::: {.takeaway style="margin-top: 0.8em; font-size:21px;"}
-Alternatives threaten a friendship when they sit in the part of the setting ego **draws on** (the class, and within it ego's own contacts); there, value counts about twice as much as number.
+::: {.takeaway style="margin-top: 1em; font-size:22px;"}
+Alternatives threaten a friendship when they are **in the setting ego
+actually weighs** — and there, value counts twice as much as number.
+:::
+
+## Parameters Across Settings {.smaller}
+
+::: {style="text-align:center; margin-top:0.15em;"}
+![](figures/deck_fig_parameters.png){style="height:500px; width:auto;"}
+:::
+
+::: {.takeaway style="margin-top:0.15em; font-size:20px;"}
+In both settings, the opportunity that bears on persistence is a
+**bounded setting weighted by value**, not a headcount.
 :::
 
 ## The Friendship Premium Was Who Pupils Are {.smaller}
@@ -716,49 +669,54 @@ information** about who enters.
 
 ## Profiles Persist Because the Ecology Supplies Them {.smaller}
 
-::: {style="text-align:center; margin-top:0.0em;"}
-![](figures/fig_reversal.png){style="height:265px; width:auto;"}
+::: {style="text-align:center; margin-top:0.1em;"}
+![](figures/fig_reversal.png){style="height:330px; width:auto;"}
 :::
 
 ::::::::: columns
 ::::: {.column width="50%"}
-::: {style="font-size: 18px; margin-top: 0.3em; padding-right:1.0em;"}
-**What we built: an agent-based model.** Artificial actors with four binary traits repeatedly pick $K$ friends from a fixed set. A friend is worth the number of matching traits, the same bonus for every current friend, and a random shock. **Nobody values a profile, scarcity or replacement.**
+::: {style="font-size: 20px; margin-top: 0.4em; padding-right:1.2em;"}
+**Simulation.** More exact-profile substitutes: the focal person is
+retained less (.36 → .28) while the profile is preserved more
+(.36 → .97).
 :::
 :::::
 
 ::::: {.column width="50%"}
-::: {style="font-size: 18px; margin-top: 0.3em; padding-left:1.0em; border-left:2px solid #d8dbe4;"}
-**What we read.** *Identity continuity:* the same persons as at baseline. *Profile continuity:* the same trait combinations. **A:** hold one friendship fixed and add substitutes with the friend's exact traits. **B–C:** vary how concentrated profiles are within each setting.
+::: {style="font-size: 20px; margin-top: 0.4em; padding-left:1.2em; border-left:2px solid #d8dbe4;"}
+**Friendship.** Identity continuity .563, profile continuity .618 —
+**below** its compositional baseline (.628).
 :::
 :::::
 :::::::::
 
-::: {style="font-size: 19px; margin-top: 0.5em; text-align:center;"}
-Persons churn (identity .39 → .18) while profiles hold (.45 → .83); group mixing stays near .99.
-In friendship, profile continuity (.618) is **below** the baseline the classroom supplies (.628).
-:::
-
-::: {.takeaway style="margin-top: 0.5em; font-size:19px;"}
-Stable patterns need not be made of stable relationships. The ABM shows this is **possible**; it is not calibrated, so it cannot say how much occurs.
+::: {.takeaway style="margin-top: 0.6em; font-size:21px;"}
+Stable relational patterns need not be composed of stable relationships.
 :::
 
 # IV. Discussion {.center .middle background-color="#302a78"}
 
 ## Takeaways {.smaller}
 
-::: {style="font-size:23px; margin-top:1.3em;"}
--   **Size.** The number of alternatives counts for less than proportionally: $\hat\alpha$ is .04–.23 online and .48 in the class. Full evaluation is rejected in both.
+::: {style="font-size:25px; margin-top:1.6em;"}
+-   **Size.** Where it can be estimated precisely, the number of
+    alternatives adds little once their value is fixed.
 
--   **Setting.** Pressure comes from alternatives in the set ego draws on: in friendship, the class, and within it ego's own contacts; other grade-mates add at most a tenth.
+-   **Setting.** In friendship, only classmates compete; within the
+    class, number matters about half as much as value.
 
--   **Protection.** Compatibility protects online ties about a third more than choice implies; in friendship the apparent premium is ego heterogeneity.
+-   **Protection.** Compatibility protects discussion ties a third more
+    than choice implies; in friendship the apparent premium is ego
+    heterogeneity.
 
--   **Turnover.** Profile continuity arises from ecological supply, without a detectable preference for replacing the previous occupant.
+-   **Turnover.** Profile continuity arises from ecological supply,
+    without a detectable preference for replacing the previous occupant.
 :::
 
-::: {.takeaway style="margin-top:1.0em; font-size:21px;"}
-**Relational opportunity:** an opportunity structure bears on tie persistence mostly through how closely its alternatives approximate the incumbent's value, and only inside the set ego draws on.
+::: {.takeaway style="margin-top:1.15em; font-size:22px;"}
+**Relational opportunity:** an opportunity structure bears on tie
+persistence through how closely its alternatives approximate the
+incumbent's value, not through how many alternatives it contains.
 :::
 
 ## Implications {.smaller}
@@ -783,14 +741,16 @@ Pink, Kretschmer & Leszczensky 2020.
 
 ## Limitations {.smaller}
 
-::: {style="font-size: 22px; margin-top: 1.8em;"}
--   **Observational design:** ego fixed effects remove stable, not time-varying, heterogeneity
+::: {style="font-size: 25px; margin-top: 3em;"}
+-   **Observational design:** ego fixed effects remove stable, not
+    time-varying, heterogeneity
 
--   **What $\alpha$ measures:** an elasticity with respect to the opportunity set *as we measure it*. In simulations, proportional measurement error barely moves $\hat\alpha$; but if ego draws on a neighbourhood whose size does not scale with the measured set, $\hat\alpha$ is near .05–.08 even when the elasticity within the neighbourhood is 1 (Backup B6)
+-   **Asymmetric precision:** online estimates are precise; the classroom
+    estimate excludes full evaluation by cohort but not by school
 
--   **Precision and the cap:** the classroom estimate excludes full evaluation by cohort but not by school; with the 10-nomination cap, $\hat\alpha$ is .81 below the cap and .35 at it
-
--   **Interpretation:** $\alpha$ is not a count of the people an actor considers; $\gamma$ assumes a shared error scale for choice and maintenance
+-   **Interpretation:** $\alpha$ is an elasticity of competitive pressure,
+    not a count of the people an actor considers; $\gamma$ assumes a
+    shared error scale for choice and maintenance
 :::
 
 # Thank You {.center .middle background-color="#302a78"}
@@ -828,7 +788,7 @@ $$
     processes give the same reduced form
 :::
 
-## B2: Online Discussion — Full Estimates <span class="pending">provisional</span> {.smaller}
+## B2: Online Discussion — Full Estimates {.smaller}
 
 ::: {style="font-size: 16px; margin-top: 1em;"}
 
@@ -889,43 +849,6 @@ as vacancy filling.
 ::: {style="font-size: 16px; margin-top: 0.8em; text-align:center; color:#717583;"}
 Signatures established by known-truth simulations (1,500 egos, eight
 replications per regime and ecology).
-:::
-
-## B5: Parameters Across Settings {.smaller}
-
-::: {style="text-align:center; margin-top:0.15em;"}
-![](figures/deck_fig_parameters.png){style="height:470px; width:auto;"}
-:::
-
-::: {.takeaway style="margin-top:0.15em; font-size:20px;"}
-In both settings, the opportunity that bears on persistence is a **bounded setting weighted by value**, not a headcount.
-<span class="pending">provisional: online panel pending corrected rebuild</span>
-:::
-
-## B6: Known Truth with a Mismeasured Opportunity Set {.smaller}
-
-::: {style="font-size: 17px; margin-top: 0.4em;"}
-
-| What the analyst measures, relative to what ego draws on | $\hat\alpha$ if true $\alpha=0$ | $.5$ | $1$ |
-|:--|--:|--:|--:|
-| The correct set | .02 | .44 | .90 |
-| A random half of the alternatives | .03 | .53 | 1.01 |
-| A random quarter | .05 | .59 | 1.22 |
-| Correct set plus infeasible alters (+50% of set) | .00 | .44 | .92 |
-| Correct set plus 100 infeasible alters, whatever $n$ | .07 | 1.06 | 2.24 |
-| Ego draws on a neighbourhood of 30% of the class; analyst measures the class | .40 | .46 | .85 |
-| Neighbourhood size unrelated to class size; analyst measures the class | .02 | .05 | .08 |
-| The same, analyst measures the neighbourhood | .12 | .40 | .80 |
-
-:::
-
-::: {style="font-size: 15px; margin-top: 0.6em; text-align:center; color:#717583;"}
-Mean $\hat\alpha$ over 6 replications of 20,000 egos; $K=3$, $c=.6$, $\gamma=.3$.
-:::
-
-::: {.takeaway style="margin-top: 0.7em; font-size:19px;"}
-Errors proportional to the set are benign; errors that do not scale with it are not.
-A low $\hat\alpha$ is compatible with ego weighing a whole neighbourhood whose size does not grow with the measured set.
 :::
 
 ## References {.smaller}
@@ -1014,4 +937,3 @@ A low $\hat\alpha$ is compatible with ego weighing a whole neighbourhood whose s
     Framework with Applications to Intergroup Friendship.” *American
     Journal of Sociology* 114(3):615–648.
 :::
-

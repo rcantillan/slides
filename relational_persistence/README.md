@@ -5,12 +5,24 @@ Presentation of the manuscript *When Do Alternatives Threaten a Tie? Opportunity
 ## Files
 
 - `slides.qmd` — Quarto revealjs source (render: `quarto render slides.qmd`)
-- `slides.html`, `slides_files/` — rendered deck
-- `styles.css`, `title-slide.html` — RC28 visual system (title label changed to "SOCIOLOGY · PUC CHILE · 2026" in `styles.css`, line with `title-content::before`)
-- `center-body.html` — small script (included via `include-after-body`) that vertically centers each slide's content in the space below the title; add `{.no-vcenter}` to a slide to opt out
-- `cover.png` — title image
-- `figures/` — slide figures: `deck_fig_parameters.png` and `deck_fig_recovery_struct.png` re-rendered in the deck palette; `fig_concept.png`, `fig_reversal.png`, `fig_diagnostic_discrimination.png` from the manuscript
-- `scripts/` — figure scripts (run from the manuscript's `scripts/revision_2026_09/`, which holds the input CSV/JSON files)
-- `talk_script_16_17min.md` — timed talk script
+- `slides_backup_2026-10-02.qmd` — the deck as it was before the 3 Oct 2026 restructuring
+- `styles.css`, `title-slide.html` — RC28 visual system; `styles.css` now also has `.pending` (red "provisional" tag) and `.step-card-label`
+- `center-body.html` — vertically centers each slide's content; add `{.no-vcenter}` to opt out
+- `figures/`, `scripts/` — slide figures and the scripts that make them
+- `talk_script_16_17min.md` — timed talk script (about 16 min at 74 words per minute)
 
-All numbers match the manuscript version of 29 Sep 2026.
+## What changed on 3 Oct 2026
+
+- New: "What We Do, and What Is New" (replaces "We Ask Three Questions"): question, tool, warning, answer; what is not new.
+- New: "The Idea in Plain Words" (count versus value, with a three-row example).
+- Rewritten: "Checking the Method: What We Simulated" + "What the Estimators Return" (data-generating process spelled out; Monte Carlo defined).
+- Rewritten: "Profiles Persist…" (the agent-based model named and its rules, outcomes and panels explained; stated as a sufficiency demonstration, not calibrated).
+- Rewritten for the new evidence: "Online" (α .04–.23 across opportunity-set definitions; α = 1 rejected throughout), "Friendship" (grade-mates ≤ .10 of classmates' pressure; only ego's contacts compete), Takeaways, Limitations (α is relative to the measured set; cap).
+- Moved to backup: B5 "Parameters Across Settings". New backup B6: known-truth with a mismeasured opportunity set (`revision_2026_10/sim_struct_mismatch.py`).
+
+## Still to do before presenting
+
+Everything marked with the red "provisional" tag uses the DerStandard panel before the deleted-users correction (`derstandard/rerun_v2_no_deleted_users.sh`). When `revision_2026_10/out_ds_v2/ds_report.txt` exists:
+1. Update the tiles on "Online" (range and published specification), the 37 windows / 914,198 on "Two Settings", and table B2.
+2. Re-run `scripts/deck_fig_parameters.py` (figure used in B5) with the corrected online estimates.
+3. Delete the `.pending` spans (search `pending` in `slides.qmd`) and the sentence "These numbers are being re-estimated…" in the talk script.
