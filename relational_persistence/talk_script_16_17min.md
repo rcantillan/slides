@@ -36,7 +36,7 @@ A warning: those parameters mean something only on the scale of partner choice; 
 
 An answer: value counts far more than number, within a bounded setting.
 
-The ingredients come from choice modelling. What is new is asking this of ties. Three questions follow: size, protection, turnover.
+The ingredients come from choice modelling, and structural equivalence as competition comes from Burt. What is new is asking this of ties. Three questions follow: size, protection, turnover.
 
 ## The Idea in Plain Words - 3:56-4:48
 
@@ -47,6 +47,10 @@ If number drives departures, more alternatives mean more exits even when they ar
 ## Relational Redundancy - 4:48-5:07
 
 Relational redundancy is the log-sum of the alternatives' utility relative to the incumbent. It splits exactly into their number and their mean value.
+
+## Not Burt's Redundancy - 5:07-5:35
+
+Burt's redundancy concerns ego's existing contacts that lead to the same people. Ours compares one incumbent with people ego is not tied to, and its consequence is that the tie is easier to give up. The closer antecedent is Burt's structural equivalence as competition; in friendship the two meet, because pressure comes from classmates who are already ego's contacts.
 
 ## One Logit, Three Parameters - 5:07-5:44
 
@@ -84,9 +88,9 @@ Each panel is one design. On the choice scale, alpha is recovered and gamma is c
 
 ## Online: Value Counts Far More Than Number - 9:55-10:44
 
-Online, the elasticity is small: between point zero four and point two three, depending on how strictly the opportunity set is drawn. Full-set evaluation is rejected under every definition. Compatibility protects ties about a third more than choice implies.
+Online, the elasticity is point two three, with an interval from point one one to point three six, far below one. Full-set evaluation is rejected decisively. It is not constant over the decade: about point four in the first half, under point one in the second. Compatibility protects ties about a third more than choice implies.
 
-Persistence responds far more to how good alternatives are than to how many. These numbers are being re-estimated after a data correction.
+Persistence responds far more to how good alternatives are than to how many.
 
 ## Friendship: Competition Comes From Ego's Network - 10:44-11:33
 
@@ -116,7 +120,7 @@ In friendship, profile continuity falls below what the classroom supplies. Stabl
 
 ## Takeaways - 14:12-15:03
 
-In sum. Size: number counts for less than proportionally; full evaluation fails in both settings. Setting: pressure comes from the set ego draws on. Protection: a premium online; in friendship, heterogeneity. Turnover: profiles persist through supply.
+In sum. Size: number counts for less than proportionally; full evaluation fails online and, with some uncertainty, in the class. Setting: pressure comes from the set ego draws on. Protection: a premium online; in friendship, heterogeneity. Turnover: profiles persist through supply.
 
 We call this relational opportunity: opportunity bears on persistence mostly through how closely alternatives approximate the incumbent's value, and only inside the set ego draws on.
 

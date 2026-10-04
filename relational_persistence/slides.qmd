@@ -138,8 +138,8 @@ Block 2017
 :::
 
 ::: {style="font-size: 16px; margin-top: 0.6em; color:#717583; text-align:center;"}
-**Not new:** inclusive value (McFadden 1978), consideration sets (Manski 1977), and the number of alternatives
-in the logit (Ackerberg & Rysman 2005). **New:** asking this of *ties*, with an estimand built for it.
+**Not new:** inclusive value (McFadden 1978), consideration sets (Manski 1977), the number of alternatives
+in the logit (Ackerberg & Rysman 2005), structural equivalence as competition (Burt 1987). **New:** asking this of *ties*, with an estimand built for it. **Not Burt's redundancy** (next slides).
 :::
 
 ::: {.takeaway style="margin-top: 0.7em; font-size:22px;"}
@@ -211,6 +211,24 @@ The decomposition separates **how many** alternatives there are from
 
 ::: {style="font-size: 14px; margin-top: 0.35em; color:#717583; text-align:center;"}
 Inclusive value: McFadden 1978
+:::
+
+## Not Burt's Redundancy {.smaller}
+
+::: {style="font-size: 20px; margin: 0.9em auto 0; max-width: 1080px;"}
+
+| | Burt (1992): structural holes | Ours: relational redundancy |
+|:--|:--|:--|
+| **Redundant is...** | a contact who leads to the same people as ego's other contacts | an incumbent whose compatibility feasible alternatives could reproduce |
+| **Compared with** | ego's *existing* contacts | people ego is *not* tied to |
+| **Computed from** | ties among ego's contacts (cohesion, structural equivalence) | compatibility on a choice scale, and the size of the roster |
+| **Consequence** | the contact adds little new information or control | the tie is **easier to give up** |
+:::
+
+::: {style="font-size: 21px; margin: 0.8em auto 0; max-width: 1050px;"}
+-   An ego whose contacts are all unconnected has **no** Burtian redundancy, yet any one of them can be highly redundant in our sense
+-   The closer antecedent is Burt's (1987) **structural equivalence as competition**: equivalent actors are substitutes. Burt defines equivalence by shared ties; we define it by shared compatibility
+-   The two meet in friendship: classroom pressure comes from classmates who are **already ego's contacts**
 :::
 
 ## One Logit, Three Parameters {.smaller}
@@ -383,7 +401,7 @@ al. 1997.
 **Online discussion (DerStandard)**
 
 -   A decade of threaded replies, **37** three-month windows
--   **914,198** incumbent tie-periods <span class="pending">provisional</span>
+-   **529,282** incumbent tie-periods (deleted accounts removed)
 -   Compatibility: topical similarity
 -   Opportunity set: prior co-presence in threads
 -   **Ego fixed effects**: opportunity varies within ego
@@ -542,8 +560,8 @@ On a rarity rule, $\alpha$ is inflated and a premium appears **where none exists
 ::::: {.column width="33%"}
 ::: {style="text-align:center; margin-top: 2.0em;"}
 <p class="stat-label">Opportunity elasticity</p>
-<p class="stat-big">.04 – .23</p>
-<p style="font-size:17px; color:#717583;">across definitions of the opportunity set<br>published specification: .04 [−.02, .10]</p>
+<p class="stat-big">.23</p>
+<p style="font-size:17px; color:#717583;">95% CI .11 to .36<br>.18 to .20 across audit specifications</p>
 :::
 :::::
 
@@ -551,27 +569,26 @@ On a rarity rule, $\alpha$ is inflated and a premium appears **where none exists
 ::: {style="text-align:center; margin-top: 2.0em; border-left:2px solid #d8dbe4; border-right:2px solid #d8dbe4;"}
 <p class="stat-label">Full-set evaluation ($\alpha=1$)</p>
 <p class="stat-big" style="color:#175c50; font-size:44px;">rejected</p>
-<p style="font-size:17px; color:#717583;">in every definition tried<br>and in both halves of the decade</p>
+<p style="font-size:17px; color:#717583;">$p<10^{-10}$; also in each half of the decade<br>(first half $p=.008$)</p>
 :::
 :::::
 
 ::::: {.column width="33%"}
 ::: {style="text-align:center; margin-top: 2.0em;"}
 <p class="stat-label">Compatibility premium</p>
-<p class="stat-big">.32</p>
-<p style="font-size:17px; color:#717583;">95% CI .07 to .61</p>
+<p class="stat-big">.33</p>
+<p style="font-size:17px; color:#717583;">95% CI .10 to .66</p>
 :::
 :::::
 :::::::::
 
 ::: {style="font-size: 22px; margin: 1.3em auto 0; max-width: 1050px;"}
--   Opportunity is measured as prior co-presence in threads; $\alpha$ moves between .04 and .23 with how strictly that set is drawn
--   Established ties are less exposed ($\hat\kappa$ .92 → .76) and carry no detectable premium
+-   Not constant over the decade: $\hat\alpha$ is .42 (.21 to .76) in the first half and .09 (−.09 to .27) in the second; the premium falls from .88 to .07
+-   Established ties are less exposed ($\hat\kappa$ .72 → .59) and their premium includes zero (.14; −.13 to .63)
 :::
 
 ::: {.takeaway style="margin-top: 1.0em; font-size:22px;"}
 Persistence responds far more to **how good** the alternatives are than to how many there are.
-<span class="pending">provisional: numbers pending corrected rebuild</span>
 :::
 
 ## Friendship: Competition Comes From Ego's Network {.smaller}
@@ -748,7 +765,7 @@ Stable patterns need not be made of stable relationships. The ABM shows this is 
 ## Takeaways {.smaller}
 
 ::: {style="font-size:23px; margin-top:1.3em;"}
--   **Size.** The number of alternatives counts for less than proportionally: $\hat\alpha$ is .04–.23 online and .48 in the class. Full evaluation is rejected in both.
+-   **Size.** The number of alternatives counts for less than proportionally: $\hat\alpha$ is .23 online (.42 early, .09 late) and .48 in the class. Full evaluation is rejected online and, with some uncertainty, in the class.
 
 -   **Setting.** Pressure comes from alternatives in the set ego draws on: in friendship, the class, and within it ego's own contacts; other grade-mates add at most a tenth.
 
@@ -828,24 +845,26 @@ $$
     processes give the same reduced form
 :::
 
-## B2: Online Discussion — Full Estimates <span class="pending">provisional</span> {.smaller}
+## B2: Online Discussion — Full Estimates {.smaller}
 
 ::: {style="font-size: 16px; margin-top: 1em;"}
 
 | Sample | $b_U$ | $b_{\bar L}$ | $b_{\log n}$ | $\hat\kappa$ | $\hat\alpha$ [95% CI] | $\hat\gamma$ [95% CI] | $n$ |
 |:--|--:|--:|--:|--:|--:|--:|--:|
-| Ego active | 1.138 | −.865 | −.033 | .86 | .04 [−.02, .10] | .32 [.07, .61] | 914,198 |
-| Both active | 1.214 | −.889 | −.018 | .89 | .02 [−.04, .08] | .37 [.13, .67] | 889,653 |
-| New ties | 1.225 | −.919 | −.090 | .92 | .10 [.04, .16] | .33 [.11, .60] | 571,956 |
-| Established ties | .901 | −.755 | .046 | .76 | −.06 [−.17, .05] | .19 [−.11, .63] | 331,648 |
-| Low reply intensity | 1.290 | −.914 | −.086 | .91 | .09 [.02, .17] | .41 [.18, .71] | 484,864 |
-| High reply intensity | .922 | −.793 | −.018 | .79 | .02 [−.09, .13] | .16 [−.15, .59] | 414,650 |
+| Ego active | .890 | −.671 | −.154 | .67 | .23 [.11, .36] | .33 [.10, .66] | 529,282 |
+| Both active | .903 | −.658 | −.145 | .66 | .22 [.10, .36] | .37 [.14, .73] | 512,374 |
+| New ties | .965 | −.719 | −.156 | .72 | .22 [.11, .34] | .34 [.11, .68] | 406,200 |
+| Established ties | .673 | −.592 | −.216 | .59 | .37 [.18, .62] | .14 [−.13, .63] | 115,946 |
+| Low reply intensity | 1.008 | −.740 | −.229 | .74 | .31 [.20, .44] | .36 [.15, .67] | 291,813 |
+| High reply intensity | .782 | −.593 | −.131 | .59 | .22 [.05, .40] | .32 [.03, .82] | 225,710 |
+| First 18 windows (2013–17) | .843 | −.449 | −.188 | .45 | .42 [.21, .76] | .88 [.26, 2.48] | 205,734 |
+| Last 19 windows (2017–22) | .937 | −.877 | −.079 | .88 | .09 [−.09, .27] | .07 [−.13, .37] | 317,480 |
 
 :::
 
 ::: {style="font-size: 18px; margin-top: 1em; text-align:center;"}
 Ego and window fixed effects; SEs clustered by ego and window; utility
-scale from partner choice ($\hat\lambda=1.352$); Fieller intervals.
+scale from partner choice ($\hat\lambda=1.747$); Fieller intervals.
 :::
 
 ## B3: School Friendship — Full Estimates {.smaller}
@@ -899,7 +918,6 @@ replications per regime and ecology).
 
 ::: {.takeaway style="margin-top:0.15em; font-size:20px;"}
 In both settings, the opportunity that bears on persistence is a **bounded setting weighted by value**, not a headcount.
-<span class="pending">provisional: online panel pending corrected rebuild</span>
 :::
 
 ## B6: Known Truth with a Mismeasured Opportunity Set {.smaller}
