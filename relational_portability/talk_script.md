@@ -1,14 +1,14 @@
 # Guion de la presentación
 
-Exposición oral en español, alineada con los títulos y el orden de los slides. La exposición principal termina en la diapositiva 46. El apéndice contiene derivaciones, comprobaciones y respuestas para la discusión.
+Exposición oral en español, alineada con los títulos y el orden de los slides. La exposición principal termina en la diapositiva 45. El apéndice contiene derivaciones, comprobaciones y respuestas para la discusión.
 
 ## 01 · Portada
 
-El punto de partida de este trabajo es una dificultad bastante común: un programa logra entrar a una comunidad, pero esa entrada no asegura que las personas adopten lo que ofrece. Me interesa entender qué ocurre con la ventaja relacional cuando el proceso pasa de abrir una oportunidad a convertirla en acción.
+Este trabajo pregunta si una ventaja relacional se conserva al cambiar de tarea. Comparo las asociaciones de la posición con selección organizacional y adopción propia, y utilizo un modelo de información y adopción para explorar la lógica de un proceso sucesivo.
 
-## 02 · Who opens a community—and who moves it?
+## 02 · Who is selected—and who adopts?
 
-Para entrar, una organización suele buscar a personas reconocidas, a quienes los demás consultan. Para adoptar, cada hogar debe tomar una decisión que puede implicar costos y riesgos. Ambos momentos forman parte del mismo proceso. Sin embargo, las relaciones que favorecen uno pueden perder relevancia en el otro. Esa continuidad es la pregunta del trabajo.
+El trabajo parte de dos resultados distintos: una organización selecciona hogares para entrar a una comunidad y, después, los hogares deciden si adoptan. La pregunta es si las posiciones asociadas con ser seleccionado conservan su relevancia al adoptar. Esto permite estudiar continuidad de ventaja sin asignar de antemano una función a cada relación.
 
 ## 03 · An opening matters through what follows
 
@@ -26,13 +26,13 @@ Voy a precisar esta intuición: qué significa que una ventaja sea portable y qu
 
 ## 06 · Portability is continuity of relational advantage
 
-Llamo portabilidad a la conservación de una ventaja relativa entre tareas. Por dominio entiendo un tipo de relación, como consejo o visitas. Por tarea, aquello que debe conseguirse para que el proceso avance. Esta distinción permite estudiar a los mismos actores y preguntar si sus posiciones siguen siendo ventajosas cuando cambia lo que hay que lograr.
+La portabilidad es continuidad de ventaja relativa entre tareas. La tarea puede corresponder a una organización o a un hogar. En la entrada, la organización selecciona: para el hogar, el resultado relevante es ser designado. En adopción, decide el propio hogar. El actor focal no tiene que ejecutar personalmente todas las tareas; seguimos su posición y el resultado que le corresponde en cada una.
 
 ## 07 · The premises we inherit—and the question we add
 
-El argumento reúne tres antecedentes. Las relaciones permiten acciones específicas; avanzar en un proceso puede requerir recursos diferentes; y las redes tienen rendimientos que dependen de la tarea. Katz y Lazarsfeld, Coleman, Gould y White sustentan la primera idea. McAdam y los estudios de aprendizaje permiten distinguir los pasos. Hansen y sus colaboradores son el antecedente más cercano de contingencia por tarea.
+El punto de partida es conocido: distintas tareas pueden necesitar recursos diferentes, y distintas relaciones pueden actuar juntas. Gould muestra cómo las redes organizacionales y de vecindad sostienen conjuntamente la movilización. Becker y sus colegas conectan influencia personal y difusión por rutas comerciales. Chandrasekhar y sus colegas estudian cómo compartir contactos entre capas modifica la difusión. Hansen es el antecedente más cercano: una configuración ventajosa para una tarea puede perjudicar otra.
 
-Mi propuesta convierte la continuidad de la ventaja relativa en una pregunta explícita: cuándo ese cambio de tarea conserva el orden entre actores y cuándo puede invertirlo. A1 sitúa esa pregunta frente a la investigación estructural y multiplex.
+La pregunta que organizo aquí es qué ocurre con los mismos actores al pasar a la siguiente tarea: cuándo conservan su ventaja relativa y cuándo cambian de lugar. Dentro del modelo aditivo, cambiar la tarea puede invertir el orden si desplaza suficientemente el peso hacia dominios que favorecen a actores diferentes. A1 distingue compartir contactos, ocupar posiciones semejantes y conservar ventaja. También reconoce los antecedentes sobre secuencias y cambio de canal.
 
 ## 08 · Advantage depends on what the task values
 
@@ -42,7 +42,9 @@ R es el valor de ese perfil para una tarea. Al pasar a otra, conservamos las pos
 
 ## 09 · Fixed positions; a different ordering
 
-El ejemplo hace visible lo que cambia. El actor uno está mejor situado en A y el dos en B. La primera tarea favorece A: el primero obtiene un puntaje de 0,68 y el segundo de 0,32. La segunda favorece B y el orden se invierte. La simetría facilita la lectura; lo que interesa es que la inversión ocurre sin modificar las posiciones de ninguno.
+Ahora los perfiles son asimétricos. El primer actor está mejor situado en A; el segundo, en B. Si A pesa 0,8, el primero tiene 0,68 y el segundo 0,48. Reducir el peso de A a 0,5 cambia los puntajes, pero conserva el orden: 0,50 frente a 0,45.
+
+La inversión aparece al bajar el peso a 0,2: 0,32 frente a 0,42. El umbral está en 0,4, donde empatan. Así vemos por qué tener perfiles contrapuestos no basta y por qué cambiar la tarea tampoco asegura una inversión.
 
 ## 10 · When does advantage persist—and when can it reverse?
 
@@ -62,15 +64,17 @@ La misma lógica tiene una consecuencia para la medición. Al reunir todas las r
 
 Con estas condiciones en mente, paso a la evidencia. Utilizo dos estudios que permiten observar aspectos distintos de la pregunta.
 
-## 14 · Two datasets; different units and outcomes
+## 14 · Different studies observe different stages
 
-La comparación empírica utiliza dos estudios. BSS observa designación y adopción propia para los mismos hogares: algo más de diez mil en cuarenta y nueve aldeas. El experimento independiente selecciona al azar tres o cinco hogares por aldea y registra el alcance de la noticia mediante llamadas perdidas.
+BSS compara designación y adopción propia para los mismos hogares. El experimento independiente observa alcance informativo generado por conjuntos seleccionados al azar. La simulación sigue información recibida y adopción de los mismos actores construidos.
 
-El primero permite comparar asociaciones entre resultados del hogar. El segundo aporta un referente sobre difusión de información. Sus unidades y aldeas son distintas; no los tratamos como una única secuencia observada.
+La designación no equivale a informarse. BSS no observa esa etapa intermedia y el experimento corresponde a otras aldeas. El modelo ilustra la lógica de tareas sucesivas mediante una secuencia concreta; no reconstruye la secuencia empírica de BSS. Esta diferencia define cómo se conectan las tres piezas y qué puede aportar cada una.
 
 ## 15 · Networks precede the arrival of microcredit
 
-En BSS tenemos una ventaja importante de diseño: las redes se midieron antes de la llegada del programa. La organización eligió sus puntos de entrada mediante roles localmente influyentes, sin conocer esas redes. Después observamos qué hogares adoptaron. La selección y la adopción pueden así compararse con posiciones relacionales medidas previamente.
+Las redes se midieron antes de que llegara el programa. BSS seleccionó hogares usando roles localmente influyentes y sin observar estas redes. Esto establece la temporalidad de la medición, pero no vuelve aleatoria la selección: esos roles pueden estar relacionados con las posiciones medidas.
+
+Por eso una asociación de Advice/Decision con designación resulta plausible dados los criterios organizacionales. El interés empírico está en comparar esa asociación con la de adopción propia, no en tratar la selección como un descubrimiento aislado o como recepción de información.
 
 ## 16 · Nominations become comparable household networks
 
@@ -84,9 +88,9 @@ La centralidad que usamos empieza con una pregunta sencilla: si un mensaje sale 
 
 Cada paso recibe un peso q y dejamos de contar después de un número finito de rondas. Calculamos lo mismo en cada dominio. La medida suma oportunidades de transmisión, incluidas llegadas repetidas. En A2–A2a hay un ejemplo que permite seguir el cálculo y revisar los parámetros. Esta es nuestra medida de posición; la adopción sigue siendo un resultado que debemos estudiar.
 
-## 18 · Focal domains and possible capacities
+## 18 · The relations we observe
 
-Los tres dominios principales son consejo y apoyo para decisiones, intercambio monetario y visitas. Permiten distinguir infraestructuras relacionales plausiblemente diferentes. La columna de capacidades propone una lectura de lo que podrían facilitar; los generadores de nombres identifican relaciones, pero no observan directamente esos recursos. Las demás capas se evalúan en los análisis suplementarios.
+Aquí describimos la medición: consejo y apoyo para decisiones, préstamos monetarios y visitas. Los generadores de nombres identifican relaciones, no los recursos que efectivamente circulan. Advice/Decision combina dos generadores; no supone una capacidad homogénea. A7 explora sus diferencias internas. Las interpretaciones funcionales se presentan después de observar los resultados.
 
 ## 19 · Entry and adoption use identical comparisons
 
@@ -98,7 +102,7 @@ En A3 quedan las ecuaciones y el contraste conjunto que utilizamos para hacer es
 
 Veamos primero si los dominios sitúan de manera diferente a los hogares y después qué ocurre entre entrada y adopción.
 
-## 21 · H1 · Households rank differently across domains
+## 21 · Households rank differently across domains
 
 Las posiciones están bastante relacionadas, pero hay diferencias relevantes. En la aldea mediana, sólo la mitad de los hogares del decil superior coincide entre Advice/Decision y Visiting. Cerca de un veintidós por ciento cambia al menos veinticinco puntos percentiles. Existe, por tanto, diferenciación suficiente para que conservar una ventaja sea una pregunta empírica.
 
@@ -120,9 +124,11 @@ El patrón persiste al retirar el conjunto de entrada, omitir aldeas una a una y
 
 A5 organiza las explicaciones alternativas y sus comprobaciones. A11 muestra los coeficientes de las capas adicionales; allí también se observa una asociación positiva del flujo entrante de arroz o queroseno. Estos análisis evalúan la estabilidad del resultado, sin resolver la exposición no observada o la homofilia.
 
-## 25 · H3 · Pooling ties conceals the adoption signal
+## 25 · Visiting exceeds the union association
 
-La comparación con la red agregada muestra lo que puede perderse al reunir relaciones. Visiting tiene una asociación con adopción mayor que la centralidad de la unión, y evaluamos directamente esa diferencia. En este caso, distinguir el dominio conserva una señal que la medida general no recoge con la misma claridad.
+Esta comparación utiliza dos modelos de una sola medida, con iguales hogares y controles: Visiting frente a centralidad de la unión. Por eso el coeficiente de Visiting es 0,156 aquí y 0,173 cuando entra junto con los otros dos dominios.
+
+La diferencia entre estos coeficientes es 0,181. Esto documenta que la centralidad agregada no recoge la misma asociación de Visiting en este caso. No demuestra que agregar relaciones siempre empeore la medición ni evalúa capacidad predictiva fuera de muestra.
 
 ## 26 · The Visiting signal is concentrated in nearby ties
 
@@ -130,7 +136,7 @@ Hay una reserva importante: la asociación de Visiting aparece sobre todo en ví
 
 A6 amplía esta lectura con los resultados por composición y una prueba secundaria imprecisa. Ayuda a delimitar la explicación; no resuelve la alternativa espacial.
 
-## 27 · Advice favors information reach in the RCT
+## 27 · Information reach tends to favor advice
 
 El experimento independiente vuelve a la tarea informativa. Allí, el contraste favorece Advice frente a Visiting en el alcance de la noticia. La dirección se mantiene, aunque la precisión varía con la medida utilizada. Es un referente útil para distinguir alcance informativo de adopción propia, sin tratar ambos estudios como una sola secuencia observada.
 
@@ -176,15 +182,15 @@ Los experimentos combinan tres dimensiones: cuánto se distinguen funcionalmente
 
 ## 36 · Response rules answer different questions
 
-También variamos qué exige adoptar. Una regla pide un número fijo de apoyos. Otra pide una fracción del grado de la red ponderada para adopción. La tercera mantiene esa fracción anclada al grado inicial en A.
+Comparamos tres reglas porque representan exigencias distintas. La absoluta pide uno, dos o tres vecinos de apoyo. La proporcional pide una fracción del grado ponderado para adopción. La anclada mantiene la exigencia ligada al grado de A, aunque los contactos puedan desplazarse hacia B: conserva deliberadamente el requisito para aislar el cambio de contactos.
 
-La distinción importa: en la regla proporcional cambian contactos y exigencias; en las otras dos mantenemos las exigencias fijas. Mostraré dos apoyos como ejemplo y después volveré al conjunto de reglas.
+Dos apoyos es el caso más sencillo de estas reglas absolutas que requiere refuerzo de más de un vecino. Lo usamos como ilustración de ese proceso, no como una estimación del riesgo del préstamo ni como una regla universalmente realista. A9 conserva los nueve regímenes, incluidos los contrastes negativos.
 
 ## 37 · Simulation results
 
 Los resultados muestran cuándo este proceso produce reordenamiento y cuándo sus condiciones impiden observarlo.
 
-## 38 · Task change adds individual reordering
+## 38 · Task shift adds reordering with two supports
 
 En el escenario de dos apoyos, las inversiones entre información y adopción pasan de aproximadamente 2,1 por ciento sin cambio a 26,7 por ciento con cambio. Restar ambas tasas da los 24,6 puntos porcentuales de aumento neto. No es el porcentaje de pares que se invierten por primera vez.
 
@@ -208,35 +214,35 @@ Al aumentar las exigencias, la lectura cambia. Con tres apoyos, casi nadie adopt
 
 En A9 están las nueve reglas completas, con adopción, empates y diferencias con signo. Esa tabla muestra que la ilustración de dos apoyos no es una conclusión uniforme para todos los regímenes.
 
-## 43 · Individual reordering does not determine policy loss
-
-Esto lleva a una distinción importante. El modelo principal sigue probabilidades propias con los mismos iniciadores; una evaluación de intervenciones compararía maneras de seleccionarlos. Para pasar de no portabilidad individual a eficacia colectiva necesitamos considerar alcance superpuesto, apoyos complementarios y selección.
-
-A10 presenta esas comparaciones colectivas. Allí se ve que reseleccionar no mejora siempre el resultado: depende de la regla y del escenario.
-
-## 44 · Implications and scope
+## 43 · Implications and scope
 
 Con la evidencia y el modelo a la vista, podemos delimitar la contribución y sus alcances.
 
-## 45 · What the evidence establishes—and leaves open
+## 44 · What the evidence establishes—and leaves open
 
-El hallazgo empírico es un cambio de asociaciones entre entrada y adopción. El modelo muestra cómo un cambio de relevancia puede reordenar probabilidades de los mismos actores. Consulta, observación y coordinación ofrecen interpretaciones del caso, pero las capacidades no se observan directamente. Ese es el eslabón que una prueba del mecanismo tendría que medir.
+Después de los resultados podemos proponer interpretaciones. La consulta puede ayudar a entender la selección organizacional; observación, coordinación o apoyo podrían ser relevantes para adoptar. Son capacidades posibles, compartidas por más de una relación y no medidas directamente.
 
-## 46 · Central in which relation—and for which task?
+BSS establece un cambio de asociaciones. El modelo especifica un mecanismo secuencial y examina sus consecuencias. Una prueba empírica tendría que observar recursos, información y acciones de los mismos actores. Las probabilidades propias tampoco determinan la eficacia de reseleccionar iniciadores: A10 aborda esa pregunta colectiva por separado.
+
+## 45 · Central in which relation—and for which task?
 
 Vuelvo a la pregunta inicial. En estas aldeas, las relaciones asociadas con entrada y adopción son distintas. Esto invita a especificar qué significa ser central: en qué dominio, para qué tarea y en qué momento del proceso. Esa precisión es la que necesitamos para entender cuándo una ventaja puede acompañar al actor y cuándo puede quedar atrás.
 
-## 47 · A1 · The contribution connects structural and multiplex work
+## 46 · A1 · Shared contacts, similar positions, portable advantage
 
-Este esquema sitúa el aporte entre dos tradiciones. Una estudia cómo la estructura condiciona los rendimientos de seleccionar actores; la otra, qué se pierde al tratar relaciones distintas como equivalentes. Mi propuesta utiliza ambas para explicar la continuidad de ventaja entre tareas sucesivas.
+Aquí distingo tres preguntas. Una es si compartimos contactos entre dominios. Otra, si los mismos actores son prominentes en esos dominios. La tercera es si conservan su ventaja al pasar a otra tarea. Están relacionadas, pero una no responde automáticamente las otras.
 
-## 48 · A2 · Same degree; different onward opportunities
+El cambio de tarea puede reordenar a los actores cuando cambia suficientemente la importancia de dominios que favorecen a personas distintas. Si cambia poco, o si alguien aventaja a otro en todos los dominios, el orden puede conservarse. Esas condiciones son las del modelo aditivo; el modelo de comportamiento examina qué ocurre con contactos, elegibilidad y refuerzo.
+
+La literatura ya considera secuencias. Min y sus colegas estudian cambios de canal durante la transmisión, y Hansen propone estudiar rendimientos de las redes a través del tiempo. Nuestra pregunta sigue la ventaja relativa entre logros sucesivos. Hsiao y Christakis, por su parte, muestran por qué la posición de una persona y la capacidad de generar una cascada requieren explicaciones distintas. Por eso una inversión individual no obliga a que cambie mucho la adopción total.
+
+## 47 · A2 · Same degree; different onward opportunities
 
 Los hogares dos y tres tienen el mismo grado: cada uno se conecta con dos vecinos. Pero desde el dos hay tres recorridos de longitud dos: dos–uno–dos, dos–tres–dos y dos–tres–cuatro. Desde el tres hay cuatro: tres–dos–uno, tres–dos–tres, tres–cuatro–tres y tres–cuatro–cinco.
 
 Para facilitar el cálculo usamos q igual a un medio y sólo dos rondas. Ambos reciben uno por los contactos directos. Los recorridos de dos pasos reciben un cuarto cada uno: suman 0,75 para el hogar dos y uno para el tres. El total es 1,75 frente a dos. Los regresos cuentan, aunque no añadan una persona nueva. El ejemplo utiliza parámetros didácticos; la siguiente diapositiva muestra los que usamos realmente.
 
-## 49 · A2a · Translate the intuition into the calculation
+## 48 · A2a · Translate the intuition into the calculation
 
 Ahora la ecuación resume los pasos del ejemplo. A describe los vínculos; elevarla a t cuenta recorridos de t pasos. El vector de unos suma sus destinos. Como nuestras capas son simétricas, esta suma por fila describe recorridos desde el hogar. q elevado a t pondera cada recorrido, y sumamos hasta T.
 
@@ -244,70 +250,70 @@ La medida viene de Banerjee y sus colaboradores. Para los parámetros por capa s
 
 Por último, restamos el mínimo y dividimos por el rango dentro de cada aldea y dominio. Eso permite leer la posición entre cero y uno; no convierte las capacidades en unidades equivalentes. La definición original empieza en t igual a uno. Nuestro término cero añade uno a todos los hogares y desaparece al normalizar. La medida comparte un criterio de cálculo entre dominios; no estima por sí misma recursos ni probabilidades de adopción.
 
-## 50 · A3 · Joint outcome models and the reversal contrast
+## 49 · A3 · Joint outcome models and the reversal contrast
 
 Cada ecuación usa las tres centralidades, los mismos controles y efectos fijos de aldea. Theta compara dos brechas: Visiting menos Advice/Decision en adopción, menos esa diferencia en designación. Estimar conjuntamente conserva la covarianza necesaria. Aquí se invierte el contraste entre asociaciones; para establecer inversiones individuales haría falta una comparación de los rankings de los hogares.
 
-## 51 · A4 · When do two actors exchange places?
+## 50 · A4 · When do two actors exchange places?
 
 El criterio puede leerse sin hacer toda la expansión. Calculamos la ventaja del actor i frente a j en cada tarea y multiplicamos esas dos brechas. Si el producto es negativo, tienen signos opuestos: el orden se invirtió.
 
 La segunda expresión explica de dónde viene cada brecha. m recoge la posición promedio y d el perfil entre dominios. El componente que cambia con la tarea debe superar la ventaja promedio para cambiar el signo. Un empate deja el producto en cero y se registra aparte.
 
-## 52 · A4a · Matching weights
+## 51 · A4a · Matching weights
 
 Los pesos se construyen para sumar uno y mantenerse no negativos. s indica cuánta diferenciación admite el ajuste entre dominios; tau orienta la tarea hacia A o B. Si s es cero, cada dominio recibe la mitad, cualquiera sea tau. Si s es uno, la orientación puede desplazar todo el peso. Esto permite distinguir diferenciación funcional de cambio de demanda.
 
-## 53 · A4b · The score-change identity
+## 52 · A4b · The score-change identity
 
 Al restar las dos tareas, el cambio de puntaje queda expresado como el producto de tres diferencias: dominios, demandas y posiciones del actor. Si cualquiera desaparece, su puntaje no cambia. Para pasar de ese cambio individual a una inversión debemos comparar también la brecha y el cambio del otro actor. La identidad aclara precisamente por qué un puntaje distinto no basta.
 
-## 54 · A5 · Checks on rival explanations
+## 53 · A5 · Checks on rival explanations
 
 La tabla organiza las explicaciones alternativas y los análisis dirigidos a cada una. Prominencia general, composición, cercanía y medición pueden producir patrones parecidos por vías diferentes. Los controles y restricciones permiten evaluar algunas de esas vías; exposición no observada y homofilia siguen siendo límites de la interpretación.
 
-## 55 · A6 · Composition and the secondary test
+## 54 · A6 · Composition and the secondary test
 
 La heterogeneidad por casta localiza la asociación. Las comparaciones de perfiles balanceados y la interacción entre aldeas, en cambio, son imprecisas. Por eso no las presentamos como confirmación adicional. La diferenciación de posiciones está observada; su papel moderador en esta prueba secundaria permanece abierto.
 
-## 56 · A7 · Decision support versus advice: exploratory
+## 55 · A7 · Decision support versus advice: exploratory
 
 Al separar consejo de apoyo para decisiones aparecen diferencias dentro del dominio compuesto. Lo interesante es el perfil relativo: cómo está situado un hogar en uno frente al otro. Este análisis es exploratorio. Sugiere una distinción para investigar, sin ampliar retrospectivamente las hipótesis principales.
 
-## 57 · A8 · Sequential cascade design
+## 56 · A8 · Sequential cascade design
 
 A8 reúne los parámetros y las verificaciones. Los cambios de demanda dejan resultados idénticos cuando los pesos no cambian, s es cero o las capas son idénticas. La reconstrucción agregada también coincide con la suma de resultados individuales.
 
 Estas son verificaciones de implementación. Alinear grados no equivale a tener capas idénticas. Tampoco estos controles demuestran estabilidad de los rankings al aumentar las repeticiones: esa comprobación de precisión sigue pendiente.
 
-## 58 · A9 · All response rules retain their signed results
+## 57 · A9 · All response rules retain their signed results
 
 La tabla muestra todos los regímenes, incluidos los contrastes negativos. Las reglas absolutas y ancladas suelen permitir reordenamiento adicional; algunas proporcionales casi eliminan la adopción. Las tres columnas deben leerse juntas: cuántos adoptan, cuántos pares empatan y cuánto cambia la tasa de inversiones. La mayor exigencia de refuerzo no produce un resultado uniforme.
 
-## 59 · A10 · Collective gains depend on the specification
+## 58 · A10 · Collective gains depend on the specification
 
 La extensión colectiva compara reseleccionar actores con reutilizarlos bajo estrategias concretas. Conviene distinguir la ganancia absoluta de reselección de su cambio frente al referente sin desplazamiento: una puede ser negativa y el otro positivo. La selección usa una aproximación voraz, de modo que son escenarios ilustrativos y no óptimos globales demostrados.
 
-## 60 · A11 · Additional relations in the adoption models
+## 59 · A11 · Additional relations in the adoption models
 
 Esta tabla permite revisar las capas adicionales una a una. Cada especificación añade una relación o un bloque al modelo con los tres dominios principales. Visiting conserva su asociación y el flujo entrante de arroz o queroseno también tiene señal. La evaluación corresponde a adopción; no extiende el contraste completo entre entrada y adopción a todas las relaciones.
 
-## 61 · Selected references · 1
+## 60 · Selected references · 1
 
 Estas referencias documentan los estudios empíricos de difusión y los antecedentes multiplex. Quedan disponibles para las preguntas sobre datos y diseño.
 
-## 62 · Selected references · 2
+## 61 · Selected references · 2
 
 Aquí se reúnen los antecedentes sobre estructura, refuerzo y combinación de relaciones.
 
-## 63 · Selected references · 3
+## 62 · Selected references · 3
 
 Estas referencias sitúan la perspectiva multiplex y la idea de seguir cómo una apertura se conecta con acciones posteriores.
 
-## 64 · Selected references · 4
+## 63 · Selected references · 4
 
 Aquí están las premisas sobre influencia específica, capital social y movilización.
 
-## 65 · Selected references · 5
+## 64 · Selected references · 5
 
 Estas referencias completan el recorrido sobre identidades relacionales, compromiso e información y aprendizaje.

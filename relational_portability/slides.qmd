@@ -1,6 +1,6 @@
 ---
-title: "The Ties That Open a Community Are Not the Ties That Move It"
-subtitle: "Task-Specific Relational Advantage in Diffusion"
+title: "Does Relational Advantage Travel Across Tasks?"
+subtitle: "Evidence from Microcredit Entry and Adoption"
 author: "Roberto Cantillan"
 institute: "Department of Sociology · Pontificia Universidad Católica de Chile"
 cover: cover.png
@@ -32,7 +32,7 @@ editor:
     wrap: 72
 ---
 
-## Who opens a community—and who moves it? {#s1 }
+## Who is selected—and who adopts? {#s1 }
 
 :::::::::::::::: {.slide-body}
 
@@ -47,7 +47,7 @@ The question
 :::::::::::::: {.col}
 
 <h3>Entry</h3>
-An organization approaches the people others **consult**.
+An organization selects households as **entry points**.
 
 ::::::::::::::
 
@@ -76,7 +76,7 @@ Katz & Lazarsfeld 1955 · Banerjee et al. 2013, 2019 · Beaman et al. 2021
 
 :::::::::::::::: {.notes}
 
-Para entrar, una organización suele buscar a personas reconocidas, a quienes los demás consultan. Para adoptar, cada hogar debe tomar una decisión que puede implicar costos y riesgos. Ambos momentos forman parte del mismo proceso. Sin embargo, las relaciones que favorecen uno pueden perder relevancia en el otro. Esa continuidad es la pregunta del trabajo.
+El trabajo parte de dos resultados distintos: una organización selecciona hogares para entrar a una comunidad y, después, los hogares deciden si adoptan. La pregunta es si las posiciones asociadas con ser seleccionado conservan su relevancia al adoptar. Esto permite estudiar continuidad de ventaja sin asignar de antemano una función a cada relación.
 
 ::::::::::::::::
 
@@ -189,7 +189,7 @@ An advantage is **portable** when the position that helps an actor at one task r
 
 A **relation** is a domain of ties, such as advice or visiting.
 
-A **task** is an accomplishment needed for the process to advance, such as reaching people or eliciting adoption.
+A **task** is an accomplishment needed for the process to advance. Organizations can perform selection; households can receive information or adopt.
 
 ::::::::::::::: {.takeaway}
 
@@ -201,7 +201,7 @@ We compare successive tasks within a process, with the actors’ positions held 
 
 :::::::::::::::: {.notes}
 
-Llamo portabilidad a la conservación de una ventaja relativa entre tareas. Por dominio entiendo un tipo de relación, como consejo o visitas. Por tarea, aquello que debe conseguirse para que el proceso avance. Esta distinción permite estudiar a los mismos actores y preguntar si sus posiciones siguen siendo ventajosas cuando cambia lo que hay que lograr.
+La portabilidad es continuidad de ventaja relativa entre tareas. La tarea puede corresponder a una organización o a un hogar. En la entrada, la organización selecciona: para el hogar, el resultado relevante es ser designado. En adopción, decide el propio hogar. El actor focal no tiene que ejecutar personalmente todas las tareas; seguimos su posición y el resultado que le corresponde en cada una.
 
 ::::::::::::::::
 
@@ -209,11 +209,11 @@ Llamo portabilidad a la conservación de una ventaja relativa entre tareas. Por 
 
 :::::::::::::::: {.slide-body}
 
-**Relations enable particular actions.** Influence and social capital have value in relation to what actors seek to accomplish.
+**Tasks can require different resources.** Learning, gaining access and committing need not draw on the same relations.
 
-**Successive accomplishments can require different resources.** Applying, learning and committing are distinguishable tasks.
+**Different networks can work together.** Their overlap and interaction shape diffusion; combining them can hide important differences.
 
-**Task contingency is established.** Hansen and colleagues show that networks can benefit one task and hinder another.
+**Network advantage depends on the task.** Hansen and colleagues show that a network beneficial for one task can hinder another.
 
 ::::::::::::::: {.takeaway}
 
@@ -223,7 +223,7 @@ We make continuity of relative advantage across successive tasks the object of e
 
 ::::::::::::::: {.src}
 
-Katz & Lazarsfeld 1955 · Coleman 1988 · Gould 1991 · White 2008 · McAdam 1986 · Cai et al. 2015 · Hansen 1999; Hansen et al. 2001 · Structural and multiplex connections: A1.
+Coleman 1988 · Gould 1991 · Hansen et al. 2001 · Becker et al. 2020 · Chandrasekhar et al. 2026 · Distinctions: A1.
 
 :::::::::::::::
 
@@ -231,9 +231,9 @@ Katz & Lazarsfeld 1955 · Coleman 1988 · Gould 1991 · White 2008 · McAdam 198
 
 :::::::::::::::: {.notes}
 
-El argumento reúne tres antecedentes. Las relaciones permiten acciones específicas; avanzar en un proceso puede requerir recursos diferentes; y las redes tienen rendimientos que dependen de la tarea. Katz y Lazarsfeld, Coleman, Gould y White sustentan la primera idea. McAdam y los estudios de aprendizaje permiten distinguir los pasos. Hansen y sus colaboradores son el antecedente más cercano de contingencia por tarea.
+El punto de partida es conocido: distintas tareas pueden necesitar recursos diferentes, y distintas relaciones pueden actuar juntas. Gould muestra cómo las redes organizacionales y de vecindad sostienen conjuntamente la movilización. Becker y sus colegas conectan influencia personal y difusión por rutas comerciales. Chandrasekhar y sus colegas estudian cómo compartir contactos entre capas modifica la difusión. Hansen es el antecedente más cercano: una configuración ventajosa para una tarea puede perjudicar otra.
 
-Mi propuesta convierte la continuidad de la ventaja relativa en una pregunta explícita: cuándo ese cambio de tarea conserva el orden entre actores y cuándo puede invertirlo. A1 sitúa esa pregunta frente a la investigación estructural y multiplex.
+La pregunta que organizo aquí es qué ocurre con los mismos actores al pasar a la siguiente tarea: cuándo conservan su ventaja relativa y cuándo cambian de lugar. Dentro del modelo aditivo, cambiar la tarea puede invertir el orden si desplaza suficientemente el peso hacia dominios que favorecen a actores diferentes. A1 distingue compartir contactos, ocupar posiciones semejantes y conservar ventaja. También reconoce los antecedentes sobre secuencias y cambio de canal.
 
 ::::::::::::::::
 
@@ -281,18 +281,18 @@ Theory · A minimal formalization
 
 :::::::::::::::
 
-Two actors occupy opposite positions in two domains. Their ties and positions stay fixed.
+Actor 1 leads in A; actor 2 leads in B. Fixed positions can preserve or reverse the ordering, depending on the weight shift.
 
-| Actor | Position in A | Position in B | Task 1 score | Task 2 score |
-|:--|:--:|:--:|:--:|:--:|
-| **Actor 1** | .8 | .2 | **.68** | .32 |
-| **Actor 2** | .2 | .8 | .32 | **.68** |
+| Actor | Position A | Position B | Task 1 | Small shift | Large shift |
+|:--|:--:|:--:|:--:|:--:|:--:|
+| **Actor 1** | .8 | .2 | **.68** | **.50** | .32 |
+| **Actor 2** | .5 | .4 | .48 | .45 | **.42** |
 
-**Task 1:** weights A by .8, B by .2. **Task 2:** weights A by .2, B by .8.
+**A’s weight:** .8 initially → .5 (small shift) or .2 (large shift). B receives the remainder.
 
 ::::::::::::::: {.takeaway}
 
-The task weights change; the actors’ positions stay fixed.
+The pair ties when A’s weight is .4. Crossing that threshold reverses the order.
 
 :::::::::::::::
 
@@ -300,7 +300,9 @@ The task weights change; the actors’ positions stay fixed.
 
 :::::::::::::::: {.notes}
 
-El ejemplo hace visible lo que cambia. El actor uno está mejor situado en A y el dos en B. La primera tarea favorece A: el primero obtiene un puntaje de 0,68 y el segundo de 0,32. La segunda favorece B y el orden se invierte. La simetría facilita la lectura; lo que interesa es que la inversión ocurre sin modificar las posiciones de ninguno.
+Ahora los perfiles son asimétricos. El primer actor está mejor situado en A; el segundo, en B. Si A pesa 0,8, el primero tiene 0,68 y el segundo 0,48. Reducir el peso de A a 0,5 cambia los puntajes, pero conserva el orden: 0,50 frente a 0,45.
+
+La inversión aparece al bajar el peso a 0,2: 0,32 frente a 0,42. El umbral está en 0,4, donde empatan. Así vemos por qué tener perfiles contrapuestos no basta y por qué cambiar la tarea tampoco asegura una inversión.
 
 ::::::::::::::::
 
@@ -312,7 +314,7 @@ El ejemplo hace visible lo que cambia. El actor uno está mejor situado en A y e
 
 **Ahead in every relevant domain:** an actor cannot fall strictly behind the same rival under nonnegative weights.
 
-**Opposing domain advantages:** a task-weight shift can reverse the pair, if it crosses their threshold and overcomes the initial gap.
+**Opposing domain advantages:** a task-weight shift can reverse the pair, if the shift is large enough to reverse their initial gap.
 
 ::::::::::::::: {.takeaway}
 
@@ -372,7 +374,7 @@ La explicación exige observar algo más que un cambio de resultados. Una prueba
 
 ::::::::::::::: {.eyebrow}
 
-Conditional measurement implication · H3
+Conditional measurement implication
 
 :::::::::::::::
 
@@ -380,7 +382,7 @@ Domain-specific position preserves distinctions between relational infrastructur
 
 Union-network position pools ties before asking what the task requires.
 
-**H3:** when an adoption association is concentrated in a particular domain, pooling other relations can dilute that signal.
+When an adoption association is concentrated in a particular domain, pooling other relations can dilute that signal.
 
 ::::::::::::::: {.takeaway}
 
@@ -408,24 +410,25 @@ Con estas condiciones en mente, paso a la evidencia. Utilizo dos estudios que pe
 
 ::::::::::::::::
 
-## Two datasets; different units and outcomes {#s22 .prose-slide}
+## Different studies observe different stages {#s22 .prose-slide}
 
 :::::::::::::::: {.slide-body}
 
 | Study | Unit and outcomes | Role |
 |:--|:--|:--|
 | **BSS · 49 villages, 10,618 households** | Household designation and own adoption | Within-setting stage comparison |
-| **Information RCT · 68 villages** | Reach generated by randomized sets of 3 or 5 seeds | Independent information benchmark |
+| **Information RCT · 68 villages** | Reach generated by randomized sets of 3 or 5 seeds | Information benchmark |
+| **Behavioral simulation** | Individual information and adoption probabilities | Sequential-process illustration |
 
-The studies use **different villages and units**. Their coefficients are not pooled or subtracted.
+**Designation is not information receipt.** BSS does not observe information; the simulation illustrates the general process rather than reconstructing the BSS sequence.
 
 ::::::::::::::::
 
 :::::::::::::::: {.notes}
 
-La comparación empírica utiliza dos estudios. BSS observa designación y adopción propia para los mismos hogares: algo más de diez mil en cuarenta y nueve aldeas. El experimento independiente selecciona al azar tres o cinco hogares por aldea y registra el alcance de la noticia mediante llamadas perdidas.
+BSS compara designación y adopción propia para los mismos hogares. El experimento independiente observa alcance informativo generado por conjuntos seleccionados al azar. La simulación sigue información recibida y adopción de los mismos actores construidos.
 
-El primero permite comparar asociaciones entre resultados del hogar. El segundo aporta un referente sobre difusión de información. Sus unidades y aldeas son distintas; no los tratamos como una única secuencia observada.
+La designación no equivale a informarse. BSS no observa esa etapa intermedia y el experimento corresponde a otras aldeas. El modelo ilustra la lógica de tareas sucesivas mediante una secuencia concreta; no reconstruye la secuencia empírica de BSS. Esta diferencia define cómo se conectan las tres piezas y qué puede aportar cada una.
 
 ::::::::::::::::
 
@@ -466,7 +469,7 @@ Households that took up a BSS loan
 
 - Networks measured in **2006**, about six months before entry.
 - BSS designated **12%** of households using locally influential roles.
-- The lender **did not observe the networks** when choosing entry points.
+- Designation is **organizational selection**; adoption is the household’s own outcome.
 
 ::::::::::::::: {.src}
 
@@ -478,7 +481,9 @@ Banerjee, Chandrasekhar, Duflo & Jackson 2013
 
 :::::::::::::::: {.notes}
 
-En BSS tenemos una ventaja importante de diseño: las redes se midieron antes de la llegada del programa. La organización eligió sus puntos de entrada mediante roles localmente influyentes, sin conocer esas redes. Después observamos qué hogares adoptaron. La selección y la adopción pueden así compararse con posiciones relacionales medidas previamente.
+Las redes se midieron antes de que llegara el programa. BSS seleccionó hogares usando roles localmente influyentes y sin observar estas redes. Esto establece la temporalidad de la medición, pero no vuelve aleatoria la selección: esos roles pueden estar relacionados con las posiciones medidas.
+
+Por eso una asociación de Advice/Decision con designación resulta plausible dados los criterios organizacionales. El interés empírico está en comparar esa asociación con la de adopción propia, no en tratar la selección como un descubrimiento aislado o como recepción de información.
 
 ::::::::::::::::
 
@@ -560,7 +565,7 @@ Cada paso recibe un peso q y dejamos de contar después de un número finito de 
 
 ::::::::::::::::
 
-## Focal domains and possible capacities {#s12  .domain-slide}
+## The relations we observe {#s12  .domain-slide}
 
 :::::::::::::::: {.slide-body}
 
@@ -570,11 +575,11 @@ Measurement · The main comparison
 
 :::::::::::::::
 
-| Domain | Reported ties | Plausible capacities |
-|:--|:--|:--|
-| **Advice/Decision** | Advice and decision support | Communication · judgment |
-| **Exchange** | Money lending and borrowing | Material support · risk buffering |
-| **Visiting** | Visits to each other’s homes | Observation · coordination |
+| Domain | Reported ties |
+|:--|:--|
+| **Advice/Decision** | Advice and decision support |
+| **Exchange** | Money lending and borrowing |
+| **Visiting** | Visits to each other’s homes |
 
 ::::::::::::::: {.takeaway}
 
@@ -584,7 +589,7 @@ These are the focal domains. The SI also examines every remaining BSS relation.
 
 ::::::::::::::: {.src}
 
-Paired name generators; undirected layers. Capacities are proposed, not directly observed.
+Paired name generators; undirected layers · Alternative generators and domain composition: A7.
 
 :::::::::::::::
 
@@ -592,7 +597,7 @@ Paired name generators; undirected layers. Capacities are proposed, not directly
 
 :::::::::::::::: {.notes}
 
-Los tres dominios principales son consejo y apoyo para decisiones, intercambio monetario y visitas. Permiten distinguir infraestructuras relacionales plausiblemente diferentes. La columna de capacidades propone una lectura de lo que podrían facilitar; los generadores de nombres identifican relaciones, pero no observan directamente esos recursos. Las demás capas se evalúan en los análisis suplementarios.
+Aquí describimos la medición: consejo y apoyo para decisiones, préstamos monetarios y visitas. Los generadores de nombres identifican relaciones, no los recursos que efectivamente circulan. Advice/Decision combina dos generadores; no supone una capacidad homogénea. A7 explora sus diferencias internas. Las interpretaciones funcionales se presentan después de observar los resultados.
 
 ::::::::::::::::
 
@@ -656,7 +661,7 @@ Veamos primero si los dominios sitúan de manera diferente a los hogares y despu
 
 ::::::::::::::::
 
-## H1 · Households rank differently across domains {#s15 }
+## Households rank differently across domains {#s15 }
 
 :::::::::::::::: {.slide-body}
 
@@ -831,13 +836,13 @@ A5 organiza las explicaciones alternativas y sus comprobaciones. A11 muestra los
 
 ::::::::::::::::
 
-## H3 · Pooling ties conceals the adoption signal {#s19 }
+## Visiting exceeds the union association {#s19 }
 
 :::::::::::::::: {.slide-body}
 
 ::::::::::::::: {.eyebrow}
 
-Results · Same sample and specification
+Results · Same sample and controls; separate one-measure models
 
 :::::::::::::::
 
@@ -869,7 +874,7 @@ Visiting exceeds the union coefficient by **0.181** (SE $0.058$, $p=.003$).
 
 ::::::::::::::: {.src}
 
-Contrast between two single-measure models estimated jointly. Within-village household adoption.
+Two single-measure models estimated jointly. Visiting .156 here; .173 in the joint three-domain model.
 
 :::::::::::::::
 
@@ -877,7 +882,9 @@ Contrast between two single-measure models estimated jointly. Within-village hou
 
 :::::::::::::::: {.notes}
 
-La comparación con la red agregada muestra lo que puede perderse al reunir relaciones. Visiting tiene una asociación con adopción mayor que la centralidad de la unión, y evaluamos directamente esa diferencia. En este caso, distinguir el dominio conserva una señal que la medida general no recoge con la misma claridad.
+Esta comparación utiliza dos modelos de una sola medida, con iguales hogares y controles: Visiting frente a centralidad de la unión. Por eso el coeficiente de Visiting es 0,156 aquí y 0,173 cuando entra junto con los otros dos dominios.
+
+La diferencia entre estos coeficientes es 0,181. Esto documenta que la centralidad agregada no recoge la misma asociación de Visiting en este caso. No demuestra que agregar relaciones siempre empeore la medición ni evalúa capacidad predictiva fuera de muestra.
 
 ::::::::::::::::
 
@@ -933,7 +940,7 @@ A6 amplía esta lectura con los resultados por composición y una prueba secunda
 
 ::::::::::::::::
 
-## Advice favors information reach in the RCT {#s21 }
+## Information reach tends to favor advice {#s21 }
 
 :::::::::::::::: {.slide-body}
 
@@ -1239,9 +1246,9 @@ Proportional rules change both contacts and requirements. Anchored and absolute 
 
 :::::::::::::::: {.notes}
 
-También variamos qué exige adoptar. Una regla pide un número fijo de apoyos. Otra pide una fracción del grado de la red ponderada para adopción. La tercera mantiene esa fracción anclada al grado inicial en A.
+Comparamos tres reglas porque representan exigencias distintas. La absoluta pide uno, dos o tres vecinos de apoyo. La proporcional pide una fracción del grado ponderado para adopción. La anclada mantiene la exigencia ligada al grado de A, aunque los contactos puedan desplazarse hacia B: conserva deliberadamente el requisito para aislar el cambio de contactos.
 
-La distinción importa: en la regla proporcional cambian contactos y exigencias; en las otras dos mantenemos las exigencias fijas. Mostraré dos apoyos como ejemplo y después volveré al conjunto de reglas.
+Dos apoyos es el caso más sencillo de estas reglas absolutas que requiere refuerzo de más de un vecino. Lo usamos como ilustración de ese proceso, no como una estimación del riesgo del préstamo ni como una regla universalmente realista. A9 conserva los nueve regímenes, incluidos los contrastes negativos.
 
 ::::::::::::::::
 
@@ -1257,7 +1264,7 @@ Los resultados muestran cuándo este proceso produce reordenamiento y cuándo su
 
 ::::::::::::::::
 
-## Task change adds individual reordering {#s24 .model-result .model-slide}
+## Task shift adds reordering with two supports {#s24 .model-result .model-slide}
 
 :::::::::::::::: {.slide-body}
 
@@ -1282,7 +1289,7 @@ Network-pair bootstrap interval: **21.9–26.8 pp**.
 
 </div></div>
 
-<div class="src">40 synthetic network pairs · h = 2 · Complete task shift · Bands: bootstrap over network pairs.</div>
+<div class="src">40 network pairs · h = 2 · Complete shift · Bands: network-pair bootstrap.<br>Ranking stability with more Monte Carlo draws remains to be checked; full rules: A9.</div>
 
 ::::::::::::::::
 
@@ -1418,7 +1425,7 @@ Fewer reversals can mean a collapsed ranking.
 
 </div></div>
 
-<div class="src">All nine response rules · Fixed requirements (anchored) and task-relative requirements (fractional). · Appendix A9: adoption, ties and all nine rules.</div>
+<div class="src">All nine response rules · Fixed requirements (anchored) and task-relative requirements (proportional). · Appendix A9: adoption, ties and all nine rules.</div>
 
 ::::::::::::::::
 
@@ -1427,44 +1434,6 @@ Fewer reversals can mean a collapsed ranking.
 Al aumentar las exigencias, la lectura cambia. Con tres apoyos, casi nadie adopta después del desplazamiento y alrededor de noventa y siete por ciento de los pares empata. Algunas reglas proporcionales producen algo similar. En esos casos hay pocas inversiones porque el ranking se aplana. Debemos mirar las inversiones junto con adopción y empates.
 
 En A9 están las nueve reglas completas, con adopción, empates y diferencias con signo. Esa tabla muestra que la ilustración de dos apoyos no es una conclusión uniforme para todos los regímenes.
-
-::::::::::::::::
-
-## Individual reordering does not determine policy loss {#s27 .prose-slide .model-slide}
-
-:::::::::::::::: {.slide-body}
-
-::::::::::::::: {.eyebrow}
-
-Model · Individual portability
-
-:::::::::::::::
-
-The experiment follows actors’ **own probabilities** under a fixed intervention.
-
-It does not compare optimized adoption strategies. A change in total adoption is therefore not a cost of failing to reselect.
-
-Collective consequences depend additionally on complementary support, overlapping reach, and the rule used to select actors.
-
-::::::::::::::: {.takeaway}
-
-Individual nonportability and the efficacy of a strategy are separate questions.
-
-:::::::::::::::
-
-::::::::::::::: {.src}
-
-Appendix A10: illustrative collective comparisons.
-
-:::::::::::::::
-
-::::::::::::::::
-
-:::::::::::::::: {.notes}
-
-Esto lleva a una distinción importante. El modelo principal sigue probabilidades propias con los mismos iniciadores; una evaluación de intervenciones compararía maneras de seleccionarlos. Para pasar de no portabilidad individual a eficacia colectiva necesitamos considerar alcance superpuesto, apoyos complementarios y selección.
-
-A10 presenta esas comparaciones colectivas. Allí se ve que reseleccionar no mejora siempre el resultado: depende de la regla y del escenario.
 
 ::::::::::::::::
 
@@ -1497,7 +1466,7 @@ Interpretation
 <h3>Observed empirical pattern</h3>
 Entry associates with **Advice/Decision**; own adoption with **Visiting**.
 
-The aggregate network conceals that contrast.
+Union centrality has a weaker adoption association.
 
 ::::::::::::::
 
@@ -1506,7 +1475,7 @@ The aggregate network conceals that contrast.
 <h3>Open explanation</h3>
 Tie capacities are **not directly measured**.
 
-Consultative prominence may explain entry; observation, coordination or support may help explain adoption. These are **possible interpretations**.
+Consultation may help interpret organizational selection. Observation, coordination or support may help interpret adoption. These are **possible, nonexclusive mechanisms**.
 
 ::::::::::::::
 
@@ -1514,7 +1483,7 @@ Consultative prominence may explain entry; observation, coordination or support 
 
 ::::::::::::::: {.takeaway}
 
-BSS establishes a change in domain associations. Simulations illustrate individual rank reversals; neither identifies who caused adoption in these villages.
+BSS compares designation and adoption associations. The model illustrates own probabilities; intervention reselection is a separate question (A10).
 
 :::::::::::::::
 
@@ -1522,7 +1491,9 @@ BSS establishes a change in domain associations. Simulations illustrate individu
 
 :::::::::::::::: {.notes}
 
-El hallazgo empírico es un cambio de asociaciones entre entrada y adopción. El modelo muestra cómo un cambio de relevancia puede reordenar probabilidades de los mismos actores. Consulta, observación y coordinación ofrecen interpretaciones del caso, pero las capacidades no se observan directamente. Ese es el eslabón que una prueba del mecanismo tendría que medir.
+Después de los resultados podemos proponer interpretaciones. La consulta puede ayudar a entender la selección organizacional; observación, coordinación o apoyo podrían ser relevantes para adoptar. Son capacidades posibles, compartidas por más de una relación y no medidas directamente.
+
+BSS establece un cambio de asociaciones. El modelo especifica un mecanismo secuencial y examina sus consecuencias. Una prueba empírica tendría que observar recursos, información y acciones de los mismos actores. Las probabilidades propias tampoco determinan la eficacia de reseleccionar iniciadores: A10 aborda esa pregunta colectiva por separado.
 
 ::::::::::::::::
 
@@ -1536,19 +1507,19 @@ Discussion
 
 :::::::::::::::
 
-<div class="closing-line">The ties that open an opportunity<br>need not organize the decision to act.</div>
+<div class="closing-line">Relational advantage can change<br>as the process moves to its next task.</div>
 
 ::::::::::::::: {.split .closing-evidence}
 
 :::::::::::::: {.col}
 
-**Entry → Advice/Decision**
+**Designation association**<br>Advice/Decision
 
 ::::::::::::::
 
 :::::::::::::: {.col}
 
-**Adoption → Visiting**
+**Own-adoption association**<br>Visiting
 
 ::::::::::::::
 
@@ -1569,41 +1540,25 @@ Vuelvo a la pregunta inicial. En estas aldeas, las relaciones asociadas con entr
 ::::::::::::::::
 # Appendix {.center .middle background-color="#302a78"}
 
-## A1 · The contribution connects structural and multiplex work {.appendix}
+## A1 · Shared contacts, similar positions, portable advantage {.appendix .prose-slide}
 
 :::::::::::::::: {.slide-body}
 
-::::::::::::::: {.cards .xl .c2 style="margin-top: 1.5em;"}
+| Question | What it describes |
+|:--|:--|
+| Do domains connect actors to the same people? | **Tie overlap** |
+| Are the same actors prominent across domains? | **Positional correspondence** |
+| Do actors retain their advantage at the next task? | **Portability of advantage** |
 
-:::::::::::::: {.card}
+::::::::::::::: {.takeaway}
 
-<span class="tag">STRUCTURAL WORK</span>
-
-<h4>The returns to targeting depend on how ties are organized</h4>
-
-Complex contagion, network paradoxes, multiplex seeding.
-
-<span class="src" style="display:block;">Centola & Macy 2007; Hsiao & Christakis 2026; Chandrasekhar et al. 2026</span>
-
-::::::::::::::
-
-:::::::::::::: {.card .green}
-
-<span class="tag">MULTIPLEX WORK</span>
-
-<h4>Relations are not interchangeable channels</h4>
-
-Pooling them can hide the one that matters for an outcome.
-
-<span class="src" style="display:block;">Omodei & Arenas 2016; Becker et al. 2020; Larson & Rodríguez 2023</span>
-
-::::::::::::::
+These are distinct questions. Changing what a task requires can reorder actors whose advantages lie in different domains.
 
 :::::::::::::::
 
-::::::::::::::: {.takeaway style="margin-top: 1.6em; font-size: 26px;"}
+::::::::::::::: {.src}
 
-These approaches motivate our question: does an advantage established for one task **survive a change of task**?
+Overlap and diffusion: Chandrasekhar et al. 2026 · Layer-switching: Min et al. 2016 · Targeting and network structure: Hsiao & Christakis 2026.
 
 :::::::::::::::
 
@@ -1611,7 +1566,11 @@ These approaches motivate our question: does an advantage established for one ta
 
 :::::::::::::::: {.notes}
 
-Este esquema sitúa el aporte entre dos tradiciones. Una estudia cómo la estructura condiciona los rendimientos de seleccionar actores; la otra, qué se pierde al tratar relaciones distintas como equivalentes. Mi propuesta utiliza ambas para explicar la continuidad de ventaja entre tareas sucesivas.
+Compartir contactos entre capas no equivale a ocupar posiciones semejantes, ni asegura que una ventaja se conserve entre tareas. La tercera pregunta requiere considerar qué demanda cada tarea y cómo esas demandas valoran el perfil del actor. La inversión exige un cambio suficiente: una diferencia pequeña puede conservar el orden.
+
+Hay antecedentes explícitos sobre secuencias. Min y sus colegas estudian cómo la transmisión depende del canal por el que llegó la información y de aquel por el que se transmite después. Eso es dependencia de la trayectoria dentro de una difusión; aquí seguimos la ventaja de los actores entre logros sucesivos. Hansen también propone estudiar los rendimientos de las redes a través del tiempo. El aporte debe situarse en esta conversación, sin reclamar prioridad sobre toda forma de secuencia.
+
+Hsiao y Christakis preguntan cuándo seleccionar actores muy conectados genera difusión amplia. Su resultado depende de cómo se organizan las conexiones del conjunto. Esa distinción ayuda a separar nuestra pregunta individual de las consecuencias colectivas: reordenar oportunidades individuales no garantiza una diferencia grande en el resultado agregado. La regla de refuerzo también importa. En Chandrasekhar, varias interacciones a través de capas con un mismo contacto pueden contribuir al umbral; no debemos equiparar ese supuesto con cualquier regla que exija fuentes distintas.
 
 ::::::::::::::::
 
@@ -1855,7 +1814,7 @@ La heterogeneidad por casta localiza la asociación. Las comparaciones de perfil
 ::::::::::::::: {.takeaway style="margin-top: 1em; font-size: 23px;"}
 
 Deliberative prominence as such does not predict lower adoption; ranking higher
-as a source of decision support than of advice does. **Outside H1–H3 and
+as a source of decision support than of advice does. **Outside the main comparisons and
 exploratory.**
 
 :::::::::::::::
@@ -1917,9 +1876,9 @@ Appendix · s = 1, complete shift, full relabeling
 | anchored 0.3 | 64.7% → 47.4% | 6.1% | +29.1 pp |
 | anchored 0.4 | 10.6% → 21.4% | 18.6% | +22.6 pp |
 | anchored 0.5 | 4.1% → 11.6% | 29.6% | +35.4 pp |
-| fractional 0.3 | 64.7% → 5.7% | 68.1% | -0.4 pp |
-| fractional 0.4 | 10.6% → 1.0% | 97.1% | -25.9 pp |
-| fractional 0.5 | 4.1% → 1.0% | 97.2% | -12.2 pp |
+| proportional 0.3 | 64.7% → 5.7% | 68.1% | -0.4 pp |
+| proportional 0.4 | 10.6% → 1.0% | 97.1% | -25.9 pp |
+| proportional 0.5 | 4.1% → 1.0% | 97.2% | -12.2 pp |
 
 ::::::::::::::::
 
@@ -2040,6 +1999,8 @@ Aquí se reúnen los antecedentes sobre estructura, refuerzo y combinación de r
 -   **Omodei, E. & Arenas, A. (2016).** “Untangling the Role of Diverse Social Dimensions in the Diffusion of Microfinance.” *Applied Network Science* 1(1):14. doi:10.1007/s41109-016-0016-x.
 
 -   **Rule, A., Sabetta, L., & Bearman, P. (2026).** “Pathways and Chance.” *Sociologica* 20(1). doi:10.60923/issn.1971-8853/23641.
+
+-   **Min, B., Gwak, S.-H., Lee, N., & Goh, K.-I. (2016).** “Layer-switching cost and optimality in information spreading on multiplex networks.” *Scientific Reports* 6:21392. doi:10.1038/srep21392.
 
 -   **Valente, T. W. & Davis, R. L. (1999).** “Accelerating the Diffusion of Innovations Using Opinion Leaders.” *The ANNALS of the American Academy of Political and Social Science* 566(1):55–67. doi:10.1177/000271629956600105.
 

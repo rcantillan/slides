@@ -95,7 +95,7 @@ Respaldo: A8 y notas de estimación de probabilidades.
 
 24. ¿El resultado obliga a cambiar la selección de actores en una intervención?
 No por sí solo. Las probabilidades propias y la contribución de alguien como iniciador son objetos distintos. Para evaluar reselección debemos comparar estrategias, considerando redundancia, alcance complementario y refuerzo. A10 ilustra esas comparaciones y muestra ganancias que dependen de la regla. Su selección aproximada no establece óptimos globales ni cotas superiores.
-Respaldo: distinción individual–colectiva y A10.
+Respaldo: alcance de las conclusiones y A10.
 
 25. ¿Qué diferencia este argumento de Hansen y de otros trabajos multiplex?
 La contingencia por tarea tiene antecedentes explícitos. El aporte propuesto convierte la continuidad de la ventaja entre tareas sucesivas en un objeto de explicación, relacionando capacidades, demandas y perfiles, con condiciones de conservación e inversión. La evidencia empírica delimita un contraste entre etapas y el modelo ilustra un proceso individual. Evitar afirmaciones de que ningún estudio anterior consideró tareas, secuencias o heterogeneidad de relaciones.
@@ -111,8 +111,17 @@ Respaldo: proceso computacional y código del motor.
 
 28. ¿Un dominio ofrece una sola capacidad?
 No. Las relaciones pueden ofrecer varias capacidades y diferentes dominios pueden ofrecer una misma capacidad en distinto grado. El argumento necesita diferencias relevantes de ajuste, no una correspondencia exclusiva entre consejo y comunicación o visitas y coordinación. Las capacidades propuestas deben investigarse independientemente; los generadores de nombres no identifican lo que circula.
-Respaldo: dominios focales, contribución conceptual y límites de interpretación.
+Respaldo: relaciones observadas, formalización e interpretación posterior a resultados.
 
 29. ¿Designación equivale a informarse o a causar adopción?
 No. En BSS observamos pertenencia al conjunto designado como entrada y adopción propia. La designación es una selección organizacional, no una observación de recepción de información ni una medida de influencia causal sobre vecinos. En la simulación, la primera etapa es información recibida. Las piezas se conectan mediante el argumento, sin tratar esas variables como idénticas.
 Respaldo: unidades de análisis, comparación empírica y propósito del modelo.
+
+26. ¿Multiplexidad, correspondencia de posiciones y portabilidad son lo mismo?
+No. La superposición describe contactos compartidos; la correspondencia, semejanza de posiciones; la portabilidad, continuidad de ventaja entre tareas. Esta última también depende de qué requiere cada tarea. A1 presenta la distinción.
+
+27. ¿El efecto de la superposición siempre favorece el refuerzo?
+No. Chandrasekhar et al. encuentran efectos condicionados por la prevalencia y las reglas de transmisión. Además, contar interacciones por capas con una misma persona no equivale a exigir fuentes independientes. Su resultado no debe trasladarse automáticamente a nuestras reglas de adopción.
+
+28. ¿Cuál es el antecedente sobre cambios de canal?
+Min et al. (2016) modelan transmisión dependiente del canal de llegada y del canal de salida. Es un antecedente de dependencia de trayectoria, distinto de seguir la ventaja relativa entre tareas que buscan logros diferentes. Hansen et al. también plantean estudiar rendimientos a través del tiempo.
