@@ -1,0 +1,1247 @@
+---
+title: "The Ties That Open a Community Are Not the Ties That Move It"
+subtitle: "Task-Specific Relational Advantage in Diffusion"
+author: "Roberto Cantillan & Mauricio Bucca"
+institute: "Department of Sociology | Pontificia Universidad Católica de Chile"
+cover: cover.png
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    incremental: false
+    fontsize: 30px
+    margin: 0.12
+    transition: fade
+    controls: false
+    css: styles.css
+    template-partials: [title-slide.html]
+    footer: "Cantillan & Bucca | Task-specific relational advantage in diffusion"
+execute:
+  echo: false
+  warning: false
+editor:
+  markdown:
+    wrap: 72
+---
+
+# I. The Problem and the Argument {.center .middle background-color="#302a78"}
+
+::: {.notes}
+Thank you for being here. The paper asks a simple question about diffusion:
+the people who are best placed to open a community to something new, are they
+also the people who move the community once it has to decide? Our answer is
+that it depends on the task, and that you can test it.
+:::
+
+## Two Questions About Diffusion {.smaller}
+
+::: {.cards .xl .c2 style="margin-top: 2.4em;"}
+::: {.card}
+<span class="tag">QUESTION 1</span>
+
+#### Who carries an innovation *into* a community?
+
+Entry points, seeds, opinion leaders: the actors an organization or a
+campaign approaches first.
+:::
+
+::: {.card .green}
+<span class="tag">QUESTION 2</span>
+
+#### Who carries the community *into* the innovation?
+
+The households that decide, one by one, whether to take it up.
+:::
+:::
+
+::: {.takeaway style="margin-top: 1.7em; font-size: 26px;"}
+Targeting strategies answer the first question. They usually leave open
+whether **the same relational position** also answers the second.
+:::
+
+::: {.src}
+Valente & Davis 1999; Banerjee et al. 2013, 2019; Beaman et al. 2021
+:::
+
+::: {.notes}
+Katz and Lazarsfeld taught us that leadership is specific to a domain.
+Contemporary work on seeding asks who to approach first. What the strategy
+leaves implicit is whether the position that makes someone a good point of
+entry remains valuable as others decide whether to act. That is the question
+of the paper.
+:::
+
+## Two Literatures, One Missing Question {.smaller}
+
+::: {.cards .xl .c2 style="margin-top: 1.5em;"}
+::: {.card}
+<span class="tag">STRUCTURAL WORK</span>
+
+#### The returns to targeting depend on how ties are organized
+
+Complex contagion, network paradoxes, multiplex seeding.
+
+<span class="src" style="display:block;">Centola & Macy 2007; Hsiao & Christakis 2026; Chandrasekhar et al. 2026</span>
+:::
+
+::: {.card .green}
+<span class="tag">MULTIPLEX WORK</span>
+
+#### Relations are not interchangeable channels
+
+Pooling them can hide the one that matters for an outcome.
+
+<span class="src" style="display:block;">Omodei & Arenas 2016; Becker et al. 2020; Larson & Rodríguez 2023</span>
+:::
+:::
+
+::: {.takeaway style="margin-top: 1.6em; font-size: 26px;"}
+Both show that **different relations matter**. Neither asks whether an advantage
+established for one task **survives a change of task**.
+:::
+
+::: {.notes}
+We sit between two literatures. Structural work shows that returns to
+targeting depend on tie organization. Multiplex work shows that relations are
+not interchangeable. Both establish that different relations matter. Neither
+treats the continuity of advantage across tasks as an object of explanation.
+That continuity is what we study.
+:::
+
+## A Diffusion Process Is a Sequence of Tasks {.smaller}
+
+::: {style="text-align:center; margin-top: 1.6em;"}
+<svg viewBox="0 0 960 215" width="940" role="img" aria-label="Three successive tasks: entry, information, adoption">
+  <defs>
+    <marker id="arr" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L14,8 L0,16 Z" fill="#7568c7"/>
+    </marker>
+  </defs>
+  <rect x="6" y="20" width="274" height="165" rx="10" fill="#eeecfa" stroke="#302a78" stroke-width="2"/>
+  <text x="143" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#175c50" letter-spacing="1.5">TASK 1</text>
+  <text x="143" y="84" text-anchor="middle" font-size="26" font-weight="700" fill="#302a78">Entry</text>
+  <text x="143" y="116" text-anchor="middle" font-size="17" fill="#202334">An organization chooses</text>
+  <text x="143" y="138" text-anchor="middle" font-size="17" fill="#202334">where to begin</text>
+  <text x="143" y="168" text-anchor="middle" font-size="14" fill="#666b7a">ordered by: role / prominence</text>
+  <rect x="343" y="20" width="274" height="165" rx="10" fill="#ffffff" stroke="#302a78" stroke-width="2"/>
+  <text x="480" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#175c50" letter-spacing="1.5">TASK 2</text>
+  <text x="480" y="84" text-anchor="middle" font-size="26" font-weight="700" fill="#302a78">Information</text>
+  <text x="480" y="116" text-anchor="middle" font-size="17" fill="#202334">News must reach</text>
+  <text x="480" y="138" text-anchor="middle" font-size="17" fill="#202334">people</text>
+  <text x="480" y="168" text-anchor="middle" font-size="14" fill="#666b7a">ordered by: reach of a seed set</text>
+  <rect x="680" y="20" width="274" height="165" rx="10" fill="#e9f3f0" stroke="#175c50" stroke-width="2"/>
+  <text x="817" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#175c50" letter-spacing="1.5">TASK 3</text>
+  <text x="817" y="84" text-anchor="middle" font-size="26" font-weight="700" fill="#175c50">Adoption</text>
+  <text x="817" y="116" text-anchor="middle" font-size="17" fill="#202334">A household decides</text>
+  <text x="817" y="138" text-anchor="middle" font-size="17" fill="#202334">to commit</text>
+  <text x="817" y="168" text-anchor="middle" font-size="14" fill="#666b7a">ordered by: own take-up</text>
+  <path d="M284 102 L338 102" stroke="#7568c7" stroke-width="3.5" marker-end="url(#arr)"/>
+  <path d="M621 102 L675 102" stroke="#7568c7" stroke-width="3.5" marker-end="url(#arr)"/>
+</svg>
+:::
+
+::: {style="font-size: 22px; margin-top: 0.5em; text-align:center;"}
+A **task** is a stage of the process, defined by what must happen for it to
+advance and by the criterion that **orders actors' advantage** for it.
+:::
+
+::: {.takeaway style="margin-top: 0.9em; font-size: 25px;"}
+Each task orders the same population. The theory asks whether those
+**orderings agree**.
+:::
+
+::: {.src}
+Cf. Rule, Sabetta & Bearman 2026: events matter when they are tied into subsequent streams of action.
+:::
+
+::: {.notes}
+By task we mean a stage of a diffusion process. It is not necessarily
+something the focal actor does: a lender choosing entry points, a seed set
+spreading news and a household deciding to borrow are different loci of
+action. What makes them comparable is that each orders the same population.
+We distinguish tasks by their place in the process, not by the rankings they
+produce; otherwise any difference in rankings could be relabeled as a new task.
+The Rule, Sabetta and Bearman point is only a framing: an opening has
+consequences when it is tied into what follows.
+:::
+
+## Two Households in a Village {.smaller}
+
+::: {.cards .xl .c2 style="margin-top: 1.9em;"}
+::: {.card}
+<span class="tag">HOUSEHOLD A</span>
+
+#### The schoolteacher
+
+Neighbors consult the household for **information** and for help with
+**important decisions**.
+
+<span class="k">What an organization sees</span>
+Prominence is visible and advice is sought: a natural **entry point**.
+:::
+
+::: {.card .green}
+<span class="tag">HOUSEHOLD B</span>
+
+#### The family whose home is visited daily
+
+Its members visit others in turn: routine **co-presence** with neighbors.
+
+<span class="k">What adoption may require</span>
+Seeing how others like oneself manage repayments, coordinating with them,
+relying on them when things go wrong.
+:::
+:::
+
+::: {.takeaway style="margin-top: 1.6em; font-size: 26px;"}
+The advantage that made A a good point of entry **need not carry into
+adoption**.
+:::
+
+::: {.notes}
+Take a village. One household belongs to the schoolteacher; neighbors consult
+it. The other is visited every day. An organization looking for entry points
+finds the first household. Whether the second matters more once people must
+decide to take on a debt depends on what that decision requires. If it
+requires seeing how others manage repayments, coordinating with them, or
+relying on them, routine interaction can supply what advice does not.
+:::
+
+## Nonportability Needs Three Conditions Together {.smaller}
+
+::: {style="text-align:center; margin-top: 0.4em;"}
+![](figures/fig1_conceptual_framework.png){style="width:96%;"}
+:::
+
+::: {.takeaway style="margin-top: 0.5em; font-size: 24px;"}
+**(1)** Relations supply different capacities. **(2)** Tasks demand them in
+different proportions. **(3)** Actors stand differently across relations.
+:::
+
+::: {.notes}
+Panel A: the same actors occupy different positions in different relational
+domains. Panel B: two tasks weight capacities differently; larger circles
+mean greater demand. Panel C: an actor who leads in the domain that matters
+for the first task can trail in the domain that matters for the second.
+None of the three conditions is enough alone. If everyone stands in the same
+relative position across domains, nothing changes. If the domains supply
+equivalent capacities, a change in task demands changes nothing.
+:::
+
+## Advantage Is a Match Between a Position and a Task {.smaller}
+
+::: {.eqbox style="font-size: 34px;"}
+$$
+\color{#4f46a5}{R_{ir}}\;=\;\color{#a8433b}{\sum_{l}}\;\color{#b07d1e}{\omega_{lr}}\;\color{#175c50}{x_{il}}
+$$
+:::
+
+::: {.terms .t4}
+::: {.term .c1}
+<div class="sym">$R_{ir}$</div>
+<div class="name">Relevant position</div>
+<div class="mean">How well placed household $i$ is **for task $r$**</div>
+:::
+::: {.term .c4}
+<div class="sym">$\sum_l$</div>
+<div class="name">A weighted blend</div>
+<div class="mean">Add up the domains $l$, each counted by how much it matters</div>
+:::
+::: {.term .c3}
+<div class="sym">$\omega_{lr}$</div>
+<div class="name">Fit</div>
+<div class="mean">How much task $r$ draws on what domain $l$ makes possible</div>
+:::
+::: {.term .c2}
+<div class="sym">$x_{il}$</div>
+<div class="name">Standing</div>
+<div class="mean">Where $i$ sits in domain $l$: central, or at the edge</div>
+:::
+:::
+
+::: {.takeaway style="margin-top: 1em; font-size: 25px;"}
+One household can be central in one domain and peripheral in another. **Which
+standing counts depends on the task.**
+:::
+
+::: {.notes}
+Relevant position is a property of a match between a relation and a task, not of a household alone. It needs neither a universal centrality measure nor an intrinsically superior layer. x_il is the household's standing in domain l; omega_lr says how much task r draws on the capacity that domain l makes plausible; the sum blends domains by that fit; R_ir is the result. Read the equation left to right as: advantage for a task equals standing in each domain, weighted by how well that domain fits the task.
+:::
+
+## When Does Advantage Change? An Exact Identity {.smaller}
+
+::: {.eqbox style="font-size: 31px;"}
+$$
+\color{#4f46a5}{R_{i2}-R_{i1}}\;=\;\color{#175c50}{\frac{s}{2}}\;\color{#b07d1e}{(\tau_2-\tau_1)}\;\color{#a8433b}{(x_{i1}-x_{i2})}
+$$
+:::
+
+::: {.terms .t4}
+::: {.term .c1}
+<div class="sym">$R_{i2}-R_{i1}$</div>
+<div class="name">Change in advantage</div>
+<div class="mean">How much household $i$'s relevant position moves from task 1 to task 2</div>
+:::
+::: {.term .c2}
+<div class="sym">$s$</div>
+<div class="name">Differentiation</div>
+<div class="mean">How different the two domains are ($\tfrac12$ simply averages them)</div>
+<div class="null">$s=0$: domains interchangeable</div>
+:::
+::: {.term .c3}
+<div class="sym">$\tau_2-\tau_1$</div>
+<div class="name">Task shift</div>
+<div class="mean">How far the demands move from one task to the other</div>
+<div class="null">$\tau_1=\tau_2$: identical demands</div>
+:::
+::: {.term .c4}
+<div class="sym">$x_{i1}-x_{i2}$</div>
+<div class="name">Household profile</div>
+<div class="mean">How much more central $i$ is in domain 1 than in domain 2</div>
+<div class="null">$x_{i1}=x_{i2}$ for all: same standing</div>
+:::
+:::
+
+::: {.takeaway style="margin-top: 1em; font-size: 24px;"}
+It is a **product**: if any one factor is zero, advantage does not change. This
+separates the argument from the weaker claim that "different networks matter."
+:::
+
+::: {.notes}
+In the two-domain case, s indexes how differentiated the domains are and tau how much a task demands the capacity in which domain one specializes. The identity says advantage changes only if domains are differentiated, task demands change, and actors differ in their positions. Because the right side is a product, each of the three null cases returns exactly zero reordering, and they keep a change in a coefficient from being read after the fact as a new function of the relation. A changed score need not change a ranking; the share of pairs that actually exchange places measures how much nonportability there is.
+:::
+
+## Three Testable Implications {.smaller}
+
+::: {.cards .xl .c3 style="margin-top: 1.5em;"}
+::: {.card}
+<span class="tag">H1 · POSITIONAL DIFFERENTIATION</span>
+
+Relational domains **rank the same actors differently**.
+
+<span class="k">Condition</span>
+Observable without any outcome.
+:::
+
+::: {.card .green}
+<span class="tag">H2 · REVERSAL</span>
+
+The domain that orders actors for **program entry** differs from the domain
+that orders them for **adoption**.
+
+<span class="k">Core test</span>
+Same households, two tasks.
+:::
+
+::: {.card}
+<span class="tag">H3 · CONCEALMENT</span>
+
+**Aggregate** centrality predicts adoption worse than centrality in the
+domain H2 identifies.
+
+<span class="k">Why</span>
+A union network gives weight to irrelevant domains.
+:::
+:::
+
+::: {.takeaway style="margin-top: 1.5em; font-size: 24px;"}
+A fourth, **pre-specified secondary test**: the entry pool's advantage should
+weaken where domains correspond less. It relies on variation *between*
+villages, so we treat it as moderation, not as a pillar.
+:::
+
+::: {.notes}
+H1 is closer to a condition than to a contested hypothesis. H2 is a claim
+about orderings; that they differ because the stages draw on different
+capacities is an interpretation the data suggest but do not identify. H3
+follows because a union network sums relations that supply different
+capacities. The secondary test was specified, with controls and placebo, in
+the analysis code before estimating it.
+:::
+
+# II. Design: Three Kinds of Evidence {.center .middle background-color="#302a78"}
+
+## Setting: Microcredit Entering 75 Karnataka Villages {.smaller}
+
+::: {.cards .xl .c4 style="margin-top: 1.7em;"}
+::: {.stat}
+<div class="num">10,618</div>
+<div class="lab">households with network and adoption data</div>
+:::
+::: {.stat}
+<div class="num">49</div>
+<div class="lab">villages (structural comparisons use all 75)</div>
+:::
+::: {.stat}
+<div class="num g">2006</div>
+<div class="lab">networks measured about six months before the lender entered</div>
+:::
+::: {.stat}
+<div class="num g">17.3%</div>
+<div class="lab">of households adopted a BSS loan</div>
+:::
+:::
+
+::: {style="font-size: 26px; margin-top: 1em; max-width: 960px; margin-left:auto; margin-right:auto;"}
+-   BSS entered by inviting households with **locally influential roles**
+    (teachers, self-help group leaders, shopkeepers): 12% of households.
+-   BSS **did not observe the networks**: the rule is a role-based entry
+    strategy of the kind organizations commonly use.
+-   Because networks **precede** entry, adoption cannot have produced the
+    measured positions.
+:::
+
+::: {.src}
+Banerjee, Chandrasekhar, Duflo & Jackson 2013
+:::
+
+::: {.notes}
+We use the multiplex data collected by Banerjee and colleagues. A household
+census and a network survey were fielded in 2006, about six months before the
+lender entered any village. Borrowing carried repayment obligations, default
+risk and reputational exposure: a decision for which knowing the program
+existed was necessary but far from sufficient. Complete data are available for
+10,618 households in 49 villages. The lender chose entry points by social
+role and did not observe the networks, so its relational footprint is an
+empirical question.
+:::
+
+## Same Households, Three Relational Layers {.smaller}
+
+::: {style="text-align:center; margin-top: 0.2em;"}
+![](figures/layers3.png){style="max-height: 470px; width:auto; border-radius:6px;"}
+:::
+
+::: {.takeaway style="margin-top: 0.6em; font-size: 23px;"}
+The households are the same in every layer. **Who is central changes with the
+relation.** Schematic illustration, not data.
+:::
+
+::: {.notes}
+A schematic of what the data contain: the same households, observed in three relational layers (advice and decision, exchange, visiting). Dashed lines link a household across layers. Large nodes mark households that are central in one layer; they are not the same households in every layer. The picture is an illustration, not an estimate.
+:::
+
+## Three Relational Domains, One Position Measure {.smaller}
+
+::: {style="font-size: 20px;"}
+| Domain | Name generators | Capacities made plausible | Mean degree |
+|:--|:--|:--|:-:|
+| **Advice/Decision** | Seeks advice from; turns to for help with an important decision | Communicative and deliberative access; judgment | 3.2 |
+| **Exchange** | Borrows money from; lends money to | Material support; risk buffering | 4.2 |
+| **Visiting** | Visits the other's home; is visited | Observation of ordinary conduct; coordination; co-presence | 5.3 |
+:::
+
+::: {.takeaway style="margin-top: 0.9em; font-size: 24px;"}
+Labels identify **relational infrastructures**, not the content that passed
+through a tie in a particular decision.
+:::
+
+::: {.notes}
+Respondents named households with which they maintained several kinds of
+relation; following the original authors we combine paired name generators
+into three undirected domains. Mean degree is 3.2, 4.2 and 5.3, against 7.0 in
+the union of all relations. A coefficient compares the least and the most
+central household of a village. The capacities in the table are those each
+domain makes plausible, not exclusive transmission channels.
+:::
+
+## How Position Is Measured {.smaller}
+
+::: {style="font-size: 25px; margin-top: 1em;"}
+**Position** = a household's *diffusion centrality* in each domain, normalized to $[0,1]$ **within each village**.
+:::
+
+::: {.eqbox style="font-size: 32px;"}
+$$
+\mathrm{DC}(i)=\color{#175c50}{\Big[}\;\color{#a8433b}{\sum_{t=0}^{T}}\;\color{#4f46a5}{(qA)^{t}}\;\color{#b07d1e}{\mathbf 1}\;\color{#175c50}{\Big]_i}
+$$
+:::
+
+::: {.terms .t4}
+::: {.term .c1}
+<div class="sym">$A$, $q$</div>
+<div class="mean">Who is tied to whom in the domain; $q$ damps each further step</div>
+:::
+::: {.term .c4}
+<div class="sym">$\sum_{t=0}^{T}$</div>
+<div class="mean">Count walks of every length from 0 up to the layer's diameter</div>
+:::
+::: {.term .c3}
+<div class="sym">$\mathbf 1$</div>
+<div class="mean">Everyone starts equal: one unit of information per household</div>
+:::
+::: {.term .c2}
+<div class="sym">$[\cdot]_i$</div>
+<div class="mean">Read off household $i$: the expected reach of information that starts there</div>
+:::
+:::
+
+::: {.takeaway style="margin-top: 1em; font-size: 24px;"}
+A household is central when information that starts there **travels far** through
+the domain's ties, and the score is compared **within its own village**.
+:::
+
+::: {.notes}
+Diffusion centrality is the expected number of times information starting at a household reaches the others through walks of bounded length. A is the adjacency matrix of the domain, q is set to the inverse of its largest eigenvalue so that longer walks count less, T equals the layer's diameter, and the vector of ones means every household starts with one unit. Scores are normalized to zero-one within each village and domain, so coefficients compare the least and the most central household of a village.
+:::
+
+## Same Households, Two Tasks {.smaller}
+
+::: {.eqbox style="font-size: 27px;"}
+$$
+\color{#4f46a5}{Y^{k}_{iv}}=\color{#175c50}{\alpha^{k}_v}+\color{#b07d1e}{\sum_{l\in\{AD,E,V\}}\beta^{k}_l\,\mathrm{DC}_{liv}}+\color{#a8433b}{\mathbf{X}'_{iv}\gamma^{k}}+\color{#5b6b7a}{\varepsilon^{k}_{iv}}
+$$
+:::
+
+::: {.terms .t5}
+::: {.term .c1}
+<div class="sym">$Y^{k}_{iv}$</div>
+<div class="name">Outcome</div>
+<div class="mean">Did household $i$ in village $v$ become an entry point ($G$) or adopt ($U$)?</div>
+:::
+::: {.term .c2}
+<div class="sym">$\alpha^{k}_v$</div>
+<div class="name">Village baseline</div>
+<div class="mean">Compare households only **within** their own village</div>
+:::
+::: {.term .c3}
+<div class="sym">$\beta^{k}_l\,\mathrm{DC}_{liv}$</div>
+<div class="name">Position pays</div>
+<div class="mean">How much more likely the outcome is for a household that is more central in domain $l$</div>
+:::
+::: {.term .c4}
+<div class="sym">$\mathbf{X}'\gamma$</div>
+<div class="name">Controls</div>
+<div class="mean">Union degree, wealth, survey participation; the same in both models</div>
+:::
+::: {.term .c5}
+<div class="sym">$\varepsilon$</div>
+<div class="name">Everything else</div>
+<div class="mean">What the model does not explain</div>
+:::
+:::
+
+::: {.takeaway style="margin-top: 0.9em; font-size: 23px;"}
+Two outcomes, one model each: **entry designation** (a leader household chosen by
+the lender as an entry point) and **adoption** (took up a BSS loan). Both are the
+household's own, so the object is **positions**, not influence.
+:::
+
+::: {.notes}
+For each outcome we estimate a linear probability model in which the three domains compete, and we estimate both equations jointly so that inference on theta keeps the covariance generated by observing both outcomes for the same households. k indexes the outcome: G is designation, U is uptake. The village intercept means every comparison is within a village; beta is the change in probability associated with moving from the least to the most central household in a domain, because scores are normalized to zero-one within each village. Standard errors are clustered by village; wild-cluster bootstrap with 49 villages.
+:::
+
+## The Reversal Estimand {.smaller}
+
+::: {.eqbox style="font-size: 30px;"}
+$$
+\color{#4f46a5}{\Theta}=\color{#175c50}{\big(\beta^{U}_{V}-\beta^{U}_{AD}\big)}-\color{#b07d1e}{\big(\beta^{G}_{V}-\beta^{G}_{AD}\big)}
+$$
+:::
+
+::: {.terms .t3}
+::: {.term .c2}
+<div class="sym">$\beta^{U}_{V}-\beta^{U}_{AD}$</div>
+<div class="name">The gap at adoption</div>
+<div class="mean">How much more **Visiting** than **Advice/Decision** centrality predicts taking up the loan</div>
+:::
+::: {.term .c3}
+<div class="sym">$\beta^{G}_{V}-\beta^{G}_{AD}$</div>
+<div class="name">The gap at entry</div>
+<div class="mean">The same Visiting-minus-Advice gap, now for being designated an entry point</div>
+:::
+::: {.term .c1}
+<div class="sym">$\Theta$</div>
+<div class="name">A contrast of contrasts</div>
+<div class="mean">How much the gap **flips** between entry and adoption. Zero means one ordering serves both tasks</div>
+<div class="null">$\Theta=0.451$, SE $0.103$</div>
+:::
+:::
+
+::: {.takeaway style="margin-top: 1em; font-size: 24px;"}
+$\Theta$ is **not** the causal effect of a position. It asks only whether
+different domains order the same households differently for different tasks.
+:::
+
+::: {.notes}
+Theta subtracts the entry-stage gap between Visiting and Advice from the adoption-stage gap. If the same relational advantage carried from entry to adoption, the two gaps would be equal and theta would be zero. The two contrasts have opposite signs, so the reversal does not depend on putting probabilities of different base rates on a common scale. Designation is a selection rule applied by the lender, not an act performed by households, so reading it as a task with communicative demands is an interpretation. That is why we add an independent benchmark.
+:::
+
+## Triangulation: Three Designs, Three Different Questions {.smaller}
+
+::: {.cards .c3 style="margin-top: 0.8em;"}
+::: {.card}
+<span class="tag">PRIMARY TEST</span>
+
+#### Within-BSS comparison
+
+<span class="k">Question</span>
+Do different domains order the **same households** for entry and for adoption?
+
+<span class="k">Evidence</span>
+10,618 households, 49 villages; networks measured before entry.
+
+<span class="k">Cannot show</span>
+Causal effects of a position; how information traveled.
+:::
+
+::: {.card .green}
+<span class="tag">INDEPENDENT BENCHMARK</span>
+
+#### Randomized seeding experiment
+
+<span class="k">Question</span>
+For the **information task**, which seed position yields more reach?
+
+<span class="k">Evidence</span>
+68 villages; 3 or 5 seeds assigned at random within each village.
+
+<span class="k">Cannot show</span>
+Entry or adoption of the same households as BSS.
+:::
+
+::: {.card .soft}
+<span class="tag">SCOPE CONDITION</span>
+
+#### Formal model and simulation
+
+<span class="k">Question</span>
+When does reordering among individuals become a **collective cost**?
+
+<span class="k">Evidence</span>
+Conditions derived; 100 network pairs per cell; observed-network upper bound.
+
+<span class="k">Cannot show</span>
+What BSS actually gained or lost.
+:::
+:::
+
+::: {.takeaway style="margin-top: 0.9em; font-size: 24px;"}
+The legs have **different units, villages and outcomes**. Each answers one
+question; we **never pool them** into a single estimate.
+:::
+
+::: {.notes}
+This is how the evidence is organized. The within-BSS comparison is the
+primary test, and its object is positions. Designation records where an
+organization began, not how information traveled, so we add an independent
+benchmark for the informational task: a randomized seeding experiment in the
+same region. The experiment identifies how the relational position of a seed
+set affects reach with the village network held fixed. The simulation is a
+statement about scope, not a test: it shows what the three conditions imply for
+reach. The studies differ in units and villages. We do not subtract one set of
+coefficients from the other or test their difference as a common parameter.
+:::
+
+## Rival Explanations We Take Seriously {.smaller}
+
+::: {style="font-size: 19px;"}
+| Threat | What could produce the pattern | What we do |
+|:--|:--|:--|
+| **General prominence** | Visiting just marks wealthier or more active households | Control union degree and wealth; compare opposite relational profiles after balancing on prominence; drop the entry pool |
+| **Composition, homophily** | Caste structures both relations and access to credit | Sub-caste fixed effects; residualize on caste, religion, housing; estimate by caste |
+| **Spatial proximity** | Visiting is the most local relation; neighbors share exposure | Census enumeration order as a proxy; split Visiting ties into near and far |
+| **Measurement** | Sampled respondents; composites; the pool is not the households contacted | Each constituent name generator; four scales; four sample restrictions |
+:::
+
+::: {.takeaway style="margin-top: 0.9em; font-size: 24px;"}
+A generic prominence account predicts the **same households lead in both
+tasks**, not that different domains order them for different tasks.
+:::
+
+::: {.notes}
+The design is observational. We address four alternatives before the results.
+General prominence predicts that the same households lead in both tasks; it
+does not predict that different domains order them for different tasks.
+Spatial proximity is the one we cannot fully resolve: household coordinates
+that can be linked to these records are not publicly available, so we use
+enumeration order as a proxy.
+:::
+
+# III. Results {.center .middle background-color="#302a78"}
+
+## H1: The Domains Rank Households Differently {.smaller .boxed}
+
+::::::::: columns
+::::: {.column width="62%"}
+::: {style="text-align:center; margin-top: 0.6em;"}
+![](figures/fig_positional_differentiation.png){style="width:100%;"}
+:::
+:::::
+
+::::: {.column width="38%"}
+::: {style="font-size: 23px; margin-top: 1.5em;"}
+Across 75 villages, the within-village Spearman correlation between the Advice/Decision
+and Visiting rankings has a median of **.742** (IQR .686 to .796).
+
+In the median village, only **half** of the top decile in one domain is in
+the top decile of the other.
+
+**21.8%** of households move at least 25 percentile points between the two rankings.
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 0.5em; font-size: 24px;"}
+Related but **far from interchangeable**: the third condition is met, though
+only partly.
+:::
+
+::: {.notes}
+H1 would fail only if the domains ranked households nearly identically. The
+domains are far from independent, which limits how much reordering any change
+in task demands can produce. What matters is how much reordering the observed
+correspondence allows, which the simulation takes up.
+:::
+
+## H2: Entry and Adoption Privilege Different Relations {.smaller .boxed}
+
+::: {style="text-align:center; margin-top: 0.3em;"}
+![](figures/fig2_within_reversal_socsci.png){style="width:86%;"}
+:::
+
+::: {.cards .c3 style="margin-top: 0.1em;"}
+::: {.stat}
+<div class="num">+21.9 pp</div>
+<div class="lab">Advice/Decision → entry<br>$b=0.219$, SE $0.045$, $p<.001$</div>
+:::
+::: {.stat}
+<div class="num g">+17.3 pp</div>
+<div class="lab">Visiting → adoption<br>$b=0.173$, SE $0.069$, $p=.012$</div>
+:::
+::: {.stat}
+<div class="num">Θ = 0.451</div>
+<div class="lab">reversal contrast<br>SE $0.103$, $p<.001$</div>
+:::
+:::
+
+::: {.takeaway style="margin-top: 0.5em; font-size: 23px;"}
+Moving from the least to the most central household in a village: the **same
+households** are ordered by **different relations** at the two tasks.
+:::
+
+::: {.notes}
+Panel A: Advice/Decision centrality strongly characterizes the entry pool;
+Exchange and Visiting carry little designation signal. Panel B: adoption
+shows the opposite profile; Visiting predicts take-up and the other two do
+not. Between the tasks the Advice/Decision coefficient falls by 0.252 and the
+Visiting coefficient rises by 0.200. Substantively, moving from the 25th to the
+75th percentile of Visiting centrality corresponds to 4.3 percentage points of
+adoption against a base rate of 17.3 percent.
+:::
+
+## The Reversal Is Not Fragile {.smaller .boxed}
+
+::: {.cards .c3 style="margin-top: 1.1em;"}
+::: {.stat}
+<div class="num">49 / 49</div>
+<div class="lab">leave-one-village-out estimates stay positive and significant (0.141 to 0.194)</div>
+:::
+::: {.stat}
+<div class="num g">p = .021</div>
+<div class="lab">wild-cluster bootstrap with the null imposed</div>
+:::
+::: {.stat}
+<div class="num">8 / 8</div>
+<div class="lab">name-generator versions of Θ are positive (0.192 to 0.538); seven with $p<.05$</div>
+:::
+:::
+
+::: {.cards .c3 style="margin-top: 0.4em;"}
+::: {.stat}
+<div class="num g">16 / 16</div>
+<div class="lab">Visiting minus Advice/Decision contrasts positive across four scales and four samples; 15 intervals exclude zero</div>
+:::
+::: {.stat}
+<div class="num">0.168</div>
+<div class="lab">Visiting coefficient among households <b>outside</b> the entry pool (⁠$p=.025$)</div>
+:::
+::: {.stat}
+<div class="num g">0.186</div>
+<div class="lab">in the 43 original villages (⁠$p=.011$)</div>
+:::
+:::
+
+::: {.takeaway style="margin-top: 0.8em; font-size: 24px;"}
+Not an artifact of **construction, scaling, sample, or the entry pool itself**.
+:::
+
+::: {.notes}
+Adjusting the adoption model for designation leaves the Visiting coefficient
+at 0.174. The reversal is larger when Advice/Decision is represented by the
+decision generator than by the advice generator, a point we return to in the
+appendix.
+:::
+
+## H3: The Aggregate Network Conceals the Reversal {.smaller .boxed}
+
+::: {.cards .c2 style="margin-top: 1.4em;"}
+::: {.card .soft}
+<span class="tag">UNION OF ALL RELATIONS</span>
+
+<div class="stat" style="padding:0.2em 0;">
+<div class="num">−0.025</div>
+<div class="lab">union centrality → adoption<br>SE $0.070$, $p=.72$</div>
+</div>
+:::
+
+::: {.card .green}
+<span class="tag">VISITING ALONE</span>
+
+<div class="stat" style="padding:0.2em 0;">
+<div class="num g">+0.156</div>
+<div class="lab">Visiting centrality → adoption<br>$p=.030$</div>
+</div>
+:::
+:::
+
+::: {style="font-size: 23px; margin-top: 1.1em; text-align:center;"}
+Estimated jointly on the same households, Visiting exceeds the union
+coefficient by **0.181** (SE $0.058$, $p=.003$);<br>in the model that includes both, by
+**0.438** (SE $0.184$, $p=.021$).
+:::
+
+::: {.takeaway style="margin-top: 1em; font-size: 24px;"}
+Collapsing the domains gives weight to relations that carry **no adoption
+signal** and dilutes the one that does.
+:::
+
+::: {.src}
+Distinct from the village-level finding of Banerjee et al. 2013: ours concerns which households adopt <em>within</em> villages.
+:::
+
+::: {.notes}
+This is a stronger claim than a contrast in significance, because the two
+coefficients differ from each other. The negative union coefficient in the
+joint model should not be over-read: the model also controls for union
+degree, which is mechanically related to union centrality. The finding does
+not conflict with Banerjee and colleagues, who showed that the union-network
+centrality of a village's entry points predicts the village's adoption rate.
+We ask a different question: which households adopt, within villages.
+:::
+
+## What Qualifies the Result {.smaller .boxed}
+
+::: {.cards .c2 style="margin-top: 1.1em;"}
+::: {.card}
+<span class="tag">SPATIAL PROXIMITY</span>
+
+The adoption association is carried by ties between **nearby households**
+(⁠$b=0.080$, $p=.017$); other Visiting ties do not (⁠$b=0.019$, $p=.71$).
+
+<span class="k">Reading</span>
+Learning from neighbors **or** neighborhood differences in exposure: the data
+cannot separate the two.
+:::
+
+::: {.card .green}
+<span class="tag">WHO DRIVES IT</span>
+
+Concentrated among **lower-caste households** (interaction $b=0.159$,
+$p=.008$).
+
+<span class="k">Balancing on prominence</span>
+Visiting-oriented households adopt 2.4 pp more, interval $[-1.2, 5.9]$:
+consistent with, not independent confirmation of, the main result.
+:::
+:::
+
+::: {.card .soft style="margin-top: 14px;"}
+<span class="tag">SECONDARY TEST: UNINFORMATIVE</span>
+
+Entry-pool advantage should shrink where domains diverge. The interaction is
+indistinguishable from zero (⁠$b=-0.008$, $p=.96$), and cross-village variation is
+narrow (SD of $1-\rho_v$ is 0.08). **Neither support nor refutation.**
+:::
+
+::: {.notes}
+The spatial check is the most consequential qualification. At the most local
+threshold, which classifies a third of Visiting ties as near, near ties
+predict adoption and the remaining ties do not. This is what one would expect
+if routine co-presence lets households observe how neighbors manage their
+loans, and it is also what one would expect if neighborhoods differed in
+exposure. We report the secondary test as uninformative. Positional
+differentiation itself is established directly by H1; what the villages do not
+provide is enough variation to show that the entry pool's advantage scales
+with it.
+:::
+
+## An Independent Benchmark for the Information Task {.smaller .boxed}
+
+::::::::: columns
+::::: {.column width="55%"}
+::: {style="font-size: 23px; margin-top: 1.2em;"}
+-   Randomized seeding experiment in the same region: **3 or 5 seed
+    households** per village, assigned at random.
+-   Other households register receipt with a **missed call**.
+-   **68 villages**; four harmonized domains: Advice, Decision Support,
+    Visiting, Material Exchange.
+-   Random assignment **within** villages identifies how the seed set's
+    position affects reach, holding the network fixed.
+:::
+:::::
+
+::::: {.column width="45%"}
+::: {.cards .c2 style="margin-top: 1.6em; grid-template-columns: 1fr;"}
+::: {.stat}
+<div class="num">−0.684 SD</div>
+<div class="lab">Visiting minus Advice contrast in calls per household<br>randomization $p=.030$</div>
+:::
+::: {.card .soft}
+Original scaling: $-0.717$ (conventional $p=.09$). Unique calls: randomization
+$p=.072$.
+:::
+:::
+:::::
+:::::::::
+
+::: {.takeaway style="margin-top: 0.8em; font-size: 24px;"}
+Seed sets central in **Advice** generated more informational reach than seed
+sets central in **Visiting**. The direction is stable; its precision depends on
+the scaling.
+:::
+
+::: {.src}
+Chandrasekhar, Chaudhary, Golub & Jackson 2026
+:::
+
+::: {.notes}
+Because assignment is random within each village, the experiment identifies
+how the relational position of the seed set affects realized informational
+reach. We measure seed exposure relative to its randomization distribution
+within each village, which removes differences in network size and topology
+that random assignment did not generate. We read the experiment as supporting
+the informational side of the argument, not as establishing it. Its Advice
+domain is the advice generator alone, whereas the BSS composite also includes
+the decision generator, so the domains are harmonized, not identical.
+:::
+
+## Two Tasks, Two Orderings, Not One Estimate {.smaller .boxed}
+
+::: {style="text-align:center; margin-top: 1.4em;"}
+<svg viewBox="0 0 960 330" width="930" role="img" aria-label="Which domain ranks first at each task, by study">
+  <text x="170" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#666b7a" letter-spacing="1.5">STUDY</text>
+  <text x="520" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#666b7a" letter-spacing="1.5">TASK</text>
+  <text x="810" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#666b7a" letter-spacing="1.5">DOMAIN THAT LEADS</text>
+  <line x1="20" y1="48" x2="940" y2="48" stroke="#d9dbea"/>
+  <text x="30" y="92" font-size="21" font-weight="700" fill="#302a78">BSS, within villages</text>
+  <text x="30" y="116" font-size="15" fill="#666b7a">same households</text>
+  <rect x="380" y="68" width="280" height="56" rx="8" fill="#eeecfa"/>
+  <text x="520" y="103" text-anchor="middle" font-size="20" fill="#302a78" font-weight="600">Program entry</text>
+  <rect x="690" y="68" width="240" height="56" rx="28" fill="#302a78"/>
+  <text x="810" y="103" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="700">Advice/Decision</text>
+  <line x1="20" y1="142" x2="940" y2="142" stroke="#eee"/>
+  <text x="30" y="186" font-size="21" font-weight="700" fill="#302a78">BSS, within villages</text>
+  <text x="30" y="210" font-size="15" fill="#666b7a">same households</text>
+  <rect x="380" y="162" width="280" height="56" rx="8" fill="#e9f3f0"/>
+  <text x="520" y="197" text-anchor="middle" font-size="20" fill="#175c50" font-weight="600">Household adoption</text>
+  <rect x="690" y="162" width="240" height="56" rx="28" fill="#175c50"/>
+  <text x="810" y="197" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="700">Visiting</text>
+  <line x1="20" y1="236" x2="940" y2="236" stroke="#eee"/>
+  <text x="30" y="280" font-size="21" font-weight="700" fill="#302a78">Randomized seeding</text>
+  <text x="30" y="304" font-size="15" fill="#666b7a">village seed sets</text>
+  <rect x="380" y="256" width="280" height="56" rx="8" fill="#eeecfa"/>
+  <text x="520" y="291" text-anchor="middle" font-size="20" fill="#302a78" font-weight="600">Informational reach</text>
+  <rect x="690" y="256" width="240" height="56" rx="28" fill="#302a78"/>
+  <text x="810" y="291" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="700">Advice</text>
+</svg>
+:::
+
+::: {.takeaway style="margin-top: 1.5em; font-size: 24px;"}
+The two studies point **separately** to the same pattern. Neither observes
+the same households in two successive stages, so we do not combine them.
+:::
+
+::: {.notes}
+This slide is a reading aid, not a calculation. The experiment is a benchmark
+for the informational task, not a first stage of the BSS process. Its unit is a
+village's seed set and its outcome is village-level reach, whereas the BSS
+models concern households' own positions and adoption. The two point
+separately to Advice ranking above Visiting when the task is spreading
+information and to Visiting ranking above Advice/Decision when the task is a
+household's own take-up of a costly practice.
+:::
+
+## When Does Reordering Matter? {.smaller .boxed}
+
+::::::::: columns
+::::: {.column width="47%"}
+::: {style="font-size: 20px; margin-top: 0.3em;"}
+Simulated networks vary how much the two layers **correspond**. At complete
+differentiation and a complete change in task demands, correspondence falls
+from .952 to −.016:
+:::
+
+::: {.cards .c1 style="margin-top: .5em;"}
+::: {.card}
+<span class="tag">A · PAIRS THAT REVERSE</span>
+Who leads in task 1 no longer leads in task 2: **9.0% → 50.5%**
+:::
+::: {.card .green}
+<span class="tag">B · ELIGIBLE PAIRS</span>
+Same share, weighting each pair by both actors' chance of passing task 1: **a similar pattern**
+:::
+::: {.card .soft}
+<span class="tag">C · REUSE LOSS</span>
+Share of attainable task-2 reach lost by reusing the task-1 initiators: **0.7% → 36.7%**
+:::
+:::
+
+::: {.takeaway style="margin-top: 0.6em; font-size: 20px;"}
+Modest reordering is **absorbed** by redundant paths; extensive reordering
+makes reuse sacrifice **more than a third** of attainable coverage.
+:::
+:::::
+
+::::: {.column width="53%"}
+::: {style="text-align:center; margin-top: 0.1em;"}
+![](figures/fig_task_capacity_model.png){style="max-height: 575px; width:auto;"}
+:::
+::: {style="font-size: 15px; text-align:center; color:#5b6071; margin-top:.2em;"}
+Green: complete differentiation ($s=1$); blue: intermediate ($s=.5$). Solid: complete change in task demands; dashed: partial. Shaded band: correspondence in the 75 Karnataka villages (IQR). Points: means of 100 network pairs.
+:::
+:::::
+:::::::::
+
+::: {.notes}
+The model instantiates the two-domain case of the identity. A factorial design
+varies the three conditions independently. All three null cases return exactly
+zero reversal and zero loss, and the program stops if they do not. Varying the
+reach horizon, attenuation, exposure scale, number of initiators, degree and
+group structure changes magnitudes but never the ordering. Exhaustive
+enumeration in smaller networks confirms that the selection heuristic attains
+the exact optimum. The shaded band is the interquartile range of correspondence
+across the 75 villages.
+:::
+
+## Where the Karnataka Villages Sit {.smaller .boxed}
+
+::: {.cards .xl .c4 style="margin-top: 1.2em;"}
+::: {.stat}
+<div class="num">.776</div>
+<div class="lab">median cross-domain correspondence (IQR .734 to .822)</div>
+:::
+::: {.stat}
+<div class="num g" style="font-size:36px;">9.5% / 18.8%</div>
+<div class="lab">pairs reversing, partial / complete shift in demands</div>
+:::
+::: {.stat}
+<div class="num" style="font-size:36px;">1.6% / 6.8%</div>
+<div class="lab">reuse loss, partial / complete shift</div>
+:::
+::: {.stat}
+<div class="num g">15.0%</div>
+<div class="lab">upper bound on observed networks (6.6% at the lower end); 21.4% of pairs reverse</div>
+:::
+:::
+
+::: {style="font-size: 25px; margin-top: 1em; max-width: 960px; margin-left:auto; margin-right:auto;"}
+-   High correspondence: reordering is real but **absorbed by redundant reach**.
+-   The observed-network figures treat regression coefficients as task–capacity
+    weights: **ceilings, not estimates** of what BSS gained or lost.
+-   Not evidence of influence: entry-pool positions did not predict adoption within two
+    steps of them (⁠$b=0.002$, $p=.72$).
+:::
+
+::: {.takeaway style="margin-top: 0.7em; font-size: 24px;"}
+Low correspondence marks settings **vulnerable** to nonportability. It does not
+by itself predict the loss.
+:::
+
+::: {.notes}
+One structural component of the loss, the correspondence between two layers'
+rankings, can be computed from network data alone, before any outcome is
+observed. The loss also depends on how differently the layers are specialized,
+on how much task demands change, and on the redundancy of the network and the
+selection budget. The synthetic and the observed-network figures are not
+comparable estimates; part of the gap plausibly reflects the selection budget.
+:::
+
+# IV. What It Adds {.center .middle background-color="#302a78"}
+
+## Relational Advantage Is a Match, Not an Attribute {.smaller}
+
+::: {style="font-size: 27px; margin-top: 1.6em; max-width: 960px; margin-left:auto; margin-right:auto;"}
+-   Diffusion is not the spread of **one thing through one network**: it joins
+    tasks that are sequential but **not relationally equivalent**.
+-   Advantage is neither a property of an actor nor a permanent property of a
+    layer. It is a **match between a position and a task**.
+-   The entry rule found the households others consult. That secures an
+    organization's standing, but it does not locate the relations through which
+    a community **decides whether to act**.
+:::
+
+::: {.takeaway style="margin-top: 1.4em; font-size: 26px;"}
+Before asking whether central actors matter for diffusion, ask **central in
+which relation, and for which task**.
+:::
+
+::: {.src}
+Matters most where adoption is consequential: joint liability, public exposure, financial risk.
+:::
+
+::: {.notes}
+The argument returns to a question of specificity that the founders of
+diffusion research posed and later work largely set aside. We add a functional
+dimension to the structural analysis of how ties are organized. The relations
+that give an organization purchase on a village need not organize the village's
+response. The argument should matter most where adoption is consequential: a
+missed-call promotion is cheap and reversible; group microcredit entails joint
+liability and financial risk. The same reasoning applies to recruitment into
+risky collective action and to the uptake of unfamiliar health practices.
+:::
+
+## Four Limits {.smaller}
+
+::: {.cards .xl .c2 style="margin-top: 1.1em;"}
+::: {.card}
+<span class="tag">1 · CONTENT</span>
+Name generators identify **domains**, not what passed through a tie. The data
+do not identify the capacities.
+:::
+::: {.card .green}
+<span class="tag">2 · OBSERVATIONAL</span>
+Adoption is a household's own take-up, not influence. The Visiting association
+is carried by **nearby** ties; latent homophily remains possible.
+:::
+::: {.card .green}
+<span class="tag">3 · SECONDARY TEST</span>
+Between-village variation in correspondence was **uninformative**: we cannot show
+that the reversal scales with differentiation.
+:::
+::: {.card}
+<span class="tag">4 · NO SHARED HOUSEHOLDS</span>
+Entry versus adoption comes from BSS; information comes from another study.
+The two tasks are **never observed for the same households**.
+:::
+:::
+
+::: {.takeaway style="margin-top: 1.2em; font-size: 24px;"}
+These limits narrow the claim but leave the **central empirical contrast**
+intact.
+:::
+
+::: {.notes}
+Data recording information receipt, tie-specific resources and later action
+for the same actors would permit a direct test of the capacities. Without
+linkable household locations we cannot tell learning from neighbors apart from
+neighborhood differences in exposure.
+:::
+
+## Thank You {#thank-you background-color="#302a78" .center .middle}
+
+::: {style="color:#ffffff; font-size: 27px; max-width: 900px;"}
+In the villages we studied, the answer changed between the moment an
+opportunity **arrived** and the moment people **decided to take it**.
+:::
+
+::: {style="color:#cfd0ea; font-size: 20px; margin-top: 2em;"}
+Roberto Cantillan &nbsp;·&nbsp; Mauricio Bucca<br>
+Department of Sociology, Pontificia Universidad Católica de Chile
+:::
+
+# Appendix {.center .middle background-color="#302a78"}
+
+## A1. An Exploratory Contrast: Decision Support versus Advice {.smaller}
+
+::: {style="font-size: 26px; margin-top: 1.1em; max-width: 980px; margin-left:auto; margin-right:auto;"}
+-   Separating the generators behind Advice/Decision: **Decision Support**
+    centrality is negatively associated with adoption (standardized
+    $b=-0.059$, $p=.003$).
+-   The *relative* profile matters: Decision Support minus Advice predicts lower
+    adoption (⁠$b=-0.099$, $p=.005$); their sum does not (⁠$b=-0.020$, $p=.48$).
+-   Sharpest among entry-pool households (interaction $b=-0.074$, $p<.001$).
+-   The reversal is larger when Advice/Decision is represented by the decision
+    generator (0.495 to 0.538) than by the advice generator (0.192 to 0.287).
+:::
+
+::: {.takeaway style="margin-top: 1em; font-size: 23px;"}
+Deliberative prominence as such does not predict lower adoption; ranking higher
+as a source of decision support than of advice does. **Outside H1–H3 and
+exploratory.**
+:::
+
+## A2. When Do Two Actors Exchange Places? {.smaller}
+
+::: {.eqbox style="font-size: 27px;"}
+$$
+\color{#4f46a5}{\left(\Delta m_{ij}+s\tau_1\Delta d_{ij}\right)}\color{#175c50}{\left(\Delta m_{ij}+s\tau_2\Delta d_{ij}\right)}<0
+$$
+:::
+
+::: {.terms .t4}
+::: {.term .c5}
+<div class="sym">$m_i,\;\Delta m_{ij}$</div>
+<div class="name">Overall level</div>
+<div class="mean">Mean position $(x_{i1}+x_{i2})/2$; the gap between $i$ and $j$</div>
+:::
+::: {.term .c3}
+<div class="sym">$d_i,\;\Delta d_{ij}$</div>
+<div class="name">Profile</div>
+<div class="mean">Relative position $(x_{i1}-x_{i2})/2$; the gap between $i$ and $j$</div>
+:::
+::: {.term .c1}
+<div class="sym">$\Delta m+s\tau_1\Delta d$</div>
+<div class="name">Who leads in task 1</div>
+<div class="mean">Positive if $i$ ranks above $j$ in task 1</div>
+:::
+::: {.term .c2}
+<div class="sym">$\Delta m+s\tau_2\Delta d$</div>
+<div class="name">Who leads in task 2</div>
+<div class="mean">Positive if $i$ ranks above $j$ in task 2</div>
+:::
+:::
+
+::: {.takeaway style="margin-top: 0.9em; font-size: 22px;"}
+A **negative product** means one leads in task 1 and the other in task 2: they exchange places.
+A shift common to all actors leaves rankings intact; the share of pairs that
+exchange places **measures** nonportability.
+:::
+
+::: {style="font-size: 21px; margin-top: .6em;"}
+Collective cost of reuse:
+$L_{1\rightarrow2}=\dfrac{Y_2(S_2^{*})-Y_2(S_1^{*})}{Y_2(S_2^{*})}$ &nbsp;=&nbsp; the share of attainable task-2 reach lost by carrying the task-1 initiator set $S_1^{*}$ forward, instead of the best task-2 set $S_2^{*}$.
+:::
+
+## A3. Simulation Design {.smaller}
+
+::: {style="font-size: 25px; margin-top: 1.1em; max-width: 960px; margin-left:auto; margin-right:auto;"}
+-   Task infrastructure: $A_r=\omega_{1r}A_1+\omega_{2r}A_2$, so no layer is
+    intrinsically more useful ($A_r$: the network task $r$ effectively runs on;
+    $A_1,A_2$: the two layers; $\omega_{lr}$: how much task $r$ leans on layer $l$).
+-   Factorial design: differentiation $s\in\{0,.5,1\}$; task 2 keeps, shifts
+    partly, or reverses demands; correspondence varied by relabeling actors in
+    the second layer.
+-   **100** independently generated pairs of **80-actor** networks with group
+    structure and heterogeneous activity; **five** initiators per task.
+-   The three null cases must return **exactly zero**; the program stops if not.
+-   Sensitivity: reach horizon, attenuation, exposure scale, budget, degree,
+    group structure. Under low correspondence and complete task change, reuse loss
+    ranges from .262 to .545.
+:::
+
+## References {.smaller}
+
+::: {style="font-size: 14px; margin-top: 0.4em; line-height:1.2;"}
+-   **Banerjee, A., Chandrasekhar, A. G., Duflo, E., & Jackson, M. O. (2013).** “The Diffusion of Microfinance.” *Science* 341(6144). doi:10.1126/science.1236498.
+
+-   **Banerjee, A., Chandrasekhar, A. G., Duflo, E., & Jackson, M. O. (2019).** “Using Gossips to Spread Information: Theory and Evidence from Two Randomized Controlled Trials.” *The Review of Economic Studies* 86(6):2453–2490. doi:10.1093/restud/rdz008.
+
+-   **Beaman, L., BenYishay, A., Magruder, J., & Mobarak, A. M. (2021).** “Can Network Theory-Based Targeting Increase Technology Adoption?” *American Economic Review* 111(6):1918–1943. doi:10.1257/aer.20200295.
+
+-   **Becker, S. O., Hsiao, Y., Pfaff, S., & Rubin, J. (2020).** “Multiplex Network Ties and the Spatial Diffusion of Radical Innovations: Martin Luther's Leadership in the Early Reformation.” *American Sociological Review* 85(5):857–894. doi:10.1177/0003122420948059.
+
+-   **Centola, D. & Macy, M. (2007).** “Complex Contagions and the Weakness of Long Ties.” *American Journal of Sociology* 113(3):702–734. doi:10.1086/521848.
+
+-   **Chandrasekhar, A. G., Chaudhary, V., Golub, B., & Jackson, M. O. (2026).** “Multiplexing in Networks and Diffusion.” *Proceedings of the National Academy of Sciences* 123(28). doi:10.1073/pnas.2534923123.
+
+-   **Hsiao, Y. & Christakis, N. A. (2026).** “The Influence “Paradox”: When More Network Ties Lead to Less Change.” *American Sociological Review* 91(3):464–489. doi:10.1177/00031224261438845.
+
+-   **Larson, J. M. & Rodríguez, P. L. (2023).** “The Risk of Aggregating Networks When Diffusion Is Tie-Specific.” *Applied Network Science* 8:21. doi:10.1007/s41109-023-00546-7.
+
+-   **Omodei, E. & Arenas, A. (2016).** “Untangling the Role of Diverse Social Dimensions in the Diffusion of Microfinance.” *Applied Network Science* 1(1):14. doi:10.1007/s41109-016-0016-x.
+
+-   **Rule, A., Sabetta, L., & Bearman, P. (2026).** “Pathways and Chance.” *Sociologica* 20(1). doi:10.60923/issn.1971-8853/23641.
+
+-   **Valente, T. W. & Davis, R. L. (1999).** “Accelerating the Diffusion of Innovations Using Opinion Leaders.” *The ANNALS of the American Academy of Political and Social Science* 566(1):55–67. doi:10.1177/000271629956600105.
+:::

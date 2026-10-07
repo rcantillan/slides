@@ -1,0 +1,60 @@
+REVISIÓN DEL ARGUMENTO — 6 OCTUBRE 2026
+
+Dictamen
+Hay una contribución sociológica defendible: convertir la continuidad de la ventaja relacional entre tareas sucesivas en un objeto de explicación, especificar condiciones bajo una formalización mínima y documentar un cambio de asociaciones por dominio entre entrada y adopción. El encaje con Sociological Science es razonable. Esto no permite asegurar aceptación, prioridad histórica absoluta o identificación del mecanismo.
+
+1. Antecedentes y contribución
+Hansen (1999) y Hansen, Podolny y Pfeffer (2001) son antecedentes cercanos: ya desarrollan contingencia del valor de las relaciones y de las posiciones respecto de las tareas. El segundo muestra ventajas para exploración y desventajas para explotación, incluyendo costos de mantener vínculos. La presentación reconoce ahora este antecedente. La contribución propuesta desarrolla la continuidad ordinal en una secuencia de tareas, las condiciones explícitas del ajuste dominio–tarea, y la distinción entre consecuencias individuales y eficacia de conjuntos de iniciadores. No presentar como descubrimiento de la contingencia de las redes.
+
+2. Formalización aditiva: válida bajo sus supuestos
+R_ir = suma_l omega_lr x_il requiere escalas comparables y una contribución aditiva. En dos dominios, s en [0,1], tau en [-1,1], omega_1=(1+s*tau)/2 y omega_2=(1-s*tau)/2. Son pesos convexos. Los productos escalares de los vectores simétricos de capacidades y demanda del SI generan exactamente esos pesos.
+La diferencia R_i2-R_i1 = s*(tau_2-tau_1)*(x_i1-x_i2)/2 es correcta.
+Con m_i=(x_i1+x_i2)/2 y d_i=(x_i1-x_i2)/2, R_ir=m_i+s*tau_r*d_i.
+La inversión estricta de i,j equivale a (Delta m+s*tau_1*Delta d)*(Delta m+s*tau_2*Delta d)<0. Esto se prueba porque los factores son las dos diferencias de scores. Un producto cero implica empate. Si s*Delta d no es cero, el umbral es tau*=-Delta m/(s*Delta d); las demandas deben estar estrictamente a lados opuestos.
+Diferenciación, cambio de demandas y variación de perfiles son necesarios en esta especificación; no son conjuntamente suficientes. Un cambio común de scores conserva el orden. Estas condiciones no se convierten automáticamente en condiciones necesarias universales para cascadas no lineales.
+Verificación complementaria: identidades y criterio de inversión comprobados en 100.000 casos numéricos. La demostración es algebraica; esta comprobación no sustituye la prueba.
+
+3. Predicciones empíricas y evidencia
+H1 es una comprobación de diferenciación posicional, no evidencia de diferenciación funcional. H2 expresa ahora la expectativa general de que la prominencia asociada con entrada no necesariamente conserva su valor en adopción y las asociaciones por dominio pueden cambiar. La formalización no deduce que Visiting sea el dominio relevante en Karnataka. Advice/Decision → Visiting se presenta como patrón empírico encontrado, no como predicción confirmatoria documentada. Observación, coordinación y apoyo son interpretaciones posibles que requieren evidencia independiente. La expectativa general plantea una posibilidad condicional, no una predicción de inversión universal.
+BSS compara asociaciones parciales por dominio para designación y adopción en los mismos hogares. Theta compara las dos brechas de coeficientes; un Theta distinto de cero no garantiza brechas de signo contrario. Aquí tienen signos contrarios, lo que establece inversión de la brecha de asociaciones. Tampoco eso basta para demostrar intercambio de posiciones de hogares particulares: otros dominios, covariables e interceptos intervienen en las probabilidades.
+La designación no mide recepción efectiva de información. El experimento independiente ofrece un benchmark de alcance informativo a nivel de conjuntos de semillas; no observa a los mismos hogares BSS a través de ambas tareas. No combinar los dos estudios como una estimación causal longitudinal.
+H3 es una expectativa condicional sobre medición: pooling puede diluir un contraste relevante. La centralidad sobre la unión no es la media de las centralidades por dominio; menor asociación no equivale necesariamente a peor predicción fuera de muestra.
+Las capacidades no están directamente medidas. Homofilia y exposición espacial permanecen como explicaciones posibles. El contraste cercano–lejano requiere una prueba propia; la significancia de un coeficiente y no del otro no la sustituye. La moderación entre pueblos sigue imprecisa.
+
+4. Cascada: coherencia y alcance
+El motor representa información seguida de adopción con elegibilidad, contactos dirigidos y refuerzo; el mismo actor puede recibir y después transmitir. Usa la misma regla de matching para probabilidades de contacto, pero no impone R_ir como identidad de las probabilidades individuales. En general, combinar posiciones no equivale a calcular posiciones o resultados sobre la mezcla de redes.
+P(A_i)=P(I_i)*P(A_i|I_i) es exacto cuando adoptar implica estar informado. Si P(I_i)=0, el resultado condicional no está definido.
+El experimento individual actual mantiene tres iniciadores fijos, excluye los actores activados forzosamente de los rankings y usa poblaciones informadas y uniformes comunes dentro de cada contraste de demanda. No optimiza conjuntos.
+Los resultados distinguen inversiones entre etapas, contraste neto respecto de demanda de adopción sin cambio e inversiones dentro de adopción. El contraste neto de tasas puede ser negativo y no es el porcentaje de pares que invierten por primera vez.
+Cambiar s puede modificar también la primera etapa. El control de elegibilidad se aplica dentro de cada contraste de demanda de adopción, no a todas las condiciones del diseño.
+Relabeling preserva la topología de B, pero cambia simultáneamente correspondencia de posiciones, superposición y acoplamiento de vecindarios. No aísla un efecto de correlación de rangos.
+Umbrales absolutos y anclados mantienen requisitos individuales fijos; los proporcionales cambian contactos y requisitos. Una regla proporcional usa el grado ponderado completo antes de la intervención, sin beta y sin limitarse a vecinos informados.
+Los nulos exactos comparan adopción con adopción bajo un cambio de pesos: demanda sin cambio, s=0 y capas idénticas. No exigen igual orden entre información y adopción. Grados alineados tampoco exigen redes idénticas.
+Reconstrucción de adopción colectiva a partir de resultados individuales con error cero comprueba conservación aritmética, no precisión de Monte Carlo ni validación empírica. Los rankings se estiman con 64 realizaciones de información y 32 mundos de contacto de adopción. Antes de presentar porcentajes como resultados estables para publicación, comprobar convergencia de rankings y sensibilidad a intensidad de transmisión en el modelo individual actual. Los intervalos mostrados describen variación entre pares de redes sintéticas, no incertidumbre sobre Karnataka.
+No confundir cambio agregado con regret de selección. En extensiones colectivas, ganancias de estrategias entrenadas/greedy pueden ser negativas; el regret no negativo exige un optimum verdadero sobre el mismo objetivo y conjunto factible, con denominador positivo si se expresa proporcionalmente.
+
+5. Desactualizaciones del manuscrito que requieren atención antes de enviar
+El abstract de main_socsci.tex dice que la evaluación computacional sigue pendiente. Su introducción aún afirma que reusar una estrategia pierde alcance cuando divergen posiciones. La sección computacional y el SI describen 20 actores, optimización de conjuntos y contribuciones marginales contextuales; el resultado individual presentado ahora usa 40 actores, tres semillas fijas y probabilidades propias. El SI invierte además la orientación nominal de tau respecto del run actual. No son el mismo diseño ni el mismo estimando.
+La presentación quedó alineada con individual_focus/20261007T015927_650040Z. No se modificó el manuscrito en esta revisión. Para una versión enviable, alinear abstract, introducción, sección computacional, discusión, SI y paquete de reproducción con una especificación autoritativa y retirar afirmaciones colectivas no justificadas por ese diseño.
+
+Fuentes
+Manuscrito y SI: build/overleaf_ready/main_socsci.tex y supplementary_socsci.tex.
+Modelo actual: scripts/run_individual_task_portability.py y scripts/lib/task_portability.py.
+Resultados: output/task_portability/individual_focus/20261007T015927_650040Z.
+Antecedente: lectures/so-many-ties-so-little-time-a-task-contingency-perspective-on-co.pdf.
+Sociological Science: https://sociologicalscience.com/for-authors/submission-guidelines/ y https://sociologicalscience.com/about/journal-information/.
+
+6. Exposición de la formalización
+La sección 01 mantiene el score, el matching y la identidad de cambio. Añade un ejemplo aritmético explícitamente esquemático y expresa la inversión con las dos diferencias de score; la expansión por perfiles permanece en A4. La antigua descomposición repetida antes de las simulaciones pasa a explicar en la sección 01 los tres usos de la formalización. El puente computacional muestra qué se reutiliza —los pesos de matching— y qué no: las probabilidades propias se computan con la cascada, no desde R. BSS no estima R ni los pesos de capacidades.
+
+7. Ejemplo inicial sin anticipar el hallazgo
+La diapositiva s3 describe demandas posibles de información y acción sin asignarlas a los dominios observados. La interpretación consultiva de entrada y la interpretación de observación, coordinación o apoyo en adopción aparecen después de la evidencia en s28, como explicaciones posibles, con capacidades sin medición directa. Así el contraste empírico no actúa como su propia premisa teórica.
+
+8. Depuración de la cadena argumentativa
+Se retiran del recorrido principal la parametrización detallada de los pesos y la identidad de cambio; quedan en A4a y A4b. La diapositiva que repetía la definición de inversión pasa a explicar la distinción sustantiva entre ventaja en todos los dominios y ventajas contrapuestas, así como la necesidad de un cambio suficiente de pesos. El puente de usos se reduce a la pregunta empírica y el experimento computacional, preservando sus estimandos distintos. A4 conserva la condición exacta de inversión y su expansión.
+
+9. Lectura del modelo y recursos visuales
+Se sustituye el ejemplo conceptual por la figura 1 de Frost (2024), encontrada en una búsqueda web y reproducida íntegra bajo CC BY 4.0, con una lectura de los grados de los nodos 2 y 3 en las capas 1 y 2. La viñeta editorial se descartó por no explicar la posición relacional. La imagen publicada ilustra solo diferenciación posicional; la teoría agrega el cambio de relevancia entre tareas. Una secuencia visual reemplaza dos slides de texto sobre información y adopción y conserva elegibilidad fija, tres iniciadores reutilizados, h vecinos y exclusión de semillas. Se añade el paso que transforma realizaciones de cascadas en probabilidades propias estimadas, con un ejemplo de frecuencias expresamente ficticio. La descomposición se convierte en una tabla de tres preguntas y se recuerda cómo s modera los cambios de pesos. Se distinguen contrastes netos de tasas y pares nuevos que invierten. Se retira una atribución causal basada solo en el plot de correlaciones. No se cambió el motor ni ningún resultado.
+
+10. Figura original
+Se reemplaza la imagen de Frost por dos estrellas de seis actores, centradas respectivamente en 1 y 2, con coordenadas e identidades visuales constantes. Es una construcción propia, claramente esquemática. En el ejemplo aditivo por grado, R_1-R_2=8w-4; cruzar el peso w=.5 cambia la posición relativa. La figura distingue coexistencia de dominios de cambios de red en el tiempo y no asigna capacidades a relaciones empíricas.

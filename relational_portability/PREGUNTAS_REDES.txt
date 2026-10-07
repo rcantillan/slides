@@ -1,0 +1,118 @@
+PREGUNTAS PARA LA DISCUSIÓN
+Respuestas breves en español, alineadas con la presentación. El apéndice documenta las respuestas cuando se indica; las verificaciones pendientes se nombran como pendientes.
+
+1. ¿Qué mide exactamente la centralidad de difusión?
+Cuenta llegadas esperadas de un mensaje a través de recorridos por una red durante un horizonte finito. Incluye contactos directos, recorridos largos y llegadas repetidas. Es una medida de posición basada en transmisión, no un conteo de personas únicas ni una probabilidad de adoptar.
+Respaldo: A2–A2a; ejemplo de hogares con igual grado y distinto score.
+
+2. ¿Por qué no basta el grado?
+El grado sólo incorpora contactos inmediatos. La centralidad de difusión incorpora también dónde están situados esos contactos y las oportunidades de seguir transmitiendo. La elección mantiene una medida común entre dominios y permite diálogo con los estudios de origen. No afirmamos que sea la única medida adecuada: los análisis de medición consideran escalas alternativas y grado.
+Respaldo: construcción de redes, explicación principal de centralidad y checks de robustez. Las tablas completas de las alternativas están en el suplemento del estudio; los slides principales resumen su estabilidad.
+
+3. ¿De dónde provienen la medida y los parámetros?
+La definición es de Banerjee, Chandrasekhar, Duflo y Jackson (2013), ecuación 5. La implementación por capa con q inverso del mayor valor propio y T igual al diámetro sigue el procedimiento de Chandrasekhar y colaboradores. No atribuimos todas nuestras decisiones a la definición original.
+Respaldo: A2a y referencias.
+
+4. ¿Por qué q es la inversa del mayor valor propio?
+Con esa elección, qA tiene radio espectral uno. Sitúa el cálculo en el umbral entre decaimiento y crecimiento de las contribuciones de recorridos largos. Es una convención de cálculo tomada de la literatura, no una probabilidad de transmisión estimada en estos hogares. El horizonte finito mantiene finita la suma.
+Respaldo: A2a. No afirmar que esta elección identifica un parámetro conductual.
+
+5. ¿Por qué T es el diámetro? ¿Qué ocurre si la red está desconectada?
+Es un horizonte basado en la estructura, usado en el procedimiento por capa que seguimos. En nuestra implementación, T es la máxima distancia finita: el mayor diámetro entre componentes. Cada componente transmite dentro de sí. Los recorridos contados pueden repetir nodos y no se limitan a caminos mínimos. No conocemos una justificación que haga esta elección obligatoria para todas las tareas.
+Respaldo: notas de A2a y código del cálculo. Una capa sin vínculos recibe cero tras la normalización.
+
+6. ¿El término t=0 cambia la medida?
+Añade exactamente uno a todos los actores. No cambia su ranking y desaparece al restar el mínimo y dividir por el rango. La fórmula original empieza en t=1; nuestra implementación incluye t=0, con valores normalizados equivalentes.
+Respaldo: A2a. En una capa con score constante, la implementación devuelve ceros.
+
+7. ¿La normalización hace comparables las capacidades?
+Hace comparables las escalas de posición: cero representa el mínimo y uno el máximo dentro de cada aldea y dominio. No demuestra que una diferencia de centralidad represente la misma cantidad de recursos entre dominios. La equivalencia cardinal de posiciones en el modelo aditivo es un supuesto; las capacidades siguen sin medirse directamente.
+Respaldo: A2a, formalización principal y A4a. Los coeficientes normalizados se interpretan sobre esa escala, con un contraste intercuartílico para mostrar magnitud sustantiva.
+
+8. ¿Por qué redes no dirigidas?
+Nuestra construcción registra una relación si hay nominación en cualquiera de las direcciones. Mantiene un criterio uniforme entre dominios, pero pierde asimetrías como dar y recibir consejo. Esto es una decisión de medición, no evidencia de reciprocidad real. Las capas adicionales de flujo entrante y saliente conservan esa distinción en su definición antes de aplicar el procedimiento de red utilizado.
+Respaldo: construcción de redes y A11. No sostener que la dirección carezca de importancia.
+
+9. ¿Por qué tres dominios si existen más capas?
+La exposición principal utiliza tres dominios interpretables, con generadores emparejados y una comparación conjunta manejable. No sostiene que agoten las relaciones relevantes. A11 añade las demás relaciones en especificaciones separadas o bloques. Esa evaluación comprueba la persistencia de Visiting en adopción; no reproduce el contraste completo entre entrada y adopción para cada capa.
+Respaldo: dominios focales, checks de robustez y A11.
+
+10. ¿Los datos muestran que ciertos hogares pierden su ventaja?
+Muestran que las asociaciones por dominio cambian entre designación y adopción para la misma muestra. Una inversión de brechas de coeficientes no prueba que pares concretos de hogares intercambien rankings de probabilidades. La simulación sí compara probabilidades propias de los mismos actores, dentro de su entorno construido.
+Respaldo: A3, resultados del contraste y descomposición computacional.
+
+11. ¿Qué aporta la formalización si la inversión parece evidente?
+Explicita cuándo la inversión es posible y cuándo queda excluida. Con posiciones fijas y pesos no negativos, la dominancia en todos los dominios impide una inversión estricta. Perfiles contrapuestos permiten invertir sólo si el cambio cruza el umbral del par. La ecuación organiza las comparaciones; no debe presentarse como una prueba empírica del mecanismo.
+Respaldo: ejemplo principal y A4–A4b.
+
+12. ¿Los pesos se estiman con los coeficientes de regresión?
+No. Los pesos son parámetros de escenarios teóricos. Los coeficientes empíricos describen asociaciones ajustadas y no identifican capacidades ni pesos de tarea. La simulación no calibra esos pesos para reproducir los resultados de BSS.
+Respaldo: formalización, propósito computacional y regla de contactos.
+
+13. ¿El modelo reproduce necesariamente la teoría porque incorporamos los pesos?
+Incorpora el ajuste como supuesto. Lo que explora es qué ocurre al combinarlo con transmisión por caminos, elegibilidad y refuerzo. Estas reglas pueden producir reordenamiento, conservación, saturación o ausencia de adopción. El modelo especifica un mecanismo de comportamiento y examina sus consecuencias. Identificar empíricamente si ese mecanismo explica causalmente el caso de las aldeas requiere información adicional; la simulación no sustituye esa identificación.
+Respaldo: propósito del modelo, regla de contactos, límites de respuesta y A9.
+
+14. ¿Combinar centralidades equivale a calcular resultados en una mezcla de redes?
+En general, no. El score teórico es una suma ponderada de posiciones. La simulación pondera matrices de contactos y obtiene resultados mediante reglas no lineales. Comparten la idea y la parametrización de ajuste, pero la segunda construcción es una extensión conductual, no una consecuencia algebraica del primer score.
+Respaldo: regla de contactos y propósito del modelo.
+
+15. ¿Por qué usamos centralidad si el resultado de la simulación es una probabilidad?
+Son objetos distintos. En la evidencia empírica, la centralidad mide posición. En el modelo, las probabilidades de informarse y adoptar definen los rankings que seguimos; las centralidades describen cómo esos resultados se asocian con la posición por dominio. No convertimos centralidad directamente en probabilidad ni en influencia marginal de un iniciador.
+Respaldo: resultados individuales y asociaciones simuladas por dominio.
+
+16. ¿Por qué terminar información antes de empezar adopción?
+Es una simplificación para separar acceso de acción y mantener igual la población informada al comparar demandas de adopción. Conserva la sucesión y la dependencia: sólo quienes se informaron pueden adoptar. No reproduce información y adopción concurrentes ni retroalimentación desde adopción hacia información. Esos serían otros procesos que exigirían otra especificación.
+Respaldo: secuencia del modelo y A8.
+
+17. ¿Qué mantiene fija la comparación de adopción?
+Dentro de cada contraste comparte capas, iniciadores, población informada e intensidades de transmisión. También comparte los números aleatorios de contactos. Las exigencias individuales permanecen fijas en reglas absolutas y ancladas; en la proporcional cambian al cambiar el grado ponderado para la tarea. No afirmar que sólo cambian contactos en esa última regla.
+Respaldo: experimentos y reglas de respuesta.
+
+18. ¿Reasignar B modifica sólo la correlación de posiciones?
+No. Conserva la topología de B, pero cambia qué actor ocupa cada posición, la superposición de vínculos y el acoplamiento entre vecindarios. Es una manipulación de correspondencia entre capas. Alinear grados tampoco convierte dos redes generadas independientemente en redes idénticas.
+Respaldo: construcción sintética y A8.
+
+19. ¿Por qué tres iniciadores y dos apoyos? ¿Hay selección de resultados?
+Tres iniciadores es una elección del diseño: los actores de mayor grado en A, seleccionados antes de simular y reutilizados. Se excluyen de los rankings porque su adopción es forzada. Dos apoyos es la ilustración principal; A9 conserva las nueve reglas, incluidos contrastes negativos y escenarios de casi nula adopción. Los parámetros no están estimados a partir del riesgo del préstamo.
+Respaldo: proceso, A8 y A9. El efecto de variar el número y tipo de iniciadores sería una evaluación adicional; no presentarlo como comprobado en este experimento individual.
+
+20. ¿Qué significa el incremento neto de inversiones?
+Es la tasa de inversiones información–adopción con cambio de pesos menos esa tasa sin cambio. En el escenario ilustrativo, aproximadamente 26,7% menos 2,1% da 24,6 puntos porcentuales. Es una diferencia de tasas, no el porcentaje de pares que se invierten por primera vez. Además reportamos la comparación directa entre rankings de adopción con y sin cambio.
+Respaldo: tres comparaciones y resultados individuales.
+
+21. ¿Cómo tratamos empates y actores que nunca se informan?
+Una inversión estricta requiere brechas de signos opuestos. Los empates no son inversiones y se reportan por separado. Permanecen en el denominador de la tasa sobre todos los pares elegibles para el análisis correspondiente. La adopción condicional sólo se calcula con probabilidad positiva de información; no se asigna una probabilidad condicional a quien nunca se informa.
+Respaldo: descomposición, probabilidades y A9. Distinguir nunca informado en el conjunto finito de realizaciones de probabilidad poblacional exactamente cero.
+
+22. ¿Pocas inversiones significan portabilidad?
+No necesariamente. Si casi todos tienen probabilidad de adopción cero, el ranking se aplana y hay pocas inversiones estrictas. Debemos leer conjuntamente adopción, empates y diferencias de inversión. A9 muestra esos escenarios y evita interpretar la ausencia de variación como conservación sustantiva de ventaja.
+Respaldo: límites de respuesta y A9.
+
+23. ¿La simulación tiene suficiente precisión?
+Usamos 64 poblaciones informadas y 32 realizaciones de adopción por población. Los intervalos reportados reflejan variación entre pares de redes. Los controles nulos y la reconstrucción agregada verifican consistencia, pero no garantizan estabilidad de rankings frente al error de Monte Carlo. Aumentar repeticiones y evaluar convergencia de los rankings es una comprobación pendiente. No tratar todas las observaciones de actores como réplicas independientes.
+Respaldo: A8 y notas de estimación de probabilidades.
+
+24. ¿El resultado obliga a cambiar la selección de actores en una intervención?
+No por sí solo. Las probabilidades propias y la contribución de alguien como iniciador son objetos distintos. Para evaluar reselección debemos comparar estrategias, considerando redundancia, alcance complementario y refuerzo. A10 ilustra esas comparaciones y muestra ganancias que dependen de la regla. Su selección aproximada no establece óptimos globales ni cotas superiores.
+Respaldo: distinción individual–colectiva y A10.
+
+25. ¿Qué diferencia este argumento de Hansen y de otros trabajos multiplex?
+La contingencia por tarea tiene antecedentes explícitos. El aporte propuesto convierte la continuidad de la ventaja entre tareas sucesivas en un objeto de explicación, relacionando capacidades, demandas y perfiles, con condiciones de conservación e inversión. La evidencia empírica delimita un contraste entre etapas y el modelo ilustra un proceso individual. Evitar afirmaciones de que ningún estudio anterior consideró tareas, secuencias o heterogeneidad de relaciones.
+Respaldo: antecedentes, contribución principal y A1.
+
+26. ¿Qué evidencia pondría en cuestión el mecanismo?
+Una prueba directa mediría recursos y demandas independientemente de los resultados y seguiría a los mismos actores. Si los cambios y perfiles medidos deberían cruzar los umbrales del modelo aditivo pero persiste el orden, ese modelo sería insuficiente. Un solo par sin inversión no basta: puede no cruzar el umbral, quedar empatado o tener resultados estocásticos. El cambio de asociaciones observado no sustituye esa prueba.
+Respaldo: condiciones de conservación, criterio de inversión y slide sobre contraste de la explicación.
+
+27. ¿Se sortean contactos nuevos en cada ronda?
+No. Cada realización sortea contactos dirigidos exitosos sobre los vínculos fijos; las cascadas se desarrollan sobre ellos. La información sigue esos contactos desde los iniciadores. En adopción, el apoyo proviene de vecinos activos distintos y las actualizaciones son sincrónicas hasta que no cambia nadie. Este procedimiento es diferente de volver a intentar cada vínculo en cada ronda; reintentos ilimitados cambiarían el proceso.
+Respaldo: proceso computacional y código del motor.
+
+28. ¿Un dominio ofrece una sola capacidad?
+No. Las relaciones pueden ofrecer varias capacidades y diferentes dominios pueden ofrecer una misma capacidad en distinto grado. El argumento necesita diferencias relevantes de ajuste, no una correspondencia exclusiva entre consejo y comunicación o visitas y coordinación. Las capacidades propuestas deben investigarse independientemente; los generadores de nombres no identifican lo que circula.
+Respaldo: dominios focales, contribución conceptual y límites de interpretación.
+
+29. ¿Designación equivale a informarse o a causar adopción?
+No. En BSS observamos pertenencia al conjunto designado como entrada y adopción propia. La designación es una selección organizacional, no una observación de recepción de información ni una medida de influencia causal sobre vecinos. En la simulación, la primera etapa es información recibida. Las piezas se conectan mediante el argumento, sin tratar esas variables como idénticas.
+Respaldo: unidades de análisis, comparación empírica y propósito del modelo.

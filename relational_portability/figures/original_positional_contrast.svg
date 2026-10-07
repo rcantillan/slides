@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="650" viewBox="0 0 1360 650" role="img" aria-labelledby="title desc">
+<title id="title">Fixed relational domains support successive tasks with changing relevance</title>
+<desc id="desc">Actor 1 has five ties in A and one in B. Actor 2 has one tie in A and five in B. Actor identities and coordinates are identical across panels. Both domains coexist throughout. Task 1 places more relevance on A and task 2 on B, illustrating a possible reversal.</desc>
+<rect width="1360" height="650" fill="white"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<line x1="680" y1="58" x2="680" y2="363" stroke="#e5e6eb" stroke-width="1.5"/>
+<text x="360" y="42" text-anchor="middle" fill="#302a78" font-size="32" font-weight="700">Domain A</text>
+<line x1="220" y1="195" x2="500" y2="195" stroke="#302a78" stroke-opacity=".55" stroke-width="4"/>
+<line x1="220" y1="195" x2="220" y2="90" stroke="#302a78" stroke-opacity=".55" stroke-width="4"/>
+<line x1="220" y1="195" x2="500" y2="90" stroke="#302a78" stroke-opacity=".55" stroke-width="4"/>
+<line x1="220" y1="195" x2="220" y2="300" stroke="#302a78" stroke-opacity=".55" stroke-width="4"/>
+<line x1="220" y1="195" x2="500" y2="300" stroke="#302a78" stroke-opacity=".55" stroke-width="4"/>
+<circle cx="220" cy="195" r="29" fill="#302a78" stroke="#302a78" stroke-width="2"/>
+<text x="220" y="204" text-anchor="middle" font-size="26" font-weight="700" fill="white">1</text>
+<circle cx="500" cy="195" r="29" fill="#175c50" stroke="#175c50" stroke-width="2"/>
+<text x="500" y="204" text-anchor="middle" font-size="26" font-weight="700" fill="white">2</text>
+<circle cx="220" cy="90" r="29" fill="#f1f2f5" stroke="#c8ccd6" stroke-width="2"/>
+<text x="220" y="99" text-anchor="middle" font-size="26" font-weight="700" fill="#727887">3</text>
+<circle cx="500" cy="90" r="29" fill="#f1f2f5" stroke="#c8ccd6" stroke-width="2"/>
+<text x="500" y="99" text-anchor="middle" font-size="26" font-weight="700" fill="#727887">4</text>
+<circle cx="220" cy="300" r="29" fill="#f1f2f5" stroke="#c8ccd6" stroke-width="2"/>
+<text x="220" y="309" text-anchor="middle" font-size="26" font-weight="700" fill="#727887">5</text>
+<circle cx="500" cy="300" r="29" fill="#f1f2f5" stroke="#c8ccd6" stroke-width="2"/>
+<text x="500" y="309" text-anchor="middle" font-size="26" font-weight="700" fill="#727887">6</text>
+<text x="360" y="375" text-anchor="middle" fill="#302a78" font-size="28" font-weight="700">Actor 1 is more connected</text>
+<text x="360" y="414" text-anchor="middle" fill="#676b7b" font-size="23"><tspan fill="#302a78">1: 5 ties</tspan><tspan dx="12">·</tspan><tspan dx="12" fill="#175c50">2: 1 tie</tspan></text>
+<text x="1000" y="42" text-anchor="middle" fill="#175c50" font-size="32" font-weight="700">Domain B</text>
+<line x1="1140" y1="195" x2="860" y2="195" stroke="#175c50" stroke-opacity=".55" stroke-width="4"/>
+<line x1="1140" y1="195" x2="860" y2="90" stroke="#175c50" stroke-opacity=".55" stroke-width="4"/>
+<line x1="1140" y1="195" x2="1140" y2="90" stroke="#175c50" stroke-opacity=".55" stroke-width="4"/>
+<line x1="1140" y1="195" x2="860" y2="300" stroke="#175c50" stroke-opacity=".55" stroke-width="4"/>
+<line x1="1140" y1="195" x2="1140" y2="300" stroke="#175c50" stroke-opacity=".55" stroke-width="4"/>
+<circle cx="860" cy="195" r="29" fill="#302a78" stroke="#302a78" stroke-width="2"/>
+<text x="860" y="204" text-anchor="middle" font-size="26" font-weight="700" fill="white">1</text>
+<circle cx="1140" cy="195" r="29" fill="#175c50" stroke="#175c50" stroke-width="2"/>
+<text x="1140" y="204" text-anchor="middle" font-size="26" font-weight="700" fill="white">2</text>
+<circle cx="860" cy="90" r="29" fill="#f1f2f5" stroke="#c8ccd6" stroke-width="2"/>
+<text x="860" y="99" text-anchor="middle" font-size="26" font-weight="700" fill="#727887">3</text>
+<circle cx="1140" cy="90" r="29" fill="#f1f2f5" stroke="#c8ccd6" stroke-width="2"/>
+<text x="1140" y="99" text-anchor="middle" font-size="26" font-weight="700" fill="#727887">4</text>
+<circle cx="860" cy="300" r="29" fill="#f1f2f5" stroke="#c8ccd6" stroke-width="2"/>
+<text x="860" y="309" text-anchor="middle" font-size="26" font-weight="700" fill="#727887">5</text>
+<circle cx="1140" cy="300" r="29" fill="#f1f2f5" stroke="#c8ccd6" stroke-width="2"/>
+<text x="1140" y="309" text-anchor="middle" font-size="26" font-weight="700" fill="#727887">6</text>
+<text x="1000" y="375" text-anchor="middle" fill="#175c50" font-size="28" font-weight="700">Actor 2 is more connected</text>
+<text x="1000" y="414" text-anchor="middle" fill="#676b7b" font-size="23"><tspan fill="#302a78">1: 1 tie</tspan><tspan dx="12">·</tspan><tspan dx="12" fill="#175c50">2: 5 ties</tspan></text>
+<path d="M160 445 V458 H1200 V445" fill="none" stroke="#b7bac5" stroke-width="2"/>
+<text x="680" y="492" text-anchor="middle" fill="#676b7b" font-size="23">Both domains stay fixed throughout</text>
+<line x1="560" y1="550" x2="800" y2="550" stroke="#8b8fa0" stroke-width="3"/>
+<path d="M786 540 L800 550 L786 560" fill="none" stroke="#8b8fa0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="360" y="535" text-anchor="middle" fill="#302a78" font-size="29" font-weight="700">Task 1 · A matters more</text>
+<text x="360" y="578" text-anchor="middle" fill="#302a78" font-size="27">Actor 1 ahead of actor 2</text>
+<text x="1000" y="535" text-anchor="middle" fill="#175c50" font-size="29" font-weight="700">Task 2 · B matters more</text>
+<text x="1000" y="578" text-anchor="middle" fill="#175c50" font-size="27">Actor 2 ahead of actor 1</text>
+<text x="680" y="630" text-anchor="middle" fill="#676b7b" font-size="23">An illustrative reversal: the task changes what the positions are worth.</text>
+</g>
+</svg>

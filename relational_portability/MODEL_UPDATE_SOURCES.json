@@ -1,0 +1,9 @@
+{
+  "primary_run": "/home/rober/Documents/Papers/fb-risk-adoption/output/task_portability/individual_focus/20261007T015927_650040Z",
+  "primary_review_sha256": "7338bfb801e4d8a400a4666b5f4a33af630bed53c3ca8bd269fbaa7461aa98af",
+  "collective_extensions": [
+    "20261006T171642",
+    "20261006T171949"
+  ],
+  "notes": "Replaces superseded static-model slides and ceilings. Main results: fixed-seed individual cascade."
+}

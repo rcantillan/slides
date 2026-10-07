@@ -1,0 +1,44 @@
+<!-- ===========================
+     title-slide.html  (v3: imagen IZQ = misma altura que texto DER)
+     =========================== -->
+<section id="title-slide" class="quarto-title-block">
+  <div class="title-container title-left-image">
+    <!-- IZQUIERDA: IMAGEN -->
+    <div class="title-image" id="title-image-box">
+      $if(cover)$
+        <img id="title-image-el" src="$cover$" alt="Cover Image">
+      $else$
+        <img id="title-image-el" src="cover.png" alt="Cover Image">
+      $endif$
+    </div>
+
+    <!-- DERECHA: TEXTO -->
+    <div class="title-content" id="title-text-el">
+      <h1 class="title">$title$</h1>
+      $if(subtitle)$
+      <p class="subtitle">$subtitle$</p>
+      $endif$
+      <p class="author">$author$</p>
+      <p class="institute">$institute$</p>
+      $if(date)$
+      <p class="footer">$date$</p>
+      $endif$
+
+      $if(intro)$
+      <div class="lead-intro">
+        $intro$
+      </div>
+      $endif$
+
+      $if(highlights)$
+      <div class="lead-intro">
+        <ul>
+          $for(highlights)$
+          <li>$highlights$</li>
+          $endfor$
+        </ul>
+      </div>
+      $endif$
+    </div>
+  </div>
+</section>
