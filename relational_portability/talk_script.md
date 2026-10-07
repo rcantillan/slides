@@ -66,7 +66,7 @@ Con estas condiciones en mente, paso a la evidencia. Utilizo dos estudios que pe
 
 ## 14 · Different studies observe different stages
 
-BSS compara designación y adopción propia para los mismos hogares. El experimento independiente observa alcance informativo generado por conjuntos seleccionados al azar. La simulación sigue información recibida y adopción de los mismos actores construidos.
+BSS compara designación y adopción propia para los mismos hogares. El experimento independiente observa alcance informativo generado por conjuntos seleccionados al azar. Su perfil se compara también con adopción en BSS como benchmark entre estudios. La simulación sigue información recibida y adopción de los mismos actores construidos.
 
 La designación no equivale a informarse. BSS no observa esa etapa intermedia y el experimento corresponde a otras aldeas. El modelo ilustra la lógica de tareas sucesivas mediante una secuencia concreta; no reconstruye la secuencia empírica de BSS. Esta diferencia define cómo se conectan las tres piezas y qué puede aportar cada una.
 
@@ -136,9 +136,13 @@ Hay una reserva importante: la asociación de Visiting aparece sobre todo en ví
 
 A6 amplía esta lectura con los resultados por composición y una prueba secundaria imprecisa. Ayuda a delimitar la explicación; no resuelve la alternativa espacial.
 
-## 27 · Information reach tends to favor advice
+## 27 · Benchmark · Information and adoption
 
-El experimento independiente vuelve a la tarea informativa. Allí, el contraste favorece Advice frente a Visiting en el alcance de la noticia. La dirección se mantiene, aunque la precisión varía con la medida utilizada. Es un referente útil para distinguir alcance informativo de adopción propia, sin tratar ambos estudios como una sola secuencia observada.
+Este benchmark compara información y adopción utilizando cuatro capas separadas y coeficientes estandarizados. La información proviene del RCT de 68 aldeas: las identidades de tres o cinco iniciadores se asignan al azar y el alcance se registra mediante llamadas. La adopción proviene de los 10.618 hogares de BSS en 49 aldeas. El RCT no observa aquí adopción de microcrédito.
+
+En información, la diferencia entre Visiting y Advice es −0,684 desviaciones estándar; la prueba por aleatorización da p igual a 0,030. En adopción, esa diferencia es positiva pero pequeña: 0,029, con error estándar de 0,043. No permite afirmar que Visiting supera a Advice con precisión en esta especificación armonizada. Esto no equivale al contraste principal, que utiliza el dominio combinado Advice/Decision.
+
+Su valor como benchmark es mostrar qué perfil relacional acompaña al alcance informativo en un diseño con iniciadores aleatorios y compararlo con el perfil de adopción. Son estudios y unidades diferentes: conjuntos de iniciadores por aldea frente a hogares. La estandarización facilita presentar los perfiles, pero no convierte la comparación en una secuencia individual observada ni en una estimación de un efecto común. El resultado es evidencia complementaria; no una segunda demostración concluyente de inversión.
 
 ## 28 · A sequential behavioral model
 

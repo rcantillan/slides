@@ -125,3 +125,6 @@ No. Chandrasekhar et al. encuentran efectos condicionados por la prevalencia y l
 
 28. ¿Cuál es el antecedente sobre cambios de canal?
 Min et al. (2016) modelan transmisión dependiente del canal de llegada y del canal de salida. Es un antecedente de dependencia de trayectoria, distinto de seguir la ventaja relativa entre tareas que buscan logros diferentes. Hansen et al. también plantean estudiar rendimientos a través del tiempo.
+
+29. ¿El RCT observa información y adopción?
+El archivo de resultados del RCT utilizado contiene llamadas recibidas, tamaño de aldea y número de iniciadores. La adopción de la tabla comparativa proviene de BSS. El benchmark reúne ambos perfiles, pero no observa una secuencia individual completa. El contraste Visiting−Advice en información es −.684 (SE .325; aleatorización p=.030); en adopción es +.029 (SE .043), pequeño e impreciso. No equivale al contraste principal con Advice/Decision combinado.
