@@ -710,6 +710,10 @@ border-left:3px solid var(--terra);padding:3px 16px;text-align:center;}
 .reveal .code-mid pre {max-height:none!important;max-width:1180px;}
 
 .reveal table {max-width:1080px;margin-left:auto;margin-right:auto;}
+
+.reveal #preguntas .three {grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;width:100%;max-width:1120px;}
+.reveal #preguntas .three .col {min-width:0;}
+.reveal #preguntas .three p {font-size:24px;white-space:normal;overflow-wrap:normal;}
 </style>
   <style type="text/css">.reveal
 div.sourceCode
@@ -1267,39 +1271,42 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="preguntas" class="slide level2 center">
-<h2>What changes after a reputation loss?</h2>
+<h2>Reputation loss: activity, expression and context</h2>
 <div class="three">
-<div class="col">
-<h3>
-Expression
-</h3>
-<p>
-How do users write?
-</p>
-</div>
 <div class="col">
 <h3>
 Contribution
 </h3>
 <p>
-How much do they contribute?
+Do users contribute more or less?
 </p>
 </div>
 <div class="col">
 <h3>
-Interaction
+Expression
 </h3>
 <p>
-What do their comments do?
+Do tone and emotions change?
+</p>
+</div>
+<div class="col">
+<h3>
+Context
+</h3>
+<p>
+Where do users express thanks?
 </p>
 </div>
 </div>
 <div class="takeaway">
-<p>The reform reduces question-upvote reputation from <strong>+10 to +5</strong>, retrospectively. Exposure depends on prior history.</p>
+<p>The 2010 reform cut question-upvote rewards from <strong>+10 to +5</strong>, applied to past votes. Reputation loss therefore depends on prior history.</p>
+</div>
+<div class="caption">
+<p><a href="https://stackoverflow.blog/2010/03/19/important-reputation-rule-changes/">Stack Overflow: rule change (March 19, 2010)</a> · <a href="https://stackoverflow.blog/2010/03/21/the-great-reputation-recalc-begins/">Recalculation (March 21)</a>.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 3</p>
-<p>La reforma redujo de diez a cinco los puntos asociados a los votos positivos en preguntas y aplicó esa reducción retrospectivamente. Por eso algunos usuarios perdieron reputación según su historial previo. Queremos distinguir tres posibles respuestas: cambios en la expresión, cambios en la cantidad de contribuciones y cambios en la interacción. Como la exposición depende de la historia de cada usuario, no basta con comparar directamente los promedios de tratados y controles.</p>
+<p>Organizamos la pregunta en tres dimensiones y en el mismo orden de la presentación. Primero contribución: cambian las respuestas, las aceptadas y los comentarios. Segundo expresión: cambian el tono de los comentarios y las emociones de aprobación, admiración y gratitud. Tercero contexto: dónde se escribe y en qué situaciones aparece agradecimiento. La codificación de acciones de los comentarios todavía es un piloto y no se presenta aquí como una medición validada de lo que hacen. La reforma de 2010 redujo los puntos por votos positivos en preguntas de diez a cinco y recalculó también los votos anteriores; por eso la pérdida depende de la historia previa. No todos los usuarios que preguntaron perdieron necesariamente reputación. Los cambios descriptivos se distinguen de las estimaciones y sus supuestos; el matching, la referencia temporal y la participación observada delimitan cada comparación.</p>
 <p>Indicación: Señalar que la historia previa también determina la probabilidad de recibir tratamiento.</p>
 <p>Source record: sources.json (current_analysis and current_pilot); model_audit.html documents the model review.</p>
 <style type="text/css">
