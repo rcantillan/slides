@@ -2668,7 +2668,7 @@ display:block!important;
 <section id="sec-5" class="slide level2 divider inverse center" data-background-color="#123E49">
 <h2>Continuous treatment: activity</h2>
 <div class="lead">
-<p>Two exercises: +5 to +25 pp on a fixed population, then each increment on its own supported population.</p>
+<p>What changes with a larger reputation loss, comparing users’ prior activity, status and experience? First define the controls and comparison; then examine supported increments.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 41</p>
@@ -2730,6 +2730,120 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
+<section id="rel-controls-intuition" class="slide level2 audit-slide center">
+<h2>What was this user like before the reform?</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">What we control for</th>
+<th style="text-align: left;">How we build it</th>
+<th style="text-align: left;">Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prior activity</td>
+<td style="text-align: left;">Counts of comments, questions and answers before the announcement</td>
+<td style="text-align: left;">Heavy and occasional contributors start differently.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prior reputation</td>
+<td style="text-align: left;">Reputation accumulated before the announcement</td>
+<td style="text-align: left;">Users differ in status before losing it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Experience</td>
+<td style="text-align: left;">Weeks from recorded user start to the announcement</td>
+<td style="text-align: left;">New and established users may behave differently.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asking vs answering</td>
+<td style="text-align: left;">Questions / (questions + answers), before the announcement</td>
+<td style="text-align: left;">Asking-oriented and answering-oriented users differ.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Starting outcome level</td>
+<td style="text-align: left;">Each user’s pre-reform weekly mean of the outcome</td>
+<td style="text-align: left;">Compare changes given where the user started.</td>
+</tr>
+</tbody>
+</table>
+<div class="takeaway">
+<p>Prior activity contributes three variables: six history controls in total, plus the starting outcome level. All describe the user before the reform.</p>
+</div>
+<aside class="notes">
+<p>GUION EN ESPAÑOL · Diapositiva 43</p>
+<p>Aquí controles significa características anteriores a la reforma que incorporamos al modelo. Queremos evitar que diferencias de trayectoria se atribuyan simplemente a una pérdida de reputación mayor. Primero medimos cuánto participaba la persona: contamos comentarios, preguntas y respuestas anteriores al anuncio. Son tres variables, no un único índice de volumen. Después medimos reputación previa y antigüedad en semanas. Añadimos el tipo de participación: de sus preguntas más respuestas, qué proporción eran preguntas. Así distinguimos a quienes sobre todo preguntaban de quienes sobre todo respondían. Finalmente usamos el nivel de partida del outcome: si estudiamos comentarios, el promedio previo por usuario de logaritmo de uno más comentarios semanales observados; para respuestas o aceptadas usamos su propio promedio. Por ejemplo, que una persona muy activa reduzca su actividad y una casi inactiva se mantenga no debe confundirse automáticamente con una diferencia causada por la intensidad de pérdida. Estas covariables buscan ajustar diferencias observadas; su suficiencia causal sigue siendo una suposición. No son los controles de volumen contemporáneo y días activos del DiD binario. Las transformaciones y el código exacto vienen después.</p>
+<p>Indicación: Explicar primero qué mide cada característica y por qué importa; dejar fórmulas y transformaciones para el slide de código.</p>
+<p>Source record: 01_treatment.R; 06_matching.R; 28_relative_shift_event_study.R; 28b_relative_shift_own_support.R; 28c_relative_shift_common_fast.R. Explanation of saved model specification only; no refitting.</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
+</section>
+<section id="rel-counterfactual-intuition" class="slide level2 audit-slide center">
+<h2>Compare the same history with 15 pp more loss</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hypothetical user</th>
+<th style="text-align: right;">Observed loss</th>
+<th style="text-align: right;">Loss after +15 pp</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">25%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">45%</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Learn the outcome pattern across users with different losses, adjusting for prior history.</li>
+<li>Predict each user’s activity change at both doses; subtract the predictions.</li>
+<li>Average these differences among users with support for that increment.</li>
+</ol>
+<div class="takeaway">
+<p>The comparison uses two model predictions per user. We change the loss and keep their prior activity, reputation, experience and outcome level fixed.</p>
+</div>
+<div class="caption">
+<p>Following <a href="https://journals.sagepub.com/doi/10.1177/00811750261459364">Lundberg &amp; Brand (2026)</a>, shifts need support. Here: at least five users in the shifted 2.5-pp dose bin, within the same coarse prior-history stratum. Examples are illustrative.</p>
+</div>
+<aside class="notes">
+<p>GUION EN ESPAÑOL · Diapositiva 44</p>
+<p>En tratamiento continuo no construimos una única pareja tratado-control ni usamos siempre a quienes perdieron cero. El modelo aprende de personas con distintas pérdidas, ajustando por la historia previa. Después hacemos una comparación entre dos predicciones para la misma persona. Un ejemplo hipotético: A perdió diez por ciento de reputación. Predecimos su cambio de actividad con diez por ciento y después con veinticinco por ciento, es decir quince puntos porcentuales más. Conservamos sus comentarios, preguntas, respuestas, reputación, antigüedad y nivel previo del outcome. Para B, que perdió treinta por ciento, la comparación es treinta frente a cuarenta y cinco. No observamos a la misma persona bajo ambas pérdidas; la segunda es una predicción contrafactual del modelo. Sólo incluimos a quien tiene soporte para ese incremento: el código exige al menos cinco usuarios en el intervalo de dosis desplazada de dos coma cinco puntos porcentuales y en el mismo estrato grueso de historia previa. No son cinco controles exactamente idénticos ni cinco parejas PSM. Así evitamos algunas extrapolaciones sin datos cercanos, aunque la causalidad sigue requiriendo ajuste suficiente y una especificación adecuada. Promediamos las diferencias para los usuarios admitidos. El ejercicio de población fija conserva a quienes tienen soporte para todos los incrementos; el de muestra por incremento usa a quienes tienen soporte para ese incremento específico.</p>
+<p>Indicación: Distinguir variables de control y comparación contrafactual; leer 10→25 como quince puntos porcentuales adicionales.</p>
+<p>Source record: 01_treatment.R; 06_matching.R; 28_relative_shift_event_study.R; 28b_relative_shift_own_support.R; 28c_relative_shift_common_fast.R. Explanation of saved model specification only; no refitting.</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
+</section>
 <section id="rel-dos-ejercicios" class="slide level2 audit-slide center">
 <h2>Two exercises answer different questions</h2>
 <table class="caption-top">
@@ -2765,7 +2879,7 @@ display:block!important;
 <p>Lundberg &amp; Brand (2026), <a href="https://doi.org/10.1177/00811750261459364">Causal Inference with a Continuous Treatment</a>. The support bins and two-exercise display are our implementation choices.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 43</p>
+<p>GUION EN ESPAÑOL · Diapositiva 45</p>
 <p>El primer ejercicio usa los mismos 2.301 usuarios de actividad y 1.241 usuarios de texto en los cinco incrementos. Así cambia el incremento y mantenemos fija la composición de la muestra de cada familia de resultados. El segundo usa soporte propio y retiene más usuarios, pero cada incremento corresponde a una población distinta. No unimos esos puntos como una curva comparable de dosis. La distinción de poblaciones es nuestra decisión de presentación; el artículo citado orienta a considerar desplazamientos con soporte.</p>
 <p>Indicación: Distinguir cambios del incremento y cambios de la población.</p>
 <p>Source record: scripts 28 and 28b; relative_shift_estimates.csv and relative_shift_own_support_estimates.csv.</p>
@@ -2852,7 +2966,7 @@ display:block!important;
 <p>Support: shifted dose in a 2.5-pp bin with ≥5 users in the same history stratum. Activity uses observed active weeks; text requires comments before and after. No inactive weeks are added.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 44</p>
+<p>GUION EN ESPAÑOL · Diapositiva 46</p>
 <p>Hay que separar soporte de disponibilidad del resultado. El soporte común selecciona 11.487 usuarios, pero sólo 2.301 tienen actividad observada antes y después en la ventana de catorce semanas; 1.241 tienen texto en ambos períodos. Sobre soporte propio, las muestras de actividad son 15.822, 12.227, 8.801, 5.770 y 2.755 para los cinco incrementos. Las de texto son 10.011, 7.191, 4.809, 2.817 y 1.519. La tabla muestra tratados y controles de la muestra de actividad, no de todo el marco de soporte.</p>
 <p>Indicación: Distinguir cambios del incremento y cambios de la población.</p>
 <p>Source record: scripts 28 and 28b; relative_shift_estimates.csv and relative_shift_own_support_estimates.csv.</p>
@@ -2888,7 +3002,7 @@ display:block!important;
 <p><a href="https://journals.sagepub.com/doi/10.1177/00811750261459364">Lundberg &amp; Brand (2026)</a>: supported additive shifts with pre-treatment adjustment. These covariates, transformations and support thresholds are our implementation choices.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 45</p>
+<p>GUION EN ESPAÑOL · Diapositiva 47</p>
 <p>En el tratamiento continuo los controles son características anteriores al anuncio. Construimos logaritmo de uno más los comentarios previos, las preguntas previas y las respuestas previas; usamos asinh de reputación y antigüedad en semanas. La sexta variable es la proporción de preguntas sobre preguntas más respuestas; la base guarda 0,5 cuando no hay ninguna de esas contribuciones. Además, cada modelo incluye el promedio previo de su propio outcome: para comentarios, el promedio por usuario de logaritmo de uno más comentarios entre las semanas previas observadas en la ventana del modelo. No se agregan semanas con ceros. Este promedio es distinto del conteo histórico total de comentarios. Siguiendo el enfoque de desplazamientos de Lundberg y Brand, predecimos para las mismas personas con su dosis observada y con una dosis algo mayor dentro del soporte, manteniendo fija su historia. El artículo orienta el estimando, la necesidad de ajuste previo y la preocupación por soporte; nuestras variables, transformaciones y umbrales no son una receta que el artículo imponga. Las transformaciones y preguntas se mantienen en los modelos continuos ya estimados; el matching binario actual usa las cuatro variables originales y excluye preguntas.</p>
 <p>Indicación: Separar la construcción de los controles, el nivel previo del outcome y el desplazamiento de la dosis.</p>
 <p>Source record: 01_treatment.R; 06_matching.R; 28_relative_shift_event_study.R (covariates and period_delta); 28b_relative_shift_own_support.R; 28c_relative_shift_common_fast.R; Lundberg &amp; Brand (2026), doi:10.1177/00811750261459364.</p>
@@ -2925,7 +3039,7 @@ display:block!important;
 <p>Six prior-history covariates + pre-outcome level. Contemporary weekly-volume and active-day adjustments belong to the binary models; this is a separate dose model.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 46</p>
+<p>GUION EN ESPAÑOL · Diapositiva 48</p>
 <p>Cada resultado es primero el promedio posterior menos el previo de las semanas observadas de un usuario. No agregamos semanas con ceros. Unimos ese resultado con la población que tiene soporte para el incremento elegido. El modelo lineal permite que la pendiente de dosis varíe con la historia previa; el GAM usa una curva de dosis aditiva. Ajustamos comentarios, respuestas, preguntas, proporción de preguntas, antigüedad y reputación previos, más el promedio previo del propio resultado. La eliminación de preguntas como variable de matching se aplica al diseño binario, no a estos modelos continuos. Predecimos con la dosis real y con quince puntos adicionales y promediamos la diferencia. Los intervalos provienen de doscientos remuestreos de usuarios con penalizaciones fijas.</p>
 <p>Indicación: Señalar las tres líneas: dosis, modelo y contraste.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -2977,7 +3091,7 @@ display:block!important;
 <p>This is a contrast of predicted changes, not the raw post-treatment level or an unconditional participation effect. Text effects use score points; positive-share effects use percentage points.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 47</p>
+<p>GUION EN ESPAÑOL · Diapositiva 49</p>
 <p>Primero transformamos cada conteo semanal con logaritmo de uno más el conteo. Después calculamos el cambio entre los promedios posterior y previo de las semanas observadas. El efecto del desplazamiento es la diferencia entre dos predicciones de ese cambio para la misma persona. Por ejemplo, menos 0,0274 significa un cambio previsto más bajo en 0,0274 puntos logarítmicos al sumar quince puntos de pérdida relativa. No es el nivel posterior ni la probabilidad de estar activo. En texto usamos puntos del score, y la proporción positiva se mide en puntos porcentuales.</p>
 <p>Indicación: Recorrer la columna del ejemplo de arriba abajo.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R.</p>
@@ -3010,7 +3124,7 @@ display:block!important;
 <p>Comments decline in the linear model at all five shifts; GAM intervals include zero. Answer and accepted-answer intervals span zero.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 48</p>
+<p>GUION EN ESPAÑOL · Diapositiva 50</p>
 <p>Con los mismos 2.301 usuarios, el modelo lineal estima una caída de comentarios en los cinco incrementos y el GAM no la estima con precisión. En quince puntos, comentarios da menos 0,0464 en el lineal y menos 0,0235 en el GAM. Respuestas y aceptadas tienen intervalos que incluyen cero en ambos modelos. Aquí sí mantenemos fija la población al comparar incrementos, pero la conclusión sobre comentarios depende de la forma funcional.</p>
 <p>Indicación: Distinguir cambios del incremento y cambios de la población.</p>
 <p>Source record: scripts 28 and 28b; relative_shift_estimates.csv and relative_shift_own_support_estimates.csv.</p>
@@ -3043,7 +3157,7 @@ display:block!important;
 <p>Answers and accepted answers decline in both models; comment intervals include zero.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 49</p>
+<p>GUION EN ESPAÑOL · Diapositiva 51</p>
 <p>En cinco puntos, respuestas y aceptadas disminuyen en los dos modelos; comentarios sigue siendo impreciso. La muestra es de 15,822 usuarios con soporte propio y actividad observada antes y después. Cambia la población respecto de los demás incrementos, de modo que estas comparaciones no forman una curva de dosis para las mismas personas.</p>
 <p>Indicación: Distinguir cambios del incremento y cambios de la población.</p>
 <p>Source record: scripts 28 and 28b; relative_shift_estimates.csv and relative_shift_own_support_estimates.csv.</p>
@@ -3076,7 +3190,7 @@ display:block!important;
 <p>Accepted answers decline only in GAM; other activity intervals include zero.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 50</p>
+<p>GUION EN ESPAÑOL · Diapositiva 52</p>
 <p>En diez puntos, sólo aceptadas en el GAM tiene un intervalo negativo que excluye cero. Los demás intervalos de actividad incluyen cero. La muestra es de 12,227 usuarios con soporte propio y actividad observada antes y después. Cambia la población respecto de los demás incrementos, de modo que estas comparaciones no forman una curva de dosis para las mismas personas.</p>
 <p>Indicación: Distinguir cambios del incremento y cambios de la población.</p>
 <p>Source record: scripts 28 and 28b; relative_shift_estimates.csv and relative_shift_own_support_estimates.csv.</p>
@@ -3109,7 +3223,7 @@ display:block!important;
 <p>Both models: accepted answers and comments decline. Answers are imprecise. Comments: −0.0289 linear / −0.0274 GAM.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 51</p>
+<p>GUION EN ESPAÑOL · Diapositiva 53</p>
 <p>El contraste focal de quince puntos usa 8.801 usuarios. Respuestas aceptadas y comentarios tienen intervalos negativos en ambos modelos. Para comentarios, el lineal da menos 0,0289 y el GAM menos 0,0274; en aceptadas dan menos 0,0165 y menos 0,0111. En respuestas los intervalos incluyen cero. Esta concordancia entre modelos corresponde al soporte propio de quince puntos y no convierte los otros incrementos, con otros usuarios, en una comparación de dosis equivalente.</p>
 <p>Indicación: Señalar el tamaño de la población y el cambio de signo.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -3142,7 +3256,7 @@ display:block!important;
 <p>Pre-period deviations occur in answers and accepted answers; comments have two negative post weeks outside their intervals. Interpret alongside the changing weekly sample.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 52</p>
+<p>GUION EN ESPAÑOL · Diapositiva 54</p>
 <p>Los modelos semanales usan usuarios con promedio previo y actividad observada en esa semana. No son necesariamente los mismos 8.801 del promedio con ambos períodos. La muestra varía entre 1.821 y 3.567. Hay diferencias previas en respuestas y aceptadas, y dos semanas posteriores de comentarios tienen intervalos negativos. Los intervalos son puntuales, no bandas simultáneas de DiD, y la composición cambia por semana.</p>
 <p>Indicación: Señalar los saltos aislados.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -3175,7 +3289,7 @@ display:block!important;
 <p>Accepted answers decline only in GAM; answers and comments remain imprecise.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 53</p>
+<p>GUION EN ESPAÑOL · Diapositiva 55</p>
 <p>En veinte puntos, aceptadas disminuye en el GAM. Respuestas y comentarios siguen teniendo intervalos que incluyen cero. La muestra es de 5,770 usuarios con soporte propio y actividad observada antes y después. Cambia la población respecto de los demás incrementos, de modo que estas comparaciones no forman una curva de dosis para las mismas personas.</p>
 <p>Indicación: Recordar que +15 pp es la especificación principal y +20 pp una sensibilidad con otros usuarios.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R; relative_shift_own_support_estimates.csv.</p>
@@ -3208,7 +3322,7 @@ display:block!important;
 <p>Comments decline only in the linear model; GAM and other activity intervals include zero.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 54</p>
+<p>GUION EN ESPAÑOL · Diapositiva 56</p>
 <p>En veinticinco puntos, comentarios disminuye sólo con el modelo lineal. Los resultados del GAM y de las otras variables son imprecisos. La muestra es de 2,755 usuarios con soporte propio y actividad observada antes y después. Cambia la población respecto de los demás incrementos, de modo que estas comparaciones no forman una curva de dosis para las mismas personas.</p>
 <p>Indicación: Distinguir cambios del incremento y cambios de la población.</p>
 <p>Source record: scripts 28 and 28b; relative_shift_estimates.csv and relative_shift_own_support_estimates.csv.</p>
@@ -3230,7 +3344,7 @@ display:block!important;
 <p>Comment tone and approval, admiration and gratitude scores: descriptives, DiD without matching, then matched comparisons.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 55</p>
+<p>GUION EN ESPAÑOL · Diapositiva 57</p>
 <p>Pasamos a texto después de terminar el bloque de actividad. Mostramos descriptivos, el DiD sin matching y luego PSM y CEM para las tres medidas de tono y aprobación, admiración y gratitud; las otras emociones están en el apéndice. Los modelos de texto no incorporan el índice de intensidad como covariable adicional; sus ajustes se explican en cada diseño.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Section divider.</p>
@@ -3276,7 +3390,7 @@ Approval, admiration and gratitude.<br>Other labels in the appendix.
 <p>First average comments within each user-week, then apply design weights. Scores describe textual expression among observed commenters.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 56</p>
+<p>GUION EN ESPAÑOL · Diapositiva 58</p>
 <p>La muestra PSM tiene 183,464 comentarios: 95.523 de 7.077 tratados y 87.941 de 5.488 controles, dentro de la ventana textual de catorce semanas por lado. Primero promediamos comentarios por usuario-semana y después aplicamos los pesos del diseño. El DiD sin matching utiliza una muestra mayor: 40.669 usuarios con texto. En ambos casos mostramos las tres medidas de tono y aprobación, admiración y gratitud; las otras emociones están en el apéndice; no asignamos scores cero a quien no comenta.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Source record: text_analysis/code/30_corrected_base_panel.R and 31_corrected_designs.R (eligible analysis sample).</p>
@@ -3309,7 +3423,7 @@ display:block!important;
 <p><strong>Matched descriptives, among observed commenters.</strong> Weekly averages use the same user-week aggregation and design weights as the text analysis.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 57</p>
+<p>GUION EN ESPAÑOL · Diapositiva 59</p>
 <p>Estas curvas ya corresponden a la muestra PSM. Cada punto promedia los scores de los usuarios que comentan esa semana, con los pesos del diseño. No son promedios del corpus completo ni incluyen ceros para quienes no comentan. Por eso un cambio también puede reflejar qué usuarios participan; después mostramos los contrastes del modelo.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -3343,7 +3457,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 58</p>
+<p>GUION EN ESPAÑOL · Diapositiva 60</p>
 <p>Niveles descriptivos de approval, admiration y gratitude en usuarios-semana PSM. Las diferencias entre grupos no son efectos causales.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
@@ -3387,7 +3501,7 @@ Average comments within each user-week.<br>Then apply the design’s user weight
 <p>Text/context PSM uses the earlier transformed match; the current raw-unit reestimation covers activity only.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 59</p>
+<p>GUION EN ESPAÑOL · Diapositiva 61</p>
 <p>Para la pregunta sobre usuarios, primero promediamos los comentarios de cada persona dentro de cada semana. Después promediamos esas observaciones con los pesos del diseño. En PSM, cada usuario retenido pesa uno: no hay pesos mayores para algunos. En CEM, los controles reciben pesos según cuántos tratados y controles comparables hay en su estrato de historia previa. Eso busca representar la composición de los tratados retenidos. Una semana sin comentarios no recibe un score emocional de cero: no tenemos un resultado textual para esa semana.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Explicar que el peso corresponde al usuario y su historial, no a cuánta emoción expresa.</p>
@@ -3449,7 +3563,7 @@ display:block!important;
 <p>Text/context PSM uses the earlier transformed match; the current raw-unit reestimation covers activity only.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 60</p>
+<p>GUION EN ESPAÑOL · Diapositiva 62</p>
 <p>El panel original de actividad contiene sólo semanas con actividad. No completamos otras semanas con ceros. El texto requiere además un comentario observado. En paneles incompletos, did utiliza su estimación para cortes repetidos; no debemos afirmar que cada contraste sigue exactamente a las mismas personas antes y después. La referencia amplia da igual peso a cada semana observada por usuario, mientras los modelos de primer comentario promedian eventos directamente por usuario y período.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Distinguir lo estimado de lo propuesto y precisar la población comparada.</p>
@@ -3510,7 +3624,7 @@ display:block!important;
 <p>40,669 users with comments. Same aggregation and DiD framework as the matched text models; outcome-stage covariates are an intercept.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 61</p>
+<p>GUION EN ESPAÑOL · Diapositiva 63</p>
 <p>Primero estimamos texto sin matching. Se usan los 40.669 usuarios elegibles con comentarios, promedios por usuario-semana y un intercepto, sin pesos de emparejamiento ni el índice de intensidad de los modelos originales de actividad. Con la última semana previa, los intervalos de tono incluyen cero. Con todas las semanas previas, valencia cae aproximadamente 0,0145 y la proporción positiva cae 1,49 puntos porcentuales. La referencia previa cambia la lectura.</p>
 <p>Indicación: Leer la muestra y el intervalo junto con el resultado.</p>
 <p>Source record: completed stages 1–6 of requested_analysis_runs/20261020T152417Z_200177.</p>
@@ -3543,7 +3657,7 @@ display:block!important;
 <p>Weekly effects and average effects answer different summaries; broad-reference results appear in the comparison table.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 62</p>
+<p>GUION EN ESPAÑOL · Diapositiva 64</p>
 <p>Este event study usa toda la muestra textual elegible, sin matching. Las bandas son simultáneas dentro de cada resultado, no entre todas las medidas. Los promedios con referencia amplia no se deducen directamente de este gráfico, porque usan la media de semanas observadas de cada período.</p>
 <p>Indicación: Leer la muestra y el intervalo junto con el resultado.</p>
 <p>Source record: completed stages 1–6 of requested_analysis_runs/20261020T152417Z_200177.</p>
@@ -3576,7 +3690,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 63</p>
+<p>GUION EN ESPAÑOL · Diapositiva 65</p>
 <p>El DiD sin matching compara cambios semanales de las tres emociones. Los intervalos corresponden al event study guardado.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -3609,7 +3723,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 64</p>
+<p>GUION EN ESPAÑOL · Diapositiva 66</p>
 <p>Estos efectos sin matching se muestran con dos referencias: última semana previa y todas las semanas previas. Comparamos estimaciones e intervalos sin seleccionar la referencia por su resultado.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -3642,7 +3756,7 @@ display:block!important;
 <p><strong>No precise weekly tone change under PSM.</strong> The matched text sample has 7,077 treated and 5,488 controls with observed comments.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 65</p>
+<p>GUION EN ESPAÑOL · Diapositiva 67</p>
 <p>Con PSM observamos 7.077 tratados y 5.488 controles con comentarios. Las bandas semanales de tono incluyen cero. La muestra es menor que en el DiD sin matching, y la selección de usuarios observados puede variar entre semanas.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -3699,7 +3813,7 @@ display:block!important;
 <p>Text/context PSM uses the earlier transformed match; the current raw-unit reestimation covers activity only.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 66</p>
+<p>GUION EN ESPAÑOL · Diapositiva 68</p>
 <p>En la muestra PSM los seis intervalos de tono incluyen cero con las dos referencias. Eso contrasta con las caídas de valencia y proporción positiva del DiD sin matching usando la referencia amplia. Cambian las poblaciones y sus pesos; no basta con comparar si un valor p cruza un umbral.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Leer el resultado junto con la muestra y los controles.</p>
@@ -3733,7 +3847,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 67</p>
+<p>GUION EN ESPAÑOL · Diapositiva 69</p>
 <p>Revisamos los contrastes semanales de approval, admiration y gratitude. Es importante observar también los intervalos previos a la reforma.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
@@ -3767,7 +3881,7 @@ display:block!important;
 <p>Approval increases under both references; admiration and gratitude depend on the pre-period reference.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 68</p>
+<p>GUION EN ESPAÑOL · Diapositiva 70</p>
 <p>En los resultados guardados, approval aumenta con ambas referencias. Admiration aumenta usando la última semana previa, pero su intervalo incluye cero usando todas las previas. Gratitude disminuye con la referencia amplia, mientras el intervalo con la última semana incluye cero.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
@@ -3801,7 +3915,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 69</p>
+<p>GUION EN ESPAÑOL · Diapositiva 71</p>
 <p>Comparamos las tres emociones entre DiD sin matching, PSM y los dos CEM. Cada diseño puede seleccionar una población distinta; las dos referencias se muestran por separado.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
@@ -3835,7 +3949,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 70</p>
+<p>GUION EN ESPAÑOL · Diapositiva 72</p>
 <p>Los mismos 1.241 usuarios de texto permiten comparar los incrementos de cinco a veinticinco puntos. Mostramos sólo las tres emociones de interés; las otras etiquetas permanecen en el apéndice.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -3868,7 +3982,7 @@ display:block!important;
 <p>All three intervals include zero in both dose models at +15 pp.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 71</p>
+<p>GUION EN ESPAÑOL · Diapositiva 73</p>
 <p>Para quince puntos en soporte común, los intervalos de approval, admiration y gratitude incluyen cero tanto en el modelo lineal como en el GAM. Esta población contiene 1.241 usuarios con texto antes y después.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -3901,7 +4015,7 @@ display:block!important;
 <p>All three intervals include zero in both dose models at +15 pp.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 72</p>
+<p>GUION EN ESPAÑOL · Diapositiva 74</p>
 <p>Para quince puntos en soporte propio hay 4.809 usuarios con texto antes y después. Los intervalos de approval, admiration y gratitude incluyen cero en ambos modelos. No es la misma población del ejercicio de soporte común.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -3934,7 +4048,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 73</p>
+<p>GUION EN ESPAÑOL · Diapositiva 75</p>
 <p>Estos son contrastes semanales de las tres emociones para quince puntos, condicionados a la disponibilidad de comentarios cada semana. La población semanal puede variar; los intervalos son puntuales, sin corrección conjunta.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -3967,7 +4081,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 74</p>
+<p>GUION EN ESPAÑOL · Diapositiva 76</p>
 <p>Este contraste de 5 puntos usa la población con soporte propio para ese incremento. Revisamos las tres emociones y sus intervalos en ambos modelos; no interpretamos las diferencias entre incrementos como cambios sobre una población fija.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -4000,7 +4114,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 75</p>
+<p>GUION EN ESPAÑOL · Diapositiva 77</p>
 <p>Este contraste de 10 puntos usa la población con soporte propio para ese incremento. Revisamos las tres emociones y sus intervalos en ambos modelos; no interpretamos las diferencias entre incrementos como cambios sobre una población fija.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -4033,7 +4147,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 76</p>
+<p>GUION EN ESPAÑOL · Diapositiva 78</p>
 <p>Este contraste de 20 puntos usa la población con soporte propio para ese incremento. Revisamos las tres emociones y sus intervalos en ambos modelos; no interpretamos las diferencias entre incrementos como cambios sobre una población fija.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -4066,7 +4180,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 77</p>
+<p>GUION EN ESPAÑOL · Diapositiva 79</p>
 <p>Este contraste de 25 puntos usa la población con soporte propio para ese incremento. Revisamos las tres emociones y sus intervalos en ambos modelos; no interpretamos las diferencias entre incrementos como cambios sobre una población fija.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -4088,7 +4202,7 @@ display:block!important;
 <p>First identify <strong>who asked, who answered and where the comment appears</strong>. Then distinguish observed thanks from opportunities to respond to comparable contributions.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 78</p>
+<p>GUION EN ESPAÑOL · Diapositiva 80</p>
 <p>Este bloque responde una preocupación concreta. El tratamiento depende de la pérdida por votos previos en preguntas; los controles también pueden preguntar. Los grupos tienen distintas actividades y oportunidades de agradecer. Partimos por leer hilos donde los controles agradecen para identificar situaciones; luego debemos buscar todas las ocurrencias de esas situaciones en ambos grupos, incluidas aquellas sin agradecimiento. Lo disponible compara ubicaciones y primeros comentarios observados. La extensión debe reconstruir el aporte recibido y la respuesta posterior.</p>
 <p>Indicación: Plantear las tres preguntas del bloque.</p>
 <p>Source record: text_analysis/code/32_context_events.R on the eligible analysis sample.</p>
@@ -4140,7 +4254,7 @@ display:block!important;
 <p>“Own” refers to the person writing the comment. Context identifies the question author and the commented post. It does not identify the trigger or verify that an answer to one’s question came from someone else.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 79</p>
+<p>GUION EN ESPAÑOL · Diapositiva 81</p>
 <p>Cada contexto se define desde la perspectiva de quien escribe el comentario. En respuestas a pregunta propia, yo hice la pregunta y comento una respuesta en ese hilo. Por ejemplo, si otra persona respondió, podría agradecer la solución o pedir una aclaración; el contexto no determina cuál de esas acciones ocurre. En pregunta propia, mi comentario está debajo de mi pregunta. En respuesta propia, otra persona preguntó, yo respondí y después comento debajo de mi propia respuesta: podría estar aclarando algo, reaccionando a una corrección o simplemente añadiendo información. No sabemos cuál de esas situaciones ocurrió sólo con la ubicación. Otros hilos reúne los casos restantes en preguntas ajenas. Estas cuatro categorías amplias se usan en los gráficos de emociones y en la descomposición de composición. Tanto tratados como controles pueden preguntar y responder; pertenecer al control no significa no haber preguntado.</p>
 <p>Indicación: Leer los ejemplos en primera persona; identificar siempre quién comenta.</p>
 <p>Source record: 29_comment_context_gratitude.R and 32_context_events.R; definitions checked against saved classification code.</p>
@@ -4208,7 +4322,7 @@ display:block!important;
 <p>The “where users thank” analysis uses these seven categories. Categories 4–7 form “Others’ threads” in the four-category emotion plots. Having an answer is checked in the full recorded file, not necessarily before the comment.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 80</p>
+<p>GUION EN ESPAÑOL · Diapositiva 82</p>
 <p>La clasificación detallada conserva los tres contextos principales y desagrega otros hilos. Primero distingue si la pregunta es del autor del comentario. Si no lo es, identifica si comenta su propia respuesta. En los demás casos distingue si el usuario tiene alguna respuesta registrada en ese hilo y si comenta la pregunta u otra respuesta. Así obtenemos siete categorías mutuamente excluyentes según las reglas del código. Los contextos cuatro a siete se agrupan como otros hilos en los gráficos que usan cuatro categorías. La marca también respondió se obtiene del archivo completo: no implica que ya hubiera respondido cuando escribió ese comentario. No la interpretamos como una característica previa ni como un control causal. La ausencia de respuesta significa que no hay una registrada en los datos usados.</p>
 <p>Indicación: Relacionar los contextos 1–3 con los ejemplos y mostrar cómo se desagrega otros hilos.</p>
 <p>Source record: 29_comment_context_gratitude.R and 32_context_events.R; definitions checked against saved classification code.</p>
@@ -4264,7 +4378,7 @@ display:block!important;
 <p>Explicit thanks = thank / thanks / thx / ty. The gratitude score is a separate model-based measure. Neither measures unexpressed gratitude.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 81</p>
+<p>GUION EN ESPAÑOL · Diapositiva 83</p>
 <p>Antes de ver los resultados hay que distinguir los denominadores. La proporción de agradecimientos por contexto divide los agradecimientos de ese contexto por todos los agradecimientos del grupo: responde dónde agradecen. La tasa dentro del contexto divide esos agradecimientos por todos los comentarios que se escribieron allí: responde con qué frecuencia agradecen entre quienes comentan. Por ejemplo, un contexto puede concentrar muchos agradecimientos porque allí se escribe mucho, sin tener una tasa de agradecimiento especialmente alta. El score de gratitude es otra medida: el promedio de la puntuación del clasificador de emociones, no un porcentaje de personas que agradecen. La expresión explícita se detecta con thank, thanks, thx o ty. Todas estas medidas parten de comentarios observados. Para estudiar oportunidades hay que comenzar cuando llega el aporte, antes de saber si el usuario comentará. Si no comenta, no hay agradecimiento escrito observado en la ventana, pero no podemos afirmar que no sintió gratitud.</p>
 <p>Indicación: Explicar los denominadores antes de interpretar los porcentajes del gráfico siguiente.</p>
 <p>Source record: 29_comment_context_gratitude.R and 32_context_events.R; definitions checked against saved classification code.</p>
@@ -4297,7 +4411,7 @@ display:block!important;
 <p><strong>12 % of controls’ thanks occur on their own answers.</strong> Both groups thank in about 4 % of comments there; the preceding contribution still needs to be identified.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 82</p>
+<p>GUION EN ESPAÑOL · Diapositiva 84</p>
 <p>En la muestra elegible original, aproximadamente el 74 por ciento de los agradecimientos explícitos previos de los controles ocurre en respuestas a su propia pregunta, y el 12 por ciento en su propia respuesta. Las respuestas propias siguen siendo un contexto compartido que conviene estudiar, pero su peso ya no es el 31 por ciento de la muestra restringida anterior. Clasificar la ubicación no identifica por sí solo el aporte recibido ni su destinatario.</p>
 <p>Indicación: Leer primero la barra oscura de la izquierda.</p>
 <p>Source record: text_analysis/code/32_context_events.R on the eligible analysis sample.</p>
@@ -4330,7 +4444,7 @@ display:block!important;
 <p>Compare approval, admiration and gratitude within the same context. These are mean scores among observed comments, not treatment effects.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 83</p>
+<p>GUION EN ESPAÑOL · Diapositiva 85</p>
 <p>Mostramos los niveles previos de approval, admiration y gratitude según el contexto del comentario y el grupo. La ubicación de un comentario ayuda a interpretar qué se agradece, pero no define por sí sola una oportunidad comparable.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
 <p>Source record: saved estimates, 2026-10-20; figure selection only, no model fitting.</p>
@@ -4363,7 +4477,7 @@ display:block!important;
 <p>Rates describe observed comments, not all received opportunities. Compare each context separately; changing participation can alter the lines.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 84</p>
+<p>GUION EN ESPAÑOL · Diapositiva 86</p>
 <p>Estas curvas describen la proporción de comentarios que agradecen por semana y contexto entre los usuarios elegibles. No imponen que los mismos usuarios aparezcan cada semana ni incluyen oportunidades sin comentario. Su lectura es descriptiva y debe acompañar los modelos con pesos actualizados.</p>
 <p>Indicación: Mirar si alguna línea cambia en la línea punteada.</p>
 <p>Source record: text_analysis/code/32_context_events.R on the eligible analysis sample.</p>
@@ -4415,7 +4529,7 @@ Answers to own question: treated 37.6% → 32.8%; controls 15.7% → 15.0%.
 <p>Descriptive decomposition: within = Σ share_post × Δgratitude; composition = Σ Δshare × gratitude_pre. It is not a treatment-effect decomposition.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 85</p>
+<p>GUION EN ESPAÑOL · Diapositiva 87</p>
 <p>En el corpus elegible completo, la gratitud baja en ambos grupos: aproximadamente 0,021 en tratados y 0,008 en controles. El componente de composición representa cerca del 69 por ciento de la caída tratada y el 47 por ciento de la caída del control. No corresponde conservar la conclusión anterior de una subida en controles. Es una descomposición descriptiva de promedios de comentarios, no una identificación del efecto causal de la reforma.</p>
 <p>Indicación: Señalar la columna de composición.</p>
 <p>Source record: text_analysis/code/29_comment_context_gratitude.R on the eligible analysis sample.</p>
@@ -4455,7 +4569,7 @@ A contribution received → a chance to respond → the subsequent response.
 <p>Start an event when the contribution arrives. Count <strong>response</strong>, <strong>thanks within a fixed window</strong>, and <strong>tone among responders</strong> separately.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 86</p>
+<p>GUION EN ESPAÑOL · Diapositiva 88</p>
 <p>La unidad debe comenzar con un aporte recibido, sin exigir que la persona responda. Por ejemplo, una corrección a su respuesta abre una oportunidad; luego podemos observar si responde, si agradece y cómo responde. La falta de comentario implica ausencia de agradecimiento escrito en esa ventana, no ausencia de gratitud psicológica. Debemos tener seguimiento completo y una regla para aportes múltiples. Este diseño está propuesto; los resultados anteriores no lo implementan.</p>
 <p>Indicación: Distinguir lo estimado de lo propuesto y precisar la población comparada.</p>
 <p>Source record: Revisión del diseño actual, 2026-10-20; scripts 30–32.</p>
@@ -4488,7 +4602,7 @@ display:block!important;
 <p><strong>Among observed first comments, controls thank more before and after.</strong> Acceptance and response delay describe selected reactions; neither defines a pre-treatment control.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 87</p>
+<p>GUION EN ESPAÑOL · Diapositiva 89</p>
 <p>Para reducir el peso de conversaciones largas, retenemos por usuario y respuesta recibida el primer comentario que aparece dentro de nuestra ventana de texto. No necesariamente es el primer comentario de toda la historia del hilo. La selección usa la propiedad de la pregunta y no excluye respuestas del propio autor; por eso esta ubicación no garantiza ayuda recibida de otra persona. La persona tuvo que comentar para entrar; una respuesta recibida sin comentario queda fuera. Los controles agradecen más en todas las circunstancias: cuando aceptaron la respuesta, cuando no, y reaccionen rápido o tarde. En ambos grupos se agradece más cuando la respuesta fue aceptada. Las tasas se mueven poco entre períodos. No observamos aquí respuestas recibidas que nunca se comentaron. La aceptación es el estado registrado y no conocemos necesariamente cuándo se aceptó; el tiempo hasta comentar también es parte de la respuesta, no un control previo.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Comparar círculos vacíos y llenos de un mismo color.</p>
@@ -4532,7 +4646,7 @@ display:block!important;
 <p>Text/context PSM uses the earlier transformed match; the current raw-unit reestimation covers activity only.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 88</p>
+<p>GUION EN ESPAÑOL · Diapositiva 90</p>
 <p>Este es el código del análisis por contexto. Primero clasificamos cada comentario con el id de la pregunta del thread: si la pregunta es del usuario, si el usuario también respondió y si el comentario está en la pregunta o en una respuesta. Luego marcamos el agradecimiento explícito. El evento observado es el primer comentario dentro de la ventana de texto en cada respuesta que recibió. La clasificación «también respondió» usa el archivo completo, no necesariamente una respuesta anterior al comentario; no la interpretamos como historia previa. Finalmente, para cada contexto o evento, calculamos la proporción de agradecimientos de cada usuario antes y después y aplicamos el mismo att_gt con los pesos de PSM o CEM.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Señalar las tres partes: contexto, evento, modelo.</p>
@@ -4566,7 +4680,7 @@ display:block!important;
 <p><strong>All estimated explicit-thanks intervals include zero.</strong> In the first-comment-on-answer-received model, 247 PSM / 637 CEM controls appear in both periods; models use all available user-periods.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 89</p>
+<p>GUION EN ESPAÑOL · Diapositiva 91</p>
 <p>Con los resultados actuales, ningún intervalo de agradecimiento explícito excluye cero. En primera reacción a una respuesta recibida, PSM estima menos 2,61 puntos porcentuales, con intervalo de menos 6,96 a más 1,75; CEM estima menos 2,05, con intervalo de menos 7,15 a más 3,06. Hay 247 controles PSM y 637 CEM presentes en ambos períodos. Es un diagnóstico: los modelos no se limitan a esas personas y usan todos los usuarios-períodos disponibles.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -4600,7 +4714,7 @@ display:block!important;
 <p>Approval, admiration and gratitude are shown in original score units; compare estimates and intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 90</p>
+<p>GUION EN ESPAÑOL · Diapositiva 92</p>
 <p>Restringimos los comentarios a respuestas recibidas en preguntas propias. En los resultados guardados ninguna de las tres emociones presenta un intervalo que excluya cero con ambas referencias. La incertidumbre y la selección de quienes comentan siguen presentes.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Comparar las tres emociones y sus intervalos.</p>
@@ -4634,7 +4748,7 @@ display:block!important;
 <p><strong>Gratitude remains imprecise within this context.</strong> Observed users can change across weeks; these are selected comments, not all opportunities to respond.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 91</p>
+<p>GUION EN ESPAÑOL · Diapositiva 93</p>
 <p>Este event study usa los usuarios PSM con comentarios en el contexto de respuestas a su propia pregunta. Los períodos pueden contener usuarios diferentes; no es un panel balanceado de oportunidades recibidas. Gratitud es imprecisa con las dos referencias promedio. Las señales aisladas de otras etiquetas no se mantienen entre ambas referencias.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -4693,7 +4807,7 @@ display:block!important;
 <p>Prioritize feedback on <strong>one’s own answer</strong>. First review control threads, then identify every comparable event in both groups, including those without thanks.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 92</p>
+<p>GUION EN ESPAÑOL · Diapositiva 94</p>
 <p>Proponemos identificar correcciones, información complementaria y solicitudes de aclaración, empezando por hilos de controles que agradecen para descubrir situaciones. Después hay que identificar todos los aportes comparables de ese tipo en ambos grupos, incluidos los que no reciben agradecimiento. Feedback sobre respuestas propias es un contexto compartido; su peso en los agradecimientos de controles es ahora cercano al 12 por ciento. La factibilidad depende de cobertura y destinatario observables.</p>
 <p>Indicación: Distinguir lo estimado de lo propuesto y precisar la población comparada.</p>
 <p>Source record: Revisión del diseño actual, 2026-10-20; scripts 30–32.</p>
@@ -4721,7 +4835,7 @@ display:block!important;
 <p>Estimate participation and reaction separately. Conditioning on a post-reform context can select a different population; acceptance and response delay are not baseline controls.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 93</p>
+<p>GUION EN ESPAÑOL · Diapositiva 95</p>
 <p>Igualar contexto requiere más que compartir una ubicación. Hay que reconstruir el evento anterior y comparar el papel del usuario, el tipo de aporte, el tema y la historia observable de la interacción. Revisamos soporte y tamaños antes de estimar. Elegimos una ventana de seguimiento y evitamos contar el mismo agradecimiento por varios aportes. Si la reforma cambia quién recibe esos aportes, la comparación condicionada no representa automáticamente el efecto total de la pérdida de estatus.</p>
 <p>Indicación: Distinguir lo estimado de lo propuesto y precisar la población comparada.</p>
 <p>Source record: Revisión del diseño actual, 2026-10-20; scripts 30–32.</p>
@@ -4743,7 +4857,7 @@ display:block!important;
 <p>What the evidence supports, and what comes next.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 94</p>
+<p>GUION EN ESPAÑOL · Diapositiva 96</p>
 <p>Cerramos con lo que la evidencia permite afirmar y los próximos pasos.</p>
 <p>Indicación: Leer el título y pasar.</p>
 <p>Section divider.</p>
@@ -4776,7 +4890,7 @@ display:block!important;
 <p><strong>840/900 valid model–comment outputs; 240 comments covered by all three models.</strong> Review failed batches and consolidate the action codebook before human validation.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 95</p>
+<p>GUION EN ESPAÑOL · Diapositiva 97</p>
 <p>La última ejecución terminó el 16 de octubre y sí avanzó respecto del gráfico anterior: Gemma tiene 288 de 300 comentarios válidos, y Mistral y Qwen tienen 276 cada uno. Se intentaron los 114 lotes del piloto; 106 fueron válidos y ocho terminaron con error. Hay 840 salidas modelo-comentario, cubriendo los 300 comentarios al menos una vez; 240 tienen salida de los tres modelos. Terminar la ejecución no equivale a completar las 900 salidas esperadas. Las categorías siguen siendo propuestas sin validación humana independiente.</p>
 <p>Indicación: No comparar modelos por precisión a partir de estas barras.</p>
 <p>Source record: sources.json (current_analysis and current_pilot); model_audit.html documents the model review.</p>
@@ -4832,7 +4946,7 @@ Build user-level action counts and shares; compare pre/post changes.
 <p>Keep development and evaluation users separate. <strong>Coverage is not accuracy; proposed action labels are not yet validated outcomes.</strong></p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 96</p>
+<p>GUION EN ESPAÑOL · Diapositiva 98</p>
 <p>Para continuar el análisis de texto hay cuatro pasos concretos. Primero, revisar los ocho lotes fallidos y decidir cómo resolver o documentar las sesenta salidas faltantes. Los 240 comentarios con salida de los tres modelos permiten una comparación sobre el mismo material; no representan automáticamente todo el piloto. Segundo, consolidar las propuestas en un libro de códigos: qué cuenta como cada acción, qué no cuenta, ejemplos y reglas para comentarios ambiguos o con varias funciones. Tercero, fijar esas reglas antes de evaluar con anotaciones humanas independientes en la muestra reservada, que contiene usuarios distintos. Revisaremos precisión, recuperación y errores por categoría, y por grupo y período cuando haya casos suficientes. Cuarto, solo con una medida validada, construir conteos y proporciones de acciones por usuario y comparar cambios antes y después. Un período sin comentarios puede tener cero acciones, pero una proporción sin comentarios tiene denominador cero y exige una regla explícita. No vamos a interpretar la cobertura del piloto como precisión ni las categorías propuestas como resultados causales ya disponibles.</p>
 <p>Indicación: Separar lo que falta completar, definir, validar y recién después estimar.</p>
 <p>Source record: data/pilot_current_status.json; latest v3 observations, progress and attempt history; development/reserve sample manifest.</p>
@@ -4880,7 +4994,7 @@ Within-context thanks remains uncertain. Comparable received contributions are t
 <p>Own-support +15 pp: accepted answers and comments decline in both dose models; the three focal emotions remain imprecise at +15 pp. Observed participation and population limits still apply.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 97</p>
+<p>GUION EN ESPAÑOL · Diapositiva 99</p>
 <p>La actividad ya está reestimada con PSM en unidades originales, con y sin reemplazo. El uno a uno retiene 69,0 % de los tratados y reemplazo 96,5 %, con un tamaño efectivo de controles mucho menor. La referencia amplia muestra un contraste negativo y preciso de comentarios en ambos PSM sin control y con días activos; con volumen total es impreciso. La última semana previa produce resultados distintos, de modo que informamos sensibilidad a población, referencia y ajuste. Texto y contexto mantienen sus pesos anteriores: aprobación, admiración y gratitud siguen siendo el foco, pero no se atribuyen sus estimaciones a los nuevos usuarios de actividad.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Source record: sources.json (current_analysis and current_pilot); model_audit.html documents the model review.</p>
@@ -4917,7 +5031,7 @@ display:block!important;
 <p>Historical transformed matches: PSM <strong>13,593</strong>; fixed CEM <strong>21,200</strong>; empirical CEM <strong>21,304</strong>. Current raw-unit activity PSM is reported in the main slides. The unmatched DiD uses all available outcome observations from the eligible frame.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 99</p>
+<p>GUION EN ESPAÑOL · Diapositiva 101</p>
 <p>El CEM cruza bandas de comentarios, antigüedad, reputación y respuestas. Sólo retiene estratos con ambos grupos y una razón máxima de diez tratados por control, y repondera a los controles. La variante empírica cambia sólo los cortes del volumen previo de respuestas. Ninguna de estas tres variantes condiciona en haber preguntado.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Source record: text_analysis/code/31_corrected_designs.R; earlier scripts are design antecedents, not the source of current estimates.</p>
@@ -4950,7 +5064,7 @@ display:block!important;
 <p><strong>Unmatched DiD is negative in all three outcomes; comments are positive under PSM and both CEM designs.</strong> The designs retain different users and observed weeks.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 100</p>
+<p>GUION EN ESPAÑOL · Diapositiva 102</p>
 <p>Sin matching, las estimaciones son negativas en respuestas, aceptadas y comentarios. Con PSM y ambos CEM, los intervalos de comentarios quedan del lado positivo; respuestas y aceptadas siguen siendo imprecisas. Las poblaciones retenidas difieren y seguimos condicionados a observar actividad. Estos contrastes describen sensibilidad al diseño y a la selección de participantes, no una contradicción que podamos resolver eligiendo el coeficiente preferido.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. El código nuevo usa variables originales y requiere reestimación; no se presentan estas cifras como resultados del nuevo matching.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -5010,7 +5124,7 @@ display:block!important;
 <p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 101</p>
+<p>GUION EN ESPAÑOL · Diapositiva 103</p>
 <p>Esta es ahora una comparación limpia del ajuste: mantenemos muestra y estimador, y cambia únicamente el índice de intensidad previa. Respuestas pasa de menos 0,045 a menos 0,155, aceptadas de menos 0,066 a menos 0,134 y comentarios de menos 0,251 a menos 0,366. El ajuste aumenta la caída estimada en esta especificación. No escogemos el control para conservar un signo; mostramos su definición y la sensibilidad del resultado.</p>
 <p>Indicación: Leer el resultado junto con la muestra y los controles.</p>
 <p>Source record: scripts 31, 33, 34; requested_analysis_runs, 2026-10-20.</p>
@@ -5045,7 +5159,7 @@ display:block!important;
 <p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 102</p>
+<p>GUION EN ESPAÑOL · Diapositiva 104</p>
 <p>Construimos un único control de intensidad previa. Sumamos comentarios y respuestas anteriores al anuncio, dentro de la ventana previa de veintiséis semanas. Dividimos por el tiempo observable desde que se registró cada usuario, con un máximo de veintiséis semanas; usamos la fecha de registro y, cuando falta ese campo, la antigüedad de registro ya calculada. El denominador incluye semanas sin actividad y fracciones de semana: no dividimos sólo por semanas activas. Después aplicamos logaritmo de uno más la tasa. Un usuario que se registró hace un mes puede entrar; el máximo de veintiséis semanas define la ventana de medición, no un requisito de antigüedad.</p>
 <p>Indicación: Leer la muestra y el intervalo junto con el resultado.</p>
 <p>Source record: completed stages 1–6 of requested_analysis_runs/20261020T152417Z_200177.</p>
@@ -5081,7 +5195,7 @@ display:block!important;
 <p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 103</p>
+<p>GUION EN ESPAÑOL · Diapositiva 105</p>
 <p>El índice entra una sola vez en xformla. El resultado es el logaritmo de uno más respuestas, aceptadas o comentarios de la semana. Para aislar el cambio de control, estimamos con y sin ese índice usando exactamente los mismos usuarios, observaciones y estimador de regresión del resultado. El modelo sin control usa xformla igual a uno. No hay matching en esta comparación.</p>
 <p>Indicación: Señalar las dos agregaciones, simple y dinámica.</p>
 <p>Source record: text_analysis/code/33_mario_pre_volume_controls.R; outputs/original_rerun/<em>pre_volume</em>.csv.</p>
@@ -5117,7 +5231,7 @@ display:block!important;
 <p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 104</p>
+<p>GUION EN ESPAÑOL · Diapositiva 106</p>
 <p>Con la tasa de actividad previa por semana observable, el DiD ajustado da menos 0,155 en respuestas, menos 0,134 en aceptadas y menos 0,366 en comentarios. Los tres intervalos promedio excluyen cero. Corresponde al panel original de semanas con actividad, no a una población con todas sus semanas rellenadas. Estos resultados reemplazan los obtenidos con el total acumulado de actividad.</p>
 <p>Indicación: Mirar primero el período previo y luego la persistencia del efecto.</p>
 <p>Source record: text_analysis/code/33_mario_pre_volume_controls.R; outputs/original_rerun/<em>pre_volume</em>.csv.</p>
@@ -5146,7 +5260,7 @@ display:block!important;
 <p>Static binary and continuous treatment coefficients, with user and week effects. They answer a different estimating equation from the group-time DiD.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 105</p>
+<p>GUION EN ESPAÑOL · Diapositiva 107</p>
 <p>El apéndice compara TWFE sin control, con volumen total y con días de otras contribuciones. Las covariables semanales entran directamente, no interactuadas con post. Se mantienen los efectos de usuario y semana y los intervalos agrupados por usuario. La reputación histórica s se conserva en aceptadas y en los modelos continuos. Son coeficientes estáticos, distintos de los contrastes grupo-tiempo del DiD; no confundimos su signo con una validación de una misma ecuación.</p>
 <p>Indicación: Distinguir descripción, ajuste y alcance causal.</p>
 <p>Source record: completed weekly-volume/active-day runs and descriptive saved-PSM diagnostics.</p>
@@ -5179,7 +5293,7 @@ display:block!important;
 <p>All three adjustments preserve a negative comments coefficient. TWFE remains a separate specification in the appendix.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 106</p>
+<p>GUION EN ESPAÑOL · Diapositiva 108</p>
 <p>Estos gráficos comparan los tres ajustes manteniendo la muestra de cada especificación. Comentarios conserva un coeficiente negativo en los tres. TWFE binario y continuo tienen escalas de tratamiento diferentes; el continuo se expresa por una unidad de pérdida relativa, equivalente a cien puntos porcentuales. Los resultados no sustituyen la identificación ni el análisis de tendencias del DiD.</p>
 <p>Indicación: Distinguir descripción, ajuste y alcance causal.</p>
 <p>Source record: completed weekly-volume/active-day runs and descriptive saved-PSM diagnostics.</p>
@@ -5212,7 +5326,7 @@ display:block!important;
 <p>All three adjustments preserve a negative comments coefficient. TWFE remains a separate specification in the appendix.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 107</p>
+<p>GUION EN ESPAÑOL · Diapositiva 109</p>
 <p>Estos gráficos comparan los tres ajustes manteniendo la muestra de cada especificación. Comentarios conserva un coeficiente negativo en los tres. TWFE binario y continuo tienen escalas de tratamiento diferentes; el continuo se expresa por una unidad de pérdida relativa, equivalente a cien puntos porcentuales. Los resultados no sustituyen la identificación ni el análisis de tendencias del DiD.</p>
 <p>Indicación: Distinguir descripción, ajuste y alcance causal.</p>
 <p>Source record: completed weekly-volume/active-day runs and descriptive saved-PSM diagnostics.</p>
@@ -5271,7 +5385,7 @@ display:block!important;
 <p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 108</p>
+<p>GUION EN ESPAÑOL · Diapositiva 110</p>
 <p>El TWFE continuo con intensidad previa da más 0,307 en respuestas, más 0,090 en aceptadas y menos 0,378 en comentarios. Son coeficientes de interacción lineal con post y mantienen s. Los dos ejercicios de desplazamiento de dosis usan otros modelos y poblaciones; aparecen después y no deben compararse como si fueran el mismo estimando.</p>
 <p>Indicación: Leer el resultado junto con la muestra y los controles.</p>
 <p>Source record: scripts 31, 33, 34; requested_analysis_runs, 2026-10-20.</p>
@@ -5304,7 +5418,7 @@ display:block!important;
 <p>Inspect pre-reform deviations and persistence; isolated weeks across many labels require caution.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 109</p>
+<p>GUION EN ESPAÑOL · Diapositiva 111</p>
 <p>Mostramos las veintiocho emociones sin seleccionar etiquetas por significancia. El análisis semanal sin matching permite revisar diferencias previas y cambios posteriores; no interpretamos una semana aislada entre tantas comparaciones como una respuesta emocional general.</p>
 <p>Indicación: Leer la muestra y el intervalo junto con el resultado.</p>
 <p>Source record: completed stages 1–6 of requested_analysis_runs/20261020T152417Z_200177.</p>
@@ -5337,7 +5451,7 @@ display:block!important;
 <p>Love and neutral have isolated positive post weeks. Average neutral effects reverse sign across the two pre-period references.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 110</p>
+<p>GUION EN ESPAÑOL · Diapositiva 112</p>
 <p>En las otras catorce etiquetas aparecen semanas positivas aisladas de amor y neutralidad. En el promedio, neutralidad cambia de signo según la referencia previa. Es una señal de sensibilidad a la comparación temporal, no una dirección emocional estable.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. El código nuevo usa variables originales y requiere reestimación; no se presentan estas cifras como resultados del nuevo matching.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -5371,7 +5485,7 @@ display:block!important;
 <p>Gratitude falls with the broad reference in all four designs. Its last-week intervals include zero; the finding depends on the pre-period summary.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 111</p>
+<p>GUION EN ESPAÑOL · Diapositiva 113</p>
 <p>Estas comparaciones incluyen ahora el DiD sin matching y los tres diseños emparejados. Mostramos las dos referencias y todas las etiquetas. Aprobación es positiva con ambas referencias en PSM y CEM empírico; gratitud es negativa con la referencia amplia en los cuatro diseños. Algunas señales dependen de la referencia, y los intervalos no se corrigen conjuntamente por todas las etiquetas, diseños y referencias.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. El código nuevo usa variables originales y requiere reestimación; no se presentan estas cifras como resultados del nuevo matching.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -5405,7 +5519,7 @@ display:block!important;
 <p>Neutral reverses sign across references in PSM and empirical CEM. Other findings are isolated across labels and designs.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 112</p>
+<p>GUION EN ESPAÑOL · Diapositiva 114</p>
 <p>Estas comparaciones incluyen ahora el DiD sin matching y los tres diseños emparejados. Mostramos las dos referencias y todas las etiquetas. Aprobación es positiva con ambas referencias en PSM y CEM empírico; gratitud es negativa con la referencia amplia en los cuatro diseños. Algunas señales dependen de la referencia, y los intervalos no se corrigen conjuntamente por todas las etiquetas, diseños y referencias.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. El código nuevo usa variables originales y requiere reestimación; no se presentan estas cifras como resultados del nuevo matching.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -5439,7 +5553,7 @@ display:block!important;
 <p>All labels remain visible. Treat isolated intervals cautiously: there is no joint correction across outcomes, designs and references.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 113</p>
+<p>GUION EN ESPAÑOL · Diapositiva 115</p>
 <p>Estas comparaciones incluyen ahora el DiD sin matching y los tres diseños emparejados. Mostramos las dos referencias y todas las etiquetas. Aprobación es positiva con ambas referencias en PSM y CEM empírico; gratitud es negativa con la referencia amplia en los cuatro diseños. Algunas señales dependen de la referencia, y los intervalos no se corrigen conjuntamente por todas las etiquetas, diseños y referencias.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. El código nuevo usa variables originales y requiere reestimación; no se presentan estas cifras como resultados del nuevo matching.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
@@ -5473,7 +5587,7 @@ display:block!important;
 <p>Excitement increases in both models; other intervals on this page include zero. No joint multiplicity correction.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 114</p>
+<p>GUION EN ESPAÑOL · Diapositiva 116</p>
 <p>Estas cuatro páginas cubren las veintiocho emociones, valencia y proporción positiva en los mismos 4.809 usuarios con comentarios antes y después y soporte para quince puntos. Gratitud y neutralidad tienen intervalos que incluyen cero. Entusiasmo (excitement) aumenta aproximadamente 0,001 y tristeza baja aproximadamente 0,002 en ambos modelos. Son cambios pequeños en scores y comparaciones múltiples sin corrección conjunta; no equivalen a medir estados psicológicos.</p>
 <p>Indicación: No recorrer todos los paneles.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -5506,7 +5620,7 @@ display:block!important;
 <p>Gratitude and neutral intervals include zero in both models. Gratitude: +0.0083 linear / +0.0090 GAM.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 115</p>
+<p>GUION EN ESPAÑOL · Diapositiva 117</p>
 <p>Estas cuatro páginas cubren las veintiocho emociones, valencia y proporción positiva en los mismos 4.809 usuarios con comentarios antes y después y soporte para quince puntos. Gratitud y neutralidad tienen intervalos que incluyen cero. Entusiasmo (excitement) aumenta aproximadamente 0,001 y tristeza baja aproximadamente 0,002 en ambos modelos. Son cambios pequeños en scores y comparaciones múltiples sin corrección conjunta; no equivalen a medir estados psicológicos.</p>
 <p>Indicación: No recorrer todos los paneles.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -5539,7 +5653,7 @@ display:block!important;
 <p>Sadness decreases in both models; other intervals on this page include zero. No joint multiplicity correction.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 116</p>
+<p>GUION EN ESPAÑOL · Diapositiva 118</p>
 <p>Estas cuatro páginas cubren las veintiocho emociones, valencia y proporción positiva en los mismos 4.809 usuarios con comentarios antes y después y soporte para quince puntos. Gratitud y neutralidad tienen intervalos que incluyen cero. Entusiasmo (excitement) aumenta aproximadamente 0,001 y tristeza baja aproximadamente 0,002 en ambos modelos. Son cambios pequeños en scores y comparaciones múltiples sin corrección conjunta; no equivalen a medir estados psicológicos.</p>
 <p>Indicación: No recorrer todos los paneles.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -5572,7 +5686,7 @@ display:block!important;
 <p>Several labels also have pre-period deviations. Gratitude has one pre-period interval excluding zero and no post-period interval excluding zero.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 117</p>
+<p>GUION EN ESPAÑOL · Diapositiva 119</p>
 <p>El análisis semanal de las emociones utiliza entre 887 y 1.760 usuarios por semana, según quienes tienen promedio previo y comentan en esa semana. No es un panel balanceado ni necesariamente la misma población del promedio con ambos períodos. Aparecen diferencias previas en varias etiquetas. Gratitud tiene una diferencia previa aislada y ninguna semana posterior cuyo intervalo excluya cero. Hay muchas comparaciones y los intervalos son puntuales.</p>
 <p>Indicación: Mirar si algún panel cambia de forma sostenida.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -5605,7 +5719,7 @@ display:block!important;
 <p><strong>Descriptive levels can differ after matching.</strong> All 28 raw scores are shown; their levels and changing participant mix are not treatment effects.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 118</p>
+<p>GUION EN ESPAÑOL · Diapositiva 120</p>
 <p>Estas son las curvas descriptivas actualizadas de las veintiocho emociones en la muestra PSM. Cada punto es un promedio ponderado de usuarios-semana con comentarios. Las escalas cambian entre paneles y no representan intensidad psicológica. Las diferencias de niveles o de composición no equivalen a efectos de la reforma.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Source record: text_analysis/code/30_corrected_base_panel.R and 31_corrected_designs.R (eligible analysis sample).</p>
@@ -5638,7 +5752,7 @@ display:block!important;
 <p>Inspect pre-reform deviations and persistence; isolated weeks across many labels require caution.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 119</p>
+<p>GUION EN ESPAÑOL · Diapositiva 121</p>
 <p>Mostramos las veintiocho emociones sin seleccionar etiquetas por significancia. El análisis semanal sin matching permite revisar diferencias previas y cambios posteriores; no interpretamos una semana aislada entre tantas comparaciones como una respuesta emocional general.</p>
 <p>Indicación: Leer la muestra y el intervalo junto con el resultado.</p>
 <p>Source record: completed stages 1–6 of requested_analysis_runs/20261020T152417Z_200177.</p>
@@ -5671,7 +5785,7 @@ display:block!important;
 <p>Gratitude falls with the broad reference (−0.0143), but not precisely with the last-week reference.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 120</p>
+<p>GUION EN ESPAÑOL · Diapositiva 122</p>
 <p>En el promedio sin matching, gratitud cae 0,0143 con la referencia de todas las semanas previas y su intervalo excluye cero. Con la última semana previa no es preciso. También cambian otras etiquetas de forma aislada. Los cincuenta y seis intervalos no tienen corrección conjunta por comparaciones múltiples.</p>
 <p>Indicación: Leer la muestra y el intervalo junto con el resultado.</p>
 <p>Source record: completed stages 1–6 of requested_analysis_runs/20261020T152417Z_200177.</p>
@@ -5704,7 +5818,7 @@ display:block!important;
 <p>Admiration and approval have several positive post weeks; admiration also has one pre-period deviation. Bands are simultaneous within label, not across labels.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 121</p>
+<p>GUION EN ESPAÑOL · Diapositiva 123</p>
 <p>En las primeras catorce etiquetas, admiración y aprobación tienen varias semanas posteriores positivas. Admiración también presenta una diferencia previa aislada. Por eso revisamos la trayectoria previa y no equiparamos el balance de covariables con tendencias paralelas. Hay muchas etiquetas y semanas sin corrección conjunta.</p>
 <p>Indicación: No leer panel por panel; mirar si algún panel cambia después de la línea.</p>
 <p>Source record: text_analysis/code/30_corrected_base_panel.R and 31_corrected_designs.R (eligible analysis sample).</p>
@@ -5737,7 +5851,7 @@ display:block!important;
 <p><strong>Approval increases with both PSM references (+0.0239 / +0.0136).</strong> Gratitude falls with all pre weeks (−0.0460); neutral changes sign across references. Unadjusted intervals.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 122</p>
+<p>GUION EN ESPAÑOL · Diapositiva 124</p>
 <p>Con PSM, aprobación aumenta 0,0239 con la última semana previa y 0,0136 con todas las previas; ambos intervalos excluyen cero. Gratitud cae 0,046 con la referencia amplia, mientras su otro intervalo incluye cero. Neutralidad es negativa con la última semana y positiva con la referencia amplia. Hay resultados que deben informarse, pero no una respuesta homogénea ni independiente de la referencia; mostramos todas las etiquetas sin corrección conjunta.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Source record: text_analysis/code/30_corrected_base_panel.R and 31_corrected_designs.R (eligible analysis sample).</p>
@@ -5770,7 +5884,7 @@ display:block!important;
 <p>VADER results differ by reference and design. Approval increases under PSM and empirical CEM with both references; comparisons use different selected populations.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 123</p>
+<p>GUION EN ESPAÑOL · Diapositiva 125</p>
 <p>Estas comparaciones incluyen ahora el DiD sin matching y los tres diseños emparejados. Mostramos las dos referencias y todas las etiquetas. Aprobación es positiva con ambas referencias en PSM y CEM empírico; gratitud es negativa con la referencia amplia en los cuatro diseños. Algunas señales dependen de la referencia, y los intervalos no se corrigen conjuntamente por todas las etiquetas, diseños y referencias.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Source record: text_analysis/code/30_corrected_base_panel.R and 31_corrected_designs.R (eligible analysis sample).</p>
@@ -5803,7 +5917,7 @@ display:block!important;
 <p>All intervals shown here include zero. The next slide retains all 28 emotions at the focal +15-pp shift.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 124</p>
+<p>GUION EN ESPAÑOL · Diapositiva 126</p>
 <p>Sobre los mismos 1.241 usuarios de texto, las cuatro medidas mostradas tienen intervalos que incluyen cero en ambos modelos y los cinco incrementos. Son valencia, proporción positiva, gratitud y neutralidad. Para no limitar la lectura a esas cuatro, a continuación mostramos las veintiocho emociones para el incremento focal de quince puntos.</p>
 <p>Indicación: Distinguir cambios del incremento y cambios de la población.</p>
 <p>Source record: scripts 28 and 28b; relative_shift_estimates.csv and relative_shift_own_support_estimates.csv.</p>
@@ -5836,7 +5950,7 @@ display:block!important;
 <p>Curiosity excludes zero in both models; desire only in GAM. These comparisons cover all 28 labels and remain model- and population-specific.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 125</p>
+<p>GUION EN ESPAÑOL · Diapositiva 127</p>
 <p>En soporte común y quince puntos, curiosidad tiene un intervalo que excluye cero en ambos modelos, y deseo sólo en el GAM. No significa que las demás etiquetas no se hayan estimado: están todas visibles. Son resultados sobre 1.241 usuarios, sin corrección conjunta por etiquetas; no los extrapolamos a la población de soporte propio, que es distinta.</p>
 <p>Indicación: Leer la muestra y comparar modelos e intervalos.</p>
 <p>Source record: completed continuous-dose outputs, 2026-10-20.</p>
@@ -5869,7 +5983,7 @@ display:block!important;
 <p>Valence, positive share and the first six emotions have intervals spanning zero in both models.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 126</p>
+<p>GUION EN ESPAÑOL · Diapositiva 128</p>
 <p>Estas cuatro páginas cubren las veintiocho emociones, valencia y proporción positiva en los mismos 4.809 usuarios con comentarios antes y después y soporte para quince puntos. Gratitud y neutralidad tienen intervalos que incluyen cero. Entusiasmo (excitement) aumenta aproximadamente 0,001 y tristeza baja aproximadamente 0,002 en ambos modelos. Son cambios pequeños en scores y comparaciones múltiples sin corrección conjunta; no equivalen a medir estados psicológicos.</p>
 <p>Indicación: No recorrer todos los paneles.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -5902,7 +6016,7 @@ display:block!important;
 <p>Several labels also have pre-period deviations. Gratitude has one pre-period interval excluding zero and no post-period interval excluding zero.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 127</p>
+<p>GUION EN ESPAÑOL · Diapositiva 129</p>
 <p>El análisis semanal de las emociones utiliza entre 887 y 1.760 usuarios por semana, según quienes tienen promedio previo y comentan en esa semana. No es un panel balanceado ni necesariamente la misma población del promedio con ambos períodos. Aparecen diferencias previas en varias etiquetas. Gratitud tiene una diferencia previa aislada y ninguna semana posterior cuyo intervalo excluya cero. Hay muchas comparaciones y los intervalos son puntuales.</p>
 <p>Indicación: Mirar si algún panel cambia de forma sostenida.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
@@ -5935,7 +6049,7 @@ display:block!important;
 <p><strong>Gratitude and neutral show the clearest descriptive contrasts.</strong> These context averages do not identify comparable preceding contributions.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 128</p>
+<p>GUION EN ESPAÑOL · Diapositiva 130</p>
 <p>Aquí están las veintiocho emociones por contexto. Sólo dos dependen mucho del contexto: gratitud, alta cuando se comentan respuestas a la propia pregunta, y neutralidad, que es al revés. El resto se parece entre contextos y entre grupos.</p>
 <p>Indicación: Comparar las columnas de gratitud y neutral.</p>
 <p>Source record: text_analysis/code/29_comment_context_gratitude.R on the eligible analysis sample.</p>
@@ -5968,7 +6082,7 @@ display:block!important;
 <p><strong>No within-context emotion has an interval excluding zero under both references.</strong> Gratitude remains imprecise; isolated label/reference findings are unadjusted for multiplicity.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 129</p>
+<p>GUION EN ESPAÑOL · Diapositiva 131</p>
 <p>Dentro de comentarios a respuestas a la propia pregunta hay 5.525 tratados y 1.724 controles con datos. Gratitud tiene intervalos que incluyen cero en las dos referencias. Ninguna etiqueta excluye cero en ambas referencias. Desaprobación baja sólo con la última semana previa, mientras otras etiquetas aparecen con la referencia amplia. Ya no corresponde afirmar que desaprobación cae con ambas referencias.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Source record: text_analysis/code/29_comment_context_gratitude.R on the eligible analysis sample.</p>
@@ -6001,7 +6115,7 @@ display:block!important;
 <p>Gratitude and neutral intervals include zero in both models. Populations change across increments; do not join these estimates into one dose curve.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 130</p>
+<p>GUION EN ESPAÑOL · Diapositiva 132</p>
 <p>En 5 puntos mostramos gratitud y neutralidad para los 10,011 usuarios con texto antes y después y soporte propio para ese incremento. En ambos resultados y modelos los intervalos incluyen cero. Estas son poblaciones diferentes entre incrementos; no interpretamos sus puntos como una misma curva de dosis.</p>
 <p>Indicación: Comparar modelos y sus intervalos, recordando la población correspondiente.</p>
 <p>Source record: relative_shift_own_support_estimates.csv and relative_shift_own_support_samples.csv.</p>
@@ -6034,7 +6148,7 @@ display:block!important;
 <p>Gratitude and neutral intervals include zero in both models. Populations change across increments; do not join these estimates into one dose curve.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 131</p>
+<p>GUION EN ESPAÑOL · Diapositiva 133</p>
 <p>En 10 puntos mostramos gratitud y neutralidad para los 7,191 usuarios con texto antes y después y soporte propio para ese incremento. En ambos resultados y modelos los intervalos incluyen cero. Estas son poblaciones diferentes entre incrementos; no interpretamos sus puntos como una misma curva de dosis.</p>
 <p>Indicación: Comparar modelos y sus intervalos, recordando la población correspondiente.</p>
 <p>Source record: relative_shift_own_support_estimates.csv and relative_shift_own_support_samples.csv.</p>
@@ -6067,7 +6181,7 @@ display:block!important;
 <p>Gratitude and neutral intervals include zero in both models. Populations change across increments; do not join these estimates into one dose curve.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 132</p>
+<p>GUION EN ESPAÑOL · Diapositiva 134</p>
 <p>En 20 puntos mostramos gratitud y neutralidad para los 2,817 usuarios con texto antes y después y soporte propio para ese incremento. En ambos resultados y modelos los intervalos incluyen cero. Estas son poblaciones diferentes entre incrementos; no interpretamos sus puntos como una misma curva de dosis.</p>
 <p>Indicación: Comparar modelos y sus intervalos, recordando la población correspondiente.</p>
 <p>Source record: relative_shift_own_support_estimates.csv and relative_shift_own_support_samples.csv.</p>
@@ -6100,7 +6214,7 @@ display:block!important;
 <p>Gratitude and neutral intervals include zero in both models. Populations change across increments; do not join these estimates into one dose curve.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 133</p>
+<p>GUION EN ESPAÑOL · Diapositiva 135</p>
 <p>En 25 puntos mostramos gratitud y neutralidad para los 1,519 usuarios con texto antes y después y soporte propio para ese incremento. En ambos resultados y modelos los intervalos incluyen cero. Estas son poblaciones diferentes entre incrementos; no interpretamos sus puntos como una misma curva de dosis.</p>
 <p>Indicación: Comparar modelos y sus intervalos, recordando la población correspondiente.</p>
 <p>Source record: relative_shift_own_support_estimates.csv and relative_shift_own_support_samples.csv.</p>
