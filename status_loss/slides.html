@@ -1369,26 +1369,35 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="control-actividad-construccion" class="slide level2 audit-slide code-mid center">
+<section id="control-actividad-construccion" class="slide level2 audit-slide code-dense center">
 <h2>Three specifications of weekly activity</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href aria-label="1"></a><span class="co"># Contributions: user_id, post_type, creation_date (Unix seconds).</span></span>
-<span id="cb1-2"><a href aria-label="2"></a><span class="co"># Helper aligns weeks/days to the announcement; counts distinct activity days.</span></span>
-<span id="cb1-3"><a href aria-label="3"></a><span class="fu">source</span>(<span class="st">&quot;text_analysis/code/weekly_active_days_helpers.R&quot;</span>)</span>
-<span id="cb1-4"><a href aria-label="4"></a>days <span class="ot">=</span> <span class="fu">aggregate_weekly_active_days</span>(contributions, d[, .(user_id, t_week)])</span>
-<span id="cb1-5"><a href aria-label="5"></a>d <span class="ot">=</span> <span class="fu">merge</span>(d, days, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;user_id&quot;</span>, <span class="st">&quot;t_week&quot;</span>), <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-6"><a href aria-label="6"></a>d[<span class="fu">is.na</span>(days_questions_answers), days_questions_answers <span class="sc">:</span><span class="er">=</span> <span class="dv">0</span>L]</span>
-<span id="cb1-7"><a href aria-label="7"></a>d[<span class="fu">is.na</span>(days_questions_comments), days_questions_comments <span class="sc">:</span><span class="er">=</span> <span class="dv">0</span>L]</span>
-<span id="cb1-8"><a href aria-label="8"></a>d[, weekly_activity_volume <span class="sc">:</span><span class="er">=</span> q <span class="sc">+</span> a <span class="sc">+</span> c]  <span class="co"># accepted answers already in a</span></span>
-<span id="cb1-9"><a href aria-label="9"></a>control_for <span class="ot">=</span> <span class="fu">c</span>(<span class="at">c_log =</span> <span class="st">&quot;days_questions_answers&quot;</span>,</span>
-<span id="cb1-10"><a href aria-label="10"></a>               <span class="at">a_log =</span> <span class="st">&quot;days_questions_comments&quot;</span>, <span class="at">aa_log =</span> <span class="st">&quot;days_questions_comments&quot;</span>)</span>
-<span id="cb1-11"><a href aria-label="11"></a><span class="co"># Exactly one specification per model: ~1, ~weekly_activity_volume,</span></span>
-<span id="cb1-12"><a href aria-label="12"></a><span class="co"># or reformulate(control_for[[outcome]]). Counts are per user-week.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href aria-label="1"></a><span class="co"># CONTROL 1: number of contributions per user-week (accepted answers are in a).</span></span>
+<span id="cb1-2"><a href aria-label="2"></a>d[, weekly_activity_volume <span class="sc">:</span><span class="er">=</span> q <span class="sc">+</span> a <span class="sc">+</span> c]</span>
+<span id="cb1-3"><a href aria-label="3"></a></span>
+<span id="cb1-4"><a href aria-label="4"></a><span class="co"># CONTROL 2: distinct active days with OTHER contribution types (0..7).</span></span>
+<span id="cb1-5"><a href aria-label="5"></a><span class="co"># x contains contribution timestamps aligned to the original t_week/activity_day.</span></span>
+<span id="cb1-6"><a href aria-label="6"></a>days <span class="ot">=</span> x[, .(</span>
+<span id="cb1-7"><a href aria-label="7"></a>  <span class="at">days_questions_answers =</span> <span class="fu">uniqueN</span>(activity_day[post_type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;question&quot;</span>, <span class="st">&quot;answer&quot;</span>)]),</span>
+<span id="cb1-8"><a href aria-label="8"></a>  <span class="at">days_questions_comments =</span> <span class="fu">uniqueN</span>(activity_day[post_type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;question&quot;</span>, <span class="st">&quot;comment&quot;</span>)])</span>
+<span id="cb1-9"><a href aria-label="9"></a>), by <span class="ot">=</span> .(user_id, t_week)]</span>
+<span id="cb1-10"><a href aria-label="10"></a>d <span class="ot">=</span> <span class="fu">merge</span>(d, days, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;user_id&quot;</span>, <span class="st">&quot;t_week&quot;</span>), <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-11"><a href aria-label="11"></a>d[<span class="fu">is.na</span>(days_questions_answers), days_questions_answers <span class="sc">:</span><span class="er">=</span> <span class="dv">0</span>L]</span>
+<span id="cb1-12"><a href aria-label="12"></a>d[<span class="fu">is.na</span>(days_questions_comments), days_questions_comments <span class="sc">:</span><span class="er">=</span> <span class="dv">0</span>L]</span>
+<span id="cb1-13"><a href aria-label="13"></a><span class="co"># Comments use Q/A days; answers and accepted answers use Q/comment days.</span></span>
+<span id="cb1-14"><a href aria-label="14"></a>control_for <span class="ot">=</span> <span class="fu">c</span>(<span class="at">c_log =</span> <span class="st">&quot;days_questions_answers&quot;</span>, <span class="at">a_log =</span> <span class="st">&quot;days_questions_comments&quot;</span>,</span>
+<span id="cb1-15"><a href aria-label="15"></a>               <span class="at">aa_log =</span> <span class="st">&quot;days_questions_comments&quot;</span>)</span>
+<span id="cb1-16"><a href aria-label="16"></a></span>
+<span id="cb1-17"><a href aria-label="17"></a><span class="co"># THREE SEPARATE MODELS: each adjusted model uses ONE of the two controls.</span></span>
+<span id="cb1-18"><a href aria-label="18"></a>xformulas <span class="ot">=</span> <span class="fu">list</span>(<span class="at">no_control =</span> <span class="sc">~</span><span class="dv">1</span>,</span>
+<span id="cb1-19"><a href aria-label="19"></a>                 <span class="at">volume =</span> <span class="sc">~</span>weekly_activity_volume,</span>
+<span id="cb1-20"><a href aria-label="20"></a>                 <span class="at">active_days =</span> <span class="fu">reformulate</span>(control_for[[outcome]]))</span>
+<span id="cb1-21"><a href aria-label="21"></a><span class="co"># att_gt(..., xformla = xformulas[[specification]])</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="takeaway">
-<p>One control at a time, in original units. Weekly total includes the outcome; active days exclude its contribution type. Both are contemporary activity adjustments.</p>
+<p>Two alternative controls → three separate models: no control, volume, or active days. Weekly volume includes the outcome; active days count other contribution types.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 6</p>
-<p>Comparamos tres especificaciones sobre las mismas semanas observadas: sin control, con el total semanal de preguntas, respuestas y comentarios, y con días activos de otras contribuciones. Para comentarios, contamos días con preguntas o respuestas. Para respuestas y aceptadas, días con preguntas o comentarios. Días activos mide frecuencia y no cantidad. Ambos controles pueden responder a la reforma; son sensibilidades condicionadas a actividad contemporánea y no garantizan identificar el efecto total.</p>
+<p>Construimos dos indicadores alternativos de actividad. El control uno es el volumen total semanal: preguntas más respuestas más comentarios, sin contar las aceptadas dos veces. El control dos es el número de días distintos con otras contribuciones, entre cero y siete: para comentarios contamos días con preguntas o respuestas; para respuestas y aceptadas contamos días con preguntas o comentarios. El chunk muestra explícitamente uniqueN para construir esos días, agrupados por usuario y semana, y después los une al panel original. La alineación temporal usa las semanas y días del anuncio, igual que la función original. Las dos columnas de días son versiones del mismo indicador según el outcome; no son dos controles adicionales que entren juntos. Finalmente, la lista xformulas muestra las tres especificaciones estimadas por separado: sin control, con volumen o con días activos. Cada modelo ajustado incluye un solo indicador de actividad. Ambos indicadores contemporáneos pueden responder a la reforma, por lo que estos ajustes no garantizan identificar su efecto total.</p>
 <p>Indicación: Distinguir descripción, ajuste y alcance causal.</p>
 <p>Source record: completed weekly-volume/active-day runs and descriptive saved-PSM diagnostics.</p>
 <style type="text/css">
