@@ -1220,10 +1220,10 @@ margin-right: 0; }
 <p>Stack Overflow · Main findings</p>
 </div>
 <div class="subtitle">
-<p>Text, contribution and the next measurement step.</p>
+<p>Activity analysis by Inna and Mario, followed by extensions in matching, continuous treatment, comment text and interaction context.</p>
 </div>
 <div class="meta">
-<p>Research presentation · October 2026</p>
+<p>Research discussion · October 2026</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 1</p>
@@ -1246,11 +1246,11 @@ display:block!important;
 <h2>Agenda</h2>
 <div class="agenda">
 <ol type="1">
-<li><strong>Prior activity analysis</strong> · descriptives and DiD; no control, weekly volume and other-activity days</li>
-<li><strong>Matching and activity outcomes</strong> · sample, balance, matched descriptives and estimates; continuous-loss checks</li>
-<li><strong>Text analysis</strong> · descriptives, DiD without matching, PSM and CEM; tone and the three focal emotions</li>
-<li><strong>Context</strong> · comparable opportunities to thank and observed reactions</li>
-<li><strong>Conclusions and next steps</strong></li>
+<li><strong>Starting point</strong> · activity analysis by Inna and Mario</li>
+<li><strong>Comparability</strong> · matching, sample selection, balance and time baselines</li>
+<li><strong>Continuous-treatment approach</strong> · supported shifts in relative reputation loss</li>
+<li><strong>Comment text and context</strong> · tone, focal emotions and opportunities to thank</li>
+<li><strong>Conclusions and validation priorities</strong></li>
 </ol>
 </div>
 <aside class="notes">
@@ -1302,11 +1302,12 @@ Where do users express thanks?
 <p>The 2010 reform cut question-upvote rewards from <strong>+10 to +5</strong>, applied to past votes. Reputation loss therefore depends on prior history.</p>
 </div>
 <div class="caption">
-<p><a href="https://stackoverflow.blog/2010/03/19/important-reputation-rule-changes/">Stack Overflow: rule change (March 19, 2010)</a> · <a href="https://stackoverflow.blog/2010/03/21/the-great-reputation-recalc-begins/">Recalculation (March 21)</a>.</p>
+<p><strong>Treated:</strong> users with the measured reputation loss. <strong>Comparison:</strong> users without that loss; they may still ask questions. The comparison is not exposure versus no exposure to every part of the reform. <a href="https://stackoverflow.blog/2010/03/19/important-reputation-rule-changes/">Rule change, March 19, 2010</a> · <a href="https://stackoverflow.blog/2010/03/21/the-great-reputation-recalc-begins/">Recalculation, March 21</a>.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 3</p>
 <p>Organizamos la pregunta en tres dimensiones y en el mismo orden de la presentación. Primero contribución: cambian las respuestas, las aceptadas y los comentarios. Segundo expresión: cambian el tono de los comentarios y las emociones de aprobación, admiración y gratitud. Tercero contexto: dónde se escribe y en qué situaciones aparece agradecimiento. La codificación de acciones de los comentarios todavía es un piloto y no se presenta aquí como una medición validada de lo que hacen. La reforma de 2010 redujo los puntos por votos positivos en preguntas de diez a cinco y recalculó también los votos anteriores; por eso la pérdida depende de la historia previa. No todos los usuarios que preguntaron perdieron necesariamente reputación. Los cambios descriptivos se distinguen de las estimaciones y sus supuestos; el matching, la referencia temporal y la participación observada delimitan cada comparación.</p>
+<p>La ausencia de pérdida medida no equivale a quedar fuera de todos los cambios de reglas e incentivos.</p>
 <p>Indicación: Señalar que la historia previa también determina la probabilidad de recibir tratamiento.</p>
 <p>Source record: sources.json (current_analysis and current_pilot); model_audit.html documents the model review.</p>
 <style type="text/css">
@@ -1322,7 +1323,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="sec-1" class="slide level2 divider inverse center" data-background-color="#123E49">
-<h2>1 · Original analysis</h2>
+<h2>1 · Activity analysis by Inna and Mario</h2>
 <div class="lead">
 <p>Activity descriptives and DiD: no control, weekly volume and other-activity days.</p>
 </div>
@@ -1344,7 +1345,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="original-descriptivos" class="slide level2 caption-slide interpreted center">
-<h2>Original analysis (as built): activity around the reform</h2>
+<h2>Activity before and after the reform</h2>
 <div class="chart tall">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1420,7 +1421,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="original-codigo-did" class="slide level2 code-dense center">
-<h2>DiD uses original-user clustering</h2>
+<h2>Unmatched DiD: comparison and uncertainty</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href aria-label="1"></a><span class="co"># Same call as the current PSM comparison; no-matching weights start at one.</span></span>
 <span id="cb2-2"><a href aria-label="2"></a>z[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">observation_id =</span> .I, <span class="at">user_cluster =</span> user_id,</span>
 <span id="cb2-3"><a href aria-label="3"></a>         <span class="at">time =</span> t_week, <span class="at">g =</span> treated, <span class="at">case_weight =</span> <span class="dv">1</span>)]</span>
@@ -1433,7 +1434,7 @@ display:block!important;
 <span id="cb2-10"><a href aria-label="10"></a>  <span class="at">est_method =</span> <span class="st">&quot;reg&quot;</span>, <span class="at">control_group =</span> <span class="st">&quot;nevertreated&quot;</span>, <span class="at">anticipation =</span> <span class="dv">0</span>,</span>
 <span id="cb2-11"><a href aria-label="11"></a>  <span class="at">base_period =</span> <span class="st">&quot;varying&quot;</span>, <span class="at">bstrap =</span> <span class="cn">TRUE</span>, <span class="at">biters =</span> <span class="dv">1000</span>, <span class="at">cband =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="takeaway">
-<p>Same original panel: 85,605 users and 452,116 observed user-weeks. The matching section adds explicit broad-pre reference weights using the same estimator.</p>
+<p>85,605 users; 452,116 observed active user-weeks. No direct history covariates in the unmatched main model. No added inactive weeks; uncertainty grouped by user.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 7</p>
@@ -1453,7 +1454,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="original-event-study" class="slide level2 caption-slide interpreted center">
-<h2>Comments remain negative in all three DiD models</h2>
+<h2>Unmatched DiD: negative relative change in comments</h2>
 <div class="chart">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1466,7 +1467,7 @@ display:block!important;
 <p>Unmatched DiD; identical sample and outcome-regression estimator. Point estimates and 95% intervals on log(1 + count).</p>
 </div>
 <div class="interpretation">
-<p>Comments: −0.251 without control; −0.166 with total volume; −0.191 with other-activity days. Adjusted answers and accepted-answer intervals include zero.</p>
+<p><strong>Main model, last pre week:</strong> treated +0.032; comparison +0.283; DiD <strong>−0.251</strong> in log(1 + comments). Both increase; comparison users increase more. Weekly-activity adjustments are separate conditional checks.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 8</p>
@@ -1665,7 +1666,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="modelos" class="slide level2 audit-slide center">
-<h2>Activity compares three populations and two references</h2>
+<h2>Three populations and two time baselines</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -1698,11 +1699,12 @@ display:block!important;
 </tbody>
 </table>
 <div class="takeaway">
-<p>Each population × <strong>two references</strong> × <strong>three activity specifications</strong> × three outcomes = <strong>54 fitted comparisons</strong>, each with 1,000 user-cluster multiplier draws.</p>
+<p><strong>Time baselines:</strong> last pre week, or all pre weeks with equal-week weights. Each outcome uses both; weekly plots use the last-pre-week version. Models without a weekly activity control are primary.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 15</p>
 <p>La matriz estimada separa tres decisiones: población, referencia y control. Comparamos DiD sin matching, PSM uno a uno y PSM con reemplazo. Para cada uno estimamos referencia de última semana previa y de todas las semanas previas con igual peso por semana, usando sin control, volumen total o días de otras contribuciones. Con tres outcomes de actividad resultan 54 comparaciones. No se elige un diseño por el signo del coeficiente; se consideran la población objetivo, la comparabilidad y la precisión.</p>
+<p>Aclaración de presentación: referencia significa período de comparación, no variable de control. Los promedios broad-pre y los semanales de última previa no son el mismo contraste.</p>
 <p>Indicación: Leer población, referencia y especificación antes del coeficiente.</p>
 <p>Source record: completed raw-unit PSM run 20261021T025837Z_276118; 37_psm_activity_reestimate.R.</p>
 <style type="text/css">
@@ -1718,7 +1720,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="psm-reference-code" class="slide level2 code-dense center">
-<h2>Two references, explicit observation weights</h2>
+<h2>Time baselines: how the comparisons are built</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href aria-label="1"></a>z <span class="ot">=</span> <span class="fu">merge</span>(d, matched_ids[, .(user_id, <span class="at">match_weight =</span> weight)], <span class="at">by =</span> <span class="st">&quot;user_id&quot;</span>)</span>
 <span id="cb5-2"><a href aria-label="2"></a>z[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">observation_id =</span> .I, <span class="at">user_cluster =</span> user_id)]</span>
 <span id="cb5-3"><a href aria-label="3"></a><span class="co"># Weekly model: last pre week is the comparison base.</span></span>
@@ -1780,7 +1782,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="controles-modelos" class="slide level2 audit-slide center">
-<h2>Where the controls enter</h2>
+<h2>Which model versions and controls are shown?</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -1806,14 +1808,19 @@ display:block!important;
 <td style="text-align: left;">Same three separate specifications</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Saved text and context</td>
+<td style="text-align: left;">Binary text and context</td>
 <td style="text-align: left;">Earlier PSM / CEM design weights</td>
-<td style="text-align: left;">Existing outcome-stage specifications</td>
+<td style="text-align: left;">Saved text/context specifications</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Continuous-loss averages</td>
+<td style="text-align: left;">No binary matching weights</td>
+<td style="text-align: left;">Six prior histories + pre-outcome mean</td>
 </tr>
 </tbody>
 </table>
 <div class="takeaway">
-<p>Activity has been reestimated with raw-unit PSM. Text/context PSM estimates still use the earlier transformed match; they are not results from the new activity populations.</p>
+<p>Activity PSM and continuous-loss averages are updated. <strong>Binary text/context matching still uses earlier weights.</strong> Weekly continuous-loss fits in the appendix are earlier versions.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 18</p>
@@ -2173,7 +2180,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="psm-reference-sensitivity" class="slide level2 audit-slide center">
-<h2>The broad-pre reference now has fitted intervals</h2>
+<h2>Comments depend on the time baseline</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -2277,7 +2284,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="psm-promedio" class="slide level2 caption-slide interpreted center">
-<h2>Activity effects without a contemporary control</h2>
+<h2>Activity DiD: both baselines, no weekly control</h2>
 <div class="chart">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -2695,7 +2702,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="dosis-metodo" class="slide level2 center">
-<h2>Continuous loss: a relative dose</h2>
+<h2>Continuous treatment: shifts in relative loss</h2>
 <div class="lead">
 <p>What changes when relative loss rises by <strong>5, 10, 15, 20 or 25 percentage points</strong>, holding prior history fixed?</p>
 </div>
@@ -2713,16 +2720,17 @@ Share of one’s reputation lost in the reform.<br><em>Example: 200 points, 10 q
 Two outcome models
 </h3>
 <p>
-<strong>Linear × history:</strong> straight-line effect, slope varies by user.<br><strong>Additive GAM:</strong> curved effect, same for all.
+<strong>Linear × history:</strong> linear dose, with dose-history interactions.<br><strong>Additive GAM:</strong> smooth dose curve, without those interactions.
 </p>
 </div>
 </div>
 <div class="takeaway">
-<p><strong>Main results:</strong> each increment on its supported population. <strong>Appendix:</strong> the same users across all five increments. +15 pp remains focal; +5 pp is the more local contrast. Both models adjust for the pre-reform outcome level.</p>
+<p>Each increment uses its supported target population; +15 pp is focal and +5 pp more local. Both models adjust prior history and pre-outcome level. <strong>They differ in curvature and interactions</strong>, not curvature alone.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 42</p>
 <p>La dosis es la reputación perdida dividida por el máximo entre reputación previa más uno y uno. Por ejemplo, diez votos positivos a preguntas implican una pérdida de cincuenta puntos: para alguien con doscientos puntos previos es aproximadamente un veinticinco por ciento. Estudiamos incrementos de cinco a veinticinco puntos porcentuales dentro del soporte observado, con pérdidas originales de hasta cien por ciento. Los modelos son uno lineal con interacciones y un GAM aditivo; ambos ajustan seis variables de historia previa y el nivel previo del resultado. No incorporan los ajustes contemporáneos de volumen total semanal o días activos de los modelos binarios.</p>
+<p>La comparación lineal/GAM cambia también las interacciones con historia. No se atribuye toda discrepancia exclusivamente a no linealidad.</p>
 <p>Indicación: Explicar por qué la escala relativa es la más relevante.</p>
 <p>Source record: text_analysis/code/28b_relative_shift_own_support.R on the eligible analysis sample (200 user-bootstrap draws).</p>
 <style type="text/css">
@@ -2903,7 +2911,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="rel-soporte" class="slide level2 audit-slide center">
-<h2>Support and outcome availability determine sample size</h2>
+<h2>Who enters each dose-shift average?</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 20%">
@@ -2915,10 +2923,10 @@ display:block!important;
 <thead>
 <tr class="header">
 <th style="text-align: left;">Increment</th>
-<th style="text-align: left;">Activity treated</th>
-<th style="text-align: left;">Activity controls</th>
-<th style="text-align: left;">Activity N</th>
-<th style="text-align: left;">Text N</th>
+<th style="text-align: left;">Activity: loss &gt;0</th>
+<th style="text-align: left;">Activity: loss =0</th>
+<th style="text-align: left;">Activity target N</th>
+<th style="text-align: left;">Text target N</th>
 </tr>
 </thead>
 <tbody>
@@ -3064,7 +3072,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="rel-training-target" class="slide level2 audit-slide code-mid center">
-<h2>Train broadly; average where the shift has support</h2>
+<h2>Model fitting and target population are different</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -3802,7 +3810,7 @@ display:block!important;
 }</style></aside>
 </section>
 <section id="psm-event-vader" class="slide level2 caption-slide interpreted center">
-<h2>PSM event study: comment tone does not move</h2>
+<h2>Matched tone: weekly bands include zero</h2>
 <div class="chart tall">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -3815,12 +3823,13 @@ display:block!important;
 <p>Text/context PSM uses the earlier transformed match; the current raw-unit reestimation covers activity only. did dynamic ATT, PSM/Mahalanobis on the eligible analysis sample (13,593 pairs). Bars: simultaneous 95% bands. Post points compare with the last pre week; week 0 = first week after announcement. User-week means; weeks with comments only (7,077 treated users comment).</p>
 </div>
 <div class="interpretation">
-<p><strong>No precise weekly tone change under PSM.</strong> The matched text sample has 7,077 treated and 5,488 controls with observed comments.</p>
+<p>The weekly tone estimates do not identify a clear shift; this is not proof of an exactly zero effect. Earlier text matching: 7,077 treated and 5,488 comparison users with comments.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 67</p>
 <p>Con PSM observamos 7.077 tratados y 5.488 controles con comentarios. Las bandas semanales de tono incluyen cero. La muestra es menor que en el DiD sin matching, y la selección de usuarios observados puede variar entre semanas.</p>
 <p>Estos resultados corresponden todavía al matching anterior con transformaciones. La actividad ya usa variables originales; este resultado textual o de contexto no fue reestimado y no se atribuye a esa nueva población.</p>
+<p>El título se expresa como incertidumbre identificada, no como demostración de efecto exactamente nulo.</p>
 <p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
 <p>Source record: text_analysis/code/30_corrected_base_panel.R and 31_corrected_designs.R (eligible analysis sample).</p>
 <style type="text/css">
@@ -4930,18 +4939,18 @@ display:block!important;
 <div class="three">
 <div class="col">
 <h3>
-Activity
+Activity matching
 </h3>
 <p>
-Raw-unit PSM shows a negative broad-pre comments contrast without control and with other-activity days.
+Without weekly control, broad-pre comments estimates are negative in both PSM designs. Last-week estimates are less conclusive.
 </p>
 </div>
 <div class="col">
 <h3>
-Text
+Binary text
 </h3>
 <p>
-Approval, admiration and gratitude remain the focal outcomes; full results are in the appendix.
+Earlier text weights: approval is positive under both baselines; admiration and gratitude depend on the baseline.
 </p>
 </div>
 <div class="col">
@@ -4949,12 +4958,12 @@ Approval, admiration and gratitude remain the focal outcomes; full results are i
 Interaction
 </h3>
 <p>
-Within-context thanks remains uncertain. Comparable received contributions are the next step.
+Explicit-thanks intervals include zero. A complete opportunity-based design remains to be built.
 </p>
 </div>
 </div>
 <div class="takeaway">
-<p>Current continuous-dose +15 pp: answers and accepted answers decline in both models; comments and the three focal emotions remain uncertain. Weekly dose fits are earlier appendix material.</p>
+<p><strong>Current continuous treatment, +15 pp:</strong> answers and accepted answers are negative in both models; comments and all three focal-emotion intervals include zero. Earlier weekly dose fits are appendix material.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 96</p>
