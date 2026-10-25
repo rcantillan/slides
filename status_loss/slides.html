@@ -1296,17 +1296,17 @@ Where do users express thanks?
 </div>
 </div>
 <div class="takeaway">
-<p>The 2010 reform cut question-upvote rewards from <strong>+10 to +5</strong>, applied to past votes. Reputation loss therefore depends on prior history.</p>
+<p>The 2010 policy change reduced question-upvote rewards from <strong>+10 to +5</strong> and applied retroactively. The analysis reconstructs each user’s reputation loss from their question-vote history before implementation.</p>
 </div>
 <div class="caption">
-<p><strong>Treated:</strong> users with the measured reputation loss. <strong>Comparison:</strong> users without that loss; they may still ask questions. The comparison is not exposure versus no exposure to every part of the reform. <a href="https://stackoverflow.blog/2010/03/19/important-reputation-rule-changes/">Rule change, March 19, 2010</a> · <a href="https://stackoverflow.blog/2010/03/21/the-great-reputation-recalc-begins/">Recalculation, March 21</a>.</p>
+<p><strong>Treated:</strong> users with the measured reputation loss. <strong>Comparison:</strong> users without that loss; they may still ask questions. The comparison is not exposure versus no exposure to every part of the policy change. <a href="https://stackoverflow.blog/2010/03/19/important-reputation-rule-changes/">Rule change, March 19, 2010</a> · <a href="https://stackoverflow.blog/2010/03/21/the-great-reputation-recalc-begins/">Recalculation, March 21</a>.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 3</p>
 <p>Organizamos la pregunta en tres dimensiones y en el mismo orden de la presentación. Primero contribución: cambian las respuestas, las aceptadas y los comentarios. Segundo expresión: cambian el tono de los comentarios y las emociones de aprobación, admiración y gratitud. Tercero contexto: dónde se escribe y en qué situaciones aparece agradecimiento. La codificación de acciones de los comentarios todavía es un piloto y no se presenta aquí como una medición validada de lo que hacen. La reforma de 2010 redujo los puntos por votos positivos en preguntas de diez a cinco y recalculó también los votos anteriores; por eso la pérdida depende de la historia previa. No todos los usuarios que preguntaron perdieron necesariamente reputación. Los cambios descriptivos se distinguen de las estimaciones y sus supuestos; el matching, la referencia temporal y la participación observada delimitan cada comparación.</p>
-<p>La ausencia de pérdida medida no equivale a quedar fuera de todos los cambios de reglas e incentivos.</p>
+<p>La ausencia de pérdida medida no equivale a quedar fuera de todos los cambios de reglas e incentivos. En el código original, la pérdida se reconstruye sumando los ajustes netos de votos y anulaciones de votos a preguntas antes de la implementación. No se define simplemente por haber publicado preguntas.</p>
 <p>Indicación: Señalar que la historia previa también determina la probabilidad de recibir tratamiento.</p>
-<p>Source record: sources.json (current_analysis and current_pilot); model_audit.html documents the model review.</p>
+<p>Source record: code/analysis/00_master.R sources 01_prepare-data.R; question upvote markers at lines 49-50, pre-implementation penalty at lines 54-55, treated indicator at line 74; official policy announcement, March 19, 2010.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
