@@ -2489,31 +2489,42 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="dosis-metodo" class="slide level2 center">
+<section id="dosis-metodo" class="slide level2 audit-slide center">
 <h2>Continuous treatment: shifts in relative loss</h2>
 <div class="lead">
-<p>What changes when relative loss rises by <strong>5, 10, 15, 20 or 25 percentage points</strong>, holding prior history fixed?</p>
+<p>How would activity change with <strong>15 percentage points more loss</strong>, keeping prior history fixed?</p>
 </div>
-<div class="split">
-<div class="col">
-<h3>
-Relative dose
-</h3>
-<p>
-Share of one’s reputation lost in the reform.<br><em>Example: 200 points, 10 question upvotes → loses 10 × 5 = 50 → ≈25 %.</em><br>Loss is measured relative to pre-reform reputation; models retain relative losses ≤100%.
-</p>
-</div>
-<div class="col">
-<h3>
-Two outcome models
-</h3>
-<p>
-<strong>Linear × history:</strong> linear dose, with dose-history interactions.<br><strong>Additive GAM:</strong> smooth dose curve, without those interactions.
-</p>
-</div>
-</div>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: left;">What can vary?</th>
+<th style="text-align: left;">Meaning of the +15-pp contrast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Linear × history</strong></td>
+<td style="text-align: left;">The dose slope varies with the user’s prior history.</td>
+<td style="text-align: left;">For a given history, the same increase has the same contrast at every starting dose.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Additive GAM</strong></td>
+<td style="text-align: left;">The dose curve can bend as loss rises.</td>
+<td style="text-align: left;">The contrast can differ at low and high losses; at the same starting dose, it does not vary with history.</td>
+</tr>
+</tbody>
+</table>
 <div class="takeaway">
-<p>Each increment uses its supported target population; +15 pp is focal and +5 pp more local. Both models adjust prior history and pre-outcome level. <strong>They differ in curvature and interactions</strong>, not curvature alone.</p>
+<p>Both adjust six prior characteristics and the pre-outcome mean. They answer <strong>the same supported-shift question</strong>, under different assumptions about curvature and interactions.</p>
+</div>
+<div class="caption">
+<p>Dose = points lost / max(pre-policy reputation + 1, 1). Main outcomes: post minus pre mean over observed weeks. +15 pp is focal; +5 to +25 pp are examined. Original losses ≤100%.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 34</p>
@@ -2551,13 +2562,13 @@ display:block!important;
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Prior activity</td>
-<td style="text-align: left;">Counts of comments, questions and answers before the announcement</td>
+<td style="text-align: left;">Three pre-announcement counts: comments, questions and answers</td>
 <td style="text-align: left;">Heavy and occasional contributors start differently.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Prior reputation</td>
-<td style="text-align: left;">Reputation accumulated before the announcement</td>
-<td style="text-align: left;">Users differ in status before losing it.</td>
+<td style="text-align: left;">Reputation before the announcement</td>
+<td style="text-align: left;">Users start with different status.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Experience</td>
@@ -2566,18 +2577,21 @@ display:block!important;
 </tr>
 <tr class="even">
 <td style="text-align: left;">Asking vs answering</td>
-<td style="text-align: left;">Questions / (questions + answers), before the announcement</td>
-<td style="text-align: left;">Asking-oriented and answering-oriented users differ.</td>
+<td style="text-align: left;">Pre-announcement questions / (questions + answers)</td>
+<td style="text-align: left;">Users differ in their type of contribution.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Starting outcome level</td>
-<td style="text-align: left;">Each user’s pre-reform weekly mean of the outcome</td>
+<td style="text-align: left;">Starting outcome</td>
+<td style="text-align: left;">Mean pre-policy weekly outcome for that user</td>
 <td style="text-align: left;">Compare changes given where the user started.</td>
 </tr>
 </tbody>
 </table>
 <div class="takeaway">
-<p>Prior activity contributes three variables: six history controls in total, plus the starting outcome level. All describe the user before the reform.</p>
+<p><strong>Six prior-history variables + one outcome baseline.</strong> These are adjustment variables, not matched control users. We hold them fixed in both predictions; no current-week activity control enters.</p>
+</div>
+<div class="caption">
+<p>Counts enter as log(1 + count); reputation as asinh; experience and question share retain their scales. Outcome baseline: mean of observed weekly log(1 + count). Exact construction follows in the code slide.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 35</p>
@@ -2599,11 +2613,16 @@ display:block!important;
 <section id="rel-counterfactual-intuition" class="slide level2 audit-slide center">
 <h2>Compare the same history with 15 pp more loss</h2>
 <table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Hypothetical user</th>
-<th style="text-align: right;">Observed loss</th>
-<th style="text-align: right;">Loss after +15 pp</th>
+<th style="text-align: left;">Illustrative user</th>
+<th style="text-align: right;">Loss used in first prediction</th>
+<th style="text-align: right;">Loss used in second prediction</th>
 </tr>
 </thead>
 <tbody>
@@ -2620,15 +2639,15 @@ display:block!important;
 </tbody>
 </table>
 <ol type="1">
-<li>Learn the outcome pattern across users with different losses, adjusting for prior history.</li>
-<li>Predict each user’s activity change at both doses; subtract the predictions.</li>
-<li>Average these differences among users with support for that increment.</li>
+<li><strong>Learn:</strong> fit outcomes across eligible users with different losses, adjusting for prior history.</li>
+<li><strong>Compare:</strong> predict twice for each supported user; change only their loss.</li>
+<li><strong>Average:</strong> shifted prediction minus observed-dose prediction, among supported users.</li>
 </ol>
 <div class="takeaway">
-<p>The comparison uses two model predictions per user. We change the loss and keep their prior activity, reputation, experience and outcome level fixed.</p>
+<p>There is <strong>no single matched control user</strong>, and comparison is not limited to zero-loss users. The alternative outcome is a model prediction, informed by observed users at different doses.</p>
 </div>
 <div class="caption">
-<p>Following <a href="https://journals.sagepub.com/doi/10.1177/00811750261459364">Lundberg &amp; Brand (2026)</a>, shifts need support. Here: at least five users in the shifted 2.5-pp dose bin, within the same coarse prior-history stratum. Examples are illustrative.</p>
+<p>Support check: ≥5 users in the shifted 2.5-pp dose bin within the same broad history stratum. These are not five exact matches. Support and measured-history adjustment do not guarantee a causal interpretation.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 36</p>
@@ -3170,7 +3189,7 @@ display:block!important;
 <p><strong>Result.</strong> 84 weekly GAMs; 95% <strong>pointwise</strong> intervals from 200 user draws. Direct predictions and an independent fixed-basis weighted QR refit numerically agree.</p>
 </div>
 <div class="takeaway">
-<p>Updated weekly activity complements the averages. <strong>Pre-policy points are diagnostics; weekly samples change.</strong> This is a +15-pp prediction contrast, not the binary DiD event study or a decomposition of the average effect.</p>
+<p><strong>Weekly question:</strong> how does the +15-pp contrast vary over time? These trajectories use <strong>only the additive GAM</strong>, fitted separately each week. Pre-policy points are diagnostics; weekly samples change. They do not decompose the average effect or reproduce the binary DiD event study.</p>
 </div>
 <div class="caption">
 <p>Training: 6,505–12,149 users per week; target: 1,821–3,567. Weekly text remains an earlier fit. Original panel week labels: −14…−1 and +1…+14.</p>
