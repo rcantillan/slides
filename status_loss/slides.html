@@ -3378,40 +3378,46 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="medicion" class="slide level2 center">
-<h2>Text measurement within the matched sample</h2>
-<div class="three">
-<div class="col">
-<span class="number smallnumber">183,464</span>
-<p>
-Comments by PSM-matched users.<br>14 weeks on each side.
-</p>
-</div>
-<div class="col">
-<h3>
-VADER
-</h3>
-<p>
-Valence and positive / negative comment shares.
-</p>
-</div>
-<div class="col">
-<h3>
-GoEmotions
-</h3>
-<p>
-Approval, admiration and gratitude.<br>Other labels in the appendix.
-</p>
-</div>
-</div>
+<section id="medicion" class="slide level2 audit-slide center">
+<h2>Two text measures: VADER and GoEmotions</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: left;">What is it?</th>
+<th style="text-align: left;">What do we use?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>VADER</strong></td>
+<td style="text-align: left;">A sentiment dictionary plus language rules; measures overall positive / negative tone</td>
+<td style="text-align: left;">Overall tone: <strong>−1 to +1</strong>; shares of positive and negative comments</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>GoEmotions-based model</strong></td>
+<td style="text-align: left;">A language model trained on human-labeled Reddit comments</td>
+<td style="text-align: left;"><strong>28 separate scores, 0–1</strong>; main focus: approval, admiration and gratitude</td>
+</tr>
+</tbody>
+</table>
 <div class="takeaway">
-<p>First average comments within each user-week, then apply design weights. Scores describe textual expression among observed commenters.</p>
+<p>VADER measures <strong>overall tone</strong>; the GoEmotions-based model measures <strong>specific expressions</strong>. Scores describe the text, not the writer’s private feelings. Multiple emotion labels can apply to one comment.</p>
+</div>
+<div class="caption">
+<p>PSM descriptives: 183,464 comments, 14 weeks per side. Average within user-week, then apply design weights. Positive: VADER ≥0.05; negative: ≤−0.05. GoEmotions: 27 emotions + neutral; scores need not sum to 1. No comment ≠ emotion zero.</p>
+</div>
+<div class="caption">
+<p>Sources: <a href="https://github.com/cjhutto/vaderSentiment">VADER</a>; <a href="https://huggingface.co/SamLowe/roberta-base-go_emotions">GoEmotions model card</a>. Implementation: <code>03_sentiment.py</code>, <code>04_goemotions.py</code>, <code>31_corrected_designs.R</code>.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 54</p>
-<p>La muestra PSM tiene 183,464 comentarios: 95.523 de 7.077 tratados y 87.941 de 5.488 controles, dentro de la ventana textual de catorce semanas por lado. Primero promediamos comentarios por usuario-semana y después aplicamos los pesos del diseño. El DiD sin matching utiliza una muestra mayor: 40.669 usuarios con texto. En ambos casos mostramos las tres medidas de tono y aprobación, admiración y gratitud; las otras emociones están en el apéndice; no asignamos scores cero a quien no comenta.</p>
-<p>Indicación: Explicar la muestra y leer el resultado con su intervalo.</p>
-<p>Source record: text_analysis/code/30_corrected_base_panel.R and 31_corrected_designs.R (eligible analysis sample).</p>
+<p>Before showing the text results, let me explain the two measures. VADER is an automatic sentiment tool. It uses a dictionary of sentiment words and language rules, including negation and emphasis, to assess whether a comment sounds positive, negative, or neutral. Its overall tone score runs from minus one to plus one. We use that score and the shares of comments classified as positive or negative. GoEmotions is a dataset of human-labeled Reddit comments. We use a language model trained on that dataset to produce twenty-eight separate scores: twenty-seven emotion categories and a neutral category. Our main results focus on approval, admiration, and gratitude. Each label has its own score between zero and one. A comment can express more than one category, so the scores do not have to add up to one. We keep these continuous scores rather than assign each comment one emotion. VADER describes overall tone. The GoEmotions-based model distinguishes particular kinds of expression. Neither directly measures what the writer privately feels, and a gratitude score is not the same measure as explicitly saying thanks. The matched descriptive sample contains one hundred and eighty-three thousand four hundred and sixty-four comments. We first average scores within each user and week, then apply the design weights. A week without a comment has no observed text score; it is not assigned an emotion score of zero. Binary text matching retains its earlier weights.</p>
+<p>Model: SamLowe/roberta-base-go_emotions; raw sigmoid scores retained, not a single-label classification. Scripts 03/04/31 verified.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -4121,10 +4127,7 @@ display:block!important;
 <p>First identify <strong>who asked, who answered and where the comment appears</strong>. Then distinguish observed thanks from opportunities to respond to comparable contributions.</p>
 </div>
 <aside class="notes">
-<p>GUION EN ESPAÑOL · Diapositiva 73</p>
-<p>Este bloque responde una preocupación concreta. El tratamiento depende de la pérdida por votos previos en preguntas; los controles también pueden preguntar. Los grupos tienen distintas actividades y oportunidades de agradecer. Partimos por leer hilos donde los controles agradecen para identificar situaciones; luego debemos buscar todas las ocurrencias de esas situaciones en ambos grupos, incluidas aquellas sin agradecimiento. Lo disponible compara ubicaciones y primeros comentarios observados. La extensión debe reconstruir el aporte recibido y la respuesta posterior.</p>
-<p>Indicación: Plantear las tres preguntas del bloque.</p>
-<p>Source record: text_analysis/code/32_context_events.R on the eligible analysis sample.</p>
+<p>Context analysis distinguishes observed comments from opportunities to respond. Current evidence describes locations and selected reactions; a complete received-contribution design would include cases with no reply. The personal discussion transition is kept in the local English reading guide.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
