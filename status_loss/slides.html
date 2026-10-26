@@ -708,6 +708,12 @@ border-left:3px solid var(--terra);padding:3px 16px;text-align:center;}
 .reveal .code-mid h2 {font-size:32px;margin-bottom:6px;}
 .reveal .code-mid pre code {font-size:15.5px;line-height:1.38;padding:8px 16px;max-height:none!important;}
 .reveal .code-mid pre {max-height:none!important;max-width:1180px;}
+.reveal .code-walkthrough .code-flow {font-size:17px;line-height:1.27;text-align:left;max-width:1180px;margin:8px auto;}
+.reveal .code-walkthrough .code-flow p {margin:5px 0;}
+.reveal .code-walkthrough .code-source {font-size:12px;color:var(--muted);margin-top:6px;}
+.reveal .code-walkthrough .code-source code {font-size:11px;}
+.reveal .code-walkthrough .takeaway {font-size:17px;line-height:1.25;margin-top:7px;padding-top:7px;}
+.reveal .code-walkthrough .caption,.reveal .code-walkthrough .plot-caption {font-size:15px;line-height:1.25;margin-top:7px;padding-top:6px;}
 
 .reveal table {max-width:1080px;margin-left:auto;margin-right:auto;}
 
@@ -1374,7 +1380,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="control-actividad-construccion" class="slide level2 audit-slide code-dense center">
+<section id="control-actividad-construccion" class="slide level2 code-walkthrough audit-slide code-dense center">
 <h2>Three specifications of weekly activity</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href aria-label="1"></a><span class="co"># CONTROL 1: number of contributions per user-week (accepted answers are in a).</span></span>
 <span id="cb1-2"><a href aria-label="2"></a>d[, weekly_activity_volume <span class="sc">:</span><span class="er">=</span> q <span class="sc">+</span> a <span class="sc">+</span> c]</span>
@@ -1397,6 +1403,14 @@ display:block!important;
 <span id="cb1-19"><a href aria-label="19"></a>                 <span class="at">volume =</span> <span class="sc">~</span>weekly_activity_volume,</span>
 <span id="cb1-20"><a href aria-label="20"></a>                 <span class="at">active_days =</span> <span class="fu">reformulate</span>(control_for[[outcome]]))</span>
 <span id="cb1-21"><a href aria-label="21"></a><span class="co"># att_gt(..., xformla = xformulas[[specification]])</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>d</code>: observed user-weeks; <code>x</code>: dated questions, answers and comments.</p>
+<p><strong>Objects.</strong> <code>days</code>: distinct days by user-week. Merge into <code>d</code>; <code>control_for</code> selects the other-activity measure for each outcome.</p>
+<p><strong>Result.</strong> <code>xformulas</code>: three alternative formulas. The two controls never enter together; <code>37</code> fits the comparison matrix.</p>
+<div class="code-source">
+<p>Code excerpt: <code>36_weekly_active_days_models.R → 37_psm_activity_reestimate.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>Two alternative controls → three separate models: no control, volume, or active days. Weekly volume includes the outcome; active days count other contribution types.</p>
 </div>
@@ -1417,7 +1431,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="original-codigo-did" class="slide level2 code-dense center">
+<section id="original-codigo-did" class="slide level2 code-walkthrough code-dense center">
 <h2>Unmatched DiD: comparison and uncertainty</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href aria-label="1"></a><span class="co"># Same call as the current PSM comparison; no-matching weights start at one.</span></span>
 <span id="cb2-2"><a href aria-label="2"></a>z[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">observation_id =</span> .I, <span class="at">user_cluster =</span> user_id,</span>
@@ -1430,6 +1444,14 @@ display:block!important;
 <span id="cb2-9"><a href aria-label="9"></a>  <span class="at">weightsname =</span> <span class="st">&quot;case_weight&quot;</span>, <span class="at">xformla =</span> X,</span>
 <span id="cb2-10"><a href aria-label="10"></a>  <span class="at">est_method =</span> <span class="st">&quot;reg&quot;</span>, <span class="at">control_group =</span> <span class="st">&quot;nevertreated&quot;</span>, <span class="at">anticipation =</span> <span class="dv">0</span>,</span>
 <span id="cb2-11"><a href aria-label="11"></a>  <span class="at">base_period =</span> <span class="st">&quot;varying&quot;</span>, <span class="at">bstrap =</span> <span class="cn">TRUE</span>, <span class="at">biters =</span> <span class="dv">1000</span>, <span class="at">cband =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>z</code>: original observed user-weeks; weights equal one in the unmatched weekly model.</p>
+<p><strong>Objects.</strong> <code>observation_id</code> identifies a row; <code>user_cluster</code> identifies the person; <code>X</code> selects one outcome formula.</p>
+<p><strong>Result.</strong> <code>fit</code>: group-time estimates. <code>aggte</code> extracts average and weekly effects for the result tables and plots.</p>
+<div class="code-source">
+<p>Code excerpt: <code>37_psm_activity_reestimate.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>85,605 users; 452,116 observed active user-weeks. No direct history covariates in the unmatched main model. No added inactive weeks; uncertainty grouped by user.</p>
 </div>
@@ -1604,7 +1626,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="psm-codigo" class="slide level2 code-dense center">
+<section id="psm-codigo" class="slide level2 code-walkthrough code-dense center">
 <h2>PSM 1:1 uses original prior-history variables</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href aria-label="1"></a>covs <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;pre_comments&quot;</span>, <span class="st">&quot;tenure&quot;</span>, <span class="st">&quot;reputation_pre&quot;</span>, <span class="st">&quot;n_answers_pre&quot;</span>)</span>
 <span id="cb3-2"><a href aria-label="2"></a>base_args <span class="ot">=</span> <span class="fu">list</span>(<span class="at">formula =</span> <span class="fu">reformulate</span>(covs, <span class="at">response =</span> <span class="st">&quot;treated&quot;</span>),</span>
@@ -1614,6 +1636,14 @@ display:block!important;
 <span id="cb3-6"><a href aria-label="6"></a>  <span class="at">std.caliper =</span> <span class="cn">TRUE</span>, <span class="at">mahvars =</span> <span class="fu">reformulate</span>(covs))</span>
 <span id="cb3-7"><a href aria-label="7"></a>m1 <span class="ot">=</span> <span class="fu">do.call</span>(matchit, <span class="fu">c</span>(base_args, <span class="fu">list</span>(<span class="at">replace =</span> <span class="cn">FALSE</span>, <span class="at">m.order =</span> <span class="st">&quot;closest&quot;</span>)))</span>
 <span id="cb3-8"><a href aria-label="8"></a><span class="co"># match.data(m1) supplies retained IDs and matching weights.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>frame</code>: one row per eligible user; <code>covs</code>: four prior-history variables in original units.</p>
+<p><strong>Objects.</strong> <code>base_args</code>: propensity model, Mahalanobis inputs and calipers. <code>m1</code>: fitted 1:1 match without replacement.</p>
+<p><strong>Result.</strong> <code>match.data(m1)</code>: retained users and weights. These are joined to observed outcomes before fitting DiD.</p>
+<div class="code-source">
+<p>Code excerpt: <code>37_psm_activity_reestimate.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>34,216 matched pairs; <strong>69.0% of eligible treated users retained</strong>. No log/asinh predictors and no prior-question eligibility or matching variable. Standardized calipers are distance limits, not transformed inputs.</p>
 </div>
@@ -1634,7 +1664,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="psm-replacement-code" class="slide level2 code-mid center">
+<section id="psm-replacement-code" class="slide level2 code-walkthrough code-mid center">
 <h2>PSM with replacement reuses eligible controls</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href aria-label="1"></a><span class="co"># Same four variables, propensity model, Mahalanobis inputs and calipers.</span></span>
 <span id="cb4-2"><a href aria-label="2"></a>m2 <span class="ot">=</span> <span class="fu">do.call</span>(matchit, <span class="fu">c</span>(base_args, <span class="fu">list</span>(<span class="at">replace =</span> <span class="cn">TRUE</span>)))</span>
@@ -1642,6 +1672,14 @@ display:block!important;
 <span id="cb4-4"><a href aria-label="4"></a><span class="co"># Reused controls are represented once with their matching weight.</span></span>
 <span id="cb4-5"><a href aria-label="5"></a>ess <span class="ot">=</span> users[, .(<span class="at">users =</span> .N,</span>
 <span id="cb4-6"><a href aria-label="6"></a>                <span class="at">effective_n =</span> <span class="fu">sum</span>(weight)<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span> <span class="fu">sum</span>(weight<span class="sc">^</span><span class="dv">2</span>)), by <span class="ot">=</span> treated]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> The same <code>frame</code> and <code>base_args</code>; replacement is now allowed.</p>
+<p><strong>Objects.</strong> <code>m2</code>: fitted replacement match. <code>users</code>: one row per retained person, with their matching weight.</p>
+<p><strong>Result.</strong> <code>ess</code>: effective sample size by treatment group. Coverage and weight concentration are diagnostics, not DiD effects.</p>
+<div class="code-source">
+<p>Code excerpt: <code>37_psm_activity_reestimate.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>47,838 treated users retained (<strong>96.5%</strong>), with 10,410 distinct eligible controls. Control effective N: <strong>1,686</strong>. Reuse increases coverage while concentrating weights.</p>
 </div>
@@ -1716,7 +1754,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="psm-reference-code" class="slide level2 code-dense center">
+<section id="psm-reference-code" class="slide level2 code-walkthrough code-dense center">
 <h2>Time baselines: how the comparisons are built</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href aria-label="1"></a>z <span class="ot">=</span> <span class="fu">merge</span>(d, matched_ids[, .(user_id, <span class="at">match_weight =</span> weight)], <span class="at">by =</span> <span class="st">&quot;user_id&quot;</span>)</span>
 <span id="cb5-2"><a href aria-label="2"></a>z[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">observation_id =</span> .I, <span class="at">user_cluster =</span> user_id)]</span>
@@ -1726,6 +1764,14 @@ display:block!important;
 <span id="cb5-6"><a href aria-label="6"></a>z[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">time =</span> <span class="fu">ifelse</span>(t_week <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="dv">1</span>L, <span class="dv">2</span>L), <span class="at">g =</span> <span class="dv">2</span>L <span class="sc">*</span> treated)]</span>
 <span id="cb5-7"><a href aria-label="7"></a>z[, case_weight <span class="sc">:</span><span class="er">=</span> match_weight <span class="sc">/</span> <span class="fu">sum</span>(match_weight), by <span class="ot">=</span> .(treated, t_week)]</span>
 <span id="cb5-8"><a href aria-label="8"></a>z[, case_weight <span class="sc">:</span><span class="er">=</span> case_weight <span class="sc">/</span> <span class="fu">uniqueN</span>(t_week), by <span class="ot">=</span> .(treated, time)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>d</code>: weekly outcomes; <code>matched_ids</code>: retained users and weights for one design.</p>
+<p><strong>Objects.</strong> <code>z</code>: their joined records. The weekly and broad-pre blocks are alternative preparations, not consecutive models.</p>
+<p><strong>Result.</strong> <code>time</code>, <code>g</code>, <code>case_weight</code>: the time coding, treatment timing and observation weights passed to <code>att_gt</code>.</p>
+<div class="code-source">
+<p>Code excerpt: <code>37_psm_activity_reestimate.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>The broad-pre model keeps original weekly observations and covariates. It gives each week equal weight within each group-period; it does not first collapse data to user-period means.</p>
 </div>
@@ -1746,8 +1792,8 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="psm-did-code" class="slide level2 code-dense center">
-<h2>DiD estimation uses the same three activity controls</h2>
+<section id="psm-did-code" class="slide level2 code-walkthrough code-dense center">
+<h2>DiD estimation: weights, covariates and outputs</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href aria-label="1"></a>v <span class="ot">=</span> <span class="cf">if</span> (specification <span class="sc">==</span> <span class="st">&quot;No activity control&quot;</span>) <span class="cn">NULL</span> <span class="cf">else</span></span>
 <span id="cb6-2"><a href aria-label="2"></a>    <span class="cf">if</span> (specification <span class="sc">==</span> <span class="st">&quot;Weekly total contributions&quot;</span>) <span class="st">&quot;weekly_activity_volume&quot;</span> <span class="cf">else</span></span>
 <span id="cb6-3"><a href aria-label="3"></a>    <span class="fu">unname</span>(control_for[outcome])  <span class="co"># comments: Q/A days; answers/accepted: Q/C days</span></span>
@@ -1758,6 +1804,14 @@ display:block!important;
 <span id="cb6-8"><a href aria-label="8"></a>  <span class="at">base_period =</span> <span class="st">&quot;varying&quot;</span>, <span class="at">bstrap =</span> <span class="cn">TRUE</span>, <span class="at">biters =</span> <span class="dv">1000</span>, <span class="at">cband =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb6-9"><a href aria-label="9"></a>average <span class="ot">=</span> <span class="fu">aggte</span>(fit, <span class="at">type =</span> <span class="st">&quot;simple&quot;</span>)</span>
 <span id="cb6-10"><a href aria-label="10"></a><span class="co"># Weekly-reference models also use aggte(fit, type = &quot;dynamic&quot;).</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> Prepared <code>z</code>; matching enters through <code>case_weight</code>. <code>v</code> chooses zero or one weekly covariate.</p>
+<p><strong>Objects.</strong> <code>fit</code>: group-time effects; <code>average</code>: aggregated effect. A separate dynamic aggregation supplies weekly estimates.</p>
+<p><strong>Result.</strong> 54 average comparisons → <code>activity_average_estimates.csv</code>; weekly-reference estimates → <code>activity_weekly_estimates.csv</code>.</p>
+<div class="code-source">
+<p>Code excerpt: <code>37_psm_activity_reestimate.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>Repeated-cross-section estimation with original-user clustering. Average intervals: ±1.96 × SE. Weekly plots use each event study’s simultaneous critical value. Matching is held fixed in inference.</p>
 </div>
@@ -2994,7 +3048,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="rel-control-construction" class="slide level2 audit-slide code-mid center">
+<section id="rel-control-construction" class="slide level2 code-walkthrough audit-slide code-mid center">
 <h2>Continuous-dose controls use pre-reform history</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href aria-label="1"></a><span class="co"># Prior counts and reputation are measured before the announcement.</span></span>
 <span id="cb7-2"><a href aria-label="2"></a>frame[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">log_pre_comments =</span> <span class="fu">log1p</span>(pre_comments),</span>
@@ -3007,6 +3061,14 @@ display:block!important;
 <span id="cb7-9"><a href aria-label="9"></a><span class="co"># For comments: act$comments = log1p(c), using observed user-weeks.</span></span>
 <span id="cb7-10"><a href aria-label="10"></a>base <span class="ot">=</span> act[t_week <span class="sc">&lt;</span> <span class="dv">0</span>, .(<span class="at">base_comments =</span> <span class="fu">mean</span>(comments)), by <span class="ot">=</span> user_id]</span>
 <span id="cb7-11"><a href aria-label="11"></a><span class="co"># Other outcomes use their own pre-reform mean, base_&lt;outcome&gt;.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>frame</code>: earlier user histories; <code>act</code>: observed weekly log-count outcomes.</p>
+<p><strong>Objects.</strong> Six history controls; <code>base_comments</code>: each user’s mean pre-policy log-count. Other outcomes have their own baseline.</p>
+<p><strong>Result.</strong> Model predictors held fixed when comparing observed loss with loss + increment. These differ from raw-unit PSM inputs.</p>
+<div class="code-source">
+<p>Code excerpt: <code>28_relative_shift_event_study.R preparation reused by 38_relative_shift_training_target.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>Six prior-history controls + the pre-outcome mean. Predict at the observed and supported shifted dose for the same users, holding their controls fixed.</p>
 </div>
@@ -3030,7 +3092,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="rel-codigo" class="slide level2 audit-slide code-dense center">
+<section id="rel-codigo" class="slide level2 code-walkthrough audit-slide code-dense center">
 <h2>Code behind the displayed dose estimates</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href aria-label="1"></a><span class="co"># act contains original OBSERVED active weeks; no added inactive-week zeros.</span></span>
 <span id="cb8-2"><a href aria-label="2"></a><span class="co"># period_delta(): each user&#39;s post mean minus pre mean; both periods required.</span></span>
@@ -3048,6 +3110,14 @@ display:block!important;
 <span id="cb8-14"><a href aria-label="14"></a><span class="fu">mean</span>(<span class="fu">predict</span>(gam_fit, shifted) <span class="sc">-</span> <span class="fu">predict</span>(gam_fit, target))</span>
 <span id="cb8-15"><a href aria-label="15"></a><span class="co"># Fit once per outcome/model; use supported target users for each increment.</span></span>
 <span id="cb8-16"><a href aria-label="16"></a><span class="co"># 200 user bootstraps; smoothing penalties held fixed during bootstrap refits.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>act</code> → <code>y</code>: one pre/post change and baseline per user. <code>frame</code>: dose, earlier controls and support flags.</p>
+<p><strong>Objects.</strong> <code>training</code>: all eligible valid-outcome users; <code>lin</code> / <code>gam_fit</code>: fitted relationships; <code>target</code> and <code>shifted</code>: prediction data.</p>
+<p><strong>Result.</strong> Mean shifted-minus-observed prediction → <code>estimates.csv</code>. <code>validation.csv</code> checks direct predictions and weighted refits.</p>
+<div class="code-source">
+<p>Code excerpt: <code>38_relative_shift_training_target.R and its helpers</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p><strong>Completed specification:</strong> fit all eligible valid-outcome users; average predictions only for supported target users. Six history covariates + the pre-outcome level; no contemporary weekly-activity control.</p>
 </div>
@@ -3068,7 +3138,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="rel-training-target" class="slide level2 audit-slide code-mid center">
+<section id="rel-training-target" class="slide level2 code-walkthrough audit-slide code-mid center">
 <h2>Model fitting and target population are different</h2>
 <table class="caption-top">
 <colgroup>
@@ -3102,6 +3172,14 @@ display:block!important;
 <span id="cb9-4"><a href aria-label="4"></a>shifted <span class="ot">=</span> <span class="fu">copy</span>(target)[, rel_loss <span class="sc">:</span><span class="er">=</span> rel_loss <span class="sc">+</span> <span class="fl">0.15</span>]</span>
 <span id="cb9-5"><a href aria-label="5"></a><span class="fu">mean</span>(<span class="fu">predict</span>(fit, shifted) <span class="sc">-</span> <span class="fu">predict</span>(fit, target))</span>
 <span id="cb9-6"><a href aria-label="6"></a><span class="co"># User bootstrap refits use all training users; averages use target users only.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>training</code>: 25,218 activity / 15,982 text users with valid pre/post outcomes.</p>
+<p><strong>Objects.</strong> <code>fit</code> learns the relationship; <code>target</code> selects supported users; <code>shifted</code> changes their dose only.</p>
+<p><strong>Result.</strong> At +15 pp: average over 8,801 activity / 4,809 text users. <code>sample_plan.csv</code> records training and target sizes.</p>
+<div class="code-source">
+<p>Code excerpt: <code>38_relative_shift_training_target.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p><strong>Completed and numerically checked.</strong> Training: 25,218 activity / 15,982 text users. At +15 pp, averages use 8,801 / 4,809 supported users. Weekly models have not been updated.</p>
 </div>
@@ -3647,15 +3725,24 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="texto-did-sin-matching" class="slide level2 audit-slide code-dense center">
+<section id="texto-did-sin-matching" class="slide level2 code-walkthrough audit-slide code-dense center">
 <h2>Text DiD without matching: model and average tone</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href aria-label="1"></a><span class="co"># Same user-week text outcomes as the matched models; all eligible observed users.</span></span>
-<span id="cb10-2"><a href aria-label="2"></a>d <span class="ot">=</span> text_user_week[, g <span class="sc">:</span><span class="er">=</span> treated]</span>
+<span id="cb10-2"><a href aria-label="2"></a>d <span class="ot">=</span> <span class="fu">copy</span>(txt)[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">g =</span> treated, <span class="at">weight =</span> <span class="dv">1</span>)]  <span class="co"># txt: scored user-week means</span></span>
 <span id="cb10-3"><a href aria-label="3"></a>fit <span class="ot">=</span> <span class="fu">att_gt</span>(<span class="at">yname =</span> <span class="st">&quot;valence&quot;</span>, <span class="at">tname =</span> <span class="st">&quot;t_week&quot;</span>, <span class="at">idname =</span> <span class="st">&quot;user_id&quot;</span>,</span>
 <span id="cb10-4"><a href aria-label="4"></a>             <span class="at">gname =</span> <span class="st">&quot;g&quot;</span>, <span class="at">xformla =</span> <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> d,</span>
-<span id="cb10-5"><a href aria-label="5"></a>             <span class="at">allow_unbalanced_panel =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb10-6"><a href aria-label="6"></a><span class="co"># No matching weights or activity-intensity covariate in this text specification.</span></span>
-<span id="cb10-7"><a href aria-label="7"></a><span class="fu">aggte</span>(fit, <span class="at">type =</span> <span class="st">&quot;simple&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-5"><a href aria-label="5"></a>             <span class="at">weightsname =</span> <span class="st">&quot;weight&quot;</span>, <span class="at">est_method =</span> <span class="st">&quot;dr&quot;</span>,</span>
+<span id="cb10-6"><a href aria-label="6"></a>             <span class="at">allow_unbalanced_panel =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb10-7"><a href aria-label="7"></a><span class="co"># No matching weights or activity-intensity covariate in this text specification.</span></span>
+<span id="cb10-8"><a href aria-label="8"></a>average <span class="ot">=</span> <span class="fu">aggte</span>(fit, <span class="at">type =</span> <span class="st">&quot;simple&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> Scored comments → <code>txt</code>: means by user and week. No comment means no observed text score.</p>
+<p><strong>Objects.</strong> <code>fit</code>: group-time estimates; <code>average</code>: aggregated effect. Dynamic aggregation gives weekly results; broad-pre fits user-period means.</p>
+<p><strong>Result.</strong> Text rows in <code>corrected_design_att.csv</code> and <code>corrected_design_dynamic.csv</code>; earlier text weights are used only in matched versions.</p>
+<div class="code-source">
+<p>Code excerpt: <code>31_corrected_designs.R, saved text estimates</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -4588,26 +4675,33 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="ctx-codigo" class="slide level2 audit-slide code-dense center">
+<section id="ctx-codigo" class="slide level2 code-walkthrough audit-slide code-dense center">
 <h2>Context and observed-comment comparison: code</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href aria-label="1"></a><span class="co"># context of each comment, from the question id of its thread (users_2009.csv)</span></span>
-<span id="cb11-2"><a href aria-label="2"></a>own_q    <span class="ot">=</span> q_user <span class="sc">==</span> user_id               <span class="co"># the thread is the user&#39;s own question</span></span>
-<span id="cb11-3"><a href aria-label="3"></a>answered <span class="ot">=</span> user_id <span class="sc">%in%</span> answer_authors     <span class="co"># the user also answered this thread</span></span>
-<span id="cb11-4"><a href aria-label="4"></a>on_q     <span class="ot">=</span> post_id <span class="sc">==</span> thread               <span class="co"># the comment is on the question, not on an answer</span></span>
-<span id="cb11-5"><a href aria-label="5"></a><span class="co"># 7 contexts: own Q x (answer, question); others&#39; Q x (own answer; answered; did not answer)</span></span>
-<span id="cb11-6"><a href aria-label="6"></a></span>
-<span id="cb11-7"><a href aria-label="7"></a>thanks <span class="ot">=</span> <span class="fu">grepl</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">b(thank|thanks|thx|ty)</span><span class="sc">\\</span><span class="st">b&quot;</span>, body, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)  <span class="co"># explicit thanks</span></span>
-<span id="cb11-8"><a href aria-label="8"></a></span>
-<span id="cb11-9"><a href aria-label="9"></a><span class="co"># observed event: FIRST comment IN THE TEXT WINDOW on each answer to own question</span></span>
-<span id="cb11-10"><a href aria-label="10"></a>first_reaction <span class="ot">=</span> cm[context <span class="sc">==</span> <span class="st">&quot;own Q: on an answer&quot;</span>][<span class="fu">order</span>(creation_date)][</span>
-<span id="cb11-11"><a href aria-label="11"></a>  , .SD[<span class="dv">1</span>], by <span class="ot">=</span> .(user_id, post_id)]       <span class="co"># post_id = the answer received</span></span>
-<span id="cb11-12"><a href aria-label="12"></a></span>
-<span id="cb11-13"><a href aria-label="13"></a><span class="co"># did within a context or an event: each user&#39;s share of &quot;thanks&quot; before and after</span></span>
-<span id="cb11-14"><a href aria-label="14"></a>d <span class="ot">=</span> units[, .(<span class="at">y =</span> <span class="fu">mean</span>(thanks)), by <span class="ot">=</span> .(user_id, treated, period)]   <span class="co"># period 1 = pre, 2 = post</span></span>
-<span id="cb11-15"><a href aria-label="15"></a><span class="fu">att_gt</span>(<span class="at">yname =</span> <span class="st">&quot;y&quot;</span>, <span class="at">tname =</span> <span class="st">&quot;period&quot;</span>, <span class="at">idname =</span> <span class="st">&quot;user_id&quot;</span>,</span>
-<span id="cb11-16"><a href aria-label="16"></a>       <span class="at">gname =</span> <span class="st">&quot;g&quot;</span>,                         <span class="co"># 2 for treated (treated from period 2), 0 for controls</span></span>
-<span id="cb11-17"><a href aria-label="17"></a>       <span class="at">weightsname =</span> <span class="st">&quot;weight&quot;</span>,              <span class="co"># PSM or CEM weights from the current designs</span></span>
-<span id="cb11-18"><a href aria-label="18"></a>       <span class="at">data =</span> d, <span class="at">allow_unbalanced_panel =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href aria-label="1"></a><span class="co"># cm joins comment scores, thread owners and answer authors.</span></span>
+<span id="cb11-2"><a href aria-label="2"></a><span class="co"># answered is joined by (user_id, thread), using the full record.</span></span>
+<span id="cb11-3"><a href aria-label="3"></a>cm[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">own_q =</span> <span class="sc">!</span><span class="fu">is.na</span>(q_user) <span class="sc">&amp;</span> q_user <span class="sc">==</span> user_id,</span>
+<span id="cb11-4"><a href aria-label="4"></a>           <span class="at">on_question =</span> post_id <span class="sc">==</span> thread)]  <span class="co"># flags used to define seven contexts</span></span>
+<span id="cb11-5"><a href aria-label="5"></a>cm[, thanks <span class="sc">:</span><span class="er">=</span> <span class="fu">as.integer</span>(<span class="fu">grepl</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">b(thank|thanks|thx|ty)</span><span class="sc">\\</span><span class="st">b&quot;</span>, body,</span>
+<span id="cb11-6"><a href aria-label="6"></a>                                <span class="at">ignore.case =</span> <span class="cn">TRUE</span>, <span class="at">perl =</span> <span class="cn">TRUE</span>))]</span>
+<span id="cb11-7"><a href aria-label="7"></a>first_reaction <span class="ot">=</span> cm[context <span class="sc">==</span> <span class="st">&quot;1 Own question: on an answer&quot;</span>][<span class="fu">order</span>(creation_date)][</span>
+<span id="cb11-8"><a href aria-label="8"></a>  , .SD[<span class="dv">1</span>], by <span class="ot">=</span> .(user_id, post_id)]  <span class="co"># first observed comment in the text window</span></span>
+<span id="cb11-9"><a href aria-label="9"></a>units <span class="ot">=</span> <span class="fu">copy</span>(first_reaction)           <span class="co"># example event; context models select from cm</span></span>
+<span id="cb11-10"><a href aria-label="10"></a></span>
+<span id="cb11-11"><a href aria-label="11"></a>d <span class="ot">=</span> units[, .(<span class="at">y =</span> <span class="fu">mean</span>(thanks)),</span>
+<span id="cb11-12"><a href aria-label="12"></a>          by <span class="ot">=</span> .(user_id, treated, <span class="at">period =</span> <span class="fu">fifelse</span>(t_week <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="dv">1</span>L, <span class="dv">2</span>L))]</span>
+<span id="cb11-13"><a href aria-label="13"></a>d <span class="ot">=</span> <span class="fu">merge</span>(d, designs[design <span class="sc">==</span> <span class="st">&quot;PSM/Mahalanobis&quot;</span>, .(user_id, weight)], <span class="at">by =</span> <span class="st">&quot;user_id&quot;</span>)</span>
+<span id="cb11-14"><a href aria-label="14"></a>d[, g <span class="sc">:</span><span class="er">=</span> <span class="dv">2</span>L <span class="sc">*</span> treated]                 <span class="co"># treated from period 2; controls remain 0</span></span>
+<span id="cb11-15"><a href aria-label="15"></a>fit <span class="ot">=</span> <span class="fu">att_gt</span>(<span class="at">yname =</span> <span class="st">&quot;y&quot;</span>, <span class="at">tname =</span> <span class="st">&quot;period&quot;</span>, <span class="at">idname =</span> <span class="st">&quot;user_id&quot;</span>, <span class="at">gname =</span> <span class="st">&quot;g&quot;</span>,</span>
+<span id="cb11-16"><a href aria-label="16"></a>  <span class="at">weightsname =</span> <span class="st">&quot;weight&quot;</span>, <span class="at">data =</span> d, <span class="at">est_method =</span> <span class="st">&quot;dr&quot;</span>, <span class="at">allow_unbalanced_panel =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-17"><a href aria-label="17"></a>average <span class="ot">=</span> <span class="fu">aggte</span>(fit, <span class="at">type =</span> <span class="st">&quot;simple&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>cm</code>: comments joined to thread authorship and text scores; saved PSM/CEM user weights.</p>
+<p><strong>Objects.</strong> <code>first_reaction</code>: first observed comment per answer in own-question threads; <code>d</code>: mean thanks by user-period.</p>
+<p><strong>Result.</strong> <code>context_events_att.csv</code>: context/event contrasts. No-reply opportunities are absent; the earlier text/context match is retained.</p>
+<div class="code-source">
+<p>Code excerpt: <code>32_context_events.R</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>Context/event restriction + PSM/CEM user weights; <strong>no additional covariates</strong>. All available user-periods enter; incomplete panels use repeated-cross-section estimation.</p>
 </div>
@@ -5150,7 +5244,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="ext-codigo" class="slide level2 audit-slide code-dense center">
+<section id="ext-codigo" class="slide level2 code-walkthrough audit-slide code-dense center">
 <h2>CEM specifications use the same <code>did</code> model</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href aria-label="1"></a><span class="co"># CEM: exact matching on coarsened prior history</span></span>
 <span id="cb12-2"><a href aria-label="2"></a>z[, cem_stratum <span class="sc">:</span><span class="er">=</span> <span class="fu">interaction</span>(comments_band, tenure_band, reputation_band,</span>
@@ -5161,6 +5255,14 @@ display:block!important;
 <span id="cb12-7"><a href aria-label="7"></a></span>
 <span id="cb12-8"><a href aria-label="8"></a>fit <span class="ot">=</span> <span class="fu">att_gt</span>(..., <span class="at">weightsname =</span> <span class="st">&quot;weight&quot;</span>, <span class="at">allow_unbalanced_panel =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb12-9"><a href aria-label="9"></a><span class="co"># CEM and PSM: design weights; xformla omitted, so outcome-stage covariates = intercept</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> Earlier histories grouped into bands; <code>nt</code> / <code>nc</code>: treated / comparison users in each stratum.</p>
+<p><strong>Objects.</strong> <code>cem_stratum</code>: band combination; <code>weight</code>: treated weight 1, comparison weights scaled within retained strata.</p>
+<p><strong>Result.</strong> User weights enter <code>att_gt</code>; CEM itself does not estimate the outcome effect. These are historical designs.</p>
+<div class="code-source">
+<p>Code excerpt: <code>Earlier CEM designs used in the saved text comparisons</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>Historical transformed matches: PSM <strong>13,593</strong>; fixed CEM <strong>21,200</strong>; empirical CEM <strong>21,304</strong>. Current raw-unit activity PSM is reported in the main slides. The unmatched DiD uses all available outcome observations from the eligible frame.</p>
 </div>
@@ -5255,7 +5357,7 @@ display:block!important;
 <p>The intensity adjustment increases the estimated decline in this DiD specification. This comparison holds sample and estimator fixed.</p>
 </div>
 <div class="plot-caption">
-<p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
+<p>Earlier prior-intensity specification; current weekly-control results are in the main section.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 105</p>
@@ -5274,7 +5376,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="control-actividad-construccion-previous" class="slide level2 audit-slide code-mid center">
+<section id="control-actividad-construccion-previous" class="slide level2 code-walkthrough audit-slide code-mid center">
 <h2>Construct one prior activity-intensity control</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href aria-label="1"></a><span class="co"># users = user_treatment_r.csv; d = the original observed weekly panel.</span></span>
 <span id="cb13-2"><a href aria-label="2"></a>pre <span class="ot">=</span> d[t_week <span class="sc">&lt;</span> <span class="dv">0</span>, .(<span class="at">pre_activity =</span> <span class="fu">sum</span>(c <span class="sc">+</span> a)), by <span class="ot">=</span> user_id]</span>
@@ -5286,11 +5388,19 @@ display:block!important;
 <span id="cb13-8"><a href aria-label="8"></a>volume[, pre_rate <span class="sc">:</span><span class="er">=</span> pre_activity <span class="sc">/</span> pre_weeks]</span>
 <span id="cb13-9"><a href aria-label="9"></a>volume[, pre_log_activity <span class="sc">:</span><span class="er">=</span> <span class="fu">log1p</span>(pre_rate)]</span>
 <span id="cb13-10"><a href aria-label="10"></a>d <span class="ot">=</span> <span class="fu">merge</span>(d, volume[, .(user_id, pre_log_activity)], <span class="at">by =</span> <span class="st">&quot;user_id&quot;</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>users</code>: registration information; <code>d</code>: original observed weekly activity.</p>
+<p><strong>Objects.</strong> <code>pre</code>: earlier comments + answers; <code>volume</code>: observable pre-weeks, rate and <code>pre_log_activity</code>.</p>
+<p><strong>Result.</strong> Join one fixed prior-intensity measure to <code>d</code>. This is a historical baseline control, not a weekly-varying indicator.</p>
+<div class="code-source">
+<p>Code excerpt: <code>Earlier prior-intensity specification; retained for reference</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p><strong>One control: log(1 + prior comments and answers per observable week).</strong> The denominator includes inactive time and partial weeks. The 26-week lookback is not an eligibility filter.</p>
 </div>
 <div class="plot-caption">
-<p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
+<p>Earlier prior-intensity specification; current weekly-control results are in the main section.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 106</p>
@@ -5309,7 +5419,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="original-codigo-did-previous" class="slide level2 audit-slide code-dense center">
+<section id="original-codigo-did-previous" class="slide level2 code-walkthrough audit-slide code-dense center">
 <h2>DiD with one activity-volume control</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href aria-label="1"></a><span class="co"># pre_log_activity is constructed on the previous slide, BEFORE the reform.</span></span>
 <span id="cb14-2"><a href aria-label="2"></a>attgt_a <span class="ot">=</span> <span class="fu">att_gt</span>(<span class="at">yname =</span> <span class="st">&quot;a_log&quot;</span>, <span class="at">tname =</span> <span class="st">&quot;t_week&quot;</span>, <span class="at">idname =</span> <span class="st">&quot;user_id&quot;</span>,</span>
@@ -5322,11 +5432,19 @@ display:block!important;
 <span id="cb14-9"><a href aria-label="9"></a>agg_dyn_a <span class="ot">=</span> <span class="fu">aggte</span>(attgt_a, <span class="at">type =</span> <span class="st">&quot;dynamic&quot;</span>)</span>
 <span id="cb14-10"><a href aria-label="10"></a><span class="co"># Repeat for accepted answers and comments.</span></span>
 <span id="cb14-11"><a href aria-label="11"></a><span class="co"># Without-control comparison: SAME data and est_method = &quot;reg&quot;, xformla = ~ 1.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>d</code>: observed outcomes plus each user’s fixed <code>pre_log_activity</code>.</p>
+<p><strong>Objects.</strong> <code>attgt_a</code>: adjusted group-time estimates; <code>agg_a</code>: average; <code>agg_dyn_a</code>: weekly event study.</p>
+<p><strong>Result.</strong> Historical adjusted results. The comparison removes this one covariate while retaining data and outcome-regression method.</p>
+<div class="code-source">
+<p>Code excerpt: <code>Earlier prior-intensity DiD; retained for reference</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p><strong>Intensity = log(1 + (pre comments + pre answers) / observable pre weeks).</strong> Comparisons with and without this control use the same users and the same outcome-regression estimator.</p>
 </div>
 <div class="plot-caption">
-<p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
+<p>Earlier prior-intensity specification; current weekly-control results are in the main section.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 107</p>
@@ -5362,7 +5480,7 @@ display:block!important;
 <p><strong>Adjusted average ATT: answers −0.155; accepted answers −0.134; comments −0.366.</strong> All three intervals exclude zero; original observed active-week panel.</p>
 </div>
 <div class="plot-caption">
-<p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
+<p>Earlier prior-intensity specification; current weekly-control results are in the main section.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 108</p>
@@ -5381,7 +5499,7 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="original-twfe" class="slide level2 audit-slide center">
+<section id="original-twfe" class="slide level2 code-walkthrough audit-slide center">
 <h2>TWFE: three weekly activity specifications</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href aria-label="1"></a><span class="co"># One weekly control at a time; its effect is not interacted with post.</span></span>
 <span id="cb15-2"><a href aria-label="2"></a>fit <span class="ot">=</span> <span class="fu">plm</span>(a_log <span class="sc">~</span> treated<span class="sc">:</span>post <span class="sc">+</span> days_questions_comments,</span>
@@ -5390,6 +5508,14 @@ display:block!important;
 <span id="cb15-5"><a href aria-label="5"></a><span class="co"># For c_log, the days control is days_questions_answers.</span></span>
 <span id="cb15-6"><a href aria-label="6"></a><span class="co"># Historical reputation s is retained for accepted answers and continuous TWFE.</span></span>
 <span id="cb15-7"><a href aria-label="7"></a><span class="fu">coeftest</span>(fit, <span class="at">vcov =</span> <span class="cf">function</span>(x) <span class="fu">vcovHC</span>(x, <span class="at">cluster =</span> <span class="st">&quot;group&quot;</span>, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-flow">
+<p><strong>Input.</strong> <code>pd</code>: user-week panel; <code>treated:post</code>: binary loss contrast; at most one weekly activity control.</p>
+<p><strong>Objects.</strong> <code>fit</code>: user/week fixed-effects model. <code>coeftest</code> attaches user-clustered HC1 uncertainty to coefficients.</p>
+<p><strong>Result.</strong> Static coefficients and intervals for appendix plots; these are not <code>aggte</code> averages or weekly event-study effects.</p>
+<div class="code-source">
+<p>Code excerpt: <code>36_weekly_active_days_models.R, appendix TWFE checks</code>. Objects are prepared by the full script.</p>
+</div>
+</div>
 <div class="takeaway">
 <p>Static binary and continuous treatment coefficients, with user and week effects. They answer a different estimating equation from the group-time DiD.</p>
 </div>
@@ -5516,7 +5642,7 @@ display:block!important;
 <p><strong>With prior activity intensity, historical TWFE dose coefficients are +0.307 for answers, +0.090 for accepted answers and −0.378 for comments.</strong> Supported dose-shift estimates appear in their own sections.</p>
 </div>
 <div class="plot-caption">
-<p>Previous specification: prior-intensity control. New weekly-comments results await execution.</p>
+<p>Earlier prior-intensity specification; current weekly-control results are in the main section.</p>
 </div>
 <aside class="notes">
 <p>GUION EN ESPAÑOL · Diapositiva 112</p>
